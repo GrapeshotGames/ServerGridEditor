@@ -1,0 +1,6296 @@
+{
+  "Mnt_A_WF": {
+    "name": "Mnt_A_WF",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_02",
+      "Mnt_A_Farthest_02",
+      "Mnt_A_Near_02",
+      "Mnt_A",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_A_TR": {
+    "name": "Cay_A_TR",
+    "x": 305000.0,
+    "y": 305000.0,
+    "imagePath": "./IslandImages/Cay_A_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_A_Far_01",
+      "Cay_A_Farthest_01",
+      "Cay_A_Near_01",
+      "Cay_A",
+      "Cay_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_B_WF": {
+    "name": "Mnt_B_WF",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_B_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_B",
+      "Mnt_B_Far_02",
+      "Mnt_B_Farthest_02",
+      "Mnt_B_Near_02",
+      "Mnt_B_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_TR": {
+    "name": "Mnt_C_TR",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_01",
+      "Mnt_C_Farthest_01",
+      "Mnt_C_Near_01",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_WF": {
+    "name": "Mnt_C_WF",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_02",
+      "Mnt_C_Farthest_02",
+      "Mnt_C_Near_02",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_F_TR": {
+    "name": "Cay_F_TR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_F_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_F",
+      "Cay_F_Far_01",
+      "Cay_F_Farthest_01",
+      "Cay_F_Near_01",
+      "Cay_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_P_WF": {
+    "name": "Mnt_P_WF",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_P_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_P",
+      "Mnt_P_Far_02",
+      "Mnt_P_Far_02B",
+      "Mnt_P_Far_02C",
+      "Mnt_P_Farthest_02",
+      "Mnt_P_Near_02",
+      "Mnt_P_Near_02B",
+      "Mnt_P_Near_02C",
+      "Mnt_P_Near_02D",
+      "Mnt_P_Near_02E",
+      "Mnt_P_Near_02F",
+      "Mnt_P_Near_02G"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_WF": {
+    "name": "Mnt_K_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K",
+      "Mnt_K_Far_02",
+      "Mnt_K_Farthest_02",
+      "Mnt_K_Near_02",
+      "Mnt_K_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_TR": {
+    "name": "Cay_I_TR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I",
+      "Cay_I_Far_01",
+      "Cay_I_Farthest_01",
+      "Cay_I_Near_01",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_TR": {
+    "name": "Cay_G_TR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G",
+      "Cay_G_Far_01",
+      "Cay_G_Farthest_01",
+      "Cay_G_Near_01",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_GB_TR": {
+    "name": "Cay_GB_TR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_GB_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G",
+      "Cay_G_Far_01B",
+      "Cay_G_Farthest_01B",
+      "Cay_G_Near_01B",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_TR": {
+    "name": "Cay_H_TR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H",
+      "Cay_H_Far_01",
+      "Cay_H_Farthest_01",
+      "Cay_H_Near_01",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_WF": {
+    "name": "Mnt_N_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N",
+      "Mnt_N_Far_02",
+      "Mnt_N_Farthest_02",
+      "Mnt_N_Near_02",
+      "Mnt_N_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_I_WF": {
+    "name": "Mnt_I_WF",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_I_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_I",
+      "Mnt_I_Far_02",
+      "Mnt_I_Farthest_02",
+      "Mnt_I_Near_02",
+      "Mnt_I_Marine_Cold_Near",
+      "Mnt_I_Near_02B"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_WF": {
+    "name": "Mnt_L_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L",
+      "Mnt_L_Far_02",
+      "Mnt_L_Farthest_02",
+      "Mnt_L_Near_02",
+      "Mnt_L_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_J_TR": {
+    "name": "Cay_J_TR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_J_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J",
+      "Cay_J_Far_01",
+      "Cay_J_Farthest_01",
+      "Cay_J_Near_01",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_JB_TR": {
+    "name": "Cay_JB_TR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_JB_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J",
+      "Cay_J_Far_01B",
+      "Cay_J_Farthest_01B",
+      "Cay_J_Near_01B",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WF": {
+    "name": "Mnt_J_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_02",
+      "Mnt_J_Farthest_02",
+      "Mnt_J_Near_02",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_TR": {
+    "name": "Mnt_L_TR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L_Far_01",
+      "Mnt_L_Farthest_01",
+      "Mnt_L_Near_01",
+      "Mnt_L_TR",
+      "Mnt_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_WF": {
+    "name": "Mnt_D_WF",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D",
+      "Mnt_D_Far_02",
+      "Mnt_D_Farthest_02",
+      "Mnt_D_Near_02",
+      "Mnt_D_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_WF": {
+    "name": "Mnt_O_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O",
+      "Mnt_O_Far_02",
+      "Mnt_O_Farthest_02",
+      "Mnt_O_Near_02",
+      "Mnt_O_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_WF": {
+    "name": "Mnt_E_WF",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E",
+      "Mnt_E_Far_02",
+      "Mnt_E_Farthest_02",
+      "Mnt_E_Near_02",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_TR": {
+    "name": "Mnt_J_TR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_01",
+      "Mnt_J_Farthest_01",
+      "Mnt_J_Near_01",
+      "Mnt_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_TR": {
+    "name": "Mnt_H_TR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_01",
+      "Mnt_H_Farthest_01",
+      "Mnt_H_Near_01",
+      "Mnt_H_TR",
+      "Mnt_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_NB_WF": {
+    "name": "Mnt_NB_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_NB_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N",
+      "Mnt_N_Far_02B",
+      "Mnt_N_Farthest_02B",
+      "Mnt_N_Near_02B",
+      "Mnt_N_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_OB_WF": {
+    "name": "Mnt_OB_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_OB_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O",
+      "Mnt_O_Far_02B",
+      "Mnt_O_Farthest_02B",
+      "Mnt_O_Near_02B",
+      "Mnt_O_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_LB_WF": {
+    "name": "Mnt_LB_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_LB_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L",
+      "Mnt_L_Far_02B",
+      "Mnt_L_Farthest_02B",
+      "Mnt_L_Near_02B",
+      "Mnt_L_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_JB_WF": {
+    "name": "Mnt_JB_WF",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_JB_WF_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_02B",
+      "Mnt_J_Farthest_02B",
+      "Mnt_J_Near_02B",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_TR": {
+    "name": "Mnt_A_TR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_TR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_01",
+      "Mnt_A_Farthest_01",
+      "Mnt_A_Near_01",
+      "Mnt_A_TR",
+      "Mnt_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_TR_E": {
+    "name": "Cay_K_TR_E",
+    "x": 254000.0,
+    "y": 254000.0,
+    "imagePath": "./IslandImages/Cay_K_TR_E_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_01E",
+      "Cay_K_Farthest_01E",
+      "Cay_K_Near_01E",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_A_WR": {
+    "name": "Cay_A_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_A_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_A",
+      "Cay_A_Far_04",
+      "Cay_A_Farthest_04",
+      "Cay_A_Near_04",
+      "Cay_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_ET": {
+    "name": "Cay_E_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E",
+      "Cay_E_Far_03",
+      "Cay_E_Farthest_03",
+      "Cay_E_Near_03",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_WR": {
+    "name": "Cay_E_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E",
+      "Cay_E_Far_04",
+      "Cay_E_Farthest_04",
+      "Cay_E_Near_04",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_WR_B": {
+    "name": "Cay_E_WR_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E",
+      "Cay_E_Far_04B",
+      "Cay_E_Farthest_04B",
+      "Cay_E_Near_04B",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_CL": {
+    "name": "Cay_E_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E_Far_10",
+      "Cay_E_Farthest_10",
+      "Cay_E_LD",
+      "Cay_E_Near_10",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_F_ET": {
+    "name": "Cay_F_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_F_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_F",
+      "Cay_F_Far_03",
+      "Cay_F_Farthest_03",
+      "Cay_F_Near_03",
+      "Cay_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B",
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_F_WR": {
+    "name": "Cay_F_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_F_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_F",
+      "Cay_F_Far_04",
+      "Cay_F_Farthest_04",
+      "Cay_F_Near_04",
+      "Cay_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_WR": {
+    "name": "Cay_G_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G",
+      "Cay_G_Far_04",
+      "Cay_G_Farthest_04",
+      "Cay_G_Near_04",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_CL": {
+    "name": "Cay_G_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G_Far_10",
+      "Cay_G_Farthest_10",
+      "Cay_G_LD",
+      "Cay_G_Near_10",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_CL_B": {
+    "name": "Cay_G_CL_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G_Far_10B",
+      "Cay_G_Farthest_10B",
+      "Cay_G_LD",
+      "Cay_G_Near_10B",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_CL_C": {
+    "name": "Cay_G_CL_C",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_CL_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G_Far_10C",
+      "Cay_G_Farthest_10C",
+      "Cay_G_LD",
+      "Cay_G_Near_10C",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_ET": {
+    "name": "Cay_H_ET",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H",
+      "Cay_H_Far_03",
+      "Cay_H_Farthest_03",
+      "Cay_H_Near_03",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_WR": {
+    "name": "Cay_H_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H",
+      "Cay_H_Far_04",
+      "Cay_H_Farthest_04",
+      "Cay_H_Near_04",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_CL": {
+    "name": "Cay_H_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H_Far_10",
+      "Cay_H_Farthest_10",
+      "Cay_H_LD",
+      "Cay_H_Near_10",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_CL_B": {
+    "name": "Cay_H_CL_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H_Far_10B",
+      "Cay_H_Farthest_10B",
+      "Cay_H_LD",
+      "Cay_H_Near_10B",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_WR": {
+    "name": "Cay_I_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I",
+      "Cay_I_Far_04",
+      "Cay_I_Farthest_04",
+      "Cay_I_Near_04",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_WR_B": {
+    "name": "Cay_I_WR_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I",
+      "Cay_I_Far_04B",
+      "Cay_I_Farthest_04B",
+      "Cay_I_Near_04B",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_CL": {
+    "name": "Cay_I_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I_Far_10",
+      "Cay_I_Farthest_10",
+      "Cay_I_LD",
+      "Cay_I_Near_10",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_CL_B": {
+    "name": "Cay_I_CL_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I_Far_10B",
+      "Cay_I_Farthest_10B",
+      "Cay_I_LD",
+      "Cay_I_Near_10B",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_CL_C": {
+    "name": "Cay_I_CL_C",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_CL_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I_Far_10C",
+      "Cay_I_Farthest_10C",
+      "Cay_I_LD",
+      "Cay_I_Near_10C",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_J_WR": {
+    "name": "Cay_J_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_J_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J",
+      "Cay_J_Far_04",
+      "Cay_J_Farthest_04",
+      "Cay_J_Near_04",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_J_CL": {
+    "name": "Cay_J_CL",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_J_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J_Far_10",
+      "Cay_J_Farthest_10",
+      "Cay_J_LD",
+      "Cay_J_Near_10",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_WR": {
+    "name": "Cay_K_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_K_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_04",
+      "Cay_K_Farthest_04",
+      "Cay_K_Near_04",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_WR_B": {
+    "name": "Cay_K_WR_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_K_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_04B",
+      "Cay_K_Farthest_04B",
+      "Cay_K_Near_04B",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_CL": {
+    "name": "Cay_K_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_K_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_10",
+      "Cay_K_Farthest_10",
+      "Cay_K_Near_10",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_ER": {
+    "name": "Cay_L_ER",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L",
+      "Cay_L_Far_01",
+      "Cay_L_Farthest_01",
+      "Cay_L_Near_01",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_WR": {
+    "name": "Cay_L_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L",
+      "Cay_L_Far_04",
+      "Cay_L_Farthest_04",
+      "Cay_L_Near_04",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_CL": {
+    "name": "Cay_L_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L_Far_10",
+      "Cay_L_Farthest_10",
+      "Cay_L_LD",
+      "Cay_L_Near_10",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_CL_B": {
+    "name": "Cay_L_CL_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L_Far_10B",
+      "Cay_L_Farthest_10B",
+      "Cay_L_LD",
+      "Cay_L_Near_10B",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_M_WR": {
+    "name": "Cay_M_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_M_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_M",
+      "Cay_M_Far_04",
+      "Cay_M_Farthest_04",
+      "Cay_M_Near_04",
+      "Cay_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_M_CL": {
+    "name": "Cay_M_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_M_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_M_Far_10",
+      "Cay_M_Farthest_10",
+      "Cay_M_LD",
+      "Cay_M_Near_10",
+      "Cay_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_M_CL_B": {
+    "name": "Cay_M_CL_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_M_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_M_Far_10B",
+      "Cay_M_Farthest_10B",
+      "Cay_M_LD",
+      "Cay_M_Near_10B",
+      "Cay_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_N_ER": {
+    "name": "Cay_N_ER",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_N_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_N",
+      "Cay_N_Far_01",
+      "Cay_N_Farthest_01",
+      "Cay_N_Near_01",
+      "Cay_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_N_ET": {
+    "name": "Cay_N_ET",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_N_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_N",
+      "Cay_N_Far_03",
+      "Cay_N_Farthest_03",
+      "Cay_N_Near_03",
+      "Cay_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_N_WR": {
+    "name": "Cay_N_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_N_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_N",
+      "Cay_N_Far_04",
+      "Cay_N_Farthest_04",
+      "Cay_N_Near_04",
+      "Cay_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_N_CL": {
+    "name": "Cay_N_CL",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_N_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_N_Far_10",
+      "Cay_N_Farthest_10",
+      "Cay_N_LD",
+      "Cay_N_Near_10",
+      "Cay_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_O_ER": {
+    "name": "Cay_O_ER",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_O_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_O",
+      "Cay_O_Far_01",
+      "Cay_O_Farthest_01",
+      "Cay_O_Near_01",
+      "Cay_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_O_WR": {
+    "name": "Cay_O_WR",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_O_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_O",
+      "Cay_O_Far_04",
+      "Cay_O_Farthest_04",
+      "Cay_O_Near_04",
+      "Cay_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_O_CL": {
+    "name": "Cay_O_CL",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_O_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_O_Far_10",
+      "Cay_O_Farthest_10",
+      "Cay_O_LD",
+      "Cay_O_Near_10",
+      "Cay_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_WR_B": {
+    "name": "Cay_L_WR_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L",
+      "Cay_L_Far_04B",
+      "Cay_L_Farthest_04B",
+      "Cay_L_Near_04B",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_ET": {
+    "name": "Mnt_A_ET",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A",
+      "Mnt_A_Far_03",
+      "Mnt_A_Farthest_03",
+      "Mnt_A_Near_03",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_WR": {
+    "name": "Mnt_A_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_04",
+      "Mnt_A_Farthest_04",
+      "Mnt_A_Near_04",
+      "Mnt_A_TR",
+      "Mnt_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_WU": {
+    "name": "Mnt_A_WU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WU_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_06",
+      "Mnt_A_Farthest_06",
+      "Mnt_A_Near_06",
+      "Mnt_A_TU",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_CL": {
+    "name": "Mnt_A_CL",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_10",
+      "Mnt_A_Farthest_10",
+      "Mnt_A_LD",
+      "Mnt_A_Near_10",
+      "Mnt_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_B_ET": {
+    "name": "Mnt_B_ET",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_B_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_B",
+      "Mnt_B_Far_03",
+      "Mnt_B_Farthest_03",
+      "Mnt_B_Near_03",
+      "Mnt_B_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_B_WR": {
+    "name": "Mnt_B_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_B_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_B_Far_04",
+      "Mnt_B_Farthest_04",
+      "Mnt_B_Near_04",
+      "Mnt_B_TR",
+      "Mnt_B_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_B_CL": {
+    "name": "Mnt_B_CL",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_B_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_B_Far_10",
+      "Mnt_B_Farthest_10",
+      "Mnt_B_LD",
+      "Mnt_B_Near_10",
+      "Mnt_B_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_ET": {
+    "name": "Mnt_C_ET",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_03",
+      "Mnt_C_Farthest_03",
+      "Mnt_C_Near_03",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B",
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_ET_B": {
+    "name": "Mnt_C_ET_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_03B",
+      "Mnt_C_Farthest_03B",
+      "Mnt_C_Near_03B",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_ET_C": {
+    "name": "Mnt_C_ET_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_ET_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_03C",
+      "Mnt_C_Farthest_03C",
+      "Mnt_C_Near_03C",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B",
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_ET_D": {
+    "name": "Mnt_C_ET_D",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_ET_D_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C",
+      "Mnt_C_Far_03D",
+      "Mnt_C_Farthest_03D",
+      "Mnt_C_Near_03D",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_WR": {
+    "name": "Mnt_C_WR",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_04",
+      "Mnt_C_Farthest_04",
+      "Mnt_C_Near_04",
+      "Mnt_C_TR",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_WR_B": {
+    "name": "Mnt_C_WR_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_04B",
+      "Mnt_C_Farthest_04B",
+      "Mnt_C_Near_04B",
+      "Mnt_C_TR",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_WR_C": {
+    "name": "Mnt_C_WR_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_WR_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_04C",
+      "Mnt_C_Farthest_04C",
+      "Mnt_C_Near_04C",
+      "Mnt_C_TR",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_WU": {
+    "name": "Mnt_C_WU",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_WU_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Near_06",
+      "Mnt_C_TU",
+      "Mnt_C_Marine_Cold_Near",
+      "Mnt_C_Far_06",
+      "Mnt_C_Farthest_06"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_CL": {
+    "name": "Mnt_C_CL",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_10",
+      "Mnt_C_Farthest_10",
+      "Mnt_C_LD",
+      "Mnt_C_Near_10",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_CL_B": {
+    "name": "Mnt_C_CL_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_10B",
+      "Mnt_C_Farthest_10B",
+      "Mnt_C_LD",
+      "Mnt_C_Near_10B",
+      "Mnt_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_ER": {
+    "name": "Mnt_D_ER",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_Far_01",
+      "Mnt_D_Farthest_01",
+      "Mnt_D_Near_01",
+      "Mnt_D_TR",
+      "Mnt_D_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_ET": {
+    "name": "Mnt_D_ET",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D",
+      "Mnt_D_Far_03",
+      "Mnt_D_Farthest_03",
+      "Mnt_D_Near_03",
+      "Mnt_D_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_ET_B": {
+    "name": "Mnt_D_ET_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D",
+      "Mnt_D_Far_03B",
+      "Mnt_D_Farthest_03B",
+      "Mnt_D_Near_03B",
+      "Mnt_D_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_WR": {
+    "name": "Mnt_D_WR",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_Far_04",
+      "Mnt_D_Farthest_04",
+      "Mnt_D_Near_04",
+      "Mnt_D_TR",
+      "Mnt_D_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_WR_B": {
+    "name": "Mnt_D_WR_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_Far_04B",
+      "Mnt_D_Farthest_04B",
+      "Mnt_D_Near_04B",
+      "Mnt_D_TR",
+      "Mnt_D_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_WU": {
+    "name": "Mnt_D_WU",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_WU_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_Far_06",
+      "Mnt_D_Farthest_06",
+      "Mnt_D_Near_06",
+      "Mnt_D_TU",
+      "Mnt_D_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_CL": {
+    "name": "Mnt_D_CL",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_Far_10",
+      "Mnt_D_Farthest_10",
+      "Mnt_D_LD",
+      "Mnt_D_Near_10",
+      "Mnt_D_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_ER": {
+    "name": "Mnt_E_ER",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_01",
+      "Mnt_E_Farthest_01",
+      "Mnt_E_Near_01",
+      "Mnt_E_TR",
+      "Mnt_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_ET": {
+    "name": "Mnt_E_ET",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E",
+      "Mnt_E_Far_03",
+      "Mnt_E_Farthest_03",
+      "Mnt_E_Near_03",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_ET_B": {
+    "name": "Mnt_E_ET_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E",
+      "Mnt_E_Far_03B",
+      "Mnt_E_Farthest_03B",
+      "Mnt_E_Near_03B",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_ET_C": {
+    "name": "Mnt_E_ET_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_ET_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E",
+      "Mnt_E_Far_03C",
+      "Mnt_E_Farthest_03C",
+      "Mnt_E_Near_03C",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_ET_D": {
+    "name": "Mnt_E_ET_D",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_ET_D_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E",
+      "Mnt_E_Far_03D",
+      "Mnt_E_Farthest_03D",
+      "Mnt_E_Near_03D",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_WR": {
+    "name": "Mnt_E_WR",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_04",
+      "Mnt_E_Farthest_04",
+      "Mnt_E_Near_04",
+      "Mnt_E_TR",
+      "Mnt_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_WU": {
+    "name": "Mnt_E_WU",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_WU_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_06",
+      "Mnt_E_Farthest_06",
+      "Mnt_E_Near_06",
+      "Mnt_E_TU",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CL": {
+    "name": "Mnt_E_CL",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_10",
+      "Mnt_E_Farthest_10",
+      "Mnt_E_LD",
+      "Mnt_E_Near_10",
+      "Mnt_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ER": {
+    "name": "Mnt_F_ER",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_01",
+      "Mnt_F_Farthest_01",
+      "Mnt_F_Near_01",
+      "Mnt_F_TR",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ET": {
+    "name": "Mnt_F_ET",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F",
+      "Mnt_F_Far_03",
+      "Mnt_F_Farthest_03",
+      "Mnt_F_Near_03",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ET_B": {
+    "name": "Mnt_F_ET_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F",
+      "Mnt_F_Far_03B",
+      "Mnt_F_Farthest_03B",
+      "Mnt_F_Near_03B",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ET_C": {
+    "name": "Mnt_F_ET_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ET_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F",
+      "Mnt_F_Far_03C",
+      "Mnt_F_Farthest_03C",
+      "Mnt_F_Near_03C",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ET_D": {
+    "name": "Mnt_F_ET_D",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ET_D_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F",
+      "Mnt_F_Far_03D",
+      "Mnt_F_Farthest_03D",
+      "Mnt_F_Near_03D",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_WR": {
+    "name": "Mnt_F_WR",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_04",
+      "Mnt_F_Farthest_04",
+      "Mnt_F_Near_04",
+      "Mnt_F_TR",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_WR_B": {
+    "name": "Mnt_F_WR_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_04B",
+      "Mnt_F_Farthest_04B",
+      "Mnt_F_Near_04B",
+      "Mnt_F_Marine_Warm_Near",
+      "Mnt_F_TR"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_WR_C": {
+    "name": "Mnt_F_WR_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_WR_C_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_04C",
+      "Mnt_F_Farthest_04C",
+      "Mnt_F_Near_04C",
+      "Mnt_F_TR",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_WR_D": {
+    "name": "Mnt_F_WR_D",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_WR_D_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_04D",
+      "Mnt_F_Farthest_04D",
+      "Mnt_F_Near_04D",
+      "Mnt_F_TR",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_CL": {
+    "name": "Mnt_F_CL",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_10",
+      "Mnt_F_Farthest_10",
+      "Mnt_F_LD",
+      "Mnt_F_Near_10",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_CL_B": {
+    "name": "Mnt_F_CL_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_CL_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_10B",
+      "Mnt_F_Farthest_10B",
+      "Mnt_F_LD",
+      "Mnt_F_Near_10B",
+      "Mnt_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_G_ET": {
+    "name": "Mnt_G_ET",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_G_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_G",
+      "Mnt_G_Far_03",
+      "Mnt_G_Farthest_03",
+      "Mnt_G_Near_03",
+      "Mnt_G_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_G_WR": {
+    "name": "Mnt_G_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_G_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_G_Farthest_04",
+      "Mnt_G_Far_04",
+      "Mnt_G_Near_04",
+      "Mnt_G_TR",
+      "Mnt_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_G_WR_B": {
+    "name": "Mnt_G_WR_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_G_WR_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_G_Far_04B",
+      "Mnt_G_Farthest_04B",
+      "Mnt_G_Near_04B",
+      "Mnt_G_TR",
+      "Mnt_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_ET": {
+    "name": "Mnt_H_ET",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H",
+      "Mnt_H_Far_03",
+      "Mnt_H_Farthest_03",
+      "Mnt_H_Near_03",
+      "Mnt_H_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_WR": {
+    "name": "Mnt_H_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_04",
+      "Mnt_H_Farthest_04",
+      "Mnt_H_Near_04",
+      "Mnt_H_TR",
+      "Mnt_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_CL": {
+    "name": "Mnt_H_CL",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_10",
+      "Mnt_H_Farthest_10",
+      "Mnt_H_LD",
+      "Mnt_H_Near_10",
+      "Mnt_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_I_ER": {
+    "name": "Mnt_I_ER",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_I_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_I_Far_01",
+      "Mnt_I_Farthest_01",
+      "Mnt_I_Near_01",
+      "Mnt_I_TR",
+      "Mnt_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_I_CL": {
+    "name": "Mnt_I_CL",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_I_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_I_Far_10",
+      "Mnt_I_Farthest_10",
+      "Mnt_I_LD",
+      "Mnt_I_Near_10",
+      "Mnt_I_Marine_Warm_Near",
+      "Mnt_I_NearB_10"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_ET": {
+    "name": "Mnt_J_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_03",
+      "Mnt_J_Farthest_03",
+      "Mnt_J_Near_03",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_ET_B": {
+    "name": "Mnt_J_ET_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_03B",
+      "Mnt_J_Farthest_03B",
+      "Mnt_J_Near_03B",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WR": {
+    "name": "Mnt_J_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_04",
+      "Mnt_J_Farthest_04",
+      "Mnt_J_Near_04",
+      "Mnt_J_TR",
+      "Mnt_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CL": {
+    "name": "Mnt_J_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_10",
+      "Mnt_J_Farthest_10",
+      "Mnt_J_Near_10",
+      "Mnt_J_TR",
+      "Mnt_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_ER": {
+    "name": "Mnt_K_ER",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K_Far_01",
+      "Mnt_K_Farthest_01",
+      "Mnt_K_Near_01",
+      "Mnt_K_TR",
+      "Mnt_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_ET": {
+    "name": "Mnt_K_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K",
+      "Mnt_K_Far_03",
+      "Mnt_K_Farthest_03",
+      "Mnt_K_Near_03",
+      "Mnt_K_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_ET_B": {
+    "name": "Mnt_K_ET_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_ET_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K",
+      "Mnt_K_Far_03B",
+      "Mnt_K_Farthest_03B",
+      "Mnt_K_Near_03B",
+      "Mnt_K_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_WR": {
+    "name": "Mnt_K_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K_Far_04",
+      "Mnt_K_Farthest_04",
+      "Mnt_K_Near_04",
+      "Mnt_K_TR",
+      "Mnt_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_CL": {
+    "name": "Mnt_K_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K_Far_10",
+      "Mnt_K_Farthest_10",
+      "Mnt_K_LD",
+      "Mnt_K_Near_10",
+      "Mnt_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_WR": {
+    "name": "Mnt_L_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L_TR",
+      "Mnt_L_Far_04",
+      "Mnt_L_Farthest_04",
+      "Mnt_L_Near_04",
+      "Mnt_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_CL": {
+    "name": "Mnt_L_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L_Far_10",
+      "Mnt_L_Farthest_10",
+      "Mnt_L_LD",
+      "Mnt_L_Near_10",
+      "Mnt_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_M_ER": {
+    "name": "Mnt_M_ER",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_M_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_M_Far_01",
+      "Mnt_M_Farthest_01",
+      "Mnt_M_Near_01",
+      "Mnt_M_TR",
+      "Mnt_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_M_ET": {
+    "name": "Mnt_M_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_M_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_M",
+      "Mnt_M_Far_03",
+      "Mnt_M_Farthest_03",
+      "Mnt_M_Near_03",
+      "Mnt_M_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_M_WR": {
+    "name": "Mnt_M_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_M_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_M_Far_04",
+      "Mnt_M_Farthest_04",
+      "Mnt_M_Near_04",
+      "Mnt_M_TR",
+      "Mnt_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_M_CL": {
+    "name": "Mnt_M_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_M_CL_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_M_Far_10",
+      "Mnt_M_Farthest_10",
+      "Mnt_M_LD",
+      "Mnt_M_Near_10",
+      "Mnt_M_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_ER": {
+    "name": "Mnt_N_ER",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N_Far_01",
+      "Mnt_N_Farthest_01",
+      "Mnt_N_Near_01",
+      "Mnt_N_TR",
+      "Mnt_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_ER_B": {
+    "name": "Mnt_N_ER_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_ER_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N_Far_01B",
+      "Mnt_N_Farthest_01B",
+      "Mnt_N_Near_01B",
+      "Mnt_N_TR",
+      "Mnt_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_ET": {
+    "name": "Mnt_N_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N",
+      "Mnt_N_Far_03",
+      "Mnt_N_Farthest_03",
+      "Mnt_N_Near_03",
+      "Mnt_N_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_WR": {
+    "name": "Mnt_N_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N_Far_04",
+      "Mnt_N_Farthest_04",
+      "Mnt_N_Near_04",
+      "Mnt_N_TR",
+      "Mnt_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_ER": {
+    "name": "Mnt_O_ER",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O_Far_01",
+      "Mnt_O_Farthest_01",
+      "Mnt_O_Near_01",
+      "Mnt_O_TR",
+      "Mnt_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_ER_B": {
+    "name": "Mnt_O_ER_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_ER_B_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O_Far_01B",
+      "Mnt_O_Farthest_01B",
+      "Mnt_O_Near_01B",
+      "Mnt_O_TR",
+      "Mnt_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_ET": {
+    "name": "Mnt_O_ET",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_ET_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O",
+      "Mnt_O_Far_03",
+      "Mnt_O_Farthest_03",
+      "Mnt_O_Near_03",
+      "Mnt_O_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_WR": {
+    "name": "Mnt_O_WR",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_WR_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O_Far_04",
+      "Mnt_O_Farthest_04",
+      "Mnt_O_Near_04",
+      "Mnt_O_TR",
+      "Mnt_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Q_ER": {
+    "name": "Mnt_Q_ER",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Q_ER_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Q",
+      "Mnt_Q_Far_01",
+      "Mnt_Q_Farthest_01",
+      "Mnt_Q_Near_01"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_WU": {
+    "name": "Mnt_R_WU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Far_06",
+      "Mnt_R_Farthest_06",
+      "Mnt_R_Near_06",
+      "Mnt_R_TU",
+      "Mnt_R_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_WU_B": {
+    "name": "Mnt_R_WU_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_WU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Farthest_06B",
+      "Mnt_R_Near_06",
+      "Mnt_R_TU",
+      "Mnt_R_Marine_Cold_Near",
+      "Mnt_R_Far_06B"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_WU_C": {
+    "name": "Mnt_R_WU_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_WU_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Farthest_06C",
+      "Mnt_R_Near_06",
+      "Mnt_R_TU",
+      "Mnt_R_Marine_Cold_Near",
+      "Mnt_R_Far_06C"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_WU_D": {
+    "name": "Mnt_R_WU_D",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_WU_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Farthest_06D",
+      "Mnt_R_Near_06",
+      "Mnt_R_TU",
+      "Mnt_R_Marine_Cold_Near",
+      "Mnt_R_Far_06D"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_WU": {
+    "name": "Mnt_F_WU",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_06",
+      "Mnt_F_Farthest_06",
+      "Mnt_F_Near_06",
+      "Mnt_F_TU",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_X_WR_PVE": {
+    "name": "Mnt_X_WR_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_X_WR_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_X_Far_PVE",
+      "Mnt_X_Farthest_PVE",
+      "Mnt_X_Near_PVE",
+      "Mnt_X_PVE",
+      "Mnt_X_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_CL": {
+    "name": "Mnt_O_CL",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_CL_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O_Far_10",
+      "Mnt_O_Farthest_10",
+      "Mnt_O_Near_10",
+      "Mnt_O_LD",
+      "Mnt_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_W_WU": {
+    "name": "Mnt_W_WU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_W_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_W_Far_06",
+      "Mnt_W_Farthest_06",
+      "Mnt_W_Near_06",
+      "Mnt_W_TU",
+      "Mnt_W_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_W_WU_B": {
+    "name": "Mnt_W_WU_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_W_WU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_W_Farthest_06B",
+      "Mnt_W_Near_06",
+      "Mnt_W_TU",
+      "Mnt_W_Far_06B",
+      "Mnt_W_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_W_WR": {
+    "name": "Mnt_W_WR",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_W_WR_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_W_Far_04",
+      "Mnt_W_Farthest_04",
+      "Mnt_W_Near_04",
+      "Mnt_W_TR",
+      "Mnt_W_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WT_E": {
+    "name": "Mnt_J_WT_E",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WT_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J",
+      "Mnt_J_Far_02_E",
+      "Mnt_J_Farthest_02_E",
+      "Mnt_J_Near_02_E",
+      "Mnt_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_X_WU": {
+    "name": "Mnt_X_WU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_X_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_X_Far_06",
+      "Mnt_X_Farthest_06",
+      "Mnt_X_Near_06",
+      "Mnt_X_TU",
+      "Mnt_X_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_W_WR_B": {
+    "name": "Mnt_W_WR_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_W_WR_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_W_Farthest_04B",
+      "Mnt_W_Near_04",
+      "Mnt_W_TR",
+      "Mnt_W_Far_04B",
+      "Mnt_W_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_WR_E": {
+    "name": "Cay_H_WR_E",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_WR_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H",
+      "Cay_H_Far_04_E",
+      "Cay_H_Farthest_04_E",
+      "Cay_H_Near_04_E",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_G_ET_PVE": {
+    "name": "Mnt_G_ET_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_G_ET_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_G_Far_03_PVE",
+      "Mnt_G_Farthest_03_PVE",
+      "Mnt_G_Near_03_PVE",
+      "Mnt_G_PVE",
+      "Mnt_G_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_WU_E": {
+    "name": "Mnt_A_WU_E",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WU_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_06_E",
+      "Mnt_A_Farthest_06_E",
+      "Mnt_A_Near_06_E",
+      "Mnt_A_TU",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_ET_E": {
+    "name": "Mnt_F_ET_E",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_ET_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_03_E",
+      "Mnt_F_Farthest_03_E",
+      "Mnt_F_Near_03_E",
+      "Mnt_F_Marine_Cold_Near",
+      "Mnt_F_HI"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_EasternTemperate",
+      "MasterIBL_EasternTemperate_Canopy_RedMaple",
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_CH_E": {
+    "name": "Mnt_L_CH_E",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_CH_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L_Far_09_E",
+      "Mnt_L_Farthest_09_E",
+      "Mnt_L_Near_09_E",
+      "Mnt_L_Marine_Cold_Near",
+      "Mnt_L_HD_E"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_U_ER_PVE": {
+    "name": "Mnt_U_ER_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_U_ER_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_U_Far_01_PVE",
+      "Mnt_U_Farthest_01_PVE",
+      "Mnt_U_Near_01_PVE",
+      "Mnt_U_PVE",
+      "Mnt_U_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Y_WU_PVE": {
+    "name": "Mnt_Y_WU_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_WU_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_06_PVE",
+      "Mnt_Y_Farthest_06_PVE",
+      "Mnt_Y_Near_06_PVE",
+      "Mnt_Y_PVE",
+      "Mnt_Y_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_S_WT_PVE": {
+    "name": "Mnt_S_WT_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_S_WT_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_S_Far_02_PVE",
+      "Mnt_S_Farthest_02_PVE",
+      "Mnt_S_Near_02_PVE",
+      "Mnt_S_PVE",
+      "Mnt_S_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_CH": {
+    "name": "Mnt_A_CH",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_09",
+      "Mnt_A_Farthest_09",
+      "Mnt_A_HD",
+      "Mnt_A_Near_09",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_CL_PVE": {
+    "name": "Mnt_R_CL_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_CL_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Far_10_PVE",
+      "Mnt_R_Farthest_10_PVE",
+      "Mnt_R_Near_10_PVE",
+      "Mnt_R_PVE",
+      "Mnt_R_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_LowDesert",
+      "MasterIBL_LowDesert_Canopy_DatePalm"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_R_CH_PVE": {
+    "name": "Mnt_R_CH_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_R_CH_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_R_Far_09_PVE",
+      "Mnt_R_Farthest_09_PVE",
+      "Mnt_R_Near_09_PVE",
+      "Mnt_R_HD_PVE",
+      "Mnt_R_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CH": {
+    "name": "Mnt_J_CH",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_09",
+      "Mnt_J_Farthest_09",
+      "Mnt_J_HD",
+      "Mnt_J_Near_09",
+      "Mnt_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_K_CH": {
+    "name": "Mnt_K_CH",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_K_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_K_Far_09",
+      "Mnt_K_Farthest_09",
+      "Mnt_K_HD",
+      "Mnt_K_Near_09",
+      "Mnt_K_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_C_EE_PVE": {
+    "name": "Cay_C_EE_PVE",
+    "x": 916700.0,
+    "y": 919900.0,
+    "imagePath": "./IslandImages/Cay_C_EE_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_C_Far_07_PVE",
+      "Cay_C_Farthest_07_PVE",
+      "Cay_C_Near_07_PVE",
+      "Cay_C_PVE",
+      "Cay_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_J_EE_E": {
+    "name": "Cay_J_EE_E",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_J_EE_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J",
+      "Cay_J_Far_07_E",
+      "Cay_J_Farthest_07_E",
+      "Cay_J_Near_07_E",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Y_CP": {
+    "name": "Mnt_Y_CP",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_08",
+      "Mnt_Y_Farthest_08",
+      "Mnt_Y_Near_08",
+      "Mnt_Y_PO",
+      "Mnt_Y_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_A_EE": {
+    "name": "Cay_A_EE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_A_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_A",
+      "Cay_A_Far_07",
+      "Cay_A_Farthest_07",
+      "Cay_A_Near_07",
+      "Cay_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_M_CH": {
+    "name": "Mnt_M_CH",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_M_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_M_Far_09",
+      "Mnt_M_Farthest_09",
+      "Mnt_M_HD",
+      "Mnt_M_Near_09",
+      "Mnt_M_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_N_CH": {
+    "name": "Mnt_N_CH",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_N_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_N_Far_09",
+      "Mnt_N_Farthest_09",
+      "Mnt_N_HD",
+      "Mnt_N_Near_09",
+      "Mnt_N_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canop"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_EE": {
+    "name": "Mnt_C_EE",
+    "x": 916700.0,
+    "y": 919900.0,
+    "imagePath": "./IslandImages/Mnt_C_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_C",
+      "Cay_C_Far_07",
+      "Cay_C_Farthest_07",
+      "Cay_C_Near_07",
+      "Cay_C_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CH": {
+    "name": "Mnt_E_CH",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_09",
+      "Mnt_E_Farthest_09",
+      "Mnt_E_HD",
+      "Mnt_E_Near_09",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_F_CH": {
+    "name": "Mnt_F_CH",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_09",
+      "Mnt_F_Farthest_09",
+      "Mnt_F_HD",
+      "Mnt_F_Near_09",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_L_CH_B": {
+    "name": "Mnt_L_CH_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_L_CH_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_L_Far_09B",
+      "Mnt_L_Farthest_09B",
+      "Mnt_L_HD",
+      "Mnt_L_Near_09B",
+      "Mnt_L_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_I_CH": {
+    "name": "Mnt_I_CH",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_I_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_I_Far_09",
+      "Mnt_I_Farthest_09",
+      "Mnt_I_HD",
+      "Mnt_I_Near_09",
+      "Mnt_I_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_EE": {
+    "name": "Cay_E_EE",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E",
+      "Cay_E_Far_07",
+      "Cay_E_Farthest_07",
+      "Cay_E_Near_07",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_F_EE": {
+    "name": "Cay_F_EE",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_F_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_F",
+      "Cay_F_Far_07",
+      "Cay_F_Farthest_07",
+      "Cay_F_Near_07",
+      "Cay_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_G_EE": {
+    "name": "Cay_G_EE",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_G_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_G",
+      "Cay_G_Far_07",
+      "Cay_G_Farthest_07",
+      "Cay_G_Near_07",
+      "Cay_G_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Y_CP_B": {
+    "name": "Mnt_Y_CP_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_CP_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_08B",
+      "Mnt_Y_Farthest_08B",
+      "Mnt_Y_Near_08B",
+      "Mnt_Y_PO",
+      "Mnt_Y_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Y_CP_C": {
+    "name": "Mnt_Y_CP_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_CP_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_08C",
+      "Mnt_Y_Farthest_08C",
+      "Mnt_Y_Near_08C",
+      "Mnt_Y_PO",
+      "Mnt_Y_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Y_CP_D": {
+    "name": "Mnt_Y_CP_D",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_CP_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_08D",
+      "Mnt_Y_Farthest_08D",
+      "Mnt_Y_Near_08D",
+      "Mnt_Y_PO",
+      "Mnt_Y_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CP": {
+    "name": "Mnt_J_CP",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_08",
+      "Mnt_J_Farthest_08",
+      "Mnt_J_Near_08",
+      "Mnt_J_PO",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CP_B": {
+    "name": "Mnt_J_CP_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CP_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_08B",
+      "Mnt_J_Farthest_08B",
+      "Mnt_J_PO",
+      "Mnt_J_Marine_Cold_Near",
+      "Mnt_J_Near_08B"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CP_C": {
+    "name": "Mnt_J_CP_C",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CP_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_08C",
+      "Mnt_J_Farthest_08C",
+      "Mnt_J_Near_08C",
+      "Mnt_J_PO",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CP_D": {
+    "name": "Mnt_J_CP_D",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CP_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_08D",
+      "Mnt_J_Farthest_08D",
+      "Mnt_J_Near_08B",
+      "Mnt_J_PO",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_H_EE": {
+    "name": "Cay_H_EE",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_H_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_H",
+      "Cay_H_Far_07",
+      "Cay_H_Farthest_07",
+      "Cay_H_Near_07",
+      "Cay_H_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_CH": {
+    "name": "Mnt_C_CH",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_09",
+      "Mnt_C_Farthest_09",
+      "Mnt_C_HD",
+      "Mnt_C_Near_09",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_D_CH": {
+    "name": "Mnt_D_CH",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_D_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_D_HD",
+      "Mnt_D_Far_09",
+      "Mnt_D_Farthest_09",
+      "Mnt_D_Near_09",
+      "Mnt_D_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CP": {
+    "name": "Mnt_E_CP",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_08",
+      "Mnt_E_Farthest_08",
+      "Mnt_E_Near_08",
+      "Mnt_E_PO",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CP_B": {
+    "name": "Mnt_E_CP_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CP_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_08B",
+      "Mnt_E_Farthest_08B",
+      "Mnt_E_Near_08B",
+      "Mnt_E_PO",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CP_C": {
+    "name": "Mnt_E_CP_C",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CP_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_08C",
+      "Mnt_E_Farthest_08C",
+      "Mnt_E_Near_08C",
+      "Mnt_E_PO",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_E_CP_D": {
+    "name": "Mnt_E_CP_D",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_E_CP_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_E_Far_08D",
+      "Mnt_E_Farthest_08D",
+      "Mnt_E_Near_08D",
+      "Mnt_E_PO",
+      "Mnt_E_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_CP": {
+    "name": "Mnt_H_CP",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_08",
+      "Mnt_H_Farthest_08",
+      "Mnt_H_Near_08",
+      "Mnt_H_PO",
+      "Mnt_H_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_CP_B": {
+    "name": "Mnt_H_CP_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_CP_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_08B",
+      "Mnt_H_Farthest_08B",
+      "Mnt_H_Near_08B",
+      "Mnt_H_PO",
+      "Mnt_H_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_CP_C": {
+    "name": "Mnt_H_CP_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_CP_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_08C",
+      "Mnt_H_Farthest_08C",
+      "Mnt_H_Near_08C",
+      "Mnt_H_PO",
+      "Mnt_H_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_H_CP_D": {
+    "name": "Mnt_H_CP_D",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_H_CP_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_H_Far_08D",
+      "Mnt_H_Farthest_08D",
+      "Mnt_H_Near_08D",
+      "Mnt_H_PO",
+      "Mnt_H_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_CH_B": {
+    "name": "Mnt_A_CH_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_CH_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_09B",
+      "Mnt_A_Farthest_09B",
+      "Mnt_A_HD",
+      "Mnt_A_Near_09B",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_C_CH_B": {
+    "name": "Mnt_C_CH_B",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_C_CH_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_C_Far_09B",
+      "Mnt_C_Farthest_09B",
+      "Mnt_C_HD",
+      "Mnt_C_Near_09B",
+      "Mnt_C_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_J_EE": {
+    "name": "Cay_J_EE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_J_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_J",
+      "Cay_J_Far_07",
+      "Cay_J_Farthest_07",
+      "Cay_J_Near_07",
+      "Cay_J_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_G_CH": {
+    "name": "Mnt_G_CH",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_G_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_G_Far_09",
+      "Mnt_G_Farthest_09",
+      "Mnt_G_HD",
+      "Mnt_G_Near_09",
+      "Mnt_G_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_EE": {
+    "name": "Cay_K_EE",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_K_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_07",
+      "Cay_K_Farthest_07",
+      "Cay_K_Near_07",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_L_EE": {
+    "name": "Cay_L_EE",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_L_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_L",
+      "Cay_L_Far_07",
+      "Cay_L_Farthest_07",
+      "Cay_L_Near_07",
+      "Cay_L_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_O_CH": {
+    "name": "Mnt_O_CH",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_O_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_O_Far_09",
+      "Mnt_O_Farthest_09",
+      "Mnt_O_HD",
+      "Mnt_O_Near_09",
+      "Mnt_O_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_CH_B": {
+    "name": "Mnt_J_CH_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_CH_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_09B",
+      "Mnt_J_Farthest_09B",
+      "Mnt_J_HD",
+      "Mnt_J_Near_09B",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_T_CP": {
+    "name": "Mnt_T_CP",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_T_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_T_Far_08",
+      "Mnt_T_Farthest_08",
+      "Mnt_T_Near_08",
+      "Mnt_T_PO",
+      "Mnt_T_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_T_CP_B": {
+    "name": "Mnt_T_CP_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_T_CP_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_T_Far_08B",
+      "Mnt_T_Farthest_08B",
+      "Mnt_T_Near_08B",
+      "Mnt_T_PO",
+      "Mnt_T_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_T_CP_C": {
+    "name": "Mnt_T_CP_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_T_CP_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_T_Far_08C",
+      "Mnt_T_Farthest_08C",
+      "Mnt_T_Near_08C",
+      "Mnt_T_PO",
+      "Mnt_T_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_T_CP_D": {
+    "name": "Mnt_T_CP_D",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_T_CP_D_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_T_Far_08D",
+      "Mnt_T_Farthest_08D",
+      "Mnt_T_Near_08D",
+      "Mnt_T_PO",
+      "Mnt_T_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_WU_B": {
+    "name": "Mnt_A_WU_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_06B",
+      "Mnt_A_Farthest_06B",
+      "Mnt_A_Near_06B",
+      "Mnt_A_TU",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_A_WU_C": {
+    "name": "Mnt_A_WU_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_A_WU_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_A_Far_06B",
+      "Mnt_A_Farthest_06B",
+      "Mnt_A_Near_06B",
+      "Mnt_A_TU",
+      "Mnt_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WU": {
+    "name": "Mnt_J_WU",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_06",
+      "Mnt_J_Farthest_06",
+      "Mnt_J_Near_06",
+      "Mnt_J_TU",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WU_B": {
+    "name": "Mnt_J_WU_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_06B",
+      "Mnt_J_Farthest_06B",
+      "Mnt_J_Near_06B",
+      "Mnt_J_TU",
+      "Mnt_K_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_J_WU_C": {
+    "name": "Mnt_J_WU_C",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Mnt_J_WU_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_J_Far_06C",
+      "Mnt_J_Farthest_06C",
+      "Mnt_J_Near_06C",
+      "Mnt_J_TU",
+      "Mnt_J_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_E_EE_B": {
+    "name": "Cay_E_EE_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_E_EE_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_E",
+      "Cay_E_Far_07B",
+      "Cay_E_Farthest_07B",
+      "Cay_E_Near_07B",
+      "Cay_E_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_F_EE_B": {
+    "name": "Cay_F_EE_B",
+    "x": 204000.0,
+    "y": 204000.0,
+    "imagePath": "./IslandImages/Cay_F_EE_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_F",
+      "Cay_F_Far_07B",
+      "Cay_F_Farthest_07B",
+      "Cay_F_Near_07B",
+      "Cay_F_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_K_EE_B": {
+    "name": "Cay_K_EE_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_K_EE_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_K",
+      "Cay_K_Far_07B",
+      "Cay_K_Farthest_07B",
+      "Cay_K_Near_07B",
+      "Cay_K_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy",
+      ""
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_EE": {
+    "name": "Cay_I_EE",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I",
+      "Cay_I_Far_07",
+      "Cay_I_Farthest_07",
+      "Cay_I_Near_07",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_O_EE": {
+    "name": "Cay_O_EE",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_O_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_O",
+      "Cay_O_Far_07",
+      "Cay_O_Farthest_07",
+      "Cay_O_Near_07",
+      "Cay_O_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_N_EE": {
+    "name": "Cay_N_EE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_N_EE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_N",
+      "Cay_N_Far_07",
+      "Cay_N_Farthest_07",
+      "Cay_N_Near_07",
+      "Cay_N_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_A_EE_B": {
+    "name": "Cay_A_EE_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Cay_A_EE_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_A",
+      "Cay_A_Far_07B",
+      "Cay_A_Farthest_07B",
+      "Cay_A_Near_07B",
+      "Cay_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Cay_I_EE_B": {
+    "name": "Cay_I_EE_B",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cay_I_EE_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Cay_I",
+      "Cay_I_Far_07B",
+      "Cay_I_Farthest_07B",
+      "Cay_I_Near_07B",
+      "Cay_I_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_Z_CH": {
+    "name": "Mnt_Z_CH",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Z_CH_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Z",
+      "Mnt_Z_Far_09",
+      "Mnt_Z_Farthest_09",
+      "Mnt_Z_Near_09",
+      "Mnt_Z_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_HighDesert",
+      "MasterIBL_HighDesert_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_WT": {
+    "name": "Islet_A_WT",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_WT_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Islet_A",
+      "islet_A_Far_02",
+      "Islet_A_Farthest_02",
+      "islet_A_Near_02",
+      "Islet_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_WT_B": {
+    "name": "Islet_A_WT_B",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_WT_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Islet_A",
+      "islet_A_Far_02_B",
+      "Islet_A_Farthest_02_B",
+      "islet_A_Near_02_B",
+      "Islet_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_WT_C": {
+    "name": "Islet_A_WT_C",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_WT_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Islet_A",
+      "Islet_A_Farthest_02_C",
+      "islet_A_Near_02_C",
+      "islet_A_Far_02_C",
+      "Islet_A_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Temperate",
+      "MasterIBL_Temperate_Canopy",
+      "MasterIBL_Temperate_Canopy_B"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_ER": {
+    "name": "Islet_A_ER",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_ER_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "islet_A_Far_01",
+      "Islet_A_Farthest_01",
+      "islet_A_Near_01",
+      "Islet_A_TR",
+      "Islet_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_ER_B": {
+    "name": "Islet_A_ER_B",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_ER_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "islet_A_Far_01_B",
+      "Islet_A_Farthest_01_B",
+      "islet_A_Near_01_B",
+      "Islet_A_TR",
+      "Islet_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Islet_A_ER_C": {
+    "name": "Islet_A_ER_C",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Islet_A_ER_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "islet_A_Far_01_C",
+      "Islet_A_Farthest_01_C",
+      "islet_A_Near_01_C",
+      "Islet_A_TR",
+      "Islet_A_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_T_WU": {
+    "name": "Mnt_T_WU",
+    "x": 305000.0,
+    "y": 305000.0,
+    "imagePath": "./IslandImages/Mnt_T_WU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_T_Far_06",
+      "Mnt_T_Farthest_06",
+      "Mnt_T_Near_06",
+      "Mnt_T_WU",
+      "Mnt_T_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_WesternTundra",
+      "MasterIBL_WesternTundra_Canopy_Evergreen",
+      "MasterIBL_WesternTundra_Canopy_Tamarack"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Mnt_I_CP": {
+    "name": "Mnt_I_CP",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_I_CP_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_I_Far_08",
+      "Mnt_I_Farthest_08",
+      "Mnt_I_Marine_Cold_Near",
+      "Mnt_I_Near_08",
+      "Mnt_I_PO"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_Polar_IceCavern.uasset",
+      "ChildIBL_Polar_Box.uasset",
+      "ChildIBL_Polar.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Ice_A_PO": {
+    "name": "Ice_A_PO",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Ice_A_PO_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Ice_A_Farthest_08"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Ice_B_PO": {
+    "name": "Ice_B_PO",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Ice_B_PO_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Ice_B_Farthest_08"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Ice_C_PO": {
+    "name": "Ice_C_PO",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Ice_C_PO_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Ice_C_Farthest_08"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Ice_D_PO": {
+    "name": "Ice_D_PO",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Ice_D_PO_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Ice_D_Farthest_08"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  },
+  "Ice_E_PO": {
+    "name": "Ice_E_PO",
+    "x": 127500.0,
+    "y": 127500.0,
+    "imagePath": "./IslandImages/Ice_E_PO_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Ice_E_Farthest_08"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": ""
+  }
+}

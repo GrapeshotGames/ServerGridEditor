@@ -1,0 +1,8 @@
+/*.vshost.exe
+/*.vshost.exe.config
+/*.vshost.exe.manifest
+/Src/.vs
+/Src/packages/*
+*.pdb
+bin
+obj

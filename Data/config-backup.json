@@ -1,0 +1,20 @@
+{
+  "bond": {
+    "name": "bond",
+    "x": 10000.0,
+    "y": 10000.0,
+    "imagePath": "./IslandImages/bond_img.png"
+  },
+  "777773": {
+    "name": "777773",
+    "x": 5003.0,
+    "y": 5003.0,
+    "imagePath": "./IslandImages/777773_img.png"
+  },
+  "inception": {
+    "name": "inception",
+    "x": 5000.0,
+    "y": 5000.0,
+    "imagePath": "./IslandImages/inception_img.png"
+  }
+}

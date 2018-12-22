@@ -1,0 +1,40 @@
+{
+  "spawnersInfo": [
+    {
+      "Name": "SpawnerTemplate1",
+      "NPCSpawnEntries": "((AnEntryName=\"Stego One to Three\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000),(X=0.000000,Y=680.000000,Z=0.000000),(X=0.000000,Y=-680.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000,0.380000,0.150000),LevelDifficultyTestOverride=1.000000),(AnEntryName=\"Trike One to Three\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Para/Para_Character_BP.Para_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000),(X=0.000000,Y=680.000000,Z=0.000000),(X=0.000000,Y=-680.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000,0.500000,0.150000),LevelDifficultyTestOverride=1.000000))",
+      "NPCSpawnLimits": "((NPCClass=BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C',MaxPercentageOfDesiredNumToAllow=1))",
+      "MaxDesiredNumEnemiesMultiplier": 1.0
+    },
+    {
+      "Name": "SpawnerTemplate2",
+      "NPCSpawnEntries": "((AnEntryName=\"Stego One to Three\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000),(X=0.000000,Y=680.000000,Z=0.000000),(X=0.000000,Y=-680.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000,0.380000,0.150000),LevelDifficultyTestOverride=2.000000),(AnEntryName=\"Trike One to Three\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C',BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Dodo/TurkeyBase_Character_BP.TurkeyBase_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000),(X=0.000000,Y=680.000000,Z=0.000000),(X=0.000000,Y=-680.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000,0.500000,0.150000),LevelDifficultyTestOverride=2.000000))",
+      "NPCSpawnLimits": "((NPCClass=BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Stego/Stego_Character_BP.Stego_Character_BP_C',MaxPercentageOfDesiredNumToAllow=2))",
+      "MaxDesiredNumEnemiesMultiplier": 2.0
+    },
+    {
+      "Name": "FailureTest",
+      "NPCSpawnEntries": "",
+      "NPCSpawnLimits": "",
+      "MaxDesiredNumEnemiesMultiplier": -1.0
+    },
+    {
+      "Name": "SpawnerTrike",
+      "NPCSpawnEntries": "((AnEntryName=\"Carnos\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Trike/Trike_Character_BP.Trike_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000)))",
+      "NPCSpawnLimits": "",
+      "MaxDesiredNumEnemiesMultiplier": 1.0
+    },
+    {
+      "Name": "SpawnerPtero",
+      "NPCSpawnEntries": "((AnEntryName=\"Ptero\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Ptero/Ptero_Character_BP.Ptero_Character_BP_C'),NPCsSpawnOffsets=((X=300.000000,Y=0.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000),EntryWeight=0.150000))(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Pelagornis/Pela_Character_BP.Pela_Character_BP_C'),NPCsSpawnOffsets=((X=300.000000,Y=0.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000),EntryWeight=0.150000))",
+      "NPCSpawnLimits": "",
+      "MaxDesiredNumEnemiesMultiplier": 1.5
+    },
+    {
+      "Name": "SpawnerAlloOrSarco",
+      "NPCSpawnEntries": "((AnEntryName=\"Sarco\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Sarco/Sarco_Character_BP.Sarco_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000)),(AnEntryName=\"Allo\",NPCsToSpawn=(BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Allosaurus/Allo_Character_BP.Allo_Character_BP_C'),NPCsSpawnOffsets=((X=0.000000,Y=0.000000,Z=0.000000)),NPCsToSpawnPercentageChance=(1.000000),EntryWeight=0.200000))",
+      "NPCSpawnLimits": "((NPCClass=BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Sarco/Sarco_Character_BP.Sarco_Character_BP_C',MaxPercentageOfDesiredNumToAllow=0.800000),(NPCClass=BlueprintGeneratedClass'/Game/PrimalEarth/Dinos/Allosaurus/Allo_Character_BP.Allo_Character_BP_C',MaxPercentageOfDesiredNumToAllow=0.200000))",
+      "MaxDesiredNumEnemiesMultiplier": 1.2
+    }
+  ]
+}
