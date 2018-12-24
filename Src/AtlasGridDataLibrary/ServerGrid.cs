@@ -181,7 +181,6 @@ namespace AtlasGridDataLibrary
         public string MachineIdTag = "";
         [DeploymentOverrideAttribute]
         public string ip = "127.0.0.1";
-        [DeploymentOverrideAttribute]
         public string name = "Unnamed Server";
         [DeploymentOverrideAttribute]
         public int port = 50000;
