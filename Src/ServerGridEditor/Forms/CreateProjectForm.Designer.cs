@@ -143,7 +143,7 @@
             this.sizeXTxtBox.Location = new System.Drawing.Point(93, 73);
             this.sizeXTxtBox.Name = "sizeXTxtBox";
             this.sizeXTxtBox.Size = new System.Drawing.Size(55, 20);
-            this.sizeXTxtBox.TabIndex = 2;
+            this.sizeXTxtBox.TabIndex = 3;
             this.sizeXTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sizeXTxtBox_KeyPress);
             // 
             // sizeYTxtBox
@@ -177,7 +177,7 @@
             this.createBtn.Location = new System.Drawing.Point(244, 717);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(90, 32);
-            this.createBtn.TabIndex = 9;
+            this.createBtn.TabIndex = 46;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
             this.createBtn.Click += new System.EventHandler(this.createBtn_Click);
@@ -187,7 +187,7 @@
             this.gridSizeTxtBox.Location = new System.Drawing.Point(328, 73);
             this.gridSizeTxtBox.Name = "gridSizeTxtBox";
             this.gridSizeTxtBox.Size = new System.Drawing.Size(55, 20);
-            this.gridSizeTxtBox.TabIndex = 11;
+            this.gridSizeTxtBox.TabIndex = 5;
             this.gridSizeTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridSizeTxtBox_KeyPress);
             // 
             // cancelBtn
@@ -195,7 +195,7 @@
             this.cancelBtn.Location = new System.Drawing.Point(340, 717);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(83, 32);
-            this.cancelBtn.TabIndex = 10;
+            this.cancelBtn.TabIndex = 47;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
@@ -216,7 +216,7 @@
             this.S3localURLTxtBx.Location = new System.Drawing.Point(77, 430);
             this.S3localURLTxtBx.Name = "S3localURLTxtBx";
             this.S3localURLTxtBx.Size = new System.Drawing.Size(183, 20);
-            this.S3localURLTxtBx.TabIndex = 26;
+            this.S3localURLTxtBx.TabIndex = 38;
             // 
             // label12
             // 
@@ -242,7 +242,7 @@
             this.S3localAccesKeyIdTxtBx.Location = new System.Drawing.Point(77, 454);
             this.S3localAccesKeyIdTxtBx.Name = "S3localAccesKeyIdTxtBx";
             this.S3localAccesKeyIdTxtBx.Size = new System.Drawing.Size(183, 20);
-            this.S3localAccesKeyIdTxtBx.TabIndex = 29;
+            this.S3localAccesKeyIdTxtBx.TabIndex = 39;
             // 
             // label14
             // 
@@ -258,7 +258,7 @@
             this.S3localSecretKeyTxtBx.Location = new System.Drawing.Point(77, 478);
             this.S3localSecretKeyTxtBx.Name = "S3localSecretKeyTxtBx";
             this.S3localSecretKeyTxtBx.Size = new System.Drawing.Size(183, 20);
-            this.S3localSecretKeyTxtBx.TabIndex = 31;
+            this.S3localSecretKeyTxtBx.TabIndex = 40;
             // 
             // label15
             // 
@@ -274,7 +274,7 @@
             this.S3localBucketNameTxtBx.Location = new System.Drawing.Point(77, 502);
             this.S3localBucketNameTxtBx.Name = "S3localBucketNameTxtBx";
             this.S3localBucketNameTxtBx.Size = new System.Drawing.Size(183, 20);
-            this.S3localBucketNameTxtBx.TabIndex = 33;
+            this.S3localBucketNameTxtBx.TabIndex = 41;
             // 
             // label16
             // 
@@ -290,7 +290,7 @@
             this.DBEntry1_NameTxtBx.Location = new System.Drawing.Point(340, 454);
             this.DBEntry1_NameTxtBx.Name = "DBEntry1_NameTxtBx";
             this.DBEntry1_NameTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry1_NameTxtBx.TabIndex = 34;
+            this.DBEntry1_NameTxtBx.TabIndex = 15;
             // 
             // label17
             // 
@@ -324,7 +324,7 @@
             this.DBEntry1_URLTxtBx.Location = new System.Drawing.Point(428, 454);
             this.DBEntry1_URLTxtBx.Name = "DBEntry1_URLTxtBx";
             this.DBEntry1_URLTxtBx.Size = new System.Drawing.Size(115, 20);
-            this.DBEntry1_URLTxtBx.TabIndex = 37;
+            this.DBEntry1_URLTxtBx.TabIndex = 16;
             // 
             // label20
             // 
@@ -340,7 +340,7 @@
             this.DBEntry1_PortTxtBx.Location = new System.Drawing.Point(549, 454);
             this.DBEntry1_PortTxtBx.Name = "DBEntry1_PortTxtBx";
             this.DBEntry1_PortTxtBx.Size = new System.Drawing.Size(57, 20);
-            this.DBEntry1_PortTxtBx.TabIndex = 39;
+            this.DBEntry1_PortTxtBx.TabIndex = 17;
             // 
             // label21
             // 
@@ -356,28 +356,28 @@
             this.DBEntry1_PasswordTxtBx.Location = new System.Drawing.Point(612, 454);
             this.DBEntry1_PasswordTxtBx.Name = "DBEntry1_PasswordTxtBx";
             this.DBEntry1_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry1_PasswordTxtBx.TabIndex = 41;
+            this.DBEntry1_PasswordTxtBx.TabIndex = 18;
             // 
             // DBEntry2_PasswordTxtBx
             // 
             this.DBEntry2_PasswordTxtBx.Location = new System.Drawing.Point(612, 478);
             this.DBEntry2_PasswordTxtBx.Name = "DBEntry2_PasswordTxtBx";
             this.DBEntry2_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry2_PasswordTxtBx.TabIndex = 47;
+            this.DBEntry2_PasswordTxtBx.TabIndex = 22;
             // 
             // DBEntry2_PortTxtBx
             // 
             this.DBEntry2_PortTxtBx.Location = new System.Drawing.Point(549, 478);
             this.DBEntry2_PortTxtBx.Name = "DBEntry2_PortTxtBx";
             this.DBEntry2_PortTxtBx.Size = new System.Drawing.Size(57, 20);
-            this.DBEntry2_PortTxtBx.TabIndex = 46;
+            this.DBEntry2_PortTxtBx.TabIndex = 21;
             // 
             // DBEntry2_URLTxtBx
             // 
             this.DBEntry2_URLTxtBx.Location = new System.Drawing.Point(428, 478);
             this.DBEntry2_URLTxtBx.Name = "DBEntry2_URLTxtBx";
             this.DBEntry2_URLTxtBx.Size = new System.Drawing.Size(115, 20);
-            this.DBEntry2_URLTxtBx.TabIndex = 45;
+            this.DBEntry2_URLTxtBx.TabIndex = 20;
             // 
             // label22
             // 
@@ -393,28 +393,28 @@
             this.DBEntry2_NameTxtBx.Location = new System.Drawing.Point(340, 478);
             this.DBEntry2_NameTxtBx.Name = "DBEntry2_NameTxtBx";
             this.DBEntry2_NameTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry2_NameTxtBx.TabIndex = 43;
+            this.DBEntry2_NameTxtBx.TabIndex = 19;
             // 
             // DBEntry3_PasswordTxtBx
             // 
             this.DBEntry3_PasswordTxtBx.Location = new System.Drawing.Point(612, 502);
             this.DBEntry3_PasswordTxtBx.Name = "DBEntry3_PasswordTxtBx";
             this.DBEntry3_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry3_PasswordTxtBx.TabIndex = 52;
+            this.DBEntry3_PasswordTxtBx.TabIndex = 26;
             // 
             // DBEntry3_PortTxtBx
             // 
             this.DBEntry3_PortTxtBx.Location = new System.Drawing.Point(549, 502);
             this.DBEntry3_PortTxtBx.Name = "DBEntry3_PortTxtBx";
             this.DBEntry3_PortTxtBx.Size = new System.Drawing.Size(57, 20);
-            this.DBEntry3_PortTxtBx.TabIndex = 51;
+            this.DBEntry3_PortTxtBx.TabIndex = 25;
             // 
             // DBEntry3_URLTxtBx
             // 
             this.DBEntry3_URLTxtBx.Location = new System.Drawing.Point(428, 502);
             this.DBEntry3_URLTxtBx.Name = "DBEntry3_URLTxtBx";
             this.DBEntry3_URLTxtBx.Size = new System.Drawing.Size(115, 20);
-            this.DBEntry3_URLTxtBx.TabIndex = 50;
+            this.DBEntry3_URLTxtBx.TabIndex = 24;
             // 
             // label23
             // 
@@ -430,14 +430,14 @@
             this.DBEntry3_NameTxtBx.Location = new System.Drawing.Point(340, 502);
             this.DBEntry3_NameTxtBx.Name = "DBEntry3_NameTxtBx";
             this.DBEntry3_NameTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry3_NameTxtBx.TabIndex = 48;
+            this.DBEntry3_NameTxtBx.TabIndex = 23;
             // 
             // worldFriendlyNameTxtBox
             // 
             this.worldFriendlyNameTxtBox.Location = new System.Drawing.Point(93, 38);
             this.worldFriendlyNameTxtBox.Name = "worldFriendlyNameTxtBox";
             this.worldFriendlyNameTxtBox.Size = new System.Drawing.Size(118, 20);
-            this.worldFriendlyNameTxtBox.TabIndex = 54;
+            this.worldFriendlyNameTxtBox.TabIndex = 2;
             this.worldFriendlyNameTxtBox.Text = "AtlasWorld";
             // 
             // label24
@@ -454,7 +454,7 @@
             this.worldAtlasIdTxtBox.Location = new System.Drawing.Point(93, 15);
             this.worldAtlasIdTxtBox.Name = "worldAtlasIdTxtBox";
             this.worldAtlasIdTxtBox.Size = new System.Drawing.Size(118, 20);
-            this.worldAtlasIdTxtBox.TabIndex = 56;
+            this.worldAtlasIdTxtBox.TabIndex = 1;
             // 
             // label25
             // 
@@ -472,7 +472,7 @@
             this.useUTCTimeCheckbox.Name = "useUTCTimeCheckbox";
             this.useUTCTimeCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.useUTCTimeCheckbox.Size = new System.Drawing.Size(96, 17);
-            this.useUTCTimeCheckbox.TabIndex = 57;
+            this.useUTCTimeCheckbox.TabIndex = 35;
             this.useUTCTimeCheckbox.Text = "Use UTC Time";
             this.useUTCTimeCheckbox.UseVisualStyleBackColor = true;
             // 
@@ -492,14 +492,14 @@
             this.day0DateTimePicker.Location = new System.Drawing.Point(183, 682);
             this.day0DateTimePicker.Name = "day0DateTimePicker";
             this.day0DateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.day0DateTimePicker.TabIndex = 59;
+            this.day0DateTimePicker.TabIndex = 36;
             // 
             // globalTransitionZTxtBox
             // 
             this.globalTransitionZTxtBox.Location = new System.Drawing.Point(93, 182);
             this.globalTransitionZTxtBox.Name = "globalTransitionZTxtBox";
             this.globalTransitionZTxtBox.Size = new System.Drawing.Size(118, 20);
-            this.globalTransitionZTxtBox.TabIndex = 61;
+            this.globalTransitionZTxtBox.TabIndex = 8;
             this.globalTransitionZTxtBox.Text = "0";
             // 
             // TransitionMinZLbl
@@ -525,7 +525,7 @@
             this.additionalCmdLineParamsTxtBox.Location = new System.Drawing.Point(93, 156);
             this.additionalCmdLineParamsTxtBox.Name = "additionalCmdLineParamsTxtBox";
             this.additionalCmdLineParamsTxtBox.Size = new System.Drawing.Size(278, 20);
-            this.additionalCmdLineParamsTxtBox.TabIndex = 64;
+            this.additionalCmdLineParamsTxtBox.TabIndex = 7;
             // 
             // label28
             // 
@@ -558,7 +558,7 @@
             this.modIdTxtBox.Location = new System.Drawing.Point(93, 208);
             this.modIdTxtBox.Name = "modIdTxtBox";
             this.modIdTxtBox.Size = new System.Drawing.Size(118, 20);
-            this.modIdTxtBox.TabIndex = 68;
+            this.modIdTxtBox.TabIndex = 9;
             // 
             // label30
             // 
@@ -583,21 +583,21 @@
             this.DBEntry4_PasswordTxtBx.Location = new System.Drawing.Point(612, 528);
             this.DBEntry4_PasswordTxtBx.Name = "DBEntry4_PasswordTxtBx";
             this.DBEntry4_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry4_PasswordTxtBx.TabIndex = 74;
+            this.DBEntry4_PasswordTxtBx.TabIndex = 30;
             // 
             // DBEntry4_PortTxtBx
             // 
             this.DBEntry4_PortTxtBx.Location = new System.Drawing.Point(549, 528);
             this.DBEntry4_PortTxtBx.Name = "DBEntry4_PortTxtBx";
             this.DBEntry4_PortTxtBx.Size = new System.Drawing.Size(57, 20);
-            this.DBEntry4_PortTxtBx.TabIndex = 73;
+            this.DBEntry4_PortTxtBx.TabIndex = 29;
             // 
             // DBEntry4_URLTxtBx
             // 
             this.DBEntry4_URLTxtBx.Location = new System.Drawing.Point(428, 528);
             this.DBEntry4_URLTxtBx.Name = "DBEntry4_URLTxtBx";
             this.DBEntry4_URLTxtBx.Size = new System.Drawing.Size(115, 20);
-            this.DBEntry4_URLTxtBx.TabIndex = 72;
+            this.DBEntry4_URLTxtBx.TabIndex = 28;
             // 
             // label32
             // 
@@ -613,28 +613,28 @@
             this.DBEntry4_NameTxtBx.Location = new System.Drawing.Point(340, 528);
             this.DBEntry4_NameTxtBx.Name = "DBEntry4_NameTxtBx";
             this.DBEntry4_NameTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry4_NameTxtBx.TabIndex = 70;
+            this.DBEntry4_NameTxtBx.TabIndex = 27;
             // 
             // DBEntry5_PasswordTxtBx
             // 
             this.DBEntry5_PasswordTxtBx.Location = new System.Drawing.Point(612, 554);
             this.DBEntry5_PasswordTxtBx.Name = "DBEntry5_PasswordTxtBx";
             this.DBEntry5_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry5_PasswordTxtBx.TabIndex = 79;
+            this.DBEntry5_PasswordTxtBx.TabIndex = 34;
             // 
             // DBEntry5_PortTxtBx
             // 
             this.DBEntry5_PortTxtBx.Location = new System.Drawing.Point(549, 554);
             this.DBEntry5_PortTxtBx.Name = "DBEntry5_PortTxtBx";
             this.DBEntry5_PortTxtBx.Size = new System.Drawing.Size(57, 20);
-            this.DBEntry5_PortTxtBx.TabIndex = 78;
+            this.DBEntry5_PortTxtBx.TabIndex = 33;
             // 
             // DBEntry5_URLTxtBx
             // 
             this.DBEntry5_URLTxtBx.Location = new System.Drawing.Point(428, 554);
             this.DBEntry5_URLTxtBx.Name = "DBEntry5_URLTxtBx";
             this.DBEntry5_URLTxtBx.Size = new System.Drawing.Size(115, 20);
-            this.DBEntry5_URLTxtBx.TabIndex = 77;
+            this.DBEntry5_URLTxtBx.TabIndex = 32;
             // 
             // label33
             // 
@@ -650,14 +650,14 @@
             this.DBEntry5_NameTxtBx.Location = new System.Drawing.Point(340, 554);
             this.DBEntry5_NameTxtBx.Name = "DBEntry5_NameTxtBx";
             this.DBEntry5_NameTxtBx.Size = new System.Drawing.Size(82, 20);
-            this.DBEntry5_NameTxtBx.TabIndex = 75;
+            this.DBEntry5_NameTxtBx.TabIndex = 31;
             // 
             // sharedLogBtn
             // 
             this.sharedLogBtn.Location = new System.Drawing.Point(126, 566);
             this.sharedLogBtn.Name = "sharedLogBtn";
             this.sharedLogBtn.Size = new System.Drawing.Size(107, 29);
-            this.sharedLogBtn.TabIndex = 82;
+            this.sharedLogBtn.TabIndex = 44;
             this.sharedLogBtn.Text = "Shared Log Config";
             this.sharedLogBtn.UseVisualStyleBackColor = true;
             this.sharedLogBtn.Click += new System.EventHandler(this.sharedLogBtn_Click);
@@ -667,7 +667,7 @@
             this.travelConfigBtn.Location = new System.Drawing.Point(15, 601);
             this.travelConfigBtn.Name = "travelConfigBtn";
             this.travelConfigBtn.Size = new System.Drawing.Size(107, 29);
-            this.travelConfigBtn.TabIndex = 81;
+            this.travelConfigBtn.TabIndex = 45;
             this.travelConfigBtn.Text = "Travel Data Config";
             this.travelConfigBtn.UseVisualStyleBackColor = true;
             this.travelConfigBtn.Click += new System.EventHandler(this.travelConfigBtn_Click);
@@ -677,7 +677,7 @@
             this.tribeLogCfgBtn.Location = new System.Drawing.Point(15, 566);
             this.tribeLogCfgBtn.Name = "tribeLogCfgBtn";
             this.tribeLogCfgBtn.Size = new System.Drawing.Size(107, 29);
-            this.tribeLogCfgBtn.TabIndex = 80;
+            this.tribeLogCfgBtn.TabIndex = 43;
             this.tribeLogCfgBtn.Text = "Tribe Log Config";
             this.tribeLogCfgBtn.UseVisualStyleBackColor = true;
             this.tribeLogCfgBtn.Click += new System.EventHandler(this.tribeLogCfgBtn_Click);
@@ -688,7 +688,7 @@
             this.globalGameplaySetupTxtBox.Multiline = true;
             this.globalGameplaySetupTxtBox.Name = "globalGameplaySetupTxtBox";
             this.globalGameplaySetupTxtBox.Size = new System.Drawing.Size(289, 86);
-            this.globalGameplaySetupTxtBox.TabIndex = 84;
+            this.globalGameplaySetupTxtBox.TabIndex = 37;
             // 
             // label34
             // 
@@ -713,7 +713,7 @@
             this.S3localRegionTxtBx.Location = new System.Drawing.Point(77, 525);
             this.S3localRegionTxtBx.Name = "S3localRegionTxtBx";
             this.S3localRegionTxtBx.Size = new System.Drawing.Size(183, 20);
-            this.S3localRegionTxtBx.TabIndex = 86;
+            this.S3localRegionTxtBx.TabIndex = 42;
             // 
             // label36
             // 
@@ -729,7 +729,7 @@
             this.mapImageURLTxtBox.Location = new System.Drawing.Point(93, 234);
             this.mapImageURLTxtBox.Name = "mapImageURLTxtBox";
             this.mapImageURLTxtBox.Size = new System.Drawing.Size(350, 20);
-            this.mapImageURLTxtBox.TabIndex = 88;
+            this.mapImageURLTxtBox.TabIndex = 10;
             // 
             // label37
             // 
@@ -755,14 +755,14 @@
             this.baseServerArgsTxtBox.Multiline = true;
             this.baseServerArgsTxtBox.Name = "baseServerArgsTxtBox";
             this.baseServerArgsTxtBox.Size = new System.Drawing.Size(687, 51);
-            this.baseServerArgsTxtBox.TabIndex = 92;
+            this.baseServerArgsTxtBox.TabIndex = 14;
             // 
             // metaWorldURLTxtBox
             // 
             this.metaWorldURLTxtBox.Location = new System.Drawing.Point(93, 260);
             this.metaWorldURLTxtBox.Name = "metaWorldURLTxtBox";
             this.metaWorldURLTxtBox.Size = new System.Drawing.Size(350, 20);
-            this.metaWorldURLTxtBox.TabIndex = 94;
+            this.metaWorldURLTxtBox.TabIndex = 11;
             // 
             // label39
             // 
@@ -805,7 +805,7 @@
             this.authListURLTxtBox.Location = new System.Drawing.Point(93, 287);
             this.authListURLTxtBox.Name = "authListURLTxtBox";
             this.authListURLTxtBox.Size = new System.Drawing.Size(350, 20);
-            this.authListURLTxtBox.TabIndex = 98;
+            this.authListURLTxtBox.TabIndex = 12;
             // 
             // label8
             // 
@@ -821,7 +821,7 @@
             this.worldAtlasPasswordTxtBox.Location = new System.Drawing.Point(92, 312);
             this.worldAtlasPasswordTxtBox.Name = "worldAtlasPasswordTxtBox";
             this.worldAtlasPasswordTxtBox.Size = new System.Drawing.Size(350, 20);
-            this.worldAtlasPasswordTxtBox.TabIndex = 101;
+            this.worldAtlasPasswordTxtBox.TabIndex = 13;
             // 
             // label9
             // 
@@ -837,7 +837,7 @@
             this.columnUTCOffsetTxtBox.Location = new System.Drawing.Point(93, 110);
             this.columnUTCOffsetTxtBox.Name = "columnUTCOffsetTxtBox";
             this.columnUTCOffsetTxtBox.Size = new System.Drawing.Size(55, 20);
-            this.columnUTCOffsetTxtBox.TabIndex = 103;
+            this.columnUTCOffsetTxtBox.TabIndex = 6;
             // 
             // label5
             // 
