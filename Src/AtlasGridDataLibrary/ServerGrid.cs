@@ -118,10 +118,6 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
         public bool showIslandNames = true;
 
-        [DefaultValue(false)]
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
-        public bool exportPngs = false;
-
         [DefaultValue(true)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         public bool showLines = true;

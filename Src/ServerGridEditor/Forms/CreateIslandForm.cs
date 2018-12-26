@@ -201,7 +201,7 @@ namespace ServerGridEditor
                     mainForm.islands.Add(editedIsland.name, editedIsland);
 
                     //rename image
-                    string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img" + (mainForm.currentProject.exportPngs ? ".png" : ".jpg");
+                    string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
                     editedIsland.InvalidateImage();
                     File.Move(editedIsland.imagePath, newImgPath);
 
@@ -280,7 +280,7 @@ namespace ServerGridEditor
                 }
 
                 //Copy the image to our local imgs directory
-                string newImgPath = MainForm.imgsDir + "/" + Name + "_img" + (mainForm.currentProject.exportPngs ? ".png" : ".jpg");
+                string newImgPath = MainForm.imgsDir + "/" + Name + "_img.jpg";
                 File.Copy(ImgLocation, newImgPath, true);
 
 

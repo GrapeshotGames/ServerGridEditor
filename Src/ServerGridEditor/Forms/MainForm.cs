@@ -1147,7 +1147,6 @@ namespace ServerGridEditor
             showServerInfoCheckbox.Checked = currentProject.showServerInfo;
             showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
             showIslandNamesChckBox.Checked = currentProject.showIslandNames;
-            exportPngsChckBox.Checked = currentProject.exportPngs;
             showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
             disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
             showLinesCheckbox.Checked = currentProject.showLines;
@@ -1531,7 +1530,7 @@ namespace ServerGridEditor
                 return;
             
             MagickImage tgaImg = new MagickImage(image);
-            tgaImg.Format = currentProject.exportPngs ? MagickFormat.Png : MagickFormat.Jpeg;
+            tgaImg.Format = MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
             tgaImg.Write(filePath);
             tgaImg.Dispose();
@@ -1644,7 +1643,6 @@ namespace ServerGridEditor
                     showServerInfoCheckbox.Checked = currentProject.showServerInfo;
                     showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
                     showIslandNamesChckBox.Checked = currentProject.showIslandNames;
-                    exportPngsChckBox.Checked = currentProject.exportPngs;
                     showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
                     disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
                     showLinesCheckbox.Checked = currentProject.showLines;
@@ -1666,7 +1664,7 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = currentProject.exportPngs ? "png files (*.png)|*.png" : "jpg files (*.jpg)|*.jpg";
+            saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
@@ -2143,7 +2141,7 @@ namespace ServerGridEditor
                 if (!Directory.Exists(mapExportDir))
                     Directory.CreateDirectory(mapExportDir);
 
-                string imgPath = mapExportDir + "/MapImg" + (currentProject.exportPngs ? ".png" : ".jpg");
+                string imgPath = mapExportDir + "/MapImg.jpg";
                 string cellImgName = "CellImg";
 
                 string serverConfigPath = exportDir + "/" + actualJsonFile;
@@ -2172,8 +2170,8 @@ namespace ServerGridEditor
 
                         if (!disableImageExportingCheckBox.Checked)
                         {
-                            ExportImage(gameMapExportDir + "/MapImg" + (currentProject.exportPngs ? ".png" : ".jpg"), -1, -1, true, editorConfig.AtlasImagesRes);
-                            ExportCellImages(gameMapExportDir + string.Format("/{0}" + (currentProject.exportPngs ? ".png" : ".jpg"), cellImgName));
+                            ExportImage(gameMapExportDir + "/MapImg.jpg", -1, -1, true, editorConfig.AtlasImagesRes);
+                            ExportCellImages(gameMapExportDir + string.Format("/{0}.jpg", cellImgName));
                         }
                     }
                 }
@@ -2235,13 +2233,6 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
                 currentProject.showIslandNames = showIslandNamesChckBox.Checked;
-            mapPanel.Invalidate();
-        }
-
-        private void exportPngsChckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (currentProject != null)
-                currentProject.exportPngs = exportPngsChckBox.Checked;
             mapPanel.Invalidate();
         }
 

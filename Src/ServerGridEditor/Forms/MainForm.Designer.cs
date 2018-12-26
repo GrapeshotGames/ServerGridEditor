@@ -86,7 +86,6 @@
             this.imageQualityTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.showIslandNamesChckBox = new System.Windows.Forms.CheckBox();
-            this.exportPngsChckBox = new System.Windows.Forms.CheckBox();
             this.showForegroundChckBox = new System.Windows.Forms.CheckBox();
             this.chooseForegroundBtn = new System.Windows.Forms.Button();
             this.foregroundScaleBox = new System.Windows.Forms.NumericUpDown();
@@ -680,20 +679,6 @@
             this.showIslandNamesChckBox.UseVisualStyleBackColor = true;
             this.showIslandNamesChckBox.CheckedChanged += new System.EventHandler(this.showIslandNamesChckBox_CheckedChanged);
             // 
-            // exportPngsChckBox
-            // 
-            this.exportPngsChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.exportPngsChckBox.AutoSize = true;
-            this.exportPngsChckBox.Checked = true;
-            this.exportPngsChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.exportPngsChckBox.Location = new System.Drawing.Point(404, 618);
-            this.exportPngsChckBox.Name = "exportPngsChckBox";
-            this.exportPngsChckBox.Size = new System.Drawing.Size(89, 17);
-            this.exportPngsChckBox.TabIndex = 31;
-            this.exportPngsChckBox.Text = "Export PNGS";
-            this.exportPngsChckBox.UseVisualStyleBackColor = true;
-            this.exportPngsChckBox.CheckedChanged += new System.EventHandler(this.exportPngsChckBox_CheckedChanged);
-            // 
             // showForegroundChckBox
             // 
             this.showForegroundChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -777,7 +762,6 @@
             this.Controls.Add(this.foregroundScaleBox);
             this.Controls.Add(this.chooseForegroundBtn);
             this.Controls.Add(this.showForegroundChckBox);
-            this.Controls.Add(this.exportPngsChckBox);
             this.Controls.Add(this.showIslandNamesChckBox);
             this.Controls.Add(this.imageQualityTxtbox);
             this.Controls.Add(this.label4);
@@ -887,7 +871,6 @@
         private System.Windows.Forms.TextBox imageQualityTxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox showIslandNamesChckBox;
-        private System.Windows.Forms.CheckBox exportPngsChckBox;
         private System.Windows.Forms.CheckBox showForegroundChckBox;
         private System.Windows.Forms.Button chooseForegroundBtn;
         private System.Windows.Forms.NumericUpDown foregroundScaleBox;

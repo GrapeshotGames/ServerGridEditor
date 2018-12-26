@@ -202,7 +202,7 @@ namespace ServerGridEditor
             string WorldAtlasId, string WorldFriendlyName, string MetaWorldURL, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, string backgroundImgPath, 
             MainForm mainForm, int idGenerator, int regionsIdGenerator, List<SpawnerInfoData> spawnerOverrideTemplates, bool bUseUTCTime, string Day0, float globalTransitionMinZ, string AdditionalCmdLineParams, 
             Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, int shipPathsIdGenerator,
-            bool showShipPathsInfo, string modIDs, bool showIslandNames, bool exportPngs, bool showForeground, string foregroundImgPath, string globalGameplaySetup,
+            bool showShipPathsInfo, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, string globalGameplaySetup,
             List<ServerTemplateData> serverTemplates, bool bIsFinalExport, string MapImageURL,string AuthListURL,
 			string WorldAtlasPassword, float columnUTCOffset)
         {
@@ -345,7 +345,6 @@ namespace ServerGridEditor
                 Data.shipPaths = shipPaths;
             Data.shipPathsIdGenerator = shipPathsIdGenerator;
             Data.showIslandNames = showIslandNames;
-            Data.exportPngs = exportPngs;
             Data.globalGameplaySetup = globalGameplaySetup;
             if (serverTemplates == null)
                 serverTemplates = new List<ServerTemplateData>();
@@ -400,7 +399,6 @@ namespace ServerGridEditor
         public bool showDiscoZoneInfo = true;
         public bool showShipPathsInfo = true;
         public bool showIslandNames = true;
-        public bool exportPngs = false;
         public bool disableImageExporting = false;
         public bool showLines = true;
         public bool alphaBackground = false;
@@ -484,7 +482,7 @@ namespace ServerGridEditor
             AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MetaWorldURL, 
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, backgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, 
                 Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, 
-                shipPathsIdGenerator, showShipPathsInfo, ModIDs, showIslandNames, exportPngs, showForeground, foregroundImgPath, globalGameplaySetup, serverTemplates, bIsFinalExport, MapImageURL, AuthListURL,
+                shipPathsIdGenerator, showShipPathsInfo, ModIDs, showIslandNames, showForeground, foregroundImgPath, globalGameplaySetup, serverTemplates, bIsFinalExport, MapImageURL, AuthListURL,
 				WorldAtlasPassword, columnUTCOffset);
             ProjectObj.BaseServerArgs = BaseServerArgs;
             ProjectObj.totalGridsX = numOfCellsX;
@@ -653,7 +651,6 @@ namespace ServerGridEditor
                 showServerInfo = deserializedProject.showServerInfo;
                 showDiscoZoneInfo = deserializedProject.showDiscoZoneInfo;
                 showIslandNames = deserializedProject.showIslandNames;
-                exportPngs = deserializedProject.exportPngs;
                 showShipPathsInfo = deserializedProject.showShipPathsInfo;
                 showLines = deserializedProject.showLines;
                 alphaBackground = deserializedProject.alphaBackground;
