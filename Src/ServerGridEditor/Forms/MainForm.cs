@@ -2029,7 +2029,7 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "png files (*.png)|*.png";
+            saveFileDialog.Filter = currentProject.exportPngs ? "png files (*.png)|*.png" : "jpg files (*.jpg)|*.jpg";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ExportCellImages(saveFileDialog.FileName);
