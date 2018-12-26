@@ -53,8 +53,9 @@
             this.editServerTemplatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLocksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cellImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.slippyMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -323,44 +324,50 @@
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mapImageToolStripMenuItem,
             this.localExportToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.mapImageToolStripMenuItem,
             this.cellImagesToolStripMenuItem,
             this.slippyMapToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.exportToolStripMenuItem.Text = "Export";
             // 
-            // mapImageToolStripMenuItem
-            // 
-            this.mapImageToolStripMenuItem.Enabled = false;
-            this.mapImageToolStripMenuItem.Name = "mapImageToolStripMenuItem";
-            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.mapImageToolStripMenuItem.Text = "Map Image";
-            this.mapImageToolStripMenuItem.Click += new System.EventHandler(this.mapImageToolStripMenuItem_Click);
-            // 
             // localExportToolStripMenuItem
             // 
             this.localExportToolStripMenuItem.Enabled = false;
             this.localExportToolStripMenuItem.Name = "localExportToolStripMenuItem";
-            this.localExportToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.localExportToolStripMenuItem.Text = "Local Export";
+            this.localExportToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.localExportToolStripMenuItem.Text = "Local Export All";
             this.localExportToolStripMenuItem.Click += new System.EventHandler(this.localExportToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
+            // 
+            // mapImageToolStripMenuItem
+            // 
+            this.mapImageToolStripMenuItem.Enabled = false;
+            this.mapImageToolStripMenuItem.Name = "mapImageToolStripMenuItem";
+            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.mapImageToolStripMenuItem.Text = "Export: Just Map Image";
+            this.mapImageToolStripMenuItem.Click += new System.EventHandler(this.mapImageToolStripMenuItem_Click);
             // 
             // cellImagesToolStripMenuItem
             // 
             this.cellImagesToolStripMenuItem.Enabled = false;
             this.cellImagesToolStripMenuItem.Name = "cellImagesToolStripMenuItem";
-            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.cellImagesToolStripMenuItem.Text = "Cell Images";
+            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.cellImagesToolStripMenuItem.Text = "Export : Just Cell Images";
             this.cellImagesToolStripMenuItem.Click += new System.EventHandler(this.cellImagesToolStripMenuItem_Click);
             // 
             // slippyMapToolStripMenuItem
             // 
             this.slippyMapToolStripMenuItem.Enabled = false;
             this.slippyMapToolStripMenuItem.Name = "slippyMapToolStripMenuItem";
-            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
-            this.slippyMapToolStripMenuItem.Text = "Slippy Map";
+            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
+            this.slippyMapToolStripMenuItem.Text = "Generate Slippy Map (Optional Tools)";
             this.slippyMapToolStripMenuItem.Click += new System.EventHandler(this.slippyMapToolStripMenuItem_Click);
             // 
             // testsToolStripMenuItem
@@ -878,6 +885,7 @@
         private System.Windows.Forms.Label atlasLocation;
         private System.Windows.Forms.ToolStripMenuItem editServerTemplatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editLocksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

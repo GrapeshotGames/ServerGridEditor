@@ -1665,6 +1665,11 @@ namespace ServerGridEditor
                 return;
 
             saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
+            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+            if (!Directory.Exists(ExportPath))
+                Directory.CreateDirectory(ExportPath);
+            saveFileDialog.InitialDirectory = ExportPath;
+            saveFileDialog.FileName = "MapImg.jpg";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
@@ -2027,7 +2032,12 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "png files (*.png)|*.png";
+            saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
+            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+            if (!Directory.Exists(ExportPath))
+                Directory.CreateDirectory(ExportPath);
+            saveFileDialog.InitialDirectory = ExportPath;
+            saveFileDialog.FileName = "CellImg";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ExportCellImages(saveFileDialog.FileName);
@@ -2154,8 +2164,10 @@ namespace ServerGridEditor
                 string serverConfigPathServerOnly = serverConfigPath.Replace(".json", ".ServerOnly.json");
                 File.WriteAllText(serverConfigPathServerOnly, JsonConvert.SerializeObject(ServerOnlyObject, Formatting.Indented)); //ServerGrid.ServerOnly.json
 
+                string gameMapExportDir = Path.GetFullPath(GlobalSettings.Instance.ExportDir + "/" + JsonNameNoExtension);
+
                 //Copy to Project/ShooterGame/
-                if (Directory.Exists(gameDir))
+                if (Directory.Exists(gameDir + "/Build")) //Just end client folder people are unlikely to have for now
                 {
                     string path = Path.GetFullPath(gameDir + "/" + Path.GetFileName(serverConfigPath));
                     if (path != Path.GetFullPath(serverConfigPath))
@@ -2164,16 +2176,18 @@ namespace ServerGridEditor
                         path = Path.GetFullPath(gameDir + "/" + Path.GetFileName(serverConfigPathServerOnly));
                         File.Copy(serverConfigPathServerOnly, path, true);
 
-                        string gameMapExportDir = Path.GetFullPath(gameDir + "/" + JsonNameNoExtension);
-                        if (!Directory.Exists(gameMapExportDir))
-                            Directory.CreateDirectory(gameMapExportDir);
-
-                        if (!disableImageExportingCheckBox.Checked)
-                        {
-                            ExportImage(gameMapExportDir + "/MapImg.jpg", -1, -1, true, editorConfig.AtlasImagesRes);
-                            ExportCellImages(gameMapExportDir + string.Format("/{0}.jpg", cellImgName));
-                        }
+                        //Overwrite where to export images
+                        gameMapExportDir = Path.GetFullPath(gameDir + "/" + JsonNameNoExtension);
                     }
+                }
+
+                if (!disableImageExportingCheckBox.Checked)
+                {
+                    if (!Directory.Exists(gameMapExportDir))
+                        Directory.CreateDirectory(gameMapExportDir);
+
+                    ExportImage(gameMapExportDir + "/MapImg.jpg", -1, -1, true, editorConfig.AtlasImagesRes);
+                    ExportCellImages(gameMapExportDir + string.Format("/{0}.jpg", cellImgName));
                 }
                 MessageBox.Show("Export successful!\nFiles in " + exportDir, "Success");
             }
