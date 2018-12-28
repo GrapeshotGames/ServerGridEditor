@@ -1479,75 +1479,7 @@
   "idGenerator": 1148,
   "regionsIdGenerator": 0,
   "shipPathsIdGenerator": 2,
-  "shipPaths": [
-    {
-      "Nodes": [
-        {
-          "controlPointsDistance": 70000.0,
-          "worldX": 17033638.0,
-          "worldY": 8831279.0,
-          "rotation": -64.06918
-        },
-        {
-          "controlPointsDistance": 70000.0,
-          "worldX": 17760854.0,
-          "worldY": 8115668.5,
-          "rotation": 0.0
-        },
-        {
-          "controlPointsDistance": 72363.9141,
-          "worldX": 17997606.0,
-          "worldY": 9540853.0,
-          "rotation": 131.7295
-        },
-        {
-          "controlPointsDistance": 83148.58,
-          "worldX": 1.707823E+07,
-          "worldY": 9471225.0,
-          "rotation": -135.954834
-        }
-      ],
-      "PathId": 1,
-      "isLooping": false,
-      "PathName": "NPCTrader",
-      "AutoSpawnEveryUTCInterval": 0,
-      "autoSpawn": true
-    },
-    {
-      "Nodes": [
-        {
-          "controlPointsDistance": 278289.344,
-          "worldX": 1.1619E+07,
-          "worldY": 9488000.0,
-          "rotation": -154.9538
-        },
-        {
-          "controlPointsDistance": 386597.656,
-          "worldX": 1.1603E+07,
-          "worldY": 7263000.0,
-          "rotation": -46.42027
-        },
-        {
-          "controlPointsDistance": 170928.141,
-          "worldX": 1.35965E+07,
-          "worldY": 7382000.0,
-          "rotation": 42.9132233
-        },
-        {
-          "controlPointsDistance": 459671.156,
-          "worldX": 1.3707E+07,
-          "worldY": 9448000.0,
-          "rotation": -216.830185
-        }
-      ],
-      "PathId": 2,
-      "isLooping": false,
-      "PathName": "GhostShip",
-      "AutoSpawnShipClass": "Blueprint'/Game/Atlas/ShipPaths/PathFollowingGhostShip_BP.PathFollowingGhostShip_BP'",
-      "AutoSpawnEveryUTCInterval": 21600,
-      "autoSpawn": true
-    }
-  ],
+  "shipPaths": [],
   "lastImageOverride": "0001-01-01T00:00:00",
   "serverTemplates": [
     {
