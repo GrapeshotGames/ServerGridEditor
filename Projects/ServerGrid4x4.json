@@ -86,6 +86,7 @@
   "showIslandNames": true,
   "alphaBackground": true,
   "showBackground": true,
+  "backgroundImgPath": "./WaterTiles/instinctworld-autoscaling",
   "showForeground": true,
   "discoZonesImagePath": "Resources/discoZoneBox.png",
   "servers": [
