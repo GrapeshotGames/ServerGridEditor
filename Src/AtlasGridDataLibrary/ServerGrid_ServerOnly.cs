@@ -1,15 +1,10 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AtlasGridDataLibrary
 {
-
     public class ServerGrid_ServerOnlyData
     {
         public string LocalS3URL = "";
@@ -29,6 +24,7 @@ namespace AtlasGridDataLibrary
             LoadedConfig = JsonConvert.DeserializeObject<AtlasGridData>(JsonString);
             return LoadedConfig;
         }
+
         //public static void SaveAbsolutePath(AtlasGridData config, string Path)
         //{
         //    string JsonData = JsonConvert.SerializeObject(config, Formatting.Indented, new JsonSerializerSettings

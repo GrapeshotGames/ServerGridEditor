@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Drawing;
 using System.Windows.Forms;
-using System.ComponentModel;
-using System.IO;
 using AtlasGridDataLibrary;
 
 namespace ServerGridEditor
