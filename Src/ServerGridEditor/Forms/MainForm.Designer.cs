@@ -179,7 +179,7 @@
             this.createProjBtn.Name = "createProjBtn";
             this.createProjBtn.Size = new System.Drawing.Size(239, 84);
             this.createProjBtn.TabIndex = 19;
-            this.createProjBtn.Text = "CreateProject";
+            this.createProjBtn.Text = "Create Project";
             this.createProjBtn.UseVisualStyleBackColor = true;
             this.createProjBtn.Click += new System.EventHandler(this.createProjBtn_Click);
             // 
