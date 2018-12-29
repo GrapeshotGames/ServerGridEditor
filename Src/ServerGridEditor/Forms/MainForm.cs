@@ -2137,6 +2137,7 @@ namespace ServerGridEditor
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
                         //editorConfig.LastOpenedFolder = exportDir = fbd.SelectedPath;
+                        exportDir = fbd.SelectedPath;
                         SaveConfig();
                     }
                     else
