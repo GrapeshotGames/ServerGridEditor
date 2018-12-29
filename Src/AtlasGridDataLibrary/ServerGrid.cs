@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Reflection;
 
 namespace AtlasGridDataLibrary
 {
@@ -10,62 +11,64 @@ namespace AtlasGridDataLibrary
     {
         private static string GetBaseDir()
         {
-            return Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + "//";//GetExecutingAssembly().Location) + "//";
+            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + "//";
         }
 
         public static AtlasGridData Load()
         {
             return LoadAbsolutePath(GetBaseDir() + "ServerGrid.json");
         }
-        public static AtlasGridData Load(string RelativePath)
+
+        public static AtlasGridData Load(string relativePath)
         {
-            return LoadAbsolutePath(GetBaseDir() + RelativePath);
+            return LoadAbsolutePath(GetBaseDir() + relativePath);
         }
-        public static AtlasGridData LoadAbsolutePath(string Path)
+
+        public static AtlasGridData LoadAbsolutePath(string path)
         {
-            AtlasGridData LoadedConfig = new AtlasGridData(); //Default Object or null?
-            string JsonString = File.ReadAllText(Path);
-            LoadedConfig = JsonConvert.DeserializeObject<AtlasGridData>(JsonString);
-            return LoadedConfig;
+            //TODO: Default object or null?
+            var projectJson = File.ReadAllText(path);
+            return JsonConvert.DeserializeObject<AtlasGridData>(projectJson);
         }
 
         public static void Save(AtlasGridData config)
         {
             SaveAbsolutePath(config, GetBaseDir() + "ServerGrid.json");
         }
-        public static void Save(AtlasGridData config, string RelativePath)
+
+        public static void Save(AtlasGridData config, string relativePath)
         {
-            SaveAbsolutePath(config, GetBaseDir() + RelativePath);
+            SaveAbsolutePath(config, GetBaseDir() + relativePath);
         }
-        public static void SaveAbsolutePath(AtlasGridData config, string Path)
+
+        public static void SaveAbsolutePath(AtlasGridData config, string path)
         {
-            string JsonData = JsonConvert.SerializeObject(config, Formatting.Indented, new JsonSerializerSettings
+            var projectJson = JsonConvert.SerializeObject(config, Formatting.Indented, new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
-            File.WriteAllText(Path, JsonData);
+            File.WriteAllText(path, projectJson);
         }
     }
 
-
     public class AtlasGridData
     {
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string BaseServerArgs = "";
         public float gridSize;
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string MetaWorldURL = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string WorldFriendlyName = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string WorldAtlasId = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string AuthListURL = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string WorldAtlasPassword = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string ModIDs = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string MapImageURL = "";
 
         public int totalGridsX = 0;
@@ -138,7 +141,7 @@ namespace AtlasGridDataLibrary
         [DefaultValue("Resources/discoZoneBox.png")]
         public string discoZonesImagePath = null;
 
-        [DeploymentConstAttribute]
+        [DeploymentConst]
         public List<ServerData> servers = new List<ServerData>();
         // public List<ServerSerializationObject> originalServers = new List<ServerSerializationObject>();
 
@@ -166,21 +169,21 @@ namespace AtlasGridDataLibrary
     // ==== SERVER INFO ===========================================
     public class ServerData
     {
-        [DeploymentConstAttribute]
+        [DeploymentConst]
         public int gridX = 0;
-        [DeploymentConstAttribute]
+        [DeploymentConst]
         public int gridY = 0;
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string MachineIdTag = "";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public string ip = "127.0.0.1";
         public string name = "Unnamed Server";
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public int port = 50000;
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         public int gamePort = 6666;
         [DefaultValue(27000)]
-        [DeploymentOverrideAttribute]
+        [DeploymentOverride]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int seamlessDataPort = 27000;
         public bool isHomeServer = false;
@@ -245,12 +248,12 @@ namespace AtlasGridDataLibrary
             return Column + (gridY + 1);
         }
     }
+
     public class ServerTemplateData : ServerData
     {
         public float templateColorR = 0;
         public float templateColorG = 0;
         public float templateColorB = 0;
-
     }
 
     public class SublevelSerializationObject
@@ -271,6 +274,7 @@ namespace AtlasGridDataLibrary
         public float worldX, worldY;
         public float rotation;
     }
+
     public class IslandInstanceData : MoveableObjectData
     {
         public string name;
@@ -311,6 +315,7 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string IslandInstanceClientCustomDatas2 = "";
     }
+
     public class DiscoveryZoneData : MoveableObjectData
     {
         public string name;
@@ -328,6 +333,7 @@ namespace AtlasGridDataLibrary
         public int explorerNoteIndex;
         public bool allowSea;
     }
+
     public class SpawnRegionData
     {
         public string name { get; set; }
@@ -336,7 +342,6 @@ namespace AtlasGridDataLibrary
         [NonSerialized]
         public int Y;
     }
-
 
     // ==== MISC INFO ===========================================
 
@@ -368,6 +373,4 @@ namespace AtlasGridDataLibrary
         public ShipPathData shipPath;
         public float controlPointsDistance;
     }
-
-
 }
