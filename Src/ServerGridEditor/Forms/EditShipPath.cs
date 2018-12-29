@@ -1,8 +1,8 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Windows.Forms;
 
-namespace ServerGridEditor.Forms
+namespace Atlas.ServerGridEditor.Forms
 {
     public partial class EditShipPath : Form
     {

@@ -1,4 +1,4 @@
-﻿namespace ServerGridEditor
+﻿namespace Atlas.ServerGridEditor.Forms
 {
     partial class CreateIslndForm
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{9B3C74B8-57C2-4CF5-8BAD-C5C0D9123532}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServerGridEditor</RootNamespace>
-    <AssemblyName>ServerGridEditor</AssemblyName>
+    <RootNamespace>Atlas.ServerGridEditor</RootNamespace>
+    <AssemblyName>Atlas.ServerGridEditor</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -306,9 +306,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AtlasGridDataLibrary\AtlasGridDataLibrary.csproj">
+    <ProjectReference Include="..\GridData\Atlas.GridData.csproj">
       <Project>{8a276721-fe14-4414-8c0a-1b3ecc282195}</Project>
-      <Name>AtlasGridDataLibrary</Name>
+      <Name>Atlas.GridData</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

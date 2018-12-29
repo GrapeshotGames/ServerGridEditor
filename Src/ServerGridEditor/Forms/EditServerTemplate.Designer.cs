@@ -1,4 +1,4 @@
-﻿namespace ServerGridEditor
+﻿namespace Atlas.ServerGridEditor
 {
     partial class EditServerTemplate
     {

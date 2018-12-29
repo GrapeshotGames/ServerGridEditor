@@ -1,11 +1,11 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public class Server
     {

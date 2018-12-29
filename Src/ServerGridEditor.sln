@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerGridEditor", "ServerGridEditor\ServerGridEditor.csproj", "{9B3C74B8-57C2-4CF5-8BAD-C5C0D9123532}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.ServerGridEditor", "ServerGridEditor\Atlas.ServerGridEditor.csproj", "{9B3C74B8-57C2-4CF5-8BAD-C5C0D9123532}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasGridDataLibrary", "AtlasGridDataLibrary\AtlasGridDataLibrary.csproj", "{8A276721-FE14-4414-8C0A-1B3ECC282195}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlas.GridData", "GridData\Atlas.GridData.csproj", "{8A276721-FE14-4414-8C0A-1B3ECC282195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

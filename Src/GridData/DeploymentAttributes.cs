@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace AtlasGridDataLibrary
+namespace Atlas.GridData
 {
     public class DeploymentAttribute : Attribute { }
 

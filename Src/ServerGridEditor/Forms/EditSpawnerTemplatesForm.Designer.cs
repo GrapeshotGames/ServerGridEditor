@@ -1,4 +1,6 @@
-﻿namespace ServerGridEditor.Forms
+﻿using Atlas.GridData;
+
+namespace Atlas.ServerGridEditor.Forms
 {
     partial class EditSpawnerTemplatesForm
     {
@@ -91,7 +93,7 @@
             // 
             // sublevelSerializationObjectBindingSource
             // 
-            this.sublevelSerializationObjectBindingSource.DataSource = typeof(AtlasGridDataLibrary.SublevelSerializationObject);
+            this.sublevelSerializationObjectBindingSource.DataSource = typeof(SublevelSerializationObject);
             // 
             // templateName
             // 

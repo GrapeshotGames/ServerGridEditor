@@ -5,9 +5,9 @@ using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
 using Newtonsoft.Json;
-using AtlasGridDataLibrary;
+using Atlas.GridData;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public class Island
     {

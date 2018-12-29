@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public class SpawnRegion
     {

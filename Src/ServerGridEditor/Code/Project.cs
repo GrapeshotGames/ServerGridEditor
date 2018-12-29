@@ -4,9 +4,9 @@ using System.Linq;
 using Newtonsoft.Json;
 using System.Drawing;
 using System.Windows.Forms;
-using AtlasGridDataLibrary;
+using Atlas.GridData;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     class ConfigKeyValueEntry
     {

@@ -1,4 +1,4 @@
-﻿namespace ServerGridEditor.Forms
+﻿namespace Atlas.ServerGridEditor.Forms
 {
     partial class EditShipPath
     {

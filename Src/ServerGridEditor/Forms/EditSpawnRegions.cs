@@ -1,10 +1,10 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace ServerGridEditor.Forms
+namespace Atlas.ServerGridEditor.Forms
 {
     public partial class EditSpawnRegions : Form
     {

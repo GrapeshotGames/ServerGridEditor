@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public partial class ProgressForm : Form
     {

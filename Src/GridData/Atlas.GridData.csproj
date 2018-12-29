@@ -7,8 +7,8 @@
     <ProjectGuid>{8A276721-FE14-4414-8C0A-1B3ECC282195}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AtlasGridDataLibrary</RootNamespace>
-    <AssemblyName>AtlasGridDataLibrary</AssemblyName>
+    <RootNamespace>Atlas.GridData</RootNamespace>
+    <AssemblyName>Atlas.GridData</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeploymentOverrideAttribute.cs" />
+    <Compile Include="DeploymentAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerGrid.cs" />
     <Compile Include="ServerGrid_ServerOnly.cs" />

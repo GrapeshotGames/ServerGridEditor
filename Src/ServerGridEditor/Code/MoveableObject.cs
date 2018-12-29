@@ -1,8 +1,8 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Drawing;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public static class MoveableObjectEx
     {

@@ -6,7 +6,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace ServerGridEditor.Code
+namespace Atlas.ServerGridEditor
 {
     /// <summary>
     /// A SlippyMap is a tiled web map, such as OpenStreetMap.

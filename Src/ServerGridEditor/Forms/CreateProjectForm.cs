@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using AtlasGridDataLibrary;
+using Atlas.GridData;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor.Forms
 {
     public partial class CreateProjectForm : Form
     {

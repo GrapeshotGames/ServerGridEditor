@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public class MapPanel : Panel
     {

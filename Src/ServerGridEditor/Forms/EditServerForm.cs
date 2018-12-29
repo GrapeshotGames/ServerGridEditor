@@ -1,4 +1,4 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public partial class EditServerForm : Form
     {

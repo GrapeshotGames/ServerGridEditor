@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.IO;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     static class StaticHelpers
     {

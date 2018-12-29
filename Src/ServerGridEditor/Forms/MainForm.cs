@@ -7,13 +7,12 @@ using System.IO;
 using Newtonsoft.Json;
 using ImageMagick;
 using System.Diagnostics;
-using ServerGridEditor.Forms;
-using ServerGridEditor.Code;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
-using AtlasGridDataLibrary;
+using Atlas.GridData;
+using Atlas.ServerGridEditor.Forms;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public partial class MainForm : Form
     {

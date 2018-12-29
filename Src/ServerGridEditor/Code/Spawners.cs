@@ -1,9 +1,9 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public class Spawners
     {

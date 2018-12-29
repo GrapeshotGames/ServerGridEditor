@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 
-namespace AtlasGridDataLibrary
+namespace Atlas.GridData
 {
     public class ServerGrid_ServerOnlyData
     {

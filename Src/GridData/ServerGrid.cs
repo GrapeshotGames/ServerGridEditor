@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 
-namespace AtlasGridDataLibrary
+namespace Atlas.GridData
 {
     public static class AtlasDataGridLoader
     {

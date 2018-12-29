@@ -1,8 +1,8 @@
-﻿using AtlasGridDataLibrary;
+﻿using Atlas.GridData;
 using System;
 using System.Windows.Forms;
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public partial class TravelDataConfigForm : Form
     {

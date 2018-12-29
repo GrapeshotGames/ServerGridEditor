@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
-using AtlasGridDataLibrary;
+using Atlas.GridData;
 
 
-namespace ServerGridEditor
+namespace Atlas.ServerGridEditor
 {
     public static class BezierNodeEx
     {
