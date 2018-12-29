@@ -169,6 +169,15 @@ namespace ServerGridEditor
                 return;
             }
 
+            if(size > 1400000.00)
+            {
+                DialogResult result = MessageBox.Show("Warning grid size is greater then the recommended value of 1400000 units, you can continue but loss of floating point precision may occur. Do you wish to continue?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if(result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
             float columnUTCOffset;
             if (!float.TryParse(columnUTCOffsetTxtBox.Text, out columnUTCOffset))
             {
