@@ -2005,6 +2005,13 @@ namespace ServerGridEditor
                 return;
 
             string jsonFileName = MainForm.gameDir + "/" + MainForm.actualJsonFile;
+            var enclosingDirectory = Path.GetDirectoryName(jsonFileName);
+            if (!Directory.Exists(enclosingDirectory))
+            {
+                MessageBox.Show($"Asked to create {MainForm.actualJsonFile} in non-existent directory:\n{enclosingDirectory}", "Test Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             File.WriteAllText(jsonFileName, currentProject.Serialize(this));
 
             int i = 0;
