@@ -92,6 +92,7 @@
             this.foregroundScaleBox = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.atlasLocation = new System.Windows.Forms.Label();
+            this.cullInvalidPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -280,7 +281,8 @@
             this.editAllDiscoveryZonesToolStripMenuItem,
             this.editSpawnPointsToolStripMenuItem,
             this.editServerTemplatesToolStripMenuItem,
-            this.editLocksToolStripMenuItem});
+            this.editLocksToolStripMenuItem,
+            this.cullInvalidPathsToolStripMenuItem});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
@@ -759,6 +761,13 @@
             this.atlasLocation.TabIndex = 36;
             this.atlasLocation.Text = "Atlas Location";
             // 
+            // cullInvalidPathsToolStripMenuItem
+            // 
+            this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
+            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
+            this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -886,6 +895,7 @@
         private System.Windows.Forms.ToolStripMenuItem editServerTemplatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editLocksToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem cullInvalidPathsToolStripMenuItem;
     }
 }
 
