@@ -388,6 +388,7 @@
             // 
             // testAllServersWithoutDataClearToolStripMenuItem
             // 
+            this.testAllServersWithoutDataClearToolStripMenuItem.Enabled = false;
             this.testAllServersWithoutDataClearToolStripMenuItem.Name = "testAllServersWithoutDataClearToolStripMenuItem";
             this.testAllServersWithoutDataClearToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.testAllServersWithoutDataClearToolStripMenuItem.Text = "Test All Servers (Without Data clear)";
