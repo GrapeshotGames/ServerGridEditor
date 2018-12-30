@@ -1858,7 +1858,7 @@ namespace ServerGridEditor
                 if (tile != null)
                     tile.Dispose();
 
-                File.Copy(openFileDialog.FileName, imgName, true);
+                File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
                 SetTileImage(openFileDialog.FileName);
                 currentProject.showBackground = true;
                 currentProject.backgroundImgPath = imgName;
