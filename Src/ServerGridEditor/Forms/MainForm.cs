@@ -180,15 +180,14 @@ namespace ServerGridEditor
 
         public void EnableProjectMenuItems()
         {
-            var enabled = true;
-            editToolStripMenuItem.Enabled = enabled;
-            saveToolStripMenuItem.Enabled = enabled;
-            mapImageToolStripMenuItem.Enabled = enabled;
-            slippyMapToolStripMenuItem.Enabled = enabled;
-            cellImagesToolStripMenuItem.Enabled = enabled;
-            localExportToolStripMenuItem.Enabled = enabled;
-            editServerTemplatesToolStripMenuItem.Enabled = enabled;
-            testAllServersWithoutDataClearToolStripMenuItem.Enabled = enabled;
+            editToolStripMenuItem.Enabled = true;
+            saveToolStripMenuItem.Enabled = true;
+            mapImageToolStripMenuItem.Enabled = true;
+            slippyMapToolStripMenuItem.Enabled = true;
+            cellImagesToolStripMenuItem.Enabled = true;
+            localExportToolStripMenuItem.Enabled = true;
+            editServerTemplatesToolStripMenuItem.Enabled = true;
+            testAllServersWithoutDataClearToolStripMenuItem.Enabled = true;
         }
 
         public void SetScaleTxt(float unrealUnits)
