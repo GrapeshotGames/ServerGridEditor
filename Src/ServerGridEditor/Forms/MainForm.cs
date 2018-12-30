@@ -178,6 +178,19 @@ namespace ServerGridEditor
             createProjBtn.Visible = !isVisible;
         }
 
+        public void EnableProjectMenuItems()
+        {
+            var enabled = true;
+            editToolStripMenuItem.Enabled = enabled;
+            saveToolStripMenuItem.Enabled = enabled;
+            mapImageToolStripMenuItem.Enabled = enabled;
+            slippyMapToolStripMenuItem.Enabled = enabled;
+            cellImagesToolStripMenuItem.Enabled = enabled;
+            localExportToolStripMenuItem.Enabled = enabled;
+            editServerTemplatesToolStripMenuItem.Enabled = enabled;
+            testAllServersWithoutDataClearToolStripMenuItem.Enabled = enabled;
+        }
+
         public void SetScaleTxt(float unrealUnits)
         {
             scaleLbl.Text = "1 pixel = " + unrealUnits + " unreal units";
@@ -263,18 +276,7 @@ namespace ServerGridEditor
 
         public void DrawMapToGraphics(ref Graphics g, bool cull = false, bool ignoreTranslation = false, bool forExport = false)
         {
-            var isProjectPresent = currentProject != null;
-
-            editToolStripMenuItem.Enabled = isProjectPresent;
-            saveToolStripMenuItem.Enabled = isProjectPresent;
-            mapImageToolStripMenuItem.Enabled = isProjectPresent;
-            slippyMapToolStripMenuItem.Enabled = isProjectPresent;
-            cellImagesToolStripMenuItem.Enabled = isProjectPresent;
-            localExportToolStripMenuItem.Enabled = isProjectPresent;
-            editServerTemplatesToolStripMenuItem.Enabled = isProjectPresent;
-            testAllServersWithoutDataClearToolStripMenuItem.Enabled = isProjectPresent;
-
-            if (!isProjectPresent)
+            if (currentProject == null)
                 return;
 
             UpdateScrollBars();
@@ -1637,6 +1639,7 @@ namespace ServerGridEditor
 
                 if (loadedProj.successfullyLoaded)
                 {
+                    EnableProjectMenuItems();
                     actualJsonFile = openFileDialog.SafeFileName;
                     currentProject = loadedProj;
                     SetScaleTxt(1 / currentProject.coordsScaling);
