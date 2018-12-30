@@ -2001,16 +2001,18 @@ namespace ServerGridEditor
 
         void TestAllServers(bool clearSaveData = false)
         {
+            if (currentProject == null)
+                return;
+
             string jsonFileName = MainForm.gameDir + "/" + MainForm.actualJsonFile;
             File.WriteAllText(jsonFileName, currentProject.Serialize(this));
 
             int i = 0;
-            if (currentProject != null)
-                foreach (Server server in currentProject.servers)
-                {
-                    ProcessStartInfo serverStartInfo, clientStartInfo;
-                    server.LaunchPreview(out serverStartInfo, out clientStartInfo, false, clearSaveData, false, ++i);
-                }
+            foreach (Server server in currentProject.servers)
+            {
+                ProcessStartInfo serverStartInfo, clientStartInfo;
+                server.LaunchPreview(out serverStartInfo, out clientStartInfo, false, clearSaveData, false, ++i);
+            }
         }
 
         private void editSpawnerTemplatesToolStripMenuItem_Click(object sender, EventArgs e)
