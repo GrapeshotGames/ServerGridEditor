@@ -263,17 +263,19 @@ namespace ServerGridEditor
 
         public void DrawMapToGraphics(ref Graphics g, bool cull = false, bool ignoreTranslation = false, bool forExport = false)
         {
+            var isProjectPresent = currentProject != null;
 
-            if (currentProject == null)
+            editToolStripMenuItem.Enabled = isProjectPresent;
+            saveToolStripMenuItem.Enabled = isProjectPresent;
+            mapImageToolStripMenuItem.Enabled = isProjectPresent;
+            slippyMapToolStripMenuItem.Enabled = isProjectPresent;
+            cellImagesToolStripMenuItem.Enabled = isProjectPresent;
+            localExportToolStripMenuItem.Enabled = isProjectPresent;
+            editServerTemplatesToolStripMenuItem.Enabled = isProjectPresent;
+            testAllServersWithoutDataClearToolStripMenuItem.Enabled = isProjectPresent;
+
+            if (!isProjectPresent)
                 return;
-
-            editToolStripMenuItem.Enabled = true;
-            saveToolStripMenuItem.Enabled = true;
-            mapImageToolStripMenuItem.Enabled = true;
-            editServerTemplatesToolStripMenuItem.Enabled = true;
-            cellImagesToolStripMenuItem.Enabled = true;
-            slippyMapToolStripMenuItem.Enabled = true;
-            localExportToolStripMenuItem.Enabled = true;
 
             UpdateScrollBars();
 
