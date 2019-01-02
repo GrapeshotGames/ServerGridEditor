@@ -178,6 +178,18 @@ namespace ServerGridEditor
             createProjBtn.Visible = !isVisible;
         }
 
+        public void EnableProjectMenuItems()
+        {
+            editToolStripMenuItem.Enabled = true;
+            saveToolStripMenuItem.Enabled = true;
+            mapImageToolStripMenuItem.Enabled = true;
+            slippyMapToolStripMenuItem.Enabled = true;
+            cellImagesToolStripMenuItem.Enabled = true;
+            localExportToolStripMenuItem.Enabled = true;
+            editServerTemplatesToolStripMenuItem.Enabled = true;
+            testAllServersWithoutDataClearToolStripMenuItem.Enabled = true;
+        }
+
         public void SetScaleTxt(float unrealUnits)
         {
             scaleLbl.Text = "1 pixel = " + unrealUnits + " unreal units";
@@ -263,17 +275,8 @@ namespace ServerGridEditor
 
         public void DrawMapToGraphics(ref Graphics g, bool cull = false, bool ignoreTranslation = false, bool forExport = false)
         {
-
             if (currentProject == null)
                 return;
-
-            editToolStripMenuItem.Enabled = true;
-            saveToolStripMenuItem.Enabled = true;
-            mapImageToolStripMenuItem.Enabled = true;
-            editServerTemplatesToolStripMenuItem.Enabled = true;
-            cellImagesToolStripMenuItem.Enabled = true;
-            slippyMapToolStripMenuItem.Enabled = true;
-            localExportToolStripMenuItem.Enabled = true;
 
             UpdateScrollBars();
 
@@ -1635,6 +1638,7 @@ namespace ServerGridEditor
 
                 if (loadedProj.successfullyLoaded)
                 {
+                    EnableProjectMenuItems();
                     actualJsonFile = openFileDialog.SafeFileName;
                     currentProject = loadedProj;
                     SetScaleTxt(1 / currentProject.coordsScaling);
@@ -1999,16 +2003,25 @@ namespace ServerGridEditor
 
         void TestAllServers(bool clearSaveData = false)
         {
+            if (currentProject == null)
+                return;
+
             string jsonFileName = MainForm.gameDir + "/" + MainForm.actualJsonFile;
+            var enclosingDirectory = Path.GetDirectoryName(jsonFileName);
+            if (!Directory.Exists(enclosingDirectory))
+            {
+                MessageBox.Show($"Asked to create {MainForm.actualJsonFile} in non-existent directory:\n{enclosingDirectory}", "Test Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             File.WriteAllText(jsonFileName, currentProject.Serialize(this));
 
             int i = 0;
-            if (currentProject != null)
-                foreach (Server server in currentProject.servers)
-                {
-                    ProcessStartInfo serverStartInfo, clientStartInfo;
-                    server.LaunchPreview(out serverStartInfo, out clientStartInfo, false, clearSaveData, false, ++i);
-                }
+            foreach (Server server in currentProject.servers)
+            {
+                ProcessStartInfo serverStartInfo, clientStartInfo;
+                server.LaunchPreview(out serverStartInfo, out clientStartInfo, false, clearSaveData, false, ++i);
+            }
         }
 
         private void editSpawnerTemplatesToolStripMenuItem_Click(object sender, EventArgs e)
