@@ -85,9 +85,8 @@
   "showDiscoZoneInfo": true,
   "showShipPathsInfo": true,
   "showIslandNames": false,
-  "exportPngs": false,
   "showBackground": true,
-  "backgroundImgPath": "./WaterTiles/instinctworld-autoscaling",
+  "backgroundImgPath": "./WaterTiles/instinctworld-autoscaling.png",
   "discoZonesImagePath": "Resources/discoZoneBox.png",
   "servers": [
     {

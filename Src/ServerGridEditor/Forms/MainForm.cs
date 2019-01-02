@@ -1610,6 +1610,8 @@ namespace ServerGridEditor
                 return;
 
             saveFileDialog.Filter = "json files (*.json)|*.json";
+            saveFileDialog.FileName = actualJsonFile;
+            saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllText(saveFileDialog.FileName, currentProject.Serialize(this));
@@ -1851,7 +1853,8 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            openFileDialog.Filter = "png files (*.png)|*.png";
+            openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
+            openFileDialog.FileName = "";
             openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./","");
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
@@ -1862,10 +1865,10 @@ namespace ServerGridEditor
                 if (tile != null)
                     tile.Dispose();
 
-                File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
-                SetTileImage(openFileDialog.FileName);
+                //File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
                 currentProject.showBackground = true;
-                currentProject.backgroundImgPath = imgName;
+                currentProject.backgroundImgPath = imgName + openFileDialog.SafeFileName;
+                SetTileImage(currentProject.backgroundImgPath);
                 tiledBackgroundCheckbox.Checked = true;
             }
         }

@@ -8,7 +8,10 @@
   "WorldAtlasPassword": "",
   "ModIDs": "",
   "MapImageURL": "http://arkdedicated.com/atlaspreview.jpg",
+  "totalGridsX": 2,
+  "totalGridsY": 2,
   "bUseUTCTime": true,
+  "columnUTCOffset": 0.0,
   "Day0": "2018-07-16 17:05:21",
   "globalTransitionMinZ": 0.0,
   "AdditionalCmdLineParams": "",
@@ -84,7 +87,7 @@
   "showIslandNames": true,
   "exportPngs": false,
   "showBackground": true,
-  "backgroundImgPath": "./WaterTiles/instinctworld-autoscaling",
+  "backgroundImgPath": "./WaterTiles/instinctworld-autoscaling.png",
   "discoZonesImagePath": "Resources/discoZoneBox.png",
   "servers": [
     {
