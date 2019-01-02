@@ -53,6 +53,7 @@
             // cancelBtn
             // 
             this.cancelBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cancelBtn.Location = new System.Drawing.Point(512, 489);
             this.cancelBtn.Name = "cancelBtn";
@@ -210,8 +211,10 @@
             // 
             // EditDiscoZonesForm
             // 
+            this.AcceptButton = this.saveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(1030, 536);
             this.Controls.Add(this.discoZonesGrid);
             this.Controls.Add(this.cancelBtn);

@@ -156,6 +156,7 @@
             // 
             // cancelBtn
             // 
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelBtn.Location = new System.Drawing.Point(415, 565);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(118, 32);
@@ -187,6 +188,7 @@
             // 
             // addSublevels
             // 
+            this.addSublevels.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.addSublevels.Location = new System.Drawing.Point(96, 295);
             this.addSublevels.Name = "addSublevels";
             this.addSublevels.Size = new System.Drawing.Size(90, 24);
@@ -365,8 +367,10 @@
             // 
             // CreateIslndForm
             // 
+            this.AcceptButton = this.createBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(609, 619);
             this.Controls.Add(this.instancesListBox);
             this.Controls.Add(this.label12);
