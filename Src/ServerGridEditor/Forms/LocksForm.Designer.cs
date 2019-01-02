@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lockIslandsChkbox = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.applyBtn = new System.Windows.Forms.Button();
             this.lockDiscoChckbox = new System.Windows.Forms.CheckBox();
             this.lockShipPathsChckbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -46,15 +46,15 @@
             this.lockIslandsChkbox.Text = "Lock Islands";
             this.lockIslandsChkbox.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // applyBtn
             // 
-            this.button1.Location = new System.Drawing.Point(68, 140);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Apply";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.applyBtn.Location = new System.Drawing.Point(68, 140);
+            this.applyBtn.Name = "applyBtn";
+            this.applyBtn.Size = new System.Drawing.Size(75, 23);
+            this.applyBtn.TabIndex = 1;
+            this.applyBtn.Text = "Apply";
+            this.applyBtn.UseVisualStyleBackColor = true;
+            this.applyBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // lockDiscoChckbox
             // 
@@ -82,12 +82,13 @@
             // 
             // LocksForm
             // 
+            this.AcceptButton = this.applyBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 189);
             this.Controls.Add(this.lockShipPathsChckbox);
             this.Controls.Add(this.lockDiscoChckbox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.applyBtn);
             this.Controls.Add(this.lockIslandsChkbox);
             this.Name = "LocksForm";
             this.ShowIcon = false;
@@ -102,7 +103,7 @@
         #endregion
 
         private System.Windows.Forms.CheckBox lockIslandsChkbox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button applyBtn;
         private System.Windows.Forms.CheckBox lockDiscoChckbox;
         private System.Windows.Forms.CheckBox lockShipPathsChckbox;
     }

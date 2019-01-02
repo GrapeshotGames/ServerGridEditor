@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.spawnRegionsGrid = new System.Windows.Forms.DataGridView();
-            this.cancelBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
             this.regionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.regionParent = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cancelBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.messageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.spawnRegionsGrid)).BeginInit();
             this.SuspendLayout();
@@ -99,8 +99,10 @@
             // 
             // EditSpawnRegions
             // 
+            this.AcceptButton = this.saveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(374, 419);
             this.Controls.Add(this.messageLabel);
             this.Controls.Add(this.cancelBtn);
