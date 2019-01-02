@@ -2356,6 +2356,45 @@ namespace ServerGridEditor
             var editForm = new EditAllLocksForm(this);
             editForm.ShowDialog();
         }
+
+        private void cullInvalidPathsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+
+            // hold on to the count of culled paths for display purposes
+            var invalidCount = 0;
+
+            // determine the maximum X and Y coordinate that would be valid for this grid
+            var maxWidth = currentProject.cellSize * currentProject.numOfCellsX;
+            var maxHeight = currentProject.cellSize * currentProject.numOfCellsY;
+            var maxDimensions = new PointF(maxWidth, maxHeight);
+
+            // remove any path with any node with a coordinate below origin or above the calculated maximum
+            currentProject.shipPaths.RemoveAll((path) =>
+            {
+                foreach (var node in path.Nodes)
+                {
+                    if (node.worldX < 0 || node.worldX > maxDimensions.X || node.worldY < 0 ||
+                        node.worldY > maxDimensions.Y)
+                    {
+                        invalidCount++;
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+
+            if (invalidCount > 0)
+            {
+                MessageBox.Show($"Found and removed {invalidCount} invalid paths!", "Invalid Paths Culled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 
     public class Config
