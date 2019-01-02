@@ -196,11 +196,11 @@ namespace ServerGridEditor
                 editedProject.WorldFriendlyName = worldFriendlyNameTxtBox.Text;
                 editedProject.WorldAtlasId = worldAtlasIdTxtBox.Text;
                 editedProject.WorldAtlasPassword = worldAtlasPasswordTxtBox.Text;
-                if (mapImageURLTxtBox.Text != "")
-                    editedProject.MapImageURL = mapImageURLTxtBox.Text;
+                editedProject.MapImageURL = mapImageURLTxtBox.Text;
+                editedProject.MapImageURL = editedProject.MapImageURL.Trim();
 
-                editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;
                 editedProject.AuthListURL = authListURLTxtBox.Text;
+                editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;
                 editedProject.MetaWorldURL = editedProject.MetaWorldURL.Trim();
 
                 editedProject.BaseServerArgs = baseServerArgsTxtBox.Text;
