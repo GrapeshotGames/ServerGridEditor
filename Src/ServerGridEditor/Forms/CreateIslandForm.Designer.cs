@@ -404,7 +404,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.islandNameTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CreateIslandForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Island";
             this.Load += new System.EventHandler(this.Form2_Load);

@@ -90,8 +90,12 @@
             this.Controls.Add(this.lockDiscoChckbox);
             this.Controls.Add(this.applyBtn);
             this.Controls.Add(this.lockIslandsChkbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LocksForm";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locks";
             this.Load += new System.EventHandler(this.LocksForm_Load);

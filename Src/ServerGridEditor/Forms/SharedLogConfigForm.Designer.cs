@@ -248,7 +248,11 @@
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SharedLogConfigForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Shared Log Config";
             this.Load += new System.EventHandler(this.SharedLogConfigForm_Load);
             this.ResumeLayout(false);

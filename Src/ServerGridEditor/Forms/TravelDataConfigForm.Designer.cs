@@ -152,7 +152,11 @@
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "TravelDataConfigForm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Travel Data Config";
             this.Load += new System.EventHandler(this.TravelDataConfigForm_Load);
             this.ResumeLayout(false);

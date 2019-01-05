@@ -218,8 +218,13 @@
             this.Controls.Add(this.zoneNameTxt);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditDiscoveryZoneInstance";
             this.Text = "EditDiscoveryZoneInstance";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
             this.PerformLayout();
 
