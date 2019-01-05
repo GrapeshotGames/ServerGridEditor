@@ -1751,45 +1751,42 @@ namespace ServerGridEditor
         {
             var confirmResult = MessageBox.Show("Removing an island will remove all its instances in the map!\n\nAre you sure?",
                                     "Warning",
-                                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (confirmResult == DialogResult.OK)
+            if (confirmResult != DialogResult.Yes)
+                return;
+
+            List<string> islandsToRemove = new List<string>();
+
+            foreach (ListViewItem item in islandListBox.SelectedItems)
             {
-
-                List<string> islandsToRemove = new List<string>();
-
-                foreach (ListViewItem item in islandListBox.SelectedItems)
-                {
-                    islandsToRemove.Add(item.SubItems[2].Text);
-                }
-
-                if (currentProject != null)
-                {
-                    for (int i = 0; i < currentProject.islandInstances.Count; i++)
-                        foreach (string islandToRemove in islandsToRemove)
-                            if (currentProject.islandInstances[i].name == islandToRemove)
-                            {
-                                currentProject.islandInstances[i].SetDirty(this);
-                                currentProject.islandInstances.RemoveAt(i);
-                                i--;
-                            }
-                }
-
-                foreach (string islandToRemove in islandsToRemove)
-                {
-                    //delete the image
-                    islands[islandToRemove].InvalidateImage();
-                    File.Delete(islands[islandToRemove].imagePath);
-
-                    islands.Remove(islandToRemove);
-                }
-
-
-                RefreshIslandList();
-                mapPanel.Invalidate();
-                SaveIslands();
+                islandsToRemove.Add(item.SubItems[2].Text);
             }
 
+            if (currentProject != null)
+            {
+                for (int i = 0; i < currentProject.islandInstances.Count; i++)
+                    foreach (string islandToRemove in islandsToRemove)
+                        if (currentProject.islandInstances[i].name == islandToRemove)
+                        {
+                            currentProject.islandInstances[i].SetDirty(this);
+                            currentProject.islandInstances.RemoveAt(i);
+                            i--;
+                        }
+            }
+
+            foreach (string islandToRemove in islandsToRemove)
+            {
+                //delete the image
+                islands[islandToRemove].InvalidateImage();
+                File.Delete(islands[islandToRemove].imagePath);
+
+                islands.Remove(islandToRemove);
+            }
+
+            RefreshIslandList();
+            mapPanel.Invalidate();
+            SaveIslands();
         }
 
         private void showServerInfoCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -1964,8 +1961,7 @@ namespace ServerGridEditor
             if (currentProject != null)
             {
                 var confirmResult = MessageBox.Show("All unsaved changes to your current project will be LOST!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
-                if (confirmResult == DialogResult.Cancel)
-                    e.Cancel = true;
+                e.Cancel = confirmResult == DialogResult.Cancel;
             }
         }
 

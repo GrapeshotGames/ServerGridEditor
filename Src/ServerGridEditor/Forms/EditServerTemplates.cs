@@ -65,9 +65,9 @@ namespace ServerGridEditor.Forms
                 {
                     var confirmResult = MessageBox.Show("You are about to delete the selected template\n\nAre you sure?",
                                             "Warning",
-                                            MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if (confirmResult == DialogResult.OK)
+                    if (confirmResult == DialogResult.Yes)
                     {
                         templatesLstBox.Items.Remove(serverTemplate.name);
                         mainForm.currentProject.serverTemplates.Remove(serverTemplate);
