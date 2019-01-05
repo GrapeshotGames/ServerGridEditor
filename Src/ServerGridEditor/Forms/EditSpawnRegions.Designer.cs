@@ -112,8 +112,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditSpawnRegions";
-            this.Text = "EditSpawnRegions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Edit Spawn Regions";
             ((System.ComponentModel.ISupportInitialize)(this.spawnRegionsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

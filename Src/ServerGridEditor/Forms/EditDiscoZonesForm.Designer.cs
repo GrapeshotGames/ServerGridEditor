@@ -223,9 +223,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EditDiscoZonesForm";
-            this.Text = "EditDiscoZonesForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Edit Discovery Zones";
             ((System.ComponentModel.ISupportInitialize)(this.discoZonesGrid)).EndInit();
             this.ResumeLayout(false);
 
