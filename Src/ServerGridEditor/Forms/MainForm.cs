@@ -1596,7 +1596,7 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
             {
-                MessageBox.Show("Creating a project will overwrite the currently opened one");
+                MessageBox.Show("If you create a new project, any unsaved changes to your current project will be LOST!");
             }
 
             var createForm = new CreateProjectForm();
@@ -1623,12 +1623,11 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
             {
-                var confirmResult = MessageBox.Show("Opening a project will overwrite the currently opened one, open?",
+                var confirmResult = MessageBox.Show("If you click OK, any unsaved changes to your current project will be LOST!",
                                      "Warning",
                                      MessageBoxButtons.OKCancel);
                 if (confirmResult != DialogResult.OK)
                     return;
-                //MessageBox.Show("Opening a project will overwrite the currently opened one");
             }
 
             openFileDialog.Filter = "json files (*.json)|*.json";
@@ -1750,7 +1749,7 @@ namespace ServerGridEditor
 
         private void removeIslandBtn_Click(object sender, EventArgs e)
         {
-            var confirmResult = MessageBox.Show("Removing an island will remove all its instances in the map\nAre you sure?",
+            var confirmResult = MessageBox.Show("Removing an island will remove all its instances in the map!\n\nAre you sure?",
                                     "Warning",
                                     MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
@@ -1964,7 +1963,7 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
             {
-                var confirmResult = MessageBox.Show("All unsaved progress will be lost", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+                var confirmResult = MessageBox.Show("All unsaved changes to your current project will be LOST!", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
                 if (confirmResult == DialogResult.Cancel)
                     e.Cancel = true;
             }
@@ -1985,7 +1984,7 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
             {
-                MessageBox.Show("Creating a project will overwrite the currently opened one");
+                MessageBox.Show("If you create a new project, any unsaved changes to your current project will be LOST!");
             }
 
             var createForm = new CreateProjectForm();
