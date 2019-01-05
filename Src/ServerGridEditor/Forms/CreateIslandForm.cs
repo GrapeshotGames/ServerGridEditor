@@ -12,13 +12,13 @@ using System.Windows.Forms;
 
 namespace ServerGridEditor
 {
-    public partial class CreateIslndForm : Form
+    public partial class CreateIslandForm : Form
     {
         public MainForm mainForm;
         public Island editedIsland;
         
         public bool bIslandNameChanged = false;
-        public CreateIslndForm()
+        public CreateIslandForm()
         {
             InitializeComponent();
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;

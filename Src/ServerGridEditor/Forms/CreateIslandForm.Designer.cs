@@ -1,6 +1,6 @@
 ﻿namespace ServerGridEditor
 {
-    partial class CreateIslndForm
+    partial class CreateIslandForm
     {
         /// <summary>
         /// Required designer variable.
@@ -365,7 +365,7 @@
             this.instancesListBox.Size = new System.Drawing.Size(194, 95);
             this.instancesListBox.TabIndex = 39;
             // 
-            // CreateIslndForm
+            // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +404,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.islandNameTxtBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "CreateIslndForm";
+            this.Name = "CreateIslandForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Island";
             this.Load += new System.EventHandler(this.Form2_Load);

@@ -1561,7 +1561,7 @@ namespace ServerGridEditor
         ///////////////////////////Action Handlers///////////////////////////////////
         private void addIslandBtn_Click(object sender, EventArgs e)
         {
-            var createForm = new CreateIslndForm();
+            var createForm = new CreateIslandForm();
             createForm.mainForm = this;
             createForm.ShowDialog();
         }
@@ -1840,7 +1840,7 @@ namespace ServerGridEditor
             if (isle == null)
                 return;
 
-            var createForm = new CreateIslndForm();
+            var createForm = new CreateIslandForm();
             createForm.mainForm = this;
             createForm.editedIsland = isle;
             if(createForm.ShowDialog() != DialogResult.Cancel && createForm.bIslandNameChanged)
