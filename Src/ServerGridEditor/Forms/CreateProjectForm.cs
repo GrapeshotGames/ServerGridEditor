@@ -428,6 +428,7 @@ namespace ServerGridEditor
                 mainForm.currentProject.TravelDataConfig.CopyFrom(TravelDataConfig);
                 mainForm.currentProject.SharedLogConfig.CopyFrom(SharedLogConfig);
             }
+            mainForm.EnableProjectMenuItems();
             Close();
         }
 
