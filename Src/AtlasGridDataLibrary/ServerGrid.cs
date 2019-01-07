@@ -62,9 +62,7 @@ namespace AtlasGridDataLibrary
         public string WorldFriendlyName = "";
         [DeploymentOverrideAttribute]
         public string WorldAtlasId = "";
-        [DeploymentOverrideAttribute]
         public string AuthListURL = "";
-        [DeploymentOverrideAttribute]
         public string WorldAtlasPassword = "";
         [DeploymentOverrideAttribute]
         public string ModIDs = "";
