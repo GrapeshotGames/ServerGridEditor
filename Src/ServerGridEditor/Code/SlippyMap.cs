@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ServerGridEditor.Code
@@ -22,9 +23,6 @@ namespace ServerGridEditor.Code
     /// </remarks>
     static class SlippyMap
     {
-        public static readonly int minimumZoomLevel = 0,
-                                   maximumZoomLevel = 6;
-
         public static readonly string extension = ".png";
         public static readonly int tileSize = 256;
 
@@ -34,8 +32,8 @@ namespace ServerGridEditor.Code
         public static readonly float largestSize = (float)Math.Pow(2, 14);
 
         public static void ExportSlippyMap(this MainForm mainForm, IDictionary<string, Island> islands, bool showLines, 
-            bool showServerInfo, bool showDiscoZoneInfo, Image tile, 
-            TextureBrush tileBrush, Color backgroundColor, string outdir, Action<string> update)
+            bool showServerInfo, bool showDiscoZoneInfo, Image tile, TextureBrush tileBrush, Color backgroundColor,
+            string outdir, Action<string> update, int maxZoom, bool overwrite)
         {
             Project project = mainForm.currentProject;
 
@@ -43,17 +41,15 @@ namespace ServerGridEditor.Code
                 throw new ArgumentNullException("project");
 
             float prevCoordsScaling = project.coordsScaling;
-            int numCells = project.numOfCellsX > project.numOfCellsY ? project.numOfCellsX : project.numOfCellsY;
+            int numCells = Math.Max(project.numOfCellsX, project.numOfCellsY);
             project.coordsScaling = largestSize / (project.cellSize * numCells);
+            float cellSize = project.cellSize * project.coordsScaling;
+            float maxX = project.numOfCellsX * cellSize;
+            float maxY = project.numOfCellsY * cellSize;
+            var mapSize = (int)Math.Ceiling(Math.Max(maxX, maxY));
 
             try
             {
-                float cellSize = project.cellSize * project.coordsScaling;
-
-                float maxX = project.numOfCellsX * cellSize;
-                float maxY = project.numOfCellsY * cellSize;
-
-                var mapSize = (int)Math.Ceiling(Math.Max(maxX, maxY));
                 using (var map = new Bitmap(mapSize, mapSize))
                 {
                     Graphics g = Graphics.FromImage(map);
@@ -63,14 +59,14 @@ namespace ServerGridEditor.Code
                         showLines: showLines, showServerInfo: showServerInfo, showDiscoZoneInfo : showDiscoZoneInfo, 
                         culling: null, alphaBackground: backgroundColor,
                         tile: tile, tileBrush: tileBrush, tileScale: 0,
-                        translateH: 0, translateV: 0, forExport:true);
+                        translateH: 0, translateV: 0, forExport: true);
 
                     // map.Save(Path.Combine(outdir, "export.png"), ImageFormat.Png);
 
-                    for (int zoomLevel = minimumZoomLevel; zoomLevel <= maximumZoomLevel; zoomLevel++)
+                    for (int zoomLevel = 0; zoomLevel <= maxZoom; zoomLevel++)
                     {
                         update?.Invoke(string.Format("Generating tiles for zoom level {0}", zoomLevel));
-                        Task.Run(() => GenerateTiles(map, outdir, zoomLevel)).Wait();
+                        Task.Run(() => GenerateTiles(map, outdir, zoomLevel, overwrite)).Wait();
                     }
                 }
             }
@@ -80,10 +76,10 @@ namespace ServerGridEditor.Code
             }
         }
 
-        static void GenerateTiles(Bitmap map, string outdir, int zoomLevel)
+        static void GenerateTiles(Bitmap map, string outdir, int zoomLevel, bool overwrite)
         {
             string z = zoomLevel.ToString();
-            int numTiles = PowerRoundingDown(2, zoomLevel);
+            int numTiles = (int)Math.Floor(Math.Pow(2, zoomLevel));
             int resize = tileSize * numTiles;
 
             if (resize > Math.Max(map.Width, map.Height))
@@ -103,14 +99,14 @@ namespace ServerGridEditor.Code
                         string filename =
                             Path.Combine(outdir, z, x.ToString(), y.ToString() + extension);
 
+                        if (!overwrite && File.Exists(filename))
+                        {
+                            continue;
+                        }
+
                         using (var tile = CropImage(img, geom))
                             tile.Save(filename);
                     }
-        }
-
-        static int PowerRoundingDown(int b, int exponent)
-        {
-            return (int)Math.Floor(Math.Pow(b, exponent));
         }
 
         /// <summary>

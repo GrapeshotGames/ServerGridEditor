@@ -185,7 +185,7 @@ namespace ServerGridEditor
             mapImageToolStripMenuItem.Enabled = true;
             slippyMapToolStripMenuItem.Enabled = true;
             cellImagesToolStripMenuItem.Enabled = true;
-            localExportToolStripMenuItem.Enabled = true;
+            exportAllToolStripMenuItem.Enabled = true;
             editServerTemplatesToolStripMenuItem.Enabled = true;
             testAllServersWithoutDataClearToolStripMenuItem.Enabled = true;
         }
@@ -2087,45 +2087,38 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            string outpath;
-            using (var win = new FolderBrowserDialog())
+            using (var exportMapForm = new ExportSlippyMap())
             {
-                var result = win.ShowDialog(this);
-                if (result != DialogResult.OK)
+                if (exportMapForm.ShowDialog() != DialogResult.OK)
                     return;
 
-                outpath = win.SelectedPath;
-            }
-
-            if (string.IsNullOrWhiteSpace(outpath))
-                return;
-
-            try
-            {
-                using (var progressForm = new ProgressForm())
+                try
                 {
-                    progressForm.Initialize(SlippyMap.maximumZoomLevel + 2, "Starting...");
-                    progressForm.Show();
+                    using (var progressForm = new ProgressForm())
+                    {
+                        progressForm.Initialize(exportMapForm.MaxZoom + 2, "Starting...");
+                        progressForm.Show();
 
-                    this.ExportSlippyMap(
-                        islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
-                        tile, tileBrush, mapPanel.BackColor, outpath,
-                        (string text) =>
-                        {
-                            Console.WriteLine(text);
-                            progressForm.NextStep(text);
-                        });
+                        this.ExportSlippyMap(
+                            islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
+                            tile, tileBrush, mapPanel.BackColor, exportMapForm.ExportDirectory,
+                            (string text) =>
+                            {
+                                Console.WriteLine(text);
+                                progressForm.NextStep(text);
+                            }, exportMapForm.MaxZoom, exportMapForm.OverwriteExisting);
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Export Failed",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Export Failed",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            MessageBox.Show("Slippy Map exported.", "Slippy Map Exported",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Slippy Map exported.", "Slippy Map Exported",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void localExportToolStripMenuItem_Click(object sender, EventArgs e)

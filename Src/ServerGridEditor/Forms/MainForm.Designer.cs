@@ -52,11 +52,12 @@
             this.editSpawnPointsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editServerTemplatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLocksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cullInvalidPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.localExportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cellImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.slippyMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testAllServersWithDataClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,7 +93,6 @@
             this.foregroundScaleBox = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.atlasLocation = new System.Windows.Forms.Label();
-            this.cullInvalidPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -323,53 +323,60 @@
             this.editLocksToolStripMenuItem.Text = "Edit Locks";
             this.editLocksToolStripMenuItem.Click += new System.EventHandler(this.editLocksToolStripMenuItem_Click);
             // 
+            // cullInvalidPathsToolStripMenuItem
+            // 
+            this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
+            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
+            this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
+            // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.localExportToolStripMenuItem,
-            this.toolStripSeparator1,
+            this.exportAllToolStripMenuItem,
             this.mapImageToolStripMenuItem,
             this.cellImagesToolStripMenuItem,
+            this.toolStripSeparator1,
             this.slippyMapToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.exportToolStripMenuItem.Text = "Export";
             // 
-            // localExportToolStripMenuItem
+            // exportAllToolStripMenuItem
             // 
-            this.localExportToolStripMenuItem.Enabled = false;
-            this.localExportToolStripMenuItem.Name = "localExportToolStripMenuItem";
-            this.localExportToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
-            this.localExportToolStripMenuItem.Text = "Local Export All";
-            this.localExportToolStripMenuItem.Click += new System.EventHandler(this.localExportToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(268, 6);
+            this.exportAllToolStripMenuItem.Enabled = false;
+            this.exportAllToolStripMenuItem.Name = "exportAllToolStripMenuItem";
+            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.exportAllToolStripMenuItem.Text = "All";
+            this.exportAllToolStripMenuItem.Click += new System.EventHandler(this.localExportToolStripMenuItem_Click);
             // 
             // mapImageToolStripMenuItem
             // 
             this.mapImageToolStripMenuItem.Enabled = false;
             this.mapImageToolStripMenuItem.Name = "mapImageToolStripMenuItem";
-            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
-            this.mapImageToolStripMenuItem.Text = "Export: Just Map Image";
+            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.mapImageToolStripMenuItem.Text = "Only Map Image";
             this.mapImageToolStripMenuItem.Click += new System.EventHandler(this.mapImageToolStripMenuItem_Click);
             // 
             // cellImagesToolStripMenuItem
             // 
             this.cellImagesToolStripMenuItem.Enabled = false;
             this.cellImagesToolStripMenuItem.Name = "cellImagesToolStripMenuItem";
-            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
-            this.cellImagesToolStripMenuItem.Text = "Export : Just Cell Images";
+            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.cellImagesToolStripMenuItem.Text = "Only Cell Images";
             this.cellImagesToolStripMenuItem.Click += new System.EventHandler(this.cellImagesToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
             // 
             // slippyMapToolStripMenuItem
             // 
             this.slippyMapToolStripMenuItem.Enabled = false;
             this.slippyMapToolStripMenuItem.Name = "slippyMapToolStripMenuItem";
-            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(271, 22);
-            this.slippyMapToolStripMenuItem.Text = "Generate Slippy Map (Optional Tools)";
+            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.slippyMapToolStripMenuItem.Text = "Slippy Map (Optional)";
             this.slippyMapToolStripMenuItem.Click += new System.EventHandler(this.slippyMapToolStripMenuItem_Click);
             // 
             // testsToolStripMenuItem
@@ -762,13 +769,6 @@
             this.atlasLocation.TabIndex = 36;
             this.atlasLocation.Text = "Atlas Location";
             // 
-            // cullInvalidPathsToolStripMenuItem
-            // 
-            this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
-            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
-            this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -877,7 +877,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cellImageSizetxtbox;
         private System.Windows.Forms.ToolStripMenuItem slippyMapToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem localExportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportAllToolStripMenuItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox atlasImageSizeTxtBox;
         private System.Windows.Forms.Button chooseDiscoZoneBtn;
@@ -895,8 +895,8 @@
         private System.Windows.Forms.Label atlasLocation;
         private System.Windows.Forms.ToolStripMenuItem editServerTemplatesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editLocksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem cullInvalidPathsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 
