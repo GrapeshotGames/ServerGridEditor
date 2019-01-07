@@ -84,9 +84,12 @@
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.templatesLstBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditServerTemplates";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "EditServerTemplates";
+            this.Text = "Edit Server Templates";
             this.ResumeLayout(false);
 
         }
