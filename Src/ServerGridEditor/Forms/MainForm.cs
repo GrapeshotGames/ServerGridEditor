@@ -82,6 +82,7 @@ namespace ServerGridEditor
         public Config editorConfig;
 
         public Spawners spawners;
+        public int mytestscroll;
 
         public MainForm()
         {
@@ -102,7 +103,7 @@ namespace ServerGridEditor
                 spawners = JsonConvert.DeserializeObject<Spawners>(File.ReadAllText(spawnersSaveFile));
             else
                 spawners = new Spawners();
-
+            
             mapPanel = new MapPanel();
             mapPanel.AllowDrop = originalPanel.AllowDrop;
             mapPanel.BackColor = originalPanel.BackColor;
@@ -117,6 +118,7 @@ namespace ServerGridEditor
             mapPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseMove);
             mapPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseUp);
             mapPanel.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseWheel);
+           
 
             ((MapPanel)mapPanel).mainForm = this;
 
@@ -909,11 +911,27 @@ namespace ServerGridEditor
                     startRotation = null;
                 }
             }
+
+            //// This section has been modified to include value modification to the global value mytestscroll
+            //// The Control Key will zoom in, the Shift key will zoom out using the middle mouse button click.
             else if (e.Button == MouseButtons.Middle)
             {
                 middlePressLocation.X = mapHScrollBar.Value;
                 middlePressLocation.Y = mapVScrollBar.Value;
+
+                if (ModifierKeys == Keys.Control)
+                {
+                    mytestscroll = 1;
+                    mapPanel_MouseWheel(this, e);
+                }
+                if (ModifierKeys == Keys.Shift)
+                {
+                    mytestscroll = -1;
+                    mapPanel_MouseWheel(this, e);
+                }
+
             }
+           
         }
 
 
@@ -1059,53 +1077,7 @@ namespace ServerGridEditor
             }
         }
 
-        private void mapPanel_MouseWheel(object sender, MouseEventArgs e)
-        {
-            Point mouseLocation = e.Location;
-            PointF desiredMouseLocation = e.Location;
-
-            float desiredHScroll = mapHScrollBar.Value;
-            float desiredVScroll = mapVScrollBar.Value;
-
-            if (e.Delta > 0)
-            {
-                currentProject.coordsScaling *= scrollSpeed;
-
-                UpdateScrollBars();
-
-                desiredMouseLocation.X *= scrollSpeed;
-                desiredMouseLocation.Y *= scrollSpeed;
-
-                desiredHScroll *= scrollSpeed;
-                desiredVScroll *= scrollSpeed;
-            }
-            else
-            {
-                currentProject.coordsScaling /= scrollSpeed;
-
-                UpdateScrollBars();
-
-                desiredMouseLocation.X /= scrollSpeed;
-                desiredMouseLocation.Y /= scrollSpeed;
-
-                desiredHScroll /= scrollSpeed;
-                desiredVScroll /= scrollSpeed;
-            }
-
-            SetScaleTxt(1 / currentProject.coordsScaling);
-
-            if (mapHScrollBar.Enabled)
-                mapHScrollBar.Value = Math.Max(0, Math.Min(mapHScrollBar.Maximum, (int)(desiredHScroll + desiredMouseLocation.X - mouseLocation.X)));
-            else
-                mapHScrollBar.Value = 0;
-
-            if (mapVScrollBar.Enabled)
-                mapVScrollBar.Value = Math.Max(0, Math.Min(mapVScrollBar.Maximum, (int)(desiredVScroll + desiredMouseLocation.Y - mouseLocation.Y)));
-            else
-                mapVScrollBar.Value = 0;
-
-            mapPanel.Invalidate();
-        }
+      
 
         public void SaveIslands()
         {
@@ -1696,7 +1668,9 @@ namespace ServerGridEditor
                 "P while on map (Spawn ship path)\n" +
                 "Delete on path nodes (Delete node)\n" +
                 "Ctrl + click on path node (Edit path)\n" +
-                "Shift + Delete on path nodes (Delete whole path)\n", "Controls");
+                "Shift + Delete on path nodes (Delete whole path)\n" +
+                "Shift + middle mouse Zooms out\n" +
+                "Ctrl + middle mouse Zooms in\n", "Controls");
         }
 
         private void customRatioTxtBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -2386,9 +2360,120 @@ namespace ServerGridEditor
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void mapPanel_MouseWheel(object sender, MouseEventArgs e)
+        {
+            Point mouseLocation = e.Location;
+            PointF desiredMouseLocation = e.Location;
+            
+            //// Test code msgbox for proper entry into event.
+            ///int mytestscroll = 1;
+            ///string Str_mytestscroll = mytestscroll.ToString();
+           /// MessageBox.Show("The value scroll = " + Str_mytestscroll);
+
+
+
+            float desiredHScroll = mapHScrollBar.Value;
+            float desiredVScroll = mapVScrollBar.Value;
+
+
+            //// This if statement has been altered from the original e.Delta value check to use the global public variable mytestscroll.
+            if (mytestscroll > 0)
+            {
+                currentProject.coordsScaling *= scrollSpeed;
+
+                UpdateScrollBars();
+
+                desiredMouseLocation.X *= scrollSpeed;
+                desiredMouseLocation.Y *= scrollSpeed;
+
+                desiredHScroll *= scrollSpeed;
+                desiredVScroll *= scrollSpeed;
+            }
+            else
+            {
+                currentProject.coordsScaling /= scrollSpeed;
+
+                UpdateScrollBars();
+
+                desiredMouseLocation.X /= scrollSpeed;
+                desiredMouseLocation.Y /= scrollSpeed;
+
+                desiredHScroll /= scrollSpeed;
+                desiredVScroll /= scrollSpeed;
+            }
+
+            SetScaleTxt(1 / currentProject.coordsScaling);
+
+            if (mapHScrollBar.Enabled)
+                mapHScrollBar.Value = Math.Max(0, Math.Min(mapHScrollBar.Maximum, (int)(desiredHScroll + desiredMouseLocation.X - mouseLocation.X)));
+            else
+                mapHScrollBar.Value = 0;
+
+            if (mapVScrollBar.Enabled)
+                mapVScrollBar.Value = Math.Max(0, Math.Min(mapVScrollBar.Maximum, (int)(desiredVScroll + desiredMouseLocation.Y - mouseLocation.Y)));
+            else
+                mapVScrollBar.Value = 0;
+
+            mapPanel.Invalidate();
+        }
     }
 
-    public class Config
+    ////private void mapPanel_MouseWheel2(object sender, MouseEventArgs e)
+    ////{
+    ////    Point mouseLocation = e.Location;
+    ////    PointF desiredMouseLocation = e.Location;
+    ////    int mytestscroll = -1;
+    ////    string Str_mytestscroll = mytestscroll.ToString();
+    ////    MessageBox.Show("The value scroll = " + Str_mytestscroll);
+
+
+
+    ////    float desiredHScroll = mapHScrollBar.Value;
+    ////    float desiredVScroll = mapVScrollBar.Value;
+
+    ////    if (mytestscroll > 0)
+    ////    {
+    ////        currentProject.coordsScaling *= scrollSpeed;
+
+    ////        UpdateScrollBars();
+
+    ////        desiredMouseLocation.X *= scrollSpeed;
+    ////        desiredMouseLocation.Y *= scrollSpeed;
+
+    ////        desiredHScroll *= scrollSpeed;
+    ////        desiredVScroll *= scrollSpeed;
+    ////    }
+    ////    else
+    ////    {
+    ////        currentProject.coordsScaling /= scrollSpeed;
+
+    ////        UpdateScrollBars();
+
+    ////        desiredMouseLocation.X /= scrollSpeed;
+    ////        desiredMouseLocation.Y /= scrollSpeed;
+
+    ////        desiredHScroll /= scrollSpeed;
+    ////        desiredVScroll /= scrollSpeed;
+    ////    }
+
+    ////    SetScaleTxt(1 / currentProject.coordsScaling);
+
+    ////    if (mapHScrollBar.Enabled)
+    ////        mapHScrollBar.Value = Math.Max(0, Math.Min(mapHScrollBar.Maximum, (int)(desiredHScroll + desiredMouseLocation.X - mouseLocation.X)));
+    ////    else
+    ////        mapHScrollBar.Value = 0;
+
+    ////    if (mapVScrollBar.Enabled)
+    ////        mapVScrollBar.Value = Math.Max(0, Math.Min(mapVScrollBar.Maximum, (int)(desiredVScroll + desiredMouseLocation.Y - mouseLocation.Y)));
+    ////    else
+    ////        mapVScrollBar.Value = 0;
+
+    ////    mapPanel.Invalidate();
+    //}
+}
+
+public class Config
     {
         //public string LastOpenedFolder = "";
         //public string LastMapsFolder = "";
@@ -2396,4 +2481,3 @@ namespace ServerGridEditor
         public int AtlasImagesRes = 2048;
         public int ImageQuality = 75;
     }
-}
