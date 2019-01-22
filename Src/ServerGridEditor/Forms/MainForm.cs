@@ -103,7 +103,7 @@ namespace ServerGridEditor
                 spawners = JsonConvert.DeserializeObject<Spawners>(File.ReadAllText(spawnersSaveFile));
             else
                 spawners = new Spawners();
-            
+
             mapPanel = new MapPanel();
             mapPanel.AllowDrop = originalPanel.AllowDrop;
             mapPanel.BackColor = originalPanel.BackColor;
@@ -118,7 +118,7 @@ namespace ServerGridEditor
             mapPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseMove);
             mapPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseUp);
             mapPanel.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.mapPanel_MouseWheel);
-           
+
 
             ((MapPanel)mapPanel).mainForm = this;
 
@@ -931,7 +931,7 @@ namespace ServerGridEditor
                 }
 
             }
-           
+
         }
 
 
@@ -1077,7 +1077,7 @@ namespace ServerGridEditor
             }
         }
 
-      
+
 
         public void SaveIslands()
         {
@@ -1503,7 +1503,7 @@ namespace ServerGridEditor
 
             if (image == null)
                 return;
-            
+
             MagickImage tgaImg = new MagickImage(image);
             tgaImg.Format = MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
@@ -1656,12 +1656,12 @@ namespace ServerGridEditor
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hold Left click (Move island)\n" +
-                "Hold Right click (Rotate island)\n" + 
-                "Mouse wheel (Zoom)\n" + 
-                "Delete button (Remove island)\n" + 
-                "Ctrl + click on grid (Edit server info)\n" + 
-                "Ctrl + click on island (Edit island info)\n" + 
-                "Hold middle mouse + drag (Scroll map)\n" + 
+                "Hold Right click (Rotate island)\n" +
+                "Mouse wheel (Zoom)\n" +
+                "Delete button (Remove island)\n" +
+                "Ctrl + click on grid (Edit server info)\n" +
+                "Ctrl + click on island (Edit island info)\n" +
+                "Hold middle mouse + drag (Scroll map)\n" +
                 "Shift + drag (Create discovery zone)\n" +
                 "Shift + click on discovery zone (Edit discovery zone)\n" +
                 "L while hovered on cell (Open locks form)\n"+
@@ -1905,7 +1905,7 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-            
+
             if (currentProject.DiscoveryZoneImage != null)
                 currentProject.DiscoveryZoneImage.Dispose();
             currentProject.DiscoveryZoneImage = null;
@@ -2173,7 +2173,7 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Export failed!! Ex: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                  
+
         }
 
 
@@ -2365,7 +2365,7 @@ namespace ServerGridEditor
         {
             Point mouseLocation = e.Location;
             PointF desiredMouseLocation = e.Location;
-            
+
             //// Test code msgbox for proper entry into event.
             ///int mytestscroll = 1;
             ///string Str_mytestscroll = mytestscroll.ToString();
@@ -2419,58 +2419,6 @@ namespace ServerGridEditor
         }
     }
 
-    ////private void mapPanel_MouseWheel2(object sender, MouseEventArgs e)
-    ////{
-    ////    Point mouseLocation = e.Location;
-    ////    PointF desiredMouseLocation = e.Location;
-    ////    int mytestscroll = -1;
-    ////    string Str_mytestscroll = mytestscroll.ToString();
-    ////    MessageBox.Show("The value scroll = " + Str_mytestscroll);
-
-
-
-    ////    float desiredHScroll = mapHScrollBar.Value;
-    ////    float desiredVScroll = mapVScrollBar.Value;
-
-    ////    if (mytestscroll > 0)
-    ////    {
-    ////        currentProject.coordsScaling *= scrollSpeed;
-
-    ////        UpdateScrollBars();
-
-    ////        desiredMouseLocation.X *= scrollSpeed;
-    ////        desiredMouseLocation.Y *= scrollSpeed;
-
-    ////        desiredHScroll *= scrollSpeed;
-    ////        desiredVScroll *= scrollSpeed;
-    ////    }
-    ////    else
-    ////    {
-    ////        currentProject.coordsScaling /= scrollSpeed;
-
-    ////        UpdateScrollBars();
-
-    ////        desiredMouseLocation.X /= scrollSpeed;
-    ////        desiredMouseLocation.Y /= scrollSpeed;
-
-    ////        desiredHScroll /= scrollSpeed;
-    ////        desiredVScroll /= scrollSpeed;
-    ////    }
-
-    ////    SetScaleTxt(1 / currentProject.coordsScaling);
-
-    ////    if (mapHScrollBar.Enabled)
-    ////        mapHScrollBar.Value = Math.Max(0, Math.Min(mapHScrollBar.Maximum, (int)(desiredHScroll + desiredMouseLocation.X - mouseLocation.X)));
-    ////    else
-    ////        mapHScrollBar.Value = 0;
-
-    ////    if (mapVScrollBar.Enabled)
-    ////        mapVScrollBar.Value = Math.Max(0, Math.Min(mapVScrollBar.Maximum, (int)(desiredVScroll + desiredMouseLocation.Y - mouseLocation.Y)));
-    ////    else
-    ////        mapVScrollBar.Value = 0;
-
-    ////    mapPanel.Invalidate();
-    //}
 }
 
 public class Config
