@@ -80,8 +80,8 @@
       "Password": "foobared"
     }
   ],
-  "coordsScaling": 0.0001,
-  "showServerInfo": true,
+  "coordsScaling": 5E-05,
+  "showServerInfo": false,
   "showDiscoZoneInfo": true,
   "showShipPathsInfo": true,
   "showIslandNames": false,
@@ -265,7 +265,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -847,7 +847,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -1190,7 +1190,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -1678,7 +1678,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -2053,7 +2053,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -2245,7 +2245,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -2671,7 +2671,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -2766,7 +2766,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -3013,7 +3013,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -3367,7 +3367,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -3520,7 +3520,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -3767,7 +3767,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -4236,7 +4236,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -4331,7 +4331,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -4578,7 +4578,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -5029,7 +5029,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -5522,7 +5522,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -5823,7 +5823,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -6135,7 +6135,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -6585,7 +6585,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -7109,7 +7109,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -7422,7 +7422,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -7778,7 +7778,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -8218,7 +8218,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -8428,7 +8428,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -8675,7 +8675,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -9089,7 +9089,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -9476,7 +9476,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -9818,7 +9818,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -10016,7 +10016,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -10318,7 +10318,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -10841,7 +10841,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -11270,7 +11270,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -11644,7 +11644,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -11796,7 +11796,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -11988,7 +11988,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -12262,7 +12262,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -12677,7 +12677,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -13372,7 +13372,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -13658,7 +13658,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -14136,7 +14136,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -14606,7 +14606,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -14840,7 +14840,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -15229,7 +15229,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -15424,7 +15424,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -15616,7 +15616,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -16013,7 +16013,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -16467,7 +16467,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -16881,7 +16881,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -17178,7 +17178,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -17317,7 +17317,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -17454,7 +17454,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -17822,7 +17822,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -17917,7 +17917,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -18142,7 +18142,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -18560,7 +18560,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -19112,7 +19112,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -19370,7 +19370,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -19479,7 +19479,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -19671,7 +19671,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -20012,7 +20012,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -20471,7 +20471,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -20696,7 +20696,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -20943,7 +20943,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -21413,7 +21413,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [],
       "islandInstances": [
@@ -21504,7 +21504,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -21751,7 +21751,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -22235,7 +22235,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -22679,7 +22679,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -22931,7 +22931,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -23180,7 +23180,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -23289,7 +23289,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -23481,7 +23481,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -23766,7 +23766,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -24239,7 +24239,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -24639,7 +24639,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -24763,7 +24763,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -24955,7 +24955,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -25366,7 +25366,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -25461,7 +25461,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -25653,7 +25653,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -26065,7 +26065,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -26504,7 +26504,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -26699,7 +26699,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -26891,7 +26891,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -27303,7 +27303,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -27743,7 +27743,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -27953,7 +27953,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -28090,7 +28090,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -28518,7 +28518,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -28613,7 +28613,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -28805,7 +28805,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -29121,7 +29121,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -29433,7 +29433,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -29886,7 +29886,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -30339,7 +30339,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -30695,7 +30695,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -30861,7 +30861,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -31053,7 +31053,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -31393,7 +31393,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -31793,7 +31793,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -31944,7 +31944,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -32147,7 +32147,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -32380,7 +32380,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -32614,7 +32614,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -32926,7 +32926,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -33311,7 +33311,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -33507,7 +33507,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -33820,7 +33820,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -34209,7 +34209,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -34521,7 +34521,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -34850,7 +34850,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -35298,7 +35298,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -35695,7 +35695,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -35944,7 +35944,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -36292,7 +36292,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -36662,7 +36662,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -36903,7 +36903,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -37040,7 +37040,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -37422,7 +37422,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -37516,7 +37516,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -37708,7 +37708,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -38010,7 +38010,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -38307,7 +38307,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -38692,7 +38692,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -39047,7 +39047,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -39229,7 +39229,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -39476,7 +39476,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -39889,7 +39889,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -40163,7 +40163,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -40549,7 +40549,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -40944,7 +40944,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -41126,7 +41126,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -41428,7 +41428,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -41869,7 +41869,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -42251,7 +42251,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -42544,7 +42544,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -42703,7 +42703,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -42895,7 +42895,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -43113,11 +43113,11 @@
       "ServerCustomDatas1": "DisableFog,DisableHeatCold,DisableRain,NPCShipNumMult,FloatsamEnabled,DisableClaimFlags",
       "ServerCustomDatas2": "1,1,1,0,0,1",
       "sublevels": [],
-      "lastModified": "2018-12-16T06:16:27.9783936Z",
+      "lastModified": "2019-01-05T23:54:27.1798437Z",
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [
         "EndBossLevel"
       ],
@@ -43154,6 +43154,36 @@
           "allowSea": false,
           "worldX": 1.05E+07,
           "worldY": 1.05E+07,
+          "rotation": 0.0
+        },
+        {
+          "name": "Defeated Monstrous Sperm Whale",
+          "sizeX": 0.0,
+          "sizeY": 0.0,
+          "sizeZ": 0.0,
+          "id": 3013,
+          "xp": 50.0,
+          "bIsManuallyPlaced": true,
+          "ManualVolumeName": "DefeatedMonsterSpermWhale",
+          "explorerNoteIndex": 0,
+          "allowSea": false,
+          "worldX": 1.016E+07,
+          "worldY": 1.059E+07,
+          "rotation": 0.0
+        },
+        {
+          "name": "Defeated Monstrous Blue Whale",
+          "sizeX": 0.0,
+          "sizeY": 0.0,
+          "sizeZ": 0.0,
+          "id": 3014,
+          "xp": 50.0,
+          "bIsManuallyPlaced": true,
+          "ManualVolumeName": "DefeatedMonsterBlueWhale",
+          "explorerNoteIndex": 0,
+          "allowSea": false,
+          "worldX": 1.074E+07,
+          "worldY": 1.074E+07,
           "rotation": 0.0
         }
       ],
@@ -43303,7 +43333,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -43560,7 +43590,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -43862,7 +43892,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -43970,7 +44000,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -44162,7 +44192,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -44572,7 +44602,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -44666,7 +44696,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -44858,7 +44888,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -45134,7 +45164,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -45492,7 +45522,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -45728,7 +45758,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -45920,7 +45950,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -46344,7 +46374,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -46438,7 +46468,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -46630,7 +46660,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -46985,7 +47015,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -47385,7 +47415,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -47725,7 +47755,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -48080,7 +48110,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -48233,7 +48263,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -48425,7 +48455,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -48780,7 +48810,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -49110,7 +49140,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -49422,7 +49452,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -49618,7 +49648,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -49865,7 +49895,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -50263,7 +50293,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -50592,7 +50622,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -51051,7 +51081,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -51491,7 +51521,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -51628,7 +51658,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -51820,7 +51850,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -52190,7 +52220,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -52560,7 +52590,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -52860,7 +52890,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -53172,7 +53202,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -53323,7 +53353,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -53515,7 +53545,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -53912,7 +53942,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -54006,7 +54036,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -54154,7 +54184,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -54481,7 +54511,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_LowDesert",
@@ -54866,7 +54896,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -55236,7 +55266,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_HighDesert",
@@ -55576,7 +55606,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -55936,7 +55966,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -56394,7 +56424,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -56864,7 +56894,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -57205,7 +57235,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -57561,7 +57591,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -57730,7 +57760,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -57977,7 +58007,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -58408,7 +58438,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -58864,7 +58894,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -59060,7 +59090,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -59307,7 +59337,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -59503,7 +59533,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -59794,7 +59824,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -60282,7 +60312,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -60708,7 +60738,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -60875,7 +60905,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -61122,7 +61152,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -61538,7 +61568,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -61894,7 +61924,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -62403,7 +62433,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -62866,7 +62896,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -63074,7 +63104,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -63266,7 +63296,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -63622,7 +63652,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -63774,7 +63804,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -63966,7 +63996,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -64394,7 +64424,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -64491,7 +64521,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -64683,7 +64713,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -64883,7 +64913,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -65130,7 +65160,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -65644,7 +65674,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [],
       "islandInstances": [
@@ -65735,7 +65765,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -65982,7 +66012,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -66441,7 +66471,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -66641,7 +66671,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -66833,7 +66863,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -67261,7 +67291,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -67358,7 +67388,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -67550,7 +67580,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -67836,7 +67866,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -68227,7 +68257,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -68493,7 +68523,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -68663,7 +68693,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -69130,7 +69160,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -69225,7 +69255,7 @@
       "port": 57559,
       "gamePort": 5759,
       "seamlessDataPort": 27008,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -69362,7 +69392,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -69675,7 +69705,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -69874,7 +69904,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -70066,7 +70096,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -70235,7 +70265,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -70427,7 +70457,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -70823,7 +70853,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -70918,7 +70948,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -71165,7 +71195,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -71620,7 +71650,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -71715,7 +71745,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -71962,7 +71992,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -72361,7 +72391,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -72627,7 +72657,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -72938,7 +72968,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -73251,7 +73281,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -73670,7 +73700,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -74128,7 +74158,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -74439,7 +74469,7 @@
       "port": 57555,
       "gamePort": 5755,
       "seamlessDataPort": 27000,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -74631,7 +74661,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -74976,7 +75006,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -75274,7 +75304,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -75647,7 +75677,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -76060,7 +76090,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -76270,7 +76300,7 @@
       "port": 57557,
       "gamePort": 5757,
       "seamlessDataPort": 27004,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -76517,7 +76547,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -76932,7 +76962,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -77100,7 +77130,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -77457,7 +77487,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -77958,7 +77988,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -78344,7 +78374,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -78687,7 +78717,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -78990,7 +79020,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -79233,7 +79263,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -79624,7 +79654,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -80068,7 +80098,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -80423,7 +80453,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -80736,7 +80766,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -81092,7 +81122,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -81390,7 +81420,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -81544,7 +81574,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -81736,7 +81766,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -82018,7 +82048,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -82382,7 +82412,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -82724,7 +82754,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Tropical",
@@ -82922,7 +82952,7 @@
       "port": 57561,
       "gamePort": 5761,
       "seamlessDataPort": 27012,
-      "isHomeServer": true,
+      "isHomeServer": false,
       "AdditionalCmdLineParams": "",
       "OverrideShooterGameModeDefaultGameIni": {
         "bDontUseClaimFlags": "1",
@@ -83169,7 +83199,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_Temperate",
@@ -83602,7 +83632,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -84015,7 +84045,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_EasternTemperate",
@@ -84401,7 +84431,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -84650,7 +84680,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "MasterIBL_WesternTundra",
@@ -85088,7 +85118,7 @@
       "lastImageOverride": "0001-01-01T00:00:00",
       "islandLocked": true,
       "discoLocked": true,
-      "pathsLocked": true,
+      "pathsLocked": false,
       "extraSublevels": [],
       "totalExtraSublevels": [
         "ChildIBL_Polar_IceCavern.uasset",
@@ -85427,7 +85457,7 @@
       "MaxDesiredNumEnemiesMultiplier": 1.2
     }
   ],
-  "idGenerator": 3012,
+  "idGenerator": 3014,
   "regionsIdGenerator": 0,
   "shipPathsIdGenerator": 9,
   "shipPaths": [
@@ -85480,7 +85510,7 @@
       "isLooping": false,
       "PathName": "NPCTrader2",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85602,7 +85632,7 @@
       "isLooping": false,
       "PathName": "NPCTrader1",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85660,7 +85690,7 @@
       "isLooping": false,
       "PathName": "NPCTrader3",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85706,7 +85736,7 @@
       "isLooping": false,
       "PathName": "NpcTrader5",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85740,7 +85770,7 @@
       "isLooping": false,
       "PathName": "NpcTrader6",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85786,7 +85816,7 @@
       "isLooping": false,
       "PathName": "NpcTrader9",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     },
     {
@@ -85826,7 +85856,7 @@
       "isLooping": false,
       "PathName": "NpcTrader8",
       "AutoSpawnShipClass": "",
-      "AutoSpawnEveryUTCInterval": 0,
+      "AutoSpawnEveryUTCInterval": 21600,
       "autoSpawn": true
     }
   ],
@@ -85864,7 +85894,7 @@
       "waterColorB": 0.5,
       "skyStyleIndex": 2,
       "ServerCustomDatas1": ",DisableRain,ChanceForCold,NPCShipDifficultyMult,NPCShipDifficultyLerp,FloatsamQualityMultiplier,",
-      "ServerCustomDatas2": ",1,1,1.25,0.33,1.2,",
+      "ServerCustomDatas2": ",1,1,1.25,0.33,1.35,",
       "ClientCustomDatas1": ",OceanDepthFadeExponent,OceanWaterScatterIntensity,",
       "ClientCustomDatas2": ",-1,0.015,",
       "lastModified": "0001-01-01T00:00:00",
