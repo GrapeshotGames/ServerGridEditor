@@ -62,6 +62,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.instancesListBox = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.modNameTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
             this.SuspendLayout();
@@ -188,7 +190,6 @@
             // 
             // addSublevels
             // 
-            this.addSublevels.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.addSublevels.Location = new System.Drawing.Point(96, 295);
             this.addSublevels.Name = "addSublevels";
             this.addSublevels.Size = new System.Drawing.Size(90, 24);
@@ -365,6 +366,22 @@
             this.instancesListBox.Size = new System.Drawing.Size(194, 95);
             this.instancesListBox.TabIndex = 39;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(20, 18);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 13);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "Unique Mod Extension";
+            // 
+            // modNameTxtBox
+            // 
+            this.modNameTxtBox.Location = new System.Drawing.Point(140, 15);
+            this.modNameTxtBox.Name = "modNameTxtBox";
+            this.modNameTxtBox.Size = new System.Drawing.Size(109, 20);
+            this.modNameTxtBox.TabIndex = 41;
+            // 
             // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
@@ -372,6 +389,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(609, 619);
+            this.Controls.Add(this.modNameTxtBox);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.instancesListBox);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -454,5 +473,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListBox instancesListBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox modNameTxtBox;
     }
 }

@@ -42,6 +42,9 @@ namespace ServerGridEditor
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public string islandTreasureBottleSupplyCrateOverrides = "";
 
+        [JsonIgnore]
+        public string modDir = null;
+
         Image cachedImg = null;
         Image cachedOptimizedImg = null;
 

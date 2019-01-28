@@ -73,6 +73,8 @@ namespace ServerGridEditor
                         if (s != null)
                             instancesListBox.Items.Add(string.Format("({0}, {1})", s.gridX, s.gridY));
                     }
+
+                modNameTxtBox.Text = editedIsland.modDir;
             }
         }
 
@@ -169,6 +171,7 @@ namespace ServerGridEditor
             float.TryParse(minTreasureQualityTxtBox.Text, out minTreasureQuality);
             float.TryParse(maxTreasureQualityTxtBox.Text, out maxTreasureQuality);
 
+            string islandRemovedFromMod = null;
             if (editedIsland != null)
             {
                 if (islandNameTxtBox.Text != editedIsland.name) //name changed
@@ -201,7 +204,8 @@ namespace ServerGridEditor
                     mainForm.islands.Add(editedIsland.name, editedIsland);
 
                     //rename image
-                    string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
+                    string originalDirectory = Path.GetDirectoryName(editedIsland.imagePath);
+                    string newImgPath = originalDirectory + "/" + editedIsland.name + "_img.jpg";
                     editedIsland.InvalidateImage();
                     File.Move(editedIsland.imagePath, newImgPath);
 
@@ -209,6 +213,52 @@ namespace ServerGridEditor
                         pictureBox1.ImageLocation = newImgPath;
 
                     editedIsland.imagePath = newImgPath;
+                }
+
+                if (modNameTxtBox.Text != editedIsland.modDir)
+                {
+                    //Mod dir changed
+                    if (!string.IsNullOrWhiteSpace(modNameTxtBox.Text))
+                    {
+                        modNameTxtBox.Text.Trim();
+
+                        string modDir = null;
+                        modDir = MainForm.islandModsDir + "/" + modNameTxtBox.Text;
+
+                        if (!Directory.Exists(modDir))
+                            Directory.CreateDirectory(modDir);
+                        if (!Directory.Exists(modDir + MainForm.modImgsDir))
+                            Directory.CreateDirectory(modDir + MainForm.modImgsDir);
+
+                        editedIsland.InvalidateImage();
+                        
+                        string newImgPath = modDir + MainForm.modImgsDir + editedIsland.name + "_img.jpg";
+                        File.Move(editedIsland.imagePath, newImgPath);
+
+                        islandRemovedFromMod = editedIsland.modDir;
+                        editedIsland.modDir = modNameTxtBox.Text;
+
+                        if (pictureBox1.ImageLocation == editedIsland.imagePath)
+                            pictureBox1.ImageLocation = newImgPath;
+
+                        editedIsland.imagePath = newImgPath;
+                    }
+                    else
+                    {
+                        editedIsland.InvalidateImage();
+                    string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
+                        if (File.Exists(newImgPath))
+                            File.Delete(newImgPath);
+                    File.Move(editedIsland.imagePath, newImgPath);
+
+                        islandRemovedFromMod = editedIsland.modDir;
+                        editedIsland.modDir = null;
+
+                    if (pictureBox1.ImageLocation == editedIsland.imagePath)
+                        pictureBox1.ImageLocation = newImgPath;
+
+                    editedIsland.imagePath = newImgPath;
+                }
                 }
 
                 editedIsland.x = x;
@@ -250,7 +300,7 @@ namespace ServerGridEditor
                 NewEntries.RemoveAll(item => { return string.IsNullOrWhiteSpace(item); });
                 editedIsland.extraSublevels = NewEntries;
 
-                mainForm.SaveIslands();
+                mainForm.SaveIslands(islandRemovedFromMod);
                 DialogResult = DialogResult.OK;
                 Close();
             }
@@ -279,14 +329,27 @@ namespace ServerGridEditor
                     spawnerOverrides.Add(name, template);
                 }
 
+                string modDir = null;
+                if (!string.IsNullOrWhiteSpace(modNameTxtBox.Text))
+                {
+                    modDir = MainForm.islandModsDir + "/" + modNameTxtBox.Text;
+                    if (!Directory.Exists(modDir))
+                        Directory.CreateDirectory(modDir);
+                    if(!Directory.Exists(modDir + MainForm.modImgsDir))
+                        Directory.CreateDirectory(modDir + MainForm.modImgsDir);
+                }
+
                 //Copy the image to our local imgs directory
-                string newImgPath = MainForm.imgsDir + "/" + Name + "_img.jpg";
+                string newImgPath = (modDir != null) ? (modDir + MainForm.modImgsDir) : MainForm.imgsDir;
+                newImgPath += "/" + Name + "_img.jpg";
                 File.Copy(ImgLocation, newImgPath, true);
 
 
                 mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides, 
                     minTreasureQuality, maxTreasureQuality, useNpcVolumesForTreasuresChkBox.Checked, useLevelBoundsForTreasuresChkBox.Checked, 
                     prioritizeVolumesForTreasuresChkBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines)));
+
+                mainForm.islands.Last().Value.modDir = modNameTxtBox.Text.Trim();
 
                 mainForm.RefreshIslandList();
                 mainForm.SaveIslands();

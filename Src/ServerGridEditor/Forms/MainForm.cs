@@ -26,12 +26,15 @@ namespace ServerGridEditor
     public partial class MainForm : Form
     {
         public static string imgsDir = "./IslandImages";
+        public static string modImgsDir = "/Images/";
         public static string waterTilesDir = "./WaterTiles";
         public static string foregroundTilesDir = "./Foregrounds";
         public static string dataDir = "./Data";
         public static string exportDir = "./Export";
+        public static string islandModsDir = "./IslandExtensions";
         public static string configSaveFile = dataDir + "/config.json";
-        public static string islandsSaveFile = dataDir + "/islands.json";
+        public static string islandsJson = "/islands.json";
+        public static string islandsSaveFile = dataDir + islandsJson;
         public static string spawnersSaveFile = dataDir + "/spawners.json";
         public static string islandsSaveFileBackup = dataDir + "/islands-backup.json";
 
@@ -132,6 +135,8 @@ namespace ServerGridEditor
                 Directory.CreateDirectory(waterTilesDir);
             if (!Directory.Exists(foregroundTilesDir))
                 Directory.CreateDirectory(foregroundTilesDir);
+            if (!Directory.Exists(islandModsDir))
+                Directory.CreateDirectory(islandModsDir);
             //if (!Directory.Exists(exportDir))
             //    Directory.CreateDirectory(exportDir);
 
@@ -511,7 +516,7 @@ namespace ServerGridEditor
                 foreach (Server s in currentProject.servers)
                 {
                     PointF serverCenter = new PointF(s.gridX * cellSize + cellSize / 2f, s.gridY * cellSize + cellSize / 2f);
-                    serverCenter.Y -= cellSize * 0.15f;
+                    serverCenter.Y -= cellSize * 0.17f;
                     //Draw locks
                     if (!forExport)
                     {
@@ -579,6 +584,10 @@ namespace ServerGridEditor
                             continue;
                     }
 
+                    string easyName = string.Format("{0}{1}", (char)(((int)'A') + s.gridX), s.gridY + 1);
+                    g.DrawString(easyName, font, Brushes.Black, new PointF(serverCenter.X + dynamicOutlineShift, serverCenter.Y + dynamicOutlineShift), centeredStringFormat);
+                    g.DrawString(easyName, font, Brushes.White, serverCenter, centeredStringFormat);
+                    serverCenter.Y += stringSize.Height * 1.1f;
 
                     if (!string.IsNullOrWhiteSpace(s.MachineIdTag))
                     {
@@ -1107,14 +1116,55 @@ namespace ServerGridEditor
             mapPanel.Invalidate();
         }
 
-        public void SaveIslands()
+        public void SaveIslands(string islandRemovedFromMod = null)
         {
             //Take backup
             if (File.Exists(islandsSaveFile))
                 File.Copy(islandsSaveFile, islandsSaveFileBackup, true);
 
-            string json = JsonConvert.SerializeObject(islands, Formatting.Indented);
+            //Separate mod islands to be saved in their respective files
+            Dictionary<string, Dictionary<string, Island>> modsDict = new Dictionary<string, Dictionary<string, Island>>();
+
+            List<Island> allIslands = islands.Values.ToList();
+            Dictionary<string, Island> originalIslands = new Dictionary<string, Island>();
+
+            foreach (Island island in allIslands)
+                if (island.modDir != null)
+                {
+                    //This is a mod island group it to be saved
+                    Dictionary<string, Island> modIslandsDict = null;
+                    if (!modsDict.TryGetValue(island.modDir, out modIslandsDict))
+                    {
+                        modIslandsDict = new Dictionary<string, Island>();
+                        modsDict.Add(island.modDir, modIslandsDict);
+                    }
+
+                    modIslandsDict.Add(island.name, island);
+                }
+                else
+                {
+                    originalIslands.Add(island.name, island);
+                }
+
+            //Serialize Main island file
+            string json = JsonConvert.SerializeObject(originalIslands, Formatting.Indented);
             File.WriteAllText(islandsSaveFile, json);
+
+            //Serialize mod island files
+            foreach (KeyValuePair<string, Dictionary<string, Island>> kvp in modsDict)
+            {
+                string islandDataJson = islandModsDir + "/" + kvp.Key + islandsJson;
+                json = JsonConvert.SerializeObject(kvp.Value, Formatting.Indented);
+                File.WriteAllText(islandDataJson, json);
+            }
+
+            //Delete mod files if there are no more islands in it
+            if (islandRemovedFromMod != null && !modsDict.ContainsKey(islandRemovedFromMod))
+            {
+                string modDirPath = islandModsDir + "/" + islandRemovedFromMod;
+                if (Directory.Exists(modDirPath))
+                    Directory.Delete(modDirPath, true);
+            }
         }
 
         public void LoadIslands()
@@ -1122,15 +1172,39 @@ namespace ServerGridEditor
             if (File.Exists(islandsSaveFile))
             {
                 islands = JsonConvert.DeserializeObject<Dictionary<string, Island>>(File.ReadAllText(islandsSaveFile));
+
+                string[] modDirs = Directory.GetDirectories(islandModsDir);
+                
+                foreach (string islandModDir in modDirs)
+                {
+                    string dataFile = islandModDir + islandsJson;
+                    if (File.Exists(dataFile))
+                    {
+                        Dictionary <string, Island> ModIslands = JsonConvert.DeserializeObject<Dictionary<string, Island>>(File.ReadAllText(dataFile));
+                        if(ModIslands != null)
+                            foreach(KeyValuePair<string, Island> kvp in ModIslands)
+                            {
+                                if (islands.ContainsKey(kvp.Key))
+                                {
+                                    MessageBox.Show(string.Format("File {0} contains duplicate island named {1}, this island will not be imported", Path.GetFileName(dataFile), kvp.Key), 
+                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    continue;
+                                }
+
+                                if (kvp.Value != null)
+                                    kvp.Value.modDir = Path.GetFileName(islandModDir);
+
+                                islands.Add(kvp.Key, kvp.Value);
+                            }
+                    }
+                }
                 RefreshIslandList();
             }
         }
 
         public void SaveProject()
         {
-            JsonSerializerSettings settings = new JsonSerializerSettings();
-            string json = JsonConvert.SerializeObject(islands, Formatting.Indented);
-            File.WriteAllText(islandsSaveFile, json);
+            SaveIslands();
         }
 
         /// <summary>
@@ -1775,10 +1849,12 @@ namespace ServerGridEditor
                         }
             }
 
+            string islandRemovedFromMod = null;
             foreach (string islandToRemove in islandsToRemove)
             {
                 //delete the image
                 islands[islandToRemove].InvalidateImage();
+                islandRemovedFromMod = islands[islandToRemove].modDir;
                 File.Delete(islands[islandToRemove].imagePath);
 
                 islands.Remove(islandToRemove);
@@ -1786,7 +1862,7 @@ namespace ServerGridEditor
 
             RefreshIslandList();
             mapPanel.Invalidate();
-            SaveIslands();
+            SaveIslands(islandRemovedFromMod);
         }
 
         private void showServerInfoCheckbox_CheckedChanged(object sender, EventArgs e)
