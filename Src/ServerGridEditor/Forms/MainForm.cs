@@ -193,6 +193,10 @@ namespace ServerGridEditor
             exportAllToolStripMenuItem.Enabled = true;
             editServerTemplatesToolStripMenuItem.Enabled = true;
             testAllServersWithoutDataClearToolStripMenuItem.Enabled = true;
+            editToolStripMenuItem1.Enabled = true;
+            exportToolStripMenuItem.Enabled = true;
+            testsToolStripMenuItem.Enabled = true;
+            closeToolStripMenuItem.Enabled = true;
         }
 
         public void SetScaleTxt(float unrealUnits)
@@ -233,7 +237,7 @@ namespace ServerGridEditor
             islandListBox.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
 
             if (topItemIndex < islandListBox.Items.Count)
-                islandListBox.TopItem =  islandListBox.Items[topItemIndex];
+                islandListBox.TopItem = islandListBox.Items[topItemIndex];
 
             islandListBox.Select();
             islandListBox.HideSelection = false;
@@ -303,7 +307,7 @@ namespace ServerGridEditor
                 showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
                 culling, alphaBackground,
                 tiledBackgroundCheckbox.Checked ? tile : null,
-                tiledBackgroundCheckbox.Checked ? tileBrush: null,
+                tiledBackgroundCheckbox.Checked ? tileBrush : null,
                 tileScaleBox.Value,
                 !ignoreTranslation ? mapHScrollBar.Value : 0,
                 !ignoreTranslation ? mapVScrollBar.Value : 0,
@@ -330,7 +334,7 @@ namespace ServerGridEditor
             Project currentProject = mainForm.currentProject;
 
             bool getOptimizedImage = !forExport && (1 / currentProject.coordsScaling > useFullIslandRes);
-            if(getOptimizedImage)
+            if (getOptimizedImage)
             {
                 g.InterpolationMode = InterpolationMode.Low;
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
@@ -437,7 +441,7 @@ namespace ServerGridEditor
             }
 
             //Draw foreground
-            if(currentProject.showForeground && mainForm.foregroundBrush != null)
+            if (currentProject.showForeground && mainForm.foregroundBrush != null)
             {
                 mainForm.foregroundBrush.ResetTransform();
                 mainForm.foregroundBrush.ScaleTransform((float)mainForm.foregroundScaleBox.Value * currentProject.coordsScaling * 1000, (float)mainForm.foregroundScaleBox.Value * currentProject.coordsScaling * 1000);
@@ -691,7 +695,7 @@ namespace ServerGridEditor
                         if (node.GetNextNode() != null)
                         {
                             bezierPoints.Add(NextControlCenter);
-                            if(i == shipPath.Nodes.Count - 1 && shipPath.isLooping)
+                            if (i == shipPath.Nodes.Count - 1 && shipPath.isLooping)
                             {
                                 PointF PrevControl = node.GetNextNode().GetPrevControlPoint();
                                 PrevControl.X += mainForm.currentProject.cellSize * mainForm.currentProject.numOfCellsX;
@@ -786,7 +790,7 @@ namespace ServerGridEditor
                     islandStartRotation = CurrentRotatedMoveableObject.rotation;
                 }
 
-                if(CurrentRotatedMoveableObject is BezierNodeData)
+                if (CurrentRotatedMoveableObject is BezierNodeData)
                 {
                     float distanceFromCenter = StaticHelpers.GetDistance(GetTarnsformedMapPoint(e.Location), CurrentRotatedMoveableObject.GetMapLocation(this));
 
@@ -822,7 +826,7 @@ namespace ServerGridEditor
             Point atlasPoint = GetTarnsformedMapPoint(e.Location);
             double LocX = atlasPoint.X / currentProject.coordsScaling;
             double LocY = atlasPoint.Y / currentProject.coordsScaling;
-            if( LocX <= currentProject.cellSize * currentProject.numOfCellsX  && LocY <= currentProject.cellSize * currentProject.numOfCellsY)
+            if (LocX <= currentProject.cellSize * currentProject.numOfCellsX && LocY <= currentProject.cellSize * currentProject.numOfCellsY)
                 atlasLocation.Text = "X: " + LocX + "  Y: " + LocY;
         }
 
@@ -867,7 +871,7 @@ namespace ServerGridEditor
                         }
                     }
                 }
-                else if(ModifierKeys == Keys.Shift)
+                else if (ModifierKeys == Keys.Shift)
                 {
                     if (currentProject == null || currentProject.DiscoveryZoneImage == null)
                         return;
@@ -1020,7 +1024,7 @@ namespace ServerGridEditor
             {
                 if (CurrentHeldMoveableObject != null)
                 {
-                    if(CurrentHeldMoveableObject is DiscoveryZoneData)
+                    if (CurrentHeldMoveableObject is DiscoveryZoneData)
                     {
                         DiscoveryZoneData DiscoZoneInst = (DiscoveryZoneData)CurrentHeldMoveableObject;
                         if (e.Location == LastMouseLocation)
@@ -1174,19 +1178,19 @@ namespace ServerGridEditor
                 islands = JsonConvert.DeserializeObject<Dictionary<string, Island>>(File.ReadAllText(islandsSaveFile));
 
                 string[] modDirs = Directory.GetDirectories(islandModsDir);
-                
+
                 foreach (string islandModDir in modDirs)
                 {
                     string dataFile = islandModDir + islandsJson;
                     if (File.Exists(dataFile))
                     {
-                        Dictionary <string, Island> ModIslands = JsonConvert.DeserializeObject<Dictionary<string, Island>>(File.ReadAllText(dataFile));
-                        if(ModIslands != null)
-                            foreach(KeyValuePair<string, Island> kvp in ModIslands)
+                        Dictionary<string, Island> ModIslands = JsonConvert.DeserializeObject<Dictionary<string, Island>>(File.ReadAllText(dataFile));
+                        if (ModIslands != null)
+                            foreach (KeyValuePair<string, Island> kvp in ModIslands)
                             {
                                 if (islands.ContainsKey(kvp.Key))
                                 {
-                                    MessageBox.Show(string.Format("File {0} contains duplicate island named {1}, this island will not be imported", Path.GetFileName(dataFile), kvp.Key), 
+                                    MessageBox.Show(string.Format("File {0} contains duplicate island named {1}, this island will not be imported", Path.GetFileName(dataFile), kvp.Key),
                                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     continue;
                                 }
@@ -1205,6 +1209,8 @@ namespace ServerGridEditor
         public void SaveProject()
         {
             SaveIslands();
+
+
         }
 
         /// <summary>
@@ -1344,7 +1350,7 @@ namespace ServerGridEditor
             {
                 foreach (BezierNodeData node in shipPath.Nodes)
                 {
-                    if(node.ContainsPoint(p, this))
+                    if (node.ContainsPoint(p, this))
                     {
                         return node;
                     }
@@ -1451,7 +1457,7 @@ namespace ServerGridEditor
 
             if (isSingleCell)
             {
-                if(forceResForSingleCell && resOverride > -1)
+                if (forceResForSingleCell && resOverride > -1)
                     sizeY = sizeX = Math.Min(maxImageSize, (int)resOverride) - 2;
                 else
                     sizeY = sizeX = Math.Min(maxImageSize, editorConfig.CellImagesRes) - 2;
@@ -1535,7 +1541,7 @@ namespace ServerGridEditor
 
             if (image == null)
             {
-                if(cellX == -1 && cellY == -1 && resOverride > maxImageSize)
+                if (cellX == -1 && cellY == -1 && resOverride > maxImageSize)
                 {
                     //Using a large resolution, combine cell images instead of exporting a huge one at once
                     int maxCells = Math.Max(currentProject.numOfCellsX, currentProject.numOfCellsY);
@@ -1546,7 +1552,7 @@ namespace ServerGridEditor
                     MagickAnyCPU.CacheDirectory = dir;
                     if (!Directory.Exists(dir + "/magicktemp"))
                         Directory.CreateDirectory(dir + "/magicktemp");
-                    MagickNET.SetTempDirectory(dir+"/magicktemp");
+                    MagickNET.SetTempDirectory(dir + "/magicktemp");
                     ImageMagick.ResourceLimits.Memory = 8388608;
 
                     for (int i = 0; i < currentProject.numOfCellsX; i++)
@@ -1605,7 +1611,7 @@ namespace ServerGridEditor
 
             if (image == null)
                 return;
-            
+
             MagickImage tgaImg = new MagickImage(image);
             tgaImg.Format = MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
@@ -1626,7 +1632,7 @@ namespace ServerGridEditor
             {
                 for (int j = 0; j < currentProject.numOfCellsY; j++)
                 {
-                    string CellFile = FullPath + string.Format(cellImageNameTemplate, FilenameWithoutExtension , i, j, Extension);
+                    string CellFile = FullPath + string.Format(cellImageNameTemplate, FilenameWithoutExtension, i, j, Extension);
                     ExportImage(CellFile, i, j, true, editorConfig.CellImagesRes);
                 }
             }
@@ -1757,20 +1763,35 @@ namespace ServerGridEditor
 
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hold Left click (Move island)\n" +
-                "Hold Right click (Rotate island)\n" + 
-                "Mouse wheel (Zoom)\n" + 
-                "Delete button (Remove island)\n" + 
-                "Ctrl + click on grid (Edit server info)\n" + 
-                "Ctrl + click on island (Edit island info)\n" + 
-                "Hold middle mouse + drag (Scroll map)\n" + 
-                "Shift + drag (Create discovery zone)\n" +
-                "Shift + click on discovery zone (Edit discovery zone)\n" +
-                "L while hovered on cell (Open locks form)\n"+
-                "P while on map (Spawn ship path)\n" +
-                "Delete on path nodes (Delete node)\n" +
-                "Ctrl + click on path node (Edit path)\n" +
-                "Shift + Delete on path nodes (Delete whole path)\n", "Controls");
+            MessageBox.Show("Hold Left click = (Move island)\n" +
+                "\n" +
+                "Hold Right click = (Rotate island)\n" +
+                "\n" +
+                "Mouse wheel = (Zoom)\n" +
+                "\n" +
+                "Delete button = (Remove island)\n" +
+                "\n" +
+                "Ctrl + click on grid = (Edit server info)\n" +
+                "\n" +
+                "Ctrl + click on island = (Edit island info)\n" +
+                "\n" +
+                "Hold middle mouse + drag = (Scroll map)\n" +
+                "\n" +
+                "Shift + drag = (Create discovery zone)\n" +
+                "\n" +
+                "Shift + click on discovery zone = (Edit discovery zone)\n" +
+                "\n" +
+                "L while hovered on cell = (Open locks form)\n" +
+                "\n" +
+                "P while on map = (Spawn ship path)\n" +
+                "\n" +
+                "Delete on selection or hovering over selection = (Delete selection)\n" +
+                "\n" +
+                "'+' Key while hovering over path node = (Add path node)\n" +
+                "\n" +
+                "Ctrl + click on path node = (Edit path)\n" +
+                "\n" +
+                "Shift + Delete on path nodes = (Delete whole path)\n", "Controls");
         }
 
         private void customRatioTxtBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -1915,8 +1936,8 @@ namespace ServerGridEditor
             var createForm = new CreateIslandForm();
             createForm.mainForm = this;
             createForm.editedIsland = isle;
-            if(createForm.ShowDialog() != DialogResult.Cancel && createForm.bIslandNameChanged)
-               RefreshIslandList();
+            if (createForm.ShowDialog() != DialogResult.Cancel && createForm.bIslandNameChanged)
+                RefreshIslandList();
             mapPanel.Invalidate();
         }
 
@@ -1927,7 +1948,7 @@ namespace ServerGridEditor
 
             openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
             openFileDialog.FileName = "";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./","");
+            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./", "");
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imgName = waterTilesDir + "/";// + "/" + currentProject.SeamlessWorldId;
@@ -2007,7 +2028,7 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-            
+
             if (currentProject.DiscoveryZoneImage != null)
                 currentProject.DiscoveryZoneImage.Dispose();
             currentProject.DiscoveryZoneImage = null;
@@ -2275,7 +2296,7 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Export failed!! Ex: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                  
+
         }
 
 
@@ -2461,6 +2482,17 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void powerStonesBtn_Click(object sender, EventArgs e)
+        {
+            QuestCalcGlobal qcg = new QuestCalcGlobal(this);
+            qcg.ShowDialog();
         }
     }
 

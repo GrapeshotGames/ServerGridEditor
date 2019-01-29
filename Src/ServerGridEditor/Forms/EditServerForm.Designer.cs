@@ -236,6 +236,7 @@
             this.OceanDinoDepthEntriesOverrideTxtBox.Location = new System.Drawing.Point(371, 157);
             this.OceanDinoDepthEntriesOverrideTxtBox.Multiline = true;
             this.OceanDinoDepthEntriesOverrideTxtBox.Name = "OceanDinoDepthEntriesOverrideTxtBox";
+            this.OceanDinoDepthEntriesOverrideTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OceanDinoDepthEntriesOverrideTxtBox.Size = new System.Drawing.Size(285, 83);
             this.OceanDinoDepthEntriesOverrideTxtBox.TabIndex = 20;
             // 
@@ -253,6 +254,7 @@
             this.OceanFloatsamCratesOverrideTxtBox.Location = new System.Drawing.Point(367, 272);
             this.OceanFloatsamCratesOverrideTxtBox.Multiline = true;
             this.OceanFloatsamCratesOverrideTxtBox.Name = "OceanFloatsamCratesOverrideTxtBox";
+            this.OceanFloatsamCratesOverrideTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OceanFloatsamCratesOverrideTxtBox.Size = new System.Drawing.Size(289, 90);
             this.OceanFloatsamCratesOverrideTxtBox.TabIndex = 22;
             // 
@@ -320,6 +322,7 @@
             this.TreasureMapLootTablesOverrideTxtBox.Location = new System.Drawing.Point(367, 381);
             this.TreasureMapLootTablesOverrideTxtBox.Multiline = true;
             this.TreasureMapLootTablesOverrideTxtBox.Name = "TreasureMapLootTablesOverrideTxtBox";
+            this.TreasureMapLootTablesOverrideTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TreasureMapLootTablesOverrideTxtBox.Size = new System.Drawing.Size(289, 90);
             this.TreasureMapLootTablesOverrideTxtBox.TabIndex = 34;
             // 
@@ -354,6 +357,7 @@
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.Location = new System.Drawing.Point(371, 29);
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.Multiline = true;
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.Name = "GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox";
+            this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.Size = new System.Drawing.Size(285, 41);
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesTxtBox.TabIndex = 38;
             // 
@@ -371,6 +375,7 @@
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.Location = new System.Drawing.Point(369, 92);
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.Multiline = true;
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.Name = "GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox";
+            this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.Size = new System.Drawing.Size(287, 41);
             this.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWaterTxtBox.TabIndex = 40;
             // 
@@ -431,6 +436,7 @@
             this.extraSublevelTxtBox.Location = new System.Drawing.Point(367, 498);
             this.extraSublevelTxtBox.Multiline = true;
             this.extraSublevelTxtBox.Name = "extraSublevelTxtBox";
+            this.extraSublevelTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.extraSublevelTxtBox.Size = new System.Drawing.Size(289, 53);
             this.extraSublevelTxtBox.TabIndex = 70;
             // 
@@ -471,6 +477,7 @@
             this.regionOverridesTxtBox.Location = new System.Drawing.Point(369, 580);
             this.regionOverridesTxtBox.Multiline = true;
             this.regionOverridesTxtBox.Name = "regionOverridesTxtBox";
+            this.regionOverridesTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.regionOverridesTxtBox.Size = new System.Drawing.Size(289, 86);
             this.regionOverridesTxtBox.TabIndex = 76;
             // 
@@ -654,6 +661,7 @@
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox.Location = new System.Drawing.Point(369, 695);
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox.Multiline = true;
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox.Name = "OceanEpicSpawnEntriesOverrideValuesTxtBox";
+            this.OceanEpicSpawnEntriesOverrideValuesTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox.Size = new System.Drawing.Size(289, 53);
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox.TabIndex = 98;
             // 
