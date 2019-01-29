@@ -46,6 +46,7 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editSpawnerTemplatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editAllDiscoveryZonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,6 +94,7 @@
             this.foregroundScaleBox = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.atlasLocation = new System.Windows.Forms.Label();
+            this.powerStonesBtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -100,7 +102,7 @@
             // 
             // islandListBox
             // 
-            this.islandListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.islandListBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.islandListBox.AutoArrange = false;
             this.islandListBox.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -157,8 +159,8 @@
             // mapPanel
             // 
             this.mapPanel.AllowDrop = true;
-            this.mapPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.mapPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mapPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.mapPanel.Location = new System.Drawing.Point(25, 29);
@@ -198,7 +200,7 @@
             // 
             // mapHScrollBar
             // 
-            this.mapHScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.mapHScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mapHScrollBar.Enabled = false;
             this.mapHScrollBar.Location = new System.Drawing.Point(28, 596);
@@ -210,7 +212,7 @@
             // mapVScrollBar
             // 
             this.mapVScrollBar.AllowDrop = true;
-            this.mapVScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.mapVScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mapVScrollBar.Enabled = false;
             this.mapVScrollBar.Location = new System.Drawing.Point(761, 29);
@@ -239,7 +241,8 @@
             this.createToolStripMenuItem,
             this.openToolStripMenuItem,
             this.editToolStripMenuItem,
-            this.saveToolStripMenuItem});
+            this.saveToolStripMenuItem,
+            this.closeToolStripMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
             this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.projectToolStripMenuItem.Text = "Project";
@@ -274,6 +277,14 @@
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
+            // closeToolStripMenuItem
+            // 
+            this.closeToolStripMenuItem.Enabled = false;
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.closeToolStripMenuItem.Text = "Close";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            //
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -283,6 +294,7 @@
             this.editServerTemplatesToolStripMenuItem,
             this.editLocksToolStripMenuItem,
             this.cullInvalidPathsToolStripMenuItem});
+            this.editToolStripMenuItem1.Enabled = false;
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
@@ -338,6 +350,7 @@
             this.cellImagesToolStripMenuItem,
             this.toolStripSeparator1,
             this.slippyMapToolStripMenuItem});
+            this.exportToolStripMenuItem.Enabled = false;
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.exportToolStripMenuItem.Text = "Export";
@@ -384,6 +397,7 @@
             this.testsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testAllServersWithDataClearToolStripMenuItem,
             this.testAllServersWithoutDataClearToolStripMenuItem});
+            this.testsToolStripMenuItem.Enabled = false;
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
             this.testsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.testsToolStripMenuItem.Text = "Tests";
@@ -769,11 +783,23 @@
             this.atlasLocation.TabIndex = 36;
             this.atlasLocation.Text = "Atlas Location";
             // 
+            // powerStonesBtn
+            // 
+            this.powerStonesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.powerStonesBtn.Location = new System.Drawing.Point(398, 613);
+            this.powerStonesBtn.Name = "powerStonesBtn";
+            this.powerStonesBtn.Size = new System.Drawing.Size(95, 23);
+            this.powerStonesBtn.TabIndex = 37;
+            this.powerStonesBtn.Text = "PowerStones";
+            this.powerStonesBtn.UseVisualStyleBackColor = true;
+            this.powerStonesBtn.Click += new System.EventHandler(this.powerStonesBtn_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 708);
+            this.Controls.Add(this.powerStonesBtn);
             this.Controls.Add(this.atlasLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.foregroundScaleBox);
@@ -866,13 +892,13 @@
         private System.Windows.Forms.NumericUpDown tileScaleBox;
         private System.Windows.Forms.Button loadProjBtn;
         private System.Windows.Forms.Button createProjBtn;
-//        private System.Windows.Forms.ToolStripMenuItem clearTravelDataToolStripMenuItem;
+        //        private System.Windows.Forms.ToolStripMenuItem clearTravelDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testAllServersWithDataClearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem testAllServersWithoutDataClearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editSpawnerTemplatesToolStripMenuItem;
-//        private System.Windows.Forms.ToolStripMenuItem LOCALClearTravelDataOnlyRemoveDataToolStripMenuItem;
+        //        private System.Windows.Forms.ToolStripMenuItem LOCALClearTravelDataOnlyRemoveDataToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cellImagesToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox cellImageSizetxtbox;
@@ -897,6 +923,8 @@
         private System.Windows.Forms.ToolStripMenuItem editLocksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cullInvalidPathsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.Button powerStonesBtn;
     }
 }
 

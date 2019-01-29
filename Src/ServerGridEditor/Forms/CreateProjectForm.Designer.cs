@@ -144,6 +144,7 @@
             this.sizeXTxtBox.Name = "sizeXTxtBox";
             this.sizeXTxtBox.Size = new System.Drawing.Size(55, 20);
             this.sizeXTxtBox.TabIndex = 3;
+            this.sizeXTxtBox.Text = "1";
             this.sizeXTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sizeXTxtBox_KeyPress);
             // 
             // sizeYTxtBox
@@ -152,6 +153,7 @@
             this.sizeYTxtBox.Name = "sizeYTxtBox";
             this.sizeYTxtBox.Size = new System.Drawing.Size(55, 20);
             this.sizeYTxtBox.TabIndex = 4;
+            this.sizeYTxtBox.Text = "1";
             this.sizeYTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sizeYTxtBox_KeyPress);
             // 
             // label3
@@ -188,6 +190,7 @@
             this.gridSizeTxtBox.Name = "gridSizeTxtBox";
             this.gridSizeTxtBox.Size = new System.Drawing.Size(55, 20);
             this.gridSizeTxtBox.TabIndex = 5;
+            this.gridSizeTxtBox.Text = "1400000";
             this.gridSizeTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gridSizeTxtBox_KeyPress);
             // 
             // cancelBtn
@@ -481,6 +484,8 @@
             // useUTCTimeCheckbox
             // 
             this.useUTCTimeCheckbox.AutoSize = true;
+            this.useUTCTimeCheckbox.Checked = true;
+            this.useUTCTimeCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.useUTCTimeCheckbox.Location = new System.Drawing.Point(142, 654);
             this.useUTCTimeCheckbox.Name = "useUTCTimeCheckbox";
             this.useUTCTimeCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -708,6 +713,7 @@
             this.globalGameplaySetupTxtBox.Location = new System.Drawing.Point(395, 616);
             this.globalGameplaySetupTxtBox.Multiline = true;
             this.globalGameplaySetupTxtBox.Name = "globalGameplaySetupTxtBox";
+            this.globalGameplaySetupTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.globalGameplaySetupTxtBox.Size = new System.Drawing.Size(289, 86);
             this.globalGameplaySetupTxtBox.TabIndex = 37;
             // 
@@ -775,6 +781,7 @@
             this.baseServerArgsTxtBox.Location = new System.Drawing.Point(7, 356);
             this.baseServerArgsTxtBox.Multiline = true;
             this.baseServerArgsTxtBox.Name = "baseServerArgsTxtBox";
+            this.baseServerArgsTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.baseServerArgsTxtBox.Size = new System.Drawing.Size(687, 51);
             this.baseServerArgsTxtBox.TabIndex = 14;
             // 
@@ -859,6 +866,7 @@
             this.columnUTCOffsetTxtBox.Name = "columnUTCOffsetTxtBox";
             this.columnUTCOffsetTxtBox.Size = new System.Drawing.Size(55, 20);
             this.columnUTCOffsetTxtBox.TabIndex = 6;
+            this.columnUTCOffsetTxtBox.Text = "0.0";
             // 
             // label5
             // 

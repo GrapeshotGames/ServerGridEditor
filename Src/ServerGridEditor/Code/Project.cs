@@ -404,7 +404,7 @@ namespace ServerGridEditor
         public bool alphaBackground = false;
         public bool showBackground = false;
         public bool showForeground = false;
-        public string backgroundImgPath = null;
+        public string backgroundImgPath = "./WaterTiles/instinctworld-autoscaling";
         public string foregroundImgPath = null;
 
         public int idGenerator = 0;
