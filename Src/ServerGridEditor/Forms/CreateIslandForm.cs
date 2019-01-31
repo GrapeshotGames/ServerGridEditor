@@ -215,7 +215,7 @@ namespace ServerGridEditor
                     editedIsland.imagePath = newImgPath;
                 }
 
-                if (modNameTxtBox.Text != editedIsland.modDir)
+                if (editedIsland.modDir != null && editedIsland.modDir != null && modNameTxtBox.Text != editedIsland.modDir)
                 {
                     //Mod dir changed
                     if (!string.IsNullOrWhiteSpace(modNameTxtBox.Text))
@@ -246,19 +246,19 @@ namespace ServerGridEditor
                     else
                     {
                         editedIsland.InvalidateImage();
-                    string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
+                        string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
                         if (File.Exists(newImgPath))
                             File.Delete(newImgPath);
-                    File.Move(editedIsland.imagePath, newImgPath);
+                        File.Move(editedIsland.imagePath, newImgPath);
 
                         islandRemovedFromMod = editedIsland.modDir;
                         editedIsland.modDir = null;
 
-                    if (pictureBox1.ImageLocation == editedIsland.imagePath)
-                        pictureBox1.ImageLocation = newImgPath;
+                        if (pictureBox1.ImageLocation == editedIsland.imagePath)
+                            pictureBox1.ImageLocation = newImgPath;
 
-                    editedIsland.imagePath = newImgPath;
-                }
+                        editedIsland.imagePath = newImgPath;
+                    }
                 }
 
                 editedIsland.x = x;
