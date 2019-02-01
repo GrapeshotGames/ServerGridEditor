@@ -65,7 +65,7 @@ namespace ServerGridEditor.Forms
         ArrayList calcGridYArray = new ArrayList();
         ArrayList Index = new ArrayList();
         public int NumberDecimalDigits { get; set; }
-        public JObject Json { get => json; set => json = value; }
+        public JObject Json { get { return json; } set { json = value; } }
 
         NumberFormatInfo qcgInfo = new CultureInfo("en-US", false).NumberFormat;
 
