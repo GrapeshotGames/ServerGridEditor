@@ -2343,19 +2343,22 @@ namespace ServerGridEditor
 
             openFileDialog.Filter = "png files (*.png)|*.png";
             openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + foregroundTilesDir.Replace("./", "");
+            openFileDialog.FileName = string.IsNullOrEmpty(currentProject.foregroundImgPath) ? "" : Path.GetFileName(currentProject.foregroundImgPath);
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                string imgName = foregroundTilesDir;// + "/" + currentProject.SeamlessWorldId;
-
                 if (foregroundBrush != null)
                     foregroundBrush.Dispose();
                 if (foreground != null)
                     foreground.Dispose();
 
-                File.Copy(openFileDialog.FileName, imgName, true);
-                SetForegroundImage(openFileDialog.FileName);
+
+                string imgPath= Path.Combine(foregroundTilesDir, Path.GetFileName(openFileDialog.FileName));
+                if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(foregroundTilesDir)))
+                    File.Copy(openFileDialog.FileName, imgPath, true);
+
+                SetForegroundImage(imgPath);
                 currentProject.showForeground = true;
-                currentProject.foregroundImgPath = imgName;
+                currentProject.foregroundImgPath = imgPath;
                 showForegroundChckBox.Checked = true;
             }
         }
