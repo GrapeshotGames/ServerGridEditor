@@ -1129,7 +1129,8 @@ namespace ServerGridEditor
             Dictionary<string, Island> originalIslands = new Dictionary<string, Island>();
 
             foreach (Island island in allIslands)
-                if (island.modDir != null)
+            {
+                if (!string.IsNullOrWhiteSpace(island.modDir))
                 {
                     //This is a mod island group it to be saved
                     Dictionary<string, Island> modIslandsDict = null;
@@ -1145,6 +1146,7 @@ namespace ServerGridEditor
                 {
                     originalIslands.Add(island.name, island);
                 }
+            }
 
             //Serialize Main island file
             string json = JsonConvert.SerializeObject(originalIslands, Formatting.Indented);
