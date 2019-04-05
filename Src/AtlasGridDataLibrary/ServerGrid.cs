@@ -205,6 +205,8 @@ namespace AtlasGridDataLibrary
         public float waterColorG = 0;
         public float waterColorB = 0;
         public int skyStyleIndex = 0;
+        [DefaultValue(1.0f)]
+        public float serverIslandPointsMultiplier = 1.0f;
         [DefaultValue("")]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string ServerCustomDatas1 = "";
@@ -283,6 +285,7 @@ namespace AtlasGridDataLibrary
         public bool useNpcVolumesForTreasures = false;
         public bool useLevelBoundsForTreasures = true;
         public bool prioritizeVolumesForTreasures = false;
+        public int islandPoints = 1;
         public string islandTreasureBottleSupplyCrateOverrides = "";
         [DefaultValue(-1)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
@@ -311,6 +314,9 @@ namespace AtlasGridDataLibrary
         [DefaultValue("")]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string IslandInstanceClientCustomDatas2 = "";
+
+        public float islandWidth;
+        public float islandHeight;
     }
     public class DiscoveryZoneData : MoveableObjectData
     {

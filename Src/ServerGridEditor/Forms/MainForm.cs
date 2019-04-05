@@ -88,6 +88,7 @@ namespace ServerGridEditor
 
         public MainForm()
         {
+
             //DoubleBuffered = true;
             InitializeComponent();
 
@@ -467,39 +468,38 @@ namespace ServerGridEditor
                     if (drawRect.Height < 0)
                         drawRect.Height *= -1;
 
+                    bool culled = true;
                     if (!cull || canvasRect.IntersectsWith(drawRect))
                     {
                         drawRect.X = -drawRect.Width / 2;
                         drawRect.Y = -drawRect.Height / 2;
                         g.DrawImage(currentProject.DiscoveryZoneImage, drawRect);
+
+                        culled = false;
                     }
 
                     g.RotateTransform(-discoInst.rotation);
                     g.TranslateTransform(-discoInst.worldX * currentProject.coordsScaling, -discoInst.worldY * currentProject.coordsScaling);
-                }
 
-                //Draw discoZone info
-                // if (showDiscoZoneInfo)
-                {
-                    foreach (DiscoveryZoneData zoneInst in currentProject.discoZones)
+                    if(!culled)
                     {
-                        float zoneSize = Math.Max(zoneInst.sizeX * currentProject.coordsScaling, 0.00001f);
+                        float zoneSize = Math.Max(discoInst.sizeX * currentProject.coordsScaling, 0.00001f);
                         Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * zoneSize / 200, FontStyle.Regular);
                         SizeF stringSize = g.MeasureString("T", font);
                         float dynamicOutlineShift = stringSize.Height * outlineShift;
 
-                        PointF zoneCenter = new PointF(zoneInst.worldX, zoneInst.worldY);
+                        PointF zoneCenter = new PointF(discoInst.worldX, discoInst.worldY);
                         zoneCenter = new PointF(zoneCenter.X * currentProject.coordsScaling, zoneCenter.Y * currentProject.coordsScaling);
-                        if (cull)
-                        {
-                            RectangleF drawRect = new RectangleF(zoneCenter.X - stringSize.Width / 2, zoneCenter.Y - stringSize.Width / 2, stringSize.Width, 3.3f * stringSize.Height);
-                            if (RectangleF.Intersect(canvasRect, drawRect).IsEmpty)
-                                continue;
-                        }
+                        //if (cull)
+                        //{
+                        //    RectangleF drawRect = new RectangleF(zoneCenter.X - stringSize.Width / 2, zoneCenter.Y - stringSize.Width / 2, stringSize.Width, 3.3f * stringSize.Height);
+                        //    if (canvasRect.IntersectsWith(drawRect))
+                        //        continue;
+                        //}
 
-                        g.DrawString("name: " + zoneInst.name, font, Brushes.Black, new PointF(zoneCenter.X + dynamicOutlineShift, zoneCenter.Y + dynamicOutlineShift), centeredStringFormat);
+                        g.DrawString("name: " + discoInst.name, font, Brushes.Black, new PointF(zoneCenter.X + dynamicOutlineShift, zoneCenter.Y + dynamicOutlineShift), centeredStringFormat);
                         zoneCenter.Y += stringSize.Height * 1.1f;
-                        g.DrawString("xp: " + zoneInst.xp, font, Brushes.White, zoneCenter, centeredStringFormat);
+                        g.DrawString("xp: " + discoInst.xp, font, Brushes.White, zoneCenter, centeredStringFormat);
                     }
                 }
             }
@@ -718,6 +718,25 @@ namespace ServerGridEditor
                     g.DrawBeziers(p, bezierPoints.ToArray());
                 }
             }
+
+            if(mainForm.makingSelectionBox || mainForm.selectedMovableObjects.Count > 0)
+            {
+                Pen pen = new Pen(Color.Black, 2.5f);
+                pen.DashStyle = DashStyle.Dash;
+                RectangleF selBox = mainForm.selectionBox;
+                //RectangleF selBox = new RectangleF(selBoxRef.Location, selBoxRef.Size);
+                selBox.X *= currentProject.coordsScaling;
+                selBox.Y *= currentProject.coordsScaling;
+                selBox.Width *= currentProject.coordsScaling;
+                selBox.Height *= currentProject.coordsScaling;
+
+                g.TranslateTransform(selBox.X + selBox.Width / 2, selBox.Y + selBox.Height / 2);
+                g.RotateTransform(mainForm.selectionBoxRotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
+                g.TranslateTransform(-selBox.Width / 2, -selBox.Height / 2);
+                g.DrawRectangle(pen, 0, 0, selBox.Width, selBox.Height);
+                //g.RotateTransform(-mainForm.selectionBoxRotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
+                //g.TranslateTransform(-selBox.Y - selBox.Width / 2, -selBox.Y - selBox.Height / 2);
+            }
         }
 
         private void mapPanel_DragDrop(object sender, DragEventArgs e)
@@ -730,7 +749,17 @@ namespace ServerGridEditor
             p = GetTarnsformedMapPoint(p);
             PointF worldPoint = MapToUnrealPoint(p);
             int id = currentProject.GenerateNewId();
-            currentProject.islandInstances.Add(new IslandInstanceData().SetFrom((string)e.Data.GetData("".GetType()), worldPoint.X, worldPoint.Y, 0, id));
+
+            float width = 0, height = 0;
+            string name = (string)e.Data.GetData("".GetType());
+            if (islands.ContainsKey(name))
+            {
+                Island island = islands[name];
+                width = island.x;
+                height = island.y;
+            }
+
+            currentProject.islandInstances.Add(new IslandInstanceData().SetFrom(name, worldPoint.X, worldPoint.Y, 0, id, width, height));
             currentProject.islandInstances.Last().SetDirty(this);
             islandListBox.Invalidate();
             mapPanel.Invalidate();
@@ -747,7 +776,15 @@ namespace ServerGridEditor
 
             Point moveDelta = new Point(e.Location.X - previousMousePos.X, e.Location.Y - previousMousePos.Y);
 
-            if (CurrentHeldMoveableObject != null)
+            if(makingSelectionBox)
+            {
+                PointF p = MapToUnrealPoint(GetTarnsformedMapPoint(e.Location));
+                selectionBox.Width = p.X - selectionBox.X;
+                selectionBox.Height = p.Y - selectionBox.Y;
+
+                mapPanel.Invalidate();
+            }
+            else if (CurrentHeldMoveableObject != null)
             {
                 if (CurrentHeldMoveableObject is DiscoveryZoneData && bResizingDiscoZone)
                 {
@@ -809,6 +846,72 @@ namespace ServerGridEditor
                 this.Cursor = Cursor.Current = Cursors.NoMove2D;
                 mapPanel.Invalidate();
             }
+            else if (selectedMovableObjects.Count > 0)
+            {
+                if (selectionBoxHeld)
+                {
+                    selectionBox.X += moveDelta.X / currentProject.coordsScaling;
+                    selectionBox.Y += moveDelta.Y / currentProject.coordsScaling;
+
+                    for (int i = 0; i < selectedMovableObjects.Count; i++)
+                        selectedMovableObjects[i].SetWorldLocation(
+                            this,
+                            new PointF(selectedMovableObjects[i].worldX + moveDelta.X / currentProject.coordsScaling,
+                            selectedMovableObjects[i].worldY + moveDelta.Y / currentProject.coordsScaling)
+                        );
+
+                    this.Cursor = Cursor.Current = Cursors.SizeAll;
+                    mapPanel.Invalidate();
+                }
+                else if(selectionBoxRotated)
+                {
+                    PointF selectionCenter = selectionBox.Location;
+                    selectionCenter.X += selectionBox.Width / 2;
+                    selectionCenter.Y += selectionBox.Height / 2;
+
+                    float angleToCenter = StaticHelpers.GetAngleOfPoint(new Point((int)(selectionCenter.X * currentProject.coordsScaling), (int)(selectionCenter.Y * currentProject.coordsScaling)), GetTarnsformedMapPoint(e.Location));
+
+                    if (startRotation.HasValue)
+                    {
+                        float lastFrameRotation = angleToCenter - startRotation.Value;
+
+                        for (int i = 0; i < selectedMovableObjects.Count; i++)
+                        {
+                            selectedMovableObjects[i].rotation += angleToCenter - startRotation.Value;
+
+                            PointF MovableLoc = new PointF(selectedMovableObjects[i].worldX, selectedMovableObjects[i].worldY);
+                            MovableLoc = StaticHelpers.RotatePointAround(MovableLoc, selectionCenter, lastFrameRotation);
+                            selectedMovableObjects[i].SetWorldLocation(this, MovableLoc);
+                        }
+
+                        selectionBoxRotation += lastFrameRotation;
+                        startRotation = angleToCenter;
+                    }
+                    else
+                    {
+                        startRotation = angleToCenter;
+                    }
+
+                    this.Cursor = Cursor.Current = Cursors.UpArrow;
+                    mapPanel.Invalidate();
+                }
+                else
+                {
+                    Point p = e.Location;
+                    p = GetTarnsformedMapPoint(p);
+                    PointF worldPoint = MapToUnrealPoint(p);
+
+                    PointF selectionCenter = selectionBox.Location;
+                    selectionCenter.X += selectionBox.Width / 2;
+                    selectionCenter.Y += selectionBox.Height / 2;
+                    worldPoint = StaticHelpers.RotatePointAround(worldPoint, selectionCenter, -selectionBoxRotation);
+
+                    if (selectionBox.Contains(worldPoint))
+                        this.Cursor = Cursor.Current = Cursors.Hand;
+                    else
+                        this.Cursor = Cursor.Current = Cursors.Default;
+                }
+            }
             else
             {
                 if (mapPanel.Visible && GetFirstMoveableObjectAtLocation(GetTarnsformedMapPoint(e.Location)) != null)
@@ -827,10 +930,44 @@ namespace ServerGridEditor
         }
 
         Point middlePressLocation;
+
+        RectangleF selectionBox;
+        bool makingSelectionBox = false;
+        bool selectionBoxHeld = false;
+        bool selectionBoxRotated = false;
+        float selectionBoxRotation = 0;
+        List<MoveableObjectData> selectedMovableObjects = new List<MoveableObjectData>();
+
         private void mapPanel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
+                if (selectedMovableObjects.Count > 0)
+                {
+                    Point p = e.Location;
+                    p = GetTarnsformedMapPoint(p);
+                    PointF worldPoint = MapToUnrealPoint(p);
+                    
+                    PointF selectionCenter = selectionBox.Location;
+                    selectionCenter.X += selectionBox.Width / 2;
+                    selectionCenter.Y += selectionBox.Height / 2;
+                    worldPoint = StaticHelpers.RotatePointAround(worldPoint, selectionCenter, -selectionBoxRotation);
+
+                    if (selectionBox.Contains(worldPoint))
+                    {
+                        selectionBoxHeld = true;
+                    }
+                    else
+                    {
+                        makingSelectionBox = true;
+                        selectionBox.Location = MapToUnrealPoint(GetTarnsformedMapPoint(e.Location));
+                        selectionBox.Width = 0;
+                        selectionBox.Height = 0;
+                        selectionBoxRotation = 0;
+                    }
+                    return;
+                }
+
                 if (ModifierKeys == Keys.Control)
                 {
                     IslandInstanceData IslandInst = GetFirstInstanceAtLocation(GetTarnsformedMapPoint(e.Location));
@@ -899,10 +1036,34 @@ namespace ServerGridEditor
                     CurrentHeldMoveableObject = GetFirstMoveableObjectAtLocation(GetTarnsformedMapPoint(e.Location));
                     if (CurrentHeldMoveableObject != null)
                         CurrentHeldMoveableObject.SetDirty(this);
+                    else
+                    {
+                        makingSelectionBox = true;
+                        selectionBox.Location = MapToUnrealPoint(GetTarnsformedMapPoint(e.Location));
+                        selectionBox.Width = 0;
+                        selectionBox.Height = 0;
+                        selectionBoxRotation = 0;
+                    }
                 }
             }
             else if (e.Button == MouseButtons.Right)
             {
+                if (selectedMovableObjects.Count > 0)
+                {
+                    Point p = e.Location;
+                    p = GetTarnsformedMapPoint(p);
+                    PointF worldPoint = MapToUnrealPoint(p);
+
+                    PointF selectionCenter = selectionBox.Location;
+                    selectionCenter.X += selectionBox.Width / 2;
+                    selectionCenter.Y += selectionBox.Height / 2;
+                    worldPoint = StaticHelpers.RotatePointAround(worldPoint, selectionCenter, -selectionBoxRotation);
+
+                    if (selectionBox.Contains(worldPoint))
+                        selectionBoxRotated = true;
+                    return;
+                }
+                
                 Server s = GetServerAtPoint(GetTarnsformedMapPoint(e.Location));
                 if (ModifierKeys == Keys.Control)
                 {
@@ -1050,12 +1211,39 @@ namespace ServerGridEditor
                     CurrentHeldMoveableObject.SetDirty(this);
                     CurrentHeldMoveableObject = null;
                 }
+                else if(makingSelectionBox)
+                {
+                    selectedMovableObjects.Clear();
+                    makingSelectionBox = false;
+                    foreach (IslandInstanceData instance in currentProject.islandInstances)
+                    {
+                        if (selectionBox.Contains(new PointF(instance.worldX, instance.worldY)))
+                            selectedMovableObjects.Add(instance);
+                    }
+                    foreach (DiscoveryZoneData instance in currentProject.discoZones)
+                    {
+                        if (selectionBox.Contains(new PointF(instance.worldX, instance.worldY)))
+                            selectedMovableObjects.Add(instance);
+                    }
+
+                    mapPanel.Invalidate();
+                }
+                else if(selectionBoxHeld)
+                {
+                    selectionBoxHeld = false;
+                }
             }
             else if (e.Button == MouseButtons.Right)
             {
-                CurrentRotatedMoveableObject = null;
+                if(selectedMovableObjects.Count > 0)
+                {
+                    selectionBoxRotated = false;
+                    startRotation = null;
+                }
+                else
+                    CurrentRotatedMoveableObject = null;
             }
-            else if (e.Button == MouseButtons.Middle)
+            else if (e.Button == MouseButtons.Middle && selectedMovableObjects.Count == 0)
             {
                 if (Math.Abs(middlePressLocation.X - mapHScrollBar.Value) < 10 && Math.Abs(middlePressLocation.Y - mapVScrollBar.Value) < 10)
                 {

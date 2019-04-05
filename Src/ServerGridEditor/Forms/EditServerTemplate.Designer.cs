@@ -85,6 +85,8 @@
             this.label33 = new System.Windows.Forms.Label();
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.serverIslandPointsMultiplierTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -425,7 +427,7 @@
             // 
             // ServerCustomDatas1TxtBox
             // 
-            this.ServerCustomDatas1TxtBox.Location = new System.Drawing.Point(121, 478);
+            this.ServerCustomDatas1TxtBox.Location = new System.Drawing.Point(123, 507);
             this.ServerCustomDatas1TxtBox.Name = "ServerCustomDatas1TxtBox";
             this.ServerCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
             this.ServerCustomDatas1TxtBox.TabIndex = 88;
@@ -433,7 +435,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(12, 481);
+            this.label25.Location = new System.Drawing.Point(14, 510);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(110, 13);
             this.label25.TabIndex = 87;
@@ -441,7 +443,7 @@
             // 
             // ServerCustomDatas2TxtBox
             // 
-            this.ServerCustomDatas2TxtBox.Location = new System.Drawing.Point(121, 501);
+            this.ServerCustomDatas2TxtBox.Location = new System.Drawing.Point(123, 530);
             this.ServerCustomDatas2TxtBox.Name = "ServerCustomDatas2TxtBox";
             this.ServerCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
             this.ServerCustomDatas2TxtBox.TabIndex = 90;
@@ -449,7 +451,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(12, 504);
+            this.label26.Location = new System.Drawing.Point(14, 533);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(110, 13);
             this.label26.TabIndex = 89;
@@ -457,7 +459,7 @@
             // 
             // ClientCustomDatas2TxtBox
             // 
-            this.ClientCustomDatas2TxtBox.Location = new System.Drawing.Point(121, 550);
+            this.ClientCustomDatas2TxtBox.Location = new System.Drawing.Point(123, 579);
             this.ClientCustomDatas2TxtBox.Name = "ClientCustomDatas2TxtBox";
             this.ClientCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
             this.ClientCustomDatas2TxtBox.TabIndex = 94;
@@ -465,7 +467,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(12, 553);
+            this.label27.Location = new System.Drawing.Point(14, 582);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(105, 13);
             this.label27.TabIndex = 93;
@@ -473,7 +475,7 @@
             // 
             // ClientCustomDatas1TxtBox
             // 
-            this.ClientCustomDatas1TxtBox.Location = new System.Drawing.Point(121, 527);
+            this.ClientCustomDatas1TxtBox.Location = new System.Drawing.Point(123, 556);
             this.ClientCustomDatas1TxtBox.Name = "ClientCustomDatas1TxtBox";
             this.ClientCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
             this.ClientCustomDatas1TxtBox.TabIndex = 92;
@@ -481,7 +483,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(12, 530);
+            this.label28.Location = new System.Drawing.Point(14, 559);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(105, 13);
             this.label28.TabIndex = 91;
@@ -564,6 +566,22 @@
             this.label1.TabIndex = 102;
             this.label1.Text = "OceanEpicSpawnEntriesOverrideValues";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 475);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "serverIslandPointsMultiplier:";
+            // 
+            // serverIslandPointsMultiplierTxtBox
+            // 
+            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(274, 472);
+            this.serverIslandPointsMultiplierTxtBox.Name = "serverIslandPointsMultiplierTxtBox";
+            this.serverIslandPointsMultiplierTxtBox.Size = new System.Drawing.Size(79, 20);
+            this.serverIslandPointsMultiplierTxtBox.TabIndex = 104;
+            // 
             // EditServerTemplate
             // 
             this.AcceptButton = this.saveBtn;
@@ -571,6 +589,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(667, 770);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.serverIslandPointsMultiplierTxtBox);
             this.Controls.Add(this.OceanEpicSpawnEntriesOverrideValuesTxtBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label30);
@@ -700,5 +720,7 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox OceanEpicSpawnEntriesOverrideValuesTxtBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox serverIslandPointsMultiplierTxtBox;
     }
 }

@@ -41,6 +41,9 @@ namespace ServerGridEditor
         [DefaultValue("")]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public string islandTreasureBottleSupplyCrateOverrides = "";
+        [DefaultValue(1)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public int islandPoints;
 
         [JsonIgnore]
         public string modDir = null;
@@ -93,7 +96,7 @@ namespace ServerGridEditor
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
             , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels)
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints)
         {
             this.name = name;
             this.x = x;
@@ -109,13 +112,14 @@ namespace ServerGridEditor
             this.prioritizeVolumesForTreasures = prioritizeVolumesForTreasures;
             this.islandTreasureBottleSupplyCrateOverrides = IslandTreasureBottleSupplyCrateOverrides;
             this.extraSublevels = extraSublevels;
+            this.islandPoints = islandPoints;
         }
     }
 
 
     public static class IslandInstanceEx
     {
-        public static IslandInstanceData SetFrom(this IslandInstanceData Data, string name, float worldX, float worldY, float rotation, int id)
+        public static IslandInstanceData SetFrom(this IslandInstanceData Data, string name, float worldX, float worldY, float rotation, int id, float width, float height)
         {
             Data.name = name;
             Data.worldX = worldX;
@@ -135,6 +139,10 @@ namespace ServerGridEditor
             Data.IslandInstanceClientCustomDatas1 = "";
             Data.IslandInstanceClientCustomDatas2 = "";
 
+            Data.islandWidth = width;
+            Data.islandHeight = height;
+
+            Data.islandPoints = 1;
             return Data;
         }
 

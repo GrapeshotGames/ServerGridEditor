@@ -30,7 +30,7 @@ namespace ServerGridEditor
             bool isHomeServer, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
+            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
         {
             Data.gridX = gridX;
             Data.gridY = gridY;
@@ -56,6 +56,7 @@ namespace ServerGridEditor
             Data.waterColorG = waterColorG;
             Data.waterColorB = waterColorB;
             Data.skyStyleIndex = skyStyleIndex;
+            Data.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             Data.ServerCustomDatas1 = ServerCustomDatas1;
             Data.ServerCustomDatas2 = ServerCustomDatas2;
             Data.ClientCustomDatas1 = ClientCustomDatas1;
@@ -84,7 +85,7 @@ namespace ServerGridEditor
             bool isHomeServer, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
+            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
         {
             Data.gridX = gridX;
             Data.gridY = gridY;
@@ -112,6 +113,7 @@ namespace ServerGridEditor
             Data.waterColorG = waterColorG;
             Data.waterColorB = waterColorB;
             Data.skyStyleIndex = skyStyleIndex;
+            Data.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             Data.ServerCustomDatas1 = ServerCustomDatas1;
             Data.ServerCustomDatas2 = ServerCustomDatas2;
             Data.ClientCustomDatas1 = ClientCustomDatas1;
@@ -147,6 +149,9 @@ namespace ServerGridEditor
 					//instance.spawnPointRegionOverride = referencedIsland.spawnPointRegionOverride;
                     instance.useLevelBoundsForTreasures = referencedIsland.useLevelBoundsForTreasures;
                     instance.prioritizeVolumesForTreasures = referencedIsland.prioritizeVolumesForTreasures;
+                    instance.islandWidth = referencedIsland.x;
+                    instance.islandHeight = referencedIsland.y;
+                    instance.islandPoints = referencedIsland.islandPoints;
                 }
 
                 instance.SyncOverridesWithTemplates(mainForm);
@@ -239,7 +244,7 @@ namespace ServerGridEditor
                          server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                          server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                          server.islandLocked, server.discoLocked, server.pathsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                         server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues));
+                         server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues));
                 }
                 else
                 {
@@ -258,7 +263,7 @@ namespace ServerGridEditor
                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                         server.islandLocked, server.discoLocked, server.pathsLocked, overridenExtraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                        server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues);
+                        server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues);
 
                     //Apply template
                     if(!string.IsNullOrEmpty(server.serverTemplateName))
@@ -275,6 +280,7 @@ namespace ServerGridEditor
                             exportServerObj.waterColorG = server.waterColorG != 0 ? server.waterColorG : serverTemplate.waterColorG;
                             exportServerObj.waterColorB = server.waterColorB != 0 ? server.waterColorB : serverTemplate.waterColorB;
                             exportServerObj.skyStyleIndex = server.skyStyleIndex != 0 ? server.skyStyleIndex : serverTemplate.skyStyleIndex;
+                            exportServerObj.serverIslandPointsMultiplier = server.serverIslandPointsMultiplier != 1.0f ? server.serverIslandPointsMultiplier : serverTemplate.serverIslandPointsMultiplier;
                             exportServerObj.GlobalBiomeSeamlessServerGridPreOffsetValues = !string.IsNullOrEmpty(server.GlobalBiomeSeamlessServerGridPreOffsetValues) ? server.GlobalBiomeSeamlessServerGridPreOffsetValues : serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValues;
                             exportServerObj.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater = !string.IsNullOrEmpty(server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater) ? server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater : serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater;
                             exportServerObj.OceanDinoDepthEntriesOverride = !string.IsNullOrEmpty(server.OceanDinoDepthEntriesOverride) ? server.OceanDinoDepthEntriesOverride : serverTemplate.OceanDinoDepthEntriesOverride;
@@ -572,6 +578,7 @@ namespace ServerGridEditor
                     s.waterColorG = deserializedServer.waterColorG;
                     s.waterColorB = deserializedServer.waterColorB;
                     s.skyStyleIndex = deserializedServer.skyStyleIndex;
+                    s.serverIslandPointsMultiplier = deserializedServer.serverIslandPointsMultiplier;
                     s.ServerCustomDatas1 = deserializedServer.ServerCustomDatas1;
                     s.ServerCustomDatas2 = deserializedServer.ServerCustomDatas2;
                     s.ClientCustomDatas1 = deserializedServer.ClientCustomDatas1;
@@ -613,6 +620,7 @@ namespace ServerGridEditor
                         deserializedIslandInstance.maxTreasureQuality = deserializedIslandInstance.minTreasureQuality = -1;
                         deserializedIslandInstance.useNpcVolumesForTreasures = false;
                         deserializedIslandInstance.islandTreasureBottleSupplyCrateOverrides = "";
+                        deserializedIslandInstance.islandPoints = 1;
 						//deserializedIslandInstance.spawnPointRegionOverride = -1;
 
                         islandInstances.Add(deserializedIslandInstance);

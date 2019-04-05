@@ -1,8 +1,8 @@
 {
   "Mnt_A_WF": {
     "name": "Mnt_A_WF",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WF_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -23,7 +23,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_A_TR": {
     "name": "Cay_A_TR",
@@ -49,7 +50,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_B_WF": {
     "name": "Mnt_B_WF",
@@ -75,7 +77,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_TR": {
     "name": "Mnt_C_TR",
@@ -101,7 +104,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_WF": {
     "name": "Mnt_C_WF",
@@ -127,7 +131,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_F_TR": {
     "name": "Cay_F_TR",
@@ -153,7 +158,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_P_WF": {
     "name": "Mnt_P_WF",
@@ -186,7 +192,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_WF": {
     "name": "Mnt_K_WF",
@@ -212,7 +219,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_TR": {
     "name": "Cay_I_TR",
@@ -238,7 +246,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_TR": {
     "name": "Cay_G_TR",
@@ -264,7 +273,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_GB_TR": {
     "name": "Cay_GB_TR",
@@ -290,7 +300,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_TR": {
     "name": "Cay_H_TR",
@@ -316,7 +327,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_WF": {
     "name": "Mnt_N_WF",
@@ -342,7 +354,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_I_WF": {
     "name": "Mnt_I_WF",
@@ -369,7 +382,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_L_WF": {
     "name": "Mnt_L_WF",
@@ -395,7 +409,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_J_TR": {
     "name": "Cay_J_TR",
@@ -421,7 +436,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_JB_TR": {
     "name": "Cay_JB_TR",
@@ -447,7 +463,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WF": {
     "name": "Mnt_J_WF",
@@ -473,7 +490,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_L_TR": {
     "name": "Mnt_L_TR",
@@ -499,7 +517,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_WF": {
     "name": "Mnt_D_WF",
@@ -525,7 +544,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_WF": {
     "name": "Mnt_O_WF",
@@ -551,7 +571,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_WF": {
     "name": "Mnt_E_WF",
@@ -577,7 +598,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_TR": {
     "name": "Mnt_J_TR",
@@ -603,7 +625,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_TR": {
     "name": "Mnt_H_TR",
@@ -629,7 +652,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_NB_WF": {
     "name": "Mnt_NB_WF",
@@ -655,7 +679,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_OB_WF": {
     "name": "Mnt_OB_WF",
@@ -681,7 +706,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_LB_WF": {
     "name": "Mnt_LB_WF",
@@ -707,7 +733,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_JB_WF": {
     "name": "Mnt_JB_WF",
@@ -733,12 +760,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_TR": {
     "name": "Mnt_A_TR",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_TR_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -759,7 +787,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_TR_E": {
     "name": "Cay_K_TR_E",
@@ -785,7 +814,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Cay_A_WR": {
     "name": "Cay_A_WR",
@@ -811,7 +841,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_ET": {
     "name": "Cay_E_ET",
@@ -839,7 +870,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_WR": {
     "name": "Cay_E_WR",
@@ -865,7 +897,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_WR_B": {
     "name": "Cay_E_WR_B",
@@ -891,7 +924,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_CL": {
     "name": "Cay_E_CL",
@@ -916,7 +950,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_F_ET": {
     "name": "Cay_F_ET",
@@ -944,7 +979,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_F_WR": {
     "name": "Cay_F_WR",
@@ -970,7 +1006,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_WR": {
     "name": "Cay_G_WR",
@@ -997,7 +1034,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_CL": {
     "name": "Cay_G_CL",
@@ -1022,7 +1060,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_CL_B": {
     "name": "Cay_G_CL_B",
@@ -1047,7 +1086,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_CL_C": {
     "name": "Cay_G_CL_C",
@@ -1072,7 +1112,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_ET": {
     "name": "Cay_H_ET",
@@ -1100,7 +1141,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_WR": {
     "name": "Cay_H_WR",
@@ -1126,7 +1168,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_CL": {
     "name": "Cay_H_CL",
@@ -1151,7 +1194,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_CL_B": {
     "name": "Cay_H_CL_B",
@@ -1176,7 +1220,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_WR": {
     "name": "Cay_I_WR",
@@ -1202,7 +1247,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_WR_B": {
     "name": "Cay_I_WR_B",
@@ -1228,7 +1274,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_CL": {
     "name": "Cay_I_CL",
@@ -1253,7 +1300,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_CL_B": {
     "name": "Cay_I_CL_B",
@@ -1278,7 +1326,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_CL_C": {
     "name": "Cay_I_CL_C",
@@ -1303,7 +1352,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_J_WR": {
     "name": "Cay_J_WR",
@@ -1329,7 +1379,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_J_CL": {
     "name": "Cay_J_CL",
@@ -1354,7 +1405,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_WR": {
     "name": "Cay_K_WR",
@@ -1382,7 +1434,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_WR_B": {
     "name": "Cay_K_WR_B",
@@ -1408,7 +1461,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_CL": {
     "name": "Cay_K_CL",
@@ -1433,7 +1487,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_ER": {
     "name": "Cay_L_ER",
@@ -1460,7 +1515,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_WR": {
     "name": "Cay_L_WR",
@@ -1488,7 +1544,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_CL": {
     "name": "Cay_L_CL",
@@ -1513,7 +1570,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_CL_B": {
     "name": "Cay_L_CL_B",
@@ -1538,7 +1596,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_M_WR": {
     "name": "Cay_M_WR",
@@ -1564,7 +1623,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_M_CL": {
     "name": "Cay_M_CL",
@@ -1589,7 +1649,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_M_CL_B": {
     "name": "Cay_M_CL_B",
@@ -1614,7 +1675,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_N_ER": {
     "name": "Cay_N_ER",
@@ -1641,7 +1703,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_N_ET": {
     "name": "Cay_N_ET",
@@ -1666,7 +1729,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_N_WR": {
     "name": "Cay_N_WR",
@@ -1692,7 +1756,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_N_CL": {
     "name": "Cay_N_CL",
@@ -1717,7 +1782,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_O_ER": {
     "name": "Cay_O_ER",
@@ -1744,7 +1810,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_O_WR": {
     "name": "Cay_O_WR",
@@ -1771,7 +1838,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_O_CL": {
     "name": "Cay_O_CL",
@@ -1796,7 +1864,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_WR_B": {
     "name": "Cay_L_WR_B",
@@ -1822,12 +1891,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_ET": {
     "name": "Mnt_A_ET",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_ET_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -1847,12 +1917,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_WR": {
     "name": "Mnt_A_WR",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WR_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -1873,12 +1944,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_WU": {
     "name": "Mnt_A_WU",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WU_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -1899,12 +1971,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_CL": {
     "name": "Mnt_A_CL",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_CL_img.png",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -1924,7 +1997,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_B_ET": {
     "name": "Mnt_B_ET",
@@ -1952,7 +2026,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_B_WR": {
     "name": "Mnt_B_WR",
@@ -1978,7 +2053,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_B_CL": {
     "name": "Mnt_B_CL",
@@ -2003,7 +2079,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_ET": {
     "name": "Mnt_C_ET",
@@ -2031,7 +2108,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_ET_B": {
     "name": "Mnt_C_ET_B",
@@ -2059,7 +2137,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_ET_C": {
     "name": "Mnt_C_ET_C",
@@ -2087,7 +2166,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_ET_D": {
     "name": "Mnt_C_ET_D",
@@ -2115,7 +2195,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_WR": {
     "name": "Mnt_C_WR",
@@ -2141,7 +2222,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_WR_B": {
     "name": "Mnt_C_WR_B",
@@ -2167,7 +2249,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_WR_C": {
     "name": "Mnt_C_WR_C",
@@ -2193,7 +2276,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_WU": {
     "name": "Mnt_C_WU",
@@ -2219,7 +2303,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_CL": {
     "name": "Mnt_C_CL",
@@ -2244,7 +2329,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_CL_B": {
     "name": "Mnt_C_CL_B",
@@ -2269,7 +2355,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_ER": {
     "name": "Mnt_D_ER",
@@ -2295,7 +2382,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_ET": {
     "name": "Mnt_D_ET",
@@ -2323,7 +2411,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_ET_B": {
     "name": "Mnt_D_ET_B",
@@ -2351,7 +2440,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_WR": {
     "name": "Mnt_D_WR",
@@ -2377,7 +2467,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_WR_B": {
     "name": "Mnt_D_WR_B",
@@ -2403,7 +2494,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_WU": {
     "name": "Mnt_D_WU",
@@ -2429,7 +2521,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_CL": {
     "name": "Mnt_D_CL",
@@ -2454,7 +2547,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_ER": {
     "name": "Mnt_E_ER",
@@ -2480,7 +2574,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_ET": {
     "name": "Mnt_E_ET",
@@ -2508,7 +2603,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_ET_B": {
     "name": "Mnt_E_ET_B",
@@ -2536,7 +2632,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_ET_C": {
     "name": "Mnt_E_ET_C",
@@ -2564,7 +2661,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_ET_D": {
     "name": "Mnt_E_ET_D",
@@ -2592,7 +2690,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_WR": {
     "name": "Mnt_E_WR",
@@ -2618,7 +2717,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_WU": {
     "name": "Mnt_E_WU",
@@ -2644,7 +2744,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CL": {
     "name": "Mnt_E_CL",
@@ -2669,7 +2770,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_ER": {
     "name": "Mnt_F_ER",
@@ -2695,7 +2797,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_ET": {
     "name": "Mnt_F_ET",
@@ -2723,7 +2826,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_ET_B": {
     "name": "Mnt_F_ET_B",
@@ -2751,7 +2855,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_ET_C": {
     "name": "Mnt_F_ET_C",
@@ -2779,7 +2884,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_ET_D": {
     "name": "Mnt_F_ET_D",
@@ -2807,7 +2913,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_WR": {
     "name": "Mnt_F_WR",
@@ -2833,7 +2940,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_WR_B": {
     "name": "Mnt_F_WR_B",
@@ -2859,7 +2967,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_WR_C": {
     "name": "Mnt_F_WR_C",
@@ -2885,7 +2994,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_WR_D": {
     "name": "Mnt_F_WR_D",
@@ -2911,7 +3021,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_CL": {
     "name": "Mnt_F_CL",
@@ -2936,7 +3047,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_CL_B": {
     "name": "Mnt_F_CL_B",
@@ -2961,7 +3073,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_G_ET": {
     "name": "Mnt_G_ET",
@@ -2989,7 +3102,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_G_WR": {
     "name": "Mnt_G_WR",
@@ -3015,7 +3129,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_G_WR_B": {
     "name": "Mnt_G_WR_B",
@@ -3041,7 +3156,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_ET": {
     "name": "Mnt_H_ET",
@@ -3069,7 +3185,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_WR": {
     "name": "Mnt_H_WR",
@@ -3095,7 +3212,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_CL": {
     "name": "Mnt_H_CL",
@@ -3120,7 +3238,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_I_ER": {
     "name": "Mnt_I_ER",
@@ -3146,7 +3265,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_I_CL": {
     "name": "Mnt_I_CL",
@@ -3172,7 +3292,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_ET": {
     "name": "Mnt_J_ET",
@@ -3200,7 +3321,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_ET_B": {
     "name": "Mnt_J_ET_B",
@@ -3228,7 +3350,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WR": {
     "name": "Mnt_J_WR",
@@ -3254,7 +3377,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CL": {
     "name": "Mnt_J_CL",
@@ -3279,7 +3403,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_ER": {
     "name": "Mnt_K_ER",
@@ -3305,7 +3430,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_ET": {
     "name": "Mnt_K_ET",
@@ -3333,7 +3459,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_ET_B": {
     "name": "Mnt_K_ET_B",
@@ -3361,7 +3488,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_WR": {
     "name": "Mnt_K_WR",
@@ -3387,7 +3515,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_CL": {
     "name": "Mnt_K_CL",
@@ -3412,7 +3541,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_L_WR": {
     "name": "Mnt_L_WR",
@@ -3438,7 +3568,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_L_CL": {
     "name": "Mnt_L_CL",
@@ -3463,7 +3594,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_M_ER": {
     "name": "Mnt_M_ER",
@@ -3489,7 +3621,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_M_ET": {
     "name": "Mnt_M_ET",
@@ -3517,7 +3650,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_M_WR": {
     "name": "Mnt_M_WR",
@@ -3543,7 +3677,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_M_CL": {
     "name": "Mnt_M_CL",
@@ -3568,7 +3703,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_ER": {
     "name": "Mnt_N_ER",
@@ -3594,7 +3730,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_ER_B": {
     "name": "Mnt_N_ER_B",
@@ -3620,7 +3757,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_ET": {
     "name": "Mnt_N_ET",
@@ -3648,7 +3786,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_WR": {
     "name": "Mnt_N_WR",
@@ -3674,7 +3813,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_ER": {
     "name": "Mnt_O_ER",
@@ -3700,7 +3840,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_ER_B": {
     "name": "Mnt_O_ER_B",
@@ -3726,7 +3867,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_ET": {
     "name": "Mnt_O_ET",
@@ -3754,7 +3896,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_WR": {
     "name": "Mnt_O_WR",
@@ -3780,7 +3923,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_Q_ER": {
     "name": "Mnt_Q_ER",
@@ -3805,7 +3949,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_R_WU": {
     "name": "Mnt_R_WU",
@@ -3831,7 +3976,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_R_WU_B": {
     "name": "Mnt_R_WU_B",
@@ -3857,7 +4003,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_R_WU_C": {
     "name": "Mnt_R_WU_C",
@@ -3883,7 +4030,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_R_WU_D": {
     "name": "Mnt_R_WU_D",
@@ -3909,7 +4057,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_WU": {
     "name": "Mnt_F_WU",
@@ -3935,7 +4084,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_X_WR_PVE": {
     "name": "Mnt_X_WR_PVE",
@@ -3961,7 +4111,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_O_CL": {
     "name": "Mnt_O_CL",
@@ -3986,7 +4137,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_W_WU": {
     "name": "Mnt_W_WU",
@@ -4012,7 +4164,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_W_WU_B": {
     "name": "Mnt_W_WU_B",
@@ -4038,7 +4191,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_W_WR": {
     "name": "Mnt_W_WR",
@@ -4064,7 +4218,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WT_E": {
     "name": "Mnt_J_WT_E",
@@ -4090,7 +4245,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_X_WU": {
     "name": "Mnt_X_WU",
@@ -4116,7 +4272,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_W_WR_B": {
     "name": "Mnt_W_WR_B",
@@ -4142,7 +4299,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_WR_E": {
     "name": "Cay_H_WR_E",
@@ -4168,7 +4326,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_G_ET_PVE": {
     "name": "Mnt_G_ET_PVE",
@@ -4196,12 +4355,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_A_WU_E": {
     "name": "Mnt_A_WU_E",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WU_E_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -4222,7 +4382,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_F_ET_E": {
     "name": "Mnt_F_ET_E",
@@ -4250,7 +4411,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_L_CH_E": {
     "name": "Mnt_L_CH_E",
@@ -4275,7 +4437,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_U_ER_PVE": {
     "name": "Mnt_U_ER_PVE",
@@ -4301,7 +4464,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_Y_WU_PVE": {
     "name": "Mnt_Y_WU_PVE",
@@ -4327,7 +4491,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_S_WT_PVE": {
     "name": "Mnt_S_WT_PVE",
@@ -4353,12 +4518,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_A_CH": {
     "name": "Mnt_A_CH",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_CH_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -4371,15 +4537,15 @@
     "spawnerOverrides": {},
     "extraSublevels": [
       "MasterIBL_HighDesert",
-      "MasterIBL_HighDesert_Canopy",
-      ""
+      "MasterIBL_HighDesert_Canopy"
     ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_R_CL_PVE": {
     "name": "Mnt_R_CL_PVE",
@@ -4404,7 +4570,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_R_CH_PVE": {
     "name": "Mnt_R_CH_PVE",
@@ -4429,7 +4596,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_J_CH": {
     "name": "Mnt_J_CH",
@@ -4454,7 +4622,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_K_CH": {
     "name": "Mnt_K_CH",
@@ -4479,12 +4648,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_C_EE_PVE": {
     "name": "Cay_C_EE_PVE",
-    "x": 916700.0,
-    "y": 919900.0,
+    "x": 532000.0,
+    "y": 532000.0,
     "imagePath": "./IslandImages/Cay_C_EE_PVE_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -4505,7 +4675,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Cay_J_EE_E": {
     "name": "Cay_J_EE_E",
@@ -4521,13 +4692,19 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
-    "extraSublevels": [],
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE",
+      "MasterIBL_Equator_Canopy"
+    ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   },
   "Mnt_Y_CP": {
     "name": "Mnt_Y_CP",
@@ -4553,7 +4730,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_A_EE": {
     "name": "Cay_A_EE",
@@ -4580,7 +4758,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_M_CH": {
     "name": "Mnt_M_CH",
@@ -4605,7 +4784,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_N_CH": {
     "name": "Mnt_N_CH",
@@ -4630,12 +4810,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_EE": {
     "name": "Mnt_C_EE",
-    "x": 916700.0,
-    "y": 919900.0,
+    "x": 532000.0,
+    "y": 532000.0,
     "imagePath": "./IslandImages/Mnt_C_EE_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -4657,7 +4838,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CH": {
     "name": "Mnt_E_CH",
@@ -4682,7 +4864,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_F_CH": {
     "name": "Mnt_F_CH",
@@ -4707,7 +4890,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_L_CH_B": {
     "name": "Mnt_L_CH_B",
@@ -4732,7 +4916,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_I_CH": {
     "name": "Mnt_I_CH",
@@ -4757,7 +4942,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_EE": {
     "name": "Cay_E_EE",
@@ -4784,7 +4970,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_F_EE": {
     "name": "Cay_F_EE",
@@ -4811,7 +4998,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_G_EE": {
     "name": "Cay_G_EE",
@@ -4838,7 +5026,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_Y_CP_B": {
     "name": "Mnt_Y_CP_B",
@@ -4864,7 +5053,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_Y_CP_C": {
     "name": "Mnt_Y_CP_C",
@@ -4890,7 +5080,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_Y_CP_D": {
     "name": "Mnt_Y_CP_D",
@@ -4916,7 +5107,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CP": {
     "name": "Mnt_J_CP",
@@ -4942,7 +5134,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CP_B": {
     "name": "Mnt_J_CP_B",
@@ -4968,7 +5161,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CP_C": {
     "name": "Mnt_J_CP_C",
@@ -4994,7 +5188,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CP_D": {
     "name": "Mnt_J_CP_D",
@@ -5020,7 +5215,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_H_EE": {
     "name": "Cay_H_EE",
@@ -5046,7 +5242,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_CH": {
     "name": "Mnt_C_CH",
@@ -5064,15 +5261,15 @@
     "spawnerOverrides": {},
     "extraSublevels": [
       "MasterIBL_HighDesert",
-      "MasterIBL_HighDesert_Canopy",
-      ""
+      "MasterIBL_HighDesert_Canopy"
     ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_D_CH": {
     "name": "Mnt_D_CH",
@@ -5097,7 +5294,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CP": {
     "name": "Mnt_E_CP",
@@ -5123,7 +5321,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CP_B": {
     "name": "Mnt_E_CP_B",
@@ -5149,7 +5348,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CP_C": {
     "name": "Mnt_E_CP_C",
@@ -5175,7 +5375,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_E_CP_D": {
     "name": "Mnt_E_CP_D",
@@ -5201,7 +5402,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_CP": {
     "name": "Mnt_H_CP",
@@ -5227,7 +5429,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_CP_B": {
     "name": "Mnt_H_CP_B",
@@ -5253,7 +5456,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_CP_C": {
     "name": "Mnt_H_CP_C",
@@ -5279,7 +5483,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_H_CP_D": {
     "name": "Mnt_H_CP_D",
@@ -5305,12 +5510,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_CH_B": {
     "name": "Mnt_A_CH_B",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_CH_B_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -5323,15 +5529,15 @@
     "spawnerOverrides": {},
     "extraSublevels": [
       "MasterIBL_HighDesert",
-      "MasterIBL_HighDesert_Canopy",
-      ""
+      "MasterIBL_HighDesert_Canopy"
     ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_C_CH_B": {
     "name": "Mnt_C_CH_B",
@@ -5349,15 +5555,15 @@
     "spawnerOverrides": {},
     "extraSublevels": [
       "MasterIBL_HighDesert",
-      "MasterIBL_HighDesert_Canopy",
-      ""
+      "MasterIBL_HighDesert_Canopy"
     ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_J_EE": {
     "name": "Cay_J_EE",
@@ -5384,7 +5590,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_G_CH": {
     "name": "Mnt_G_CH",
@@ -5409,7 +5616,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_EE": {
     "name": "Cay_K_EE",
@@ -5437,7 +5645,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_L_EE": {
     "name": "Cay_L_EE",
@@ -5464,7 +5673,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_O_CH": {
     "name": "Mnt_O_CH",
@@ -5489,7 +5699,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_CH_B": {
     "name": "Mnt_J_CH_B",
@@ -5514,7 +5725,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_T_CP": {
     "name": "Mnt_T_CP",
@@ -5540,7 +5752,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_T_CP_B": {
     "name": "Mnt_T_CP_B",
@@ -5566,7 +5779,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_T_CP_C": {
     "name": "Mnt_T_CP_C",
@@ -5592,7 +5806,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_T_CP_D": {
     "name": "Mnt_T_CP_D",
@@ -5618,12 +5833,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_WU_B": {
     "name": "Mnt_A_WU_B",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WU_B_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -5644,12 +5860,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_A_WU_C": {
     "name": "Mnt_A_WU_C",
-    "x": 306000.0,
-    "y": 306000.0,
+    "x": 152000.0,
+    "y": 152000.0,
     "imagePath": "./IslandImages/Mnt_A_WU_C_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -5670,7 +5887,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WU": {
     "name": "Mnt_J_WU",
@@ -5696,7 +5914,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WU_B": {
     "name": "Mnt_J_WU_B",
@@ -5722,7 +5941,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_J_WU_C": {
     "name": "Mnt_J_WU_C",
@@ -5748,7 +5968,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_E_EE_B": {
     "name": "Cay_E_EE_B",
@@ -5775,7 +5996,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_F_EE_B": {
     "name": "Cay_F_EE_B",
@@ -5802,7 +6024,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_K_EE_B": {
     "name": "Cay_K_EE_B",
@@ -5830,7 +6053,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_EE": {
     "name": "Cay_I_EE",
@@ -5857,7 +6081,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_O_EE": {
     "name": "Cay_O_EE",
@@ -5884,7 +6109,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_N_EE": {
     "name": "Cay_N_EE",
@@ -5911,7 +6137,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_A_EE_B": {
     "name": "Cay_A_EE_B",
@@ -5938,7 +6165,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Cay_I_EE_B": {
     "name": "Cay_I_EE_B",
@@ -5965,7 +6193,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_Z_CH": {
     "name": "Mnt_Z_CH",
@@ -5990,7 +6219,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_WT": {
     "name": "Islet_A_WT",
@@ -6016,7 +6246,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_WT_B": {
     "name": "Islet_A_WT_B",
@@ -6042,7 +6273,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_WT_C": {
     "name": "Islet_A_WT_C",
@@ -6068,7 +6300,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_ER": {
     "name": "Islet_A_ER",
@@ -6095,7 +6328,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_ER_B": {
     "name": "Islet_A_ER_B",
@@ -6122,7 +6356,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Islet_A_ER_C": {
     "name": "Islet_A_ER_C",
@@ -6149,7 +6384,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_T_WU": {
     "name": "Mnt_T_WU",
@@ -6175,7 +6411,8 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Mnt_I_CP": {
     "name": "Mnt_I_CP",
@@ -6201,12 +6438,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Ice_A_PO": {
     "name": "Ice_A_PO",
-    "x": 127500.0,
-    "y": 127500.0,
+    "x": 75600.0,
+    "y": 75600.0,
     "imagePath": "./IslandImages/Ice_A_PO_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -6219,12 +6457,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Ice_B_PO": {
     "name": "Ice_B_PO",
-    "x": 127500.0,
-    "y": 127500.0,
+    "x": 56000.0,
+    "y": 56000.0,
     "imagePath": "./IslandImages/Ice_B_PO_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -6237,12 +6476,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Ice_C_PO": {
     "name": "Ice_C_PO",
-    "x": 127500.0,
-    "y": 127500.0,
+    "x": 42800.0,
+    "y": 42800.0,
     "imagePath": "./IslandImages/Ice_C_PO_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -6255,12 +6495,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Ice_D_PO": {
     "name": "Ice_D_PO",
-    "x": 127500.0,
-    "y": 127500.0,
+    "x": 47600.0,
+    "y": 47600.0,
     "imagePath": "./IslandImages/Ice_D_PO_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -6273,12 +6514,13 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
   },
   "Ice_E_PO": {
     "name": "Ice_E_PO",
-    "x": 127500.0,
-    "y": 127500.0,
+    "x": 40400.0,
+    "y": 40400.0,
     "imagePath": "./IslandImages/Ice_E_PO_img.jpg",
     "landscapeMaterialOverride": -1,
     "sublevelNames": [
@@ -6291,6 +6533,601 @@
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
-    "islandTreasureBottleSupplyCrateOverrides": ""
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Trench_B": {
+    "name": "Trench_B",
+    "x": 406500.0,
+    "y": 406500.0,
+    "imagePath": "./IslandImages/Trench_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Trench_B",
+      "Trench_B_Far",
+      "Trench_B_Farthest",
+      "Trench_B_Marine_Warm_Near",
+      "Trench_B_Near",
+      "Trench_FloorHideVolume_ForceLoad"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "MasterIBL_Trench",
+      "MasterIBL_Trench_Lava"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1000.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
+  },
+  "Mnt_AA_EU": {
+    "name": "Mnt_AA_EU",
+    "x": 280500.0,
+    "y": 280500.0,
+    "imagePath": "./IslandImages/Mnt_AA_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AA",
+      "Mnt_AA_Far_05",
+      "Mnt_AA_Farthest_05",
+      "Mnt_AA_Near_05",
+      "Mnt_AA_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AB_EU": {
+    "name": "Mnt_AB_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AB_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AB_Far_05",
+      "Mnt_AB_Farthest_05",
+      "Mnt_AB_Near_05",
+      "Mnt_AB_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AH_EU": {
+    "name": "Mnt_AH_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AH_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AH",
+      "Mnt_AH_Far_05",
+      "Mnt_AH_Farthest_05",
+      "Mnt_AH_Near_05",
+      "Mnt_AH_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AI_EU": {
+    "name": "Mnt_AI_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AI_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AI_Far_05",
+      "Mnt_AI_Farthest_05",
+      "Mnt_AI_Near_05",
+      "Mnt_AI_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AJ_EU": {
+    "name": "Mnt_AJ_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AJ_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AJ_Far_05",
+      "Mnt_AJ_Farthest_05",
+      "Mnt_AJ_Near_05",
+      "Mnt_AJ_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AL_EU": {
+    "name": "Mnt_AL_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AL_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AL_Far_05",
+      "Mnt_AL_Farthest_05",
+      "Mnt_AL_Near_05",
+      "Mnt_AL_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AQ_EU": {
+    "name": "Mnt_AQ_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AQ_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AQ_Far_05",
+      "Mnt_AQ_Farthest_05",
+      "Mnt_AQ_Near_05",
+      "Mnt_AQ_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AW_EU": {
+    "name": "Mnt_AW_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AW_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AW_Far_05",
+      "Mnt_AW_Farthest_05",
+      "Mnt_AW_Near_05",
+      "Mnt_AW_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AK_EU": {
+    "name": "Mnt_AK_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AK_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AK_Far_05",
+      "Mnt_AK_Farthest_05",
+      "Mnt_AK_Near_05",
+      "Mnt_AK_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AE_EU": {
+    "name": "Mnt_AE_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AE_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AE_Far_05",
+      "Mnt_AE_Farthest_05",
+      "Mnt_AE_Near_05",
+      "Mnt_AE_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AC_EU": {
+    "name": "Mnt_AC_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AC_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AC_Far_05",
+      "Mnt_AC_Farthest_05",
+      "Mnt_AC_Near_05",
+      "Mnt_AC_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AD_EU": {
+    "name": "Mnt_AD_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AD_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AD_Far_05",
+      "Mnt_AD_Farthest_05",
+      "Mnt_AD_Near_05",
+      "Mnt_AD_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AG_EU": {
+    "name": "Mnt_AG_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AG_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AG_Far_05",
+      "Mnt_AG_Farthest_05",
+      "Mnt_AG_Near_05",
+      "Mnt_AG_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_AA_EU_B": {
+    "name": "Mnt_AA_EU_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_AA_EU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_AA_Far_05B",
+      "Mnt_AA_Farthest_05B",
+      "Mnt_AA_Near_05B",
+      "Mnt_AA_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_F_EU": {
+    "name": "Mnt_F_EU",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_05",
+      "Mnt_F_Farthest_05",
+      "Mnt_F_Marine_Cold_Near",
+      "Mnt_F_Near_05",
+      "Mnt_F_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_W_EU_B": {
+    "name": "Mnt_W_EU_B",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_W_EU_B_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_W_Far_05B",
+      "Mnt_W_Farthest_05B",
+      "Mnt_W_Marine_Cold_Near",
+      "Mnt_W_Near_05B"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_S_EU": {
+    "name": "Mnt_S_EU",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_S_EU_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_S_Far_05",
+      "Mnt_S_Farthest_05",
+      "Mnt_S_Marine_Cold_Near",
+      "Mnt_S_Near_05",
+      "Mnt_S_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_Y_EU_C": {
+    "name": "Mnt_Y_EU_C",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_EU_C_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_05C",
+      "Mnt_Y_Farthest_05C",
+      "Mnt_Y_Marine_Cold_Near",
+      "Mnt_Y_Near_05C",
+      "Mnt_Y_TU"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1
+  },
+  "Mnt_F_EU_E": {
+    "name": "Mnt_F_EU_E",
+    "x": 101600.0,
+    "y": 101600.0,
+    "imagePath": "./IslandImages/Mnt_F_EU_E_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_F_Far_05_E",
+      "Mnt_F_Farthest_05_E",
+      "Mnt_F_HI_E",
+      "Mnt_F_Near_05_E",
+      "Mnt_F_Marine_Cold_Near"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
+  },
+  "Mnt_Y_EU_PVE": {
+    "name": "Mnt_Y_EU_PVE",
+    "x": 306000.0,
+    "y": 306000.0,
+    "imagePath": "./IslandImages/Mnt_Y_EU_PVE_img.jpg",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Y_Far_05_PVE",
+      "Mnt_Y_Farthest_05_PVE",
+      "Mnt_Y_Marine_Cold_Near",
+      "Mnt_Y_Near_05_PVE",
+      "Mnt_Y_PVE"
+    ],
+    "spawnerOverrides": {},
+    "extraSublevels": [
+      "ChildIBL_EasternTundra.uasset",
+      "ChildIBL_EasternTundra_Box.uasset",
+      "ChildIBL_EasternTundra_Canopy_JapanesePine.uasset",
+      "ChildIBL_EasternTundra_Canopy_Paulownia.uasset",
+      "ChildIBL_EasternTundra_Canopy_RedMaple.uasset"
+    ],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": -1
   }
 }

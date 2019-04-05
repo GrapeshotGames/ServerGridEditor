@@ -39,6 +39,7 @@ namespace ServerGridEditor
         public float waterColorG;
         public float waterColorB;
         public int skyStyleIndex;
+        public float serverIslandPointsMultiplier = 1.0f;
         public string ServerCustomDatas1 = "";
         public string ServerCustomDatas2 = "";
         public string ClientCustomDatas1 = "";

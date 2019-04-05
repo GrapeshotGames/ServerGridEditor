@@ -69,6 +69,18 @@ namespace AtlasGridDataLibrary
         public string HttpAPIKey = "";
 
         [DefaultValue("")]
+        public string S3URL = "";
+
+        [DefaultValue("")]
+        public string S3AccessKeyId = "";
+
+        [DefaultValue("")]
+        public string S3SecretKey = "";
+
+        [DefaultValue("")]
+        public string S3BucketName = "";
+
+        [DefaultValue("")]
         public string S3KeyPrefix = "";
 
         public void CopyFrom(BackupConfigInfo In)
@@ -77,6 +89,10 @@ namespace AtlasGridDataLibrary
             MaxFileHistory = In.MaxFileHistory;
             HttpBackupURL = In.HttpBackupURL;
             HttpAPIKey = In.HttpAPIKey;
+            S3URL = In.S3URL;
+            S3AccessKeyId = In.S3AccessKeyId;
+            S3SecretKey = In.S3SecretKey;
+            S3BucketName = In.S3BucketName;
             S3KeyPrefix = In.S3KeyPrefix;
         }
     }

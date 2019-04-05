@@ -42,6 +42,7 @@ namespace ServerGridEditor
             waterColorGTxtBox.Text = targetServer.waterColorG.ToString();
             waterColorBTxtBox.Text = targetServer.waterColorB.ToString();
             skyStyleIndexTxtBox.Text = targetServer.skyStyleIndex.ToString();
+            serverIslandPointsMultiplierTxtBox.Text = targetServer.serverIslandPointsMultiplier.ToString();
             ServerCustomDatas1TxtBox.Text = targetServer.ServerCustomDatas1;
             ServerCustomDatas2TxtBox.Text = targetServer.ServerCustomDatas2;
             ClientCustomDatas1TxtBox.Text = targetServer.ClientCustomDatas1;
@@ -133,6 +134,7 @@ namespace ServerGridEditor
 
             float waterColorR, waterColorG, waterColorB;
             int skyStyleIndex;
+            float serverIslandPointsMultiplier;
 
             if (!float.TryParse(waterColorRTxtBox.Text, out waterColorR))
             {
@@ -154,6 +156,11 @@ namespace ServerGridEditor
                 MessageBox.Show("Invalid number for skyStyleIndex", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (!float.TryParse(serverIslandPointsMultiplierTxtBox.Text, out serverIslandPointsMultiplier))
+            {
+                MessageBox.Show("Invalid number for serverIslandPointsMultiplier", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
 
             targetServer.name = nameTxtBox.Text;
@@ -171,6 +178,7 @@ namespace ServerGridEditor
             targetServer.waterColorG = waterColorG;
             targetServer.waterColorB = waterColorB;
             targetServer.skyStyleIndex = skyStyleIndex;
+            targetServer.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             targetServer.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;
             targetServer.ServerCustomDatas2 = ServerCustomDatas2TxtBox.Text;
             targetServer.ClientCustomDatas1 = ClientCustomDatas1TxtBox.Text;
@@ -264,6 +272,11 @@ namespace ServerGridEditor
 
 
             e.DrawFocusRectangle();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

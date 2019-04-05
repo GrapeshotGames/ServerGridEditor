@@ -63,6 +63,7 @@ namespace ServerGridEditor
                 prioritizeVolumesForTreasuresChkBox.Checked = editedIsland.prioritizeVolumesForTreasures;
                 IslandTreasureBottleSupplyCrateOverridesTxtBox.Text = editedIsland.islandTreasureBottleSupplyCrateOverrides;
 
+                islandPointsTxtBox.Text = editedIsland.islandPoints + "";
                 if (editedIsland.extraSublevels != null)
                     extraSublevelsTxtBox.Lines = editedIsland.extraSublevels.ToArray();
 
@@ -171,6 +172,8 @@ namespace ServerGridEditor
             float.TryParse(minTreasureQualityTxtBox.Text, out minTreasureQuality);
             float.TryParse(maxTreasureQualityTxtBox.Text, out maxTreasureQuality);
 
+            int islandPoints = 1;
+            int.TryParse(islandPointsTxtBox.Text, out islandPoints);
             string islandRemovedFromMod = null;
             if (editedIsland != null)
             {
@@ -296,6 +299,7 @@ namespace ServerGridEditor
 
                 editedIsland.islandTreasureBottleSupplyCrateOverrides = IslandTreasureBottleSupplyCrateOverridesTxtBox.Text;
 
+                editedIsland.islandPoints = islandPoints;
                 List<string> NewEntries = new List<string>(extraSublevelsTxtBox.Lines);
                 NewEntries.RemoveAll(item => { return string.IsNullOrWhiteSpace(item); });
                 editedIsland.extraSublevels = NewEntries;
@@ -347,7 +351,7 @@ namespace ServerGridEditor
 
                 mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides, 
                     minTreasureQuality, maxTreasureQuality, useNpcVolumesForTreasuresChkBox.Checked, useLevelBoundsForTreasuresChkBox.Checked, 
-                    prioritizeVolumesForTreasuresChkBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines)));
+                    prioritizeVolumesForTreasuresChkBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints));
 
                 mainForm.islands.Last().Value.modDir = modNameTxtBox.Text.Trim();
 

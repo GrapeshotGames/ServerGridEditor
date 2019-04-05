@@ -64,6 +64,8 @@
             this.instancesListBox = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.modNameTxtBox = new System.Windows.Forms.TextBox();
+            this.islandPointsTxtBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
             this.SuspendLayout();
@@ -285,7 +287,7 @@
             // useNpcVolumesForTreasuresChkBox
             // 
             this.useNpcVolumesForTreasuresChkBox.AutoSize = true;
-            this.useNpcVolumesForTreasuresChkBox.Location = new System.Drawing.Point(24, 391);
+            this.useNpcVolumesForTreasuresChkBox.Location = new System.Drawing.Point(24, 408);
             this.useNpcVolumesForTreasuresChkBox.Name = "useNpcVolumesForTreasuresChkBox";
             this.useNpcVolumesForTreasuresChkBox.Size = new System.Drawing.Size(174, 17);
             this.useNpcVolumesForTreasuresChkBox.TabIndex = 23;
@@ -297,7 +299,7 @@
             this.useLevelBoundsForTreasuresChkBox.AutoSize = true;
             this.useLevelBoundsForTreasuresChkBox.Checked = true;
             this.useLevelBoundsForTreasuresChkBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.useLevelBoundsForTreasuresChkBox.Location = new System.Drawing.Point(24, 453);
+            this.useLevelBoundsForTreasuresChkBox.Location = new System.Drawing.Point(24, 470);
             this.useLevelBoundsForTreasuresChkBox.Name = "useLevelBoundsForTreasuresChkBox";
             this.useLevelBoundsForTreasuresChkBox.Size = new System.Drawing.Size(169, 17);
             this.useLevelBoundsForTreasuresChkBox.TabIndex = 24;
@@ -307,7 +309,7 @@
             // prioritizeVolumesForTreasuresChkBox
             // 
             this.prioritizeVolumesForTreasuresChkBox.AutoSize = true;
-            this.prioritizeVolumesForTreasuresChkBox.Location = new System.Drawing.Point(24, 417);
+            this.prioritizeVolumesForTreasuresChkBox.Location = new System.Drawing.Point(24, 434);
             this.prioritizeVolumesForTreasuresChkBox.Name = "prioritizeVolumesForTreasuresChkBox";
             this.prioritizeVolumesForTreasuresChkBox.Size = new System.Drawing.Size(194, 30);
             this.prioritizeVolumesForTreasuresChkBox.TabIndex = 25;
@@ -352,7 +354,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(21, 485);
+            this.label12.Location = new System.Drawing.Point(21, 502);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(154, 13);
             this.label12.TabIndex = 38;
@@ -361,7 +363,7 @@
             // instancesListBox
             // 
             this.instancesListBox.FormattingEnabled = true;
-            this.instancesListBox.Location = new System.Drawing.Point(24, 502);
+            this.instancesListBox.Location = new System.Drawing.Point(24, 519);
             this.instancesListBox.Name = "instancesListBox";
             this.instancesListBox.Size = new System.Drawing.Size(194, 95);
             this.instancesListBox.TabIndex = 39;
@@ -382,6 +384,23 @@
             this.modNameTxtBox.Size = new System.Drawing.Size(109, 20);
             this.modNameTxtBox.TabIndex = 41;
             // 
+            // islandPointsTxtBox
+            // 
+            this.islandPointsTxtBox.Location = new System.Drawing.Point(167, 382);
+            this.islandPointsTxtBox.Name = "islandPointsTxtBox";
+            this.islandPointsTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.islandPointsTxtBox.TabIndex = 43;
+            this.islandPointsTxtBox.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(26, 383);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(67, 13);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Island Points";
+            // 
             // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
@@ -389,6 +408,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(609, 619);
+            this.Controls.Add(this.islandPointsTxtBox);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.modNameTxtBox);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.instancesListBox);
@@ -475,5 +496,7 @@
         private System.Windows.Forms.ListBox instancesListBox;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox modNameTxtBox;
+        private System.Windows.Forms.TextBox islandPointsTxtBox;
+        private System.Windows.Forms.Label label14;
     }
 }

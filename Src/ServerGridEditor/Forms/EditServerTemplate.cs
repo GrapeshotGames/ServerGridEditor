@@ -36,6 +36,7 @@ namespace ServerGridEditor
             waterColorGTxtBox.Text = targetServerTemplate.waterColorG.ToString();
             waterColorBTxtBox.Text = targetServerTemplate.waterColorB.ToString();
             skyStyleIndexTxtBox.Text = targetServerTemplate.skyStyleIndex.ToString();
+            serverIslandPointsMultiplierTxtBox.Text = targetServerTemplate.serverIslandPointsMultiplier.ToString();
             ServerCustomDatas1TxtBox.Text = targetServerTemplate.ServerCustomDatas1;
             ServerCustomDatas2TxtBox.Text = targetServerTemplate.ServerCustomDatas2;
             ClientCustomDatas1TxtBox.Text = targetServerTemplate.ClientCustomDatas1;
@@ -127,6 +128,7 @@ namespace ServerGridEditor
             float waterColorR, waterColorG, waterColorB;
             float templateColorR, templateColorG, templateColorB;
             int skyStyleIndex;
+            float serverIslandPointsMultiplier;
 
             if (!float.TryParse(waterColorRTxtBox.Text, out waterColorR))
             {
@@ -147,6 +149,13 @@ namespace ServerGridEditor
             if (!int.TryParse(skyStyleIndexTxtBox.Text, out skyStyleIndex))
             {
                 MessageBox.Show("Invalid number for skyStyleIndex", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            
+            if (!float.TryParse(serverIslandPointsMultiplierTxtBox.Text, out serverIslandPointsMultiplier))
+            {
+                MessageBox.Show("Invalid number for serverIslandPointsMultiplier", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 
@@ -177,6 +186,7 @@ namespace ServerGridEditor
             targetServerTemplate.waterColorG = waterColorG;
             targetServerTemplate.waterColorB = waterColorB;
             targetServerTemplate.skyStyleIndex = skyStyleIndex;
+            targetServerTemplate.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             targetServerTemplate.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;
             targetServerTemplate.ServerCustomDatas2 = ServerCustomDatas2TxtBox.Text;
             targetServerTemplate.ClientCustomDatas1 = ClientCustomDatas1TxtBox.Text;
