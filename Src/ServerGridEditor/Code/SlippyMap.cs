@@ -32,7 +32,7 @@ namespace ServerGridEditor.Code
         public static readonly float largestSize = (float)Math.Pow(2, 14);
 
         public static void ExportSlippyMap(this MainForm mainForm, IDictionary<string, Island> islands, bool showLines, 
-            bool showServerInfo, bool showDiscoZoneInfo, Image tile, TextureBrush tileBrush, Color backgroundColor,
+            bool showServerInfo, bool showIslands, bool showDiscoZoneInfo, Image tile, TextureBrush tileBrush, Color? backgroundColor,
             string outdir, Action<string> update, int maxZoom, bool overwrite)
         {
             Project project = mainForm.currentProject;
@@ -56,7 +56,7 @@ namespace ServerGridEditor.Code
 
                     MainForm.DrawMap(
                         mainForm, islands, g,
-                        showLines: showLines, showServerInfo: showServerInfo, showDiscoZoneInfo : showDiscoZoneInfo, 
+                        showLines: showLines, showServerInfo: showServerInfo, showIslands : showIslands, showDiscoZoneInfo: showDiscoZoneInfo, 
                         culling: null, alphaBackground: backgroundColor,
                         tile: tile, tileBrush: tileBrush, tileScale: 0,
                         translateH: 0, translateV: 0, forExport: true);

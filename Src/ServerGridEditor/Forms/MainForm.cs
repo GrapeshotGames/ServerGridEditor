@@ -301,7 +301,7 @@ namespace ServerGridEditor
 
             DrawMap(
                 this, islands, g,
-                showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
+                showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
                 culling, alphaBackground,
                 tiledBackgroundCheckbox.Checked ? tile : null,
                 tiledBackgroundCheckbox.Checked ? tileBrush: null,
@@ -319,7 +319,7 @@ namespace ServerGridEditor
 
         public static void DrawMap(
             MainForm mainForm, IDictionary<string, Island> islands,
-            Graphics g, bool showLines, bool showServerInfo, bool showDiscoZoneInfo,
+            Graphics g, bool showLines, bool showServerInfo, bool showIslands, bool showDiscoZoneInfo,
             RectangleF? culling, Color? alphaBackground,
             Image tile, TextureBrush tileBrush, decimal tileScale,
             int translateH, int translateV, bool forExport)
@@ -412,8 +412,8 @@ namespace ServerGridEditor
                 {
                     drawRect.X = -drawRect.Width / 2;
                     drawRect.Y = -drawRect.Height / 2;
-
-                    g.DrawImage(referencedIsland.GetImage(getOptimizedImage), drawRect);
+						  if (showIslands)
+								g.DrawImage(referencedIsland.GetImage(getOptimizedImage), drawRect);
 
                     if (currentProject.showIslandNames)
                     {
@@ -2365,9 +2365,15 @@ namespace ServerGridEditor
                         progressForm.Initialize(exportMapForm.MaxZoom + 2, "Starting...");
                         progressForm.Show();
 
-                        this.ExportSlippyMap(
-                            islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
-                            tile, tileBrush, mapPanel.BackColor, exportMapForm.ExportDirectory,
+								Color? alphaBackground = null;
+								if (!alphaBgCheckbox.Checked)
+								{
+									 alphaBackground = mapPanel.BackColor;
+								}
+
+								this.ExportSlippyMap(
+                            islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
+									 tiledBackgroundCheckbox.Checked ? tile : null, tiledBackgroundCheckbox.Checked ? tileBrush : null, alphaBackground, exportMapForm.ExportDirectory,
                             (string text) =>
                             {
                                 Console.WriteLine(text);
@@ -2656,9 +2662,16 @@ namespace ServerGridEditor
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-    }
 
-    public class Config
+		  private void showIslandsChckBox_CheckedChanged(object sender, EventArgs e)
+		  {
+				if (currentProject != null)
+					 currentProject.showServerInfo = showServerInfoCheckbox.Checked;
+				mapPanel.Invalidate();
+		  }
+	 }
+
+	 public class Config
     {
         //public string LastOpenedFolder = "";
         //public string LastMapsFolder = "";
