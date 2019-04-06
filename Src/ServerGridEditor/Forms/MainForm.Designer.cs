@@ -94,6 +94,7 @@
 				this.label5 = new System.Windows.Forms.Label();
 				this.atlasLocation = new System.Windows.Forms.Label();
 				this.showIslandsChckBox = new System.Windows.Forms.CheckBox();
+				this.showGridNameChckBox = new System.Windows.Forms.CheckBox();
 				this.menuStrip1.SuspendLayout();
 				((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
 				((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -433,8 +434,6 @@
 				// 
 				this.showServerInfoCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 				this.showServerInfoCheckbox.AutoSize = true;
-				this.showServerInfoCheckbox.Checked = true;
-				this.showServerInfoCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
 				this.showServerInfoCheckbox.Location = new System.Drawing.Point(198, 661);
 				this.showServerInfoCheckbox.Name = "showServerInfoCheckbox";
 				this.showServerInfoCheckbox.Size = new System.Drawing.Size(108, 17);
@@ -776,7 +775,7 @@
 				this.showIslandsChckBox.AutoSize = true;
 				this.showIslandsChckBox.Checked = true;
 				this.showIslandsChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-				this.showIslandsChckBox.Location = new System.Drawing.Point(395, 617);
+				this.showIslandsChckBox.Location = new System.Drawing.Point(395, 615);
 				this.showIslandsChckBox.Name = "showIslandsChckBox";
 				this.showIslandsChckBox.Size = new System.Drawing.Size(89, 17);
 				this.showIslandsChckBox.TabIndex = 37;
@@ -784,11 +783,26 @@
 				this.showIslandsChckBox.UseVisualStyleBackColor = true;
 				this.showIslandsChckBox.CheckedChanged += new System.EventHandler(this.showIslandsChckBox_CheckedChanged);
 				// 
+				// showGridNameChckBox
+				// 
+				this.showGridNameChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+				this.showGridNameChckBox.AutoSize = true;
+				this.showGridNameChckBox.Checked = true;
+				this.showGridNameChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+				this.showGridNameChckBox.Location = new System.Drawing.Point(490, 617);
+				this.showGridNameChckBox.Name = "showGridNameChckBox";
+				this.showGridNameChckBox.Size = new System.Drawing.Size(111, 17);
+				this.showGridNameChckBox.TabIndex = 37;
+				this.showGridNameChckBox.Text = "Show Grid Names";
+				this.showGridNameChckBox.UseVisualStyleBackColor = true;
+				this.showGridNameChckBox.CheckedChanged += new System.EventHandler(this.showGridNameChckBox_CheckedChanged);
+				// 
 				// MainForm
 				// 
 				this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 				this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 				this.ClientSize = new System.Drawing.Size(1088, 708);
+				this.Controls.Add(this.showGridNameChckBox);
 				this.Controls.Add(this.showIslandsChckBox);
 				this.Controls.Add(this.atlasLocation);
 				this.Controls.Add(this.label5);
@@ -914,6 +928,7 @@
         private System.Windows.Forms.ToolStripMenuItem cullInvalidPathsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		  private System.Windows.Forms.CheckBox showIslandsChckBox;
+		  private System.Windows.Forms.CheckBox showGridNameChckBox;
 	 }
 }
 

@@ -301,7 +301,8 @@ namespace ServerGridEditor
 
             DrawMap(
                 this, islands, g,
-                showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
+                showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showGridNameChckBox.Checked, 
+					 showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
                 culling, alphaBackground,
                 tiledBackgroundCheckbox.Checked ? tile : null,
                 tiledBackgroundCheckbox.Checked ? tileBrush: null,
@@ -317,10 +318,16 @@ namespace ServerGridEditor
             Alignment = StringAlignment.Center
         };
 
-        public static void DrawMap(
+		  static StringFormat LeftStringFormat = new StringFormat
+		  {
+				LineAlignment = StringAlignment.Near,
+				Alignment = StringAlignment.Near
+		  };
+
+		  public static void DrawMap(
             MainForm mainForm, IDictionary<string, Island> islands,
-            Graphics g, bool showLines, bool showServerInfo, bool showIslands, bool showDiscoZoneInfo,
-            RectangleF? culling, Color? alphaBackground,
+            Graphics g, bool showLines, bool showServerInfo, bool showGridName, bool showIslands,
+				bool showDiscoZoneInfo, RectangleF? culling, Color? alphaBackground,
             Image tile, TextureBrush tileBrush, decimal tileScale,
             int translateH, int translateV, bool forExport)
         {
@@ -504,8 +511,44 @@ namespace ServerGridEditor
                 }
             }
 
-            //Draw server info
-            if (showServerInfo)
+				//Draw grid name
+				if (showGridName)
+				{
+					 Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * cellSize / 150, FontStyle.Regular);
+					 float dynamicOutlineShift = g.MeasureString("T", font).Height * outlineShift;
+					 Font littleFont = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * cellSize / 300, FontStyle.Regular);
+					 float littleDynamicOutlineShift = g.MeasureString("T", font).Height * 0.02f;
+					 foreach (Server s in currentProject.servers)
+					 {
+						  PointF start = new PointF(s.gridX * cellSize + (g.MeasureString("T", font).Height /8 ), s.gridY * cellSize + (g.MeasureString("T", font).Width / 8));
+						  
+						  string easyName = string.Format("{0}{1}", (char)(((int)'A') + s.gridX), s.gridY + 1);
+						  g.DrawString(easyName, font, Brushes.Black, new PointF(start.X + dynamicOutlineShift, start.Y + dynamicOutlineShift), LeftStringFormat);
+						  g.DrawString(easyName, font, Brushes.White, start, LeftStringFormat);
+						  
+						  start.X += (g.MeasureString(easyName, font).Width );
+		
+						  if (!string.IsNullOrWhiteSpace(s.serverTemplateName))
+						  {
+								ServerTemplateData sT = mainForm.currentProject.GetServerTemplateByName(s.serverTemplateName);
+								if (sT != null)
+								{
+									 g.DrawString(s.serverTemplateName, littleFont, Brushes.Black, new PointF(start.X + littleDynamicOutlineShift, start.Y + littleDynamicOutlineShift), LeftStringFormat);
+									 g.DrawString(s.serverTemplateName, littleFont, new SolidBrush(sT.GetTemplateColor()), start, LeftStringFormat);
+									 start.Y += g.MeasureString("T", littleFont).Height;
+								}
+						  }
+
+						  if (!string.IsNullOrWhiteSpace(s.name))
+						  {
+								g.DrawString(s.name, littleFont, Brushes.Black, new PointF(start.X + littleDynamicOutlineShift, start.Y + littleDynamicOutlineShift), LeftStringFormat);
+								g.DrawString(s.name, littleFont, (s.isHomeServer) ? Brushes.Lime : Brushes.Red, start, LeftStringFormat);
+						  }
+					 }
+				}
+
+				//Draw server info
+				if (showServerInfo)
             {
                 Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * cellSize / 200, FontStyle.Regular);
                 SizeF stringSize = g.MeasureString("T", font);
@@ -1415,7 +1458,7 @@ namespace ServerGridEditor
             showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
             showIslandNamesChckBox.Checked = currentProject.showIslandNames;
             showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
-            disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
+				disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
             showLinesCheckbox.Checked = currentProject.showLines;
             alphaBgCheckbox.Checked = currentProject.alphaBackground;
             tiledBackgroundCheckbox.Checked = currentProject.showBackground;
@@ -2372,7 +2415,7 @@ namespace ServerGridEditor
 								}
 
 								this.ExportSlippyMap(
-                            islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
+                            islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showGridNameChckBox.Checked, showIslandsChckBox.Checked, showDiscoZoneInfoCheckbox.Checked,
 									 tiledBackgroundCheckbox.Checked ? tile : null, tiledBackgroundCheckbox.Checked ? tileBrush : null, alphaBackground, exportMapForm.ExportDirectory,
                             (string text) =>
                             {
@@ -2664,6 +2707,13 @@ namespace ServerGridEditor
         }
 
 		  private void showIslandsChckBox_CheckedChanged(object sender, EventArgs e)
+		  {
+				if (currentProject != null)
+					 currentProject.showServerInfo = showServerInfoCheckbox.Checked;
+				mapPanel.Invalidate();
+		  }
+
+		  private void showGridNameChckBox_CheckedChanged(object sender, EventArgs e)
 		  {
 				if (currentProject != null)
 					 currentProject.showServerInfo = showServerInfoCheckbox.Checked;
