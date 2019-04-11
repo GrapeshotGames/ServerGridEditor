@@ -6458,7 +6458,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1
+    "islandPoints": 0
   },
   "Ice_B_PO": {
     "name": "Ice_B_PO",
@@ -6477,7 +6477,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1
+    "islandPoints": 0
   },
   "Ice_C_PO": {
     "name": "Ice_C_PO",
@@ -6496,7 +6496,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1
+    "islandPoints": 0
   },
   "Ice_D_PO": {
     "name": "Ice_D_PO",
@@ -6515,7 +6515,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1
+    "islandPoints": 0
   },
   "Ice_E_PO": {
     "name": "Ice_E_PO",
@@ -6534,7 +6534,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1
+    "islandPoints": 0
   },
   "Trench_B": {
     "name": "Trench_B",
@@ -6996,7 +6996,8 @@
       "Mnt_W_Far_05B",
       "Mnt_W_Farthest_05B",
       "Mnt_W_Marine_Cold_Near",
-      "Mnt_W_Near_05B"
+      "Mnt_W_Near_05B",
+      "Mnt_W_TU"
     ],
     "spawnerOverrides": {},
     "extraSublevels": [
