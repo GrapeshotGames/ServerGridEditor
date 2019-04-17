@@ -404,7 +404,8 @@ namespace ServerGridEditor
         public bool showServerInfo = true;
         public bool showDiscoZoneInfo = true;
         public bool showShipPathsInfo = true;
-        public bool showIslandNames = true;
+		  public bool showGridName = true;
+		  public bool showIslandNames = true;
         public bool disableImageExporting = false;
         public bool showLines = true;
         public bool alphaBackground = false;
@@ -441,8 +442,8 @@ namespace ServerGridEditor
 
         public string discoZonesImagePath = "Resources/discoZoneBox.png";
         public Image DiscoveryZoneImage = null;
-
-        public Project(float cellSize, int numOfCellsX, int numOfCellsY)
+		  
+		  public Project(float cellSize, int numOfCellsX, int numOfCellsY)
         {
             this.cellSize = cellSize;
             this.numOfCellsX = numOfCellsX;

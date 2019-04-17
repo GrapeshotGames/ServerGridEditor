@@ -2716,7 +2716,7 @@ namespace ServerGridEditor
 		  private void showGridNameChckBox_CheckedChanged(object sender, EventArgs e)
 		  {
 				if (currentProject != null)
-					 currentProject.showServerInfo = showServerInfoCheckbox.Checked;
+					 currentProject.showGridName = showGridNameChckBox.Checked;
 				mapPanel.Invalidate();
 		  }
 	 }
