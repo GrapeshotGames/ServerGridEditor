@@ -66,6 +66,17 @@
             this.modNameTxtBox = new System.Windows.Forms.TextBox();
             this.islandPointsTxtBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.singleSpawnPointYTxtBox = new System.Windows.Forms.TextBox();
+            this.singleSpawnPointXTxtBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.singleSpawnPointZTxtBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.TreasureMapSpawnPointsTxtBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.WildPirateCampSpawnPointsTxtBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
             this.SuspendLayout();
@@ -150,9 +161,9 @@
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(298, 565);
+            this.createBtn.Location = new System.Drawing.Point(17, 722);
             this.createBtn.Name = "createBtn";
-            this.createBtn.Size = new System.Drawing.Size(111, 32);
+            this.createBtn.Size = new System.Drawing.Size(111, 39);
             this.createBtn.TabIndex = 9;
             this.createBtn.Text = "Create";
             this.createBtn.UseVisualStyleBackColor = true;
@@ -161,9 +172,9 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(415, 565);
+            this.cancelBtn.Location = new System.Drawing.Point(134, 722);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(118, 32);
+            this.cancelBtn.Size = new System.Drawing.Size(118, 39);
             this.cancelBtn.TabIndex = 10;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = true;
@@ -401,13 +412,115 @@
             this.label14.TabIndex = 42;
             this.label14.Text = "Island Points";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(10, 626);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 13);
+            this.label16.TabIndex = 44;
+            this.label16.Text = "SP Spawn Point";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(145, 665);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(14, 13);
+            this.label17.TabIndex = 49;
+            this.label17.Text = "Y";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(82, 665);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(14, 13);
+            this.label18.TabIndex = 48;
+            this.label18.Text = "X";
+            // 
+            // singleSpawnPointYTxtBox
+            // 
+            this.singleSpawnPointYTxtBox.Location = new System.Drawing.Point(130, 642);
+            this.singleSpawnPointYTxtBox.Name = "singleSpawnPointYTxtBox";
+            this.singleSpawnPointYTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.singleSpawnPointYTxtBox.TabIndex = 47;
+            // 
+            // singleSpawnPointXTxtBox
+            // 
+            this.singleSpawnPointXTxtBox.Location = new System.Drawing.Point(67, 642);
+            this.singleSpawnPointXTxtBox.Name = "singleSpawnPointXTxtBox";
+            this.singleSpawnPointXTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.singleSpawnPointXTxtBox.TabIndex = 46;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(209, 665);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(14, 13);
+            this.label19.TabIndex = 51;
+            this.label19.Text = "Z";
+            // 
+            // singleSpawnPointZTxtBox
+            // 
+            this.singleSpawnPointZTxtBox.Location = new System.Drawing.Point(194, 642);
+            this.singleSpawnPointZTxtBox.Name = "singleSpawnPointZTxtBox";
+            this.singleSpawnPointZTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.singleSpawnPointZTxtBox.TabIndex = 50;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(257, 548);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(132, 13);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "TreasureMapSpawnPoints";
+            // 
+            // TreasureMapSpawnPointsTxtBox
+            // 
+            this.TreasureMapSpawnPointsTxtBox.Location = new System.Drawing.Point(260, 564);
+            this.TreasureMapSpawnPointsTxtBox.Multiline = true;
+            this.TreasureMapSpawnPointsTxtBox.Name = "TreasureMapSpawnPointsTxtBox";
+            this.TreasureMapSpawnPointsTxtBox.Size = new System.Drawing.Size(332, 82);
+            this.TreasureMapSpawnPointsTxtBox.TabIndex = 52;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(258, 649);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(144, 13);
+            this.label20.TabIndex = 55;
+            this.label20.Text = "WildPirateCampSpawnPoints";
+            // 
+            // WildPirateCampSpawnPointsTxtBox
+            // 
+            this.WildPirateCampSpawnPointsTxtBox.Location = new System.Drawing.Point(261, 665);
+            this.WildPirateCampSpawnPointsTxtBox.Multiline = true;
+            this.WildPirateCampSpawnPointsTxtBox.Name = "WildPirateCampSpawnPointsTxtBox";
+            this.WildPirateCampSpawnPointsTxtBox.Size = new System.Drawing.Size(332, 82);
+            this.WildPirateCampSpawnPointsTxtBox.TabIndex = 54;
+            // 
             // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(609, 619);
+            this.ClientSize = new System.Drawing.Size(609, 773);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.WildPirateCampSpawnPointsTxtBox);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.TreasureMapSpawnPointsTxtBox);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.singleSpawnPointZTxtBox);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.singleSpawnPointYTxtBox);
+            this.Controls.Add(this.singleSpawnPointXTxtBox);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.islandPointsTxtBox);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.modNameTxtBox);
@@ -498,5 +611,16 @@
         private System.Windows.Forms.TextBox modNameTxtBox;
         private System.Windows.Forms.TextBox islandPointsTxtBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox singleSpawnPointYTxtBox;
+        private System.Windows.Forms.TextBox singleSpawnPointXTxtBox;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox singleSpawnPointZTxtBox;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox TreasureMapSpawnPointsTxtBox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox WildPirateCampSpawnPointsTxtBox;
     }
 }

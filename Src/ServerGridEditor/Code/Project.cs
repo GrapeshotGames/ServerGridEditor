@@ -141,7 +141,9 @@ namespace ServerGridEditor
                 {
                     foreach (string sublevelName in referencedIsland.sublevelNames)
                         Data.sublevels.Add(new SublevelSerializationObject() { name = sublevelName, id = instance.id, additionalTranslationX = relativePoint.X, additionalTranslationY = relativePoint.Y, additionalRotationYaw = instance.rotation, landscapeMaterialOverride = referencedIsland.landscapeMaterialOverride });
-                    
+
+                    instance.treasureMapSpawnPoints = referencedIsland.treasureMapSpawnPoints;
+                    instance.wildPirateCampSpawnPoints = referencedIsland.wildPirateCampSpawnPoints;
                     instance.minTreasureQuality = referencedIsland.minTreasureQuality;
                     instance.maxTreasureQuality = referencedIsland.maxTreasureQuality;
                     instance.useNpcVolumesForTreasures = referencedIsland.useNpcVolumesForTreasures;
@@ -152,6 +154,9 @@ namespace ServerGridEditor
                     instance.islandWidth = referencedIsland.x;
                     instance.islandHeight = referencedIsland.y;
                     instance.islandPoints = referencedIsland.islandPoints;
+                    instance.singleSpawnPointX = referencedIsland.singleSpawnPointX;
+                    instance.singleSpawnPointY = referencedIsland.singleSpawnPointY;
+                    instance.singleSpawnPointZ = referencedIsland.singleSpawnPointZ;
                 }
 
                 instance.SyncOverridesWithTemplates(mainForm);
@@ -621,6 +626,9 @@ namespace ServerGridEditor
                         deserializedIslandInstance.useNpcVolumesForTreasures = false;
                         deserializedIslandInstance.islandTreasureBottleSupplyCrateOverrides = "";
                         deserializedIslandInstance.islandPoints = 1;
+                        deserializedIslandInstance.singleSpawnPointX = 0;
+                        deserializedIslandInstance.singleSpawnPointY = 0;
+                        deserializedIslandInstance.singleSpawnPointZ = 0;
 						//deserializedIslandInstance.spawnPointRegionOverride = -1;
 
                         islandInstances.Add(deserializedIslandInstance);

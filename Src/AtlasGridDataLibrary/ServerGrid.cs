@@ -280,6 +280,8 @@ namespace AtlasGridDataLibrary
         public int id;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
 
+        public List<string> treasureMapSpawnPoints = new List<string>();
+        public List<string> wildPirateCampSpawnPoints = new List<string>();
         public float minTreasureQuality = -1;
         public float maxTreasureQuality = -1;
         public bool useNpcVolumesForTreasures = false;
@@ -317,6 +319,11 @@ namespace AtlasGridDataLibrary
 
         public float islandWidth;
         public float islandHeight;
+
+        public float singleSpawnPointX;
+        public float singleSpawnPointY;
+        public float singleSpawnPointZ;
+
     }
     public class DiscoveryZoneData : MoveableObjectData
     {

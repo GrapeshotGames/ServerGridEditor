@@ -23,6 +23,10 @@ namespace ServerGridEditor
         public List<string> sublevelNames;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
         public List<string> extraSublevels;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> treasureMapSpawnPoints;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+        public List<string> wildPirateCampSpawnPoints;
         [DefaultValue(-1.0f)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public float minTreasureQuality;
@@ -44,7 +48,15 @@ namespace ServerGridEditor
         [DefaultValue(1)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int islandPoints;
-
+        [DefaultValue(0)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public float singleSpawnPointX;
+        [DefaultValue(0)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public float singleSpawnPointY;
+        [DefaultValue(0)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public float singleSpawnPointZ;
         [JsonIgnore]
         public string modDir = null;
 
@@ -95,8 +107,8 @@ namespace ServerGridEditor
         }
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
-            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints)
+            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ)
         {
             this.name = name;
             this.x = x;
@@ -105,6 +117,8 @@ namespace ServerGridEditor
             this.landscapeMaterialOverride = landscapeMaterialOverride;
             this.sublevelNames = sublevelNames;
             this.spawnerOverrides = spawnerOverrides;
+            this.treasureMapSpawnPoints = treasureMapSpawnPoints;
+            this.wildPirateCampSpawnPoints = wildPirateCampSpawnPoints;
             this.minTreasureQuality = minTreasureQuality;
             this.maxTreasureQuality = maxTreasureQuality;
             this.useNpcVolumesForTreasures = useNpcVolumesForTreasures;
@@ -113,6 +127,9 @@ namespace ServerGridEditor
             this.islandTreasureBottleSupplyCrateOverrides = IslandTreasureBottleSupplyCrateOverrides;
             this.extraSublevels = extraSublevels;
             this.islandPoints = islandPoints;
+            this.singleSpawnPointX = sPlayerSpawnPointX;
+            this.singleSpawnPointY = sPlayerSpawnPointY;
+            this.singleSpawnPointZ = sPlayerSpawnPointZ;
         }
     }
 
@@ -143,6 +160,9 @@ namespace ServerGridEditor
             Data.islandHeight = height;
 
             Data.islandPoints = 1;
+            Data.singleSpawnPointX = 0;
+            Data.singleSpawnPointY = 0;
+            Data.singleSpawnPointZ = 0;
             return Data;
         }
 
