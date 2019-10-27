@@ -1947,10 +1947,10 @@ namespace ServerGridEditor
 
         private void controlsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hold Left click (Move island)\n" +
-                "Hold Right click (Rotate island)\n" + 
+            MessageBox.Show("Hold Left click (Move)\n" +
+                "Hold Right click (Rotate)\n" + 
                 "Mouse wheel (Zoom)\n" + 
-                "Delete button (Remove island)\n" + 
+                "Delete button (Remove)\n" + 
                 "Ctrl + click on grid (Edit server info)\n" + 
                 "Ctrl + click on island (Edit island info)\n" + 
                 "Hold middle mouse + drag (Scroll map)\n" + 
