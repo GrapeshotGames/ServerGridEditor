@@ -221,6 +221,14 @@ namespace ServerGridEditor
             foreach (string islandKey in SortedIslands)
             {
                 Island island = islands[islandKey];
+                if (!String.IsNullOrEmpty(this.txtSearch.Text))
+                {
+                    if (island.name.IndexOf(this.txtSearch.Text, StringComparison.CurrentCultureIgnoreCase) < 0)
+                    {
+                        continue;
+                    }
+                }
+
                 imgList.Images.Add(island.GetImage());
                 ListViewItem listItem = new ListViewItem();
                 listItem.ImageIndex = i;
@@ -484,7 +492,10 @@ namespace ServerGridEditor
                     if(!culled)
                     {
                         float zoneSize = Math.Max(discoInst.sizeX * currentProject.coordsScaling, 0.00001f);
-                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * zoneSize / 200, FontStyle.Regular);
+
+                        float fontSize = Math.Max(1.0f, DefaultFont.SizeInPoints * zoneSize / 200);
+                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, fontSize, FontStyle.Regular);
+                    
                         SizeF stringSize = g.MeasureString("T", font);
                         float dynamicOutlineShift = stringSize.Height * outlineShift;
 
@@ -1089,6 +1100,13 @@ namespace ServerGridEditor
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            if (this.txtSearch.Focused)
+            {
+                // there's got to be a better way to prevent events from triggering here when typing in the search box.
+                // I don't really do WinForms though, so, meh?
+                return;
+            }
+
             if (e.KeyCode == Keys.Delete)
             {
                 Point cursorMapPoint = GetTarnsformedMapPoint(mapPanel.PointToClient(Cursor.Position));
@@ -2655,6 +2673,11 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshIslandList();
         }
     }
 
