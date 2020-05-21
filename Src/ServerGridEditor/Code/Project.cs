@@ -153,7 +153,7 @@ namespace ServerGridEditor
                     instance.prioritizeVolumesForTreasures = referencedIsland.prioritizeVolumesForTreasures;
                     instance.islandWidth = referencedIsland.x;
                     instance.islandHeight = referencedIsland.y;
-                    instance.islandPoints = referencedIsland.islandPoints;
+                    //instance.islandPoints = referencedIsland.islandPoints;
                     instance.singleSpawnPointX = referencedIsland.singleSpawnPointX;
                     instance.singleSpawnPointY = referencedIsland.singleSpawnPointY;
                     instance.singleSpawnPointZ = referencedIsland.singleSpawnPointZ;
@@ -625,7 +625,7 @@ namespace ServerGridEditor
                         deserializedIslandInstance.maxTreasureQuality = deserializedIslandInstance.minTreasureQuality = -1;
                         deserializedIslandInstance.useNpcVolumesForTreasures = false;
                         deserializedIslandInstance.islandTreasureBottleSupplyCrateOverrides = "";
-                        deserializedIslandInstance.islandPoints = 1;
+                        //deserializedIslandInstance.islandPoints = 1;
                         deserializedIslandInstance.singleSpawnPointX = 0;
                         deserializedIslandInstance.singleSpawnPointY = 0;
                         deserializedIslandInstance.singleSpawnPointZ = 0;
