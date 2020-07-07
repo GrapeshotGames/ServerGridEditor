@@ -157,6 +157,7 @@ namespace ServerGridEditor
                     instance.singleSpawnPointX = referencedIsland.singleSpawnPointX;
                     instance.singleSpawnPointY = referencedIsland.singleSpawnPointY;
                     instance.singleSpawnPointZ = referencedIsland.singleSpawnPointZ;
+                    instance.maxIslandClaimFlagZ = referencedIsland.maxIslandClaimFlagZ;
                 }
 
                 instance.SyncOverridesWithTemplates(mainForm);
