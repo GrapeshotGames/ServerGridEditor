@@ -57,6 +57,8 @@ namespace ServerGridEditor
         [DefaultValue(0)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public float singleSpawnPointZ;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)] 
+        public float maxIslandClaimFlagZ = 0.0f;
         [JsonIgnore]
         public string modDir = null;
 
@@ -108,7 +110,7 @@ namespace ServerGridEditor
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
             , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ)
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
         {
             this.name = name;
             this.x = x;
@@ -130,6 +132,7 @@ namespace ServerGridEditor
             this.singleSpawnPointX = sPlayerSpawnPointX;
             this.singleSpawnPointY = sPlayerSpawnPointY;
             this.singleSpawnPointZ = sPlayerSpawnPointZ;
+            this.maxIslandClaimFlagZ = theMaxIslandClaimFlagZ;
         }
     }
 
@@ -163,6 +166,7 @@ namespace ServerGridEditor
             Data.singleSpawnPointX = 0;
             Data.singleSpawnPointY = 0;
             Data.singleSpawnPointZ = 0;
+            Data.maxIslandClaimFlagZ = 0;
             return Data;
         }
 

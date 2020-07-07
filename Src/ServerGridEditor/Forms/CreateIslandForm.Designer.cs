@@ -77,6 +77,8 @@
             this.TreasureMapSpawnPointsTxtBox = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.WildPirateCampSpawnPointsTxtBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
             this.SuspendLayout();
@@ -503,6 +505,23 @@
             this.WildPirateCampSpawnPointsTxtBox.Size = new System.Drawing.Size(332, 82);
             this.WildPirateCampSpawnPointsTxtBox.TabIndex = 54;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(194, 685);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(55, 20);
+            this.textBox1.TabIndex = 56;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(69, 688);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(119, 13);
+            this.label22.TabIndex = 58;
+            this.label22.Text = "Island Max Claim Flag Z";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
             // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
@@ -510,6 +529,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(609, 773);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.WildPirateCampSpawnPointsTxtBox);
             this.Controls.Add(this.label15);
@@ -622,5 +643,7 @@
         private System.Windows.Forms.TextBox TreasureMapSpawnPointsTxtBox;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox WildPirateCampSpawnPointsTxtBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label22;
     }
 }

@@ -67,6 +67,8 @@ namespace ServerGridEditor
                 singleSpawnPointXTxtBox.Text = editedIsland.singleSpawnPointX + "";
                 singleSpawnPointYTxtBox.Text = editedIsland.singleSpawnPointY + "";
                 singleSpawnPointZTxtBox.Text = editedIsland.singleSpawnPointZ + "";
+                textBox1.Text = editedIsland.maxIslandClaimFlagZ + "";
+                
 
                 if (editedIsland.extraSublevels != null)
                     extraSublevelsTxtBox.Lines = editedIsland.extraSublevels.ToArray();
@@ -189,6 +191,9 @@ namespace ServerGridEditor
             float.TryParse(singleSpawnPointXTxtBox.Text, out spSpawnPointX);
             float.TryParse(singleSpawnPointYTxtBox.Text, out spSpawnPointY);
             float.TryParse(singleSpawnPointZTxtBox.Text, out spSpawnPointZ);
+
+            float maxIslandZ = 0.0f;
+            float.TryParse(textBox1.Text, out maxIslandZ);
 
             int islandPoints = 1;
             int.TryParse(islandPointsTxtBox.Text, out islandPoints);
@@ -317,6 +322,7 @@ namespace ServerGridEditor
                 editedIsland.singleSpawnPointX = spSpawnPointX;
                 editedIsland.singleSpawnPointY = spSpawnPointY;
                 editedIsland.singleSpawnPointZ = spSpawnPointZ;
+                editedIsland.maxIslandClaimFlagZ = maxIslandZ;
 
                 editedIsland.islandTreasureBottleSupplyCrateOverrides = IslandTreasureBottleSupplyCrateOverridesTxtBox.Text;
 
@@ -395,7 +401,7 @@ namespace ServerGridEditor
 
                 mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides,
                     treasureMapSpawnPoints, wildPirateCampSpawnPoints, minTreasureQuality, maxTreasureQuality, useNpcVolumesForTreasuresChkBox.Checked, useLevelBoundsForTreasuresChkBox.Checked, 
-                    prioritizeVolumesForTreasuresChkBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints, spSpawnPointX, spSpawnPointY, spSpawnPointZ));
+                    prioritizeVolumesForTreasuresChkBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints, spSpawnPointX, spSpawnPointY, spSpawnPointZ, maxIslandZ));
 
                 mainForm.islands.Last().Value.modDir = modNameTxtBox.Text.Trim();
 
@@ -442,6 +448,11 @@ namespace ServerGridEditor
                 foreach (string item in selectedItems)
                     sublevelsList.Items.Remove(item);
             }
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
