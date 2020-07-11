@@ -323,6 +323,8 @@ namespace AtlasGridDataLibrary
         public float singleSpawnPointX;
         public float singleSpawnPointY;
         public float singleSpawnPointZ;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+        public float maxIslandClaimFlagZ;
 
     }
     public class DiscoveryZoneData : MoveableObjectData
