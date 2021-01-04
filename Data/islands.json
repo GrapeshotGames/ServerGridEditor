@@ -60,7 +60,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Cay_A_TR": {
     "name": "Cay_A_TR",
@@ -121,7 +122,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 12559.0,
     "singleSpawnPointY": 1402.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Mnt_B_WF": {
     "name": "Mnt_B_WF",
@@ -182,7 +184,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_C_TR": {
     "name": "Mnt_C_TR",
@@ -243,7 +246,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -1565.0,
     "singleSpawnPointY": 9575.0,
-    "singleSpawnPointZ": 650.0
+    "singleSpawnPointZ": 650.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_WF": {
     "name": "Mnt_C_WF",
@@ -301,7 +305,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -1654.0,
     "singleSpawnPointY": 8791.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Cay_F_TR": {
     "name": "Cay_F_TR",
@@ -360,7 +365,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Mnt_P_WF": {
     "name": "Mnt_P_WF",
@@ -431,7 +437,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -146609.0,
     "singleSpawnPointY": 49617.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 14900.0
   },
   "Mnt_K_WF": {
     "name": "Mnt_K_WF",
@@ -493,7 +500,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Cay_I_TR": {
     "name": "Cay_I_TR",
@@ -553,7 +561,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -7329.0,
     "singleSpawnPointY": -43301.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_G_TR": {
     "name": "Cay_G_TR",
@@ -615,7 +624,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18247.0,
     "singleSpawnPointY": -21926.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_GB_TR": {
     "name": "Cay_GB_TR",
@@ -679,7 +689,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -16306.0,
     "singleSpawnPointY": -24371.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_H_TR": {
     "name": "Cay_H_TR",
@@ -740,7 +751,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -6679.0,
     "singleSpawnPointY": -38236.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Mnt_N_WF": {
     "name": "Mnt_N_WF",
@@ -805,7 +817,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74267.0,
     "singleSpawnPointY": -24430.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_I_WF": {
     "name": "Mnt_I_WF",
@@ -868,7 +881,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 75078.0,
     "singleSpawnPointY": 774.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_L_WF": {
     "name": "Mnt_L_WF",
@@ -927,7 +941,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Cay_J_TR": {
     "name": "Cay_J_TR",
@@ -985,7 +1000,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_JB_TR": {
     "name": "Cay_JB_TR",
@@ -1044,7 +1060,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Mnt_J_WF": {
     "name": "Mnt_J_WF",
@@ -1118,7 +1135,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 38947.0,
     "singleSpawnPointY": -45406.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_L_TR": {
     "name": "Mnt_L_TR",
@@ -1178,7 +1196,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28806.0,
     "singleSpawnPointY": -59251.0,
-    "singleSpawnPointZ": 1750.0
+    "singleSpawnPointZ": 1750.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_D_WF": {
     "name": "Mnt_D_WF",
@@ -1249,7 +1268,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12548.0,
     "singleSpawnPointY": 1819.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_O_WF": {
     "name": "Mnt_O_WF",
@@ -1311,7 +1331,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72548.0,
     "singleSpawnPointY": 24244.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_E_WF": {
     "name": "Mnt_E_WF",
@@ -1379,7 +1400,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18860.0,
     "singleSpawnPointY": -15866.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_J_TR": {
     "name": "Mnt_J_TR",
@@ -1442,7 +1464,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 38672.0,
     "singleSpawnPointY": -45535.0,
-    "singleSpawnPointZ": 650.0
+    "singleSpawnPointZ": 650.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_H_TR": {
     "name": "Mnt_H_TR",
@@ -1514,7 +1537,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -78144.0,
     "singleSpawnPointY": 60586.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_NB_WF": {
     "name": "Mnt_NB_WF",
@@ -1574,7 +1598,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74849.0,
     "singleSpawnPointY": -21563.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_OB_WF": {
     "name": "Mnt_OB_WF",
@@ -1632,7 +1657,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72896.0,
     "singleSpawnPointY": 18802.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_LB_WF": {
     "name": "Mnt_LB_WF",
@@ -1694,7 +1720,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_JB_WF": {
     "name": "Mnt_JB_WF",
@@ -1771,7 +1798,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 33292.0,
     "singleSpawnPointY": -48244.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_A_TR": {
     "name": "Mnt_A_TR",
@@ -1830,7 +1858,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Cay_K_TR_E": {
     "name": "Cay_K_TR_E",
@@ -1890,7 +1919,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 22394.0,
     "singleSpawnPointY": 20343.0,
-    "singleSpawnPointZ": 723.0
+    "singleSpawnPointZ": 723.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_A_WR": {
     "name": "Cay_A_WR",
@@ -1949,7 +1979,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 36887.0,
     "singleSpawnPointY": 29989.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_E_ET": {
     "name": "Cay_E_ET",
@@ -2016,7 +2047,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12513.0,
     "singleSpawnPointY": 1038.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_E_WR": {
     "name": "Cay_E_WR",
@@ -2079,7 +2111,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -16178.0,
     "singleSpawnPointY": 3591.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_E_WR_B": {
     "name": "Cay_E_WR_B",
@@ -2140,7 +2173,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -26272.0,
     "singleSpawnPointY": -45153.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_E_CL": {
     "name": "Cay_E_CL",
@@ -2200,7 +2234,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_F_ET": {
     "name": "Cay_F_ET",
@@ -2263,7 +2298,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_F_WR": {
     "name": "Cay_F_WR",
@@ -2322,7 +2358,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -22005.0,
     "singleSpawnPointY": -49761.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_G_WR": {
     "name": "Cay_G_WR",
@@ -2382,7 +2419,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -16306.0,
     "singleSpawnPointY": -24371.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_G_CL": {
     "name": "Cay_G_CL",
@@ -2441,7 +2479,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10744.0,
     "singleSpawnPointY": -10685.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_G_CL_B": {
     "name": "Cay_G_CL_B",
@@ -2499,7 +2538,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -37566.0,
     "singleSpawnPointY": -22410.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_G_CL_C": {
     "name": "Cay_G_CL_C",
@@ -2557,7 +2597,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -37028.0,
     "singleSpawnPointY": -25869.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Cay_H_ET": {
     "name": "Cay_H_ET",
@@ -2627,7 +2668,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -6579.0,
     "singleSpawnPointY": -38236.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Cay_H_WR": {
     "name": "Cay_H_WR",
@@ -2686,7 +2728,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -1809.0,
     "singleSpawnPointY": -34331.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Cay_H_CL": {
     "name": "Cay_H_CL",
@@ -2750,7 +2793,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10264.0,
     "singleSpawnPointY": -54214.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Cay_H_CL_B": {
     "name": "Cay_H_CL_B",
@@ -2811,7 +2855,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -7091.0,
     "singleSpawnPointY": -3382.0,
-    "singleSpawnPointZ": 2000.0
+    "singleSpawnPointZ": 2000.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Cay_I_WR": {
     "name": "Cay_I_WR",
@@ -2870,7 +2915,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -8616.0,
     "singleSpawnPointY": -53343.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_I_WR_B": {
     "name": "Cay_I_WR_B",
@@ -2928,7 +2974,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -9616.0,
     "singleSpawnPointY": -53343.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_I_CL": {
     "name": "Cay_I_CL",
@@ -2985,7 +3032,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11302.0,
     "singleSpawnPointY": -42124.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_I_CL_B": {
     "name": "Cay_I_CL_B",
@@ -3043,7 +3091,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -14758.0,
     "singleSpawnPointY": -55461.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_I_CL_C": {
     "name": "Cay_I_CL_C",
@@ -3101,7 +3150,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12118.0,
     "singleSpawnPointY": -56886.0,
-    "singleSpawnPointZ": 1750.0
+    "singleSpawnPointZ": 1750.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_J_WR": {
     "name": "Cay_J_WR",
@@ -3162,7 +3212,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_J_CL": {
     "name": "Cay_J_CL",
@@ -3220,7 +3271,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -22423.0,
     "singleSpawnPointY": 59158.0,
-    "singleSpawnPointZ": 2100.0
+    "singleSpawnPointZ": 2100.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_K_WR": {
     "name": "Cay_K_WR",
@@ -3280,7 +3332,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 1769.0,
     "singleSpawnPointY": 75976.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_K_WR_B": {
     "name": "Cay_K_WR_B",
@@ -3340,7 +3393,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 13795.0,
     "singleSpawnPointY": 67054.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_K_CL": {
     "name": "Cay_K_CL",
@@ -3398,7 +3452,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -42424.0,
     "singleSpawnPointY": 40208.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_L_ER": {
     "name": "Cay_L_ER",
@@ -3459,7 +3514,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 46273.0,
     "singleSpawnPointY": 25290.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_L_WR": {
     "name": "Cay_L_WR",
@@ -3518,7 +3574,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 47154.0,
     "singleSpawnPointY": 29296.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_L_CL": {
     "name": "Cay_L_CL",
@@ -3582,7 +3639,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 26599.0,
     "singleSpawnPointY": 469.0,
-    "singleSpawnPointZ": 2150.0
+    "singleSpawnPointZ": 2150.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_L_CL_B": {
     "name": "Cay_L_CL_B",
@@ -3643,7 +3701,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 22206.0,
     "singleSpawnPointY": 22206.0,
-    "singleSpawnPointZ": 2050.0
+    "singleSpawnPointZ": 2050.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_M_WR": {
     "name": "Cay_M_WR",
@@ -3704,7 +3763,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 68362.0,
     "singleSpawnPointY": 32841.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 3900.0
   },
   "Cay_M_CL": {
     "name": "Cay_M_CL",
@@ -3762,7 +3822,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 66800.0,
     "singleSpawnPointY": 45378.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 3900.0
   },
   "Cay_M_CL_B": {
     "name": "Cay_M_CL_B",
@@ -3823,7 +3884,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 63772.0,
     "singleSpawnPointY": 34685.0,
-    "singleSpawnPointZ": 1850.0
+    "singleSpawnPointZ": 1850.0,
+    "maxIslandClaimFlagZ": 3900.0
   },
   "Cay_N_ER": {
     "name": "Cay_N_ER",
@@ -3884,7 +3946,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 105738.0,
     "singleSpawnPointY": -19008.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_N_ET": {
     "name": "Cay_N_ET",
@@ -3947,7 +4010,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 107555.0,
     "singleSpawnPointY": -24178.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_N_WR": {
     "name": "Cay_N_WR",
@@ -4007,7 +4071,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 103615.0,
     "singleSpawnPointY": -21175.0,
-    "singleSpawnPointZ": 1450.0
+    "singleSpawnPointZ": 1450.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_N_CL": {
     "name": "Cay_N_CL",
@@ -4067,7 +4132,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 79350.0,
     "singleSpawnPointY": -20055.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_O_ER": {
     "name": "Cay_O_ER",
@@ -4128,7 +4194,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 69930.0,
     "singleSpawnPointY": -23608.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 4000.0
   },
   "Cay_O_WR": {
     "name": "Cay_O_WR",
@@ -4189,7 +4256,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 77789.0,
     "singleSpawnPointY": -7630.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4000.0
   },
   "Cay_O_CL": {
     "name": "Cay_O_CL",
@@ -4246,7 +4314,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 69945.0,
     "singleSpawnPointY": -23463.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 4000.0
   },
   "Cay_L_WR_B": {
     "name": "Cay_L_WR_B",
@@ -4307,7 +4376,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 64586.0,
     "singleSpawnPointY": 25566.0,
-    "singleSpawnPointZ": 1750.0
+    "singleSpawnPointZ": 1750.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Mnt_A_ET": {
     "name": "Mnt_A_ET",
@@ -4365,7 +4435,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 27992.0,
     "singleSpawnPointY": 25147.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_A_WR": {
     "name": "Mnt_A_WR",
@@ -4424,7 +4495,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_A_WU": {
     "name": "Mnt_A_WU",
@@ -4483,7 +4555,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_A_CL": {
     "name": "Mnt_A_CL",
@@ -4542,7 +4615,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 26732.0,
     "singleSpawnPointY": 27966.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_B_ET": {
     "name": "Mnt_B_ET",
@@ -4607,7 +4681,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_B_WR": {
     "name": "Mnt_B_WR",
@@ -4669,7 +4744,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_B_CL": {
     "name": "Mnt_B_CL",
@@ -4726,7 +4802,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 35872.0,
     "singleSpawnPointY": -41309.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_C_ET": {
     "name": "Mnt_C_ET",
@@ -4782,7 +4859,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 5436.0,
     "singleSpawnPointY": 5816.0,
-    "singleSpawnPointZ": 600.0
+    "singleSpawnPointZ": 600.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_ET_B": {
     "name": "Mnt_C_ET_B",
@@ -4843,7 +4921,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 5568.0,
     "singleSpawnPointY": 2861.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_ET_C": {
     "name": "Mnt_C_ET_C",
@@ -4901,7 +4980,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 5046.0,
     "singleSpawnPointY": 5197.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_ET_D": {
     "name": "Mnt_C_ET_D",
@@ -4959,7 +5039,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -1565.0,
     "singleSpawnPointY": 9575.0,
-    "singleSpawnPointZ": 650.0
+    "singleSpawnPointZ": 650.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_WR": {
     "name": "Mnt_C_WR",
@@ -5018,7 +5099,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -2957.0,
     "singleSpawnPointY": 9961.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_WR_B": {
     "name": "Mnt_C_WR_B",
@@ -5077,7 +5159,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -2470.0,
     "singleSpawnPointY": 6934.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_WR_C": {
     "name": "Mnt_C_WR_C",
@@ -5133,7 +5216,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -1171.0,
     "singleSpawnPointY": -6110.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_WU": {
     "name": "Mnt_C_WU",
@@ -5192,7 +5276,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -6090.0,
     "singleSpawnPointY": -12514.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_CL": {
     "name": "Mnt_C_CL",
@@ -5249,7 +5334,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 11567.0,
     "singleSpawnPointY": 1872.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_C_CL_B": {
     "name": "Mnt_C_CL_B",
@@ -5308,7 +5394,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 7318.0,
     "singleSpawnPointY": 4947.0,
-    "singleSpawnPointZ": 950.0
+    "singleSpawnPointZ": 950.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_ER": {
     "name": "Mnt_D_ER",
@@ -5382,7 +5469,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -9768.0,
     "singleSpawnPointY": 2111.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_ET": {
     "name": "Mnt_D_ET",
@@ -5444,7 +5532,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10307.0,
     "singleSpawnPointY": 1489.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_ET_B": {
     "name": "Mnt_D_ET_B",
@@ -5507,7 +5596,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10307.0,
     "singleSpawnPointY": 1489.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_WR": {
     "name": "Mnt_D_WR",
@@ -5571,7 +5661,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10535.0,
     "singleSpawnPointY": 1500.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_WR_B": {
     "name": "Mnt_D_WR_B",
@@ -5630,7 +5721,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -10535.0,
     "singleSpawnPointY": 1500.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_WU": {
     "name": "Mnt_D_WU",
@@ -5702,7 +5794,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -13322.0,
     "singleSpawnPointY": 3902.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_CL": {
     "name": "Mnt_D_CL",
@@ -5759,7 +5852,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -9250.0,
     "singleSpawnPointY": 2167.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_ER": {
     "name": "Mnt_E_ER",
@@ -5833,7 +5927,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18831.0,
     "singleSpawnPointY": -15789.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_ET": {
     "name": "Mnt_E_ET",
@@ -5899,7 +5994,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18336.0,
     "singleSpawnPointY": -16733.0,
-    "singleSpawnPointZ": 950.0
+    "singleSpawnPointZ": 950.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_ET_B": {
     "name": "Mnt_E_ET_B",
@@ -5966,7 +6062,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18336.0,
     "singleSpawnPointY": -16733.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_ET_C": {
     "name": "Mnt_E_ET_C",
@@ -6030,7 +6127,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -18449.0,
     "singleSpawnPointY": -17645.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_ET_D": {
     "name": "Mnt_E_ET_D",
@@ -6093,7 +6191,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -21286.0,
     "singleSpawnPointY": -16778.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_WR": {
     "name": "Mnt_E_WR",
@@ -6164,7 +6263,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12193.0,
     "singleSpawnPointY": -23779.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_WU": {
     "name": "Mnt_E_WU",
@@ -6235,7 +6335,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11673.0,
     "singleSpawnPointY": -26479.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CL": {
     "name": "Mnt_E_CL",
@@ -6290,7 +6391,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -19125.0,
     "singleSpawnPointY": -3408.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_F_ER": {
     "name": "Mnt_F_ER",
@@ -6356,7 +6458,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 8570.0,
     "singleSpawnPointY": -10052.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_ET": {
     "name": "Mnt_F_ET",
@@ -6415,7 +6518,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 7753.0,
     "singleSpawnPointY": -9530.0,
-    "singleSpawnPointZ": 600.0
+    "singleSpawnPointZ": 600.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_ET_B": {
     "name": "Mnt_F_ET_B",
@@ -6478,7 +6582,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 26908.0,
     "singleSpawnPointY": 18830.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_ET_C": {
     "name": "Mnt_F_ET_C",
@@ -6543,7 +6648,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 19252.0,
     "singleSpawnPointY": 18712.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_ET_D": {
     "name": "Mnt_F_ET_D",
@@ -6603,7 +6709,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 19002.0,
     "singleSpawnPointY": 17543.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_WR": {
     "name": "Mnt_F_WR",
@@ -6669,7 +6776,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 15695.0,
     "singleSpawnPointY": 16573.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_WR_B": {
     "name": "Mnt_F_WR_B",
@@ -6732,7 +6840,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_WR_C": {
     "name": "Mnt_F_WR_C",
@@ -6791,7 +6900,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_WR_D": {
     "name": "Mnt_F_WR_D",
@@ -6860,7 +6970,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_CL": {
     "name": "Mnt_F_CL",
@@ -6918,7 +7029,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 22519.0,
     "singleSpawnPointY": 19362.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_CL_B": {
     "name": "Mnt_F_CL_B",
@@ -6978,7 +7090,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 21544.0,
     "singleSpawnPointY": 18253.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_G_ET": {
     "name": "Mnt_G_ET",
@@ -7049,7 +7162,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -33998.0,
     "singleSpawnPointY": -8476.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_G_WR": {
     "name": "Mnt_G_WR",
@@ -7126,7 +7240,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -104325.0,
     "singleSpawnPointY": -66325.0,
-    "singleSpawnPointZ": 1450.0
+    "singleSpawnPointZ": 1450.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_G_WR_B": {
     "name": "Mnt_G_WR_B",
@@ -7195,7 +7310,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -104325.0,
     "singleSpawnPointY": -66325.0,
-    "singleSpawnPointZ": 1450.0
+    "singleSpawnPointZ": 1450.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_H_ET": {
     "name": "Mnt_H_ET",
@@ -7265,7 +7381,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -78144.0,
     "singleSpawnPointY": 60586.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_H_WR": {
     "name": "Mnt_H_WR",
@@ -7335,7 +7452,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -81749.0,
     "singleSpawnPointY": 53670.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_H_CL": {
     "name": "Mnt_H_CL",
@@ -7403,7 +7521,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -75612.0,
     "singleSpawnPointY": 69819.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_I_ER": {
     "name": "Mnt_I_ER",
@@ -7467,7 +7586,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_I_CL": {
     "name": "Mnt_I_CL",
@@ -7551,7 +7671,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_J_ET": {
     "name": "Mnt_J_ET",
@@ -7636,7 +7757,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 38982.0,
     "singleSpawnPointY": -44620.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_ET_B": {
     "name": "Mnt_J_ET_B",
@@ -7703,7 +7825,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 38672.0,
     "singleSpawnPointY": -45535.0,
-    "singleSpawnPointZ": 650.0
+    "singleSpawnPointZ": 650.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_WR": {
     "name": "Mnt_J_WR",
@@ -7771,7 +7894,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32980.0,
     "singleSpawnPointY": -47775.0,
-    "singleSpawnPointZ": 650.0
+    "singleSpawnPointZ": 650.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_CL": {
     "name": "Mnt_J_CL",
@@ -7829,7 +7953,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 48988.0,
     "singleSpawnPointY": 10302.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_K_ER": {
     "name": "Mnt_K_ER",
@@ -7893,7 +8018,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_K_ET": {
     "name": "Mnt_K_ET",
@@ -7959,7 +8085,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_K_ET_B": {
     "name": "Mnt_K_ET_B",
@@ -8021,7 +8148,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_K_WR": {
     "name": "Mnt_K_WR",
@@ -8089,7 +8217,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32756.0,
     "singleSpawnPointY": -39844.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_K_CL": {
     "name": "Mnt_K_CL",
@@ -8145,7 +8274,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_L_WR": {
     "name": "Mnt_L_WR",
@@ -8204,7 +8334,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_L_CL": {
     "name": "Mnt_L_CL",
@@ -8262,7 +8393,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 31231.0,
     "singleSpawnPointY": -38689.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_M_ER": {
     "name": "Mnt_M_ER",
@@ -8323,7 +8455,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 43851.0,
     "singleSpawnPointY": -57701.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 5600.0
   },
   "Mnt_M_ET": {
     "name": "Mnt_M_ET",
@@ -8382,7 +8515,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 43516.0,
     "singleSpawnPointY": -51527.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 5600.0
   },
   "Mnt_M_WR": {
     "name": "Mnt_M_WR",
@@ -8440,7 +8574,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 43516.0,
     "singleSpawnPointY": -51527.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 5600.0
   },
   "Mnt_M_CL": {
     "name": "Mnt_M_CL",
@@ -8497,7 +8632,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 33610.0,
     "singleSpawnPointY": -58177.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 5600.0
   },
   "Mnt_N_ER": {
     "name": "Mnt_N_ER",
@@ -8557,7 +8693,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 29822.0,
     "singleSpawnPointY": -22411.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_N_ER_B": {
     "name": "Mnt_N_ER_B",
@@ -8617,7 +8754,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 30285.0,
     "singleSpawnPointY": -23272.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_N_ET": {
     "name": "Mnt_N_ET",
@@ -8680,7 +8818,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 742567.0,
     "singleSpawnPointY": -24430.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_N_WR": {
     "name": "Mnt_N_WR",
@@ -8740,7 +8879,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74849.0,
     "singleSpawnPointY": -21563.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_O_ER": {
     "name": "Mnt_O_ER",
@@ -8799,7 +8939,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -71470.0,
     "singleSpawnPointY": 25385.0,
-    "singleSpawnPointZ": 1450.0
+    "singleSpawnPointZ": 1450.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_O_ER_B": {
     "name": "Mnt_O_ER_B",
@@ -8857,7 +8998,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72383.0,
     "singleSpawnPointY": 25397.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_O_ET": {
     "name": "Mnt_O_ET",
@@ -8919,7 +9061,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72548.0,
     "singleSpawnPointY": 24244.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_O_WR": {
     "name": "Mnt_O_WR",
@@ -8978,7 +9121,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72896.0,
     "singleSpawnPointY": 18802.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_Q_ER": {
     "name": "Mnt_Q_ER",
@@ -9039,7 +9183,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -135050.0,
     "singleSpawnPointY": -57533.0,
-    "singleSpawnPointZ": 1212.0
+    "singleSpawnPointZ": 1212.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_R_WU": {
     "name": "Mnt_R_WU",
@@ -9100,7 +9245,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -86614.0,
     "singleSpawnPointY": -31482.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_R_WU_B": {
     "name": "Mnt_R_WU_B",
@@ -9159,7 +9305,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -86614.0,
     "singleSpawnPointY": -31482.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_R_WU_C": {
     "name": "Mnt_R_WU_C",
@@ -9220,7 +9367,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -88345.0,
     "singleSpawnPointY": -10457.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_R_WU_D": {
     "name": "Mnt_R_WU_D",
@@ -9279,7 +9427,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -88345.0,
     "singleSpawnPointY": -10457.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_F_WU": {
     "name": "Mnt_F_WU",
@@ -9349,7 +9498,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 15474.0,
     "singleSpawnPointY": 16754.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_X_WR_PVE": {
     "name": "Mnt_X_WR_PVE",
@@ -9407,7 +9557,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 90060.0,
     "singleSpawnPointY": 23649.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 9800.0
   },
   "Mnt_O_CL": {
     "name": "Mnt_O_CL",
@@ -9465,7 +9616,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -66502.0,
     "singleSpawnPointY": 28764.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_W_WU": {
     "name": "Mnt_W_WU",
@@ -9524,7 +9676,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_W_WU_B": {
     "name": "Mnt_W_WU_B",
@@ -9583,7 +9736,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_W_WR": {
     "name": "Mnt_W_WR",
@@ -9653,7 +9807,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_J_WT_E": {
     "name": "Mnt_J_WT_E",
@@ -9723,7 +9878,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_X_WU": {
     "name": "Mnt_X_WU",
@@ -9790,7 +9946,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 90060.0,
     "singleSpawnPointY": 23649.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 9800.0
   },
   "Mnt_W_WR_B": {
     "name": "Mnt_W_WR_B",
@@ -9854,7 +10011,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Cay_H_WR_E": {
     "name": "Cay_H_WR_E",
@@ -9913,7 +10071,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -1809.0,
     "singleSpawnPointY": -34331.0,
-    "singleSpawnPointZ": 1850.0
+    "singleSpawnPointZ": 1850.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Mnt_G_ET_PVE": {
     "name": "Mnt_G_ET_PVE",
@@ -9973,7 +10132,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -33998.0,
     "singleSpawnPointY": -8476.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_A_WU_E": {
     "name": "Mnt_A_WU_E",
@@ -10036,7 +10196,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_F_ET_E": {
     "name": "Mnt_F_ET_E",
@@ -10100,7 +10261,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 16888.0,
     "singleSpawnPointY": 17710.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_L_CH_E": {
     "name": "Mnt_L_CH_E",
@@ -10158,7 +10320,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 33288.0,
     "singleSpawnPointY": -39187.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_U_ER_PVE": {
     "name": "Mnt_U_ER_PVE",
@@ -10219,7 +10382,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 6841.0,
     "singleSpawnPointY": -85496.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 6200.0
   },
   "Mnt_Y_WU_PVE": {
     "name": "Mnt_Y_WU_PVE",
@@ -10277,7 +10441,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 97872.0,
     "singleSpawnPointY": 22845.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_S_WT_PVE": {
     "name": "Mnt_S_WT_PVE",
@@ -10344,7 +10509,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 85838.0,
     "singleSpawnPointY": -74676.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 7200.0
   },
   "Mnt_A_CH": {
     "name": "Mnt_A_CH",
@@ -10401,7 +10567,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 27225.0,
     "singleSpawnPointY": 27937.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_R_CL_PVE": {
     "name": "Mnt_R_CL_PVE",
@@ -10453,7 +10620,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -86929.0,
     "singleSpawnPointY": -35443.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_R_CH_PVE": {
     "name": "Mnt_R_CH_PVE",
@@ -10504,7 +10672,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -85488.0,
     "singleSpawnPointY": -35397.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Mnt_J_CH": {
     "name": "Mnt_J_CH",
@@ -10570,7 +10739,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 49234.0,
     "singleSpawnPointY": 10529.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_K_CH": {
     "name": "Mnt_K_CH",
@@ -10628,7 +10798,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 31451.0,
     "singleSpawnPointY": -38980.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Cay_C_EE_PVE": {
     "name": "Cay_C_EE_PVE",
@@ -10691,7 +10862,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 70544.0,
     "singleSpawnPointY": 64169.0,
-    "singleSpawnPointZ": 1900.0
+    "singleSpawnPointZ": 1900.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Cay_J_EE_E": {
     "name": "Cay_J_EE_E",
@@ -10752,7 +10924,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -25466.0,
     "singleSpawnPointY": 58513.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Mnt_Y_CP": {
     "name": "Mnt_Y_CP",
@@ -10828,7 +11001,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Cay_A_EE": {
     "name": "Cay_A_EE",
@@ -10889,7 +11063,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 31625.0,
     "singleSpawnPointY": 16092.0,
-    "singleSpawnPointZ": 1605.0
+    "singleSpawnPointZ": 1605.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Mnt_M_CH": {
     "name": "Mnt_M_CH",
@@ -10952,7 +11127,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 33610.0,
     "singleSpawnPointY": -58177.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 5600.0
   },
   "Mnt_N_CH": {
     "name": "Mnt_N_CH",
@@ -11011,7 +11187,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 34225.0,
     "singleSpawnPointY": -24772.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_C_EE": {
     "name": "Mnt_C_EE",
@@ -11070,7 +11247,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 18514.0,
     "singleSpawnPointY": -28168.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CH": {
     "name": "Mnt_E_CH",
@@ -11130,7 +11308,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12017.0,
     "singleSpawnPointY": 4456.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_F_CH": {
     "name": "Mnt_F_CH",
@@ -11190,7 +11369,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 9150.0,
     "singleSpawnPointY": -11599.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_L_CH_B": {
     "name": "Mnt_L_CH_B",
@@ -11254,7 +11434,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 33371.0,
     "singleSpawnPointY": -39852.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_I_CH": {
     "name": "Mnt_I_CH",
@@ -11313,7 +11494,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 73729.0,
     "singleSpawnPointY": 2733.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Cay_E_EE": {
     "name": "Cay_E_EE",
@@ -11380,7 +11562,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_F_EE": {
     "name": "Cay_F_EE",
@@ -11444,7 +11627,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_G_EE": {
     "name": "Cay_G_EE",
@@ -11503,7 +11687,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -38866.0,
     "singleSpawnPointY": -23095.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4100.0
   },
   "Mnt_Y_CP_B": {
     "name": "Mnt_Y_CP_B",
@@ -11560,7 +11745,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_Y_CP_C": {
     "name": "Mnt_Y_CP_C",
@@ -11631,7 +11817,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_Y_CP_D": {
     "name": "Mnt_Y_CP_D",
@@ -11698,7 +11885,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_J_CP": {
     "name": "Mnt_J_CP",
@@ -11761,7 +11949,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 51592.0,
     "singleSpawnPointY": -32093.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_CP_B": {
     "name": "Mnt_J_CP_B",
@@ -11819,7 +12008,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 51592.0,
     "singleSpawnPointY": -32093.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_CP_C": {
     "name": "Mnt_J_CP_C",
@@ -11888,7 +12078,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 46547.0,
     "singleSpawnPointY": -42144.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_CP_D": {
     "name": "Mnt_J_CP_D",
@@ -11947,7 +12138,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 46547.0,
     "singleSpawnPointY": -42144.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Cay_H_EE": {
     "name": "Cay_H_EE",
@@ -12006,7 +12198,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -7988.0,
     "singleSpawnPointY": -38719.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Mnt_C_CH": {
     "name": "Mnt_C_CH",
@@ -12061,7 +12254,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 23908.0,
     "singleSpawnPointY": -24352.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_CH": {
     "name": "Mnt_D_CH",
@@ -12128,7 +12322,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -9250.0,
     "singleSpawnPointY": 2167.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CP": {
     "name": "Mnt_E_CP",
@@ -12186,7 +12381,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -20618.0,
     "singleSpawnPointY": -13464.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CP_B": {
     "name": "Mnt_E_CP_B",
@@ -12257,7 +12453,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -20284.0,
     "singleSpawnPointY": -12623.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CP_C": {
     "name": "Mnt_E_CP_C",
@@ -12318,7 +12515,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12429.0,
     "singleSpawnPointY": -24620.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_E_CP_D": {
     "name": "Mnt_E_CP_D",
@@ -12382,7 +12580,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -12837.0,
     "singleSpawnPointY": -25540.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_H_CP": {
     "name": "Mnt_H_CP",
@@ -12457,7 +12656,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -76900.0,
     "singleSpawnPointY": 57778.0,
-    "singleSpawnPointZ": 1900.0
+    "singleSpawnPointZ": 1900.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_H_CP_B": {
     "name": "Mnt_H_CP_B",
@@ -12550,7 +12750,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -76298.0,
     "singleSpawnPointY": 57864.0,
-    "singleSpawnPointZ": 1850.0
+    "singleSpawnPointZ": 1850.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_H_CP_C": {
     "name": "Mnt_H_CP_C",
@@ -12630,7 +12831,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -76298.0,
     "singleSpawnPointY": 57864.0,
-    "singleSpawnPointZ": 1850.0
+    "singleSpawnPointZ": 1850.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_H_CP_D": {
     "name": "Mnt_H_CP_D",
@@ -12700,7 +12902,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -78997.0,
     "singleSpawnPointY": 56574.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_A_CH_B": {
     "name": "Mnt_A_CH_B",
@@ -12755,7 +12958,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 26732.0,
     "singleSpawnPointY": 27966.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_C_CH_B": {
     "name": "Mnt_C_CH_B",
@@ -12811,7 +13015,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 10285.0,
     "singleSpawnPointY": 3880.0,
-    "singleSpawnPointZ": 950.0
+    "singleSpawnPointZ": 950.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Cay_J_EE": {
     "name": "Cay_J_EE",
@@ -12872,7 +13077,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -25466.0,
     "singleSpawnPointY": 28513.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Mnt_G_CH": {
     "name": "Mnt_G_CH",
@@ -12953,7 +13159,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 6015.0,
     "singleSpawnPointY": 95323.0,
-    "singleSpawnPointZ": 2700.0
+    "singleSpawnPointZ": 2700.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Cay_K_EE": {
     "name": "Cay_K_EE",
@@ -13014,7 +13221,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -50125.0,
     "singleSpawnPointY": 34564.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_L_EE": {
     "name": "Cay_L_EE",
@@ -13078,7 +13286,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 18599.0,
     "singleSpawnPointY": -23723.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Mnt_O_CH": {
     "name": "Mnt_O_CH",
@@ -13138,7 +13347,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -62217.0,
     "singleSpawnPointY": 30385.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_J_CH_B": {
     "name": "Mnt_J_CH_B",
@@ -13194,7 +13404,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 49173.0,
     "singleSpawnPointY": 10266.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_T_CP": {
     "name": "Mnt_T_CP",
@@ -13270,7 +13481,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 5800.0
   },
   "Mnt_T_CP_B": {
     "name": "Mnt_T_CP_B",
@@ -13338,7 +13550,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 5800.0
   },
   "Mnt_T_CP_C": {
     "name": "Mnt_T_CP_C",
@@ -13411,7 +13624,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 5800.0
   },
   "Mnt_T_CP_D": {
     "name": "Mnt_T_CP_D",
@@ -13471,7 +13685,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
-    "singleSpawnPointZ": 1650.0
+    "singleSpawnPointZ": 1650.0,
+    "maxIslandClaimFlagZ": 5800.0
   },
   "Mnt_A_WU_B": {
     "name": "Mnt_A_WU_B",
@@ -13531,7 +13746,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_A_WU_C": {
     "name": "Mnt_A_WU_C",
@@ -13591,7 +13807,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Mnt_J_WU": {
     "name": "Mnt_J_WU",
@@ -13656,7 +13873,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_WU_B": {
     "name": "Mnt_J_WU_B",
@@ -13720,7 +13938,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_J_WU_C": {
     "name": "Mnt_J_WU_C",
@@ -13787,7 +14006,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Cay_E_EE_B": {
     "name": "Cay_E_EE_B",
@@ -13852,7 +14072,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_F_EE_B": {
     "name": "Cay_F_EE_B",
@@ -13918,7 +14139,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_K_EE_B": {
     "name": "Cay_K_EE_B",
@@ -13980,7 +14202,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 7443.0,
     "singleSpawnPointY": 71713.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 3600.0
   },
   "Cay_I_EE": {
     "name": "Cay_I_EE",
@@ -14040,7 +14263,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11251.0,
     "singleSpawnPointY": -56201.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_O_EE": {
     "name": "Cay_O_EE",
@@ -14101,7 +14325,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 69893.0,
     "singleSpawnPointY": -21129.0,
-    "singleSpawnPointZ": 1900.0
+    "singleSpawnPointZ": 1900.0,
+    "maxIslandClaimFlagZ": 4000.0
   },
   "Cay_N_EE": {
     "name": "Cay_N_EE",
@@ -14162,7 +14387,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 103043.0,
     "singleSpawnPointY": -23491.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 4500.0
   },
   "Cay_A_EE_B": {
     "name": "Cay_A_EE_B",
@@ -14228,7 +14454,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 17870.0,
     "singleSpawnPointY": 9573.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Cay_I_EE_B": {
     "name": "Cay_I_EE_B",
@@ -14290,7 +14517,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -8518.0,
     "singleSpawnPointY": -55418.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 4200.0
   },
   "Mnt_Z_CH": {
     "name": "Mnt_Z_CH",
@@ -14381,7 +14609,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 112030.0,
     "singleSpawnPointY": 79643.0,
-    "singleSpawnPointZ": 550.0
+    "singleSpawnPointZ": 550.0,
+    "maxIslandClaimFlagZ": 12300.0
   },
   "Islet_A_WT": {
     "name": "Islet_A_WT",
@@ -14425,7 +14654,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -17445.0,
     "singleSpawnPointY": 11339.0,
-    "singleSpawnPointZ": 550.0
+    "singleSpawnPointZ": 550.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Islet_A_WT_B": {
     "name": "Islet_A_WT_B",
@@ -14469,7 +14699,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -16172.0,
     "singleSpawnPointY": 9072.0,
-    "singleSpawnPointZ": 750.0
+    "singleSpawnPointZ": 750.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Islet_A_WT_C": {
     "name": "Islet_A_WT_C",
@@ -14512,7 +14743,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -15682.0,
     "singleSpawnPointY": 8920.0,
-    "singleSpawnPointZ": 600.0
+    "singleSpawnPointZ": 600.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Islet_A_ER": {
     "name": "Islet_A_ER",
@@ -14556,7 +14788,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
-    "singleSpawnPointZ": 780.0
+    "singleSpawnPointZ": 780.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Islet_A_ER_B": {
     "name": "Islet_A_ER_B",
@@ -14599,7 +14832,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
-    "singleSpawnPointZ": 780.0
+    "singleSpawnPointZ": 780.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Islet_A_ER_C": {
     "name": "Islet_A_ER_C",
@@ -14643,7 +14877,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
-    "singleSpawnPointZ": 780.0
+    "singleSpawnPointZ": 780.0,
+    "maxIslandClaimFlagZ": 3100.0
   },
   "Mnt_T_WU": {
     "name": "Mnt_T_WU",
@@ -14726,7 +14961,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -8348.0,
     "singleSpawnPointY": -87212.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 5800.0
   },
   "Mnt_I_CP": {
     "name": "Mnt_I_CP",
@@ -14794,7 +15030,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Ice_A_PO": {
     "name": "Ice_A_PO",
@@ -14823,7 +15060,8 @@
     "islandPoints": 0,
     "singleSpawnPointX": -26150.0,
     "singleSpawnPointY": -25789.0,
-    "singleSpawnPointZ": 6600.0
+    "singleSpawnPointZ": 6600.0,
+    "maxIslandClaimFlagZ": 25000.0
   },
   "Ice_B_PO": {
     "name": "Ice_B_PO",
@@ -14852,7 +15090,8 @@
     "islandPoints": 0,
     "singleSpawnPointX": -10304.0,
     "singleSpawnPointY": 7879.0,
-    "singleSpawnPointZ": 3850.0
+    "singleSpawnPointZ": 3850.0,
+    "maxIslandClaimFlagZ": 16000.0
   },
   "Ice_C_PO": {
     "name": "Ice_C_PO",
@@ -14881,7 +15120,8 @@
     "islandPoints": 0,
     "singleSpawnPointX": -9444.0,
     "singleSpawnPointY": -14012.0,
-    "singleSpawnPointZ": 2880.0
+    "singleSpawnPointZ": 2880.0,
+    "maxIslandClaimFlagZ": 10000.0
   },
   "Ice_D_PO": {
     "name": "Ice_D_PO",
@@ -14910,7 +15150,8 @@
     "islandPoints": 0,
     "singleSpawnPointX": 8696.0,
     "singleSpawnPointY": -2323.0,
-    "singleSpawnPointZ": 2880.0
+    "singleSpawnPointZ": 2880.0,
+    "maxIslandClaimFlagZ": 17500.0
   },
   "Ice_E_PO": {
     "name": "Ice_E_PO",
@@ -14939,7 +15180,8 @@
     "islandPoints": 0,
     "singleSpawnPointX": 2729.0,
     "singleSpawnPointY": 3263.0,
-    "singleSpawnPointZ": 7950.0
+    "singleSpawnPointZ": 7950.0,
+    "maxIslandClaimFlagZ": 15500.0
   },
   "Trench_B": {
     "name": "Trench_B",
@@ -15034,7 +15276,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -40731.0,
     "singleSpawnPointY": 1430.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 6400.0
   },
   "Mnt_AB_EU": {
     "name": "Mnt_AB_EU",
@@ -15092,7 +15335,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -82744.0,
     "singleSpawnPointY": -70408.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_AH_EU": {
     "name": "Mnt_AH_EU",
@@ -15153,7 +15397,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 45886.0,
     "singleSpawnPointY": -1637.0,
-    "singleSpawnPointZ": 900.0
+    "singleSpawnPointZ": 900.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AI_EU": {
     "name": "Mnt_AI_EU",
@@ -15213,7 +15458,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 3962.0,
     "singleSpawnPointY": -68404.0,
-    "singleSpawnPointZ": 1300.0
+    "singleSpawnPointZ": 1300.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_AJ_EU": {
     "name": "Mnt_AJ_EU",
@@ -15274,7 +15520,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 57663.0,
     "singleSpawnPointY": -29549.0,
-    "singleSpawnPointZ": 1750.0
+    "singleSpawnPointZ": 1750.0,
+    "maxIslandClaimFlagZ": 5400.0
   },
   "Mnt_AL_EU": {
     "name": "Mnt_AL_EU",
@@ -15340,7 +15587,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 25313.0,
     "singleSpawnPointY": -92004.0,
-    "singleSpawnPointZ": 1500.0
+    "singleSpawnPointZ": 1500.0,
+    "maxIslandClaimFlagZ": 6700.0
   },
   "Mnt_AQ_EU": {
     "name": "Mnt_AQ_EU",
@@ -15399,7 +15647,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 31676.0,
     "singleSpawnPointY": -96836.0,
-    "singleSpawnPointZ": 800.0
+    "singleSpawnPointZ": 800.0,
+    "maxIslandClaimFlagZ": 5900.0
   },
   "Mnt_AW_EU": {
     "name": "Mnt_AW_EU",
@@ -15461,7 +15710,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 4350.0,
     "singleSpawnPointY": -56265.0,
-    "singleSpawnPointZ": 1550.0
+    "singleSpawnPointZ": 1550.0,
+    "maxIslandClaimFlagZ": 5500.0
   },
   "Mnt_AK_EU": {
     "name": "Mnt_AK_EU",
@@ -15523,7 +15773,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 57663.0,
     "singleSpawnPointY": -29549.0,
-    "singleSpawnPointZ": 1700.0
+    "singleSpawnPointZ": 1700.0,
+    "maxIslandClaimFlagZ": 6200.0
   },
   "Mnt_AE_EU": {
     "name": "Mnt_AE_EU",
@@ -15581,7 +15832,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 61749.0,
     "singleSpawnPointY": -2895.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 8400.0
   },
   "Mnt_AC_EU": {
     "name": "Mnt_AC_EU",
@@ -15640,7 +15892,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -97525.0,
     "singleSpawnPointY": -84050.0,
-    "singleSpawnPointZ": 1100.0
+    "singleSpawnPointZ": 1100.0,
+    "maxIslandClaimFlagZ": 9700.0
   },
   "Mnt_AD_EU": {
     "name": "Mnt_AD_EU",
@@ -15700,7 +15953,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -47970.0,
     "singleSpawnPointY": -50560.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AG_EU": {
     "name": "Mnt_AG_EU",
@@ -15761,7 +16015,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 57660.0,
     "singleSpawnPointY": -47.0,
-    "singleSpawnPointZ": 1400.0
+    "singleSpawnPointZ": 1400.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AA_EU_B": {
     "name": "Mnt_AA_EU_B",
@@ -15821,7 +16076,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -40731.0,
     "singleSpawnPointY": 1430.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 6400.0
   },
   "Mnt_F_EU": {
     "name": "Mnt_F_EU",
@@ -15881,7 +16137,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 15710.0,
     "singleSpawnPointY": 15966.0,
-    "singleSpawnPointZ": 1150.0
+    "singleSpawnPointZ": 1150.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_W_EU_B": {
     "name": "Mnt_W_EU_B",
@@ -15950,7 +16207,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 95281.0,
     "singleSpawnPointY": 34474.0,
-    "singleSpawnPointZ": 700.0
+    "singleSpawnPointZ": 700.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_S_EU": {
     "name": "Mnt_S_EU",
@@ -16024,7 +16282,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 73045.0,
     "singleSpawnPointY": -51771.0,
-    "singleSpawnPointZ": 600.0
+    "singleSpawnPointZ": 600.0,
+    "maxIslandClaimFlagZ": 7200.0
   },
   "Mnt_Y_EU_C": {
     "name": "Mnt_Y_EU_C",
@@ -16089,7 +16348,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 94834.0,
     "singleSpawnPointY": 23590.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_EU_E": {
     "name": "Mnt_F_EU_E",
@@ -16160,7 +16420,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 15695.0,
     "singleSpawnPointY": 16573.0,
-    "singleSpawnPointZ": 1050.0
+    "singleSpawnPointZ": 1050.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_Y_EU_PVE": {
     "name": "Mnt_Y_EU_PVE",
@@ -16219,7 +16480,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 97872.0,
     "singleSpawnPointY": 22845.0,
-    "singleSpawnPointZ": 1200.0
+    "singleSpawnPointZ": 1200.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_H_CP_Cave": {
     "name": "Mnt_H_CP_Cave",
@@ -16300,7 +16562,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": -77279.0,
     "singleSpawnPointY": 57910.0,
-    "singleSpawnPointZ": 1950.0
+    "singleSpawnPointZ": 1950.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_W_EQ": {
     "name": "Mnt_W_EQ",
@@ -16363,7 +16626,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -72659.0,
     "singleSpawnPointY": -2174.0,
-    "singleSpawnPointZ": 1250.0
+    "singleSpawnPointZ": 1250.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_AW_BO": {
     "name": "Mnt_AW_BO",
@@ -16422,7 +16686,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 66524.0,
     "singleSpawnPointY": -35682.0,
-    "singleSpawnPointZ": 950.0
+    "singleSpawnPointZ": 950.0,
+    "maxIslandClaimFlagZ": 5500.0
   },
   "Mnt_AV_BO": {
     "name": "Mnt_AV_BO",
@@ -16483,7 +16748,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -25678.0,
     "singleSpawnPointY": -12105.0,
-    "singleSpawnPointZ": 1350.0
+    "singleSpawnPointZ": 1350.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AB_BO": {
     "name": "Mnt_AB_BO",
@@ -16541,7 +16807,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 92063.0,
     "singleSpawnPointY": 79104.0,
-    "singleSpawnPointZ": 850.0
+    "singleSpawnPointZ": 850.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_AE_BO": {
     "name": "Mnt_AE_BO",
@@ -16602,7 +16869,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 20298.0,
     "singleSpawnPointY": 58147.0,
-    "singleSpawnPointZ": 950.0
+    "singleSpawnPointZ": 950.0,
+    "maxIslandClaimFlagZ": 8400.0
   },
   "Mnt_AO_CU": {
     "name": "Mnt_AO_CU",
@@ -16662,7 +16930,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 7600.0
   },
   "Mnt_AA_CU": {
     "name": "Mnt_AA_CU",
@@ -16720,7 +16989,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6400.0
   },
   "Mnt_AB_CU": {
     "name": "Mnt_AB_CU",
@@ -16786,7 +17056,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_AM_CU": {
     "name": "Mnt_AM_CU",
@@ -16845,7 +17116,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AG_CU": {
     "name": "Mnt_AG_CU",
@@ -16903,7 +17175,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AL_CU": {
     "name": "Mnt_AL_CU",
@@ -16962,7 +17235,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6700.0
   },
   "Mnt_AK_CU": {
     "name": "Mnt_AK_CU",
@@ -17020,7 +17294,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6200.0
   },
   "Mnt_AD_CU": {
     "name": "Mnt_AD_CU",
@@ -17078,7 +17353,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AF_CU": {
     "name": "Mnt_AF_CU",
@@ -17139,7 +17415,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AN_CU": {
     "name": "Mnt_AN_CU",
@@ -17199,7 +17476,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_AH_CU": {
     "name": "Mnt_AH_CU",
@@ -17257,7 +17535,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AJ_CU": {
     "name": "Mnt_AJ_CU",
@@ -17313,7 +17592,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5400.0
   },
   "Mnt_AW_CU": {
     "name": "Mnt_AW_CU",
@@ -17371,7 +17651,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5500.0
   },
   "Mnt_AQ_CU": {
     "name": "Mnt_AQ_CU",
@@ -17433,7 +17714,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5900.0
   },
   "Mnt_AR_CU": {
     "name": "Mnt_AR_CU",
@@ -17492,7 +17774,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6600.0
   },
   "Mnt_AP_CU": {
     "name": "Mnt_AP_CU",
@@ -17552,7 +17835,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_AI_CU": {
     "name": "Mnt_AI_CU",
@@ -17611,7 +17895,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_AU_CU": {
     "name": "Mnt_AU_CU",
@@ -17674,7 +17959,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 7800.0
   },
   "Mnt_AF_CU_B": {
     "name": "Mnt_AF_CU_B",
@@ -17734,7 +18020,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AR_EU_B": {
     "name": "Mnt_AR_EU_B",
@@ -17799,7 +18086,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6600.0
   },
   "Mnt_AR_EU": {
     "name": "Mnt_AR_EU",
@@ -17861,7 +18149,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6600.0
   },
   "Mnt_AX_EU": {
     "name": "Mnt_AX_EU",
@@ -17921,7 +18210,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_AM_EU": {
     "name": "Mnt_AM_EU",
@@ -17981,7 +18271,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AU_EU": {
     "name": "Mnt_AU_EU",
@@ -18041,7 +18332,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 7800.0
   },
   "Mnt_AH_EU_B": {
     "name": "Mnt_AH_EU_B",
@@ -18101,7 +18393,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AT_EU": {
     "name": "Mnt_AT_EU",
@@ -18161,7 +18454,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 8500.0
   },
   "Mnt_AF_EU": {
     "name": "Mnt_AF_EU",
@@ -18221,7 +18515,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AV_EU": {
     "name": "Mnt_AV_EU",
@@ -18282,7 +18577,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AP_EU": {
     "name": "Mnt_AP_EU",
@@ -18343,7 +18639,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_AO_EU": {
     "name": "Mnt_AO_EU",
@@ -18405,7 +18702,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 7600.0
   },
   "Mnt_AN_EU": {
     "name": "Mnt_AN_EU",
@@ -18466,7 +18764,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_U_EU": {
     "name": "Mnt_U_EU",
@@ -18532,7 +18831,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6200.0
   },
   "Mnt_N_EU": {
     "name": "Mnt_N_EU",
@@ -18596,7 +18896,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_X_EU": {
     "name": "Mnt_X_EU",
@@ -18658,7 +18959,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 9800.0
   },
   "Mnt_Y_EU": {
     "name": "Mnt_Y_EU",
@@ -18718,7 +19020,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_AA_EE": {
     "name": "Mnt_AA_EE",
@@ -18779,7 +19082,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6400.0
   },
   "Mnt_AB_EE": {
     "name": "Mnt_AB_EE",
@@ -18840,7 +19144,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_AC_EE": {
     "name": "Mnt_AC_EE",
@@ -18899,7 +19204,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 9700.0
   },
   "Mnt_AD_EE": {
     "name": "Mnt_AD_EE",
@@ -18959,7 +19265,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_G_EU": {
     "name": "Mnt_G_EU",
@@ -19023,7 +19330,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_AB_EU_B": {
     "name": "Mnt_AB_EU_B",
@@ -19083,7 +19391,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_G_CP": {
     "name": "Mnt_G_CP",
@@ -19147,7 +19456,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5000.0
   },
   "Mnt_K_CP": {
     "name": "Mnt_K_CP",
@@ -19207,7 +19517,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_N_CP": {
     "name": "Mnt_N_CP",
@@ -19266,7 +19577,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4600.0
   },
   "Mnt_L_CP": {
     "name": "Mnt_L_CP",
@@ -19325,7 +19637,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_O_CP": {
     "name": "Mnt_O_CP",
@@ -19387,7 +19700,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4400.0
   },
   "Mnt_C_CP": {
     "name": "Mnt_C_CP",
@@ -19441,7 +19755,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_D_CP": {
     "name": "Mnt_D_CP",
@@ -19495,7 +19810,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4700.0
   },
   "Mnt_F_CP": {
     "name": "Mnt_F_CP",
@@ -19549,7 +19865,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_F_CP_B": {
     "name": "Mnt_F_CP_B",
@@ -19604,7 +19921,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_W_CP": {
     "name": "Mnt_W_CP",
@@ -19663,7 +19981,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 7500.0
   },
   "Mnt_AB_CP": {
     "name": "Mnt_AB_CP",
@@ -19723,7 +20042,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6800.0
   },
   "Mnt_AD_CP": {
     "name": "Mnt_AD_CP",
@@ -19783,7 +20103,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_Y_EU_B": {
     "name": "Mnt_Y_EU_B",
@@ -19845,7 +20166,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4800.0
   },
   "Mnt_AV_EU_B": {
     "name": "Mnt_AV_EU_B",
@@ -19906,7 +20228,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_A_WU_D": {
     "name": "Mnt_A_WU_D",
@@ -19964,7 +20287,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
-    "singleSpawnPointZ": 1000.0
+    "singleSpawnPointZ": 1000.0,
+    "maxIslandClaimFlagZ": 6500.0
   },
   "Cay_C_EE_B": {
     "name": "Cay_C_EE_B",
@@ -20027,7 +20351,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 70544.0,
     "singleSpawnPointY": 64169.0,
-    "singleSpawnPointZ": 1900.0
+    "singleSpawnPointZ": 1900.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Cay_E_EE_C": {
     "name": "Cay_E_EE_C",
@@ -20088,7 +20413,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
-    "singleSpawnPointZ": 1600.0
+    "singleSpawnPointZ": 1600.0,
+    "maxIslandClaimFlagZ": 3400.0
   },
   "Cay_H_EE_B": {
     "name": "Cay_H_EE_B",
@@ -20147,7 +20473,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": -7988.0,
     "singleSpawnPointY": -38719.0,
-    "singleSpawnPointZ": 1800.0
+    "singleSpawnPointZ": 1800.0,
+    "maxIslandClaimFlagZ": 3700.0
   },
   "Mnt_AF_EE_B": {
     "name": "Mnt_AF_EE_B",
@@ -20208,7 +20535,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AA_EE_B": {
     "name": "Mnt_AA_EE_B",
@@ -20269,7 +20597,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6400.0
   },
   "Mnt_V_Giant_EE": {
     "name": "Mnt_V_Giant_EE",
@@ -20327,7 +20656,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 8800.0
   },
   "Mnt_AQ_EE": {
     "name": "Mnt_AQ_EE",
@@ -20387,7 +20717,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5900.0
   },
   "Mnt_AJ_EE": {
     "name": "Mnt_AJ_EE",
@@ -20448,7 +20779,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5400.0
   },
   "Mnt_AI_EE_B": {
     "name": "Mnt_AI_EE_B",
@@ -20508,7 +20840,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_AH_EE_B": {
     "name": "Mnt_AH_EE_B",
@@ -20568,7 +20901,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AD_EE_B": {
     "name": "Mnt_AD_EE_B",
@@ -20627,7 +20961,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AN_EE": {
     "name": "Mnt_AN_EE",
@@ -20688,7 +21023,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 8700.0
   },
   "Mnt_AC_EE_B": {
     "name": "Mnt_AC_EE_B",
@@ -20749,7 +21085,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 9700.0
   },
   "Mnt_AP_EE": {
     "name": "Mnt_AP_EE",
@@ -20812,7 +21149,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 4900.0
   },
   "Mnt_AK_EE": {
     "name": "Mnt_AK_EE",
@@ -20877,7 +21215,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 6200.0
   },
   "Mnt_AI_EE": {
     "name": "Mnt_AI_EE",
@@ -20940,7 +21279,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5700.0
   },
   "Mnt_AH_EE": {
     "name": "Mnt_AH_EE",
@@ -21003,7 +21343,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5300.0
   },
   "Mnt_AG_EE": {
     "name": "Mnt_AG_EE",
@@ -21066,7 +21407,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AF_EE": {
     "name": "Mnt_AF_EE",
@@ -21130,7 +21472,8 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5200.0
   },
   "Mnt_AJ_EE_B": {
     "name": "Mnt_AJ_EE_B",
@@ -21194,6 +21537,7 @@
     "islandPoints": 1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "maxIslandClaimFlagZ": 5400.0
   }
 }
