@@ -96,6 +96,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.showPathingGridCheckbox = new System.Windows.Forms.CheckBox();
+            this.GridRowsTxtBox = new System.Windows.Forms.TextBox();
+            this.gridRowsLabel = new System.Windows.Forms.Label();
+            this.GridColumnsTxtBox = new System.Windows.Forms.TextBox();
+            this.gridColumnsLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -295,21 +300,21 @@
             // editSpawnerTemplatesToolStripMenuItem
             // 
             this.editSpawnerTemplatesToolStripMenuItem.Name = "editSpawnerTemplatesToolStripMenuItem";
-            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editSpawnerTemplatesToolStripMenuItem.Text = "Edit Spawner Templates";
             this.editSpawnerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editSpawnerTemplatesToolStripMenuItem_Click);
             // 
             // editAllDiscoveryZonesToolStripMenuItem
             // 
             this.editAllDiscoveryZonesToolStripMenuItem.Name = "editAllDiscoveryZonesToolStripMenuItem";
-            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editAllDiscoveryZonesToolStripMenuItem.Text = "Edit Discovery Zones";
             this.editAllDiscoveryZonesToolStripMenuItem.Click += new System.EventHandler(this.editAllDiscoveryZonesToolStripMenuItem_Click);
             // 
             // editSpawnPointsToolStripMenuItem
             // 
             this.editSpawnPointsToolStripMenuItem.Name = "editSpawnPointsToolStripMenuItem";
-            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editSpawnPointsToolStripMenuItem.Text = "Edit Spawn Regions";
             this.editSpawnPointsToolStripMenuItem.Click += new System.EventHandler(this.editSpawnPointsToolStripMenuItem_Click);
             // 
@@ -317,21 +322,21 @@
             // 
             this.editServerTemplatesToolStripMenuItem.Enabled = false;
             this.editServerTemplatesToolStripMenuItem.Name = "editServerTemplatesToolStripMenuItem";
-            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editServerTemplatesToolStripMenuItem.Text = "Edit Server Templates";
             this.editServerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editServerTemplatesToolStripMenuItem_Click);
             // 
             // editLocksToolStripMenuItem
             // 
             this.editLocksToolStripMenuItem.Name = "editLocksToolStripMenuItem";
-            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.editLocksToolStripMenuItem.Text = "Edit Locks";
             this.editLocksToolStripMenuItem.Click += new System.EventHandler(this.editLocksToolStripMenuItem_Click);
             // 
             // cullInvalidPathsToolStripMenuItem
             // 
             this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
-            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
             this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
             // 
@@ -390,21 +395,21 @@
             this.testAllServersWithDataClearToolStripMenuItem,
             this.testAllServersWithoutDataClearToolStripMenuItem});
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
-            this.testsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.testsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.testsToolStripMenuItem.Text = "Tests";
             // 
             // testAllServersWithDataClearToolStripMenuItem
             // 
             this.testAllServersWithDataClearToolStripMenuItem.Enabled = false;
             this.testAllServersWithDataClearToolStripMenuItem.Name = "testAllServersWithDataClearToolStripMenuItem";
-            this.testAllServersWithDataClearToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.testAllServersWithDataClearToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.testAllServersWithDataClearToolStripMenuItem.Text = "Test All Servers (With Data Clear)";
             // 
             // testAllServersWithoutDataClearToolStripMenuItem
             // 
             this.testAllServersWithoutDataClearToolStripMenuItem.Enabled = false;
             this.testAllServersWithoutDataClearToolStripMenuItem.Name = "testAllServersWithoutDataClearToolStripMenuItem";
-            this.testAllServersWithoutDataClearToolStripMenuItem.Size = new System.Drawing.Size(250, 22);
+            this.testAllServersWithoutDataClearToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.testAllServersWithoutDataClearToolStripMenuItem.Text = "Test All Servers (Without Data clear)";
             this.testAllServersWithoutDataClearToolStripMenuItem.Click += new System.EventHandler(this.testAllServersWithoutDataClearToolStripMenuItem_Click);
             // 
@@ -801,12 +806,71 @@
             this.txtSearch.Size = new System.Drawing.Size(227, 20);
             this.txtSearch.TabIndex = 62;
             // 
+            // showPathingGridCheckbox
+            // 
+            this.showPathingGridCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.showPathingGridCheckbox.AutoSize = true;
+            this.showPathingGridCheckbox.Location = new System.Drawing.Point(406, 616);
+            this.showPathingGridCheckbox.Name = "showPathingGridCheckbox";
+            this.showPathingGridCheckbox.Size = new System.Drawing.Size(114, 17);
+            this.showPathingGridCheckbox.TabIndex = 37;
+            this.showPathingGridCheckbox.Text = "Show Pathing Grid";
+            this.showPathingGridCheckbox.UseVisualStyleBackColor = true;
+            this.showPathingGridCheckbox.CheckedChanged += new System.EventHandler(this.showPathingGridCheckbox_CheckedChanged);
+            // 
+            // GridRowsTxtBox
+            // 
+            this.GridRowsTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GridRowsTxtBox.Location = new System.Drawing.Point(583, 614);
+            this.GridRowsTxtBox.Name = "GridRowsTxtBox";
+            this.GridRowsTxtBox.Size = new System.Drawing.Size(47, 20);
+            this.GridRowsTxtBox.TabIndex = 24;
+            this.GridRowsTxtBox.TabStop = false;
+            this.GridRowsTxtBox.Text = "10";
+            this.GridRowsTxtBox.TextChanged += new System.EventHandler(this.GridRowsTxtBox_TextChanged);
+            // 
+            // gridRowsLabel
+            // 
+            this.gridRowsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridRowsLabel.AutoSize = true;
+            this.gridRowsLabel.Location = new System.Drawing.Point(527, 617);
+            this.gridRowsLabel.Name = "gridRowsLabel";
+            this.gridRowsLabel.Size = new System.Drawing.Size(56, 13);
+            this.gridRowsLabel.TabIndex = 23;
+            this.gridRowsLabel.Text = "Grid Rows";
+            // 
+            // GridColumnsTxtBox
+            // 
+            this.GridColumnsTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.GridColumnsTxtBox.Location = new System.Drawing.Point(721, 613);
+            this.GridColumnsTxtBox.Name = "GridColumnsTxtBox";
+            this.GridColumnsTxtBox.Size = new System.Drawing.Size(47, 20);
+            this.GridColumnsTxtBox.TabIndex = 39;
+            this.GridColumnsTxtBox.TabStop = false;
+            this.GridColumnsTxtBox.Text = "10";
+            this.GridColumnsTxtBox.TextChanged += new System.EventHandler(this.GridColumnsTxtBox_TextChanged);
+            // 
+            // gridColumnsLabel
+            // 
+            this.gridColumnsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.gridColumnsLabel.AutoSize = true;
+            this.gridColumnsLabel.Location = new System.Drawing.Point(648, 616);
+            this.gridColumnsLabel.Name = "gridColumnsLabel";
+            this.gridColumnsLabel.Size = new System.Drawing.Size(69, 13);
+            this.gridColumnsLabel.TabIndex = 38;
+            this.gridColumnsLabel.Text = "Grid Columns";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 708);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.GridColumnsTxtBox);
+            this.Controls.Add(this.gridColumnsLabel);
+            this.Controls.Add(this.GridRowsTxtBox);
+            this.Controls.Add(this.gridRowsLabel);
+            this.Controls.Add(this.showPathingGridCheckbox);
             this.Controls.Add(this.atlasLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.foregroundScaleBox);
@@ -935,6 +999,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.CheckBox showPathingGridCheckbox;
+        private System.Windows.Forms.TextBox GridRowsTxtBox;
+        private System.Windows.Forms.Label gridRowsLabel;
+        private System.Windows.Forms.TextBox GridColumnsTxtBox;
+        private System.Windows.Forms.Label gridColumnsLabel;
     }
 }
 

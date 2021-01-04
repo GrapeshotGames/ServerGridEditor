@@ -30,7 +30,7 @@ namespace ServerGridEditor
             bool isHomeServer, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
+            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues, bool[,] ServerPathingGrid)
         {
             Data.gridX = gridX;
             Data.gridY = gridY;
@@ -76,6 +76,7 @@ namespace ServerGridEditor
             Data.spawnRegions = spawnRegions == null ? new List<SpawnRegionData>() : spawnRegions;
             Data.extraSublevels = extraSublevels;
             Data.serverTemplateName = serverTemplateName;
+            Data.ServerPathingGrid = ServerPathingGrid;
 
             return Data;
         }
@@ -85,7 +86,7 @@ namespace ServerGridEditor
             bool isHomeServer, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues)
+            float waterColorR, float waterColorG, float waterColorB, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string OceanEpicSpawnEntriesOverrideValues, bool[,] ServerPathingGrid)
         {
             Data.gridX = gridX;
             Data.gridY = gridY;
@@ -151,6 +152,8 @@ namespace ServerGridEditor
 					//instance.spawnPointRegionOverride = referencedIsland.spawnPointRegionOverride;
                     instance.useLevelBoundsForTreasures = referencedIsland.useLevelBoundsForTreasures;
                     instance.prioritizeVolumesForTreasures = referencedIsland.prioritizeVolumesForTreasures;
+                    instance.isControlPoint = referencedIsland.isControlPoint;
+                    instance.isControlPointAllowCapture = referencedIsland.isControlPointAllowCapture;
                     instance.islandWidth = referencedIsland.x;
                     instance.islandHeight = referencedIsland.y;
                     //instance.islandPoints = referencedIsland.islandPoints;
@@ -184,6 +187,8 @@ namespace ServerGridEditor
                     if (!Data.totalExtraSublevels.Contains(extraSublevel) && !string.IsNullOrWhiteSpace(extraSublevel))
                         Data.totalExtraSublevels.Add(extraSublevel);
 
+            Data.ServerPathingGrid = ServerPathingGrid;
+
             return Data;
         }
     }
@@ -215,7 +220,7 @@ namespace ServerGridEditor
             Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, int shipPathsIdGenerator,
             bool showShipPathsInfo, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, string globalGameplaySetup,
             List<ServerTemplateData> serverTemplates, bool bIsFinalExport, string MapImageURL,string AuthListURL,
-			string WorldAtlasPassword, float columnUTCOffset)
+			string WorldAtlasPassword, float columnUTCOffset, int numPathingGridRows, int numPathingGridColumns, bool[,] PathingGrid)
         {
             Data.gridSize = gridSize;
 
@@ -243,14 +248,25 @@ namespace ServerGridEditor
                         serverSpawnRegions.Add(region);
                 }
 
-                if(!bIsFinalExport)
+                bool[,] ServerPathingGrid = new bool[numPathingGridRows, numPathingGridColumns];
+                int RowOffset = server.gridY * numPathingGridRows;
+                int ColOffset = server.gridX * numPathingGridColumns;
+                for (int Col = 0; Col < ServerPathingGrid.GetLength(0); Col++)
+                {
+                    for (int Row = 0; Row < ServerPathingGrid.GetLength(1); Row++)
+                    {
+                        ServerPathingGrid[Row, Col] = PathingGrid[Row + RowOffset, Col + ColOffset];
+                    }
+                }
+
+                if (!bIsFinalExport)
                 {
                     Data.servers.Add(new ServerData().SetFrom(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
                          server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.name, server.floorZDist,
                          server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                          server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                          server.islandLocked, server.discoLocked, server.pathsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                         server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues));
+                         server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid));
                 }
                 else
                 {
@@ -269,7 +285,7 @@ namespace ServerGridEditor
                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                         server.islandLocked, server.discoLocked, server.pathsLocked, overridenExtraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                        server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues);
+                        server.waterColorR, server.waterColorG, server.waterColorB, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid);
 
                     //Apply template
                     if(!string.IsNullOrEmpty(server.serverTemplateName))
@@ -320,6 +336,8 @@ namespace ServerGridEditor
                                 exportServerObj.ClientCustomDatas1 = exportServerObj.ClientCustomDatas1 + "," + serverTemplate.ClientCustomDatas1.TrimStart(',');
                             if (!string.IsNullOrWhiteSpace(serverTemplate.ClientCustomDatas2))
                                 exportServerObj.ClientCustomDatas2 = exportServerObj.ClientCustomDatas2 + "," + serverTemplate.ClientCustomDatas2.TrimStart(',');
+
+                            exportServerObj.ServerPathingGrid = server.ServerPathingGrid;
                         }
                     }
                     Data.servers.Add(exportServerObj);
@@ -362,6 +380,8 @@ namespace ServerGridEditor
                 serverTemplates = new List<ServerTemplateData>();
             Data.serverTemplates = serverTemplates.ToList();
 			Data.WorldAtlasPassword = WorldAtlasPassword;
+            Data.numPathingGridRows = numPathingGridRows;
+            Data.numPathingGridColumns = numPathingGridColumns;
 
             return Data;
         }
@@ -423,8 +443,12 @@ namespace ServerGridEditor
         public int regionsIdGenerator = 0;
         public int shipPathsIdGenerator = 0;
         public DateTime LastImageOverrideUTC;
+        public int numPathingGridColumns = 10;
+        public int numPathingGridRows = 10;
 
         public List<ShipPathData> shipPaths = new List<ShipPathData>();
+
+        public bool[,] AtlasPathingGrid = new bool[1,1];
 
         public int GenerateNewId() { return ++idGenerator; }
         public int GenerateNewSpawnRegionId() { return ++regionsIdGenerator; }
@@ -495,7 +519,7 @@ namespace ServerGridEditor
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, backgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, 
                 Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, 
                 shipPathsIdGenerator, showShipPathsInfo, ModIDs, showIslandNames, showForeground, foregroundImgPath, globalGameplaySetup, serverTemplates, bIsFinalExport, MapImageURL, AuthListURL,
-				WorldAtlasPassword, columnUTCOffset);
+				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid);
             ProjectObj.BaseServerArgs = BaseServerArgs;
             ProjectObj.totalGridsX = numOfCellsX;
             ProjectObj.totalGridsY = numOfCellsY;
@@ -655,6 +679,8 @@ namespace ServerGridEditor
                         spawnRegion.X = deserializedServer.gridX; spawnRegion.Y = deserializedServer.gridY;
                         spawnRegions.Add(spawnRegion);
                     }
+
+                    s.ServerPathingGrid = deserializedServer.ServerPathingGrid;
                 }
 
                 numOfCellsX = maxX + 1;
@@ -698,6 +724,8 @@ namespace ServerGridEditor
                 Day0 = deserializedProject.Day0;
                 LastImageOverrideUTC = deserializedProject.lastImageOverride;
                 WorldAtlasPassword = deserializedProject.WorldAtlasPassword;
+                numPathingGridRows = deserializedProject.numPathingGridRows;
+                numPathingGridColumns = deserializedProject.numPathingGridColumns;
                 if (deserializedProject.shipPaths != null)
                 {
                     shipPaths = deserializedProject.shipPaths;
