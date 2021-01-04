@@ -128,6 +128,13 @@ namespace ServerGridEditor
                         DBEntry5_PortTxtBx.Text = editedProject.DatabaseConnections[4].Port.ToString();
                         DBEntry5_PasswordTxtBx.Text = editedProject.DatabaseConnections[4].Password;
                     }
+                    if (editedProject.DatabaseConnections.Count > 5)
+                    {
+                        DBEntry6_NameTxtBx.Text = editedProject.DatabaseConnections[5].Name;
+                        DBEntry6_URLTxtBx.Text = editedProject.DatabaseConnections[5].URL;
+                        DBEntry6_PortTxtBx.Text = editedProject.DatabaseConnections[5].Port.ToString();
+                        DBEntry6_PasswordTxtBx.Text = editedProject.DatabaseConnections[5].Password;
+                    }
                 }
 
 
@@ -271,6 +278,12 @@ namespace ServerGridEditor
                     int Port = 0;
                     int.TryParse(DBEntry5_PortTxtBx.Text, out Port);
                     editedProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry5_NameTxtBx.Text, URL = DBEntry5_URLTxtBx.Text, Port = Port, Password = DBEntry5_PasswordTxtBx.Text });
+                }
+                if (!string.IsNullOrWhiteSpace(DBEntry6_NameTxtBx.Text) && !string.IsNullOrWhiteSpace(DBEntry6_URLTxtBx.Text))
+                {
+                    int Port = 0;
+                    int.TryParse(DBEntry6_PortTxtBx.Text, out Port);
+                    editedProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry6_NameTxtBx.Text, URL = DBEntry6_URLTxtBx.Text, Port = Port, Password = DBEntry6_PasswordTxtBx.Text });
                 }
 
                 if (size > 0)
@@ -422,6 +435,13 @@ namespace ServerGridEditor
                     int Port = 0;
                     int.TryParse(DBEntry5_PortTxtBx.Text, out Port);
                     mainForm.currentProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry5_NameTxtBx.Text, URL = DBEntry5_URLTxtBx.Text, Port = Port, Password = DBEntry5_PasswordTxtBx.Text });
+                }
+
+                if (!string.IsNullOrWhiteSpace(DBEntry6_NameTxtBx.Text) && !string.IsNullOrWhiteSpace(DBEntry6_URLTxtBx.Text))
+                {
+                    int Port = 0;
+                    int.TryParse(DBEntry6_PortTxtBx.Text, out Port);
+                    mainForm.currentProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry6_NameTxtBx.Text, URL = DBEntry6_URLTxtBx.Text, Port = Port, Password = DBEntry6_PasswordTxtBx.Text });
                 }
 
                 mainForm.currentProject.TribeLogConfig.CopyFrom(TribeLogConfig);
