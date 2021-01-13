@@ -84,6 +84,8 @@ namespace AtlasGridDataLibrary
         public string LocalS3Region = "";
 
         public string globalGameplaySetup = "";
+        public int numPathingGridRows = 10;
+        public int numPathingGridColumns = 10;
 
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public TribeLogConfigInfo TribeLogConfig = new TribeLogConfigInfo();
@@ -238,6 +240,8 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string serverTemplateName = "";
 
+        public bool[,] ServerPathingGrid = new bool[1,1];
+
         public string GetGridLocationHumanReadable()
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -287,6 +291,8 @@ namespace AtlasGridDataLibrary
         public bool useNpcVolumesForTreasures = false;
         public bool useLevelBoundsForTreasures = true;
         public bool prioritizeVolumesForTreasures = false;
+        public bool isControlPoint = false;
+        public bool isControlPointAllowCapture = true;
         public int islandPoints = 1;
         public string islandTreasureBottleSupplyCrateOverrides = "";
         [DefaultValue(-1)]

@@ -221,6 +221,14 @@ namespace ServerGridEditor
             foreach (string islandKey in SortedIslands)
             {
                 Island island = islands[islandKey];
+                if (!String.IsNullOrEmpty(this.txtSearch.Text))
+                {
+                    if (island.name.IndexOf(this.txtSearch.Text, StringComparison.CurrentCultureIgnoreCase) < 0)
+                    {
+                        continue;
+                    }
+                }
+
                 imgList.Images.Add(island.GetImage());
                 ListViewItem listItem = new ListViewItem();
                 listItem.ImageIndex = i;
@@ -308,7 +316,7 @@ namespace ServerGridEditor
                 tileScaleBox.Value,
                 !ignoreTranslation ? mapHScrollBar.Value : 0,
                 !ignoreTranslation ? mapVScrollBar.Value : 0,
-                forExport);
+                forExport, showPathingGridCheckbox.Checked);
         }
 
         static StringFormat centeredStringFormat = new StringFormat
@@ -322,7 +330,7 @@ namespace ServerGridEditor
             Graphics g, bool showLines, bool showServerInfo, bool showDiscoZoneInfo,
             RectangleF? culling, Color? alphaBackground,
             Image tile, TextureBrush tileBrush, decimal tileScale,
-            int translateH, int translateV, bool forExport)
+            int translateH, int translateV, bool forExport, bool bShowPathingGrid)
         {
 
             g.InterpolationMode = InterpolationMode.High;
@@ -368,6 +376,100 @@ namespace ServerGridEditor
                 tileBrush.ScaleTransform((float)tileScale * currentProject.coordsScaling * 1000, (float)tileScale * currentProject.coordsScaling * 1000);
                 g.FillRectangle(tileBrush, new Rectangle(0, 0, (int)maxX, (int)maxY));
             }
+
+            //Draw  pathing grid
+            if (bShowPathingGrid)
+            {
+                //horizontal lines
+                p.Color = Color.Blue;
+                for (int y = 0; y < (currentProject.numPathingGridRows * currentProject.numOfCellsX) + 1; ++y)
+                {
+                    float drawY = y * (cellSize / currentProject.numPathingGridRows);
+                    if (!cull || (drawY >= canvasRect.Top && drawY <= canvasRect.Bottom))
+                    {
+                        g.DrawLine(p, 0, drawY, currentProject.numOfCellsX * cellSize, drawY);
+                    }
+                }
+
+                //vertical lines
+                for (int x = 0; x < (currentProject.numPathingGridColumns * currentProject.numOfCellsY) + 1; ++x)
+                {
+                    float drawX = x * (cellSize / currentProject.numPathingGridColumns);
+                    if (!cull || (drawX >= canvasRect.Left && drawX <= canvasRect.Right))
+                    {
+                        g.DrawLine(p, drawX, 0, drawX, currentProject.numOfCellsY * cellSize);
+                    }
+                }
+            }
+
+            bool[,] Validity = new bool[(currentProject.numPathingGridRows * currentProject.numOfCellsY), (currentProject.numPathingGridColumns * currentProject.numOfCellsX)];
+            for (int Row = 0; Row < Validity.GetLength(0); Row++)
+                for (int Col = 0; Col < Validity.GetLength(1); Col++)
+                    Validity[Row, Col] = true;
+            float PrevScaling = currentProject.coordsScaling;
+            currentProject.coordsScaling = 0.001f;
+            float MyCellSize = Math.Max(currentProject.cellSize * currentProject.coordsScaling, 0.00001f);
+            float CellWidth = MyCellSize / (currentProject.numPathingGridColumns);
+            float CellHeight = MyCellSize / (currentProject.numPathingGridRows);
+            for (int Row = 0; Row < Validity.GetLength(0); Row++)
+            {
+                for (int Col = 0; Col < Validity.GetLength(1); Col++)
+                {
+                    float StartX = Col * CellWidth;
+                    float StartY = Row * CellHeight;
+                    RectangleF CellRect = new RectangleF(StartX, StartY, CellWidth, CellHeight);
+                    foreach (IslandInstanceData instance in currentProject.islandInstances)
+                    {
+                        Island referencedIsland = instance.GetReferencedIsland(islands);
+
+                        //Clamp to map
+                        instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
+
+                        //Reverse translation to rotate around self
+                        g.TranslateTransform(instance.worldX * currentProject.coordsScaling, instance.worldY * currentProject.coordsScaling);
+                        g.RotateTransform(instance.rotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
+
+                        Rectangle drawRect = instance.GetRect(currentProject, islands);
+                        if (CellRect.IntersectsWith(drawRect))
+                        {
+                            Validity[Row, Col] = false;
+                        }
+
+                        g.RotateTransform(-instance.rotation);
+                        g.TranslateTransform(-instance.worldX * currentProject.coordsScaling, -instance.worldY * currentProject.coordsScaling);
+
+                        if (!Validity[Row, Col])
+                            break;
+                    }
+
+                }
+            }
+            currentProject.coordsScaling = PrevScaling;
+            currentProject.AtlasPathingGrid = Validity;
+
+            //Draw invalid pathing cells
+            if (bShowPathingGrid)
+            {
+                p.Color = Color.Red;
+                CellWidth = cellSize / (currentProject.numPathingGridColumns);
+                CellHeight = cellSize / (currentProject.numPathingGridRows);
+                for (int Row = 0; Row < Validity.GetLength(0); Row++)
+                {
+                    for (int Col = 0; Col < Validity.GetLength(1); Col++)
+                    {
+                        if (!Validity[Row, Col])
+                        {
+                            float StartX = Col * CellWidth;
+                            float StartY = Row * CellHeight;
+                            RectangleF CellRect = new RectangleF(StartX, StartY, CellWidth, CellHeight);
+                            g.DrawRectangle(p, StartX, StartY, CellRect.Width, CellRect.Height);
+                            Console.WriteLine(Row + ", " + Col);
+                        }
+                    }
+                }
+                p.Color = Color.Black;
+            }
+             
 
             //Draw  grid
             if (showLines)
@@ -484,7 +586,10 @@ namespace ServerGridEditor
                     if(!culled)
                     {
                         float zoneSize = Math.Max(discoInst.sizeX * currentProject.coordsScaling, 0.00001f);
-                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * zoneSize / 200, FontStyle.Regular);
+
+                        float fontSize = Math.Max(1.0f, DefaultFont.SizeInPoints * zoneSize / 200);
+                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, fontSize, FontStyle.Regular);
+
                         SizeF stringSize = g.MeasureString("T", font);
                         float dynamicOutlineShift = stringSize.Height * outlineShift;
 
@@ -1089,6 +1194,13 @@ namespace ServerGridEditor
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            if (this.txtSearch.Focused)
+            {
+                // there's got to be a better way to prevent events from triggering here when typing in the search box.
+                // I don't really do WinForms though, so, meh?
+                return;
+            }
+
             if (e.KeyCode == Keys.Delete)
             {
                 Point cursorMapPoint = GetTarnsformedMapPoint(mapPanel.PointToClient(Cursor.Position));
@@ -1922,6 +2034,12 @@ namespace ServerGridEditor
                     SetForegroundImage(currentProject.foregroundImgPath);
                     SetDiscoverZoneImage(currentProject.discoZonesImagePath);
 
+                    GridColumnsTxtBox.Text = currentProject.numPathingGridColumns + "";
+                    GridRowsTxtBox.Text = currentProject.numPathingGridRows + "";
+                    gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
+                    gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
+                    GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
+                    GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
                     mapPanel.Invalidate();
                     mapPanel.Update();
                 }
@@ -2655,6 +2773,40 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshIslandList();
+        }
+
+        private void GridColumnsTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+            int parsed = 0;
+            if (int.TryParse(GridColumnsTxtBox.Text, out parsed))
+                currentProject.numPathingGridColumns = parsed;
+            mapPanel.Invalidate();
+        }
+
+        private void GridRowsTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+            int parsed = 0;
+            if (int.TryParse(GridRowsTxtBox.Text, out parsed))
+                currentProject.numPathingGridRows = parsed;
+            mapPanel.Invalidate();
+        }
+
+        private void showPathingGridCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
+            gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
+            GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
+            GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
+            mapPanel.Invalidate();
         }
     }
 

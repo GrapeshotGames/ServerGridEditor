@@ -117,6 +117,11 @@
             this.columnUTCOffsetTxtBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.DBEntry6_PasswordTxtBx = new System.Windows.Forms.TextBox();
+            this.DBEntry6_PortTxtBx = new System.Windows.Forms.TextBox();
+            this.DBEntry6_URLTxtBx = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.DBEntry6_NameTxtBx = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -878,6 +883,47 @@
             this.label11.TabIndex = 104;
             this.label11.Text = "Offset";
             // 
+            // DBEntry6_PasswordTxtBx
+            // 
+            this.DBEntry6_PasswordTxtBx.Location = new System.Drawing.Point(612, 579);
+            this.DBEntry6_PasswordTxtBx.Name = "DBEntry6_PasswordTxtBx";
+            this.DBEntry6_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
+            this.DBEntry6_PasswordTxtBx.TabIndex = 108;
+            this.DBEntry6_PasswordTxtBx.Text = "foobared";
+            // 
+            // DBEntry6_PortTxtBx
+            // 
+            this.DBEntry6_PortTxtBx.Location = new System.Drawing.Point(549, 579);
+            this.DBEntry6_PortTxtBx.Name = "DBEntry6_PortTxtBx";
+            this.DBEntry6_PortTxtBx.Size = new System.Drawing.Size(57, 20);
+            this.DBEntry6_PortTxtBx.TabIndex = 107;
+            this.DBEntry6_PortTxtBx.Text = "6379";
+            // 
+            // DBEntry6_URLTxtBx
+            // 
+            this.DBEntry6_URLTxtBx.Location = new System.Drawing.Point(428, 579);
+            this.DBEntry6_URLTxtBx.Name = "DBEntry6_URLTxtBx";
+            this.DBEntry6_URLTxtBx.Size = new System.Drawing.Size(115, 20);
+            this.DBEntry6_URLTxtBx.TabIndex = 106;
+            this.DBEntry6_URLTxtBx.Text = "127.0.0.1";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(276, 583);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(61, 13);
+            this.label41.TabIndex = 109;
+            this.label41.Text = "DB Entry 6:";
+            // 
+            // DBEntry6_NameTxtBx
+            // 
+            this.DBEntry6_NameTxtBx.Location = new System.Drawing.Point(340, 579);
+            this.DBEntry6_NameTxtBx.Name = "DBEntry6_NameTxtBx";
+            this.DBEntry6_NameTxtBx.Size = new System.Drawing.Size(82, 20);
+            this.DBEntry6_NameTxtBx.TabIndex = 105;
+            this.DBEntry6_NameTxtBx.Text = "TradeDB";
+            // 
             // CreateProjectForm
             // 
             this.AcceptButton = this.createBtn;
@@ -885,6 +931,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(702, 766);
+            this.Controls.Add(this.DBEntry6_PasswordTxtBx);
+            this.Controls.Add(this.DBEntry6_PortTxtBx);
+            this.Controls.Add(this.DBEntry6_URLTxtBx);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.DBEntry6_NameTxtBx);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.columnUTCOffsetTxtBox);
             this.Controls.Add(this.label5);
@@ -1078,5 +1129,10 @@
         private System.Windows.Forms.TextBox columnUTCOffsetTxtBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox DBEntry6_PasswordTxtBx;
+        private System.Windows.Forms.TextBox DBEntry6_PortTxtBx;
+        private System.Windows.Forms.TextBox DBEntry6_URLTxtBx;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox DBEntry6_NameTxtBx;
     }
 }

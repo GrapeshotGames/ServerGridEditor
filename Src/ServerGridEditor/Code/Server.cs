@@ -54,6 +54,8 @@ namespace ServerGridEditor
 
         public string serverTemplateName = "";
 
+        public bool[,] ServerPathingGrid = new bool[1,1];
+
         public Server() { }
 
         public Server(int gridX, int gridY)

@@ -42,7 +42,13 @@ namespace ServerGridEditor
         [DefaultValue(false)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public bool prioritizeVolumesForTreasures = false;
-        [DefaultValue("")]
+        [DefaultValue(false)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public bool isControlPoint = false;
+        [DefaultValue(false)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public bool isControlPointAllowCapture = true;
+        [DefaultValue(true)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public string islandTreasureBottleSupplyCrateOverrides = "";
         [DefaultValue(1)]
@@ -110,7 +116,7 @@ namespace ServerGridEditor
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
             , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, bool isControlPoint, bool isControlPointAllowCapture, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
         {
             this.name = name;
             this.x = x;
@@ -133,6 +139,8 @@ namespace ServerGridEditor
             this.singleSpawnPointY = sPlayerSpawnPointY;
             this.singleSpawnPointZ = sPlayerSpawnPointZ;
             this.maxIslandClaimFlagZ = theMaxIslandClaimFlagZ;
+            this.isControlPoint = isControlPoint;
+            this.isControlPointAllowCapture = isControlPointAllowCapture;
         }
     }
 
