@@ -2435,7 +2435,7 @@ namespace ServerGridEditor
                 string serverConfigPathServerOnly = serverConfigPath.Replace(".json", ".ServerOnly.json");
                 File.WriteAllText(serverConfigPathServerOnly, JsonConvert.SerializeObject(ServerOnlyObject, Formatting.Indented)); //ServerGrid.ServerOnly.json
 
-                string gameMapExportDir = Path.GetFullPath(exportDir + "/" + JsonNameNoExtension);
+                string gameMapExportDir = Path.GetFullPath(GlobalSettings.Instance.ExportDir + "/" + JsonNameNoExtension);
 
                 //Copy to Project/ShooterGame/
                 if (Directory.Exists(gameDir + "/Build")) //Just end client folder people are unlikely to have for now
@@ -2466,7 +2466,7 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Export failed!! Ex: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+                  
         }
 
 
