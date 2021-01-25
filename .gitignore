@@ -6,3 +6,6 @@
 *.pdb
 bin
 obj
+build
+publish
+*.user

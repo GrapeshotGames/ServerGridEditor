@@ -1,18 +1,17 @@
-language: csharp
+language: cpp
 mono: none
 solution: Src/ServerGridEditor.sln
-
-jobs:
-  include:
-    - stage: Publish GitHub Release
-      os: windows
-      script:
-        - choco install dotnetcore-sdk
-        - dotnet --version
-        - dotnet restore
-        - dotnet publish ./Src -r win-x64 --configuration Release -p:PublishSingleFile=true
+os: windows
+  env:
+    - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\16.0\Bin"
+    - PATH_FIX="C:\Windows\System32"
+script:
+  - export PATH=$MSBUILD_PATH:$PATH_FIX:$PATH;
+  - cmd.exe //C 'C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat' amd64 
+  - dotnet restore Src/ServerGridEditor.sln
+  - msbuild -t:publish -p:Configuration=Release Src/ServerGridEditor.sln
 
 before_deploy:
   - git config --local user.name "antihax"
   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-  - git tag $TRAVIS_TAG      
+  - git tag $TRAVIS_TAG
