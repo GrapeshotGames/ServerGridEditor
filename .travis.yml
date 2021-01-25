@@ -10,8 +10,8 @@ jobs:
         - choco install dotnetcore-sdk
         - dotnet --version
         - dotnet restore
-        - dotnet publish -r win-x64 --configuration Release -p:PublishSingleFile=true
-        
+        - dotnet publish ./Src -r win-x64 --configuration Release -p:PublishSingleFile=true
+
 before_deploy:
   - git config --local user.name "antihax"
   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
