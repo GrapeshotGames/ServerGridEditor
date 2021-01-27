@@ -2,9 +2,9 @@ language: cpp
 mono: none
 solution: Src/ServerGridEditor.sln
 os: windows
-  env:
-    - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\16.0\Bin"
-    - PATH_FIX="C:\Windows\System32"
+env:
+  - MSBUILD_PATH="c:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\16.0\Bin"
+  - PATH_FIX="C:\Windows\System32"
 script:
   - export PATH=$MSBUILD_PATH:$PATH_FIX:$PATH;
   - cmd.exe //C 'C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvarsall.bat' amd64 
