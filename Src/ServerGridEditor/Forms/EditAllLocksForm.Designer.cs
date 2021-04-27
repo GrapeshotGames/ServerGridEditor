@@ -37,6 +37,9 @@
             this.lockDiscoBtn = new System.Windows.Forms.Button();
             this.unlockPaths = new System.Windows.Forms.Button();
             this.lockPaths = new System.Windows.Forms.Button();
+            this.unlockWinds = new System.Windows.Forms.Button();
+            this.lockWinds = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -132,11 +135,45 @@
             this.lockPaths.UseVisualStyleBackColor = true;
             this.lockPaths.Click += new System.EventHandler(this.lockPaths_Click);
             // 
+            // unlockWinds
+            // 
+            this.unlockWinds.Location = new System.Drawing.Point(230, 124);
+            this.unlockWinds.Name = "unlockWinds";
+            this.unlockWinds.Size = new System.Drawing.Size(75, 23);
+            this.unlockWinds.TabIndex = 15;
+            this.unlockWinds.Text = "UnlockAll";
+            this.unlockWinds.UseVisualStyleBackColor = true;
+            this.unlockWinds.Click += new System.EventHandler(this.unlockWinds_Click);
+            // 
+            // lockWinds
+            // 
+            this.lockWinds.Location = new System.Drawing.Point(139, 124);
+            this.lockWinds.Name = "lockWinds";
+            this.lockWinds.Size = new System.Drawing.Size(75, 23);
+            this.lockWinds.TabIndex = 14;
+            this.lockWinds.Text = "LockAll";
+            this.lockWinds.UseVisualStyleBackColor = true;
+            this.lockWinds.Click += new System.EventHandler(this.lockWinds_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.ForeColor = System.Drawing.Color.Turquoise;
+            this.label4.Location = new System.Drawing.Point(22, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Ship Paths";
+            // 
             // EditAllLocksForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(317, 148);
+            this.ClientSize = new System.Drawing.Size(317, 159);
+            this.Controls.Add(this.unlockWinds);
+            this.Controls.Add(this.lockWinds);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.unlockPaths);
             this.Controls.Add(this.lockPaths);
             this.Controls.Add(this.unlockDiscoBtn);
@@ -170,5 +207,8 @@
         private System.Windows.Forms.Button lockDiscoBtn;
         private System.Windows.Forms.Button unlockPaths;
         private System.Windows.Forms.Button lockPaths;
+        private System.Windows.Forms.Button unlockWinds;
+        private System.Windows.Forms.Button lockWinds;
+        private System.Windows.Forms.Label label4;
     }
 }

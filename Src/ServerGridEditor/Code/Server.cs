@@ -21,6 +21,7 @@ namespace ServerGridEditor
         public int gridX;
         public int gridY;
         public bool isHomeServer;
+        public int forceServerRules;
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
         public int floorZDist;
@@ -50,11 +51,13 @@ namespace ServerGridEditor
         public bool islandLocked = false;
         public bool discoLocked = false;
         public bool pathsLocked = false;
+        public bool windsLocked = false;
         public List<string> extraSublevels;
 
         public string serverTemplateName = "";
-
-        public bool[,] ServerPathingGrid = new bool[1,1];
+        public string serverConfigurationKeyPVP = "";
+        public string serverConfigurationKeyPVE = "";
+        public int[] ServerPathingGrid = new int[1];
 
         public Server() { }
 

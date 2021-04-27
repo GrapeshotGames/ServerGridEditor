@@ -104,5 +104,15 @@ namespace ServerGridEditor.Forms
         {
             Close();
         }
+
+        private void messageLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spawnRegionsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.spawnerOverridesGrid = new System.Windows.Forms.DataGridView();
             this.SpawnerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpawnerTemplate = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -52,7 +54,13 @@
             this.instanceTreasureQualityMultiplierTxtBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.instanceTreasureQualityAdditionTxtBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.harvestOverridesGrid = new System.Windows.Forms.DataGridView();
+            this.ExportHarvestOverridesButton = new System.Windows.Forms.Button();
+            this.ImportHarvestOverridesButton = new System.Windows.Forms.Button();
+            this.FoliageOverrideKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestOverridesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // spawnerOverridesGrid
@@ -61,9 +69,9 @@
             this.spawnerOverridesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SpawnerName,
             this.SpawnerTemplate});
-            this.spawnerOverridesGrid.Location = new System.Drawing.Point(17, 358);
+            this.spawnerOverridesGrid.Location = new System.Drawing.Point(17, 332);
             this.spawnerOverridesGrid.Name = "spawnerOverridesGrid";
-            this.spawnerOverridesGrid.Size = new System.Drawing.Size(323, 238);
+            this.spawnerOverridesGrid.Size = new System.Drawing.Size(323, 108);
             this.spawnerOverridesGrid.TabIndex = 0;
             // 
             // SpawnerName
@@ -83,7 +91,7 @@
             this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 335);
+            this.label1.Location = new System.Drawing.Point(17, 309);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 1;
@@ -91,7 +99,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(79, 612);
+            this.saveBtn.Location = new System.Drawing.Point(79, 624);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(92, 32);
             this.saveBtn.TabIndex = 2;
@@ -102,7 +110,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(192, 612);
+            this.cancelBtn.Location = new System.Drawing.Point(192, 624);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(92, 32);
             this.cancelBtn.TabIndex = 3;
@@ -129,7 +137,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 168);
+            this.label3.Location = new System.Drawing.Point(12, 149);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(148, 13);
             this.label3.TabIndex = 7;
@@ -137,7 +145,7 @@
             // 
             // IslandInstanceCustomDatas1TxtBox
             // 
-            this.IslandInstanceCustomDatas1TxtBox.Location = new System.Drawing.Point(15, 184);
+            this.IslandInstanceCustomDatas1TxtBox.Location = new System.Drawing.Point(15, 165);
             this.IslandInstanceCustomDatas1TxtBox.Name = "IslandInstanceCustomDatas1TxtBox";
             this.IslandInstanceCustomDatas1TxtBox.Size = new System.Drawing.Size(325, 20);
             this.IslandInstanceCustomDatas1TxtBox.TabIndex = 6;
@@ -145,7 +153,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 205);
+            this.label4.Location = new System.Drawing.Point(12, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 13);
             this.label4.TabIndex = 9;
@@ -153,7 +161,7 @@
             // 
             // IslandInstanceCustomDatas2TxtBox
             // 
-            this.IslandInstanceCustomDatas2TxtBox.Location = new System.Drawing.Point(15, 221);
+            this.IslandInstanceCustomDatas2TxtBox.Location = new System.Drawing.Point(15, 202);
             this.IslandInstanceCustomDatas2TxtBox.Name = "IslandInstanceCustomDatas2TxtBox";
             this.IslandInstanceCustomDatas2TxtBox.Size = new System.Drawing.Size(325, 20);
             this.IslandInstanceCustomDatas2TxtBox.TabIndex = 8;
@@ -161,7 +169,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 254);
+            this.label5.Location = new System.Drawing.Point(12, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(174, 13);
             this.label5.TabIndex = 11;
@@ -169,7 +177,7 @@
             // 
             // IslandInstanceClientCustomDatas1TxtBox
             // 
-            this.IslandInstanceClientCustomDatas1TxtBox.Location = new System.Drawing.Point(15, 270);
+            this.IslandInstanceClientCustomDatas1TxtBox.Location = new System.Drawing.Point(15, 244);
             this.IslandInstanceClientCustomDatas1TxtBox.Name = "IslandInstanceClientCustomDatas1TxtBox";
             this.IslandInstanceClientCustomDatas1TxtBox.Size = new System.Drawing.Size(325, 20);
             this.IslandInstanceClientCustomDatas1TxtBox.TabIndex = 10;
@@ -177,7 +185,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 292);
+            this.label6.Location = new System.Drawing.Point(12, 266);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 13);
             this.label6.TabIndex = 13;
@@ -185,7 +193,7 @@
             // 
             // IslandInstanceClientCustomDatas2TxtBox
             // 
-            this.IslandInstanceClientCustomDatas2TxtBox.Location = new System.Drawing.Point(15, 308);
+            this.IslandInstanceClientCustomDatas2TxtBox.Location = new System.Drawing.Point(15, 282);
             this.IslandInstanceClientCustomDatas2TxtBox.Name = "IslandInstanceClientCustomDatas2TxtBox";
             this.IslandInstanceClientCustomDatas2TxtBox.Size = new System.Drawing.Size(325, 20);
             this.IslandInstanceClientCustomDatas2TxtBox.TabIndex = 12;
@@ -254,6 +262,57 @@
             this.instanceTreasureQualityAdditionTxtBox.Size = new System.Drawing.Size(55, 20);
             this.instanceTreasureQualityAdditionTxtBox.TabIndex = 20;
             // 
+            // label11
+            // 
+            this.label11.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(16, 443);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(135, 20);
+            this.label11.TabIndex = 23;
+            this.label11.Text = "Harvest Overrides";
+            // 
+            // harvestOverridesGrid
+            // 
+            this.harvestOverridesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.harvestOverridesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FoliageOverrideKey});
+            this.harvestOverridesGrid.Location = new System.Drawing.Point(17, 466);
+            this.harvestOverridesGrid.Name = "harvestOverridesGrid";
+            this.harvestOverridesGrid.Size = new System.Drawing.Size(323, 114);
+            this.harvestOverridesGrid.TabIndex = 62;
+            this.harvestOverridesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.harvestOverridesGrid_CellContentClick);
+            // 
+            // ExportHarvestOverridesButton
+            // 
+            this.ExportHarvestOverridesButton.Location = new System.Drawing.Point(182, 587);
+            this.ExportHarvestOverridesButton.Name = "ExportHarvestOverridesButton";
+            this.ExportHarvestOverridesButton.Size = new System.Drawing.Size(155, 24);
+            this.ExportHarvestOverridesButton.TabIndex = 66;
+            this.ExportHarvestOverridesButton.Text = "Export Harvest Overrides...";
+            this.ExportHarvestOverridesButton.UseVisualStyleBackColor = true;
+            this.ExportHarvestOverridesButton.Visible = false;
+            this.ExportHarvestOverridesButton.Click += new System.EventHandler(this.ExportHarvestOverridesButton_Click);
+            // 
+            // ImportHarvestOverridesButton
+            // 
+            this.ImportHarvestOverridesButton.Location = new System.Drawing.Point(17, 586);
+            this.ImportHarvestOverridesButton.Name = "ImportHarvestOverridesButton";
+            this.ImportHarvestOverridesButton.Size = new System.Drawing.Size(159, 24);
+            this.ImportHarvestOverridesButton.TabIndex = 65;
+            this.ImportHarvestOverridesButton.Text = "Import Harvest Overrides...";
+            this.ImportHarvestOverridesButton.UseVisualStyleBackColor = true;
+            this.ImportHarvestOverridesButton.Visible = false;
+            this.ImportHarvestOverridesButton.Click += new System.EventHandler(this.ImportHarvestOverridesButton_Click);
+            // 
+            // FoliageOverrideKey
+            // 
+            this.FoliageOverrideKey.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FoliageOverrideKey.HeaderText = "Foliage Override Key";
+            this.FoliageOverrideKey.Name = "FoliageOverrideKey";
+            this.FoliageOverrideKey.Width = 84;
+            // 
             // EditIslandInstance
             // 
             this.AcceptButton = this.saveBtn;
@@ -261,6 +320,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(347, 660);
+            this.Controls.Add(this.ExportHarvestOverridesButton);
+            this.Controls.Add(this.ImportHarvestOverridesButton);
+            this.Controls.Add(this.harvestOverridesGrid);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.instanceTreasureQualityAdditionTxtBox);
             this.Controls.Add(this.label9);
@@ -292,6 +355,7 @@
             this.Text = "Edit Island Instance";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestOverridesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +387,12 @@
         private System.Windows.Forms.TextBox instanceTreasureQualityMultiplierTxtBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox instanceTreasureQualityAdditionTxtBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridView harvestOverridesGrid;
+        private System.Windows.Forms.Button ExportHarvestOverridesButton;
+        private System.Windows.Forms.Button ImportHarvestOverridesButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.DataGridViewComboBoxColumn FoliageOverrideKey;
     }
 }

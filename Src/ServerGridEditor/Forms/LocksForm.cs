@@ -27,6 +27,7 @@ namespace ServerGridEditor.Forms
             lockIslandsChkbox.Checked = targetServer.islandLocked;
             lockDiscoChckbox.Checked = targetServer.discoLocked;
             lockShipPathsChckbox.Checked = targetServer.pathsLocked;
+            windsLockedChckBox.Checked = targetServer.windsLocked;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace ServerGridEditor.Forms
             targetServer.islandLocked = lockIslandsChkbox.Checked;
             targetServer.discoLocked = lockDiscoChckbox.Checked;
             targetServer.pathsLocked = lockShipPathsChckbox.Checked;
+            targetServer.windsLocked = windsLockedChckBox.Checked;
             Close();
         }
     }

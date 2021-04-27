@@ -72,6 +72,7 @@ namespace AtlasGridDataLibrary
         public int totalGridsX = 0;
         public int totalGridsY = 0;
         public bool bUseUTCTime = false;
+        public bool usePVEServerConfiguration = false;
         public float columnUTCOffset = 0.0f;
         public string Day0 = "";
         public float globalTransitionMinZ = 0.0f;
@@ -116,6 +117,10 @@ namespace AtlasGridDataLibrary
 
         [DefaultValue(true)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
+        public bool showTradeWindsInfo = true;
+
+        [DefaultValue(true)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
         public bool showIslandNames = true;
 
         [DefaultValue(true)]
@@ -134,9 +139,14 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         public bool showForeground = false;
 
+        [DefaultValue(false)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
+        public bool showTradeWindOverlay = false;
+
         public string backgroundImgPath = null;
 
         public string foregroundImgPath = null;
+        public string tradeWindOverlayImgPath = null;
 
         [DefaultValue("Resources/discoZoneBox.png")]
         public string discoZonesImagePath = null;
@@ -159,11 +169,18 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int shipPathsIdGenerator;
 
+        [DefaultValue(0)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public int tradeWindsIdGenerator;
+
         public List<ShipPathData> shipPaths = new List<ShipPathData>();
+        public List<TradeWindData> tradeWinds = new List<TradeWindData>();
 
         public DateTime lastImageOverride;
 
         public List<ServerTemplateData> serverTemplates = new List<ServerTemplateData>();
+        public List<ServerConfiguration> serverConfigurations = new List<ServerConfiguration>();
+        public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
     }
 
     // ==== SERVER INFO ===========================================
@@ -187,6 +204,7 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int seamlessDataPort = 27000;
         public bool isHomeServer = false;
+        public int forceServerRules = 0;
         public string AdditionalCmdLineParams = "";
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
         public int floorZDist = 0;
@@ -227,6 +245,7 @@ namespace AtlasGridDataLibrary
         public bool islandLocked = false;
         public bool discoLocked = false;
         public bool pathsLocked = false;
+        public bool windsLocked = false;
         public List<string> extraSublevels = new List<string>();
         public List<string> totalExtraSublevels = new List<string>();
 
@@ -240,7 +259,10 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public string serverTemplateName = "";
 
-        public bool[,] ServerPathingGrid = new bool[1,1];
+        public string serverConfigurationKeyPVP = "";
+        public string serverConfigurationKeyPVE = "";
+
+        public int[] ServerPathingGrid = new int[1];
 
         public string GetGridLocationHumanReadable()
         {
@@ -258,6 +280,19 @@ namespace AtlasGridDataLibrary
         public float templateColorG = 0;
         public float templateColorB = 0;
 
+    }
+
+    public class ServerConfiguration
+    {
+        public string ParentName;
+        public string Key;
+        public Dictionary<string, string> GameVariable = new Dictionary<string, string>();
+    }
+
+    public class FoliageAttachmentOverride
+    {
+        public string Key;
+        public Dictionary<string, string> FoliageMap = new Dictionary<string, string>();
     }
 
     public class SublevelSerializationObject
@@ -283,6 +318,7 @@ namespace AtlasGridDataLibrary
         public string name;
         public int id;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
+        public List<string> harvestOverrideKeys = new List<string>(); //Dictionary<string, string> harvestOverrides = new Dictionary<string, string>();
 
         public List<string> treasureMapSpawnPoints = new List<string>();
         public List<string> wildPirateCampSpawnPoints = new List<string>();
@@ -370,12 +406,16 @@ namespace AtlasGridDataLibrary
         public float MaxDesiredNumEnemiesMultiplier { get; set; }
     }
 
-    public class ShipPathData
+    public abstract class SplinePathData
     {
-        public List<BezierNodeData> Nodes = new List<BezierNodeData>();
         public int PathId;
         public bool isLooping = false;
         public string PathName = "";
+    }
+
+    public class ShipPathData : SplinePathData
+    {
+        public List<ShipPathNode> Nodes = new List<ShipPathNode>();
         public string AutoSpawnShipClass = "";
         public int AutoSpawnEveryUTCInterval = 0;
 
@@ -384,12 +424,41 @@ namespace AtlasGridDataLibrary
         public bool autoSpawn = true;
     }
 
+    public class TradeWindData : SplinePathData
+    {
+        public List<TradeWindNode> Nodes = new List<TradeWindNode>();
+        public bool reverseDir = false;
+        public bool isLoopingAroundWorld = false;
+        public float StartInterpolatingOceanColorAtPercentage = 0.25f; //0.875f;
+    }
+
     public class BezierNodeData : MoveableObjectData
+    {
+        public float controlPointsDistance;
+        public virtual SplinePathData GetSplinePath() { return null; }
+    }
+
+    public class ShipPathNode : BezierNodeData
     {
         [JsonIgnore]
         public ShipPathData shipPath;
-        public float controlPointsDistance;
+
+        public override SplinePathData GetSplinePath()
+        {
+            return shipPath;
+    }
     }
 
+    public class TradeWindNode : BezierNodeData
+    {
+        [JsonIgnore]
+        public TradeWindData tradeWind;
+        public float width = 1000;
+        public float strength = 1;
 
+        public override SplinePathData GetSplinePath()
+        {
+            return tradeWind;
+}
+    }
 }

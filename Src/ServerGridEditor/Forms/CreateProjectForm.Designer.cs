@@ -122,6 +122,7 @@
             this.DBEntry6_URLTxtBx = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.DBEntry6_NameTxtBx = new System.Windows.Forms.TextBox();
+            this.usePVEServerConfigurationCheckbox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -924,6 +925,17 @@
             this.DBEntry6_NameTxtBx.TabIndex = 105;
             this.DBEntry6_NameTxtBx.Text = "TradeDB";
             // 
+            // usePVEServerConfigurationCheckbox
+            // 
+            this.usePVEServerConfigurationCheckbox.AutoSize = true;
+            this.usePVEServerConfigurationCheckbox.Location = new System.Drawing.Point(142, 631);
+            this.usePVEServerConfigurationCheckbox.Name = "usePVEServerConfigurationCheckbox";
+            this.usePVEServerConfigurationCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.usePVEServerConfigurationCheckbox.Size = new System.Drawing.Size(165, 17);
+            this.usePVEServerConfigurationCheckbox.TabIndex = 110;
+            this.usePVEServerConfigurationCheckbox.Text = "Use PVE ServerConfiguration";
+            this.usePVEServerConfigurationCheckbox.UseVisualStyleBackColor = true;
+            // 
             // CreateProjectForm
             // 
             this.AcceptButton = this.createBtn;
@@ -931,6 +943,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(702, 766);
+            this.Controls.Add(this.usePVEServerConfigurationCheckbox);
             this.Controls.Add(this.DBEntry6_PasswordTxtBx);
             this.Controls.Add(this.DBEntry6_PortTxtBx);
             this.Controls.Add(this.DBEntry6_URLTxtBx);
@@ -1134,5 +1147,6 @@
         private System.Windows.Forms.TextBox DBEntry6_URLTxtBx;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox DBEntry6_NameTxtBx;
+        private System.Windows.Forms.CheckBox usePVEServerConfigurationCheckbox;
     }
 }

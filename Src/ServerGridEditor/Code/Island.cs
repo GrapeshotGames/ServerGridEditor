@@ -22,6 +22,7 @@ namespace ServerGridEditor
         public int landscapeMaterialOverride;
         public List<string> sublevelNames;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
+        public List<string> harvestOverrideKeys = new List<string>(); //Dictionary<string, string> harvestOverrides = new Dictionary<string, string>();
         public List<string> extraSublevels;
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
         public List<string> treasureMapSpawnPoints;
@@ -115,7 +116,7 @@ namespace ServerGridEditor
         }
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
-            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
+            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> harvestOverrideKeys, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
             bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, bool isControlPoint, bool isControlPointAllowCapture, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
         {
             this.name = name;
@@ -125,6 +126,7 @@ namespace ServerGridEditor
             this.landscapeMaterialOverride = landscapeMaterialOverride;
             this.sublevelNames = sublevelNames;
             this.spawnerOverrides = spawnerOverrides;
+            this.harvestOverrideKeys = harvestOverrideKeys;
             this.treasureMapSpawnPoints = treasureMapSpawnPoints;
             this.wildPirateCampSpawnPoints = wildPirateCampSpawnPoints;
             this.minTreasureQuality = minTreasureQuality;
@@ -155,6 +157,8 @@ namespace ServerGridEditor
             Data.rotation = rotation;
             Data.id = id;
             Data.spawnerOverrides = new Dictionary<string, string>();
+            //Data.harvestOverrides = new Dictionary<string, string>();
+            Data.harvestOverrideKeys = new List<string>();
 
             Data.minTreasureQuality = Data.maxTreasureQuality = -1;
             Data.spawnPointRegionOverride = -1;
@@ -214,22 +218,32 @@ namespace ServerGridEditor
         {
             Island referencedIsland = Data.GetReferencedIsland(mainForm.islands);
 
-            if (referencedIsland.spawnerOverrides == null)
-                return;
-
-            List<string> keysToRemove = new List<string>();
-            foreach (KeyValuePair<string, string> templateSpawnerOverride in referencedIsland.spawnerOverrides)
+            if (referencedIsland.spawnerOverrides != null)
             {
-                if (Data.spawnerOverrides.ContainsKey(templateSpawnerOverride.Key) && Data.spawnerOverrides[templateSpawnerOverride.Key] == templateSpawnerOverride.Value)
+                List<string> keysToRemove = new List<string>();
+                foreach (KeyValuePair<string, string> templateSpawnerOverride in referencedIsland.spawnerOverrides)
                 {
-                    keysToRemove.Add(templateSpawnerOverride.Key);
+                    if (Data.spawnerOverrides.ContainsKey(templateSpawnerOverride.Key) && Data.spawnerOverrides[templateSpawnerOverride.Key] == templateSpawnerOverride.Value)
+                    {
+                        keysToRemove.Add(templateSpawnerOverride.Key);
+                    }
+                }
+
+                foreach (string keyToRemove in keysToRemove)
+                {
+                    Data.spawnerOverrides.Remove(keyToRemove);
                 }
             }
 
-            foreach (string keyToRemove in keysToRemove)
+
+            if (referencedIsland.harvestOverrideKeys != null)
             {
-                Data.spawnerOverrides.Remove(keyToRemove);
+                if (Data.harvestOverrideKeys == null)
+                    Data.harvestOverrideKeys = new List<string>();
+                List<string> keysToRemove = new List<string>();
+                Data.harvestOverrideKeys = referencedIsland.harvestOverrideKeys;
             }
         }
+
     }
 }

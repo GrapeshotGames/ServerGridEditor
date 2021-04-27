@@ -32,6 +32,7 @@
             this.applyBtn = new System.Windows.Forms.Button();
             this.lockDiscoChckbox = new System.Windows.Forms.CheckBox();
             this.lockShipPathsChckbox = new System.Windows.Forms.CheckBox();
+            this.windsLockedChckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // lockIslandsChkbox
@@ -48,7 +49,7 @@
             // 
             // applyBtn
             // 
-            this.applyBtn.Location = new System.Drawing.Point(68, 140);
+            this.applyBtn.Location = new System.Drawing.Point(68, 162);
             this.applyBtn.Name = "applyBtn";
             this.applyBtn.Size = new System.Drawing.Size(75, 23);
             this.applyBtn.TabIndex = 1;
@@ -80,12 +81,25 @@
             this.lockShipPathsChckbox.Text = "Lock Ship Paths";
             this.lockShipPathsChckbox.UseVisualStyleBackColor = true;
             // 
+            // windsLockedChckBox
+            // 
+            this.windsLockedChckBox.AutoSize = true;
+            this.windsLockedChckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.windsLockedChckBox.ForeColor = System.Drawing.Color.Turquoise;
+            this.windsLockedChckBox.Location = new System.Drawing.Point(26, 124);
+            this.windsLockedChckBox.Name = "windsLockedChckBox";
+            this.windsLockedChckBox.Size = new System.Drawing.Size(155, 24);
+            this.windsLockedChckBox.TabIndex = 4;
+            this.windsLockedChckBox.Text = "Lock Trade Winds";
+            this.windsLockedChckBox.UseVisualStyleBackColor = true;
+            // 
             // LocksForm
             // 
             this.AcceptButton = this.applyBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 189);
+            this.ClientSize = new System.Drawing.Size(217, 207);
+            this.Controls.Add(this.windsLockedChckBox);
             this.Controls.Add(this.lockShipPathsChckbox);
             this.Controls.Add(this.lockDiscoChckbox);
             this.Controls.Add(this.applyBtn);
@@ -110,5 +124,6 @@
         private System.Windows.Forms.Button applyBtn;
         private System.Windows.Forms.CheckBox lockDiscoChckbox;
         private System.Windows.Forms.CheckBox lockShipPathsChckbox;
+        private System.Windows.Forms.CheckBox windsLockedChckBox;
     }
 }

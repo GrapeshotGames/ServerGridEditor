@@ -13,6 +13,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -79,6 +83,10 @@
       "Cay_A_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -143,6 +151,10 @@
       "Mnt_B_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -207,6 +219,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -271,6 +287,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -332,6 +352,10 @@
       "Cay_F_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -401,6 +425,10 @@
       "Mnt_P_Near_02G"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -468,6 +496,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -533,6 +565,10 @@
       "Cay_I_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -596,6 +632,10 @@
       "Cay_G_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -661,6 +701,10 @@
       "Cay_G_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -728,6 +772,10 @@
       "Cay_H_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -792,6 +840,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -861,6 +913,10 @@
       "Mnt_I_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -926,6 +982,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -988,6 +1048,10 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1049,6 +1113,10 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1111,6 +1179,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1188,6 +1260,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1251,6 +1327,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1325,6 +1405,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1390,6 +1474,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1461,6 +1549,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1527,6 +1619,10 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1602,6 +1698,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1665,6 +1765,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1726,6 +1830,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -1791,6 +1899,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1871,6 +1983,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1933,6 +2049,9 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "Freeport"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -1996,6 +2115,10 @@
       "Cay_A_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2058,6 +2181,10 @@
       "Cay_E_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -2128,6 +2255,10 @@
       "Cay_E_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2194,6 +2325,10 @@
       "Cay_E_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2258,6 +2393,10 @@
       "Cay_E"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2321,6 +2460,10 @@
       "Cay_F_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -2387,6 +2530,10 @@
       "Cay_F_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2449,6 +2596,10 @@
       "Cay_G_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2512,6 +2663,10 @@
       "Cay_G"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2574,6 +2729,10 @@
       "Cay_G"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2635,6 +2794,7 @@
       "Cay_G"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2696,6 +2856,10 @@
       "Cay_H_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -2769,6 +2933,10 @@
       "Cay_H_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -2831,6 +2999,10 @@
       "Cay_H"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2898,6 +3070,10 @@
       "Cay_H"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -2962,6 +3138,10 @@
       "Cay_I_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3024,6 +3204,10 @@
       "Cay_I_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3085,6 +3269,10 @@
       "Cay_I"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3145,6 +3333,10 @@
       "Cay_I"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3206,6 +3398,10 @@
       "Cay_I"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3267,6 +3463,10 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3331,6 +3531,10 @@
       "Cay_J"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3392,6 +3596,10 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3455,6 +3663,10 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3518,6 +3730,10 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3579,6 +3795,10 @@
       "Cay_L_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3643,6 +3863,10 @@
       "Cay_L_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3705,6 +3929,10 @@
       "Cay_L"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3772,6 +4000,10 @@
       "Cay_L"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3836,6 +4068,10 @@
       "Cay_M_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -3900,6 +4136,10 @@
       "Cay_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -3961,6 +4201,10 @@
       "Cay_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -4025,6 +4269,10 @@
       "Cay_N_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4089,6 +4337,10 @@
       "Cay_N_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple"
@@ -4155,6 +4407,10 @@
       "Cay_N_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4218,6 +4474,10 @@
       "Cay_N"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -4281,6 +4541,10 @@
       "Cay_O_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4345,6 +4609,10 @@
       "Cay_O_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4409,6 +4677,10 @@
       "Cay_O"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -4469,6 +4741,10 @@
       "Cay_L_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4533,6 +4809,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple"
@@ -4594,6 +4874,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4656,6 +4940,7 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -4718,6 +5003,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -4780,6 +5069,10 @@
       "Mnt_B_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -4848,6 +5141,10 @@
       "Mnt_B"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -4913,6 +5210,10 @@
       "Mnt_B"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -4973,6 +5274,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -5032,6 +5337,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -5096,6 +5405,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -5157,6 +5470,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -5218,6 +5535,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5280,6 +5601,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5342,6 +5667,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5401,6 +5730,7 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -5441,7 +5771,7 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "isControlPoint": false,
-    "isControlPointAllowCapture": true,
+    "isControlPointAllowCapture": false,
     "islandTreasureBottleSupplyCrateOverrides": "",
     "islandPoints": 1,
     "singleSpawnPointX": -6090.0,
@@ -5463,6 +5793,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -5523,6 +5857,7 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -5585,6 +5920,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5662,6 +6001,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -5727,6 +6070,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -5793,6 +6140,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5860,6 +6211,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -5922,6 +6277,7 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -5997,6 +6353,7 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -6057,6 +6414,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -6134,6 +6495,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6203,6 +6568,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6273,6 +6642,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6340,6 +6713,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6406,6 +6783,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -6480,6 +6861,7 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -6554,6 +6936,7 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -6612,6 +6995,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -6681,6 +7068,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6743,6 +7134,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6809,6 +7204,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6877,6 +7276,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -6940,6 +7343,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7009,6 +7416,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7075,6 +7486,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7137,6 +7552,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7209,6 +7628,7 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -7270,6 +7690,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -7333,6 +7757,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -7407,6 +7835,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7487,6 +7919,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7559,6 +7995,10 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -7632,6 +8072,10 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7705,6 +8149,10 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -7776,6 +8224,10 @@
       "Mnt_I_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -7844,6 +8296,10 @@
       "Mnt_I_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -7930,6 +8386,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -8018,6 +8478,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -8088,6 +8552,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8159,6 +8627,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -8220,6 +8692,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8287,6 +8763,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -8356,6 +8836,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "02_Temperate_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -8421,6 +8905,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8492,6 +8980,11 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -8551,6 +9044,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8613,6 +9110,7 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -8674,6 +9172,10 @@
       "Mnt_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8738,6 +9240,10 @@
       "Mnt_M_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -8800,6 +9306,10 @@
       "Mnt_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8861,6 +9371,10 @@
       "Mnt_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -8921,6 +9435,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -8984,6 +9502,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9047,6 +9569,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -9113,6 +9639,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9176,6 +9706,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9238,6 +9772,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9299,6 +9837,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -9364,6 +9906,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9425,6 +9971,10 @@
       "Mnt_Q_Near_01"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9490,6 +10040,10 @@
       "Mnt_R_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "06_Tundra_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9554,6 +10108,7 @@
       "Mnt_R_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9616,6 +10171,7 @@
       "Mnt_R_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9680,6 +10236,10 @@
       "Mnt_R_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "06_Tundra_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9742,6 +10302,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9815,6 +10379,9 @@
       "Mnt_X_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -9876,6 +10443,9 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "Freeport"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -9937,6 +10507,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "06_Tundra_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -9999,6 +10573,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -10061,6 +10639,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -10134,6 +10716,7 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -10207,6 +10790,10 @@
       "Mnt_X_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -10277,6 +10864,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -10344,6 +10935,10 @@
       "Cay_H_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -10405,6 +11000,9 @@
       "Mnt_G_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -10468,6 +11066,9 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "Freeport"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -10534,6 +11135,9 @@
       "Mnt_F_HI"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "Freeport"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
       "MasterIBL_EasternTemperate_Canopy_RedMaple",
@@ -10601,6 +11205,7 @@
       "Mnt_L_HD_E"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -10662,6 +11267,9 @@
       "Mnt_U_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -10726,6 +11334,9 @@
       "Mnt_Y_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -10787,6 +11398,9 @@
       "Mnt_S_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -10857,6 +11471,7 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -10917,6 +11532,9 @@
       "Mnt_R_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert"
+    ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
       "MasterIBL_LowDesert_Canopy_DatePalm"
@@ -10972,6 +11590,9 @@
       "Mnt_R_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11026,6 +11647,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11095,6 +11720,10 @@
       "Mnt_K_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11156,6 +11785,9 @@
       "Cay_C_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -11222,6 +11854,10 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -11286,6 +11922,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -11365,6 +12002,11 @@
       "Cay_A_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -11429,6 +12071,10 @@
       "Mnt_M"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11495,6 +12141,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canop"
@@ -11557,6 +12207,7 @@
       "Cay_C_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -11619,6 +12270,7 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11682,6 +12334,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11745,6 +12401,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11812,6 +12472,10 @@
       "Mnt_I_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -11874,6 +12538,10 @@
       "Cay_E_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -11944,6 +12612,10 @@
       "Cay_F_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -12011,6 +12683,10 @@
       "Cay_G_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -12073,6 +12749,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12133,6 +12810,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12207,6 +12885,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12277,6 +12956,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12343,6 +13026,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12404,6 +13091,7 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12476,6 +13164,7 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12538,6 +13227,10 @@
       "Cay_H_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -12600,6 +13293,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -12658,6 +13355,10 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -12728,6 +13429,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12789,6 +13494,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12863,6 +13572,10 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12927,6 +13640,7 @@
       "Mnt_E_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12994,6 +13708,7 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13072,6 +13787,7 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13168,6 +13884,7 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13251,6 +13968,7 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13324,6 +14042,10 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -13382,6 +14104,7 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -13441,6 +14164,11 @@
       "Cay_J_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -13505,6 +14233,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -13589,6 +14321,10 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -13653,6 +14389,10 @@
       "Cay_L_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -13720,6 +14460,7 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -13783,6 +14524,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "09_Desert",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -13842,6 +14587,10 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13921,6 +14670,7 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13992,6 +14742,10 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -14068,6 +14822,7 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -14131,6 +14886,7 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -14194,6 +14950,7 @@
       "Mnt_A_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -14257,6 +15014,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -14325,6 +15086,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -14392,6 +15157,7 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -14462,6 +15228,10 @@
       "Cay_E_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14530,6 +15300,10 @@
       "Cay_F_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14599,6 +15373,10 @@
       "Cay_K_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14664,6 +15442,10 @@
       "Cay_I_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14727,6 +15509,10 @@
       "Cay_O_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14791,6 +15577,11 @@
       "Cay_N_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14855,6 +15646,10 @@
       "Cay_A_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14924,6 +15719,10 @@
       "Cay_I_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -14989,6 +15788,10 @@
       "Mnt_Z_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "10_Desert_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
       "MasterIBL_HighDesert_Canopy"
@@ -15083,6 +15886,7 @@
       "Islet_A_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -15130,6 +15934,7 @@
       "Islet_A_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -15177,6 +15982,10 @@
       "Islet_A_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -15224,6 +16033,10 @@
       "Islet_A"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -15270,6 +16083,10 @@
       "Islet_A"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -15316,6 +16133,10 @@
       "Islet_A"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -15363,6 +16184,10 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -15449,6 +16274,10 @@
       "Mnt_I_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -15516,6 +16345,10 @@
       "Ice_A_Farthest_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
       "-9530.189453 9723.869141 6267.110840",
@@ -15548,6 +16381,10 @@
       "Ice_B_Farthest_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
       "-13234.990234 27841.679688 5672.203613",
@@ -15580,6 +16417,7 @@
       "Ice_C_Farthest_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
       "-16782.748047 -2601.536133 4502.770996",
@@ -15612,6 +16450,10 @@
       "Ice_D_Farthest_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
       "-33469.867188 -17599.101563 4689.477051",
@@ -15644,6 +16486,10 @@
       "Ice_E_Farthest_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
       "-12973.479492 27498.873047 2921.494629",
@@ -15680,6 +16526,7 @@
       "Trench_FloorHideVolume_ForceLoad"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Trench",
       "MasterIBL_Trench_Lava"
@@ -15711,6 +16558,10 @@
       "Mnt_AA_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -15780,6 +16631,7 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -15841,6 +16693,10 @@
       "Mnt_AH_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -15905,6 +16761,10 @@
       "Mnt_AI_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -15968,6 +16828,10 @@
       "Mnt_AJ_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16032,6 +16896,10 @@
       "Mnt_AL_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16101,6 +16969,10 @@
       "Mnt_AQ_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16163,6 +17035,10 @@
       "Mnt_AW_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16228,6 +17104,10 @@
       "Mnt_AK_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16293,6 +17173,7 @@
       "Mnt_AE_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16354,6 +17235,7 @@
       "Mnt_AC_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16416,6 +17298,7 @@
       "Mnt_AD_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16479,6 +17362,10 @@
       "Mnt_AG_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16543,6 +17430,7 @@
       "Mnt_AA_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16606,6 +17494,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16669,6 +17561,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "06_Tundra_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16741,6 +17637,10 @@
       "Mnt_S_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16818,6 +17718,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16886,6 +17787,7 @@
       "Mnt_F_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16960,6 +17862,9 @@
       "Mnt_Y_PVE"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -17028,6 +17933,10 @@
       "Mnt_H_PO_Cave"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -17106,6 +18015,10 @@
       "Mnt_W_EQ"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -17172,6 +18085,10 @@
       "Mnt_AW_BO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -17234,6 +18151,10 @@
       "Mnt_AV_BO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -17298,6 +18219,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -17359,6 +18284,11 @@
       "Mnt_AE_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -17423,6 +18353,10 @@
       "Mnt_AO_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17486,6 +18420,7 @@
       "Mnt_AA_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17547,6 +18482,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17616,6 +18555,7 @@
       "Mnt_AM_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17678,6 +18618,10 @@
       "Mnt_AG_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17739,6 +18683,7 @@
       "Mnt_AL_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17801,6 +18746,10 @@
       "Mnt_AK_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17862,6 +18811,10 @@
       "Mnt_AD_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17923,6 +18876,10 @@
       "Mnt_AF_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -17987,6 +18944,10 @@
       "Mnt_AN_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18050,6 +19011,10 @@
       "Mnt_AH_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18111,6 +19076,10 @@
       "Mnt_AJ_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18170,6 +19139,10 @@
       "Mnt_AW_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18231,6 +19204,7 @@
       "Mnt_AQ_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18296,6 +19270,10 @@
       "Mnt_AR_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18358,6 +19336,10 @@
       "Mnt_AP_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18421,6 +19403,10 @@
       "Mnt_AI_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18483,6 +19469,10 @@
       "Mnt_AU_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18549,6 +19539,10 @@
       "Mnt_AF_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -18612,6 +19606,10 @@
       "Mnt_AR_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18680,6 +19678,10 @@
       "Mnt_AR_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18745,6 +19747,10 @@
       "Mnt_AX_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18808,6 +19814,10 @@
       "Mnt_AM_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18871,6 +19881,10 @@
       "Mnt_AU_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "06_Tundra_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18934,6 +19948,7 @@
       "Mnt_AH_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -18997,6 +20012,10 @@
       "Mnt_AT_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19060,6 +20079,10 @@
       "Mnt_AF_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19123,6 +20146,10 @@
       "Mnt_AV_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19187,6 +20214,10 @@
       "Mnt_AP_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19251,6 +20282,10 @@
       "Mnt_AO_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19316,6 +20351,10 @@
       "Mnt_AN_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19380,6 +20419,10 @@
       "Mnt_U_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19449,6 +20492,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19516,6 +20563,10 @@
       "Mnt_X_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19581,6 +20632,7 @@
       "Mnt_Y_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19644,6 +20696,11 @@
       "Mnt_AA_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -19708,6 +20765,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -19772,6 +20833,11 @@
       "Mnt_AC_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -19834,6 +20900,10 @@
       "Mnt_AD_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -19897,6 +20967,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -19964,6 +21038,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -20027,6 +21105,10 @@
       "Mnt_G_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20094,6 +21176,10 @@
       "Mnt_K_Far_08"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20157,6 +21243,10 @@
       "Mnt_N_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20219,6 +21309,10 @@
       "Mnt_L_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20281,6 +21375,10 @@
       "Mnt_O_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20346,6 +21444,10 @@
       "Mnt_C_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20403,6 +21505,7 @@
       "Mnt_D_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20460,6 +21563,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20517,6 +21624,10 @@
       "Mnt_F_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "TinGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20575,6 +21686,10 @@
       "Mnt_W_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20637,6 +21752,7 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20700,6 +21816,7 @@
       "Mnt_AD_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -20763,6 +21880,7 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -20828,6 +21946,10 @@
       "Mnt_AV_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -20892,6 +22014,7 @@
       "Mnt_A_Far_06D"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -20953,6 +22076,7 @@
       "Cay_C"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21019,6 +22143,10 @@
       "Cay_E"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21083,6 +22211,10 @@
       "Cay_H"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "01_Tropical",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21145,6 +22277,11 @@
       "Mnt_AF_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21209,6 +22346,10 @@
       "Mnt_AA_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21273,6 +22414,10 @@
       "Mnt_V_Near_Giant"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21334,6 +22479,11 @@
       "Mnt_AQ_Near_07"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21397,6 +22547,10 @@
       "Mnt_AJ_Near_07"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21461,6 +22615,10 @@
       "Mnt_AI_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21524,6 +22682,11 @@
       "Mnt_AH_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21587,6 +22750,11 @@
       "Mnt_AD_PO"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21649,6 +22817,10 @@
       "Mnt_AN_Near_07"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "04_Tropical_Easy",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21713,6 +22885,10 @@
       "Mnt_AC_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21777,6 +22953,10 @@
       "Mnt_AP_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21843,6 +23023,11 @@
       "Mnt_AK_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21911,6 +23096,11 @@
       "Mnt_AI_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -21977,6 +23167,11 @@
       "Mnt_AH_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "TinGroup",
+      "IronwoodOakOverride"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -22043,6 +23238,7 @@
       "Mnt_AG_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -22109,6 +23305,10 @@
       "Mnt_AF_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -22176,6 +23376,10 @@
       "Mnt_AJ_TU"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "07_Equator",
+      "IronGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
@@ -22243,13 +23447,14 @@
       "Cay_S_Near_01"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
       "MasterIBL_Temperate_Canopy_B"
     ],
     "minTreasureQuality": -1.0,
-    "maxTreasureQuality": -1.0,
+    "maxTreasureQuality": -101.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
@@ -22271,6 +23476,7 @@
       "Capture_Point"
     ],
     "spawnerOverrides": {},
+    "harvestOverrideKeys": null,
     "extraSublevels": [],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
@@ -22280,7 +23486,7 @@
     "isControlPoint": true,
     "isControlPointAllowCapture": true,
     "islandTreasureBottleSupplyCrateOverrides": "",
-    "islandPoints": 1,
+    "islandPoints": 0,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0

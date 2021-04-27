@@ -53,12 +53,14 @@
             this.editServerTemplatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editLocksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cullInvalidPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editServerConfigurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cellImagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.slippyMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tradewindsWorldMapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testAllServersWithDataClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.testAllServersWithoutDataClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,6 +100,12 @@
             this.gridRowsLabel = new System.Windows.Forms.Label();
             this.GridColumnsTxtBox = new System.Windows.Forms.TextBox();
             this.gridColumnsLabel = new System.Windows.Forms.Label();
+            this.RecalcPathingGridButton = new System.Windows.Forms.Button();
+            this.showTradeWindsChckBox = new System.Windows.Forms.CheckBox();
+            this.tradeWindOverlayChckBox = new System.Windows.Forms.CheckBox();
+            this.chooseTradeWindOverlayBtn = new System.Windows.Forms.Button();
+            this.visualizeTradewindsWidthCheckBox = new System.Windows.Forms.CheckBox();
+            this.editFoliageAttachmentOverrideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -117,7 +125,7 @@
             this.islandListBox.Location = new System.Drawing.Point(781, 29);
             this.islandListBox.Name = "islandListBox";
             this.islandListBox.OwnerDraw = true;
-            this.islandListBox.Size = new System.Drawing.Size(292, 628);
+            this.islandListBox.Size = new System.Drawing.Size(292, 695);
             this.islandListBox.TabIndex = 0;
             this.islandListBox.UseCompatibleStateImageBehavior = false;
             this.islandListBox.View = System.Windows.Forms.View.Details;
@@ -141,7 +149,7 @@
             // addIslandBtn
             // 
             this.addIslandBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addIslandBtn.Location = new System.Drawing.Point(781, 664);
+            this.addIslandBtn.Location = new System.Drawing.Point(781, 731);
             this.addIslandBtn.Name = "addIslandBtn";
             this.addIslandBtn.Size = new System.Drawing.Size(89, 34);
             this.addIslandBtn.TabIndex = 1;
@@ -152,7 +160,7 @@
             // removeIslandBtn
             // 
             this.removeIslandBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.removeIslandBtn.Location = new System.Drawing.Point(981, 663);
+            this.removeIslandBtn.Location = new System.Drawing.Point(981, 730);
             this.removeIslandBtn.Name = "removeIslandBtn";
             this.removeIslandBtn.Size = new System.Drawing.Size(92, 34);
             this.removeIslandBtn.TabIndex = 2;
@@ -169,7 +177,7 @@
             this.mapPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.mapPanel.Location = new System.Drawing.Point(25, 29);
             this.mapPanel.Name = "mapPanel";
-            this.mapPanel.Size = new System.Drawing.Size(733, 564);
+            this.mapPanel.Size = new System.Drawing.Size(733, 583);
             this.mapPanel.TabIndex = 3;
             this.mapPanel.DragDrop += new System.Windows.Forms.DragEventHandler(this.mapPanel_DragDrop);
             this.mapPanel.DragOver += new System.Windows.Forms.DragEventHandler(this.mapPanel_DragOver);
@@ -182,7 +190,7 @@
             // 
             this.createProjBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.createProjBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createProjBtn.Location = new System.Drawing.Point(442, 245);
+            this.createProjBtn.Location = new System.Drawing.Point(442, 278);
             this.createProjBtn.Name = "createProjBtn";
             this.createProjBtn.Size = new System.Drawing.Size(239, 84);
             this.createProjBtn.TabIndex = 19;
@@ -194,7 +202,7 @@
             // 
             this.loadProjBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loadProjBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadProjBtn.Location = new System.Drawing.Point(442, 364);
+            this.loadProjBtn.Location = new System.Drawing.Point(442, 397);
             this.loadProjBtn.Name = "loadProjBtn";
             this.loadProjBtn.Size = new System.Drawing.Size(239, 84);
             this.loadProjBtn.TabIndex = 20;
@@ -207,7 +215,7 @@
             this.mapHScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mapHScrollBar.Enabled = false;
-            this.mapHScrollBar.Location = new System.Drawing.Point(28, 596);
+            this.mapHScrollBar.Location = new System.Drawing.Point(25, 615);
             this.mapHScrollBar.Name = "mapHScrollBar";
             this.mapHScrollBar.Size = new System.Drawing.Size(733, 17);
             this.mapHScrollBar.TabIndex = 4;
@@ -221,7 +229,7 @@
             this.mapVScrollBar.Enabled = false;
             this.mapVScrollBar.Location = new System.Drawing.Point(761, 29);
             this.mapVScrollBar.Name = "mapVScrollBar";
-            this.mapVScrollBar.Size = new System.Drawing.Size(17, 584);
+            this.mapVScrollBar.Size = new System.Drawing.Size(17, 603);
             this.mapVScrollBar.TabIndex = 5;
             this.mapVScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.mapVScrollBar_Scroll);
             // 
@@ -288,7 +296,9 @@
             this.editSpawnPointsToolStripMenuItem,
             this.editServerTemplatesToolStripMenuItem,
             this.editLocksToolStripMenuItem,
-            this.cullInvalidPathsToolStripMenuItem});
+            this.cullInvalidPathsToolStripMenuItem,
+            this.editServerConfigurationToolStripMenuItem,
+            this.editFoliageAttachmentOverrideToolStripMenuItem});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
@@ -296,21 +306,21 @@
             // editSpawnerTemplatesToolStripMenuItem
             // 
             this.editSpawnerTemplatesToolStripMenuItem.Name = "editSpawnerTemplatesToolStripMenuItem";
-            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editSpawnerTemplatesToolStripMenuItem.Text = "Edit Spawner Templates";
             this.editSpawnerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editSpawnerTemplatesToolStripMenuItem_Click);
             // 
             // editAllDiscoveryZonesToolStripMenuItem
             // 
             this.editAllDiscoveryZonesToolStripMenuItem.Name = "editAllDiscoveryZonesToolStripMenuItem";
-            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editAllDiscoveryZonesToolStripMenuItem.Text = "Edit Discovery Zones";
             this.editAllDiscoveryZonesToolStripMenuItem.Click += new System.EventHandler(this.editAllDiscoveryZonesToolStripMenuItem_Click);
             // 
             // editSpawnPointsToolStripMenuItem
             // 
             this.editSpawnPointsToolStripMenuItem.Name = "editSpawnPointsToolStripMenuItem";
-            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editSpawnPointsToolStripMenuItem.Text = "Edit Spawn Regions";
             this.editSpawnPointsToolStripMenuItem.Click += new System.EventHandler(this.editSpawnPointsToolStripMenuItem_Click);
             // 
@@ -318,23 +328,30 @@
             // 
             this.editServerTemplatesToolStripMenuItem.Enabled = false;
             this.editServerTemplatesToolStripMenuItem.Name = "editServerTemplatesToolStripMenuItem";
-            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editServerTemplatesToolStripMenuItem.Text = "Edit Server Templates";
             this.editServerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editServerTemplatesToolStripMenuItem_Click);
             // 
             // editLocksToolStripMenuItem
             // 
             this.editLocksToolStripMenuItem.Name = "editLocksToolStripMenuItem";
-            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editLocksToolStripMenuItem.Text = "Edit Locks";
             this.editLocksToolStripMenuItem.Click += new System.EventHandler(this.editLocksToolStripMenuItem_Click);
             // 
             // cullInvalidPathsToolStripMenuItem
             // 
             this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
-            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
             this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
+            // 
+            // editServerConfigurationToolStripMenuItem
+            // 
+            this.editServerConfigurationToolStripMenuItem.Name = "editServerConfigurationToolStripMenuItem";
+            this.editServerConfigurationToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.editServerConfigurationToolStripMenuItem.Text = "Edit Server Configurations";
+            this.editServerConfigurationToolStripMenuItem.Click += new System.EventHandler(this.editServerConfigurationToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -343,7 +360,8 @@
             this.mapImageToolStripMenuItem,
             this.cellImagesToolStripMenuItem,
             this.toolStripSeparator1,
-            this.slippyMapToolStripMenuItem});
+            this.slippyMapToolStripMenuItem,
+            this.tradewindsWorldMapToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
             this.exportToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.exportToolStripMenuItem.Text = "Export";
@@ -352,7 +370,7 @@
             // 
             this.exportAllToolStripMenuItem.Enabled = false;
             this.exportAllToolStripMenuItem.Name = "exportAllToolStripMenuItem";
-            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.exportAllToolStripMenuItem.Text = "All";
             this.exportAllToolStripMenuItem.Click += new System.EventHandler(this.localExportToolStripMenuItem_Click);
             // 
@@ -360,7 +378,7 @@
             // 
             this.mapImageToolStripMenuItem.Enabled = false;
             this.mapImageToolStripMenuItem.Name = "mapImageToolStripMenuItem";
-            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.mapImageToolStripMenuItem.Text = "Only Map Image";
             this.mapImageToolStripMenuItem.Click += new System.EventHandler(this.mapImageToolStripMenuItem_Click);
             // 
@@ -368,22 +386,29 @@
             // 
             this.cellImagesToolStripMenuItem.Enabled = false;
             this.cellImagesToolStripMenuItem.Name = "cellImagesToolStripMenuItem";
-            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.cellImagesToolStripMenuItem.Text = "Only Cell Images";
             this.cellImagesToolStripMenuItem.Click += new System.EventHandler(this.cellImagesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(187, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(192, 6);
             // 
             // slippyMapToolStripMenuItem
             // 
             this.slippyMapToolStripMenuItem.Enabled = false;
             this.slippyMapToolStripMenuItem.Name = "slippyMapToolStripMenuItem";
-            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.slippyMapToolStripMenuItem.Text = "Slippy Map (Optional)";
             this.slippyMapToolStripMenuItem.Click += new System.EventHandler(this.slippyMapToolStripMenuItem_Click);
+            // 
+            // tradewindsWorldMapToolStripMenuItem
+            // 
+            this.tradewindsWorldMapToolStripMenuItem.Name = "tradewindsWorldMapToolStripMenuItem";
+            this.tradewindsWorldMapToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.tradewindsWorldMapToolStripMenuItem.Text = "Tradewinds World Map";
+            this.tradewindsWorldMapToolStripMenuItem.Click += new System.EventHandler(this.tradewindsWorldMapToolStripMenuItem_Click);
             // 
             // testsToolStripMenuItem
             // 
@@ -428,7 +453,7 @@
             // 
             this.scaleLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.scaleLbl.AutoSize = true;
-            this.scaleLbl.Location = new System.Drawing.Point(25, 665);
+            this.scaleLbl.Location = new System.Drawing.Point(16, 733);
             this.scaleLbl.Name = "scaleLbl";
             this.scaleLbl.Size = new System.Drawing.Size(130, 13);
             this.scaleLbl.TabIndex = 7;
@@ -440,7 +465,7 @@
             this.showServerInfoCheckbox.AutoSize = true;
             this.showServerInfoCheckbox.Checked = true;
             this.showServerInfoCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showServerInfoCheckbox.Location = new System.Drawing.Point(198, 661);
+            this.showServerInfoCheckbox.Location = new System.Drawing.Point(21, 688);
             this.showServerInfoCheckbox.Name = "showServerInfoCheckbox";
             this.showServerInfoCheckbox.Size = new System.Drawing.Size(108, 17);
             this.showServerInfoCheckbox.TabIndex = 8;
@@ -454,18 +479,18 @@
             this.showDiscoZoneInfoCheckbox.AutoSize = true;
             this.showDiscoZoneInfoCheckbox.Checked = true;
             this.showDiscoZoneInfoCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showDiscoZoneInfoCheckbox.Location = new System.Drawing.Point(161, 638);
+            this.showDiscoZoneInfoCheckbox.Location = new System.Drawing.Point(140, 665);
             this.showDiscoZoneInfoCheckbox.Name = "showDiscoZoneInfoCheckbox";
-            this.showDiscoZoneInfoCheckbox.Size = new System.Drawing.Size(152, 17);
+            this.showDiscoZoneInfoCheckbox.Size = new System.Drawing.Size(136, 17);
             this.showDiscoZoneInfoCheckbox.TabIndex = 8;
-            this.showDiscoZoneInfoCheckbox.Text = "Show Discovery Zone Info";
+            this.showDiscoZoneInfoCheckbox.Text = "Show Discovery Zones";
             this.showDiscoZoneInfoCheckbox.UseVisualStyleBackColor = true;
             this.showDiscoZoneInfoCheckbox.CheckedChanged += new System.EventHandler(this.showServerInfoCheckbox_CheckedChanged);
             // 
             // setRatioBtn
             // 
             this.setRatioBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.setRatioBtn.Location = new System.Drawing.Point(114, 682);
+            this.setRatioBtn.Location = new System.Drawing.Point(108, 745);
             this.setRatioBtn.Name = "setRatioBtn";
             this.setRatioBtn.Size = new System.Drawing.Size(75, 23);
             this.setRatioBtn.TabIndex = 9;
@@ -476,7 +501,7 @@
             // customRatioTxtBox
             // 
             this.customRatioTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.customRatioTxtBox.Location = new System.Drawing.Point(25, 684);
+            this.customRatioTxtBox.Location = new System.Drawing.Point(19, 747);
             this.customRatioTxtBox.Name = "customRatioTxtBox";
             this.customRatioTxtBox.Size = new System.Drawing.Size(83, 20);
             this.customRatioTxtBox.TabIndex = 10;
@@ -489,7 +514,7 @@
             this.showLinesCheckbox.AutoSize = true;
             this.showLinesCheckbox.Checked = true;
             this.showLinesCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showLinesCheckbox.Location = new System.Drawing.Point(312, 661);
+            this.showLinesCheckbox.Location = new System.Drawing.Point(137, 688);
             this.showLinesCheckbox.Name = "showLinesCheckbox";
             this.showLinesCheckbox.Size = new System.Drawing.Size(77, 17);
             this.showLinesCheckbox.TabIndex = 11;
@@ -500,7 +525,7 @@
             // editIslandBtn
             // 
             this.editIslandBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editIslandBtn.Location = new System.Drawing.Point(876, 663);
+            this.editIslandBtn.Location = new System.Drawing.Point(876, 730);
             this.editIslandBtn.Name = "editIslandBtn";
             this.editIslandBtn.Size = new System.Drawing.Size(99, 34);
             this.editIslandBtn.TabIndex = 12;
@@ -512,7 +537,7 @@
             // 
             this.alphaBgCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.alphaBgCheckbox.AutoSize = true;
-            this.alphaBgCheckbox.Location = new System.Drawing.Point(395, 661);
+            this.alphaBgCheckbox.Location = new System.Drawing.Point(219, 688);
             this.alphaBgCheckbox.Name = "alphaBgCheckbox";
             this.alphaBgCheckbox.Size = new System.Drawing.Size(147, 17);
             this.alphaBgCheckbox.TabIndex = 13;
@@ -524,7 +549,7 @@
             // 
             this.tiledBackgroundCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tiledBackgroundCheckbox.AutoSize = true;
-            this.tiledBackgroundCheckbox.Location = new System.Drawing.Point(548, 661);
+            this.tiledBackgroundCheckbox.Location = new System.Drawing.Point(372, 688);
             this.tiledBackgroundCheckbox.Name = "tiledBackgroundCheckbox";
             this.tiledBackgroundCheckbox.Size = new System.Drawing.Size(136, 17);
             this.tiledBackgroundCheckbox.TabIndex = 14;
@@ -535,7 +560,7 @@
             // chooseTileBtn
             // 
             this.chooseTileBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chooseTileBtn.Location = new System.Drawing.Point(612, 681);
+            this.chooseTileBtn.Location = new System.Drawing.Point(510, 686);
             this.chooseTileBtn.Name = "chooseTileBtn";
             this.chooseTileBtn.Size = new System.Drawing.Size(86, 23);
             this.chooseTileBtn.TabIndex = 15;
@@ -547,7 +572,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(704, 665);
+            this.label1.Location = new System.Drawing.Point(718, 692);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 17;
@@ -562,7 +587,7 @@
             0,
             0,
             65536});
-            this.tileScaleBox.Location = new System.Drawing.Point(704, 682);
+            this.tileScaleBox.Location = new System.Drawing.Point(718, 708);
             this.tileScaleBox.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -587,7 +612,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 687);
+            this.label2.Location = new System.Drawing.Point(216, 747);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 21;
@@ -596,7 +621,7 @@
             // cellImageSizetxtbox
             // 
             this.cellImageSizetxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cellImageSizetxtbox.Location = new System.Drawing.Point(280, 684);
+            this.cellImageSizetxtbox.Location = new System.Drawing.Point(301, 744);
             this.cellImageSizetxtbox.Name = "cellImageSizetxtbox";
             this.cellImageSizetxtbox.Size = new System.Drawing.Size(47, 20);
             this.cellImageSizetxtbox.TabIndex = 22;
@@ -609,7 +634,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 687);
+            this.label3.Location = new System.Drawing.Point(355, 747);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 23;
@@ -618,7 +643,7 @@
             // atlasImageSizeTxtBox
             // 
             this.atlasImageSizeTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.atlasImageSizeTxtBox.Location = new System.Drawing.Point(446, 684);
+            this.atlasImageSizeTxtBox.Location = new System.Drawing.Point(446, 744);
             this.atlasImageSizeTxtBox.Name = "atlasImageSizeTxtBox";
             this.atlasImageSizeTxtBox.Size = new System.Drawing.Size(47, 20);
             this.atlasImageSizeTxtBox.TabIndex = 24;
@@ -630,7 +655,7 @@
             // chooseDiscoZoneBtn
             // 
             this.chooseDiscoZoneBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chooseDiscoZoneBtn.Location = new System.Drawing.Point(499, 682);
+            this.chooseDiscoZoneBtn.Location = new System.Drawing.Point(601, 685);
             this.chooseDiscoZoneBtn.Name = "chooseDiscoZoneBtn";
             this.chooseDiscoZoneBtn.Size = new System.Drawing.Size(111, 23);
             this.chooseDiscoZoneBtn.TabIndex = 25;
@@ -644,7 +669,7 @@
             this.showShipPathsInfoChckBox.AutoSize = true;
             this.showShipPathsInfoChckBox.Checked = true;
             this.showShipPathsInfoChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showShipPathsInfoChckBox.Location = new System.Drawing.Point(319, 638);
+            this.showShipPathsInfoChckBox.Location = new System.Drawing.Point(275, 665);
             this.showShipPathsInfoChckBox.Name = "showShipPathsInfoChckBox";
             this.showShipPathsInfoChckBox.Size = new System.Drawing.Size(107, 17);
             this.showShipPathsInfoChckBox.TabIndex = 26;
@@ -658,7 +683,7 @@
             this.disableImageExportingCheckBox.AutoSize = true;
             this.disableImageExportingCheckBox.Checked = true;
             this.disableImageExportingCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.disableImageExportingCheckBox.Location = new System.Drawing.Point(432, 638);
+            this.disableImageExportingCheckBox.Location = new System.Drawing.Point(495, 665);
             this.disableImageExportingCheckBox.Name = "disableImageExportingCheckBox";
             this.disableImageExportingCheckBox.Size = new System.Drawing.Size(140, 17);
             this.disableImageExportingCheckBox.TabIndex = 27;
@@ -669,7 +694,7 @@
             // imageQualityTxtbox
             // 
             this.imageQualityTxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.imageQualityTxtbox.Location = new System.Drawing.Point(666, 637);
+            this.imageQualityTxtbox.Location = new System.Drawing.Point(725, 663);
             this.imageQualityTxtbox.Name = "imageQualityTxtbox";
             this.imageQualityTxtbox.Size = new System.Drawing.Size(47, 20);
             this.imageQualityTxtbox.TabIndex = 29;
@@ -682,7 +707,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(578, 639);
+            this.label4.Location = new System.Drawing.Point(635, 668);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 13);
             this.label4.TabIndex = 28;
@@ -694,7 +719,7 @@
             this.showIslandNamesChckBox.AutoSize = true;
             this.showIslandNamesChckBox.Checked = true;
             this.showIslandNamesChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.showIslandNamesChckBox.Location = new System.Drawing.Point(35, 638);
+            this.showIslandNamesChckBox.Location = new System.Drawing.Point(21, 665);
             this.showIslandNamesChckBox.Name = "showIslandNamesChckBox";
             this.showIslandNamesChckBox.Size = new System.Drawing.Size(120, 17);
             this.showIslandNamesChckBox.TabIndex = 30;
@@ -706,7 +731,7 @@
             // 
             this.showForegroundChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.showForegroundChckBox.AutoSize = true;
-            this.showForegroundChckBox.Location = new System.Drawing.Point(35, 616);
+            this.showForegroundChckBox.Location = new System.Drawing.Point(21, 643);
             this.showForegroundChckBox.Name = "showForegroundChckBox";
             this.showForegroundChckBox.Size = new System.Drawing.Size(107, 17);
             this.showForegroundChckBox.TabIndex = 32;
@@ -717,7 +742,7 @@
             // chooseForegroundBtn
             // 
             this.chooseForegroundBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chooseForegroundBtn.Location = new System.Drawing.Point(141, 613);
+            this.chooseForegroundBtn.Location = new System.Drawing.Point(132, 640);
             this.chooseForegroundBtn.Name = "chooseForegroundBtn";
             this.chooseForegroundBtn.Size = new System.Drawing.Size(95, 23);
             this.chooseForegroundBtn.TabIndex = 33;
@@ -734,7 +759,7 @@
             0,
             0,
             65536});
-            this.foregroundScaleBox.Location = new System.Drawing.Point(335, 615);
+            this.foregroundScaleBox.Location = new System.Drawing.Point(330, 642);
             this.foregroundScaleBox.Maximum = new decimal(new int[] {
             99999,
             0,
@@ -759,7 +784,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(241, 618);
+            this.label5.Location = new System.Drawing.Point(236, 645);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 13);
             this.label5.TabIndex = 35;
@@ -779,7 +804,7 @@
             // 
             this.showPathingGridCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.showPathingGridCheckbox.AutoSize = true;
-            this.showPathingGridCheckbox.Location = new System.Drawing.Point(406, 616);
+            this.showPathingGridCheckbox.Location = new System.Drawing.Point(394, 643);
             this.showPathingGridCheckbox.Name = "showPathingGridCheckbox";
             this.showPathingGridCheckbox.Size = new System.Drawing.Size(114, 17);
             this.showPathingGridCheckbox.TabIndex = 37;
@@ -790,10 +815,10 @@
             // GridRowsTxtBox
             // 
             this.GridRowsTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GridRowsTxtBox.Location = new System.Drawing.Point(583, 614);
+            this.GridRowsTxtBox.Location = new System.Drawing.Point(564, 641);
             this.GridRowsTxtBox.Name = "GridRowsTxtBox";
-            this.GridRowsTxtBox.Size = new System.Drawing.Size(47, 20);
-            this.GridRowsTxtBox.TabIndex = 24;
+            this.GridRowsTxtBox.Size = new System.Drawing.Size(26, 20);
+            this.GridRowsTxtBox.TabIndex = 38;
             this.GridRowsTxtBox.TabStop = false;
             this.GridRowsTxtBox.Text = "10";
             this.GridRowsTxtBox.TextChanged += new System.EventHandler(this.GridRowsTxtBox_TextChanged);
@@ -802,7 +827,7 @@
             // 
             this.gridRowsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gridRowsLabel.AutoSize = true;
-            this.gridRowsLabel.Location = new System.Drawing.Point(527, 617);
+            this.gridRowsLabel.Location = new System.Drawing.Point(506, 644);
             this.gridRowsLabel.Name = "gridRowsLabel";
             this.gridRowsLabel.Size = new System.Drawing.Size(56, 13);
             this.gridRowsLabel.TabIndex = 23;
@@ -811,9 +836,9 @@
             // GridColumnsTxtBox
             // 
             this.GridColumnsTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.GridColumnsTxtBox.Location = new System.Drawing.Point(721, 613);
+            this.GridColumnsTxtBox.Location = new System.Drawing.Point(661, 640);
             this.GridColumnsTxtBox.Name = "GridColumnsTxtBox";
-            this.GridColumnsTxtBox.Size = new System.Drawing.Size(47, 20);
+            this.GridColumnsTxtBox.Size = new System.Drawing.Size(24, 20);
             this.GridColumnsTxtBox.TabIndex = 39;
             this.GridColumnsTxtBox.TabStop = false;
             this.GridColumnsTxtBox.Text = "10";
@@ -823,17 +848,92 @@
             // 
             this.gridColumnsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.gridColumnsLabel.AutoSize = true;
-            this.gridColumnsLabel.Location = new System.Drawing.Point(648, 616);
+            this.gridColumnsLabel.Location = new System.Drawing.Point(592, 643);
             this.gridColumnsLabel.Name = "gridColumnsLabel";
             this.gridColumnsLabel.Size = new System.Drawing.Size(69, 13);
             this.gridColumnsLabel.TabIndex = 38;
             this.gridColumnsLabel.Text = "Grid Columns";
             // 
+            // RecalcPathingGridButton
+            // 
+            this.RecalcPathingGridButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RecalcPathingGridButton.Location = new System.Drawing.Point(711, 637);
+            this.RecalcPathingGridButton.Name = "RecalcPathingGridButton";
+            this.RecalcPathingGridButton.Size = new System.Drawing.Size(64, 23);
+            this.RecalcPathingGridButton.TabIndex = 40;
+            this.RecalcPathingGridButton.Text = "Recalc";
+            this.RecalcPathingGridButton.UseVisualStyleBackColor = true;
+            this.RecalcPathingGridButton.Click += new System.EventHandler(this.RecalcPathingGridButton_Click);
+            // 
+            // showTradeWindsChckBox
+            // 
+            this.showTradeWindsChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.showTradeWindsChckBox.AutoSize = true;
+            this.showTradeWindsChckBox.Checked = true;
+            this.showTradeWindsChckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.showTradeWindsChckBox.Location = new System.Drawing.Point(277, 709);
+            this.showTradeWindsChckBox.Name = "showTradeWindsChckBox";
+            this.showTradeWindsChckBox.Size = new System.Drawing.Size(114, 17);
+            this.showTradeWindsChckBox.TabIndex = 41;
+            this.showTradeWindsChckBox.Text = "Show TradeWinds";
+            this.showTradeWindsChckBox.UseVisualStyleBackColor = true;
+            this.showTradeWindsChckBox.CheckedChanged += new System.EventHandler(this.showTradeWindsChckBox_CheckedChanged);
+            // 
+            // tradeWindOverlayChckBox
+            // 
+            this.tradeWindOverlayChckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tradeWindOverlayChckBox.AutoSize = true;
+            this.tradeWindOverlayChckBox.Location = new System.Drawing.Point(21, 711);
+            this.tradeWindOverlayChckBox.Name = "tradeWindOverlayChckBox";
+            this.tradeWindOverlayChckBox.Size = new System.Drawing.Size(121, 17);
+            this.tradeWindOverlayChckBox.TabIndex = 42;
+            this.tradeWindOverlayChckBox.Text = "Trade Wind Overlay";
+            this.tradeWindOverlayChckBox.UseVisualStyleBackColor = true;
+            this.tradeWindOverlayChckBox.CheckedChanged += new System.EventHandler(this.tradeWindOverlayChckBox_CheckedChanged);
+            // 
+            // chooseTradeWindOverlayBtn
+            // 
+            this.chooseTradeWindOverlayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.chooseTradeWindOverlayBtn.Location = new System.Drawing.Point(144, 708);
+            this.chooseTradeWindOverlayBtn.Name = "chooseTradeWindOverlayBtn";
+            this.chooseTradeWindOverlayBtn.Size = new System.Drawing.Size(127, 23);
+            this.chooseTradeWindOverlayBtn.TabIndex = 43;
+            this.chooseTradeWindOverlayBtn.Text = "Pick trade wind overlay";
+            this.chooseTradeWindOverlayBtn.UseVisualStyleBackColor = true;
+            this.chooseTradeWindOverlayBtn.Click += new System.EventHandler(this.chooseTradeWindOverlayBtn_Click);
+            // 
+            // visualizeTradewindsWidthCheckBox
+            // 
+            this.visualizeTradewindsWidthCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.visualizeTradewindsWidthCheckBox.AutoSize = true;
+            this.visualizeTradewindsWidthCheckBox.Location = new System.Drawing.Point(390, 709);
+            this.visualizeTradewindsWidthCheckBox.Name = "visualizeTradewindsWidthCheckBox";
+            this.visualizeTradewindsWidthCheckBox.Size = new System.Drawing.Size(156, 17);
+            this.visualizeTradewindsWidthCheckBox.TabIndex = 44;
+            this.visualizeTradewindsWidthCheckBox.Text = "Visualize Tradewinds Width";
+            this.visualizeTradewindsWidthCheckBox.UseVisualStyleBackColor = true;
+            this.visualizeTradewindsWidthCheckBox.CheckedChanged += new System.EventHandler(this.visualizeTradewindsWidthCheckBox_CheckedChanged);
+            // 
+            // editFoliageAttachmentOverrideToolStripMenuItem
+            // 
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Name = "editFoliageAttachmentOverrideToolStripMenuItem";
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Text = "Edit Foliage Attachment Override";
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Click += new System.EventHandler(this.editFoliageAttachmentOverrideToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 708);
+            this.ClientSize = new System.Drawing.Size(1088, 775);
+            this.Controls.Add(this.visualizeTradewindsWidthCheckBox);
+            this.Controls.Add(this.chooseTradeWindOverlayBtn);
+            this.Controls.Add(this.tradeWindOverlayChckBox);
+            this.Controls.Add(this.showTradeWindsChckBox);
+            this.Controls.Add(this.showShipPathsInfoChckBox);
+            this.Controls.Add(this.showDiscoZoneInfoCheckbox);
+            this.Controls.Add(this.disableImageExportingCheckBox);
+            this.Controls.Add(this.RecalcPathingGridButton);
             this.Controls.Add(this.GridColumnsTxtBox);
             this.Controls.Add(this.gridColumnsLabel);
             this.Controls.Add(this.GridRowsTxtBox);
@@ -847,8 +947,6 @@
             this.Controls.Add(this.showIslandNamesChckBox);
             this.Controls.Add(this.imageQualityTxtbox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.disableImageExportingCheckBox);
-            this.Controls.Add(this.showShipPathsInfoChckBox);
             this.Controls.Add(this.chooseDiscoZoneBtn);
             this.Controls.Add(this.atlasImageSizeTxtBox);
             this.Controls.Add(this.label3);
@@ -864,7 +962,6 @@
             this.Controls.Add(this.customRatioTxtBox);
             this.Controls.Add(this.setRatioBtn);
             this.Controls.Add(this.showServerInfoCheckbox);
-            this.Controls.Add(this.showDiscoZoneInfoCheckbox);
             this.Controls.Add(this.scaleLbl);
             this.Controls.Add(this.mapVScrollBar);
             this.Controls.Add(this.mapHScrollBar);
@@ -883,6 +980,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Island Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.menuStrip1.ResumeLayout(false);
@@ -967,6 +1065,14 @@
         private System.Windows.Forms.Label gridRowsLabel;
         private System.Windows.Forms.TextBox GridColumnsTxtBox;
         private System.Windows.Forms.Label gridColumnsLabel;
+        private System.Windows.Forms.Button RecalcPathingGridButton;
+        private System.Windows.Forms.CheckBox showTradeWindsChckBox;
+        private System.Windows.Forms.CheckBox tradeWindOverlayChckBox;
+        private System.Windows.Forms.Button chooseTradeWindOverlayBtn;
+        private System.Windows.Forms.ToolStripMenuItem tradewindsWorldMapToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editServerConfigurationToolStripMenuItem;
+        private System.Windows.Forms.CheckBox visualizeTradewindsWidthCheckBox;
+        private System.Windows.Forms.ToolStripMenuItem editFoliageAttachmentOverrideToolStripMenuItem;
     }
 }
 

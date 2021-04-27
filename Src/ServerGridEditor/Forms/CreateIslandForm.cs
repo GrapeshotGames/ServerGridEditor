@@ -29,6 +29,9 @@ namespace ServerGridEditor
             foreach (SpawnerInfoData spawnerInfo in mainForm.spawners.spawnersInfo)
                 SpawnerTemplate.Items.Add((string)spawnerInfo.Name);
 
+            foreach (FoliageAttachmentOverride foliageAttachmentOverride in mainForm.currentProject.foliageAttachmentOverrides)
+                FoliageOverrideKey.Items.Add(foliageAttachmentOverride.Key);
+
             if (editedIsland != null)
             {
                 bIslandNameChanged = false;
@@ -54,6 +57,12 @@ namespace ServerGridEditor
                             spawnerOverridesGrid.Rows[index].Cells[SpawnerTemplate.Name].Value = overrides.Value;
                     }
 
+                if (editedIsland.harvestOverrideKeys != null)
+                    foreach (string harvestOverrideKey in editedIsland.harvestOverrideKeys)
+                    {
+                        int index = harvestOverridesGrid.Rows.Add();
+                        harvestOverridesGrid.Rows[index].Cells[FoliageOverrideKey.Name].Value = harvestOverrideKey;
+                    }
 
                 minTreasureQualityTxtBox.Text = editedIsland.minTreasureQuality + "";
                 maxTreasureQualityTxtBox.Text = editedIsland.maxTreasureQuality + "";
@@ -180,6 +189,21 @@ namespace ServerGridEditor
                 }
             }
 
+
+            names = new HashSet<string>();
+            foreach (DataGridViewRow row in harvestOverridesGrid.Rows)
+            {
+                if (row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+                string name = (string)row.Cells[FoliageOverrideKey.Name].Value;
+                if (names.Contains(name))
+                {
+                    //Duplicate name
+                    //MessageBox.Show("Duplicate harvest override names found\nOverride names must be unique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    continue;
+                }
+                names.Add(name);
+            }
+
             float minTreasureQuality = -1;
             float maxTreasureQuality = -1;
 
@@ -233,7 +257,7 @@ namespace ServerGridEditor
 
                     //rename image
                     string originalDirectory = Path.GetDirectoryName(editedIsland.imagePath);
-                    string newImgPath = originalDirectory + "/" + editedIsland.name + "_img.jpg";
+                    string newImgPath = originalDirectory + "/" + editedIsland.name + "_img.png";
                     editedIsland.InvalidateImage();
                     File.Move(editedIsland.imagePath, newImgPath);
 
@@ -260,7 +284,7 @@ namespace ServerGridEditor
 
                         editedIsland.InvalidateImage();
                         
-                        string newImgPath = modDir + MainForm.modImgsDir + editedIsland.name + "_img.jpg";
+                        string newImgPath = modDir + MainForm.modImgsDir + editedIsland.name + "_img.png";
                         File.Move(editedIsland.imagePath, newImgPath);
 
                         islandRemovedFromMod = editedIsland.modDir;
@@ -274,7 +298,7 @@ namespace ServerGridEditor
                     else
                     {
                         editedIsland.InvalidateImage();
-                        string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.jpg";
+                        string newImgPath = MainForm.imgsDir + "/" + editedIsland.name + "_img.png";
                         if (File.Exists(newImgPath))
                             File.Delete(newImgPath);
                         File.Move(editedIsland.imagePath, newImgPath);
@@ -313,6 +337,18 @@ namespace ServerGridEditor
                     string template = (string)row.Cells[SpawnerTemplate.Name].Value;
 
                     editedIsland.spawnerOverrides.Add(name, template);
+                }
+
+                editedIsland.harvestOverrideKeys = new List<string>();
+
+                foreach (DataGridViewRow row in harvestOverridesGrid.Rows)
+                {
+                    if (row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                    string foliageOverrideKey = (string)row.Cells[FoliageOverrideKey.Name].Value;
+                    
+                    if (!editedIsland.harvestOverrideKeys.Contains(foliageOverrideKey))
+                        editedIsland.harvestOverrideKeys.Add(foliageOverrideKey);
                 }
 
                 editedIsland.minTreasureQuality = minTreasureQuality;
@@ -387,6 +423,17 @@ namespace ServerGridEditor
                     spawnerOverrides.Add(name, template);
                 }
 
+                List<string> harvestOverrideKeys = new List<string>();
+
+                foreach (DataGridViewRow row in harvestOverridesGrid.Rows)
+                {
+                    if (row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                    string foliageOverrideKey = (string)row.Cells[FoliageOverrideKey.Name].Value;
+
+                    harvestOverrideKeys.Add(foliageOverrideKey);
+                }
+
                 string modDir = null;
                 if (!string.IsNullOrWhiteSpace(modNameTxtBox.Text))
                 {
@@ -399,11 +446,11 @@ namespace ServerGridEditor
 
                 //Copy the image to our local imgs directory
                 string newImgPath = (modDir != null) ? (modDir + MainForm.modImgsDir) : MainForm.imgsDir;
-                newImgPath += "/" + Name + "_img.jpg";
+                newImgPath += "/" + Name + "_img.png";
                 File.Copy(ImgLocation, newImgPath, true);
 
 
-                mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides,
+                mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides, harvestOverrideKeys,
                     treasureMapSpawnPoints, wildPirateCampSpawnPoints, minTreasureQuality, maxTreasureQuality, useNpcVolumesForTreasuresChkBox.Checked, useLevelBoundsForTreasuresChkBox.Checked, 
                     prioritizeVolumesForTreasuresChkBox.Checked, isControlPointChkBox.Checked, isControlPointAllowCaptureChckBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints, spSpawnPointX, spSpawnPointY, spSpawnPointZ, maxIslandZ));
 
@@ -454,9 +501,59 @@ namespace ServerGridEditor
             }
         }
 
-        private void label22_Click(object sender, EventArgs e)
+        private void ImportHarvestOverridesButton_Click(object sender, EventArgs e)
         {
+            /*openFileDialog.Filter = "csv files (*.csv)|*.csv";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog.FileName;
+                StreamReader CSVReader = new StreamReader(openFileDialog.FileName);
+                if (CSVReader != null && !CSVReader.EndOfStream)
+                {
+                    harvestOverridesGrid.Rows.Clear();
+                    do
+                    {
+                        String Line = CSVReader.ReadLine();
+                        if (Line != null && Line.Length > 0)
+                        {
+                            String[] Values = Line.Split(',');
+                            if (Values.Length >= 2)
+                            {
+                                int index = harvestOverridesGrid.Rows.Add();
+                                harvestOverridesGrid.Rows[index].Cells[FoliageTypeName.Name].Value = Values[0];
+                                harvestOverridesGrid.Rows[index].Cells[OverrideActorComponentName.Name].Value = Values[1];
+                            }
+                        }
+                    }
+                    while (!CSVReader.EndOfStream);
+                }
 
+            }*/
+        }
+
+        private void ExportHarvestOverridesButton_Click(object sender, EventArgs e)
+        {
+            /*saveFileDialog.Filter = "csv files (*.csv)|*.csv";
+            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir);
+            if (!Directory.Exists(ExportPath))
+                Directory.CreateDirectory(ExportPath);
+            saveFileDialog.InitialDirectory = ExportPath;
+            saveFileDialog.FileName = "harvestoverrrides.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog.FileName;
+                StreamWriter CSVWriter = new StreamWriter(saveFileDialog.FileName);
+                if (CSVWriter != null)
+                {
+                    foreach (DataGridViewRow Row in harvestOverridesGrid.Rows)
+                    {
+                        if (Row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+                        CSVWriter.WriteLine(Row.Cells[FoliageTypeName.Name].Value + "," + Row.Cells[OverrideActorComponentName.Name].Value);
+                    }
+                    CSVWriter.Close();
+                }
+            }*/
         }
     }
 }
