@@ -95,6 +95,42 @@
     <Compile Include="Code\SlippyMap.cs" />
     <Compile Include="Code\Spawners.cs" />
     <Compile Include="Code\SpawnRegion.cs" />
+    <Compile Include="Forms\AddFoliageAttachmentOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFoliageAttachmentOverride.Designer.cs">
+      <DependentUpon>AddFoliageAttachmentOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverrides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverrides.Designer.cs">
+      <DependentUpon>EditFoliageAttachmentOverrides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverride.Designer.cs">
+      <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditServerConfigurations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditServerConfigurations.Designer.cs">
+      <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RemoveServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoveServerConfiguration.Designer.cs">
+      <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditServerConfiguration.Designer.cs">
+      <DependentUpon>EditServerConfiguration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditServerTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +148,18 @@
     </Compile>
     <Compile Include="Forms\EditAllLocksForm.Designer.cs">
       <DependentUpon>EditAllLocksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddServerConfiguration.Designer.cs">
+      <DependentUpon>AddServerConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditTradeWind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditTradeWind.Designer.cs">
+      <DependentUpon>EditTradeWind.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ExportSlippyMap.cs">
       <SubType>Form</SubType>
@@ -216,6 +264,24 @@
     </Compile>
     <Compile Include="Code\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddFoliageAttachmentOverride.resx">
+      <DependentUpon>AddFoliageAttachmentOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFoliageAttachmentOverrides.resx">
+      <DependentUpon>EditFoliageAttachmentOverrides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFoliageAttachmentOverride.resx">
+      <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditServerConfigurations.resx">
+      <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoveServerConfiguration.resx">
+      <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditServerConfiguration.resx">
+      <DependentUpon>EditServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditServerTemplate.resx">
       <DependentUpon>EditServerTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +290,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditAllLocksForm.resx">
       <DependentUpon>EditAllLocksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddServerConfiguration.resx">
+      <DependentUpon>AddServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditTradeWind.resx">
+      <DependentUpon>EditTradeWind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportSlippyMap.resx">
       <DependentUpon>ExportSlippyMap.cs</DependentUpon>

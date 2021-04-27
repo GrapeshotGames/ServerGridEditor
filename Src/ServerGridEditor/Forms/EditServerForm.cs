@@ -87,6 +87,27 @@ namespace ServerGridEditor
                 templateComboBox.SelectedItem = targetServer.serverTemplateName;
             else
                 templateComboBox.SelectedItem = "None";
+
+            rulesComboBox.Items.Add("Unset");
+            rulesComboBox.Items.Add("Lawless");
+            rulesComboBox.Items.Add("Lawless Claim");
+            rulesComboBox.Items.Add("Island Claim");
+            rulesComboBox.Items.Add("FreePort");
+            rulesComboBox.Items.Add("Golden Age");
+            rulesComboBox.SelectedIndex = targetServer.forceServerRules;
+            if (mainForm.currentProject.serverConfigurations != null)
+            {
+                foreach (ServerConfiguration serverConfiguration in mainForm.currentProject.serverConfigurations)
+                {
+                    PVPServerConfigurationComboBox.Items.Add(serverConfiguration.Key);
+                    PVEServerConfigurationComboBox.Items.Add(serverConfiguration.Key);
+                }
+                PVPServerConfigurationComboBox.Text = targetServer.serverConfigurationKeyPVP;
+                PVPServerConfigurationComboBox.SelectedItem = targetServer.serverConfigurationKeyPVP;
+
+                PVEServerConfigurationComboBox.Text = targetServer.serverConfigurationKeyPVE;
+                PVEServerConfigurationComboBox.SelectedItem = targetServer.serverConfigurationKeyPVE;
+            }
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -169,11 +190,13 @@ namespace ServerGridEditor
             targetServer.gamePort = gamePort;
             targetServer.seamlessDataPort = seamlessDataPort;
             targetServer.isHomeServer = homeServerCheckbox.Checked;
+            targetServer.forceServerRules = rulesComboBox.SelectedIndex;
             targetServer.AdditionalCmdLineParams = additionalCmdLineParamsTxtBox.Text;
             targetServer.oceanEpicSpawnEntriesOverrideTemplateName = oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text;
             targetServer.NPCShipSpawnEntriesOverrideTemplateName = NPCShipSpawnEntriesOverrideTemplateNameTxtBox.Text;
 
-
+            targetServer.serverConfigurationKeyPVP = PVPServerConfigurationComboBox.Text;
+            targetServer.serverConfigurationKeyPVE = PVEServerConfigurationComboBox.Text;
             targetServer.waterColorR = waterColorR;
             targetServer.waterColorG = waterColorG;
             targetServer.waterColorB = waterColorB;
@@ -277,6 +300,14 @@ namespace ServerGridEditor
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void rulesComboBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            Graphics g = e.Graphics;
+            g.DrawString(rulesComboBox.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), new PointF(e.Bounds.X, e.Bounds.Y));
+            e.DrawFocusRectangle();
         }
     }
 }

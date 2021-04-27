@@ -51,10 +51,24 @@
             this.spawnRegionsGrid.Name = "spawnRegionsGrid";
             this.spawnRegionsGrid.Size = new System.Drawing.Size(350, 332);
             this.spawnRegionsGrid.TabIndex = 6;
+            this.spawnRegionsGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.spawnRegionsGrid_CellContentClick);
+            // 
+            // regionName
+            // 
+            this.regionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regionName.HeaderText = "Name";
+            this.regionName.Name = "regionName";
+            // 
+            // regionParent
+            // 
+            this.regionParent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regionParent.HeaderText = "Parent Cell";
+            this.regionParent.Name = "regionParent";
             // 
             // cancelBtn
             // 
             this.cancelBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cancelBtn.Location = new System.Drawing.Point(189, 372);
             this.cancelBtn.Name = "cancelBtn";
@@ -76,18 +90,6 @@
             this.saveBtn.UseVisualStyleBackColor = true;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
-            // regionName
-            // 
-            this.regionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regionName.HeaderText = "Name";
-            this.regionName.Name = "regionName";
-            // 
-            // regionParent
-            // 
-            this.regionParent.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.regionParent.HeaderText = "Parent Cell";
-            this.regionParent.Name = "regionParent";
-            // 
             // messageLabel
             // 
             this.messageLabel.AutoSize = true;
@@ -96,6 +98,7 @@
             this.messageLabel.Size = new System.Drawing.Size(321, 13);
             this.messageLabel.TabIndex = 24;
             this.messageLabel.Text = "Rows with empty Parent Cell  fields will automatically be set to cell: ";
+            this.messageLabel.Click += new System.EventHandler(this.messageLabel_Click);
             // 
             // EditSpawnRegions
             // 

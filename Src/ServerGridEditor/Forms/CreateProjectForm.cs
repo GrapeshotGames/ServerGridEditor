@@ -70,7 +70,7 @@ namespace ServerGridEditor
                 globalGameplaySetupTxtBox.Text = editedProject.globalGameplaySetup;
 
                 useUTCTimeCheckbox.Checked = editedProject.bUseUTCTime;
-                
+                usePVEServerConfigurationCheckbox.Checked = editedProject.usePVEServerConfiguration;
                 globalTransitionZTxtBox.Text = editedProject.globalTransitionMinZ.ToString();
                 additionalCmdLineParamsTxtBox.Text = editedProject.AdditionalCmdLineParams;
 
@@ -205,6 +205,7 @@ namespace ServerGridEditor
                 editedProject.WorldAtlasPassword = worldAtlasPasswordTxtBox.Text;
                 editedProject.MapImageURL = mapImageURLTxtBox.Text;
                 editedProject.MapImageURL = editedProject.MapImageURL.Trim();
+                editedProject.usePVEServerConfiguration = usePVEServerConfigurationCheckbox.Checked;
 
                 editedProject.AuthListURL = authListURLTxtBox.Text;
                 editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;

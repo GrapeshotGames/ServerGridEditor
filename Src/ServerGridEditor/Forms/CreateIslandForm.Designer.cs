@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chooseImgBtn = new System.Windows.Forms.Button();
             this.createBtn = new System.Windows.Forms.Button();
@@ -81,8 +82,14 @@
             this.label22 = new System.Windows.Forms.Label();
             this.isControlPointChkBox = new System.Windows.Forms.CheckBox();
             this.isControlPointAllowCaptureChckBox = new System.Windows.Forms.CheckBox();
+            this.harvestOverridesGrid = new System.Windows.Forms.DataGridView();
+            this.label21 = new System.Windows.Forms.Label();
+            this.ImportHarvestOverridesButton = new System.Windows.Forms.Button();
+            this.ExportHarvestOverridesButton = new System.Windows.Forms.Button();
+            this.FoliageOverrideKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestOverridesGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // islandNameTxtBox
@@ -236,7 +243,7 @@
             this.label7.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(266, 38);
+            this.label7.Location = new System.Drawing.Point(266, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 17;
@@ -248,9 +255,9 @@
             this.spawnerOverridesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SpawnerName,
             this.SpawnerTemplate});
-            this.spawnerOverridesGrid.Location = new System.Drawing.Point(270, 61);
+            this.spawnerOverridesGrid.Location = new System.Drawing.Point(270, 39);
             this.spawnerOverridesGrid.Name = "spawnerOverridesGrid";
-            this.spawnerOverridesGrid.Size = new System.Drawing.Size(323, 328);
+            this.spawnerOverridesGrid.Size = new System.Drawing.Size(323, 147);
             this.spawnerOverridesGrid.TabIndex = 16;
             // 
             // SpawnerName
@@ -522,7 +529,6 @@
             this.label22.Size = new System.Drawing.Size(119, 13);
             this.label22.TabIndex = 58;
             this.label22.Text = "Island Max Claim Flag Z";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // isControlPointChkBox
             // 
@@ -546,6 +552,57 @@
             this.isControlPointAllowCaptureChckBox.Text = "Is Control Point  Allowed Capture";
             this.isControlPointAllowCaptureChckBox.UseVisualStyleBackColor = true;
             // 
+            // harvestOverridesGrid
+            // 
+            this.harvestOverridesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.harvestOverridesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.FoliageOverrideKey});
+            this.harvestOverridesGrid.Location = new System.Drawing.Point(268, 212);
+            this.harvestOverridesGrid.Name = "harvestOverridesGrid";
+            this.harvestOverridesGrid.Size = new System.Drawing.Size(323, 162);
+            this.harvestOverridesGrid.TabIndex = 61;
+            // 
+            // label21
+            // 
+            this.label21.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(266, 189);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(135, 20);
+            this.label21.TabIndex = 62;
+            this.label21.Text = "Harvest Overrides";
+            // 
+            // ImportHarvestOverridesButton
+            // 
+            this.ImportHarvestOverridesButton.Location = new System.Drawing.Point(270, 375);
+            this.ImportHarvestOverridesButton.Name = "ImportHarvestOverridesButton";
+            this.ImportHarvestOverridesButton.Size = new System.Drawing.Size(159, 24);
+            this.ImportHarvestOverridesButton.TabIndex = 63;
+            this.ImportHarvestOverridesButton.Text = "Import Harvest Overrides...";
+            this.ImportHarvestOverridesButton.UseVisualStyleBackColor = true;
+            this.ImportHarvestOverridesButton.Visible = false;
+            this.ImportHarvestOverridesButton.Click += new System.EventHandler(this.ImportHarvestOverridesButton_Click);
+            // 
+            // ExportHarvestOverridesButton
+            // 
+            this.ExportHarvestOverridesButton.Location = new System.Drawing.Point(435, 376);
+            this.ExportHarvestOverridesButton.Name = "ExportHarvestOverridesButton";
+            this.ExportHarvestOverridesButton.Size = new System.Drawing.Size(155, 24);
+            this.ExportHarvestOverridesButton.TabIndex = 64;
+            this.ExportHarvestOverridesButton.Text = "Export Harvest Overrides...";
+            this.ExportHarvestOverridesButton.UseVisualStyleBackColor = true;
+            this.ExportHarvestOverridesButton.Visible = false;
+            this.ExportHarvestOverridesButton.Click += new System.EventHandler(this.ExportHarvestOverridesButton_Click);
+            // 
+            // FoliageOverrideKey
+            // 
+            this.FoliageOverrideKey.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FoliageOverrideKey.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.FoliageOverrideKey.HeaderText = "Foliage Override Key";
+            this.FoliageOverrideKey.Name = "FoliageOverrideKey";
+            this.FoliageOverrideKey.Width = 84;
+            // 
             // CreateIslandForm
             // 
             this.AcceptButton = this.createBtn;
@@ -553,6 +610,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(609, 823);
+            this.Controls.Add(this.ExportHarvestOverridesButton);
+            this.Controls.Add(this.ImportHarvestOverridesButton);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.harvestOverridesGrid);
             this.Controls.Add(this.isControlPointAllowCaptureChckBox);
             this.Controls.Add(this.isControlPointChkBox);
             this.Controls.Add(this.label22);
@@ -613,6 +674,7 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.harvestOverridesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -628,6 +690,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button chooseImgBtn;
         private System.Windows.Forms.Button createBtn;
@@ -673,5 +736,10 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.CheckBox isControlPointChkBox;
         private System.Windows.Forms.CheckBox isControlPointAllowCaptureChckBox;
+        private System.Windows.Forms.DataGridView harvestOverridesGrid;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button ImportHarvestOverridesButton;
+        private System.Windows.Forms.Button ExportHarvestOverridesButton;
+        private System.Windows.Forms.DataGridViewComboBoxColumn FoliageOverrideKey;
     }
 }
