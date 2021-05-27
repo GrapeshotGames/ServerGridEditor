@@ -231,7 +231,7 @@ namespace ServerGridEditor
     public static class ProjectSerializationObjectEx
     {
         public static AtlasGridData SetFromData(this AtlasGridData Data, float gridSize, List<Server> serverList, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
-            string WorldAtlasId, string WorldFriendlyName, string MetaWorldURL, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, string backgroundImgPath, 
+            string WorldAtlasId, string WorldFriendlyName, string MetaWorldURL, string MapImagesExtension, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, string backgroundImgPath, 
             MainForm mainForm, int idGenerator, int regionsIdGenerator, List<SpawnerInfoData> spawnerOverrideTemplates, bool bUseUTCTime, bool usePVEServerConfiguration, string Day0, float globalTransitionMinZ, string AdditionalCmdLineParams, 
             Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds, int shipPathsIdGenerator, int tradeWindsIdGenerator,
             bool showShipPathsInfo, bool showTradeWindsInfo, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, bool showTradeWindOverlay, string tradeWindOverlayImgPath, string globalGameplaySetup,
@@ -366,6 +366,7 @@ namespace ServerGridEditor
             }
 
             Data.MetaWorldURL = MetaWorldURL;
+            Data.MapImagesExtension = MapImagesExtension;
             Data.WorldFriendlyName = WorldFriendlyName;
             Data.WorldAtlasId = WorldAtlasId;
             Data.usePVEServerConfiguration = usePVEServerConfiguration;
@@ -447,6 +448,7 @@ namespace ServerGridEditor
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
         public string MetaWorldURL = "";
+        public string MapImagesExtension = "jpg";
         public string WorldFriendlyName = "AtlasWorld";
         public string WorldAtlasId = "";
         public string AuthListURL = "";
@@ -563,7 +565,7 @@ namespace ServerGridEditor
                 MessageBox.Show(string.Format("The island \"{0}\" has no defined sublevels and will not appear ingame", islandName), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
-            AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MetaWorldURL, 
+            AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MetaWorldURL, MapImagesExtension,
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, backgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, usePVEServerConfiguration,
                 Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds,
                 shipPathsIdGenerator, tradeWindsIdGenerator, showShipPathsInfo, showTradeWindsInfo, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, serverConfigurations, foliageAttachmentOverrides,
@@ -775,6 +777,9 @@ namespace ServerGridEditor
                 usePVEServerConfiguration = deserializedProject.usePVEServerConfiguration;
                 AuthListURL = deserializedProject.AuthListURL;
                 MetaWorldURL = deserializedProject.MetaWorldURL;
+                MapImagesExtension = deserializedProject.MapImagesExtension;
+                if (MapImagesExtension != "png" && MapImagesExtension != "jpg")
+                    MapImagesExtension = "jpg";
                 coordsScaling = deserializedProject.coordsScaling;
                 showServerInfo = deserializedProject.showServerInfo;
                 showDiscoZoneInfo = deserializedProject.showDiscoZoneInfo;

@@ -59,6 +59,8 @@ namespace AtlasGridDataLibrary
         [DeploymentOverrideAttribute]
         public string MetaWorldURL = "";
         [DeploymentOverrideAttribute]
+        public string MapImagesExtension = "";
+        [DeploymentOverrideAttribute]
         public string WorldFriendlyName = "";
         [DeploymentOverrideAttribute]
         public string WorldAtlasId = "";

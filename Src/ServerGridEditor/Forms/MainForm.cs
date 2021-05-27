@@ -522,7 +522,7 @@ namespace ServerGridEditor
                 Island referencedIsland = instance.GetReferencedIsland(islands);
 
                 //Clamp to map
-                instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
+                //instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
 
                 //Reverse translation to rotate around self
                 g.TranslateTransform(instance.worldX * currentProject.coordsScaling, instance.worldY * currentProject.coordsScaling);
@@ -593,7 +593,7 @@ namespace ServerGridEditor
                     if (discoInst.bIsManuallyPlaced)
                         continue;
                     //Clamp to map
-                    discoInst.SetWorldLocation(mainForm, new PointF(discoInst.worldX, discoInst.worldY));
+                    //discoInst.SetWorldLocation(mainForm, new PointF(discoInst.worldX, discoInst.worldY));
 
                     //Reverse translation to rotate around self
                     g.TranslateTransform(discoInst.worldX * currentProject.coordsScaling, discoInst.worldY * currentProject.coordsScaling);
@@ -2118,9 +2118,9 @@ namespace ServerGridEditor
         }
 
 
-        public Bitmap DrawMapToImage(int cellX = -1, int cellY = -1, float resOverride = -1, bool forceResForSingleCell = false, bool tradewindsWorldMap = false)
+        public Bitmap DrawMapToImage(out Dictionary<long, int> tradewindsBuffer, int cellX = -1, int cellY = -1, float resOverride = -1, bool forceResForSingleCell = false, bool tradewindsWorldMap = false)
         {
-            
+            tradewindsBuffer = null;
             if (currentProject == null || ((cellX == -1 || cellY == -1) && cellX != cellY))
                 return null;
 
@@ -2206,24 +2206,26 @@ namespace ServerGridEditor
             int previousH = mapHScrollBar.Value;
             int previousV = mapVScrollBar.Value;
             mapVScrollBar.Value = mapHScrollBar.Value = 0;
-            
-            Dictionary<long, int> AlphaBuf = DrawMapToGraphics(ref g, false, isSingleCell, true, startX, startY);
-            
+
+            tradewindsBuffer = DrawMapToGraphics(ref g, false, isSingleCell, true, startX, startY);
             mapHScrollBar.Value = previousH;
             mapVScrollBar.Value = previousV;
             currentProject.coordsScaling = originalCoordScale;
-            if (AlphaBuf != null && ((cellX >= 0 && cellY >= 0) || tradewindsWorldMap))
-            {
-                foreach (KeyValuePair<long, int> PixelAlpha in AlphaBuf)
+
+            if (tradewindsBuffer != null)
+                if (tradewindsWorldMap)
                 {
-                    int x = -1;
-                    int y = -1;
-                    UnpackIntoToTwoInts(PixelAlpha.Key, out  x, out  y);
-                    if (PixelAlpha.Value > 0 && x < image.Size.Width && y < image.Size.Height)
-                        image.SetPixel(x, y, Color.FromArgb(255 - PixelAlpha.Value, image.GetPixel(x, y)));
+                    foreach (KeyValuePair<long, int> PixelAlpha in tradewindsBuffer)
+                    {
+                        int x = -1;
+                        int y = -1;
+                        UnpackIntoToTwoInts(PixelAlpha.Key, out x, out y);
+                        if (PixelAlpha.Value > 0 && x < image.Size.Width && y < image.Size.Height)
+                            image.SetPixel(x, y, Color.FromArgb(255 - PixelAlpha.Value, image.GetPixel(x, y)));
+                    }
                 }
-            }
-            //g.DrawImage(image, imgSize);
+                else if (cellX < 0 || cellY < 0)
+                    tradewindsBuffer = null;
 
             return image;
         }
@@ -2244,9 +2246,10 @@ namespace ServerGridEditor
             //    }
             //}
 
+            Dictionary<long, int> tradewindsBuffer = null;
             if (image == null)
             {
-                if(cellX == -1 && cellY == -1 && resOverride > maxImageSize)
+                if (cellX == -1 && cellY == -1 && resOverride > maxImageSize)
                 {
                     //Using a large resolution, combine cell images instead of exporting a huge one at once
                     int maxCells = Math.Max(currentProject.numOfCellsX, currentProject.numOfCellsY);
@@ -2257,7 +2260,7 @@ namespace ServerGridEditor
                     MagickAnyCPU.CacheDirectory = dir;
                     if (!Directory.Exists(dir + "/magicktemp"))
                         Directory.CreateDirectory(dir + "/magicktemp");
-                    MagickNET.SetTempDirectory(dir+"/magicktemp");
+                    MagickNET.SetTempDirectory(dir + "/magicktemp");
                     ImageMagick.ResourceLimits.Memory = 8388608;
 
                     for (int i = 0; i < currentProject.numOfCellsX; i++)
@@ -2268,7 +2271,7 @@ namespace ServerGridEditor
                             //mgickCell.Format = MagickFormat.Bmp;
                             //mgickCell.Write(dir + "/tmpimgCompImg" + i + "-" + j + ".bmp");
                             //drawnCell.Dispose();
-                            cellImages[i, j] = DrawMapToImage(i, j, resPerCell, true);
+                            cellImages[i, j] = DrawMapToImage(out tradewindsBuffer, i, j, resPerCell, true);
                         }
 
                     using (MagickImageCollection images = new MagickImageCollection())
@@ -2292,7 +2295,7 @@ namespace ServerGridEditor
                         };
                         IMagickImage atlasMontage = images.Montage(montageSettings);
 
-                        atlasMontage.Format = MagickFormat.Png;
+                        atlasMontage.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
                         atlasMontage.Depth = 16;
                         atlasMontage.Quality = editorConfig.ImageQuality;
                         //filePath = filePath.Replace(".png", ".tiff").Replace(".jpg", ".tiff");
@@ -2311,17 +2314,65 @@ namespace ServerGridEditor
                     return;
                 }
                 else
-                    image = DrawMapToImage(cellX, cellY, resOverride, false, tradeWindsWorldMap);
+                    image = DrawMapToImage(out tradewindsBuffer, cellX, cellY, resOverride, false, tradeWindsWorldMap);
             }
 
             if (image == null)
                 return;
-            
-            MagickImage tgaImg = new MagickImage(image);
-            tgaImg.Format = MagickFormat.Png;
+
+            MagickImage tgaImg = null;
+            if (!tradeWindsWorldMap && cellX >= 0 && cellY >= 0)
+            {
+
+                Bitmap cellTradewindsImage = new Bitmap(image.Size.Width, image.Size.Height, PixelFormat.Format8bppIndexed);
+
+                ColorPalette grayscalePalette = cellTradewindsImage.Palette;
+                Color[] grayscalePalletteEntries = grayscalePalette.Entries;
+                byte grayscaleIndex = 0;
+                do
+                {
+                    grayscalePalletteEntries[grayscaleIndex] = Color.FromArgb(grayscaleIndex, grayscaleIndex, grayscaleIndex);
+                    grayscaleIndex++;
+                } while (grayscaleIndex < 255);
+
+                cellTradewindsImage.Palette = grayscalePalette;
+
+                System.Drawing.Imaging.BitmapData bitmapData = cellTradewindsImage.LockBits(new Rectangle(0, 0, cellTradewindsImage.Width, cellTradewindsImage.Height), System.Drawing.Imaging.ImageLockMode.ReadWrite, cellTradewindsImage.PixelFormat);
+                int bytes = Math.Abs(bitmapData.Stride) * cellTradewindsImage.Height;
+                byte[] rgbValues = new byte[bytes];
+                System.Runtime.InteropServices.Marshal.Copy(bitmapData.Scan0, rgbValues, 0, bytes);
+
+                if (tradewindsBuffer != null)
+                {
+                    foreach (KeyValuePair<long, int> PixelAlpha in tradewindsBuffer)
+                    {
+                        int x = -1;
+                        int y = -1;
+                        UnpackIntoToTwoInts(PixelAlpha.Key, out x, out y);
+                        if (PixelAlpha.Value > 0 && x < image.Size.Width && y < image.Size.Height)
+                            rgbValues[x + y * image.Size.Width] = (byte)PixelAlpha.Value;
+                    }
+                }
+
+                System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, bitmapData.Scan0, bytes);
+                cellTradewindsImage.UnlockBits(bitmapData);
+
+                tgaImg = new MagickImage(cellTradewindsImage);
+                tgaImg.Format = MagickFormat.Jpeg;
+                tgaImg.Quality = editorConfig.ImageQuality;
+                tgaImg.Write(filePath.Replace("CellImg_", "CellTradewindImg_"));
+                tgaImg.Dispose();
+                tgaImg = null;
+                cellTradewindsImage.Dispose();
+                cellTradewindsImage = null;
+            }
+
+            tgaImg = new MagickImage(image);
+            tgaImg.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
             tgaImg.Write(filePath);
             tgaImg.Dispose();
+            tgaImg = null;
 
         }
 
@@ -2474,13 +2525,13 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            saveFileDialog.Filter = "png files (*.png)|*.png";
+            string imageExtension = GetImagesExtension();
+            saveFileDialog.Filter = imageExtension == "png" ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
             string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
             if (!Directory.Exists(ExportPath))
                 Directory.CreateDirectory(ExportPath);
             saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "MapImg.png";
+            saveFileDialog.FileName = "MapImg." + imageExtension;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
@@ -2572,13 +2623,13 @@ namespace ServerGridEditor
 
             if (currentProject != null)
             {
-                for (int i = 0; i < currentProject.islandInstances.Count; i++)
-                    foreach (string islandToRemove in islandsToRemove)
+                foreach (string islandToRemove in islandsToRemove)
+                    for (int i = 0; i < currentProject.islandInstances.Count; i++)
                         if (currentProject.islandInstances[i].name == islandToRemove)
                         {
                             currentProject.islandInstances[i].SetDirty(this);
                             currentProject.islandInstances.RemoveAt(i);
-                            i--;
+                            break;
                         }
             }
 
@@ -2870,7 +2921,8 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "png files (*.png)|*.png";
+            string imageExtension = GetImagesExtension();
+            saveFileDialog.Filter = imageExtension == "png" ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
             string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
             if (!Directory.Exists(ExportPath))
                 Directory.CreateDirectory(ExportPath);
@@ -2948,6 +3000,11 @@ namespace ServerGridEditor
             }
         }
 
+        private string GetImagesExtension()
+        {
+            return currentProject.MapImagesExtension;
+        }
+
         private void localExportToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (currentProject == null)
@@ -2982,8 +3039,8 @@ namespace ServerGridEditor
                 string mapExportDir = exportDir + JsonNameNoExtension;
                 if (!Directory.Exists(mapExportDir))
                     Directory.CreateDirectory(mapExportDir);
-
-                string imgPath = mapExportDir + "/MapImg.png";
+                string extension = GetImagesExtension();
+                string imgPath = mapExportDir + "/MapImg." + extension;
                 string cellImgName = "CellImg";
 
                 string serverConfigPath = exportDir + "/" + actualJsonFile;
@@ -3018,8 +3075,8 @@ namespace ServerGridEditor
                     if (!Directory.Exists(gameMapExportDir))
                         Directory.CreateDirectory(gameMapExportDir);
 
-                    ExportImage(gameMapExportDir + "/MapImg.png", -1, -1, true, editorConfig.AtlasImagesRes);
-                    ExportCellImages(gameMapExportDir + string.Format("/{0}.png", cellImgName));
+                    ExportImage(gameMapExportDir + "/MapImg." + extension, -1, -1, true, editorConfig.AtlasImagesRes);
+                    ExportCellImages(gameMapExportDir + string.Format("/{0}." + extension, cellImgName));
 
                     if (!string.IsNullOrEmpty(currentProject.tradeWindOverlayImgPath) && File.Exists(currentProject.tradeWindOverlayImgPath))
                         File.Copy(currentProject.tradeWindOverlayImgPath, gameMapExportDir + "/TradeWindMapImg.png", true);
@@ -3384,7 +3441,7 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "png files (*.png)|*.png";
+            saveFileDialog.Filter = "PNG files (*.png)|*.png";
             string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
             if (!Directory.Exists(ExportPath))
                 Directory.CreateDirectory(ExportPath);
