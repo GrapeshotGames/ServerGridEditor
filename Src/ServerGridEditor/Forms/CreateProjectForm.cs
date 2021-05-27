@@ -46,6 +46,8 @@ namespace ServerGridEditor
                 worldAtlasIdTxtBox.Text = editedProject.WorldAtlasId;
                 mapImageURLTxtBox.Text = editedProject.MapImageURL;
                 metaWorldURLTxtBox.Text = editedProject.MetaWorldURL;
+                ImagesTypeComboBox.SelectedIndex = editedProject.MapImagesExtension == "png" ? 1 : 0;
+                
                 authListURLTxtBox.Text = editedProject.AuthListURL;
                 baseServerArgsTxtBox.Text = editedProject.BaseServerArgs;
                 if (worldAtlasIdTxtBox.Text.Length == 0)
@@ -210,6 +212,8 @@ namespace ServerGridEditor
                 editedProject.AuthListURL = authListURLTxtBox.Text;
                 editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;
                 editedProject.MetaWorldURL = editedProject.MetaWorldURL.Trim();
+
+                editedProject.MapImagesExtension = (string)ImagesTypeComboBox.SelectedValue == "PNG" ? "png" : "jpg";
 
                 editedProject.BaseServerArgs = baseServerArgsTxtBox.Text;
                 editedProject.BaseServerArgs = editedProject.BaseServerArgs.Trim();
@@ -488,6 +492,5 @@ namespace ServerGridEditor
             ConfigForm.config = SharedLogConfig;
             ConfigForm.ShowDialog();
         }
-
     }
 }

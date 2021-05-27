@@ -123,6 +123,8 @@
             this.label41 = new System.Windows.Forms.Label();
             this.DBEntry6_NameTxtBx = new System.Windows.Forms.TextBox();
             this.usePVEServerConfigurationCheckbox = new System.Windows.Forms.CheckBox();
+            this.ImagesTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label42 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -936,6 +938,27 @@
             this.usePVEServerConfigurationCheckbox.Text = "Use PVE ServerConfiguration";
             this.usePVEServerConfigurationCheckbox.UseVisualStyleBackColor = true;
             // 
+            // ImagesTypeComboBox
+            // 
+            this.ImagesTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ImagesTypeComboBox.FormattingEnabled = true;
+            this.ImagesTypeComboBox.Items.AddRange(new object[] {
+            "JPEG",
+            "PNG"});
+            this.ImagesTypeComboBox.Location = new System.Drawing.Point(630, 208);
+            this.ImagesTypeComboBox.Name = "ImagesTypeComboBox";
+            this.ImagesTypeComboBox.Size = new System.Drawing.Size(54, 21);
+            this.ImagesTypeComboBox.TabIndex = 111;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(532, 211);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(92, 13);
+            this.label42.TabIndex = 112;
+            this.label42.Text = "Map Images Type";
+            // 
             // CreateProjectForm
             // 
             this.AcceptButton = this.createBtn;
@@ -943,6 +966,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(702, 766);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.ImagesTypeComboBox);
             this.Controls.Add(this.usePVEServerConfigurationCheckbox);
             this.Controls.Add(this.DBEntry6_PasswordTxtBx);
             this.Controls.Add(this.DBEntry6_PortTxtBx);
@@ -1148,5 +1173,7 @@
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox DBEntry6_NameTxtBx;
         private System.Windows.Forms.CheckBox usePVEServerConfigurationCheckbox;
+        private System.Windows.Forms.ComboBox ImagesTypeComboBox;
+        private System.Windows.Forms.Label label42;
     }
 }

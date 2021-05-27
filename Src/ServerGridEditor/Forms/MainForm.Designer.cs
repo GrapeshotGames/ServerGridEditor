@@ -54,6 +54,7 @@
             this.editLocksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cullInvalidPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editServerConfigurationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editFoliageAttachmentOverrideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,7 +106,6 @@
             this.tradeWindOverlayChckBox = new System.Windows.Forms.CheckBox();
             this.chooseTradeWindOverlayBtn = new System.Windows.Forms.Button();
             this.visualizeTradewindsWidthCheckBox = new System.Windows.Forms.CheckBox();
-            this.editFoliageAttachmentOverrideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -353,6 +353,13 @@
             this.editServerConfigurationToolStripMenuItem.Text = "Edit Server Configurations";
             this.editServerConfigurationToolStripMenuItem.Click += new System.EventHandler(this.editServerConfigurationToolStripMenuItem_Click);
             // 
+            // editFoliageAttachmentOverrideToolStripMenuItem
+            // 
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Name = "editFoliageAttachmentOverrideToolStripMenuItem";
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Text = "Edit Foliage Attachment Override";
+            this.editFoliageAttachmentOverrideToolStripMenuItem.Click += new System.EventHandler(this.editFoliageAttachmentOverrideToolStripMenuItem_Click);
+            // 
             // exportToolStripMenuItem
             // 
             this.exportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -363,14 +370,14 @@
             this.slippyMapToolStripMenuItem,
             this.tradewindsWorldMapToolStripMenuItem});
             this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.exportToolStripMenuItem.Text = "Export";
             // 
             // exportAllToolStripMenuItem
             // 
             this.exportAllToolStripMenuItem.Enabled = false;
             this.exportAllToolStripMenuItem.Name = "exportAllToolStripMenuItem";
-            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.exportAllToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.exportAllToolStripMenuItem.Text = "All";
             this.exportAllToolStripMenuItem.Click += new System.EventHandler(this.localExportToolStripMenuItem_Click);
             // 
@@ -378,7 +385,7 @@
             // 
             this.mapImageToolStripMenuItem.Enabled = false;
             this.mapImageToolStripMenuItem.Name = "mapImageToolStripMenuItem";
-            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.mapImageToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.mapImageToolStripMenuItem.Text = "Only Map Image";
             this.mapImageToolStripMenuItem.Click += new System.EventHandler(this.mapImageToolStripMenuItem_Click);
             // 
@@ -386,27 +393,27 @@
             // 
             this.cellImagesToolStripMenuItem.Enabled = false;
             this.cellImagesToolStripMenuItem.Name = "cellImagesToolStripMenuItem";
-            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.cellImagesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.cellImagesToolStripMenuItem.Text = "Only Cell Images";
             this.cellImagesToolStripMenuItem.Click += new System.EventHandler(this.cellImagesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(192, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(193, 6);
             // 
             // slippyMapToolStripMenuItem
             // 
             this.slippyMapToolStripMenuItem.Enabled = false;
             this.slippyMapToolStripMenuItem.Name = "slippyMapToolStripMenuItem";
-            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.slippyMapToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.slippyMapToolStripMenuItem.Text = "Slippy Map (Optional)";
             this.slippyMapToolStripMenuItem.Click += new System.EventHandler(this.slippyMapToolStripMenuItem_Click);
             // 
             // tradewindsWorldMapToolStripMenuItem
             // 
             this.tradewindsWorldMapToolStripMenuItem.Name = "tradewindsWorldMapToolStripMenuItem";
-            this.tradewindsWorldMapToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.tradewindsWorldMapToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.tradewindsWorldMapToolStripMenuItem.Text = "Tradewinds World Map";
             this.tradewindsWorldMapToolStripMenuItem.Click += new System.EventHandler(this.tradewindsWorldMapToolStripMenuItem_Click);
             // 
@@ -416,21 +423,21 @@
             this.testAllServersWithDataClearToolStripMenuItem,
             this.testAllServersWithoutDataClearToolStripMenuItem});
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
-            this.testsToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.testsToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
             this.testsToolStripMenuItem.Text = "Tests";
             // 
             // testAllServersWithDataClearToolStripMenuItem
             // 
             this.testAllServersWithDataClearToolStripMenuItem.Enabled = false;
             this.testAllServersWithDataClearToolStripMenuItem.Name = "testAllServersWithDataClearToolStripMenuItem";
-            this.testAllServersWithDataClearToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.testAllServersWithDataClearToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.testAllServersWithDataClearToolStripMenuItem.Text = "Test All Servers (With Data Clear)";
             // 
             // testAllServersWithoutDataClearToolStripMenuItem
             // 
             this.testAllServersWithoutDataClearToolStripMenuItem.Enabled = false;
             this.testAllServersWithoutDataClearToolStripMenuItem.Name = "testAllServersWithoutDataClearToolStripMenuItem";
-            this.testAllServersWithoutDataClearToolStripMenuItem.Size = new System.Drawing.Size(260, 22);
+            this.testAllServersWithoutDataClearToolStripMenuItem.Size = new System.Drawing.Size(261, 22);
             this.testAllServersWithoutDataClearToolStripMenuItem.Text = "Test All Servers (Without Data clear)";
             this.testAllServersWithoutDataClearToolStripMenuItem.Click += new System.EventHandler(this.testAllServersWithoutDataClearToolStripMenuItem_Click);
             // 
@@ -913,13 +920,6 @@
             this.visualizeTradewindsWidthCheckBox.Text = "Visualize Tradewinds Width";
             this.visualizeTradewindsWidthCheckBox.UseVisualStyleBackColor = true;
             this.visualizeTradewindsWidthCheckBox.CheckedChanged += new System.EventHandler(this.visualizeTradewindsWidthCheckBox_CheckedChanged);
-            // 
-            // editFoliageAttachmentOverrideToolStripMenuItem
-            // 
-            this.editFoliageAttachmentOverrideToolStripMenuItem.Name = "editFoliageAttachmentOverrideToolStripMenuItem";
-            this.editFoliageAttachmentOverrideToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
-            this.editFoliageAttachmentOverrideToolStripMenuItem.Text = "Edit Foliage Attachment Override";
-            this.editFoliageAttachmentOverrideToolStripMenuItem.Click += new System.EventHandler(this.editFoliageAttachmentOverrideToolStripMenuItem_Click);
             // 
             // MainForm
             // 
