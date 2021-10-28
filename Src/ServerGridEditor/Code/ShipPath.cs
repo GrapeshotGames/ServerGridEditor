@@ -119,7 +119,7 @@ namespace ServerGridEditor
 
     public static class SplinePathDataEx
     {
-        public static bool DeleteNode(this SplinePathData Data, BezierNodeData nodeToDelete)
+        public static bool DeleteNode(this SplinePathData Data, MoveableObjectData nodeToDelete)
         {
             if (Data is ShipPathData)
             {
@@ -142,6 +142,18 @@ namespace ServerGridEditor
                 int idx = tradeWind.Nodes.IndexOf((TradeWindNode)nodeToDelete);
                 if (idx >= 0)
                     tradeWind.Nodes.RemoveAt(idx);
+
+                return true;
+            }
+            else if (Data is PortalPathData)
+            {
+                PortalPathData portalPath = (PortalPathData)Data;
+                if (portalPath.Nodes.Count <= 2 || portalPath.Nodes[0] == nodeToDelete)
+                    return false;
+
+                int idx = portalPath.Nodes.IndexOf((PortalPathNode)nodeToDelete);
+                if (idx >= 0)
+                    portalPath.Nodes.RemoveAt(idx);
 
                 return true;
             }
@@ -203,6 +215,65 @@ namespace ServerGridEditor
                 float midY = (afterNode.worldY + nextNode.worldY) / 2;
                 BezierNodeData newNode = new TradeWindNode() { worldX = midX, worldY = midY, rotation = 0, tradeWind = Data/*, mainForm.currentProject*/ };
                 Data.Nodes.Insert(idx + 1, (TradeWindNode)newNode);
+            }
+
+            return null;
+        }
+    }
+
+    public static class PortalPathNodeEx
+    {
+        public static PortalPathData SetFrom(this PortalPathData Data, MainForm mainForm, float worldX, float worldY)
+        {
+            float nodeSize = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject);
+
+            Data.PathId = mainForm.currentProject.GenetateNewPortalPathId();
+            string NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + "0";
+            Data.Nodes.Add(new PortalPathNode() { worldX = worldX - nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, portalPathData = Data, PortalName = NodeName });
+            NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + "1";
+            Data.Nodes.Add(new PortalPathNode() { worldX = worldX + nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, portalPathData = Data, PortalName = NodeName });
+            
+            return Data;
+        }
+        public static Rectangle GetRect(this PortalPathNode Data, Project currentProject)
+        {
+            if (currentProject == null)
+                return new Rectangle();
+
+            float relativeX = GetNodeSize(currentProject) * currentProject.coordsScaling;
+            float relativeY = relativeX;
+
+            return new Rectangle((int)Math.Round(Data.worldX * currentProject.coordsScaling - relativeX / 2f), (int)Math.Round(Data.worldY * currentProject.coordsScaling - relativeY / 2f), (int)Math.Round(relativeX), (int)Math.Round(relativeY));
+        }
+
+        public static bool ContainsPoint(this PortalPathNode Data, Point p, MainForm mainForm)
+        {
+            Rectangle Rect = Data.GetRect(mainForm.currentProject);
+
+            PointF rotatedP = StaticHelpers.RotatePointAround(p, new PointF(Rect.Left + Rect.Width / 2.0f, Rect.Top + Rect.Height / 2.0f), -Data.rotation);
+            p.X = (int)rotatedP.X;
+            p.Y = (int)rotatedP.Y;
+
+            return Rect.Contains(p);
+        }
+
+        public static float GetNodeSize(Project currentProject)
+        {
+            return currentProject.cellSize * MainForm.bezierNodeRatio;
+        }
+        public static BezierNodeData AddNode(this PortalPathData Data, MoveableObjectData afterNode)
+        {
+            int idx = Data.Nodes.IndexOf((PortalPathNode)afterNode);
+            if (idx >= 0)
+            {
+                MoveableObjectData RootNode = Data.Nodes[0];
+                MoveableObjectData Node = Data.Nodes[1];
+
+                float midX = (RootNode.worldX) / 2;
+                float midY = (RootNode.worldY + Node.worldY) / 2;
+               string NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + Data.Nodes.Count.ToString();
+                MoveableObjectData newNode = new PortalPathNode() { worldX = midX, worldY = midY, rotation = 0, portalPathData = Data/*, mainForm.currentProject*/ , PortalName = NodeName };
+                Data.Nodes.Add((PortalPathNode)newNode);
             }
 
             return null;

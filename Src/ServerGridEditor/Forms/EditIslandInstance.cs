@@ -41,6 +41,22 @@ namespace ServerGridEditor.Forms
             IslandInstanceClientCustomDatas1TxtBox.Text = targetInstance.IslandInstanceClientCustomDatas1;
             IslandInstanceClientCustomDatas2TxtBox.Text = targetInstance.IslandInstanceClientCustomDatas2;
 
+            if (targetInstance != null)
+            {
+                foreach (TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+                {
+                    LandNodeTemplateComboBox.Items.Add(transientNodeTemplate.Key);
+                }
+
+                foreach (TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+                {
+                    if (targetInstance.landNodeKey != null && transientNodeTemplate.Key == targetInstance.landNodeKey)
+                    {
+                        LandNodeTemplateComboBox.SelectedItem = transientNodeTemplate.Key;
+                    }
+                }
+            }
+
             if (targetInstance.spawnerOverrides != null)
             {
                 foreach (KeyValuePair<string, string> overrides in targetInstance.spawnerOverrides)
@@ -60,6 +76,19 @@ namespace ServerGridEditor.Forms
                     harvestOverridesGrid.Rows[index].Cells[FoliageOverrideKey.Name].Value = harvestOverrideKey;
                 }
             }
+
+
+            if (targetInstance.harvestOverrideKeysTemplateInherited != null)
+            {
+                foreach (string harvestOverrideKey in targetInstance.harvestOverrideKeysTemplateInherited)
+                {
+                    harvestOverrideKeysTemplateInheritedTextBox.AppendText(harvestOverrideKey);
+                    harvestOverrideKeysTemplateInheritedTextBox.AppendText("\r\n");
+                }
+            }
+
+            
+
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -133,6 +162,11 @@ namespace ServerGridEditor.Forms
                 }
             }
 
+           if (LandNodeTemplateComboBox.SelectedItem != null)
+               targetInstance.landNodeKey = LandNodeTemplateComboBox.SelectedItem.ToString();
+           else
+               targetInstance.landNodeKey = "";
+
             targetInstance.spawnPointRegionOverride = NewspawnPointRegionOverride;
             targetInstance.finalNPCLevelMultiplier = NewfinalNPCLevelMultiplier;
             targetInstance.finalNPCLevelOffset = NewfinalNPCLevelOffset;
@@ -153,8 +187,7 @@ namespace ServerGridEditor.Forms
                 targetInstance.spawnerOverrides.Add(name, template);
             }
 
-            if (targetInstance.harvestOverrideKeys == null)
-                targetInstance.harvestOverrideKeys = new List<string>();
+            targetInstance.harvestOverrideKeys = new List<string>();
             foreach (DataGridViewRow row in harvestOverridesGrid.Rows)
             {
                 if (row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
@@ -226,6 +259,11 @@ namespace ServerGridEditor.Forms
         }
 
         private void harvestOverridesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void EditIslandInstance_Load(object sender, EventArgs e)
         {
 
         }

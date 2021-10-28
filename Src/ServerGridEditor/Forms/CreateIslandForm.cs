@@ -26,6 +26,12 @@ namespace ServerGridEditor
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            foreach(TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+            {
+                LandNodeTemplateComboBox.Items.Add(transientNodeTemplate.Key);
+            }
+
+
             foreach (SpawnerInfoData spawnerInfo in mainForm.spawners.spawnersInfo)
                 SpawnerTemplate.Items.Add((string)spawnerInfo.Name);
 
@@ -99,6 +105,14 @@ namespace ServerGridEditor
                     }
 
                 modNameTxtBox.Text = editedIsland.modDir;
+
+                foreach (TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+                {
+                    if(transientNodeTemplate.Key == editedIsland.landNodeKey)
+                    {
+                        LandNodeTemplateComboBox.SelectedItem = transientNodeTemplate.Key;
+                    }
+                }
             }
         }
 
@@ -363,7 +377,10 @@ namespace ServerGridEditor
                 editedIsland.singleSpawnPointY = spSpawnPointY;
                 editedIsland.singleSpawnPointZ = spSpawnPointZ;
                 editedIsland.maxIslandClaimFlagZ = maxIslandZ;
-
+                if (LandNodeTemplateComboBox.SelectedItem != null)
+                    editedIsland.landNodeKey = LandNodeTemplateComboBox.SelectedItem.ToString();
+                else
+                    editedIsland.landNodeKey = "";
                 editedIsland.islandTreasureBottleSupplyCrateOverrides = IslandTreasureBottleSupplyCrateOverridesTxtBox.Text;
 
                 editedIsland.islandPoints = islandPoints;
@@ -452,7 +469,7 @@ namespace ServerGridEditor
 
                 mainForm.islands.Add(Name, new Island(Name, x, y, newImgPath, landscapeMaterialOverride, sublevelNames, spawnerOverrides, harvestOverrideKeys,
                     treasureMapSpawnPoints, wildPirateCampSpawnPoints, minTreasureQuality, maxTreasureQuality, useNpcVolumesForTreasuresChkBox.Checked, useLevelBoundsForTreasuresChkBox.Checked, 
-                    prioritizeVolumesForTreasuresChkBox.Checked, isControlPointChkBox.Checked, isControlPointAllowCaptureChckBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints, spSpawnPointX, spSpawnPointY, spSpawnPointZ, maxIslandZ));
+                    prioritizeVolumesForTreasuresChkBox.Checked, isControlPointChkBox.Checked, isControlPointAllowCaptureChckBox.Checked, IslandTreasureBottleSupplyCrateOverridesTxtBox.Text, LandNodeTemplateComboBox.Text, new List<string>(extraSublevelsTxtBox.Lines), islandPoints, spSpawnPointX, spSpawnPointY, spSpawnPointZ, maxIslandZ));
 
                 mainForm.islands.Last().Value.modDir = modNameTxtBox.Text.Trim();
 
@@ -554,6 +571,11 @@ namespace ServerGridEditor
                     CSVWriter.Close();
                 }
             }*/
+        }
+
+        private void harvestOverridesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

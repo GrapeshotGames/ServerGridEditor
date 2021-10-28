@@ -41,6 +41,11 @@ namespace ServerGridEditor
             waterColorRTxtBox.Text = targetServer.waterColorR.ToString();
             waterColorGTxtBox.Text = targetServer.waterColorG.ToString();
             waterColorBTxtBox.Text = targetServer.waterColorB.ToString();
+
+            BillboardsOffsetXTextBox.Text = targetServer.billboardsOffsetX.ToString();
+            BillboardsOffsetYTextBox.Text = targetServer.billboardsOffsetY.ToString();
+            BillboardsOffsetZTextBox.Text = targetServer.billboardsOffsetZ.ToString();
+
             skyStyleIndexTxtBox.Text = targetServer.skyStyleIndex.ToString();
             serverIslandPointsMultiplierTxtBox.Text = targetServer.serverIslandPointsMultiplier.ToString();
             ServerCustomDatas1TxtBox.Text = targetServer.ServerCustomDatas1;
@@ -59,7 +64,7 @@ namespace ServerGridEditor
 
             overrideShooterGameModeDefaultGameIniDataGridView.DataSource = pairs;
 
-
+            hiddenAtlasIDTextBox.Text = targetServer.hiddenAtlasId;
 
             FloorZDist.Text = targetServer.floorZDist + "";
             transitionMinZTxtBox.Text = targetServer.transitionMinZ + "";
@@ -107,6 +112,8 @@ namespace ServerGridEditor
 
                 PVEServerConfigurationComboBox.Text = targetServer.serverConfigurationKeyPVE;
                 PVEServerConfigurationComboBox.SelectedItem = targetServer.serverConfigurationKeyPVE;
+
+                BackgroundImgPathTextBox.Text = targetServer.BackgroundImgPath;
             }
         }
 
@@ -154,6 +161,7 @@ namespace ServerGridEditor
             }
 
             float waterColorR, waterColorG, waterColorB;
+            float billboardsOffsetX, billboardsOffsetY, billboardsOffsetZ;
             int skyStyleIndex;
             float serverIslandPointsMultiplier;
 
@@ -172,6 +180,22 @@ namespace ServerGridEditor
                 MessageBox.Show("Invalid number for waterColorB", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (!float.TryParse(BillboardsOffsetXTextBox.Text, out billboardsOffsetX))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!float.TryParse(BillboardsOffsetYTextBox.Text, out billboardsOffsetY))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!float.TryParse(BillboardsOffsetZTextBox.Text, out billboardsOffsetZ))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (!int.TryParse(skyStyleIndexTxtBox.Text, out skyStyleIndex))
             {
                 MessageBox.Show("Invalid number for skyStyleIndex", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -190,6 +214,11 @@ namespace ServerGridEditor
             targetServer.gamePort = gamePort;
             targetServer.seamlessDataPort = seamlessDataPort;
             targetServer.isHomeServer = homeServerCheckbox.Checked;
+
+            if (!hiddenAtlasIDTextBox.Text.Equals(targetServer.hiddenAtlasId != null ? targetServer.hiddenAtlasId : ""))
+                mainForm.PopulateMapRegionsDirty = true;
+            targetServer.hiddenAtlasId = hiddenAtlasIDTextBox.Text;
+
             targetServer.forceServerRules = rulesComboBox.SelectedIndex;
             targetServer.AdditionalCmdLineParams = additionalCmdLineParamsTxtBox.Text;
             targetServer.oceanEpicSpawnEntriesOverrideTemplateName = oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text;
@@ -197,9 +226,13 @@ namespace ServerGridEditor
 
             targetServer.serverConfigurationKeyPVP = PVPServerConfigurationComboBox.Text;
             targetServer.serverConfigurationKeyPVE = PVEServerConfigurationComboBox.Text;
+            targetServer.BackgroundImgPath = BackgroundImgPathTextBox.Text;
             targetServer.waterColorR = waterColorR;
             targetServer.waterColorG = waterColorG;
             targetServer.waterColorB = waterColorB;
+            targetServer.billboardsOffsetX = billboardsOffsetX;
+            targetServer.billboardsOffsetY = billboardsOffsetY;
+            targetServer.billboardsOffsetZ = billboardsOffsetZ;
             targetServer.skyStyleIndex = skyStyleIndex;
             targetServer.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             targetServer.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;

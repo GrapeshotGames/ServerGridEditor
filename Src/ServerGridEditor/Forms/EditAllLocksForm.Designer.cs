@@ -162,9 +162,9 @@
             this.label4.ForeColor = System.Drawing.Color.Turquoise;
             this.label4.Location = new System.Drawing.Point(22, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 20);
+            this.label4.Size = new System.Drawing.Size(90, 20);
             this.label4.TabIndex = 13;
-            this.label4.Text = "Ship Paths";
+            this.label4.Text = "Tradewinds";
             // 
             // EditAllLocksForm
             // 

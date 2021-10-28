@@ -63,6 +63,8 @@ namespace AtlasGridDataLibrary
         [DeploymentOverrideAttribute]
         public string WorldFriendlyName = "";
         [DeploymentOverrideAttribute]
+        public string MainRegionName = "";
+        [DeploymentOverrideAttribute]
         public string WorldAtlasId = "";
         public string AuthListURL = "";
         public string WorldAtlasPassword = "";
@@ -71,8 +73,12 @@ namespace AtlasGridDataLibrary
         [DeploymentOverrideAttribute]
         public string MapImageURL = "";
 
+        [DeploymentOverrideAttribute]
+        public string OverAllMapImageURL = "";
+
         public int totalGridsX = 0;
         public int totalGridsY = 0;
+
         public bool bUseUTCTime = false;
         public bool usePVEServerConfiguration = false;
         public float columnUTCOffset = 0.0f;
@@ -123,6 +129,10 @@ namespace AtlasGridDataLibrary
 
         [DefaultValue(true)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
+        public bool showPortalNodes = true;
+
+        [DefaultValue(true)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate, NullValueHandling = NullValueHandling.Include)]
         public bool showIslandNames = true;
 
         [DefaultValue(true)]
@@ -145,10 +155,11 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate)]
         public bool showTradeWindOverlay = false;
 
-        public string backgroundImgPath = null;
+        public Dictionary<string, string> regionsBackgroundImgPath = new Dictionary<string, string>();
 
         public string foregroundImgPath = null;
         public string tradeWindOverlayImgPath = null;
+        public Dictionary<string, string> regionsTradeWindOverlayImgPath = new Dictionary<string, string>();
 
         [DefaultValue("Resources/discoZoneBox.png")]
         public string discoZonesImagePath = null;
@@ -173,16 +184,24 @@ namespace AtlasGridDataLibrary
 
         [DefaultValue(0)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public int PortalPathsIdGenerator;
+
+        [DefaultValue(0)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int tradeWindsIdGenerator;
 
         public List<ShipPathData> shipPaths = new List<ShipPathData>();
         public List<TradeWindData> tradeWinds = new List<TradeWindData>();
 
+        public List<PortalPathData> portalPaths = new List<PortalPathData>();
+        
         public DateTime lastImageOverride;
 
         public List<ServerTemplateData> serverTemplates = new List<ServerTemplateData>();
         public List<ServerConfiguration> serverConfigurations = new List<ServerConfiguration>();
+        public List<TransientNodeTemplate> transientNodeTemplates = new List<TransientNodeTemplate>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
+        public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
     }
 
     // ==== SERVER INFO ===========================================
@@ -206,6 +225,7 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int seamlessDataPort = 27000;
         public bool isHomeServer = false;
+        public string hiddenAtlasId = "";
         public int forceServerRules = 0;
         public string AdditionalCmdLineParams = "";
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
@@ -226,6 +246,11 @@ namespace AtlasGridDataLibrary
         public float waterColorR = 0;
         public float waterColorG = 0;
         public float waterColorB = 0;
+
+        public float billboardsOffsetX = 0;
+        public float billboardsOffsetY = 0;
+        public float billboardsOffsetZ = 0;
+
         public int skyStyleIndex = 0;
         [DefaultValue(1.0f)]
         public float serverIslandPointsMultiplier = 1.0f;
@@ -266,6 +291,8 @@ namespace AtlasGridDataLibrary
 
         public int[] ServerPathingGrid = new int[1];
 
+        public string BackgroundImgPath = "";
+
         public string GetGridLocationHumanReadable()
         {
             const string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -284,11 +311,23 @@ namespace AtlasGridDataLibrary
 
     }
 
+    public class RegionsCategory
+    {
+        public string CategoryName;
+        public List<string> Regions = new List<string>();
+    }
+
     public class ServerConfiguration
     {
         public string ParentName;
         public string Key;
         public Dictionary<string, string> GameVariable = new Dictionary<string, string>();
+    }
+
+    public class TransientNodeTemplate
+    {
+        public string Key;
+        public Dictionary<string, double> NodeKeyWeights;
     }
 
     public class FoliageAttachmentOverride
@@ -321,6 +360,7 @@ namespace AtlasGridDataLibrary
         public int id;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
         public List<string> harvestOverrideKeys = new List<string>(); //Dictionary<string, string> harvestOverrides = new Dictionary<string, string>();
+        public List<string> harvestOverrideKeysTemplateInherited = new List<string>(); //Dictionary<string, string> harvestOverrides = new Dictionary<string, string>();
 
         public List<string> treasureMapSpawnPoints = new List<string>();
         public List<string> wildPirateCampSpawnPoints = new List<string>();
@@ -333,6 +373,7 @@ namespace AtlasGridDataLibrary
         public bool isControlPointAllowCapture = true;
         public int islandPoints = 1;
         public string islandTreasureBottleSupplyCrateOverrides = "";
+        public string landNodeKey = "";
         [DefaultValue(-1)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore)]
         public int spawnPointRegionOverride = -1;
@@ -434,6 +475,22 @@ namespace AtlasGridDataLibrary
         public float StartInterpolatingOceanColorAtPercentage = 0.25f; //0.875f;
     }
 
+    public enum PortalType
+    {
+        Perpetual,
+        PlayerActivated,
+        CentralBarmuda,
+        NPC
+    }
+
+    public class PortalPathData : SplinePathData
+    {
+        public PortalType PathPortalType;
+        public PortalPathData(PortalType pathPortalType)
+        { PathPortalType = pathPortalType; }
+        public List<PortalPathNode> Nodes = new List<PortalPathNode>();
+    }
+
     public class BezierNodeData : MoveableObjectData
     {
         public float controlPointsDistance;
@@ -448,7 +505,7 @@ namespace AtlasGridDataLibrary
         public override SplinePathData GetSplinePath()
         {
             return shipPath;
-    }
+        }
     }
 
     public class TradeWindNode : BezierNodeData
@@ -461,6 +518,16 @@ namespace AtlasGridDataLibrary
         public override SplinePathData GetSplinePath()
         {
             return tradeWind;
-}
+        }
+    }
+
+    public class PortalPathNode : MoveableObjectData
+    {
+        [JsonIgnore]
+        public PortalPathData portalPathData;
+
+        public string PortalName;
+
+        public Dictionary<string, int> RequiredResource = new Dictionary<string, int>();
     }
 }

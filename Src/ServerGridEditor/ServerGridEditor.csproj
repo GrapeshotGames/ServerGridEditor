@@ -113,11 +113,35 @@
     <Compile Include="Forms\EditFoliageAttachmentOverride.Designer.cs">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditRegionsCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsCategories.Designer.cs">
+      <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditServerConfigurations.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EditServerConfigurations.Designer.cs">
       <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplates.Designer.cs">
+      <DependentUpon>EditNodeTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplate.Designer.cs">
+      <DependentUpon>EditNodeTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPortalNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPortalNode.Designer.cs">
+      <DependentUpon>EditPortalNode.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RemoveServerConfiguration.cs">
       <SubType>Form</SubType>
@@ -273,8 +297,20 @@
     <EmbeddedResource Include="Forms\EditFoliageAttachmentOverride.resx">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsCategories.resx">
+      <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditServerConfigurations.resx">
       <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditNodeTemplates.resx">
+      <DependentUpon>EditNodeTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditNodeTemplate.resx">
+      <DependentUpon>EditNodeTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPortalNode.resx">
+      <DependentUpon>EditPortalNode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveServerConfiguration.resx">
       <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
