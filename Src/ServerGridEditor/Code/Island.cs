@@ -66,6 +66,8 @@ namespace ServerGridEditor
         public float singleSpawnPointZ;
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)] 
         public float maxIslandClaimFlagZ = 0.0f;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public string landNodeKey = "";
         [JsonIgnore]
         public string modDir = null;
 
@@ -117,7 +119,7 @@ namespace ServerGridEditor
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
             , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> harvestOverrideKeys, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, bool isControlPoint, bool isControlPointAllowCapture, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, bool isControlPoint, bool isControlPointAllowCapture, string IslandTreasureBottleSupplyCrateOverrides, string LandNodeKey, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
         {
             this.name = name;
             this.x = x;
@@ -143,6 +145,7 @@ namespace ServerGridEditor
             this.maxIslandClaimFlagZ = theMaxIslandClaimFlagZ;
             this.isControlPoint = isControlPoint;
             this.isControlPointAllowCapture = isControlPointAllowCapture;
+            this.landNodeKey = LandNodeKey;
         }
     }
 
@@ -159,6 +162,7 @@ namespace ServerGridEditor
             Data.spawnerOverrides = new Dictionary<string, string>();
             //Data.harvestOverrides = new Dictionary<string, string>();
             Data.harvestOverrideKeys = new List<string>();
+            Data.harvestOverrideKeysTemplateInherited = new List<string>();
 
             Data.minTreasureQuality = Data.maxTreasureQuality = -1;
             Data.spawnPointRegionOverride = -1;
@@ -235,14 +239,10 @@ namespace ServerGridEditor
                 }
             }
 
+            if(Data.landNodeKey == null || Data.landNodeKey == "")
+                Data.landNodeKey = referencedIsland.landNodeKey;
 
-            if (referencedIsland.harvestOverrideKeys != null)
-            {
-                if (Data.harvestOverrideKeys == null)
-                    Data.harvestOverrideKeys = new List<string>();
-                List<string> keysToRemove = new List<string>();
-                Data.harvestOverrideKeys = referencedIsland.harvestOverrideKeys;
-            }
+            Data.harvestOverrideKeysTemplateInherited = referencedIsland.harvestOverrideKeys;
         }
 
     }

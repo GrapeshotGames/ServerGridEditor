@@ -42,9 +42,11 @@ namespace ServerGridEditor
                     SharedLogConfig.CopyFrom(editedProject.SharedLogConfig);
 
                 worldFriendlyNameTxtBox.Text = editedProject.WorldFriendlyName;
+                MainRegionTxtBx.Text = editedProject.MainRegionName;
                 worldAtlasPasswordTxtBox.Text = editedProject.WorldAtlasPassword;
                 worldAtlasIdTxtBox.Text = editedProject.WorldAtlasId;
                 mapImageURLTxtBox.Text = editedProject.MapImageURL;
+                OveallImageURLTxtBox.Text = editedProject.OverallImageURL;
                 metaWorldURLTxtBox.Text = editedProject.MetaWorldURL;
                 ImagesTypeComboBox.SelectedIndex = editedProject.MapImagesExtension == "png" ? 1 : 0;
                 
@@ -203,10 +205,13 @@ namespace ServerGridEditor
             if (editedProject != null)
             {
                 editedProject.WorldFriendlyName = worldFriendlyNameTxtBox.Text;
+                editedProject.MainRegionName = MainRegionTxtBx.Text;
                 editedProject.WorldAtlasId = worldAtlasIdTxtBox.Text;
                 editedProject.WorldAtlasPassword = worldAtlasPasswordTxtBox.Text;
                 editedProject.MapImageURL = mapImageURLTxtBox.Text;
                 editedProject.MapImageURL = editedProject.MapImageURL.Trim();
+                editedProject.OverallImageURL = OveallImageURLTxtBox.Text;
+                editedProject.OverallImageURL = editedProject.OverallImageURL.Trim();
                 editedProject.usePVEServerConfiguration = usePVEServerConfigurationCheckbox.Checked;
 
                 editedProject.AuthListURL = authListURLTxtBox.Text;
@@ -399,7 +404,7 @@ namespace ServerGridEditor
             }
             else
             {
-                mainForm.CreateProject(size, x, y, worldFriendlyNameTxtBox.Text.Trim(), worldAtlasIdTxtBox.Text.Trim(), worldAtlasPasswordTxtBox.Text.Trim());
+                mainForm.CreateProject(size, x, y, worldFriendlyNameTxtBox.Text.Trim(), MainRegionTxtBx.Text, worldAtlasIdTxtBox.Text.Trim(), worldAtlasPasswordTxtBox.Text.Trim());
 
                 //Just edit values vs passing everything down
                 mainForm.currentProject.LocalS3URL = S3localURLTxtBx.Text;
@@ -491,6 +496,11 @@ namespace ServerGridEditor
             var ConfigForm = new SharedLogConfigForm();
             ConfigForm.config = SharedLogConfig;
             ConfigForm.ShowDialog();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

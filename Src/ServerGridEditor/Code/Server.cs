@@ -21,6 +21,7 @@ namespace ServerGridEditor
         public int gridX;
         public int gridY;
         public bool isHomeServer;
+        public string hiddenAtlasId = "";
         public int forceServerRules;
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
@@ -39,6 +40,9 @@ namespace ServerGridEditor
         public float waterColorR;
         public float waterColorG;
         public float waterColorB;
+        public float billboardsOffsetX = 0;
+        public float billboardsOffsetY = 0;
+        public float billboardsOffsetZ = 0;
         public int skyStyleIndex;
         public float serverIslandPointsMultiplier = 1.0f;
         public string ServerCustomDatas1 = "";
@@ -58,6 +62,8 @@ namespace ServerGridEditor
         public string serverConfigurationKeyPVP = "";
         public string serverConfigurationKeyPVE = "";
         public int[] ServerPathingGrid = new int[1];
+
+        public string BackgroundImgPath = "";
 
         public Server() { }
 

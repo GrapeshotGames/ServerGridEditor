@@ -102,6 +102,17 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.PVEServerConfigurationComboBox = new System.Windows.Forms.ComboBox();
+            this.hiddenAtlasIDTextBox = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.BackgroundImgPathTextBox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.BillboardsOffsetZTextBox = new System.Windows.Forms.TextBox();
+            this.BillboardsOffsetYTextBox = new System.Windows.Forms.TextBox();
+            this.BillboardsOffsetXTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +152,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(7, 726);
+            this.saveBtn.Location = new System.Drawing.Point(9, 775);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(94, 32);
             this.saveBtn.TabIndex = 9;
@@ -159,7 +170,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(107, 726);
+            this.cancelBtn.Location = new System.Drawing.Point(109, 775);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(96, 32);
             this.cancelBtn.TabIndex = 10;
@@ -179,7 +190,7 @@
             // homeServerCheckbox
             // 
             this.homeServerCheckbox.AutoSize = true;
-            this.homeServerCheckbox.Location = new System.Drawing.Point(19, 697);
+            this.homeServerCheckbox.Location = new System.Drawing.Point(15, 697);
             this.homeServerCheckbox.Name = "homeServerCheckbox";
             this.homeServerCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.homeServerCheckbox.Size = new System.Drawing.Size(88, 17);
@@ -189,7 +200,7 @@
             // 
             // runTestsBtn
             // 
-            this.runTestsBtn.Location = new System.Drawing.Point(256, 731);
+            this.runTestsBtn.Location = new System.Drawing.Point(256, 775);
             this.runTestsBtn.Name = "runTestsBtn";
             this.runTestsBtn.Size = new System.Drawing.Size(96, 32);
             this.runTestsBtn.TabIndex = 15;
@@ -502,7 +513,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(221, 486);
+            this.label20.Location = new System.Drawing.Point(221, 481);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(75, 13);
             this.label20.TabIndex = 79;
@@ -510,7 +521,7 @@
             // 
             // skyStyleIndexTxtBox
             // 
-            this.skyStyleIndexTxtBox.Location = new System.Drawing.Point(299, 483);
+            this.skyStyleIndexTxtBox.Location = new System.Drawing.Point(299, 478);
             this.skyStyleIndexTxtBox.Name = "skyStyleIndexTxtBox";
             this.skyStyleIndexTxtBox.Size = new System.Drawing.Size(55, 20);
             this.skyStyleIndexTxtBox.TabIndex = 78;
@@ -518,7 +529,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 486);
+            this.label21.Location = new System.Drawing.Point(7, 481);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(60, 13);
             this.label21.TabIndex = 80;
@@ -526,21 +537,21 @@
             // 
             // waterColorRTxtBox
             // 
-            this.waterColorRTxtBox.Location = new System.Drawing.Point(71, 480);
+            this.waterColorRTxtBox.Location = new System.Drawing.Point(71, 475);
             this.waterColorRTxtBox.Name = "waterColorRTxtBox";
             this.waterColorRTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorRTxtBox.TabIndex = 81;
             // 
             // waterColorGTxtBox
             // 
-            this.waterColorGTxtBox.Location = new System.Drawing.Point(119, 480);
+            this.waterColorGTxtBox.Location = new System.Drawing.Point(119, 475);
             this.waterColorGTxtBox.Name = "waterColorGTxtBox";
             this.waterColorGTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorGTxtBox.TabIndex = 82;
             // 
             // waterColorBTxtBox
             // 
-            this.waterColorBTxtBox.Location = new System.Drawing.Point(167, 480);
+            this.waterColorBTxtBox.Location = new System.Drawing.Point(167, 475);
             this.waterColorBTxtBox.Name = "waterColorBTxtBox";
             this.waterColorBTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorBTxtBox.TabIndex = 83;
@@ -548,7 +559,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(83, 502);
+            this.label22.Location = new System.Drawing.Point(83, 499);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 13);
             this.label22.TabIndex = 84;
@@ -557,7 +568,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(132, 502);
+            this.label23.Location = new System.Drawing.Point(132, 499);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 13);
             this.label23.TabIndex = 85;
@@ -566,7 +577,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(180, 501);
+            this.label24.Location = new System.Drawing.Point(180, 498);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(14, 13);
             this.label24.TabIndex = 86;
@@ -676,7 +687,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(132, 525);
+            this.label32.Location = new System.Drawing.Point(137, 510);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(137, 13);
             this.label32.TabIndex = 100;
@@ -684,7 +695,7 @@
             // 
             // serverIslandPointsMultiplierTxtBox
             // 
-            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(275, 522);
+            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(275, 505);
             this.serverIslandPointsMultiplierTxtBox.Name = "serverIslandPointsMultiplierTxtBox";
             this.serverIslandPointsMultiplierTxtBox.Size = new System.Drawing.Size(79, 20);
             this.serverIslandPointsMultiplierTxtBox.TabIndex = 99;
@@ -717,7 +728,7 @@
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(106, 13);
             this.label33.TabIndex = 103;
-            this.label33.Text = "Sevrer Congifuration:";
+            this.label33.Text = "Server Congifuration:";
             // 
             // label34
             // 
@@ -726,7 +737,7 @@
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(130, 13);
             this.label34.TabIndex = 105;
-            this.label34.Text = "Sevrer Congifuration PVE:";
+            this.label34.Text = "Server Congifuration PVE:";
             // 
             // PVEServerConfigurationComboBox
             // 
@@ -737,17 +748,117 @@
             this.PVEServerConfigurationComboBox.Size = new System.Drawing.Size(188, 21);
             this.PVEServerConfigurationComboBox.TabIndex = 104;
             // 
+            // hiddenAtlasIDTextBox
+            // 
+            this.hiddenAtlasIDTextBox.Location = new System.Drawing.Point(275, 526);
+            this.hiddenAtlasIDTextBox.Name = "hiddenAtlasIDTextBox";
+            this.hiddenAtlasIDTextBox.Size = new System.Drawing.Size(78, 20);
+            this.hiddenAtlasIDTextBox.TabIndex = 104;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(137, 529);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(95, 13);
+            this.label35.TabIndex = 106;
+            this.label35.Text = "Hidden ATLAS ID:";
+            // 
+            // BackgroundImgPathTextBox
+            // 
+            this.BackgroundImgPathTextBox.Location = new System.Drawing.Point(374, 782);
+            this.BackgroundImgPathTextBox.Name = "BackgroundImgPathTextBox";
+            this.BackgroundImgPathTextBox.Size = new System.Drawing.Size(281, 20);
+            this.BackgroundImgPathTextBox.TabIndex = 107;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(371, 766);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(122, 13);
+            this.label36.TabIndex = 108;
+            this.label36.Text = "Background Image Path";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(16, 735);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(86, 13);
+            this.label37.TabIndex = 109;
+            this.label37.Text = "Billboards Offset:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(218, 755);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(14, 13);
+            this.label38.TabIndex = 115;
+            this.label38.Text = "Z";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(170, 756);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(14, 13);
+            this.label39.TabIndex = 114;
+            this.label39.Text = "Y";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(121, 756);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(14, 13);
+            this.label40.TabIndex = 113;
+            this.label40.Text = "X";
+            // 
+            // BillboardsOffsetZTextBox
+            // 
+            this.BillboardsOffsetZTextBox.Location = new System.Drawing.Point(205, 732);
+            this.BillboardsOffsetZTextBox.Name = "BillboardsOffsetZTextBox";
+            this.BillboardsOffsetZTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetZTextBox.TabIndex = 112;
+            // 
+            // BillboardsOffsetYTextBox
+            // 
+            this.BillboardsOffsetYTextBox.Location = new System.Drawing.Point(157, 732);
+            this.BillboardsOffsetYTextBox.Name = "BillboardsOffsetYTextBox";
+            this.BillboardsOffsetYTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetYTextBox.TabIndex = 111;
+            // 
+            // BillboardsOffsetXTextBox
+            // 
+            this.BillboardsOffsetXTextBox.Location = new System.Drawing.Point(109, 732);
+            this.BillboardsOffsetXTextBox.Name = "BillboardsOffsetXTextBox";
+            this.BillboardsOffsetXTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetXTextBox.TabIndex = 110;
+            // 
             // EditServerForm
             // 
             this.AcceptButton = this.saveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(667, 781);
+            this.ClientSize = new System.Drawing.Size(667, 826);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.BillboardsOffsetZTextBox);
+            this.Controls.Add(this.BillboardsOffsetYTextBox);
+            this.Controls.Add(this.BillboardsOffsetXTextBox);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.BackgroundImgPathTextBox);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.label34);
             this.Controls.Add(this.PVEServerConfigurationComboBox);
-            this.Controls.Add(this.label33);
             this.Controls.Add(this.PVPServerConfigurationComboBox);
+            this.Controls.Add(this.hiddenAtlasIDTextBox);
+            this.Controls.Add(this.label33);
             this.Controls.Add(this.rulesComboBox);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.serverIslandPointsMultiplierTxtBox);
@@ -907,5 +1018,16 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.ComboBox PVEServerConfigurationComboBox;
+        private System.Windows.Forms.TextBox hiddenAtlasIDTextBox;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox BackgroundImgPathTextBox;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox BillboardsOffsetZTextBox;
+        private System.Windows.Forms.TextBox BillboardsOffsetYTextBox;
+        private System.Windows.Forms.TextBox BillboardsOffsetXTextBox;
     }
 }

@@ -83,10 +83,12 @@
             this.isControlPointChkBox = new System.Windows.Forms.CheckBox();
             this.isControlPointAllowCaptureChckBox = new System.Windows.Forms.CheckBox();
             this.harvestOverridesGrid = new System.Windows.Forms.DataGridView();
+            this.FoliageOverrideKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.ImportHarvestOverridesButton = new System.Windows.Forms.Button();
             this.ExportHarvestOverridesButton = new System.Windows.Forms.Button();
-            this.FoliageOverrideKey = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.label23 = new System.Windows.Forms.Label();
+            this.LandNodeTemplateComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spawnerOverridesGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.harvestOverridesGrid)).BeginInit();
@@ -172,7 +174,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(17, 770);
+            this.createBtn.Location = new System.Drawing.Point(17, 793);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(111, 39);
             this.createBtn.TabIndex = 9;
@@ -183,7 +185,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(134, 770);
+            this.cancelBtn.Location = new System.Drawing.Point(134, 793);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(118, 39);
             this.cancelBtn.TabIndex = 10;
@@ -561,6 +563,15 @@
             this.harvestOverridesGrid.Name = "harvestOverridesGrid";
             this.harvestOverridesGrid.Size = new System.Drawing.Size(323, 162);
             this.harvestOverridesGrid.TabIndex = 61;
+            this.harvestOverridesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.harvestOverridesGrid_CellContentClick);
+            // 
+            // FoliageOverrideKey
+            // 
+            this.FoliageOverrideKey.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.FoliageOverrideKey.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
+            this.FoliageOverrideKey.HeaderText = "Foliage Override Key";
+            this.FoliageOverrideKey.Name = "FoliageOverrideKey";
+            this.FoliageOverrideKey.Width = 84;
             // 
             // label21
             // 
@@ -595,13 +606,23 @@
             this.ExportHarvestOverridesButton.Visible = false;
             this.ExportHarvestOverridesButton.Click += new System.EventHandler(this.ExportHarvestOverridesButton_Click);
             // 
-            // FoliageOverrideKey
+            // label23
             // 
-            this.FoliageOverrideKey.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.FoliageOverrideKey.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
-            this.FoliageOverrideKey.HeaderText = "Foliage Override Key";
-            this.FoliageOverrideKey.Name = "FoliageOverrideKey";
-            this.FoliageOverrideKey.Width = 84;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(20, 765);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 13);
+            this.label23.TabIndex = 65;
+            this.label23.Text = "Land Nodes Template";
+            // 
+            // LandNodeTemplateComboBox
+            // 
+            this.LandNodeTemplateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LandNodeTemplateComboBox.FormattingEnabled = true;
+            this.LandNodeTemplateComboBox.Location = new System.Drawing.Point(134, 762);
+            this.LandNodeTemplateComboBox.Name = "LandNodeTemplateComboBox";
+            this.LandNodeTemplateComboBox.Size = new System.Drawing.Size(121, 21);
+            this.LandNodeTemplateComboBox.TabIndex = 66;
             // 
             // CreateIslandForm
             // 
@@ -609,7 +630,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(609, 823);
+            this.ClientSize = new System.Drawing.Size(609, 843);
+            this.Controls.Add(this.LandNodeTemplateComboBox);
+            this.Controls.Add(this.label23);
             this.Controls.Add(this.ExportHarvestOverridesButton);
             this.Controls.Add(this.ImportHarvestOverridesButton);
             this.Controls.Add(this.label21);
@@ -741,5 +764,7 @@
         private System.Windows.Forms.Button ImportHarvestOverridesButton;
         private System.Windows.Forms.Button ExportHarvestOverridesButton;
         private System.Windows.Forms.DataGridViewComboBoxColumn FoliageOverrideKey;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.ComboBox LandNodeTemplateComboBox;
     }
 }

@@ -15,7 +15,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -67,7 +67,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Cay_A_TR": {
     "name": "Cay_A_TR",
@@ -85,7 +86,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -135,7 +136,8 @@
     "singleSpawnPointX": 12559.0,
     "singleSpawnPointY": 1402.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Mnt_B_WF": {
     "name": "Mnt_B_WF",
@@ -152,7 +154,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "02_Temperate_Easy",
+      "IronGroup",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -203,7 +206,8 @@
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_C_TR": {
     "name": "Mnt_C_TR",
@@ -271,7 +275,8 @@
     "singleSpawnPointX": -1565.0,
     "singleSpawnPointY": 9575.0,
     "singleSpawnPointZ": 650.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_C_WF": {
     "name": "Mnt_C_WF",
@@ -336,7 +341,8 @@
     "singleSpawnPointX": -1654.0,
     "singleSpawnPointY": 8791.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Cay_F_TR": {
     "name": "Cay_F_TR",
@@ -354,7 +360,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -402,7 +408,8 @@
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Mnt_P_WF": {
     "name": "Mnt_P_WF",
@@ -427,7 +434,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -480,7 +488,8 @@
     "singleSpawnPointX": -146609.0,
     "singleSpawnPointY": 49617.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 14900.0
+    "maxIslandClaimFlagZ": 14900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_K_WF": {
     "name": "Mnt_K_WF",
@@ -497,8 +506,10 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CopperGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup",
+      "03_Temperate"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -549,7 +560,8 @@
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": ""
   },
   "Cay_I_TR": {
     "name": "Cay_I_TR",
@@ -567,7 +579,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CopperGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -616,7 +629,8 @@
     "singleSpawnPointX": -7329.0,
     "singleSpawnPointY": -43301.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": null
   },
   "Cay_G_TR": {
     "name": "Cay_G_TR",
@@ -633,8 +647,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -685,7 +699,8 @@
     "singleSpawnPointX": -18247.0,
     "singleSpawnPointY": -21926.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": ""
   },
   "Cay_GB_TR": {
     "name": "Cay_GB_TR",
@@ -703,7 +718,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -756,7 +771,8 @@
     "singleSpawnPointX": -16306.0,
     "singleSpawnPointY": -24371.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": ""
   },
   "Cay_H_TR": {
     "name": "Cay_H_TR",
@@ -773,8 +789,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -824,7 +840,8 @@
     "singleSpawnPointX": -6679.0,
     "singleSpawnPointY": -38236.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": ""
   },
   "Mnt_N_WF": {
     "name": "Mnt_N_WF",
@@ -896,7 +913,8 @@
     "singleSpawnPointX": 74267.0,
     "singleSpawnPointY": -24430.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_I_WF": {
     "name": "Mnt_I_WF",
@@ -914,7 +932,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "02_Temperate_Easy",
+      "IronGroup",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -966,7 +985,8 @@
     "singleSpawnPointX": 75078.0,
     "singleSpawnPointY": 774.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_L_WF": {
     "name": "Mnt_L_WF",
@@ -984,7 +1004,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1032,7 +1053,8 @@
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": null
   },
   "Cay_J_TR": {
     "name": "Cay_J_TR",
@@ -1050,7 +1072,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -1097,7 +1119,8 @@
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Cay_JB_TR": {
     "name": "Cay_JB_TR",
@@ -1115,7 +1138,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -1163,7 +1186,8 @@
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Mnt_J_WF": {
     "name": "Mnt_J_WF",
@@ -1244,7 +1268,8 @@
     "singleSpawnPointX": 38947.0,
     "singleSpawnPointY": -45406.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_L_TR": {
     "name": "Mnt_L_TR",
@@ -1311,7 +1336,8 @@
     "singleSpawnPointX": 28806.0,
     "singleSpawnPointY": -59251.0,
     "singleSpawnPointZ": 1750.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_D_WF": {
     "name": "Mnt_D_WF",
@@ -1329,7 +1355,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1389,7 +1416,8 @@
     "singleSpawnPointX": -12548.0,
     "singleSpawnPointY": 1819.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_O_WF": {
     "name": "Mnt_O_WF",
@@ -1407,7 +1435,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1458,7 +1487,8 @@
     "singleSpawnPointX": -72548.0,
     "singleSpawnPointY": 24244.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": "TestTemplate"
   },
   "Mnt_E_WF": {
     "name": "Mnt_E_WF",
@@ -1475,8 +1505,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1533,7 +1564,8 @@
     "singleSpawnPointX": -18860.0,
     "singleSpawnPointY": -15866.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_J_TR": {
     "name": "Mnt_J_TR",
@@ -1603,7 +1635,8 @@
     "singleSpawnPointX": 38672.0,
     "singleSpawnPointY": -45535.0,
     "singleSpawnPointZ": 650.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_H_TR": {
     "name": "Mnt_H_TR",
@@ -1621,7 +1654,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1682,7 +1716,8 @@
     "singleSpawnPointX": -78144.0,
     "singleSpawnPointY": 60586.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_NB_WF": {
     "name": "Mnt_NB_WF",
@@ -1699,8 +1734,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1749,7 +1785,8 @@
     "singleSpawnPointX": 74849.0,
     "singleSpawnPointY": -21563.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_OB_WF": {
     "name": "Mnt_OB_WF",
@@ -1814,7 +1851,8 @@
     "singleSpawnPointX": -72896.0,
     "singleSpawnPointY": 18802.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_LB_WF": {
     "name": "Mnt_LB_WF",
@@ -1832,7 +1870,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "SilverGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1883,7 +1921,8 @@
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": ""
   },
   "Mnt_JB_WF": {
     "name": "Mnt_JB_WF",
@@ -1900,8 +1939,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -1967,7 +2006,8 @@
     "singleSpawnPointX": 33292.0,
     "singleSpawnPointY": -48244.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": ""
   },
   "Mnt_A_TR": {
     "name": "Mnt_A_TR",
@@ -1985,7 +2025,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2033,7 +2073,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Cay_K_TR_E": {
     "name": "Cay_K_TR_E",
@@ -2099,7 +2140,8 @@
     "singleSpawnPointX": 22394.0,
     "singleSpawnPointY": 20343.0,
     "singleSpawnPointZ": 723.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": null
   },
   "Cay_A_WR": {
     "name": "Cay_A_WR",
@@ -2116,8 +2158,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2165,7 +2207,8 @@
     "singleSpawnPointX": 36887.0,
     "singleSpawnPointY": 29989.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": "AotD"
   },
   "Cay_E_ET": {
     "name": "Cay_E_ET",
@@ -2183,7 +2226,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -2239,7 +2282,8 @@
     "singleSpawnPointX": -12513.0,
     "singleSpawnPointY": 1038.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_E_WR": {
     "name": "Cay_E_WR",
@@ -2257,7 +2301,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2309,7 +2353,8 @@
     "singleSpawnPointX": -16178.0,
     "singleSpawnPointY": 3591.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": "AotD"
   },
   "Cay_E_WR_B": {
     "name": "Cay_E_WR_B",
@@ -2326,8 +2371,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2377,7 +2421,8 @@
     "singleSpawnPointX": -26272.0,
     "singleSpawnPointY": -45153.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_E_CL": {
     "name": "Cay_E_CL",
@@ -2395,7 +2440,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -2444,7 +2489,8 @@
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_F_ET": {
     "name": "Cay_F_ET",
@@ -2461,7 +2507,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "02_Temperate_Easy",
+      "IronGroup",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -2514,7 +2561,8 @@
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": "AotD"
   },
   "Cay_F_WR": {
     "name": "Cay_F_WR",
@@ -2532,7 +2580,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2580,7 +2628,8 @@
     "singleSpawnPointX": -22005.0,
     "singleSpawnPointY": -49761.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_G_WR": {
     "name": "Cay_G_WR",
@@ -2597,8 +2646,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2647,7 +2696,8 @@
     "singleSpawnPointX": -16306.0,
     "singleSpawnPointY": -24371.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": ""
   },
   "Cay_G_CL": {
     "name": "Cay_G_CL",
@@ -2713,7 +2763,8 @@
     "singleSpawnPointX": -10744.0,
     "singleSpawnPointY": -10685.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": null
   },
   "Cay_G_CL_B": {
     "name": "Cay_G_CL_B",
@@ -2731,7 +2782,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -2778,7 +2829,8 @@
     "singleSpawnPointX": -37566.0,
     "singleSpawnPointY": -22410.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": ""
   },
   "Cay_G_CL_C": {
     "name": "Cay_G_CL_C",
@@ -2840,7 +2892,8 @@
     "singleSpawnPointX": -37028.0,
     "singleSpawnPointY": -25869.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": null
   },
   "Cay_H_ET": {
     "name": "Cay_H_ET",
@@ -2858,7 +2911,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -2917,7 +2971,8 @@
     "singleSpawnPointX": -6579.0,
     "singleSpawnPointY": -38236.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": null
   },
   "Cay_H_WR": {
     "name": "Cay_H_WR",
@@ -2934,8 +2989,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2983,7 +3038,8 @@
     "singleSpawnPointX": -1809.0,
     "singleSpawnPointY": -34331.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": ""
   },
   "Cay_H_CL": {
     "name": "Cay_H_CL",
@@ -3000,8 +3056,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "IronGroup"
+      "09_Desert",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3054,7 +3110,8 @@
     "singleSpawnPointX": -10264.0,
     "singleSpawnPointY": -54214.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": ""
   },
   "Cay_H_CL_B": {
     "name": "Cay_H_CL_B",
@@ -3072,7 +3129,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3122,7 +3179,8 @@
     "singleSpawnPointX": -7091.0,
     "singleSpawnPointY": -3382.0,
     "singleSpawnPointZ": 2000.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": "AotD"
   },
   "Cay_I_WR": {
     "name": "Cay_I_WR",
@@ -3139,8 +3197,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -3188,7 +3246,8 @@
     "singleSpawnPointX": -8616.0,
     "singleSpawnPointY": -53343.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": "AotD"
   },
   "Cay_I_WR_B": {
     "name": "Cay_I_WR_B",
@@ -3206,7 +3265,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -3253,7 +3312,8 @@
     "singleSpawnPointX": -9616.0,
     "singleSpawnPointY": -53343.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Cay_I_CL": {
     "name": "Cay_I_CL",
@@ -3271,7 +3331,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3317,7 +3377,8 @@
     "singleSpawnPointX": -11302.0,
     "singleSpawnPointY": -42124.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Cay_I_CL_B": {
     "name": "Cay_I_CL_B",
@@ -3335,7 +3396,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3382,7 +3443,8 @@
     "singleSpawnPointX": -14758.0,
     "singleSpawnPointY": -55461.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": "AotD"
   },
   "Cay_I_CL_C": {
     "name": "Cay_I_CL_C",
@@ -3399,8 +3461,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "IronGroup"
+      "09_Desert",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3447,7 +3509,8 @@
     "singleSpawnPointX": -12118.0,
     "singleSpawnPointY": -56886.0,
     "singleSpawnPointZ": 1750.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Cay_J_WR": {
     "name": "Cay_J_WR",
@@ -3465,7 +3528,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -3515,7 +3578,8 @@
     "singleSpawnPointX": -23788.0,
     "singleSpawnPointY": 59067.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": "AotD"
   },
   "Cay_J_CL": {
     "name": "Cay_J_CL",
@@ -3533,7 +3597,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3580,7 +3644,8 @@
     "singleSpawnPointX": -22423.0,
     "singleSpawnPointY": 59158.0,
     "singleSpawnPointZ": 2100.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": "AotD"
   },
   "Cay_K_WR": {
     "name": "Cay_K_WR",
@@ -3647,7 +3712,8 @@
     "singleSpawnPointX": 1769.0,
     "singleSpawnPointY": 75976.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": null
   },
   "Cay_K_WR_B": {
     "name": "Cay_K_WR_B",
@@ -3665,7 +3731,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -3714,7 +3781,8 @@
     "singleSpawnPointX": 13795.0,
     "singleSpawnPointY": 67054.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": null
   },
   "Cay_K_CL": {
     "name": "Cay_K_CL",
@@ -3732,7 +3800,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -3779,7 +3847,8 @@
     "singleSpawnPointX": -42424.0,
     "singleSpawnPointY": 40208.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Cay_L_ER": {
     "name": "Cay_L_ER",
@@ -3847,7 +3916,8 @@
     "singleSpawnPointX": 46273.0,
     "singleSpawnPointY": 25290.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": null
   },
   "Cay_L_WR": {
     "name": "Cay_L_WR",
@@ -3913,7 +3983,8 @@
     "singleSpawnPointX": 47154.0,
     "singleSpawnPointY": 29296.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": null
   },
   "Cay_L_CL": {
     "name": "Cay_L_CL",
@@ -3984,7 +4055,8 @@
     "singleSpawnPointX": 26599.0,
     "singleSpawnPointY": 469.0,
     "singleSpawnPointZ": 2150.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": "AotD"
   },
   "Cay_L_CL_B": {
     "name": "Cay_L_CL_B",
@@ -4001,8 +4073,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "TinGroup"
+      "09_Desert",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -4052,7 +4124,8 @@
     "singleSpawnPointX": 22206.0,
     "singleSpawnPointY": 22206.0,
     "singleSpawnPointZ": 2050.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": ""
   },
   "Cay_M_WR": {
     "name": "Cay_M_WR",
@@ -4070,7 +4143,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4120,7 +4193,8 @@
     "singleSpawnPointX": 68362.0,
     "singleSpawnPointY": 32841.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 3900.0
+    "maxIslandClaimFlagZ": 3900.0,
+    "landNodeKey": ""
   },
   "Cay_M_CL": {
     "name": "Cay_M_CL",
@@ -4185,7 +4259,8 @@
     "singleSpawnPointX": 66800.0,
     "singleSpawnPointY": 45378.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 3900.0
+    "maxIslandClaimFlagZ": 3900.0,
+    "landNodeKey": null
   },
   "Cay_M_CL_B": {
     "name": "Cay_M_CL_B",
@@ -4203,7 +4278,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -4253,7 +4328,8 @@
     "singleSpawnPointX": 63772.0,
     "singleSpawnPointY": 34685.0,
     "singleSpawnPointZ": 1850.0,
-    "maxIslandClaimFlagZ": 3900.0
+    "maxIslandClaimFlagZ": 3900.0,
+    "landNodeKey": ""
   },
   "Cay_N_ER": {
     "name": "Cay_N_ER",
@@ -4271,7 +4347,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4321,7 +4397,8 @@
     "singleSpawnPointX": 105738.0,
     "singleSpawnPointY": -19008.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": "AotD"
   },
   "Cay_N_ET": {
     "name": "Cay_N_ET",
@@ -4338,8 +4415,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -4391,7 +4469,8 @@
     "singleSpawnPointX": 107555.0,
     "singleSpawnPointY": -24178.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": "AotD"
   },
   "Cay_N_WR": {
     "name": "Cay_N_WR",
@@ -4409,7 +4488,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4458,7 +4538,8 @@
     "singleSpawnPointX": 103615.0,
     "singleSpawnPointY": -21175.0,
     "singleSpawnPointZ": 1450.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": null
   },
   "Cay_N_CL": {
     "name": "Cay_N_CL",
@@ -4475,8 +4556,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "IronGroup"
+      "09_Desert",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -4525,7 +4606,8 @@
     "singleSpawnPointX": 79350.0,
     "singleSpawnPointY": -20055.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": ""
   },
   "Cay_O_ER": {
     "name": "Cay_O_ER",
@@ -4543,7 +4625,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4593,7 +4675,8 @@
     "singleSpawnPointX": 69930.0,
     "singleSpawnPointY": -23608.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 4000.0
+    "maxIslandClaimFlagZ": 4000.0,
+    "landNodeKey": "AotD"
   },
   "Cay_O_WR": {
     "name": "Cay_O_WR",
@@ -4610,8 +4693,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4661,7 +4744,8 @@
     "singleSpawnPointX": 77789.0,
     "singleSpawnPointY": -7630.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4000.0
+    "maxIslandClaimFlagZ": 4000.0,
+    "landNodeKey": "AotD"
   },
   "Cay_O_CL": {
     "name": "Cay_O_CL",
@@ -4725,7 +4809,8 @@
     "singleSpawnPointX": 69945.0,
     "singleSpawnPointY": -23463.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 4000.0
+    "maxIslandClaimFlagZ": 4000.0,
+    "landNodeKey": null
   },
   "Cay_L_WR_B": {
     "name": "Cay_L_WR_B",
@@ -4742,8 +4827,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4793,7 +4878,8 @@
     "singleSpawnPointX": 64586.0,
     "singleSpawnPointY": 25566.0,
     "singleSpawnPointZ": 1750.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": ""
   },
   "Mnt_A_ET": {
     "name": "Mnt_A_ET",
@@ -4810,8 +4896,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -4858,7 +4944,8 @@
     "singleSpawnPointX": 27992.0,
     "singleSpawnPointY": 25147.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Mnt_A_WR": {
     "name": "Mnt_A_WR",
@@ -4876,7 +4963,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -4924,7 +5011,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Mnt_A_WU": {
     "name": "Mnt_A_WU",
@@ -4987,7 +5075,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Mnt_A_CL": {
     "name": "Mnt_A_CL",
@@ -5005,7 +5094,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -5053,7 +5142,8 @@
     "singleSpawnPointX": 26732.0,
     "singleSpawnPointY": 27966.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Mnt_B_ET": {
     "name": "Mnt_B_ET",
@@ -5071,7 +5161,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -5125,7 +5216,8 @@
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_B_WR": {
     "name": "Mnt_B_WR",
@@ -5142,7 +5234,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
+      "01_Tropical",
       "IronGroup"
     ],
     "extraSublevels": [
@@ -5194,7 +5286,8 @@
     "singleSpawnPointX": 41982.0,
     "singleSpawnPointY": -98797.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_B_CL": {
     "name": "Mnt_B_CL",
@@ -5212,7 +5305,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -5258,7 +5351,8 @@
     "singleSpawnPointX": 35872.0,
     "singleSpawnPointY": -41309.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_C_ET": {
     "name": "Mnt_C_ET",
@@ -5275,8 +5369,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -5321,7 +5416,8 @@
     "singleSpawnPointX": 5436.0,
     "singleSpawnPointY": 5816.0,
     "singleSpawnPointZ": 600.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_ET_B": {
     "name": "Mnt_C_ET_B",
@@ -5339,7 +5435,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -5389,7 +5485,8 @@
     "singleSpawnPointX": 5568.0,
     "singleSpawnPointY": 2861.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_ET_C": {
     "name": "Mnt_C_ET_C",
@@ -5407,7 +5504,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "SilverGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -5454,7 +5551,8 @@
     "singleSpawnPointX": 5046.0,
     "singleSpawnPointY": 5197.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_ET_D": {
     "name": "Mnt_C_ET_D",
@@ -5471,8 +5569,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -5519,7 +5618,8 @@
     "singleSpawnPointX": -1565.0,
     "singleSpawnPointY": 9575.0,
     "singleSpawnPointZ": 650.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_WR": {
     "name": "Mnt_C_WR",
@@ -5537,7 +5637,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -5585,7 +5685,8 @@
     "singleSpawnPointX": -2957.0,
     "singleSpawnPointY": 9961.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_WR_B": {
     "name": "Mnt_C_WR_B",
@@ -5603,7 +5704,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -5651,7 +5753,8 @@
     "singleSpawnPointX": -2470.0,
     "singleSpawnPointY": 6934.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_C_WR_C": {
     "name": "Mnt_C_WR_C",
@@ -5669,7 +5772,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -5714,7 +5817,8 @@
     "singleSpawnPointX": -1171.0,
     "singleSpawnPointY": -6110.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_WU": {
     "name": "Mnt_C_WU",
@@ -5777,7 +5881,8 @@
     "singleSpawnPointX": -6090.0,
     "singleSpawnPointY": -12514.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_C_CL": {
     "name": "Mnt_C_CL",
@@ -5795,7 +5900,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -5841,7 +5946,8 @@
     "singleSpawnPointX": 11567.0,
     "singleSpawnPointY": 1872.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_C_CL_B": {
     "name": "Mnt_C_CL_B",
@@ -5904,7 +6010,8 @@
     "singleSpawnPointX": 7318.0,
     "singleSpawnPointY": 4947.0,
     "singleSpawnPointZ": 950.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_D_ER": {
     "name": "Mnt_D_ER",
@@ -5922,7 +6029,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -5985,7 +6092,8 @@
     "singleSpawnPointX": -9768.0,
     "singleSpawnPointY": 2111.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_D_ET": {
     "name": "Mnt_D_ET",
@@ -6054,7 +6162,8 @@
     "singleSpawnPointX": -10307.0,
     "singleSpawnPointY": 1489.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_D_ET_B": {
     "name": "Mnt_D_ET_B",
@@ -6071,7 +6180,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "IronGroup",
+      "02_Temperate_Easy",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -6124,7 +6234,8 @@
     "singleSpawnPointX": -10307.0,
     "singleSpawnPointY": 1489.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_D_WR": {
     "name": "Mnt_D_WR",
@@ -6195,7 +6306,8 @@
     "singleSpawnPointX": -10535.0,
     "singleSpawnPointY": 1500.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_D_WR_B": {
     "name": "Mnt_D_WR_B",
@@ -6212,8 +6324,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -6261,7 +6373,8 @@
     "singleSpawnPointX": -10535.0,
     "singleSpawnPointY": 1500.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_D_WU": {
     "name": "Mnt_D_WU",
@@ -6337,7 +6450,8 @@
     "singleSpawnPointX": -13322.0,
     "singleSpawnPointY": 3902.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_D_CL": {
     "name": "Mnt_D_CL",
@@ -6398,7 +6512,8 @@
     "singleSpawnPointX": -9250.0,
     "singleSpawnPointY": 2167.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_ER": {
     "name": "Mnt_E_ER",
@@ -6416,7 +6531,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -6479,7 +6594,8 @@
     "singleSpawnPointX": -18831.0,
     "singleSpawnPointY": -15789.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_ET": {
     "name": "Mnt_E_ET",
@@ -6552,7 +6668,8 @@
     "singleSpawnPointX": -18336.0,
     "singleSpawnPointY": -16733.0,
     "singleSpawnPointZ": 950.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_ET_B": {
     "name": "Mnt_E_ET_B",
@@ -6569,8 +6686,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -6626,7 +6744,8 @@
     "singleSpawnPointX": -18336.0,
     "singleSpawnPointY": -16733.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_ET_C": {
     "name": "Mnt_E_ET_C",
@@ -6643,7 +6762,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "02_Temperate_Easy",
+      "IronGroup",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -6697,7 +6817,8 @@
     "singleSpawnPointX": -18449.0,
     "singleSpawnPointY": -17645.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_ET_D": {
     "name": "Mnt_E_ET_D",
@@ -6767,7 +6888,8 @@
     "singleSpawnPointX": -21286.0,
     "singleSpawnPointY": -16778.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_WR": {
     "name": "Mnt_E_WR",
@@ -6785,7 +6907,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -6845,7 +6967,8 @@
     "singleSpawnPointX": -12193.0,
     "singleSpawnPointY": -23779.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_WU": {
     "name": "Mnt_E_WU",
@@ -6920,7 +7043,8 @@
     "singleSpawnPointX": -11673.0,
     "singleSpawnPointY": -26479.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_CL": {
     "name": "Mnt_E_CL",
@@ -6979,7 +7103,8 @@
     "singleSpawnPointX": -19125.0,
     "singleSpawnPointY": -3408.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_F_ER": {
     "name": "Mnt_F_ER",
@@ -6997,7 +7122,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -7052,7 +7177,8 @@
     "singleSpawnPointX": 8570.0,
     "singleSpawnPointY": -10052.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_ET": {
     "name": "Mnt_F_ET",
@@ -7070,7 +7196,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -7118,7 +7245,8 @@
     "singleSpawnPointX": 7753.0,
     "singleSpawnPointY": -9530.0,
     "singleSpawnPointZ": 600.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_ET_B": {
     "name": "Mnt_F_ET_B",
@@ -7136,7 +7264,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -7188,7 +7316,8 @@
     "singleSpawnPointX": 26908.0,
     "singleSpawnPointY": 18830.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_ET_C": {
     "name": "Mnt_F_ET_C",
@@ -7206,7 +7335,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -7260,7 +7389,8 @@
     "singleSpawnPointX": 19252.0,
     "singleSpawnPointY": 18712.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_ET_D": {
     "name": "Mnt_F_ET_D",
@@ -7278,7 +7408,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -7327,7 +7457,8 @@
     "singleSpawnPointX": 19002.0,
     "singleSpawnPointY": 17543.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_WR": {
     "name": "Mnt_F_WR",
@@ -7400,7 +7531,8 @@
     "singleSpawnPointX": 15695.0,
     "singleSpawnPointY": 16573.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_WR_B": {
     "name": "Mnt_F_WR_B",
@@ -7470,7 +7602,8 @@
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_WR_C": {
     "name": "Mnt_F_WR_C",
@@ -7488,7 +7621,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -7536,7 +7669,8 @@
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_WR_D": {
     "name": "Mnt_F_WR_D",
@@ -7554,7 +7688,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -7612,7 +7746,8 @@
     "singleSpawnPointX": 16232.0,
     "singleSpawnPointY": 17348.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_F_CL": {
     "name": "Mnt_F_CL",
@@ -7674,7 +7809,8 @@
     "singleSpawnPointX": 22519.0,
     "singleSpawnPointY": 19362.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_CL_B": {
     "name": "Mnt_F_CL_B",
@@ -7741,7 +7877,8 @@
     "singleSpawnPointX": 21544.0,
     "singleSpawnPointY": 18253.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_G_ET": {
     "name": "Mnt_G_ET",
@@ -7759,7 +7896,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -7819,7 +7957,8 @@
     "singleSpawnPointX": -33998.0,
     "singleSpawnPointY": -8476.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_G_WR": {
     "name": "Mnt_G_WR",
@@ -7837,7 +7976,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -7903,7 +8043,8 @@
     "singleSpawnPointX": -104325.0,
     "singleSpawnPointY": -66325.0,
     "singleSpawnPointZ": 1450.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": null
   },
   "Mnt_G_WR_B": {
     "name": "Mnt_G_WR_B",
@@ -7979,7 +8120,8 @@
     "singleSpawnPointX": -104325.0,
     "singleSpawnPointY": -66325.0,
     "singleSpawnPointZ": 1450.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_H_ET": {
     "name": "Mnt_H_ET",
@@ -7997,7 +8139,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -8056,7 +8199,8 @@
     "singleSpawnPointX": -78144.0,
     "singleSpawnPointY": 60586.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_H_WR": {
     "name": "Mnt_H_WR",
@@ -8074,7 +8218,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -8133,7 +8278,8 @@
     "singleSpawnPointX": -81749.0,
     "singleSpawnPointY": 53670.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_H_CL": {
     "name": "Mnt_H_CL",
@@ -8150,7 +8296,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
+      "09_Desert",
       "IronGroup"
     ],
     "extraSublevels": [
@@ -8208,7 +8354,8 @@
     "singleSpawnPointX": -75612.0,
     "singleSpawnPointY": 69819.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_I_ER": {
     "name": "Mnt_I_ER",
@@ -8226,7 +8373,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -8279,7 +8427,8 @@
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_I_CL": {
     "name": "Mnt_I_CL",
@@ -8298,7 +8447,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -8370,7 +8519,8 @@
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_J_ET": {
     "name": "Mnt_J_ET",
@@ -8462,7 +8612,8 @@
     "singleSpawnPointX": 38982.0,
     "singleSpawnPointY": -44620.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_J_ET_B": {
     "name": "Mnt_J_ET_B",
@@ -8480,7 +8631,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -8536,7 +8687,8 @@
     "singleSpawnPointX": 38672.0,
     "singleSpawnPointY": -45535.0,
     "singleSpawnPointZ": 650.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_J_WR": {
     "name": "Mnt_J_WR",
@@ -8611,7 +8763,8 @@
     "singleSpawnPointX": 32980.0,
     "singleSpawnPointY": -47775.0,
     "singleSpawnPointZ": 650.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_J_CL": {
     "name": "Mnt_J_CL",
@@ -8629,7 +8782,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CopperGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -8676,7 +8829,8 @@
     "singleSpawnPointX": 48988.0,
     "singleSpawnPointY": 10302.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_K_ER": {
     "name": "Mnt_K_ER",
@@ -8747,7 +8901,8 @@
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_K_ET": {
     "name": "Mnt_K_ET",
@@ -8820,7 +8975,8 @@
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_K_ET_B": {
     "name": "Mnt_K_ET_B",
@@ -8838,7 +8994,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "02_Temperate_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -8889,7 +9046,8 @@
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_K_WR": {
     "name": "Mnt_K_WR",
@@ -8907,7 +9065,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CopperGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -8964,7 +9123,8 @@
     "singleSpawnPointX": 32756.0,
     "singleSpawnPointY": -39844.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_K_CL": {
     "name": "Mnt_K_CL",
@@ -9028,7 +9188,8 @@
     "singleSpawnPointX": 32371.0,
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_L_WR": {
     "name": "Mnt_L_WR",
@@ -9045,8 +9206,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9094,7 +9255,8 @@
     "singleSpawnPointX": 27197.0,
     "singleSpawnPointY": -60466.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_L_CL": {
     "name": "Mnt_L_CL",
@@ -9156,7 +9318,8 @@
     "singleSpawnPointX": 31231.0,
     "singleSpawnPointY": -38689.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": null
   },
   "Mnt_M_ER": {
     "name": "Mnt_M_ER",
@@ -9174,7 +9337,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "SilverGroup"
+      "SilverGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9224,7 +9388,8 @@
     "singleSpawnPointX": 43851.0,
     "singleSpawnPointY": -57701.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 5600.0
+    "maxIslandClaimFlagZ": 5600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_M_ET": {
     "name": "Mnt_M_ET",
@@ -9242,7 +9407,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "SilverGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -9290,7 +9455,8 @@
     "singleSpawnPointX": 43516.0,
     "singleSpawnPointY": -51527.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 5600.0
+    "maxIslandClaimFlagZ": 5600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_M_WR": {
     "name": "Mnt_M_WR",
@@ -9308,7 +9474,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9355,7 +9521,8 @@
     "singleSpawnPointX": 43516.0,
     "singleSpawnPointY": -51527.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 5600.0
+    "maxIslandClaimFlagZ": 5600.0,
+    "landNodeKey": ""
   },
   "Mnt_M_CL": {
     "name": "Mnt_M_CL",
@@ -9372,7 +9539,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
+      "09_Desert",
       "IronGroup"
     ],
     "extraSublevels": [
@@ -9419,7 +9586,8 @@
     "singleSpawnPointX": 33610.0,
     "singleSpawnPointY": -58177.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 5600.0
+    "maxIslandClaimFlagZ": 5600.0,
+    "landNodeKey": ""
   },
   "Mnt_N_ER": {
     "name": "Mnt_N_ER",
@@ -9437,7 +9605,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CopperGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9486,7 +9655,8 @@
     "singleSpawnPointX": 29822.0,
     "singleSpawnPointY": -22411.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": null
   },
   "Mnt_N_ER_B": {
     "name": "Mnt_N_ER_B",
@@ -9553,7 +9723,8 @@
     "singleSpawnPointX": 30285.0,
     "singleSpawnPointY": -23272.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_N_ET": {
     "name": "Mnt_N_ET",
@@ -9623,7 +9794,8 @@
     "singleSpawnPointX": 742567.0,
     "singleSpawnPointY": -24430.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": null
   },
   "Mnt_N_WR": {
     "name": "Mnt_N_WR",
@@ -9640,8 +9812,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9690,7 +9862,8 @@
     "singleSpawnPointX": 74849.0,
     "singleSpawnPointY": -21563.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": ""
   },
   "Mnt_O_ER": {
     "name": "Mnt_O_ER",
@@ -9707,7 +9880,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
+      "02_Temperate_Easy",
+      "IronGroup",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -9756,7 +9930,8 @@
     "singleSpawnPointX": -71470.0,
     "singleSpawnPointY": 25385.0,
     "singleSpawnPointZ": 1450.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_O_ER_B": {
     "name": "Mnt_O_ER_B",
@@ -9821,7 +9996,8 @@
     "singleSpawnPointX": -72383.0,
     "singleSpawnPointY": 25397.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_O_ET": {
     "name": "Mnt_O_ET",
@@ -9839,7 +10015,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -9890,7 +10066,8 @@
     "singleSpawnPointX": -72548.0,
     "singleSpawnPointY": 24244.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_O_WR": {
     "name": "Mnt_O_WR",
@@ -9908,7 +10085,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9956,7 +10133,8 @@
     "singleSpawnPointX": -72896.0,
     "singleSpawnPointY": 18802.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_Q_ER": {
     "name": "Mnt_Q_ER",
@@ -9973,7 +10151,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10024,7 +10202,8 @@
     "singleSpawnPointX": -135050.0,
     "singleSpawnPointY": -57533.0,
     "singleSpawnPointZ": 1212.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_R_WU": {
     "name": "Mnt_R_WU",
@@ -10041,8 +10220,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "06_Tundra_Easy",
-      "IronGroup"
+      "05_Tundra",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10092,7 +10271,8 @@
     "singleSpawnPointX": -86614.0,
     "singleSpawnPointY": -31482.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": ""
   },
   "Mnt_R_WU_B": {
     "name": "Mnt_R_WU_B",
@@ -10155,7 +10335,8 @@
     "singleSpawnPointX": -86614.0,
     "singleSpawnPointY": -31482.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": null
   },
   "Mnt_R_WU_C": {
     "name": "Mnt_R_WU_C",
@@ -10220,7 +10401,8 @@
     "singleSpawnPointX": -88345.0,
     "singleSpawnPointY": -10457.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": null
   },
   "Mnt_R_WU_D": {
     "name": "Mnt_R_WU_D",
@@ -10237,8 +10419,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "06_Tundra_Easy",
-      "IronGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10286,7 +10468,8 @@
     "singleSpawnPointX": -88345.0,
     "singleSpawnPointY": -10457.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": ""
   },
   "Mnt_F_WU": {
     "name": "Mnt_F_WU",
@@ -10304,7 +10487,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10363,7 +10546,8 @@
     "singleSpawnPointX": 15474.0,
     "singleSpawnPointY": 16754.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_X_WR_PVE": {
     "name": "Mnt_X_WR_PVE",
@@ -10427,7 +10611,8 @@
     "singleSpawnPointX": 90060.0,
     "singleSpawnPointY": 23649.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 9800.0
+    "maxIslandClaimFlagZ": 9800.0,
+    "landNodeKey": ""
   },
   "Mnt_O_CL": {
     "name": "Mnt_O_CL",
@@ -10491,7 +10676,8 @@
     "singleSpawnPointX": -66502.0,
     "singleSpawnPointY": 28764.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_W_WU": {
     "name": "Mnt_W_WU",
@@ -10508,8 +10694,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "06_Tundra_Easy",
-      "IronGroup"
+      "08_Polar",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10557,7 +10743,8 @@
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": ""
   },
   "Mnt_W_WU_B": {
     "name": "Mnt_W_WU_B",
@@ -10575,7 +10762,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10623,7 +10810,8 @@
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_W_WR": {
     "name": "Mnt_W_WR",
@@ -10641,7 +10829,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CopperGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10700,7 +10889,8 @@
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_J_WT_E": {
     "name": "Mnt_J_WT_E",
@@ -10774,7 +10964,8 @@
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_X_WU": {
     "name": "Mnt_X_WU",
@@ -10792,7 +10983,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10848,7 +11039,8 @@
     "singleSpawnPointX": 90060.0,
     "singleSpawnPointY": 23649.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 9800.0
+    "maxIslandClaimFlagZ": 9800.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_W_WR_B": {
     "name": "Mnt_W_WR_B",
@@ -10865,8 +11057,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10919,7 +11111,8 @@
     "singleSpawnPointX": 95493.0,
     "singleSpawnPointY": 35755.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "AotD"
   },
   "Cay_H_WR_E": {
     "name": "Cay_H_WR_E",
@@ -10936,8 +11129,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10984,7 +11177,8 @@
     "singleSpawnPointX": -1809.0,
     "singleSpawnPointY": -34331.0,
     "singleSpawnPointZ": 1850.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": ""
   },
   "Mnt_G_ET_PVE": {
     "name": "Mnt_G_ET_PVE",
@@ -11050,7 +11244,8 @@
     "singleSpawnPointX": -33998.0,
     "singleSpawnPointY": -8476.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": null
   },
   "Mnt_A_WU_E": {
     "name": "Mnt_A_WU_E",
@@ -11119,7 +11314,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Mnt_F_ET_E": {
     "name": "Mnt_F_ET_E",
@@ -11189,7 +11385,8 @@
     "singleSpawnPointX": 16888.0,
     "singleSpawnPointY": 17710.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_L_CH_E": {
     "name": "Mnt_L_CH_E",
@@ -11251,7 +11448,8 @@
     "singleSpawnPointX": 33288.0,
     "singleSpawnPointY": -39187.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": null
   },
   "Mnt_U_ER_PVE": {
     "name": "Mnt_U_ER_PVE",
@@ -11318,7 +11516,8 @@
     "singleSpawnPointX": 6841.0,
     "singleSpawnPointY": -85496.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 6200.0
+    "maxIslandClaimFlagZ": 6200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_Y_WU_PVE": {
     "name": "Mnt_Y_WU_PVE",
@@ -11382,7 +11581,8 @@
     "singleSpawnPointX": 97872.0,
     "singleSpawnPointY": 22845.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_S_WT_PVE": {
     "name": "Mnt_S_WT_PVE",
@@ -11455,7 +11655,8 @@
     "singleSpawnPointX": 85838.0,
     "singleSpawnPointY": -74676.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 7200.0
+    "maxIslandClaimFlagZ": 7200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_A_CH": {
     "name": "Mnt_A_CH",
@@ -11516,7 +11717,8 @@
     "singleSpawnPointX": 27225.0,
     "singleSpawnPointY": 27937.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Mnt_R_CL_PVE": {
     "name": "Mnt_R_CL_PVE",
@@ -11574,7 +11776,8 @@
     "singleSpawnPointX": -86929.0,
     "singleSpawnPointY": -35443.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": null
   },
   "Mnt_R_CH_PVE": {
     "name": "Mnt_R_CH_PVE",
@@ -11631,7 +11834,8 @@
     "singleSpawnPointX": -85488.0,
     "singleSpawnPointY": -35397.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": null
   },
   "Mnt_J_CH": {
     "name": "Mnt_J_CH",
@@ -11649,7 +11853,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -11704,7 +11908,8 @@
     "singleSpawnPointX": 49234.0,
     "singleSpawnPointY": 10529.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_K_CH": {
     "name": "Mnt_K_CH",
@@ -11722,7 +11927,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -11769,7 +11974,8 @@
     "singleSpawnPointX": 31451.0,
     "singleSpawnPointY": -38980.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": ""
   },
   "Cay_C_EE_PVE": {
     "name": "Cay_C_EE_PVE",
@@ -11838,7 +12044,8 @@
     "singleSpawnPointX": 70544.0,
     "singleSpawnPointY": 64169.0,
     "singleSpawnPointZ": 1900.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Cay_J_EE_E": {
     "name": "Cay_J_EE_E",
@@ -11856,7 +12063,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -11906,7 +12113,8 @@
     "singleSpawnPointX": -25466.0,
     "singleSpawnPointY": 58513.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Mnt_Y_CP": {
     "name": "Mnt_Y_CP",
@@ -11986,7 +12194,8 @@
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Cay_A_EE": {
     "name": "Cay_A_EE",
@@ -12004,7 +12213,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "TinGroup",
+      "CobaltGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -12055,7 +12264,8 @@
     "singleSpawnPointX": 31625.0,
     "singleSpawnPointY": 16092.0,
     "singleSpawnPointZ": 1605.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Mnt_M_CH": {
     "name": "Mnt_M_CH",
@@ -12125,7 +12335,8 @@
     "singleSpawnPointX": 33610.0,
     "singleSpawnPointY": -58177.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 5600.0
+    "maxIslandClaimFlagZ": 5600.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_N_CH": {
     "name": "Mnt_N_CH",
@@ -12143,7 +12354,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -12191,7 +12402,8 @@
     "singleSpawnPointX": 34225.0,
     "singleSpawnPointY": -24772.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": ""
   },
   "Mnt_C_EE": {
     "name": "Mnt_C_EE",
@@ -12254,7 +12466,8 @@
     "singleSpawnPointX": 18514.0,
     "singleSpawnPointY": -28168.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_CH": {
     "name": "Mnt_E_CH",
@@ -12318,7 +12531,8 @@
     "singleSpawnPointX": -12017.0,
     "singleSpawnPointY": 4456.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_F_CH": {
     "name": "Mnt_F_CH",
@@ -12385,7 +12599,8 @@
     "singleSpawnPointX": 9150.0,
     "singleSpawnPointY": -11599.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_L_CH_B": {
     "name": "Mnt_L_CH_B",
@@ -12403,7 +12618,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -12456,7 +12671,8 @@
     "singleSpawnPointX": 33371.0,
     "singleSpawnPointY": -39852.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_I_CH": {
     "name": "Mnt_I_CH",
@@ -12474,7 +12690,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -12522,7 +12738,8 @@
     "singleSpawnPointX": 73729.0,
     "singleSpawnPointY": 2733.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "AotD"
   },
   "Cay_E_EE": {
     "name": "Cay_E_EE",
@@ -12596,7 +12813,8 @@
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": null
   },
   "Cay_F_EE": {
     "name": "Cay_F_EE",
@@ -12614,7 +12832,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -12667,7 +12885,8 @@
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_G_EE": {
     "name": "Cay_G_EE",
@@ -12733,7 +12952,8 @@
     "singleSpawnPointX": -38866.0,
     "singleSpawnPointY": -23095.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4100.0
+    "maxIslandClaimFlagZ": 4100.0,
+    "landNodeKey": null
   },
   "Mnt_Y_CP_B": {
     "name": "Mnt_Y_CP_B",
@@ -12794,7 +13014,8 @@
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_Y_CP_C": {
     "name": "Mnt_Y_CP_C",
@@ -12869,7 +13090,8 @@
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_Y_CP_D": {
     "name": "Mnt_Y_CP_D",
@@ -12940,7 +13162,8 @@
     "singleSpawnPointX": 89444.0,
     "singleSpawnPointY": 26623.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_J_CP": {
     "name": "Mnt_J_CP",
@@ -12958,7 +13181,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -13010,7 +13233,8 @@
     "singleSpawnPointX": 51592.0,
     "singleSpawnPointY": -32093.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_J_CP_B": {
     "name": "Mnt_J_CP_B",
@@ -13028,7 +13252,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -13075,7 +13299,8 @@
     "singleSpawnPointX": 51592.0,
     "singleSpawnPointY": -32093.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_J_CP_C": {
     "name": "Mnt_J_CP_C",
@@ -13148,7 +13373,8 @@
     "singleSpawnPointX": 46547.0,
     "singleSpawnPointY": -42144.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_J_CP_D": {
     "name": "Mnt_J_CP_D",
@@ -13211,7 +13437,8 @@
     "singleSpawnPointX": 46547.0,
     "singleSpawnPointY": -42144.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Cay_H_EE": {
     "name": "Cay_H_EE",
@@ -13277,7 +13504,8 @@
     "singleSpawnPointX": -7988.0,
     "singleSpawnPointY": -38719.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": null
   },
   "Mnt_C_CH": {
     "name": "Mnt_C_CH",
@@ -13295,7 +13523,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -13339,7 +13567,8 @@
     "singleSpawnPointX": 23908.0,
     "singleSpawnPointY": -24352.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_D_CH": {
     "name": "Mnt_D_CH",
@@ -13357,7 +13586,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -13413,7 +13642,8 @@
     "singleSpawnPointX": -9250.0,
     "singleSpawnPointY": 2167.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_E_CP": {
     "name": "Mnt_E_CP",
@@ -13478,7 +13708,8 @@
     "singleSpawnPointX": -20618.0,
     "singleSpawnPointY": -13464.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_CP_B": {
     "name": "Mnt_E_CP_B",
@@ -13556,7 +13787,8 @@
     "singleSpawnPointX": -20284.0,
     "singleSpawnPointY": -12623.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_CP_C": {
     "name": "Mnt_E_CP_C",
@@ -13624,7 +13856,8 @@
     "singleSpawnPointX": -12429.0,
     "singleSpawnPointY": -24620.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_E_CP_D": {
     "name": "Mnt_E_CP_D",
@@ -13692,7 +13925,8 @@
     "singleSpawnPointX": -12837.0,
     "singleSpawnPointY": -25540.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_H_CP": {
     "name": "Mnt_H_CP",
@@ -13771,7 +14005,8 @@
     "singleSpawnPointX": -76900.0,
     "singleSpawnPointY": 57778.0,
     "singleSpawnPointZ": 1900.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_H_CP_B": {
     "name": "Mnt_H_CP_B",
@@ -13868,7 +14103,8 @@
     "singleSpawnPointX": -76298.0,
     "singleSpawnPointY": 57864.0,
     "singleSpawnPointZ": 1850.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_H_CP_C": {
     "name": "Mnt_H_CP_C",
@@ -13952,7 +14188,8 @@
     "singleSpawnPointX": -76298.0,
     "singleSpawnPointY": 57864.0,
     "singleSpawnPointZ": 1850.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_H_CP_D": {
     "name": "Mnt_H_CP_D",
@@ -14026,7 +14263,8 @@
     "singleSpawnPointX": -78997.0,
     "singleSpawnPointY": 56574.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_A_CH_B": {
     "name": "Mnt_A_CH_B",
@@ -14044,7 +14282,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "IronGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -14088,7 +14326,8 @@
     "singleSpawnPointX": 26732.0,
     "singleSpawnPointY": 27966.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": ""
   },
   "Mnt_C_CH_B": {
     "name": "Mnt_C_CH_B",
@@ -14148,7 +14387,8 @@
     "singleSpawnPointX": 10285.0,
     "singleSpawnPointY": 3880.0,
     "singleSpawnPointZ": 950.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Cay_J_EE": {
     "name": "Cay_J_EE",
@@ -14166,7 +14406,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup",
+      "TinGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -14217,7 +14457,8 @@
     "singleSpawnPointX": -25466.0,
     "singleSpawnPointY": 28513.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Mnt_G_CH": {
     "name": "Mnt_G_CH",
@@ -14234,8 +14475,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "IronGroup"
+      "09_Desert",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -14305,7 +14546,8 @@
     "singleSpawnPointX": 6015.0,
     "singleSpawnPointY": 95323.0,
     "singleSpawnPointZ": 2700.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": "AotD"
   },
   "Cay_K_EE": {
     "name": "Cay_K_EE",
@@ -14323,7 +14565,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -14373,7 +14615,8 @@
     "singleSpawnPointX": -50125.0,
     "singleSpawnPointY": 34564.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": "AotD"
   },
   "Cay_L_EE": {
     "name": "Cay_L_EE",
@@ -14391,7 +14634,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -14444,7 +14687,8 @@
     "singleSpawnPointX": 18599.0,
     "singleSpawnPointY": -23723.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": ""
   },
   "Mnt_O_CH": {
     "name": "Mnt_O_CH",
@@ -14508,7 +14752,8 @@
     "singleSpawnPointX": -62217.0,
     "singleSpawnPointY": 30385.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": null
   },
   "Mnt_J_CH_B": {
     "name": "Mnt_J_CH_B",
@@ -14526,7 +14771,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -14571,7 +14816,8 @@
     "singleSpawnPointX": 49173.0,
     "singleSpawnPointY": 10266.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": ""
   },
   "Mnt_T_CP": {
     "name": "Mnt_T_CP",
@@ -14589,7 +14835,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -14654,7 +14900,8 @@
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 5800.0
+    "maxIslandClaimFlagZ": 5800.0,
+    "landNodeKey": ""
   },
   "Mnt_T_CP_B": {
     "name": "Mnt_T_CP_B",
@@ -14726,7 +14973,8 @@
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 5800.0
+    "maxIslandClaimFlagZ": 5800.0,
+    "landNodeKey": null
   },
   "Mnt_T_CP_C": {
     "name": "Mnt_T_CP_C",
@@ -14744,7 +14992,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -14806,7 +15054,8 @@
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 5800.0
+    "maxIslandClaimFlagZ": 5800.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_T_CP_D": {
     "name": "Mnt_T_CP_D",
@@ -14870,7 +15119,8 @@
     "singleSpawnPointX": -5135.0,
     "singleSpawnPointY": -81047.0,
     "singleSpawnPointZ": 1650.0,
-    "maxIslandClaimFlagZ": 5800.0
+    "maxIslandClaimFlagZ": 5800.0,
+    "landNodeKey": null
   },
   "Mnt_A_WU_B": {
     "name": "Mnt_A_WU_B",
@@ -14934,7 +15184,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Mnt_A_WU_C": {
     "name": "Mnt_A_WU_C",
@@ -14998,7 +15249,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Mnt_J_WU": {
     "name": "Mnt_J_WU",
@@ -15016,7 +15268,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -15070,7 +15322,8 @@
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_J_WU_B": {
     "name": "Mnt_J_WU_B",
@@ -15088,7 +15341,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -15141,7 +15394,8 @@
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": ""
   },
   "Mnt_J_WU_C": {
     "name": "Mnt_J_WU_C",
@@ -15157,7 +15411,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CopperGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
       "MasterIBL_WesternTundra_Canopy_Evergreen",
@@ -15212,7 +15469,8 @@
     "singleSpawnPointX": 32783.0,
     "singleSpawnPointY": -47125.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Cay_E_EE_B": {
     "name": "Cay_E_EE_B",
@@ -15230,7 +15488,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15284,7 +15542,8 @@
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_F_EE_B": {
     "name": "Cay_F_EE_B",
@@ -15302,7 +15561,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15357,7 +15616,8 @@
     "singleSpawnPointX": -23045.0,
     "singleSpawnPointY": -49428.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_K_EE_B": {
     "name": "Cay_K_EE_B",
@@ -15375,7 +15635,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15426,7 +15686,8 @@
     "singleSpawnPointX": 7443.0,
     "singleSpawnPointY": 71713.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 3600.0
+    "maxIslandClaimFlagZ": 3600.0,
+    "landNodeKey": ""
   },
   "Cay_I_EE": {
     "name": "Cay_I_EE",
@@ -15444,7 +15705,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15493,7 +15754,8 @@
     "singleSpawnPointX": -11251.0,
     "singleSpawnPointY": -56201.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Cay_O_EE": {
     "name": "Cay_O_EE",
@@ -15511,7 +15773,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15561,7 +15823,8 @@
     "singleSpawnPointX": 69893.0,
     "singleSpawnPointY": -21129.0,
     "singleSpawnPointZ": 1900.0,
-    "maxIslandClaimFlagZ": 4000.0
+    "maxIslandClaimFlagZ": 4000.0,
+    "landNodeKey": ""
   },
   "Cay_N_EE": {
     "name": "Cay_N_EE",
@@ -15579,7 +15842,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "TinGroup",
+      "CobaltGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -15630,7 +15893,8 @@
     "singleSpawnPointX": 103043.0,
     "singleSpawnPointY": -23491.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 4500.0
+    "maxIslandClaimFlagZ": 4500.0,
+    "landNodeKey": ""
   },
   "Cay_A_EE_B": {
     "name": "Cay_A_EE_B",
@@ -15648,7 +15912,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -15703,7 +15967,8 @@
     "singleSpawnPointX": 17870.0,
     "singleSpawnPointY": 9573.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": ""
   },
   "Cay_I_EE_B": {
     "name": "Cay_I_EE_B",
@@ -15772,7 +16037,8 @@
     "singleSpawnPointX": -8518.0,
     "singleSpawnPointY": -55418.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 4200.0
+    "maxIslandClaimFlagZ": 4200.0,
+    "landNodeKey": null
   },
   "Mnt_Z_CH": {
     "name": "Mnt_Z_CH",
@@ -15789,8 +16055,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "10_Desert_Easy",
-      "IronGroup"
+      "09_Desert",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_HighDesert",
@@ -15870,7 +16136,8 @@
     "singleSpawnPointX": 112030.0,
     "singleSpawnPointY": 79643.0,
     "singleSpawnPointZ": 550.0,
-    "maxIslandClaimFlagZ": 12300.0
+    "maxIslandClaimFlagZ": 12300.0,
+    "landNodeKey": "AotD"
   },
   "Islet_A_WT": {
     "name": "Islet_A_WT",
@@ -15918,7 +16185,8 @@
     "singleSpawnPointX": -17445.0,
     "singleSpawnPointY": 11339.0,
     "singleSpawnPointZ": 550.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": null
   },
   "Islet_A_WT_B": {
     "name": "Islet_A_WT_B",
@@ -15966,7 +16234,8 @@
     "singleSpawnPointX": -16172.0,
     "singleSpawnPointY": 9072.0,
     "singleSpawnPointZ": 750.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": null
   },
   "Islet_A_WT_C": {
     "name": "Islet_A_WT_C",
@@ -15983,8 +16252,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "CobaltGroup"
+      "02_Temperate_Easy",
+      "IronGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -16016,7 +16286,8 @@
     "singleSpawnPointX": -15682.0,
     "singleSpawnPointY": 8920.0,
     "singleSpawnPointZ": 600.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": ""
   },
   "Islet_A_ER": {
     "name": "Islet_A_ER",
@@ -16035,7 +16306,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -16067,7 +16339,8 @@
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
     "singleSpawnPointZ": 780.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": null
   },
   "Islet_A_ER_B": {
     "name": "Islet_A_ER_B",
@@ -16117,7 +16390,8 @@
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
     "singleSpawnPointZ": 780.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": null
   },
   "Islet_A_ER_C": {
     "name": "Islet_A_ER_C",
@@ -16135,7 +16409,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "CopperGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -16168,7 +16443,8 @@
     "singleSpawnPointX": -19201.0,
     "singleSpawnPointY": 12038.0,
     "singleSpawnPointZ": 780.0,
-    "maxIslandClaimFlagZ": 3100.0
+    "maxIslandClaimFlagZ": 3100.0,
+    "landNodeKey": ""
   },
   "Mnt_T_WU": {
     "name": "Mnt_T_WU",
@@ -16258,7 +16534,8 @@
     "singleSpawnPointX": -8348.0,
     "singleSpawnPointY": -87212.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 5800.0
+    "maxIslandClaimFlagZ": 5800.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_I_CP": {
     "name": "Mnt_I_CP",
@@ -16276,7 +16553,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -16333,7 +16610,8 @@
     "singleSpawnPointX": 74486.0,
     "singleSpawnPointY": 1636.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": "Blank"
   },
   "Ice_A_PO": {
     "name": "Ice_A_PO",
@@ -16369,7 +16647,8 @@
     "singleSpawnPointX": -26150.0,
     "singleSpawnPointY": -25789.0,
     "singleSpawnPointZ": 6600.0,
-    "maxIslandClaimFlagZ": 25000.0
+    "maxIslandClaimFlagZ": 25000.0,
+    "landNodeKey": null
   },
   "Ice_B_PO": {
     "name": "Ice_B_PO",
@@ -16405,7 +16684,8 @@
     "singleSpawnPointX": -10304.0,
     "singleSpawnPointY": 7879.0,
     "singleSpawnPointZ": 3850.0,
-    "maxIslandClaimFlagZ": 16000.0
+    "maxIslandClaimFlagZ": 16000.0,
+    "landNodeKey": null
   },
   "Ice_C_PO": {
     "name": "Ice_C_PO",
@@ -16438,7 +16718,8 @@
     "singleSpawnPointX": -9444.0,
     "singleSpawnPointY": -14012.0,
     "singleSpawnPointZ": 2880.0,
-    "maxIslandClaimFlagZ": 10000.0
+    "maxIslandClaimFlagZ": 10000.0,
+    "landNodeKey": null
   },
   "Ice_D_PO": {
     "name": "Ice_D_PO",
@@ -16452,7 +16733,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "TinGroup",
+      "CopperGroup"
     ],
     "extraSublevels": [],
     "treasureMapSpawnPoints": [
@@ -16474,7 +16756,8 @@
     "singleSpawnPointX": 8696.0,
     "singleSpawnPointY": -2323.0,
     "singleSpawnPointZ": 2880.0,
-    "maxIslandClaimFlagZ": 17500.0
+    "maxIslandClaimFlagZ": 17500.0,
+    "landNodeKey": ""
   },
   "Ice_E_PO": {
     "name": "Ice_E_PO",
@@ -16510,7 +16793,8 @@
     "singleSpawnPointX": 2729.0,
     "singleSpawnPointY": 3263.0,
     "singleSpawnPointZ": 7950.0,
-    "maxIslandClaimFlagZ": 15500.0
+    "maxIslandClaimFlagZ": 15500.0,
+    "landNodeKey": null
   },
   "Trench_B": {
     "name": "Trench_B",
@@ -16542,7 +16826,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": null
   },
   "Mnt_AA_EU": {
     "name": "Mnt_AA_EU",
@@ -16615,7 +16900,8 @@
     "singleSpawnPointX": -40731.0,
     "singleSpawnPointY": 1430.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 6400.0
+    "maxIslandClaimFlagZ": 6400.0,
+    "landNodeKey": null
   },
   "Mnt_AB_EU": {
     "name": "Mnt_AB_EU",
@@ -16677,7 +16963,8 @@
     "singleSpawnPointX": -82744.0,
     "singleSpawnPointY": -70408.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": null
   },
   "Mnt_AH_EU": {
     "name": "Mnt_AH_EU",
@@ -16694,8 +16981,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CobaltGroup"
+      "08_Polar",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -16745,7 +17032,8 @@
     "singleSpawnPointX": 45886.0,
     "singleSpawnPointY": -1637.0,
     "singleSpawnPointZ": 900.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": ""
   },
   "Mnt_AI_EU": {
     "name": "Mnt_AI_EU",
@@ -16763,7 +17051,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -16812,7 +17100,8 @@
     "singleSpawnPointX": 3962.0,
     "singleSpawnPointY": -68404.0,
     "singleSpawnPointZ": 1300.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": ""
   },
   "Mnt_AJ_EU": {
     "name": "Mnt_AJ_EU",
@@ -16880,7 +17169,8 @@
     "singleSpawnPointX": 57663.0,
     "singleSpawnPointY": -29549.0,
     "singleSpawnPointZ": 1750.0,
-    "maxIslandClaimFlagZ": 5400.0
+    "maxIslandClaimFlagZ": 5400.0,
+    "landNodeKey": null
   },
   "Mnt_AL_EU": {
     "name": "Mnt_AL_EU",
@@ -16898,7 +17188,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -16953,7 +17243,8 @@
     "singleSpawnPointX": 25313.0,
     "singleSpawnPointY": -92004.0,
     "singleSpawnPointZ": 1500.0,
-    "maxIslandClaimFlagZ": 6700.0
+    "maxIslandClaimFlagZ": 6700.0,
+    "landNodeKey": ""
   },
   "Mnt_AQ_EU": {
     "name": "Mnt_AQ_EU",
@@ -17019,7 +17310,8 @@
     "singleSpawnPointX": 31676.0,
     "singleSpawnPointY": -96836.0,
     "singleSpawnPointZ": 800.0,
-    "maxIslandClaimFlagZ": 5900.0
+    "maxIslandClaimFlagZ": 5900.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AW_EU": {
     "name": "Mnt_AW_EU",
@@ -17037,7 +17329,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17088,7 +17380,8 @@
     "singleSpawnPointX": 4350.0,
     "singleSpawnPointY": -56265.0,
     "singleSpawnPointZ": 1550.0,
-    "maxIslandClaimFlagZ": 5500.0
+    "maxIslandClaimFlagZ": 5500.0,
+    "landNodeKey": ""
   },
   "Mnt_AK_EU": {
     "name": "Mnt_AK_EU",
@@ -17157,7 +17450,8 @@
     "singleSpawnPointX": 57663.0,
     "singleSpawnPointY": -29549.0,
     "singleSpawnPointZ": 1700.0,
-    "maxIslandClaimFlagZ": 6200.0
+    "maxIslandClaimFlagZ": 6200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AE_EU": {
     "name": "Mnt_AE_EU",
@@ -17219,7 +17513,8 @@
     "singleSpawnPointX": 61749.0,
     "singleSpawnPointY": -2895.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 8400.0
+    "maxIslandClaimFlagZ": 8400.0,
+    "landNodeKey": null
   },
   "Mnt_AC_EU": {
     "name": "Mnt_AC_EU",
@@ -17282,7 +17577,8 @@
     "singleSpawnPointX": -97525.0,
     "singleSpawnPointY": -84050.0,
     "singleSpawnPointZ": 1100.0,
-    "maxIslandClaimFlagZ": 9700.0
+    "maxIslandClaimFlagZ": 9700.0,
+    "landNodeKey": null
   },
   "Mnt_AD_EU": {
     "name": "Mnt_AD_EU",
@@ -17346,7 +17642,8 @@
     "singleSpawnPointX": -47970.0,
     "singleSpawnPointY": -50560.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Mnt_AG_EU": {
     "name": "Mnt_AG_EU",
@@ -17363,7 +17660,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "06_Tundra_Easy",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -17414,7 +17711,8 @@
     "singleSpawnPointX": 57660.0,
     "singleSpawnPointY": -47.0,
     "singleSpawnPointZ": 1400.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": ""
   },
   "Mnt_AA_EU_B": {
     "name": "Mnt_AA_EU_B",
@@ -17478,7 +17776,8 @@
     "singleSpawnPointX": -40731.0,
     "singleSpawnPointY": 1430.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 6400.0
+    "maxIslandClaimFlagZ": 6400.0,
+    "landNodeKey": null
   },
   "Mnt_F_EU": {
     "name": "Mnt_F_EU",
@@ -17545,7 +17844,8 @@
     "singleSpawnPointX": 15710.0,
     "singleSpawnPointY": 15966.0,
     "singleSpawnPointZ": 1150.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_W_EU_B": {
     "name": "Mnt_W_EU_B",
@@ -17562,8 +17862,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "06_Tundra_Easy",
-      "IronGroup"
+      "11_Tundra_Hard",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17621,7 +17921,8 @@
     "singleSpawnPointX": 95281.0,
     "singleSpawnPointY": 34474.0,
     "singleSpawnPointZ": 700.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_S_EU": {
     "name": "Mnt_S_EU",
@@ -17638,8 +17939,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
-      "CobaltGroup"
+      "05_Tundra",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17702,7 +18003,8 @@
     "singleSpawnPointX": 73045.0,
     "singleSpawnPointY": -51771.0,
     "singleSpawnPointZ": 600.0,
-    "maxIslandClaimFlagZ": 7200.0
+    "maxIslandClaimFlagZ": 7200.0,
+    "landNodeKey": ""
   },
   "Mnt_Y_EU_C": {
     "name": "Mnt_Y_EU_C",
@@ -17771,7 +18073,8 @@
     "singleSpawnPointX": 94834.0,
     "singleSpawnPointY": 23590.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_EU_E": {
     "name": "Mnt_F_EU_E",
@@ -17846,7 +18149,8 @@
     "singleSpawnPointX": 15695.0,
     "singleSpawnPointY": 16573.0,
     "singleSpawnPointZ": 1050.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_Y_EU_PVE": {
     "name": "Mnt_Y_EU_PVE",
@@ -17911,7 +18215,8 @@
     "singleSpawnPointX": 97872.0,
     "singleSpawnPointY": 22845.0,
     "singleSpawnPointZ": 1200.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_H_CP_Cave": {
     "name": "Mnt_H_CP_Cave",
@@ -17935,7 +18240,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -17999,7 +18304,8 @@
     "singleSpawnPointX": -77279.0,
     "singleSpawnPointY": 57910.0,
     "singleSpawnPointZ": 1950.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_W_EQ": {
     "name": "Mnt_W_EQ",
@@ -18017,7 +18323,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -18069,7 +18375,8 @@
     "singleSpawnPointX": -72659.0,
     "singleSpawnPointY": -2174.0,
     "singleSpawnPointZ": 1250.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AW_BO": {
     "name": "Mnt_AW_BO",
@@ -18087,7 +18394,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -18135,7 +18442,8 @@
     "singleSpawnPointX": 66524.0,
     "singleSpawnPointY": -35682.0,
     "singleSpawnPointZ": 950.0,
-    "maxIslandClaimFlagZ": 5500.0
+    "maxIslandClaimFlagZ": 5500.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AV_BO": {
     "name": "Mnt_AV_BO",
@@ -18153,7 +18461,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -18203,7 +18511,8 @@
     "singleSpawnPointX": -25678.0,
     "singleSpawnPointY": -12105.0,
     "singleSpawnPointZ": 1350.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AB_BO": {
     "name": "Mnt_AB_BO",
@@ -18220,8 +18529,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -18268,7 +18577,8 @@
     "singleSpawnPointX": 92063.0,
     "singleSpawnPointY": 79104.0,
     "singleSpawnPointZ": 850.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AE_BO": {
     "name": "Mnt_AE_BO",
@@ -18286,7 +18596,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup",
+      "TinGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -18337,7 +18647,8 @@
     "singleSpawnPointX": 20298.0,
     "singleSpawnPointY": 58147.0,
     "singleSpawnPointZ": 950.0,
-    "maxIslandClaimFlagZ": 8400.0
+    "maxIslandClaimFlagZ": 8400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AO_CU": {
     "name": "Mnt_AO_CU",
@@ -18354,8 +18665,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CopperGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -18404,7 +18715,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 7600.0
+    "maxIslandClaimFlagZ": 7600.0,
+    "landNodeKey": ""
   },
   "Mnt_AA_CU": {
     "name": "Mnt_AA_CU",
@@ -18466,7 +18778,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6400.0
+    "maxIslandClaimFlagZ": 6400.0,
+    "landNodeKey": null
   },
   "Mnt_AB_CU": {
     "name": "Mnt_AB_CU",
@@ -18483,8 +18796,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
-      "SilverGroup"
+      "05_Tundra",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -18539,7 +18852,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": ""
   },
   "Mnt_AM_CU": {
     "name": "Mnt_AM_CU",
@@ -18602,7 +18916,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Mnt_AG_CU": {
     "name": "Mnt_AG_CU",
@@ -18667,7 +18982,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AL_CU": {
     "name": "Mnt_AL_CU",
@@ -18730,7 +19046,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6700.0
+    "maxIslandClaimFlagZ": 6700.0,
+    "landNodeKey": null
   },
   "Mnt_AK_CU": {
     "name": "Mnt_AK_CU",
@@ -18747,8 +19064,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
-      "CobaltGroup"
+      "05_Tundra",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -18795,7 +19112,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6200.0
+    "maxIslandClaimFlagZ": 6200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AD_CU": {
     "name": "Mnt_AD_CU",
@@ -18860,7 +19178,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AF_CU": {
     "name": "Mnt_AF_CU",
@@ -18878,7 +19197,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -18928,7 +19247,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AN_CU": {
     "name": "Mnt_AN_CU",
@@ -18945,8 +19265,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
-      "CobaltGroup"
+      "05_Tundra",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -18995,7 +19315,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AH_CU": {
     "name": "Mnt_AH_CU",
@@ -19013,7 +19334,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "CobaltGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19060,7 +19381,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": ""
   },
   "Mnt_AJ_CU": {
     "name": "Mnt_AJ_CU",
@@ -19078,7 +19400,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19123,7 +19445,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5400.0
+    "maxIslandClaimFlagZ": 5400.0,
+    "landNodeKey": ""
   },
   "Mnt_AW_CU": {
     "name": "Mnt_AW_CU",
@@ -19141,7 +19464,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "CobaltGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19188,7 +19511,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5500.0
+    "maxIslandClaimFlagZ": 5500.0,
+    "landNodeKey": ""
   },
   "Mnt_AQ_CU": {
     "name": "Mnt_AQ_CU",
@@ -19254,7 +19578,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5900.0
+    "maxIslandClaimFlagZ": 5900.0,
+    "landNodeKey": null
   },
   "Mnt_AR_CU": {
     "name": "Mnt_AR_CU",
@@ -19271,8 +19596,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
-      "CobaltGroup"
+      "05_Tundra",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19320,7 +19645,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6600.0
+    "maxIslandClaimFlagZ": 6600.0,
+    "landNodeKey": ""
   },
   "Mnt_AP_CU": {
     "name": "Mnt_AP_CU",
@@ -19387,7 +19713,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": null
   },
   "Mnt_AI_CU": {
     "name": "Mnt_AI_CU",
@@ -19453,7 +19780,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_AU_CU": {
     "name": "Mnt_AU_CU",
@@ -19471,7 +19799,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19523,7 +19851,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 7800.0
+    "maxIslandClaimFlagZ": 7800.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AF_CU_B": {
     "name": "Mnt_AF_CU_B",
@@ -19541,7 +19870,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19590,7 +19919,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AR_EU_B": {
     "name": "Mnt_AR_EU_B",
@@ -19662,7 +19992,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6600.0
+    "maxIslandClaimFlagZ": 6600.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AR_EU": {
     "name": "Mnt_AR_EU",
@@ -19680,7 +20011,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -19731,7 +20062,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6600.0
+    "maxIslandClaimFlagZ": 6600.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AX_EU": {
     "name": "Mnt_AX_EU",
@@ -19798,7 +20130,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_AM_EU": {
     "name": "Mnt_AM_EU",
@@ -19865,7 +20198,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AU_EU": {
     "name": "Mnt_AU_EU",
@@ -19882,8 +20216,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "06_Tundra_Easy",
-      "IronGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -19932,7 +20266,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 7800.0
+    "maxIslandClaimFlagZ": 7800.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AH_EU_B": {
     "name": "Mnt_AH_EU_B",
@@ -19996,7 +20331,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Mnt_AT_EU": {
     "name": "Mnt_AT_EU",
@@ -20014,7 +20350,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20063,7 +20399,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 8500.0
+    "maxIslandClaimFlagZ": 8500.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AF_EU": {
     "name": "Mnt_AF_EU",
@@ -20080,8 +20417,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CopperGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20130,7 +20467,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AV_EU": {
     "name": "Mnt_AV_EU",
@@ -20147,7 +20485,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "06_Tundra_Easy",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -20198,7 +20536,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": ""
   },
   "Mnt_AP_EU": {
     "name": "Mnt_AP_EU",
@@ -20215,8 +20554,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CobaltGroup"
+      "08_Polar",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20266,7 +20605,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AO_EU": {
     "name": "Mnt_AO_EU",
@@ -20335,7 +20675,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 7600.0
+    "maxIslandClaimFlagZ": 7600.0,
+    "landNodeKey": ""
   },
   "Mnt_AN_EU": {
     "name": "Mnt_AN_EU",
@@ -20353,7 +20694,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20403,7 +20744,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_U_EU": {
     "name": "Mnt_U_EU",
@@ -20476,7 +20818,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6200.0
+    "maxIslandClaimFlagZ": 6200.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_N_EU": {
     "name": "Mnt_N_EU",
@@ -20494,7 +20837,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20547,7 +20890,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": ""
   },
   "Mnt_X_EU": {
     "name": "Mnt_X_EU",
@@ -20565,7 +20909,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20616,7 +20960,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 9800.0
+    "maxIslandClaimFlagZ": 9800.0,
+    "landNodeKey": ""
   },
   "Mnt_Y_EU": {
     "name": "Mnt_Y_EU",
@@ -20680,7 +21025,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_AA_EE": {
     "name": "Mnt_AA_EE",
@@ -20698,7 +21044,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup",
+      "TinGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -20749,7 +21095,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6400.0
+    "maxIslandClaimFlagZ": 6400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AB_EE": {
     "name": "Mnt_AB_EE",
@@ -20817,7 +21164,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AC_EE": {
     "name": "Mnt_AC_EE",
@@ -20835,7 +21183,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup",
+      "TinGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -20884,7 +21232,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 9700.0
+    "maxIslandClaimFlagZ": 9700.0,
+    "landNodeKey": ""
   },
   "Mnt_AD_EE": {
     "name": "Mnt_AD_EE",
@@ -20951,7 +21300,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Mnt_G_EU": {
     "name": "Mnt_G_EU",
@@ -21022,7 +21372,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": null
   },
   "Mnt_AB_EU_B": {
     "name": "Mnt_AB_EU_B",
@@ -21040,7 +21391,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -21089,7 +21440,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": ""
   },
   "Mnt_G_CP": {
     "name": "Mnt_G_CP",
@@ -21107,7 +21459,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21160,7 +21512,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5000.0
+    "maxIslandClaimFlagZ": 5000.0,
+    "landNodeKey": ""
   },
   "Mnt_K_CP": {
     "name": "Mnt_K_CP",
@@ -21178,7 +21531,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21227,7 +21580,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": ""
   },
   "Mnt_N_CP": {
     "name": "Mnt_N_CP",
@@ -21245,7 +21599,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21293,7 +21647,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4600.0
+    "maxIslandClaimFlagZ": 4600.0,
+    "landNodeKey": ""
   },
   "Mnt_L_CP": {
     "name": "Mnt_L_CP",
@@ -21311,7 +21666,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21359,7 +21714,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": ""
   },
   "Mnt_O_CP": {
     "name": "Mnt_O_CP",
@@ -21377,7 +21733,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21428,7 +21784,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4400.0
+    "maxIslandClaimFlagZ": 4400.0,
+    "landNodeKey": ""
   },
   "Mnt_C_CP": {
     "name": "Mnt_C_CP",
@@ -21445,8 +21802,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "08_Polar",
-      "CobaltGroup"
+      "05_Tundra",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21489,7 +21846,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": ""
   },
   "Mnt_D_CP": {
     "name": "Mnt_D_CP",
@@ -21547,7 +21905,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4700.0
+    "maxIslandClaimFlagZ": 4700.0,
+    "landNodeKey": null
   },
   "Mnt_F_CP": {
     "name": "Mnt_F_CP",
@@ -21608,7 +21967,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_F_CP_B": {
     "name": "Mnt_F_CP_B",
@@ -21626,7 +21986,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21670,7 +22030,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": ""
   },
   "Mnt_W_CP": {
     "name": "Mnt_W_CP",
@@ -21688,7 +22049,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -21736,7 +22097,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 7500.0
+    "maxIslandClaimFlagZ": 7500.0,
+    "landNodeKey": "Blank"
   },
   "Mnt_AB_CP": {
     "name": "Mnt_AB_CP",
@@ -21800,7 +22162,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6800.0
+    "maxIslandClaimFlagZ": 6800.0,
+    "landNodeKey": null
   },
   "Mnt_AD_CP": {
     "name": "Mnt_AD_CP",
@@ -21864,7 +22227,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Mnt_Y_EU_B": {
     "name": "Mnt_Y_EU_B",
@@ -21930,7 +22294,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4800.0
+    "maxIslandClaimFlagZ": 4800.0,
+    "landNodeKey": null
   },
   "Mnt_AV_EU_B": {
     "name": "Mnt_AV_EU_B",
@@ -21947,8 +22312,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CobaltGroup"
+      "08_Polar",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -21998,7 +22363,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": ""
   },
   "Mnt_A_WU_D": {
     "name": "Mnt_A_WU_D",
@@ -22060,7 +22426,8 @@
     "singleSpawnPointX": 28008.0,
     "singleSpawnPointY": 31219.0,
     "singleSpawnPointZ": 1000.0,
-    "maxIslandClaimFlagZ": 6500.0
+    "maxIslandClaimFlagZ": 6500.0,
+    "landNodeKey": null
   },
   "Cay_C_EE_B": {
     "name": "Cay_C_EE_B",
@@ -22127,7 +22494,8 @@
     "singleSpawnPointX": 70544.0,
     "singleSpawnPointY": 64169.0,
     "singleSpawnPointZ": 1900.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": null
   },
   "Cay_E_EE_C": {
     "name": "Cay_E_EE_C",
@@ -22145,7 +22513,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22195,7 +22563,8 @@
     "singleSpawnPointX": -11720.0,
     "singleSpawnPointY": 21324.0,
     "singleSpawnPointZ": 1600.0,
-    "maxIslandClaimFlagZ": 3400.0
+    "maxIslandClaimFlagZ": 3400.0,
+    "landNodeKey": ""
   },
   "Cay_H_EE_B": {
     "name": "Cay_H_EE_B",
@@ -22213,7 +22582,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22261,7 +22630,8 @@
     "singleSpawnPointX": -7988.0,
     "singleSpawnPointY": -38719.0,
     "singleSpawnPointZ": 1800.0,
-    "maxIslandClaimFlagZ": 3700.0
+    "maxIslandClaimFlagZ": 3700.0,
+    "landNodeKey": ""
   },
   "Mnt_AF_EE_B": {
     "name": "Mnt_AF_EE_B",
@@ -22279,8 +22649,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup",
-      "IronwoodOakOverride"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22330,7 +22699,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AA_EE_B": {
     "name": "Mnt_AA_EE_B",
@@ -22348,7 +22718,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22398,7 +22768,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6400.0
+    "maxIslandClaimFlagZ": 6400.0,
+    "landNodeKey": ""
   },
   "Mnt_V_Giant_EE": {
     "name": "Mnt_V_Giant_EE",
@@ -22415,8 +22786,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
-      "IronGroup"
+      "01_Tropical",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22463,7 +22834,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 8800.0
+    "maxIslandClaimFlagZ": 8800.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AQ_EE": {
     "name": "Mnt_AQ_EE",
@@ -22481,7 +22853,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "TinGroup",
+      "CobaltGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -22531,7 +22903,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5900.0
+    "maxIslandClaimFlagZ": 5900.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AJ_EE": {
     "name": "Mnt_AJ_EE",
@@ -22549,7 +22922,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22599,7 +22972,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5400.0
+    "maxIslandClaimFlagZ": 5400.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AI_EE_B": {
     "name": "Mnt_AI_EE_B",
@@ -22666,7 +23040,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_AH_EE_B": {
     "name": "Mnt_AH_EE_B",
@@ -22684,7 +23059,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup",
+      "TinGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -22734,7 +23109,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AD_EE_B": {
     "name": "Mnt_AD_EE_B",
@@ -22801,7 +23177,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AN_EE": {
     "name": "Mnt_AN_EE",
@@ -22819,7 +23196,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup"
+      "IronGroup",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22869,7 +23247,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 8700.0
+    "maxIslandClaimFlagZ": 8700.0,
+    "landNodeKey": null
   },
   "Mnt_AC_EE_B": {
     "name": "Mnt_AC_EE_B",
@@ -22937,7 +23316,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 9700.0
+    "maxIslandClaimFlagZ": 9700.0,
+    "landNodeKey": "AotD"
   },
   "Mnt_AP_EE": {
     "name": "Mnt_AP_EE",
@@ -22955,7 +23335,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -23007,7 +23387,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 4900.0
+    "maxIslandClaimFlagZ": 4900.0,
+    "landNodeKey": ""
   },
   "Mnt_AK_EE": {
     "name": "Mnt_AK_EE",
@@ -23080,7 +23461,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 6200.0
+    "maxIslandClaimFlagZ": 6200.0,
+    "landNodeKey": null
   },
   "Mnt_AI_EE": {
     "name": "Mnt_AI_EE",
@@ -23151,7 +23533,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5700.0
+    "maxIslandClaimFlagZ": 5700.0,
+    "landNodeKey": null
   },
   "Mnt_AH_EE": {
     "name": "Mnt_AH_EE",
@@ -23169,7 +23552,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "TinGroup",
+      "CobaltGroup",
       "IronwoodOakOverride"
     ],
     "extraSublevels": [
@@ -23222,7 +23605,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5300.0
+    "maxIslandClaimFlagZ": 5300.0,
+    "landNodeKey": ""
   },
   "Mnt_AG_EE": {
     "name": "Mnt_AG_EE",
@@ -23289,7 +23673,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": null
   },
   "Mnt_AF_EE": {
     "name": "Mnt_AF_EE",
@@ -23360,7 +23745,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5200.0
+    "maxIslandClaimFlagZ": 5200.0,
+    "landNodeKey": null
   },
   "Mnt_AJ_EE_B": {
     "name": "Mnt_AJ_EE_B",
@@ -23431,7 +23817,8 @@
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
-    "maxIslandClaimFlagZ": 5400.0
+    "maxIslandClaimFlagZ": 5400.0,
+    "landNodeKey": "AotD"
   },
   "Cay_S_Hub": {
     "name": "Cay_S_Hub",
@@ -23464,7 +23851,8 @@
     "islandPoints": -1,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": null
   },
   "ControlPoint": {
     "name": "ControlPoint",
@@ -23489,6 +23877,59 @@
     "islandPoints": 0,
     "singleSpawnPointX": 0.0,
     "singleSpawnPointY": 0.0,
-    "singleSpawnPointZ": 0.0
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": null
+  },
+  "SpriteTest": {
+    "name": "SpriteTest",
+    "x": 500000.0,
+    "y": 500000.0,
+    "imagePath": "./IslandImages/SpriteTest_img.png",
+    "landscapeMaterialOverride": 0,
+    "sublevelNames": [
+      "Cay_Landmark_Test"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Billboard_Gyza": {
+    "name": "Billboard_Gyza",
+    "x": 500000.0,
+    "y": 500000.0,
+    "imagePath": "./IslandImages/Billboard_Gyza_img.png",
+    "landscapeMaterialOverride": 0,
+    "sublevelNames": [
+      "Billboard_Gyza"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
   }
 }

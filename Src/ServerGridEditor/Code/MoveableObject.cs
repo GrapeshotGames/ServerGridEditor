@@ -87,6 +87,8 @@ namespace ServerGridEditor
                 return ((DiscoveryZoneData)Data).GetRect(mainForm.currentProject);
             else if (Data is IslandInstanceData)
                 return ((IslandInstanceData)Data).GetRect(mainForm.currentProject, mainForm.islands);
+            else if (Data is PortalPathNode)
+                return ((PortalPathNode)Data).GetRect(mainForm.currentProject);
 
             return new Rectangle();
         }
