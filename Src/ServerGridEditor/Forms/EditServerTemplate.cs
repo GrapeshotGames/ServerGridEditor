@@ -27,6 +27,7 @@ namespace ServerGridEditor
 
         private void EditServerTemplate_Load(object sender, EventArgs e)
         {
+            char[] charSeparators = new char[] { ',' };
             nameTxtBox.Text = targetServerTemplate.name;
             additionalCmdLineParamsTxtBox.Text = targetServerTemplate.AdditionalCmdLineParams;
             oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text = targetServerTemplate.oceanEpicSpawnEntriesOverrideTemplateName;
@@ -37,10 +38,30 @@ namespace ServerGridEditor
             waterColorBTxtBox.Text = targetServerTemplate.waterColorB.ToString();
             skyStyleIndexTxtBox.Text = targetServerTemplate.skyStyleIndex.ToString();
             serverIslandPointsMultiplierTxtBox.Text = targetServerTemplate.serverIslandPointsMultiplier.ToString();
-            ServerCustomDatas1TxtBox.Text = targetServerTemplate.ServerCustomDatas1;
-            ServerCustomDatas2TxtBox.Text = targetServerTemplate.ServerCustomDatas2;
-            ClientCustomDatas1TxtBox.Text = targetServerTemplate.ClientCustomDatas1;
-            ClientCustomDatas2TxtBox.Text = targetServerTemplate.ClientCustomDatas2;
+
+            String[] ServerCustomDataNames = targetServerTemplate.ServerCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ServerCustomDataValues = targetServerTemplate.ServerCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < ServerCustomDataNames.Length && i < ServerCustomDataValues.Length; i++)
+            {
+                if (ServerCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ServerCustomDataGrid.Rows.Add();
+                ServerCustomDataGrid.Rows[index].Cells[0].Value = ServerCustomDataNames[i];
+                ServerCustomDataGrid.Rows[index].Cells[1].Value = ServerCustomDataValues[i];
+            }
+
+            String[] ClientCustomDataNames = targetServerTemplate.ClientCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ClientCustomDataValues = targetServerTemplate.ClientCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < ClientCustomDataNames.Length && i < ClientCustomDataValues.Length; i++)
+            {
+                if (ClientCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ClientCustomDataGrid.Rows.Add();
+                ClientCustomDataGrid.Rows[index].Cells[0].Value = ClientCustomDataNames[i];
+                ClientCustomDataGrid.Rows[index].Cells[1].Value = ClientCustomDataValues[i];
+            }
 
             BindingList<ConfigKeyValueEntry> pairs = new BindingList<ConfigKeyValueEntry>();
             pairs.AddingNew += (s, a) =>
@@ -104,7 +125,7 @@ namespace ServerGridEditor
 
             foreach (ServerTemplateData template in mainForm.currentProject.serverTemplates)
             {
-                if(nameTxtBox.Text == template.name && targetServerTemplate != template)
+                if (nameTxtBox.Text == template.name && targetServerTemplate != template)
                 {
                     MessageBox.Show("Another template exists with the same name", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
@@ -152,7 +173,7 @@ namespace ServerGridEditor
                 return false;
             }
 
-            
+
             if (!float.TryParse(serverIslandPointsMultiplierTxtBox.Text, out serverIslandPointsMultiplier))
             {
                 MessageBox.Show("Invalid number for serverIslandPointsMultiplier", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -176,6 +197,53 @@ namespace ServerGridEditor
                 return false;
             }
 
+
+            string ServerCustomDatas1 = "";
+            string ServerCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ServerCustomDataGrid.Rows)
+            {
+                if (row.Index == ServerCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ServerCustomDatas1 += "," + row.Cells[0].Value.ToString();
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ServerCustomDatas2 += "," + row.Cells[1].Value.ToString();
+            }
+
+            string ClientCustomDatas1 = "";
+            string ClientCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ClientCustomDataGrid.Rows)
+            {
+                if (row.Index == ClientCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ClientCustomDatas1 += "," + row.Cells[0].Value.ToString();
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ClientCustomDatas2 += "," + row.Cells[1].Value.ToString();
+            }
+
             targetServerTemplate.name = nameTxtBox.Text;
             targetServerTemplate.AdditionalCmdLineParams = additionalCmdLineParamsTxtBox.Text;
             targetServerTemplate.oceanEpicSpawnEntriesOverrideTemplateName = oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text;
@@ -187,10 +255,13 @@ namespace ServerGridEditor
             targetServerTemplate.waterColorB = waterColorB;
             targetServerTemplate.skyStyleIndex = skyStyleIndex;
             targetServerTemplate.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
-            targetServerTemplate.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;
-            targetServerTemplate.ServerCustomDatas2 = ServerCustomDatas2TxtBox.Text;
-            targetServerTemplate.ClientCustomDatas1 = ClientCustomDatas1TxtBox.Text;
-            targetServerTemplate.ClientCustomDatas2 = ClientCustomDatas2TxtBox.Text;
+
+
+            targetServerTemplate.ServerCustomDatas1 = ServerCustomDatas1 + ",";
+            targetServerTemplate.ServerCustomDatas2 = ServerCustomDatas2 + ",";
+            targetServerTemplate.ClientCustomDatas1 = ClientCustomDatas1 + ",";
+            targetServerTemplate.ClientCustomDatas2 = ClientCustomDatas2 + ",";
+
 
             if (targetServerTemplate.OverrideShooterGameModeDefaultGameIni != null)
                 targetServerTemplate.OverrideShooterGameModeDefaultGameIni.Clear();

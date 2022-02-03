@@ -32,6 +32,14 @@ namespace ServerGridEditor.Forms
                 ParamsGrid.Rows[index].Cells[1].Value = NodeKeyWeight.Value;
             }
 
+            if (PortalNode.RequiredResourceOr != null)
+                foreach (KeyValuePair<string, int> NodeKeyWeight in PortalNode.RequiredResourceOr)
+                {
+                    int index = ParamsOrGrid.Rows.Add();
+                    ParamsOrGrid.Rows[index].Cells[0].Value = NodeKeyWeight.Key;
+                    ParamsOrGrid.Rows[index].Cells[1].Value = NodeKeyWeight.Value;
+                }
+
         }
 
         private void EditTradeWind_Load(object sender, EventArgs e)
@@ -103,6 +111,31 @@ namespace ServerGridEditor.Forms
                 }
             }
 
+            if (PortalNode.RequiredResourceOr == null)
+                PortalNode.RequiredResourceOr = new Dictionary<string, int>();
+            else
+                PortalNode.RequiredResourceOr.Clear();
+
+            foreach (DataGridViewRow row in ParamsOrGrid.Rows)
+            {
+                if (row.Index == ParamsOrGrid.Rows.Count - 1) continue; //Last row is the new row
+                try
+                {
+                    int Count;
+
+                    if (!int.TryParse(row.Cells[1].Value.ToString(), out Count))
+                    {
+                        MessageBox.Show("Invalid number", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                    PortalNode.RequiredResourceOr.Add(row.Cells[0].Value.ToString(), Count);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Params Must have unique name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+            }
             mainForm.Invalidate();
 
 

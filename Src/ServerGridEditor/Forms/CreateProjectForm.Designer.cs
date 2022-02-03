@@ -129,6 +129,11 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.MainRegionTxtBx = new System.Windows.Forms.TextBox();
+            this.DBEntry7_PasswordTxtBx = new System.Windows.Forms.TextBox();
+            this.DBEntry7_PortTxtBx = new System.Windows.Forms.TextBox();
+            this.DBEntry7_URLTxtBx = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.DBEntry7_NameTxtBx = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -186,7 +191,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(244, 764);
+            this.createBtn.Location = new System.Drawing.Point(244, 779);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(90, 32);
             this.createBtn.TabIndex = 46;
@@ -205,7 +210,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(340, 764);
+            this.cancelBtn.Location = new System.Drawing.Point(340, 779);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(83, 32);
             this.cancelBtn.TabIndex = 47;
@@ -226,7 +231,7 @@
             // 
             // S3localURLTxtBx
             // 
-            this.S3localURLTxtBx.Location = new System.Drawing.Point(77, 477);
+            this.S3localURLTxtBx.Location = new System.Drawing.Point(77, 502);
             this.S3localURLTxtBx.Name = "S3localURLTxtBx";
             this.S3localURLTxtBx.Size = new System.Drawing.Size(183, 20);
             this.S3localURLTxtBx.TabIndex = 38;
@@ -234,7 +239,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 480);
+            this.label12.Location = new System.Drawing.Point(10, 505);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(45, 13);
             this.label12.TabIndex = 25;
@@ -252,7 +257,7 @@
             // 
             // S3localAccesKeyIdTxtBx
             // 
-            this.S3localAccesKeyIdTxtBx.Location = new System.Drawing.Point(77, 501);
+            this.S3localAccesKeyIdTxtBx.Location = new System.Drawing.Point(77, 526);
             this.S3localAccesKeyIdTxtBx.Name = "S3localAccesKeyIdTxtBx";
             this.S3localAccesKeyIdTxtBx.Size = new System.Drawing.Size(183, 20);
             this.S3localAccesKeyIdTxtBx.TabIndex = 39;
@@ -260,7 +265,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(10, 504);
+            this.label14.Location = new System.Drawing.Point(10, 529);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(34, 13);
             this.label14.TabIndex = 28;
@@ -268,7 +273,7 @@
             // 
             // S3localSecretKeyTxtBx
             // 
-            this.S3localSecretKeyTxtBx.Location = new System.Drawing.Point(77, 525);
+            this.S3localSecretKeyTxtBx.Location = new System.Drawing.Point(77, 550);
             this.S3localSecretKeyTxtBx.Name = "S3localSecretKeyTxtBx";
             this.S3localSecretKeyTxtBx.Size = new System.Drawing.Size(183, 20);
             this.S3localSecretKeyTxtBx.TabIndex = 40;
@@ -276,7 +281,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(10, 528);
+            this.label15.Location = new System.Drawing.Point(10, 553);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 13);
             this.label15.TabIndex = 30;
@@ -284,7 +289,7 @@
             // 
             // S3localBucketNameTxtBx
             // 
-            this.S3localBucketNameTxtBx.Location = new System.Drawing.Point(77, 549);
+            this.S3localBucketNameTxtBx.Location = new System.Drawing.Point(77, 574);
             this.S3localBucketNameTxtBx.Name = "S3localBucketNameTxtBx";
             this.S3localBucketNameTxtBx.Size = new System.Drawing.Size(183, 20);
             this.S3localBucketNameTxtBx.TabIndex = 41;
@@ -292,7 +297,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 552);
+            this.label16.Location = new System.Drawing.Point(10, 577);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(69, 13);
             this.label16.TabIndex = 32;
@@ -493,7 +498,7 @@
             // useUTCTimeCheckbox
             // 
             this.useUTCTimeCheckbox.AutoSize = true;
-            this.useUTCTimeCheckbox.Location = new System.Drawing.Point(142, 701);
+            this.useUTCTimeCheckbox.Location = new System.Drawing.Point(142, 727);
             this.useUTCTimeCheckbox.Name = "useUTCTimeCheckbox";
             this.useUTCTimeCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.useUTCTimeCheckbox.Size = new System.Drawing.Size(96, 17);
@@ -504,7 +509,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(142, 732);
+            this.label26.Location = new System.Drawing.Point(142, 758);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(35, 13);
             this.label26.TabIndex = 58;
@@ -514,7 +519,7 @@
             // 
             this.day0DateTimePicker.CustomFormat = "dd-MM-yyyy HH:mm:ss tt";
             this.day0DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.day0DateTimePicker.Location = new System.Drawing.Point(183, 729);
+            this.day0DateTimePicker.Location = new System.Drawing.Point(183, 755);
             this.day0DateTimePicker.Name = "day0DateTimePicker";
             this.day0DateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.day0DateTimePicker.TabIndex = 36;
@@ -688,7 +693,7 @@
             // 
             // sharedLogBtn
             // 
-            this.sharedLogBtn.Location = new System.Drawing.Point(126, 613);
+            this.sharedLogBtn.Location = new System.Drawing.Point(126, 638);
             this.sharedLogBtn.Name = "sharedLogBtn";
             this.sharedLogBtn.Size = new System.Drawing.Size(107, 29);
             this.sharedLogBtn.TabIndex = 44;
@@ -698,7 +703,7 @@
             // 
             // travelConfigBtn
             // 
-            this.travelConfigBtn.Location = new System.Drawing.Point(15, 648);
+            this.travelConfigBtn.Location = new System.Drawing.Point(15, 673);
             this.travelConfigBtn.Name = "travelConfigBtn";
             this.travelConfigBtn.Size = new System.Drawing.Size(107, 29);
             this.travelConfigBtn.TabIndex = 45;
@@ -708,7 +713,7 @@
             // 
             // tribeLogCfgBtn
             // 
-            this.tribeLogCfgBtn.Location = new System.Drawing.Point(15, 613);
+            this.tribeLogCfgBtn.Location = new System.Drawing.Point(15, 638);
             this.tribeLogCfgBtn.Name = "tribeLogCfgBtn";
             this.tribeLogCfgBtn.Size = new System.Drawing.Size(107, 29);
             this.tribeLogCfgBtn.TabIndex = 43;
@@ -718,7 +723,7 @@
             // 
             // globalGameplaySetupTxtBox
             // 
-            this.globalGameplaySetupTxtBox.Location = new System.Drawing.Point(395, 663);
+            this.globalGameplaySetupTxtBox.Location = new System.Drawing.Point(395, 689);
             this.globalGameplaySetupTxtBox.Multiline = true;
             this.globalGameplaySetupTxtBox.Name = "globalGameplaySetupTxtBox";
             this.globalGameplaySetupTxtBox.Size = new System.Drawing.Size(289, 86);
@@ -727,7 +732,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(392, 647);
+            this.label34.Location = new System.Drawing.Point(392, 673);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(113, 13);
             this.label34.TabIndex = 83;
@@ -736,7 +741,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(10, 575);
+            this.label35.Location = new System.Drawing.Point(10, 600);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(41, 13);
             this.label35.TabIndex = 85;
@@ -744,7 +749,7 @@
             // 
             // S3localRegionTxtBx
             // 
-            this.S3localRegionTxtBx.Location = new System.Drawing.Point(77, 572);
+            this.S3localRegionTxtBx.Location = new System.Drawing.Point(77, 597);
             this.S3localRegionTxtBx.Name = "S3localRegionTxtBx";
             this.S3localRegionTxtBx.Size = new System.Drawing.Size(183, 20);
             this.S3localRegionTxtBx.TabIndex = 42;
@@ -935,7 +940,7 @@
             // usePVEServerConfigurationCheckbox
             // 
             this.usePVEServerConfigurationCheckbox.AutoSize = true;
-            this.usePVEServerConfigurationCheckbox.Location = new System.Drawing.Point(142, 678);
+            this.usePVEServerConfigurationCheckbox.Location = new System.Drawing.Point(142, 704);
             this.usePVEServerConfigurationCheckbox.Name = "usePVEServerConfigurationCheckbox";
             this.usePVEServerConfigurationCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.usePVEServerConfigurationCheckbox.Size = new System.Drawing.Size(165, 17);
@@ -997,13 +1002,59 @@
             this.MainRegionTxtBx.TabIndex = 116;
             this.MainRegionTxtBx.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // DBEntry7_PasswordTxtBx
+            // 
+            this.DBEntry7_PasswordTxtBx.Location = new System.Drawing.Point(612, 651);
+            this.DBEntry7_PasswordTxtBx.Name = "DBEntry7_PasswordTxtBx";
+            this.DBEntry7_PasswordTxtBx.Size = new System.Drawing.Size(82, 20);
+            this.DBEntry7_PasswordTxtBx.TabIndex = 120;
+            this.DBEntry7_PasswordTxtBx.Text = "foobared";
+            // 
+            // DBEntry7_PortTxtBx
+            // 
+            this.DBEntry7_PortTxtBx.Location = new System.Drawing.Point(549, 651);
+            this.DBEntry7_PortTxtBx.Name = "DBEntry7_PortTxtBx";
+            this.DBEntry7_PortTxtBx.Size = new System.Drawing.Size(57, 20);
+            this.DBEntry7_PortTxtBx.TabIndex = 119;
+            this.DBEntry7_PortTxtBx.Text = "6379";
+            // 
+            // DBEntry7_URLTxtBx
+            // 
+            this.DBEntry7_URLTxtBx.Location = new System.Drawing.Point(428, 651);
+            this.DBEntry7_URLTxtBx.Name = "DBEntry7_URLTxtBx";
+            this.DBEntry7_URLTxtBx.Size = new System.Drawing.Size(115, 20);
+            this.DBEntry7_URLTxtBx.TabIndex = 118;
+            this.DBEntry7_URLTxtBx.Text = "127.0.0.1";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(276, 655);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(61, 13);
+            this.label45.TabIndex = 121;
+            this.label45.Text = "DB Entry 6:";
+            // 
+            // DBEntry7_NameTxtBx
+            // 
+            this.DBEntry7_NameTxtBx.Location = new System.Drawing.Point(340, 651);
+            this.DBEntry7_NameTxtBx.Name = "DBEntry7_NameTxtBx";
+            this.DBEntry7_NameTxtBx.Size = new System.Drawing.Size(82, 20);
+            this.DBEntry7_NameTxtBx.TabIndex = 117;
+            this.DBEntry7_NameTxtBx.Text = "MonumentDB";
+            // 
             // CreateProjectForm
             // 
             this.AcceptButton = this.createBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(702, 802);
+            this.ClientSize = new System.Drawing.Size(706, 819);
+            this.Controls.Add(this.DBEntry7_PasswordTxtBx);
+            this.Controls.Add(this.DBEntry7_PortTxtBx);
+            this.Controls.Add(this.DBEntry7_URLTxtBx);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.DBEntry7_NameTxtBx);
             this.Controls.Add(this.MainRegionTxtBx);
             this.Controls.Add(this.label44);
             this.Controls.Add(this.OveallImageURLTxtBox);
@@ -1221,5 +1272,10 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.TextBox MainRegionTxtBx;
+        private System.Windows.Forms.TextBox DBEntry7_PasswordTxtBx;
+        private System.Windows.Forms.TextBox DBEntry7_PortTxtBx;
+        private System.Windows.Forms.TextBox DBEntry7_URLTxtBx;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox DBEntry7_NameTxtBx;
     }
 }

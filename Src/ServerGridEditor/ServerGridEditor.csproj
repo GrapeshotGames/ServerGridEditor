@@ -113,11 +113,23 @@
     <Compile Include="Forms\EditFoliageAttachmentOverride.Designer.cs">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditRegionsTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTemplates.Designer.cs">
+      <DependentUpon>EditRegionsTemplates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditRegionsCategories.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\EditRegionsCategories.Designer.cs">
       <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditAppliedRegionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAppliedRegionTemplate.Designer.cs">
+      <DependentUpon>EditAppliedRegionTemplate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EditServerConfigurations.cs">
       <SubType>Form</SubType>
@@ -142,6 +154,12 @@
     </Compile>
     <Compile Include="Forms\EditPortalNode.Designer.cs">
       <DependentUpon>EditPortalNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionTemplate.Designer.cs">
+      <DependentUpon>EditRegionTemplate.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RemoveServerConfiguration.cs">
       <SubType>Form</SubType>
@@ -297,8 +315,14 @@
     <EmbeddedResource Include="Forms\EditFoliageAttachmentOverride.resx">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsTemplates.resx">
+      <DependentUpon>EditRegionsTemplates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditRegionsCategories.resx">
       <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditAppliedRegionTemplate.resx">
+      <DependentUpon>EditAppliedRegionTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditServerConfigurations.resx">
       <DependentUpon>EditServerConfigurations.cs</DependentUpon>
@@ -311,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPortalNode.resx">
       <DependentUpon>EditPortalNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionTemplate.resx">
+      <DependentUpon>EditRegionTemplate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveServerConfiguration.resx">
       <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>

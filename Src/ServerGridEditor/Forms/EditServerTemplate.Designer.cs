@@ -68,13 +68,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.ServerCustomDatas1TxtBox = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.ServerCustomDatas2TxtBox = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.ClientCustomDatas2TxtBox = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.ClientCustomDatas1TxtBox = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -87,7 +81,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.serverIslandPointsMultiplierTxtBox = new System.Windows.Forms.TextBox();
+            this.ServerCustomDataGrid = new System.Windows.Forms.DataGridView();
+            this.ClientCustomDataGrid = new System.Windows.Forms.DataGridView();
+            this.regionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // saveBtn
@@ -425,65 +427,19 @@
             this.label24.TabIndex = 86;
             this.label24.Text = "B";
             // 
-            // ServerCustomDatas1TxtBox
-            // 
-            this.ServerCustomDatas1TxtBox.Location = new System.Drawing.Point(123, 507);
-            this.ServerCustomDatas1TxtBox.Name = "ServerCustomDatas1TxtBox";
-            this.ServerCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ServerCustomDatas1TxtBox.TabIndex = 88;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(14, 510);
+            this.label25.Location = new System.Drawing.Point(14, 488);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(110, 13);
+            this.label25.Size = new System.Drawing.Size(104, 13);
             this.label25.TabIndex = 87;
-            this.label25.Text = "ServerCustomDatas1:";
-            // 
-            // ServerCustomDatas2TxtBox
-            // 
-            this.ServerCustomDatas2TxtBox.Location = new System.Drawing.Point(123, 530);
-            this.ServerCustomDatas2TxtBox.Name = "ServerCustomDatas2TxtBox";
-            this.ServerCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ServerCustomDatas2TxtBox.TabIndex = 90;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(14, 533);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(110, 13);
-            this.label26.TabIndex = 89;
-            this.label26.Text = "ServerCustomDatas2:";
-            // 
-            // ClientCustomDatas2TxtBox
-            // 
-            this.ClientCustomDatas2TxtBox.Location = new System.Drawing.Point(123, 579);
-            this.ClientCustomDatas2TxtBox.Name = "ClientCustomDatas2TxtBox";
-            this.ClientCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ClientCustomDatas2TxtBox.TabIndex = 94;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(14, 582);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(105, 13);
-            this.label27.TabIndex = 93;
-            this.label27.Text = "ClientCustomDatas2:";
-            // 
-            // ClientCustomDatas1TxtBox
-            // 
-            this.ClientCustomDatas1TxtBox.Location = new System.Drawing.Point(123, 556);
-            this.ClientCustomDatas1TxtBox.Name = "ClientCustomDatas1TxtBox";
-            this.ClientCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ClientCustomDatas1TxtBox.TabIndex = 92;
+            this.label25.Text = "ServerCustomDatas:";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(14, 559);
+            this.label28.Location = new System.Drawing.Point(15, 606);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(105, 13);
             this.label28.TabIndex = 91;
@@ -569,7 +525,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 475);
+            this.label2.Location = new System.Drawing.Point(131, 465);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 13);
             this.label2.TabIndex = 105;
@@ -577,10 +533,64 @@
             // 
             // serverIslandPointsMultiplierTxtBox
             // 
-            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(274, 472);
+            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(274, 462);
             this.serverIslandPointsMultiplierTxtBox.Name = "serverIslandPointsMultiplierTxtBox";
             this.serverIslandPointsMultiplierTxtBox.Size = new System.Drawing.Size(79, 20);
             this.serverIslandPointsMultiplierTxtBox.TabIndex = 104;
+            // 
+            // ServerCustomDataGrid
+            // 
+            this.ServerCustomDataGrid.AllowUserToOrderColumns = true;
+            this.ServerCustomDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ServerCustomDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ServerCustomDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.regionName,
+            this.Value});
+            this.ServerCustomDataGrid.Location = new System.Drawing.Point(134, 488);
+            this.ServerCustomDataGrid.Name = "ServerCustomDataGrid";
+            this.ServerCustomDataGrid.Size = new System.Drawing.Size(210, 103);
+            this.ServerCustomDataGrid.TabIndex = 106;
+            // 
+            // ClientCustomDataGrid
+            // 
+            this.ClientCustomDataGrid.AllowUserToOrderColumns = true;
+            this.ClientCustomDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClientCustomDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientCustomDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.ClientCustomDataGrid.Location = new System.Drawing.Point(134, 606);
+            this.ClientCustomDataGrid.Name = "ClientCustomDataGrid";
+            this.ClientCustomDataGrid.Size = new System.Drawing.Size(210, 103);
+            this.ClientCustomDataGrid.TabIndex = 107;
+            // 
+            // regionName
+            // 
+            this.regionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regionName.HeaderText = "Name";
+            this.regionName.Name = "regionName";
+            // 
+            // Value
+            // 
+            this.Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Value.HeaderText = "Value";
+            this.Value.Name = "Value";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // EditServerTemplate
             // 
@@ -589,6 +599,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(667, 770);
+            this.Controls.Add(this.ClientCustomDataGrid);
+            this.Controls.Add(this.ServerCustomDataGrid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.serverIslandPointsMultiplierTxtBox);
             this.Controls.Add(this.OceanEpicSpawnEntriesOverrideValuesTxtBox);
@@ -600,13 +612,7 @@
             this.Controls.Add(this.templateColGTxtBox);
             this.Controls.Add(this.templateColRTxtBox);
             this.Controls.Add(this.label33);
-            this.Controls.Add(this.ClientCustomDatas2TxtBox);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.ClientCustomDatas1TxtBox);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.ServerCustomDatas2TxtBox);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.ServerCustomDatas1TxtBox);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -657,6 +663,8 @@
             this.Text = "Edit Server Template";
             this.Load += new System.EventHandler(this.EditServerTemplate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,13 +711,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox ServerCustomDatas1TxtBox;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox ServerCustomDatas2TxtBox;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox ClientCustomDatas2TxtBox;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox ClientCustomDatas1TxtBox;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
@@ -722,5 +724,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox serverIslandPointsMultiplierTxtBox;
+        private System.Windows.Forms.DataGridView ServerCustomDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+        private System.Windows.Forms.DataGridView ClientCustomDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }

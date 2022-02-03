@@ -241,7 +241,7 @@ namespace ServerGridEditor
             Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
             List<PortalPathData> portalPathData, int shipPathsIdGenerator, int tradeWindsIdGenerator, int portalPathsIdGenerator,
             bool showShipPathsInfo, bool showTradeWindsInfo, bool showPortalNodes, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, bool showTradeWindOverlay, string tradeWindOverlayImgPath, Dictionary<string, string> regionsTradeWindOverlayImgPath, string globalGameplaySetup,
-            List<ServerTemplateData> serverTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
+            List<ServerTemplateData> serverTemplates, List<AppliedRegionTemplateData> appliedRegionTemplates, List<RegionTemplateData> regionTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
 			string WorldAtlasPassword, float columnUTCOffset, int numPathingGridRows, int numPathingGridColumns, bool[,] PathingGrid)
         {
             Data.gridSize = gridSize;
@@ -316,8 +316,11 @@ namespace ServerGridEditor
                     //Apply template
                     if(!string.IsNullOrEmpty(server.serverTemplateName))
                     {
-                        ServerTemplateData serverTemplate = mainForm.currentProject.GetServerTemplateByName(server.serverTemplateName);
-                        if(serverTemplate != null)
+                        ServerTemplateData serverTemplateData = mainForm.currentProject.GetServerTemplateByName(server.serverTemplateName);
+                        AppliedRegionTemplateData appliedRegionTemplateData = mainForm.currentProject.GetAppliedRegionTemplateByName(server.hiddenAtlasId, true);
+                        ServerData regionTemplateData = MergeTemplates(appliedRegionTemplateData, mainForm.currentProject.GetRegionTemplateByName(appliedRegionTemplateData.serverTemplateName));
+                        ServerData serverTemplate = MergeTemplates(serverTemplateData, regionTemplateData);
+                        if (serverTemplate != null)
                         {
                             //Overrides
                             exportServerObj.floorZDist = server.floorZDist != 0 ? server.floorZDist : serverTemplate.floorZDist;
@@ -431,6 +434,14 @@ namespace ServerGridEditor
                 serverTemplates = new List<ServerTemplateData>();
             Data.serverTemplates = serverTemplates.ToList();
 
+            if (appliedRegionTemplates == null)
+                appliedRegionTemplates = new List<AppliedRegionTemplateData>();
+            Data.appliedRegionTemplates = appliedRegionTemplates.ToList();
+
+            if (regionTemplates == null)
+                regionTemplates = new List<RegionTemplateData>();
+            Data.regionTemplates = regionTemplates.ToList();
+
             if (regionsCategories == null)
                 regionsCategories = new List<RegionsCategory>();
 
@@ -453,6 +464,67 @@ namespace ServerGridEditor
 
             return Data;
         }
+
+        private static ServerData MergeTemplates(ServerData ServerTemplate1, ServerData ServerTemplate2)
+        {
+            if (ServerTemplate1 == null)
+                return ServerTemplate2;
+            if (ServerTemplate2 == null)
+                return ServerTemplate1;
+            ServerData serverTemplate = new ServerData();
+
+            serverTemplate.floorZDist = ServerTemplate1.floorZDist != 0 ? ServerTemplate1.floorZDist : ServerTemplate2.floorZDist;
+            serverTemplate.transitionMinZ = ServerTemplate1.transitionMinZ != 0 ? ServerTemplate1.transitionMinZ : ServerTemplate2.transitionMinZ;
+            serverTemplate.oceanEpicSpawnEntriesOverrideTemplateName = !string.IsNullOrEmpty(ServerTemplate1.oceanEpicSpawnEntriesOverrideTemplateName) ? ServerTemplate1.oceanEpicSpawnEntriesOverrideTemplateName : ServerTemplate2.oceanEpicSpawnEntriesOverrideTemplateName;
+            serverTemplate.NPCShipSpawnEntriesOverrideTemplateName = !string.IsNullOrEmpty(ServerTemplate1.NPCShipSpawnEntriesOverrideTemplateName) ? ServerTemplate1.NPCShipSpawnEntriesOverrideTemplateName : ServerTemplate2.NPCShipSpawnEntriesOverrideTemplateName;
+            serverTemplate.waterColorR = ServerTemplate1.waterColorR != 0 ? ServerTemplate1.waterColorR : ServerTemplate2.waterColorR;
+            serverTemplate.waterColorG = ServerTemplate1.waterColorG != 0 ? ServerTemplate1.waterColorG : ServerTemplate2.waterColorG;
+            serverTemplate.waterColorB = ServerTemplate1.waterColorB != 0 ? ServerTemplate1.waterColorB : ServerTemplate2.waterColorB;
+            serverTemplate.billboardsOffsetX = ServerTemplate1.billboardsOffsetX != 0 ? ServerTemplate1.billboardsOffsetX : ServerTemplate2.billboardsOffsetX;
+            serverTemplate.billboardsOffsetY = ServerTemplate1.billboardsOffsetY != 0 ? ServerTemplate1.billboardsOffsetY : ServerTemplate2.billboardsOffsetY;
+            serverTemplate.billboardsOffsetZ = ServerTemplate1.billboardsOffsetZ != 0 ? ServerTemplate1.billboardsOffsetZ : ServerTemplate2.billboardsOffsetZ;
+            serverTemplate.skyStyleIndex = ServerTemplate1.skyStyleIndex != 0 ? ServerTemplate1.skyStyleIndex : ServerTemplate2.skyStyleIndex;
+            serverTemplate.serverIslandPointsMultiplier = ServerTemplate1.serverIslandPointsMultiplier != 1.0f ? ServerTemplate1.serverIslandPointsMultiplier : ServerTemplate2.serverIslandPointsMultiplier;
+            serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValues = !string.IsNullOrEmpty(ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValues) ? ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValues : ServerTemplate2.GlobalBiomeSeamlessServerGridPreOffsetValues;
+            serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater = !string.IsNullOrEmpty(ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater) ? ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater : ServerTemplate2.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater;
+            serverTemplate.OceanDinoDepthEntriesOverride = !string.IsNullOrEmpty(ServerTemplate1.OceanDinoDepthEntriesOverride) ? ServerTemplate1.OceanDinoDepthEntriesOverride : ServerTemplate2.OceanDinoDepthEntriesOverride;
+            serverTemplate.OceanEpicSpawnEntriesOverrideValues = !string.IsNullOrEmpty(ServerTemplate1.OceanEpicSpawnEntriesOverrideValues) ? ServerTemplate1.OceanEpicSpawnEntriesOverrideValues : ServerTemplate2.OceanEpicSpawnEntriesOverrideValues;
+            serverTemplate.oceanFloatsamCratesOverride = !string.IsNullOrEmpty(ServerTemplate1.oceanFloatsamCratesOverride) ? ServerTemplate1.oceanFloatsamCratesOverride : ServerTemplate2.oceanFloatsamCratesOverride;
+            serverTemplate.treasureMapLootTablesOverride = !string.IsNullOrEmpty(ServerTemplate1.treasureMapLootTablesOverride) ? ServerTemplate1.treasureMapLootTablesOverride : ServerTemplate2.treasureMapLootTablesOverride;
+            serverTemplate.regionOverrides = !string.IsNullOrEmpty(ServerTemplate1.regionOverrides) ? ServerTemplate1.regionOverrides : ServerTemplate2.regionOverrides;
+
+            //Appends
+            serverTemplate.AdditionalCmdLineParams = ServerTemplate1.AdditionalCmdLineParams + ServerTemplate2.AdditionalCmdLineParams;
+
+            foreach (KeyValuePair<string, string> kvp in ServerTemplate1.OverrideShooterGameModeDefaultGameIni)
+                if (!serverTemplate.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
+                    serverTemplate.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
+
+            foreach (KeyValuePair<string, string> kvp in ServerTemplate2.OverrideShooterGameModeDefaultGameIni)
+                if (!serverTemplate.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
+                    serverTemplate.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
+
+            //Splice these together cleanly:
+            if (!string.IsNullOrWhiteSpace(ServerTemplate1.ServerCustomDatas1))
+                serverTemplate.ServerCustomDatas1 = ServerTemplate1.ServerCustomDatas1.TrimEnd(',');
+            if (!string.IsNullOrWhiteSpace(ServerTemplate1.ServerCustomDatas2))
+                serverTemplate.ServerCustomDatas2 = ServerTemplate1.ServerCustomDatas2.TrimEnd(',');
+            if (!string.IsNullOrWhiteSpace(ServerTemplate1.ClientCustomDatas1))
+                serverTemplate.ClientCustomDatas1 = ServerTemplate1.ClientCustomDatas1.TrimEnd(',');
+            if (!string.IsNullOrWhiteSpace(ServerTemplate1.ClientCustomDatas2))
+                serverTemplate.ClientCustomDatas2 = ServerTemplate1.ClientCustomDatas2.TrimEnd(',');
+
+            if (!string.IsNullOrWhiteSpace(ServerTemplate2.ServerCustomDatas1))
+                serverTemplate.ServerCustomDatas1 = ServerTemplate2.ServerCustomDatas1 + "," + serverTemplate.ServerCustomDatas1.TrimStart(',');
+            if (!string.IsNullOrWhiteSpace(serverTemplate.ServerCustomDatas2))
+                serverTemplate.ServerCustomDatas2 = ServerTemplate2.ServerCustomDatas2 + "," + serverTemplate.ServerCustomDatas2.TrimStart(',');
+            if (!string.IsNullOrWhiteSpace(serverTemplate.ClientCustomDatas1))
+                serverTemplate.ClientCustomDatas1 = ServerTemplate2.ClientCustomDatas1 + "," + serverTemplate.ClientCustomDatas1.TrimStart(',');
+            if (!string.IsNullOrWhiteSpace(serverTemplate.ClientCustomDatas2))
+                serverTemplate.ClientCustomDatas2 = ServerTemplate2.ClientCustomDatas2 + "," + serverTemplate.ClientCustomDatas2.TrimStart(',');
+
+            return serverTemplate;
+        }
     }
 
     public class Project
@@ -463,11 +535,14 @@ namespace ServerGridEditor
         public List<DiscoveryZoneData> discoZones = new List<DiscoveryZoneData>();
         public List<TransientNodeTemplate> transientNodeTemplates = new List<TransientNodeTemplate>();
         public List<SpawnRegionData> spawnRegions = new List<SpawnRegionData>();
+        public List<RegionTemplateData> regionTemplates = new List<RegionTemplateData>();
+        public List<AppliedRegionTemplateData> appliedRegionTemplates = new List<AppliedRegionTemplateData>();
         public List<ServerTemplateData> serverTemplates = new List<ServerTemplateData>();
         public List<ServerConfiguration> serverConfigurations = new List<ServerConfiguration>();
         public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
 
+        
         public int numOfCellsX = 5;
         public int numOfCellsY = 4;
 
@@ -607,7 +682,7 @@ namespace ServerGridEditor
             AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MainRegionName,MetaWorldURL, MapImagesExtension,
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, regionsBackgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, usePVEServerConfiguration,
                 Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
-                shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, serverConfigurations, regionsCategories, transientNodeTemplates, foliageAttachmentOverrides,
+                shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, appliedRegionTemplates, regionTemplates, serverConfigurations, regionsCategories, transientNodeTemplates, foliageAttachmentOverrides,
                 bIsFinalExport, MapImageURL, OverallImageURL, AuthListURL,
 				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid);
             ProjectObj.BaseServerArgs = BaseServerArgs;
@@ -637,6 +712,8 @@ namespace ServerGridEditor
                 ProjectObj.TravelDataConfig = null;
                 ProjectObj.DatabaseConnections = null;
                 ProjectObj.serverTemplates.Clear();
+                ProjectObj.appliedRegionTemplates.Clear();
+                ProjectObj.regionTemplates.Clear();
             }
             return JsonConvert.SerializeObject(ProjectObj, Formatting.Indented, new JsonSerializerSettings()
             {
@@ -934,6 +1011,14 @@ namespace ServerGridEditor
                 portalPathsIdGenerator = deserializedProject.PortalPathsIdGenerator;
 
 
+                appliedRegionTemplates = deserializedProject.appliedRegionTemplates;
+                if (appliedRegionTemplates == null)
+                    appliedRegionTemplates = new List<AppliedRegionTemplateData>();
+
+                regionTemplates = deserializedProject.regionTemplates;
+                if (regionTemplates == null)
+                    regionTemplates = new List<RegionTemplateData>();
+
                 serverTemplates = deserializedProject.serverTemplates;
                 if (serverTemplates == null)
                     serverTemplates = new List<ServerTemplateData>();
@@ -953,6 +1038,29 @@ namespace ServerGridEditor
                     return template;
 
             return null;
+        }
+
+        public RegionTemplateData GetRegionTemplateByName(string templateName)
+        {
+            foreach (RegionTemplateData template in regionTemplates)
+                if (template.name == templateName)
+                    return template;
+            return null;
+        }
+
+        public AppliedRegionTemplateData GetAppliedRegionTemplateByName(string templateName, bool bCanAdd = true)
+        {
+            foreach (AppliedRegionTemplateData template in appliedRegionTemplates)
+                if (template.name == templateName)
+                    return template;
+            if (!bCanAdd)
+                return null;
+
+            AppliedRegionTemplateData regionTemplateData = new AppliedRegionTemplateData();
+            regionTemplateData.name = templateName;
+
+            appliedRegionTemplates.Add(regionTemplateData);
+            return appliedRegionTemplates[appliedRegionTemplates.Count - 1];
         }
 
         public TransientNodeTemplate GetTransientNodeTemplateByName(string Key)
