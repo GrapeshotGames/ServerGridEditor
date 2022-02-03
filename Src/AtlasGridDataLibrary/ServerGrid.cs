@@ -198,6 +198,8 @@ namespace AtlasGridDataLibrary
         public DateTime lastImageOverride;
 
         public List<ServerTemplateData> serverTemplates = new List<ServerTemplateData>();
+        public List<RegionTemplateData> regionTemplates = new List<RegionTemplateData>();
+        public List<AppliedRegionTemplateData> appliedRegionTemplates = new List<AppliedRegionTemplateData>();
         public List<ServerConfiguration> serverConfigurations = new List<ServerConfiguration>();
         public List<TransientNodeTemplate> transientNodeTemplates = new List<TransientNodeTemplate>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
@@ -309,6 +311,14 @@ namespace AtlasGridDataLibrary
         public float templateColorG = 0;
         public float templateColorB = 0;
 
+    }
+
+    public class RegionTemplateData : ServerData
+    {
+    }
+
+    public class AppliedRegionTemplateData : RegionTemplateData
+    {
     }
 
     public class RegionsCategory
@@ -529,5 +539,6 @@ namespace AtlasGridDataLibrary
         public string PortalName;
 
         public Dictionary<string, int> RequiredResource = new Dictionary<string, int>();
+        public Dictionary<string, int> RequiredResourceOr = new Dictionary<string, int>();
     }
 }

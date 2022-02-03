@@ -45,14 +45,32 @@ namespace ServerGridEditor
             BillboardsOffsetXTextBox.Text = targetServer.billboardsOffsetX.ToString();
             BillboardsOffsetYTextBox.Text = targetServer.billboardsOffsetY.ToString();
             BillboardsOffsetZTextBox.Text = targetServer.billboardsOffsetZ.ToString();
-
+            char[] charSeparators = new char[] { ',' };
             skyStyleIndexTxtBox.Text = targetServer.skyStyleIndex.ToString();
             serverIslandPointsMultiplierTxtBox.Text = targetServer.serverIslandPointsMultiplier.ToString();
-            ServerCustomDatas1TxtBox.Text = targetServer.ServerCustomDatas1;
-            ServerCustomDatas2TxtBox.Text = targetServer.ServerCustomDatas2;
-            ClientCustomDatas1TxtBox.Text = targetServer.ClientCustomDatas1;
-            ClientCustomDatas2TxtBox.Text = targetServer.ClientCustomDatas2;
+            String[] ServerCustomDataNames = targetServer.ServerCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ServerCustomDataValues = targetServer.ServerCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
 
+            for (int i = 0; i < ServerCustomDataNames.Length && i < ServerCustomDataValues.Length; i++)
+            {
+                if (ServerCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ServerCustomDataGrid.Rows.Add();
+                ServerCustomDataGrid.Rows[index].Cells[0].Value = ServerCustomDataNames[i];
+                ServerCustomDataGrid.Rows[index].Cells[1].Value = ServerCustomDataValues[i];
+            }
+
+            String[] ClientCustomDataNames = targetServer.ClientCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ClientCustomDataValues = targetServer.ClientCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < ClientCustomDataNames.Length && i < ClientCustomDataValues.Length; i++)
+            {
+                if (ClientCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ClientCustomDataGrid.Rows.Add();
+                ClientCustomDataGrid.Rows[index].Cells[0].Value = ClientCustomDataNames[i];
+                ClientCustomDataGrid.Rows[index].Cells[1].Value = ClientCustomDataValues[i];
+            }
             BindingList<ConfigKeyValueEntry> pairs = new BindingList<ConfigKeyValueEntry>();
             pairs.AddingNew += (s, a) =>
             {
@@ -207,6 +225,51 @@ namespace ServerGridEditor
                 return false;
             }
 
+            string ServerCustomDatas1 = "";
+            string ServerCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ServerCustomDataGrid.Rows)
+            {
+                if (row.Index == ServerCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ServerCustomDatas1 += "," + row.Cells[0].Value.ToString();
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ServerCustomDatas2 += "," + row.Cells[1].Value.ToString();
+            }
+
+            string ClientCustomDatas1 = "";
+            string ClientCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ClientCustomDataGrid.Rows)
+            {
+                if (row.Index == ClientCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ClientCustomDatas1 += row.Cells[0].Value.ToString() + ",";
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ClientCustomDatas2 += row.Cells[1].Value.ToString() + ",";
+            }
 
             targetServer.name = nameTxtBox.Text;
             targetServer.ip = ipTxtBox.Text;
@@ -235,10 +298,10 @@ namespace ServerGridEditor
             targetServer.billboardsOffsetZ = billboardsOffsetZ;
             targetServer.skyStyleIndex = skyStyleIndex;
             targetServer.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
-            targetServer.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;
-            targetServer.ServerCustomDatas2 = ServerCustomDatas2TxtBox.Text;
-            targetServer.ClientCustomDatas1 = ClientCustomDatas1TxtBox.Text;
-            targetServer.ClientCustomDatas2 = ClientCustomDatas2TxtBox.Text;
+            targetServer.ServerCustomDatas1 = ServerCustomDatas1;
+            targetServer.ServerCustomDatas2 = ServerCustomDatas2;
+            targetServer.ClientCustomDatas1 = ClientCustomDatas1;
+            targetServer.ClientCustomDatas2 = ClientCustomDatas2;
 
             if (targetServer.OverrideShooterGameModeDefaultGameIni != null)
                 targetServer.OverrideShooterGameModeDefaultGameIni.Clear();

@@ -57,6 +57,7 @@
             this.editFoliageAttachmentOverrideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editNodeTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRegionCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editRegionTemplateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mapImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,6 +112,7 @@
             this.showPortalNodesChckBox = new System.Windows.Forms.CheckBox();
             this.RegionComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.RegionTemplateOverridebtn = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -240,6 +242,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.projectToolStripMenuItem,
             this.editToolStripMenuItem1,
@@ -248,6 +251,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1088, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
@@ -305,7 +309,8 @@
             this.editServerConfigurationToolStripMenuItem,
             this.editFoliageAttachmentOverrideToolStripMenuItem,
             this.editNodeTemplateToolStripMenuItem,
-            this.editRegionCategoriesToolStripMenuItem});
+            this.editRegionCategoriesToolStripMenuItem,
+            this.editRegionTemplateToolStripMenuItem});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
@@ -380,6 +385,13 @@
             this.editRegionCategoriesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editRegionCategoriesToolStripMenuItem.Text = "Edit Region Categories";
             this.editRegionCategoriesToolStripMenuItem.Click += new System.EventHandler(this.editRegionCategoriesToolStripMenuItem_Click);
+            // 
+            // editRegionTemplateToolStripMenuItem
+            // 
+            this.editRegionTemplateToolStripMenuItem.Name = "editRegionTemplateToolStripMenuItem";
+            this.editRegionTemplateToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.editRegionTemplateToolStripMenuItem.Text = "Edit Regions Templates";
+            this.editRegionTemplateToolStripMenuItem.Click += new System.EventHandler(this.editRegionTemplateToolStripMenuItem_Click);
             // 
             // exportToolStripMenuItem
             // 
@@ -588,7 +600,7 @@
             // chooseTileBtn
             // 
             this.chooseTileBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chooseTileBtn.Location = new System.Drawing.Point(584, 752);
+            this.chooseTileBtn.Location = new System.Drawing.Point(445, 751);
             this.chooseTileBtn.Name = "chooseTileBtn";
             this.chooseTileBtn.Size = new System.Drawing.Size(156, 23);
             this.chooseTileBtn.TabIndex = 15;
@@ -640,7 +652,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(216, 747);
+            this.label2.Location = new System.Drawing.Point(216, 728);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 21;
@@ -649,7 +661,7 @@
             // cellImageSizetxtbox
             // 
             this.cellImageSizetxtbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cellImageSizetxtbox.Location = new System.Drawing.Point(301, 744);
+            this.cellImageSizetxtbox.Location = new System.Drawing.Point(301, 724);
             this.cellImageSizetxtbox.Name = "cellImageSizetxtbox";
             this.cellImageSizetxtbox.Size = new System.Drawing.Size(47, 20);
             this.cellImageSizetxtbox.TabIndex = 22;
@@ -662,7 +674,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 747);
+            this.label3.Location = new System.Drawing.Point(213, 749);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 23;
@@ -671,7 +683,7 @@
             // atlasImageSizeTxtBox
             // 
             this.atlasImageSizeTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.atlasImageSizeTxtBox.Location = new System.Drawing.Point(443, 744);
+            this.atlasImageSizeTxtBox.Location = new System.Drawing.Point(301, 746);
             this.atlasImageSizeTxtBox.Name = "atlasImageSizeTxtBox";
             this.atlasImageSizeTxtBox.Size = new System.Drawing.Size(47, 20);
             this.atlasImageSizeTxtBox.TabIndex = 24;
@@ -922,7 +934,7 @@
             // chooseTradeWindOverlayBtn
             // 
             this.chooseTradeWindOverlayBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.chooseTradeWindOverlayBtn.Location = new System.Drawing.Point(585, 728);
+            this.chooseTradeWindOverlayBtn.Location = new System.Drawing.Point(446, 727);
             this.chooseTradeWindOverlayBtn.Name = "chooseTradeWindOverlayBtn";
             this.chooseTradeWindOverlayBtn.Size = new System.Drawing.Size(155, 23);
             this.chooseTradeWindOverlayBtn.TabIndex = 43;
@@ -961,7 +973,7 @@
             this.RegionComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.RegionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RegionComboBox.FormattingEnabled = true;
-            this.RegionComboBox.Location = new System.Drawing.Point(496, 752);
+            this.RegionComboBox.Location = new System.Drawing.Point(357, 751);
             this.RegionComboBox.Name = "RegionComboBox";
             this.RegionComboBox.Size = new System.Drawing.Size(86, 21);
             this.RegionComboBox.TabIndex = 97;
@@ -970,17 +982,29 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(497, 733);
+            this.label6.Location = new System.Drawing.Point(358, 732);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 98;
             this.label6.Text = "Regions:";
+            // 
+            // RegionTemplateOverridebtn
+            // 
+            this.RegionTemplateOverridebtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.RegionTemplateOverridebtn.Location = new System.Drawing.Point(604, 751);
+            this.RegionTemplateOverridebtn.Name = "RegionTemplateOverridebtn";
+            this.RegionTemplateOverridebtn.Size = new System.Drawing.Size(155, 23);
+            this.RegionTemplateOverridebtn.TabIndex = 99;
+            this.RegionTemplateOverridebtn.Text = "Region Template Override";
+            this.RegionTemplateOverridebtn.UseVisualStyleBackColor = true;
+            this.RegionTemplateOverridebtn.Click += new System.EventHandler(this.RegionTemplateOverridebtn_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 775);
+            this.Controls.Add(this.RegionTemplateOverridebtn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.RegionComboBox);
             this.Controls.Add(this.showPortalNodesChckBox);
@@ -1033,7 +1057,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(1104, 684);
+            this.MinimumSize = new System.Drawing.Size(1104, 683);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Island Editor";
@@ -1136,6 +1160,8 @@
         private System.Windows.Forms.ToolStripMenuItem editRegionCategoriesToolStripMenuItem;
         private System.Windows.Forms.ComboBox RegionComboBox;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ToolStripMenuItem editRegionTemplateToolStripMenuItem;
+        private System.Windows.Forms.Button RegionTemplateOverridebtn;
     }
 }
 

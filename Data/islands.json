@@ -579,8 +579,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -630,7 +629,7 @@
     "singleSpawnPointY": -43301.0,
     "singleSpawnPointZ": 1650.0,
     "maxIslandClaimFlagZ": 4200.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_G_TR": {
     "name": "Cay_G_TR",
@@ -2091,7 +2090,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "Freeport"
+      "Freeport",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -2141,7 +2141,7 @@
     "singleSpawnPointY": 20343.0,
     "singleSpawnPointZ": 723.0,
     "maxIslandClaimFlagZ": 3600.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_A_WR": {
     "name": "Cay_A_WR",
@@ -23914,6 +23914,89 @@
     "landscapeMaterialOverride": 0,
     "sublevelNames": [
       "Billboard_Gyza"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Mnt_W_DST": {
+    "name": "Mnt_W_DST",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_W_DST_img.png",
+    "landscapeMaterialOverride": 0,
+    "sublevelNames": [
+      "Mnt_Wonder_Desert"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Mnt_Wonder_Desert": {
+    "name": "Mnt_Wonder_Desert",
+    "x": 408000.0,
+    "y": 408000.0,
+    "imagePath": "./IslandImages/Mnt_Wonder_Desert_img.png",
+    "landscapeMaterialOverride": -1,
+    "sublevelNames": [
+      "Mnt_Wonder_Desert"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Mnt_D_W": {
+    "name": "Mnt_D_W",
+    "x": 635000.0,
+    "y": 635000.0,
+    "imagePath": "./IslandImages/1Wonder_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "Mnt_Wonder_Desert",
+      "Mnt_Wonder_Desert_Farhest",
+      "Mnt_Wonder_Desert_Far",
+      "Mnt_Wonder_Desert_Near02",
+      "Mnt_Wonder_Desert_Near01",
+      "Mnt_Wonder_Marine_Warm_Near"
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [],

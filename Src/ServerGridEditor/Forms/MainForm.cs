@@ -480,7 +480,9 @@ namespace ServerGridEditor
             //Draw background
             if (mainForm.regionsTile != null && mainForm.regionsTileBrush != null)
             {
-                mainForm.PopulateMapRegions();
+
+                if (!forExport)
+                    mainForm.PopulateMapRegions();
 
                 lock (mainForm.MapRegionsList)
                     lock (mainForm.regionsTileBrush)
@@ -709,8 +711,8 @@ namespace ServerGridEditor
                     mainForm.tradeWindOverlayBrush.ScaleTransform(scaleX, scaleY);
                     g.FillRectangle(mainForm.tradeWindOverlayBrush, new Rectangle(0, 0, (int)wmaxX, (int)wmaxY));
                 }
-
-                mainForm.PopulateMapRegions();
+                if (!forExport)
+                    mainForm.PopulateMapRegions();
 
                 foreach (KeyValuePair<string, Image> regionTradeWindOverlay in mainForm.regionsTradeWindOverlay)
                 {
@@ -3059,6 +3061,7 @@ namespace ServerGridEditor
             saveFileDialog.FileName = "MapImg." + imageExtension;
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                PopulateMapRegions();
                 ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
                 ExportRegionImages(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
             }
@@ -3075,7 +3078,7 @@ namespace ServerGridEditor
                 "Hold middle mouse + drag (Scroll map)\n" + 
                 "Shift + drag (Create discovery zone)\n" +
                 "Shift + click on discovery zone (Edit discovery zone)\n" +
-                "L while hovered on cell (Open locks form)\n"+
+                "L while hovered on cell (Open locks form)\n" +
                 "P while on map (Spawn ship path)\n" +
                 "T while on map (Spawn trade wind)\n" +
                 "Q while on map (Spawn perpetual portal)\n" +
@@ -3653,6 +3656,7 @@ namespace ServerGridEditor
                     if (!Directory.Exists(gameMapExportDir))
                         Directory.CreateDirectory(gameMapExportDir);
 
+                    PopulateMapRegions();
                     ExportImage(gameMapExportDir + "/MapImg." + extension, -1, -1, true, editorConfig.AtlasImagesRes);
                     ExportCellImages(gameMapExportDir + string.Format("/{0}." + extension, cellImgName));
                     ExportRegionImages(gameMapExportDir + "/MapImg." + extension, editorConfig.AtlasImagesRes);
@@ -4073,6 +4077,7 @@ namespace ServerGridEditor
             saveFileDialog.FileName = "MapImg_TradeWinds.png";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
+                PopulateMapRegions();
                 ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes, true);
                 ExportRegionTradewindOverlays(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
             }
@@ -4179,14 +4184,15 @@ namespace ServerGridEditor
         }
 
 
-        public void PopulateMapRegions()
+        public void PopulateMapRegions(bool bIsExporting = false)
         {
             if (MapRegionsList.Count > 0 && MapRegionsList.Count == regionsTile.Count && !PopulateMapRegionsDirty)
                 return;
             PopulateMapRegionsDirty = false;
             //Project currentProject = mainForm.currentProject;
             MapRegionsList.Clear();
-            RegionComboBox.Items.Clear();
+            if(!bIsExporting)
+                RegionComboBox.Items.Clear();
 
             int maxDimension = GetMaxMainRegionDimension(currentProject);
             MapRegion MainRegion = new MapRegion();
@@ -4196,7 +4202,8 @@ namespace ServerGridEditor
             MainRegion.EndX = maxDimension - 1;
             MainRegion.EndY = maxDimension - 1;
             MapRegionsList.Add(MainRegion.AtlasID, MainRegion);
-            RegionComboBox.Items.Add(MainRegion.AtlasID);
+            if(!bIsExporting)
+                RegionComboBox.Items.Add(MainRegion.AtlasID);
             foreach (Server myServer in currentProject.servers)
                 if (myServer.hiddenAtlasId != null && myServer.hiddenAtlasId.Length > 0)
                     if (!MapRegionsList.ContainsKey(myServer.hiddenAtlasId))
@@ -4208,12 +4215,15 @@ namespace ServerGridEditor
                         myRegion.EndX = GetLargestServerXWithSameHiddenAtlasId(myServer);
                         myRegion.EndY = GetLargestServerYWithSameHiddenAtlasId(myServer);
                         MapRegionsList.Add(myServer.hiddenAtlasId, myRegion);
-                        RegionComboBox.Items.Add(myRegion.AtlasID);
+                        if (!bIsExporting)
+                            RegionComboBox.Items.Add(myRegion.AtlasID);
                     }
-
-            RegionComboBox.Text = MainRegion.AtlasID;
-            RegionComboBox.SelectedItem = MainRegion.AtlasID;
-            RegionComboBox.Update();
+            if (!bIsExporting)
+            {
+                RegionComboBox.Text = MainRegion.AtlasID;
+                RegionComboBox.SelectedItem = MainRegion.AtlasID;
+                RegionComboBox.Update();
+            }
 
             List<string> RegionTileKeysToRemove = new List<string>();
             foreach (KeyValuePair<string, Image> regionTile in regionsTile)
@@ -4225,8 +4235,8 @@ namespace ServerGridEditor
                 regionsTile.Remove(regionTileKey);
                 regionsTileBrush.Remove(regionTileKey);
             }
-
-            this.Update();
+            if(!bIsExporting)
+                this.Update();
         }
 
         private void showPortalNodesChckBox_CheckedChanged(object sender, EventArgs e)
@@ -4249,7 +4259,37 @@ namespace ServerGridEditor
             editRegionsCategories.ShowDialog();
         }
 
+        private void editRegionTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsTemplates editRegionsTemplates = new EditRegionsTemplates(this);
+            editRegionsTemplates.ShowDialog();
+        }
 
+        public List<string> GetRegionNames()
+        {
+            List<string> RegionsNames = new List<string>();
+            foreach(string RegionName in RegionComboBox.Items)
+            {
+                RegionsNames.Add(RegionName);
+            }
+            return RegionsNames;
+        }
+
+        private void RegionTemplateOverridebtn_Click(object sender, EventArgs e)
+        {
+            AppliedRegionTemplateData serverTemplate = currentProject.GetAppliedRegionTemplateByName(RegionComboBox.Text);
+            if (serverTemplate != null)
+            {
+                string originalName = serverTemplate.name;
+                var editForm = new EditAppliedRegionTemplate(this, serverTemplate);
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    if (serverTemplate.name != originalName)
+                    {
+                    }
+                }
+            }
+        }
     }
 
     public class Config
