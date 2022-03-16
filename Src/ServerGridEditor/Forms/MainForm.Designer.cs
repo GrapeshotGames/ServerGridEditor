@@ -71,7 +71,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scaleLbl = new System.Windows.Forms.Label();
-            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.showServerInfoCheckbox = new System.Windows.Forms.CheckBox();
             this.showDiscoZoneInfoCheckbox = new System.Windows.Forms.CheckBox();
@@ -268,20 +267,20 @@
             this.editToolStripMenuItem,
             this.saveToolStripMenuItem});
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
-            this.projectToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.projectToolStripMenuItem.Text = "Project";
             // 
             // createToolStripMenuItem
             // 
             this.createToolStripMenuItem.Name = "createToolStripMenuItem";
-            this.createToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.createToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.createToolStripMenuItem.Text = "Create";
             this.createToolStripMenuItem.Click += new System.EventHandler(this.createToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -289,7 +288,7 @@
             // 
             this.editToolStripMenuItem.Enabled = false;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -297,7 +296,7 @@
             // 
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -316,27 +315,27 @@
             this.editRegionCategoriesToolStripMenuItem,
             this.editRegionTemplateToolStripMenuItem});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
             // 
             // editSpawnerTemplatesToolStripMenuItem
             // 
             this.editSpawnerTemplatesToolStripMenuItem.Name = "editSpawnerTemplatesToolStripMenuItem";
-            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editSpawnerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editSpawnerTemplatesToolStripMenuItem.Text = "Edit Spawner Templates";
             this.editSpawnerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editSpawnerTemplatesToolStripMenuItem_Click);
             // 
             // editAllDiscoveryZonesToolStripMenuItem
             // 
             this.editAllDiscoveryZonesToolStripMenuItem.Name = "editAllDiscoveryZonesToolStripMenuItem";
-            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editAllDiscoveryZonesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editAllDiscoveryZonesToolStripMenuItem.Text = "Edit Discovery Zones";
             this.editAllDiscoveryZonesToolStripMenuItem.Click += new System.EventHandler(this.editAllDiscoveryZonesToolStripMenuItem_Click);
             // 
             // editSpawnPointsToolStripMenuItem
             // 
             this.editSpawnPointsToolStripMenuItem.Name = "editSpawnPointsToolStripMenuItem";
-            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editSpawnPointsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editSpawnPointsToolStripMenuItem.Text = "Edit Spawn Regions";
             this.editSpawnPointsToolStripMenuItem.Click += new System.EventHandler(this.editSpawnPointsToolStripMenuItem_Click);
             // 
@@ -344,21 +343,21 @@
             // 
             this.editServerTemplatesToolStripMenuItem.Enabled = false;
             this.editServerTemplatesToolStripMenuItem.Name = "editServerTemplatesToolStripMenuItem";
-            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editServerTemplatesToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editServerTemplatesToolStripMenuItem.Text = "Edit Server Templates";
             this.editServerTemplatesToolStripMenuItem.Click += new System.EventHandler(this.editServerTemplatesToolStripMenuItem_Click);
             // 
             // editLocksToolStripMenuItem
             // 
             this.editLocksToolStripMenuItem.Name = "editLocksToolStripMenuItem";
-            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.editLocksToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.editLocksToolStripMenuItem.Text = "Edit Locks";
             this.editLocksToolStripMenuItem.Click += new System.EventHandler(this.editLocksToolStripMenuItem_Click);
             // 
             // cullInvalidPathsToolStripMenuItem
             // 
             this.cullInvalidPathsToolStripMenuItem.Name = "cullInvalidPathsToolStripMenuItem";
-            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.cullInvalidPathsToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
             this.cullInvalidPathsToolStripMenuItem.Text = "Cull Invalid Paths";
             this.cullInvalidPathsToolStripMenuItem.Click += new System.EventHandler(this.cullInvalidPathsToolStripMenuItem_Click);
             // 
@@ -483,13 +482,13 @@
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlsToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // controlsToolStripMenuItem
             // 
             this.controlsToolStripMenuItem.Name = "controlsToolStripMenuItem";
-            this.controlsToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.controlsToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.controlsToolStripMenuItem.Text = "Controls";
             this.controlsToolStripMenuItem.Click += new System.EventHandler(this.controlsToolStripMenuItem_Click);
             // 
@@ -1125,7 +1124,6 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.Label scaleLbl;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mapImageToolStripMenuItem;

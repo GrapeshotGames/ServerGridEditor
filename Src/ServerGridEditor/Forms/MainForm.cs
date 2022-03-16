@@ -20,6 +20,7 @@ using ServerGridEditor.Code;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 using AtlasGridDataLibrary;
+using System.Text.RegularExpressions;
 
 namespace ServerGridEditor
 {
@@ -240,12 +241,13 @@ namespace ServerGridEditor
             List<string> SortedIslands = islands.Keys.ToList();
             SortedIslands.Sort();
 
+            Regex rx = new Regex(this.txtSearch.Text, RegexOptions.Compiled | RegexOptions.IgnoreCase);
             foreach (string islandKey in SortedIslands)
             {
                 Island island = islands[islandKey];
                 if (!String.IsNullOrEmpty(this.txtSearch.Text))
                 {
-                    if (island.name.IndexOf(this.txtSearch.Text, StringComparison.CurrentCultureIgnoreCase) < 0)
+                    if (!rx.IsMatch(island.name))
                     {
                         continue;
                     }
@@ -2727,7 +2729,7 @@ namespace ServerGridEditor
 
                 modifiedFilePath = modifiedFilePath + "Region" + entry.Key + "." + GetImagesExtension();
                 tgaImg = new MagickImage(image);
-                tgaImg.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
+                tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
                 tgaImg.Quality = editorConfig.ImageQuality;
                 tgaImg.Write(modifiedFilePath);
                 tgaImg.Dispose();
@@ -2759,7 +2761,7 @@ namespace ServerGridEditor
 
                 modifiedFilePath = modifiedFilePath + "MapImg_TradeWinds_Region" + entry.Key + "." + GetImagesExtension();
                 tgaImg = new MagickImage(image);
-                tgaImg.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
+                tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
                 tgaImg.Quality = editorConfig.ImageQuality;
                 tgaImg.Write(modifiedFilePath);
                 tgaImg.Dispose();
@@ -2833,7 +2835,7 @@ namespace ServerGridEditor
                         };
                         IMagickImage atlasMontage = images.Montage(montageSettings);
 
-                        atlasMontage.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
+                        atlasMontage.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
                         atlasMontage.Depth = 16;
                         atlasMontage.Quality = editorConfig.ImageQuality;
                         //filePath = filePath.Replace(".png", ".tiff").Replace(".jpg", ".tiff");
@@ -2910,9 +2912,13 @@ namespace ServerGridEditor
             }
 
             tgaImg = new MagickImage(image);
-            tgaImg.Format = filePath.EndsWith("png") ? MagickFormat.Png : MagickFormat.Jpeg;
+            tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
-            tgaImg.Write(filePath);
+            //using(var fi = new FileInfo)
+            using (var fs = File.Open(filePath, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                tgaImg.Write(fs);
+            }
             tgaImg.Dispose();
             tgaImg = null;
 
@@ -2927,7 +2933,8 @@ namespace ServerGridEditor
             string Extension = Path.GetExtension(path);
             string FilenameWithoutExtension = Path.GetFileNameWithoutExtension(path);
 
-            List<Task> DrawTasks = new List<Task>();
+#warning shitty parallelism doesn't work if underlying stuff needs to access UI objects that, by definition, have thread affinity!
+            //List<Task> DrawTasks = new List<Task>();
             for (int i = 0; i < currentProject.numOfCellsX; i++)
             {
                 for (int j = 0; j < currentProject.numOfCellsY; j++)
@@ -2935,15 +2942,15 @@ namespace ServerGridEditor
                     int icopy = i;
                     int jcopy = j;
                     string CellFile = FullPath + string.Format(cellImageNameTemplate, FilenameWithoutExtension , i, j, Extension);
-                    var DrawTask = Task.Run(async () =>
-                    {
+                    //var DrawTask = Task.Run(async () =>
+                    //{
                         ExportImage(CellFile, icopy, jcopy, true, editorConfig.CellImagesRes);
-                    });
-                    DrawTasks.Add(DrawTask);
+                    //});
+                    //DrawTasks.Add(DrawTask);
                 }
             }
-            for (int i = 0; i < DrawTasks.Count; i++)
-                DrawTasks[i].Wait();
+            //for (int i = 0; i < DrawTasks.Count; i++)
+            //    DrawTasks[i].Wait();
         }
 
         ///////////////////////////Action Handlers///////////////////////////////////
@@ -2996,13 +3003,15 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            saveFileDialog.Filter = "json files (*.json)|*.json";
-            saveFileDialog.FileName = actualJsonFile;
-            saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                File.WriteAllText(saveFileDialog.FileName, currentProject.Serialize(this));
+                saveFileDialog.Filter = "json files (*.json)|*.json";
+                saveFileDialog.FileName = actualJsonFile;
+                saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, currentProject.Serialize(this));
+                }
             }
 
         }
@@ -3071,17 +3080,23 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
             string imageExtension = GetImagesExtension();
-            saveFileDialog.Filter = imageExtension == "png" ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
-            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
-            if (!Directory.Exists(ExportPath))
-                Directory.CreateDirectory(ExportPath);
-            saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "MapImg." + imageExtension;
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                PopulateMapRegions();
-                ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
-                ExportRegionImages(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                saveFileDialog.Filter = String.Equals(imageExtension, "png", StringComparison.OrdinalIgnoreCase) ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "MapImg." + imageExtension;
+                string fileName;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = saveFileDialog.FileName;
+                    saveFileDialog.FileName = null;
+                    PopulateMapRegions();
+                    ExportImage(fileName, -1, -1, true, editorConfig.AtlasImagesRes);
+                    ExportRegionImages(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                }
             }
         }
 
@@ -3521,15 +3536,18 @@ namespace ServerGridEditor
                 return;
 
             string imageExtension = GetImagesExtension();
-            saveFileDialog.Filter = imageExtension == "png" ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
-            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
-            if (!Directory.Exists(ExportPath))
-                Directory.CreateDirectory(ExportPath);
-            saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "CellImg";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                ExportCellImages(saveFileDialog.FileName);
+                saveFileDialog.Filter = String.Equals(imageExtension, "png", StringComparison.OrdinalIgnoreCase) ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "CellImg";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportCellImages(saveFileDialog.FileName);
+                }
             }
         }
 
@@ -4092,17 +4110,20 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "PNG files (*.png)|*.png";
-            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
-            if (!Directory.Exists(ExportPath))
-                Directory.CreateDirectory(ExportPath);
-            saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "MapImg_TradeWinds.png";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                PopulateMapRegions();
-                ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes, true);
-                ExportRegionTradewindOverlays(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                saveFileDialog.Filter = "PNG files (*.png)|*.png";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "MapImg_TradeWinds.png";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    PopulateMapRegions();
+                    ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes, true);
+                    ExportRegionTradewindOverlays(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                }
             }
         }
 

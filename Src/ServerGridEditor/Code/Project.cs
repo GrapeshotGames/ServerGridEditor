@@ -934,8 +934,10 @@ namespace ServerGridEditor
                 AuthListURL = deserializedProject.AuthListURL;
                 MetaWorldURL = deserializedProject.MetaWorldURL;
                 MapImagesExtension = deserializedProject.MapImagesExtension;
-                if (MapImagesExtension != "png" && MapImagesExtension != "jpg")
+                if (!String.Equals(MapImagesExtension, "png", StringComparison.OrdinalIgnoreCase) && !String.Equals(MapImagesExtension, "jpg", StringComparison.OrdinalIgnoreCase))
+                {
                     MapImagesExtension = "jpg";
+                }
                 coordsScaling = deserializedProject.coordsScaling;
                 showServerInfo = deserializedProject.showServerInfo;
                 showDiscoZoneInfo = deserializedProject.showDiscoZoneInfo;

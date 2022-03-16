@@ -48,7 +48,7 @@ namespace ServerGridEditor
                 mapImageURLTxtBox.Text = editedProject.MapImageURL;
                 OveallImageURLTxtBox.Text = editedProject.OverallImageURL;
                 metaWorldURLTxtBox.Text = editedProject.MetaWorldURL;
-                ImagesTypeComboBox.SelectedIndex = editedProject.MapImagesExtension == "png" ? 1 : 0;
+                ImagesTypeComboBox.SelectedIndex = String.Equals(editedProject.MapImagesExtension, "png", StringComparison.OrdinalIgnoreCase) ? 1 : 0;
                 
                 authListURLTxtBox.Text = editedProject.AuthListURL;
                 baseServerArgsTxtBox.Text = editedProject.BaseServerArgs;
@@ -226,7 +226,7 @@ namespace ServerGridEditor
                 editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;
                 editedProject.MetaWorldURL = editedProject.MetaWorldURL.Trim();
 
-                editedProject.MapImagesExtension = (string)ImagesTypeComboBox.SelectedValue == "PNG" ? "png" : "jpg";
+                editedProject.MapImagesExtension = String.Equals((string)ImagesTypeComboBox.SelectedItem, "PNG", StringComparison.OrdinalIgnoreCase) ? "png" : "jpg";
 
                 editedProject.BaseServerArgs = baseServerArgsTxtBox.Text;
                 editedProject.BaseServerArgs = editedProject.BaseServerArgs.Trim();
