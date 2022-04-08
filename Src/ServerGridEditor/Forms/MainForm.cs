@@ -4334,6 +4334,18 @@ namespace ServerGridEditor
                 }
             }
         }
+
+        private void editRegionsTreasureMapOverrideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsTreasureMapOverride editRegionsTreasureMapOverride = new EditRegionsTreasureMapOverride(this);
+            editRegionsTreasureMapOverride.ShowDialog();
+        }
+
+        private void editRegionsOverworldLocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsOverworldLocations editRegionsOverworldLocations = new EditRegionsOverworldLocations(this);
+            editRegionsOverworldLocations.ShowDialog();
+        }
     }
 
     public class Config

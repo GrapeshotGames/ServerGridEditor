@@ -166,5 +166,32 @@ namespace ServerGridEditor.Forms
         {
             Close();
         }
+
+        private void CleanZeroSizeZonesButton_Click(object sender, EventArgs e)
+        {
+            for (int i = discoZonesGrid.Rows.Count - 1; i >=0; i--)
+            //foreach (DataGridViewRow row in discoZonesGrid.Rows)
+            {
+                DataGridViewRow row = discoZonesGrid.Rows[i];
+                if (row.Index == discoZonesGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                float sizeX = 0.0f;
+                if (row.Cells[zoneSizeX.Name].Value != null)
+                    float.TryParse(row.Cells[zoneSizeX.Name].Value.ToString(), out sizeX);
+
+                float sizeY = 0.0f;
+                if (row.Cells[zoneSizeY.Name].Value != null)
+                    float.TryParse(row.Cells[zoneSizeY.Name].Value.ToString(), out sizeY);
+
+                bool bIsManual = false;
+                if (row.Cells[IsManual.Name].Value != null)
+                    bool.TryParse(row.Cells[IsManual.Name].Value.ToString(), out bIsManual);
+                if ((sizeX < 0.00001f || sizeY < 0.00001f ) && !bIsManual)
+                    discoZonesGrid.Rows.Remove(row);
+            }
+
+            mainForm.Invalidate();
+
+        }
     }
 }

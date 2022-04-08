@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.discoZonesGrid = new System.Windows.Forms.DataGridView();
@@ -47,6 +47,7 @@
             this.LocY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ExplorerNoteIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.allowSea = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.CleanZeroSizeZonesButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.discoZonesGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,8 +128,8 @@
             // zoneId
             // 
             this.zoneId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.zoneId.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.zoneId.DefaultCellStyle = dataGridViewCellStyle1;
             this.zoneId.HeaderText = "Id";
             this.zoneId.Name = "zoneId";
             this.zoneId.Width = 41;
@@ -143,8 +144,8 @@
             // zoneSizeX
             // 
             this.zoneSizeX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.zoneSizeX.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.zoneSizeX.DefaultCellStyle = dataGridViewCellStyle2;
             this.zoneSizeX.HeaderText = "SizeX";
             this.zoneSizeX.MaxInputLength = 2147483647;
             this.zoneSizeX.Name = "zoneSizeX";
@@ -184,7 +185,6 @@
             this.LocX.HeaderText = "LocX";
             this.LocX.Name = "LocX";
             this.LocX.Visible = false;
-            this.LocX.Width = 57;
             // 
             // LocY
             // 
@@ -192,7 +192,6 @@
             this.LocY.HeaderText = "LocY";
             this.LocY.Name = "LocY";
             this.LocY.Visible = false;
-            this.LocY.Width = 57;
             // 
             // ExplorerNoteIndex
             // 
@@ -209,6 +208,18 @@
             this.allowSea.Name = "allowSea";
             this.allowSea.Width = 56;
             // 
+            // CleanZeroSizeZonesButton
+            // 
+            this.CleanZeroSizeZonesButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.CleanZeroSizeZonesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CleanZeroSizeZonesButton.Location = new System.Drawing.Point(12, 489);
+            this.CleanZeroSizeZonesButton.Name = "CleanZeroSizeZonesButton";
+            this.CleanZeroSizeZonesButton.Size = new System.Drawing.Size(184, 35);
+            this.CleanZeroSizeZonesButton.TabIndex = 6;
+            this.CleanZeroSizeZonesButton.Text = "Clean Zero-Size Zones";
+            this.CleanZeroSizeZonesButton.UseVisualStyleBackColor = true;
+            this.CleanZeroSizeZonesButton.Click += new System.EventHandler(this.CleanZeroSizeZonesButton_Click);
+            // 
             // EditDiscoZonesForm
             // 
             this.AcceptButton = this.saveBtn;
@@ -216,6 +227,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(1030, 536);
+            this.Controls.Add(this.CleanZeroSizeZonesButton);
             this.Controls.Add(this.discoZonesGrid);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
@@ -250,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LocY;
         private System.Windows.Forms.DataGridViewTextBoxColumn ExplorerNoteIndex;
         private System.Windows.Forms.DataGridViewCheckBoxColumn allowSea;
+        private System.Windows.Forms.Button CleanZeroSizeZonesButton;
     }
 }

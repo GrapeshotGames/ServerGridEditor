@@ -43,6 +43,20 @@ namespace ServerGridEditor
         public float billboardsOffsetX = 0;
         public float billboardsOffsetY = 0;
         public float billboardsOffsetZ = 0;
+
+        public int OverrideDestNorthX = -1;
+        public int OverrideDestNorthY = -1;
+        public int OverrideDestSouthX = -1;
+        public int OverrideDestSouthY = -1;
+        public int OverrideDestEastX = -1;
+        public int OverrideDestEastY = -1;
+        public int OverrideDestWestX = -1;
+        public int OverrideDestWestY = -1;
+
+        public int MaxPlayingSeconds = 0;
+        public int MaxPlayingSecondsKickToServerX = -1;
+        public int MaxPlayingSecondsKickToServerY = -1;
+        
         public int skyStyleIndex;
         public float serverIslandPointsMultiplier = 1.0f;
         public string ServerCustomDatas1 = "";

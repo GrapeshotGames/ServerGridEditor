@@ -113,6 +113,18 @@
     <Compile Include="Forms\EditFoliageAttachmentOverride.Designer.cs">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditRegionsOverworldLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsOverworldLocations.Designer.cs">
+      <DependentUpon>EditRegionsOverworldLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTreasureMapOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTreasureMapOverride.Designer.cs">
+      <DependentUpon>EditRegionsTreasureMapOverride.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditRegionsTemplates.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,6 +326,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditFoliageAttachmentOverride.resx">
       <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsOverworldLocations.resx">
+      <DependentUpon>EditRegionsOverworldLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsTreasureMapOverride.resx">
+      <DependentUpon>EditRegionsTreasureMapOverride.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditRegionsTemplates.resx">
       <DependentUpon>EditRegionsTemplates.cs</DependentUpon>
