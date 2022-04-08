@@ -2090,8 +2090,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "Freeport",
-      "CopperGroup"
+      "RookieGroup",
+      "Freeport"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10906,7 +10906,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -10965,7 +10968,7 @@
     "singleSpawnPointY": -47125.0,
     "singleSpawnPointZ": 800.0,
     "maxIslandClaimFlagZ": 4900.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_X_WU": {
     "name": "Mnt_X_WU",
@@ -11129,8 +11132,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
-      "SilverGroup"
+      "RookieGroup",
+      "Freeport"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -12062,8 +12065,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "07_Equator",
-      "CobaltGroup"
+      "RookieGroup",
+      "Freeport"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -12130,7 +12133,10 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -12195,7 +12201,7 @@
     "singleSpawnPointY": 26623.0,
     "singleSpawnPointZ": 700.0,
     "maxIslandClaimFlagZ": 4800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_A_EE": {
     "name": "Cay_A_EE",
@@ -13185,7 +13191,7 @@
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
-      "MasterIBL_Polar",
+      "MasterIBL_EasternTundra",
       "MasterIBL_Polar_IceCavern"
     ],
     "treasureMapSpawnPoints": [
@@ -13316,7 +13322,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13374,7 +13383,7 @@
     "singleSpawnPointY": -42144.0,
     "singleSpawnPointZ": 1050.0,
     "maxIslandClaimFlagZ": 4900.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_J_CP_D": {
     "name": "Mnt_J_CP_D",
@@ -13390,7 +13399,10 @@
       "Mnt_J_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -13438,7 +13450,7 @@
     "singleSpawnPointY": -42144.0,
     "singleSpawnPointZ": 1050.0,
     "maxIslandClaimFlagZ": 4900.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_H_EE": {
     "name": "Cay_H_EE",
@@ -14205,7 +14217,10 @@
       "Mnt_H_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -14264,7 +14279,7 @@
     "singleSpawnPointY": 56574.0,
     "singleSpawnPointZ": 1800.0,
     "maxIslandClaimFlagZ": 5700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_A_CH_B": {
     "name": "Mnt_A_CH_B",
@@ -16153,7 +16168,7 @@
       "Islet_A_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -16186,7 +16201,7 @@
     "singleSpawnPointY": 11339.0,
     "singleSpawnPointZ": 550.0,
     "maxIslandClaimFlagZ": 3100.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Islet_A_WT_B": {
     "name": "Islet_A_WT_B",
@@ -16202,7 +16217,10 @@
       "Islet_A_Marine_Cold_Near"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "03_Temperate",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_Temperate",
       "MasterIBL_Temperate_Canopy",
@@ -16235,7 +16253,7 @@
     "singleSpawnPointY": 9072.0,
     "singleSpawnPointZ": 750.0,
     "maxIslandClaimFlagZ": 3100.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Islet_A_WT_C": {
     "name": "Islet_A_WT_C",
@@ -16557,7 +16575,7 @@
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
-      "MasterIBL_Polar",
+      "MasterIBL_EasternTundra",
       "MasterIBL_Polar_IceCavern"
     ],
     "treasureMapSpawnPoints": [
@@ -16635,7 +16653,7 @@
       "-16418.015625 28448.912109 3484.189941",
       "-36857.722656 -29421.833984 3030.274658"
     ],
-    "minTreasureQuality": -1.0,
+    "minTreasureQuality": 10000.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
@@ -16672,7 +16690,7 @@
       "-25496.908203 -6325.657715 4984.520508",
       "-15396.386719 -15599.259766 3087.370361"
     ],
-    "minTreasureQuality": -1.0,
+    "minTreasureQuality": 10000.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
@@ -16706,7 +16724,7 @@
       "-29527.541016 -11736.549805 4572.254395",
       "-37284.390625 -23790.185547 3706.704590"
     ],
-    "minTreasureQuality": -1.0,
+    "minTreasureQuality": 10000.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
@@ -16744,7 +16762,7 @@
       "-16185.845703 18370.136719 3817.724609",
       "-13326.024414 29035.896484 2992.592529"
     ],
-    "minTreasureQuality": -1.0,
+    "minTreasureQuality": 10000.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
@@ -16781,7 +16799,7 @@
       "-24670.058594 -4330.137695 3759.811523",
       "-32996.347656 -18050.933594 3239.875000"
     ],
-    "minTreasureQuality": -1.0,
+    "minTreasureQuality": 10000.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
@@ -16917,7 +16935,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -16964,7 +16985,7 @@
     "singleSpawnPointY": -70408.0,
     "singleSpawnPointZ": 1350.0,
     "maxIslandClaimFlagZ": 6800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AH_EU": {
     "name": "Mnt_AH_EU",
@@ -16985,7 +17006,7 @@
       "CopperGroup"
     ],
     "extraSublevels": [
-      "MasterIBL_EasternTundra",
+      "MasterIBL_Polar",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
       "MasterIBL_EasternTundra_Canopy_Paulownia",
       "MasterIBL_EasternTundra_Canopy_RedMaple"
@@ -18535,8 +18556,7 @@
     "extraSublevels": [
       "MasterIBL_Tropical",
       "MasterIBL_Tropical_Canopy_Oak",
-      "MasterIBL_Tropical_Canopy_RE",
-      "MasterIBL_Equator_Canopy"
+      "MasterIBL_Tropical_Canopy_RE"
     ],
     "treasureMapSpawnPoints": [
       "13227.314453 -58821.699219 6857.964355",
@@ -20558,7 +20578,7 @@
       "CopperGroup"
     ],
     "extraSublevels": [
-      "MasterIBL_EasternTundra",
+      "MasterIBL_Polar",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
       "MasterIBL_EasternTundra_Canopy_Paulownia",
       "MasterIBL_EasternTundra_Canopy_RedMaple"
@@ -22114,7 +22134,10 @@
       "Mnt_AB_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "SilverGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -22163,7 +22186,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 6800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AD_CP": {
     "name": "Mnt_AD_CP",
@@ -22244,7 +22267,10 @@
       "Mnt_Y_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "05_Tundra",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -22295,7 +22321,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 4800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AV_EU_B": {
     "name": "Mnt_AV_EU_B",
@@ -22316,7 +22342,7 @@
       "CopperGroup"
     ],
     "extraSublevels": [
-      "MasterIBL_EasternTundra",
+      "MasterIBL_Polar",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
       "MasterIBL_EasternTundra_Canopy_Paulownia",
       "MasterIBL_EasternTundra_Canopy_RedMaple"
@@ -24001,6 +24027,43 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [],
     "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": true,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Cove_A_Tor": {
+    "name": "Cove_A_Tor",
+    "x": 255000.0,
+    "y": 255000.0,
+    "imagePath": "./IslandImages/Cove_A_Tor_img.png",
+    "landscapeMaterialOverride": 8,
+    "sublevelNames": [
+      "Cove_A",
+      "Cove_A_Far",
+      "Cove_A_Farthest",
+      "Cove_A_Marine_Warm_Near",
+      "Cove_A_Near"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [
+      "RookieGroup",
+      "Freeport"
+    ],
+    "extraSublevels": [
+      "MasterIBL_Tropical",
+      "MasterIBL_Tropical_Canopy_Oak",
+      "MasterIBL_Tropical_Canopy_RE"
+    ],
     "minTreasureQuality": -1.0,
     "maxTreasureQuality": -1.0,
     "useNpcVolumesForTreasures": false,

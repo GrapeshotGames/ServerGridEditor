@@ -45,6 +45,23 @@ namespace ServerGridEditor
             BillboardsOffsetXTextBox.Text = targetServer.billboardsOffsetX.ToString();
             BillboardsOffsetYTextBox.Text = targetServer.billboardsOffsetY.ToString();
             BillboardsOffsetZTextBox.Text = targetServer.billboardsOffsetZ.ToString();
+
+            OverrideDestNorthXTextBox.Text = targetServer.OverrideDestNorthX >= 0 && (targetServer.OverrideDestNorthX < mainForm.currentProject.numOfCellsX) ? targetServer.OverrideDestNorthX.ToString() : "";
+            OverrideDestNorthYTextBox.Text = targetServer.OverrideDestNorthY >= 0 && (targetServer.OverrideDestNorthY < mainForm.currentProject.numOfCellsY) ? targetServer.OverrideDestNorthY.ToString() : "";
+            OverrideDestSouthXTextBox.Text = targetServer.OverrideDestSouthX >= 0 && (targetServer.OverrideDestSouthX < mainForm.currentProject.numOfCellsX) ? targetServer.OverrideDestSouthX.ToString() : "";
+            OverrideDestSouthYTextBox.Text = targetServer.OverrideDestSouthY >= 0 && (targetServer.OverrideDestSouthY < mainForm.currentProject.numOfCellsY) ? targetServer.OverrideDestSouthY.ToString() : "";
+            OverrideDestEastXTextBox.Text = targetServer.OverrideDestEastX >= 0 && (targetServer.OverrideDestEastX < mainForm.currentProject.numOfCellsX) ? targetServer.OverrideDestEastX.ToString() : "";
+            OverrideDestEastYTextBox.Text = targetServer.OverrideDestEastY >= 0 && (targetServer.OverrideDestEastY < mainForm.currentProject.numOfCellsY) ? targetServer.OverrideDestEastY.ToString() : "";
+            OverrideDestWestXTextBox.Text = targetServer.OverrideDestWestX >= 0 && (targetServer.OverrideDestWestX < mainForm.currentProject.numOfCellsX) ? targetServer.OverrideDestWestX.ToString() : "";
+            OverrideDestWestYTextBox.Text = targetServer.OverrideDestWestY >= 0 && (targetServer.OverrideDestWestY < mainForm.currentProject.numOfCellsY) ? targetServer.OverrideDestWestY.ToString() : "";
+
+            MaxPlayingSecondsTextBox.Text = targetServer.MaxPlayingSeconds >= 0 ? targetServer.MaxPlayingSeconds.ToString() : "0";
+            MaxPlayingSecondsTextBox.Text = targetServer.MaxPlayingSeconds >= 0 ? targetServer.MaxPlayingSeconds.ToString() : "0";
+
+            MaxPlayingSecondsKickToServerXTextBox.Text = targetServer.MaxPlayingSecondsKickToServerX >= 0 && (targetServer.MaxPlayingSecondsKickToServerX < mainForm.currentProject.numOfCellsX) ? targetServer.MaxPlayingSecondsKickToServerX.ToString() : "";
+            MaxPlayingSecondsKickToServerYTextBox.Text = targetServer.MaxPlayingSecondsKickToServerY >= 0 && (targetServer.MaxPlayingSecondsKickToServerY < mainForm.currentProject.numOfCellsY) ? targetServer.MaxPlayingSecondsKickToServerY.ToString() : "";
+
+
             char[] charSeparators = new char[] { ',' };
             skyStyleIndexTxtBox.Text = targetServer.skyStyleIndex.ToString();
             serverIslandPointsMultiplierTxtBox.Text = targetServer.serverIslandPointsMultiplier.ToString();
@@ -106,7 +123,7 @@ namespace ServerGridEditor
             if (string.IsNullOrEmpty(targetServer.serverTemplateName))
                 templateComboBox.SelectedItem = "None";
 
-            if(templateComboBox.Items.Contains(targetServer.serverTemplateName))
+            if (templateComboBox.Items.Contains(targetServer.serverTemplateName))
                 templateComboBox.SelectedItem = targetServer.serverTemplateName;
             else
                 templateComboBox.SelectedItem = "None";
@@ -296,6 +313,20 @@ namespace ServerGridEditor
             targetServer.billboardsOffsetX = billboardsOffsetX;
             targetServer.billboardsOffsetY = billboardsOffsetY;
             targetServer.billboardsOffsetZ = billboardsOffsetZ;
+
+            targetServer.OverrideDestNorthX = EnsureValidCellX(OverrideDestNorthXTextBox.Text);
+            targetServer.OverrideDestNorthY = EnsureValidCellX(OverrideDestNorthYTextBox.Text);
+            targetServer.OverrideDestSouthX = EnsureValidCellX(OverrideDestSouthXTextBox.Text);
+            targetServer.OverrideDestSouthY = EnsureValidCellX(OverrideDestSouthYTextBox.Text);
+            targetServer.OverrideDestEastX = EnsureValidCellX(OverrideDestEastXTextBox.Text);
+            targetServer.OverrideDestEastY = EnsureValidCellX(OverrideDestEastYTextBox.Text);
+            targetServer.OverrideDestWestX = EnsureValidCellX(OverrideDestWestXTextBox.Text);
+            targetServer.OverrideDestWestY = EnsureValidCellX(OverrideDestWestYTextBox.Text);
+
+            targetServer.MaxPlayingSeconds = EnsureValidPositiveInt(MaxPlayingSecondsTextBox.Text);
+            targetServer.MaxPlayingSecondsKickToServerX = EnsureValidCellX(MaxPlayingSecondsKickToServerXTextBox.Text);
+            targetServer.MaxPlayingSecondsKickToServerY = EnsureValidCellY(MaxPlayingSecondsKickToServerYTextBox.Text);
+
             targetServer.skyStyleIndex = skyStyleIndex;
             targetServer.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             targetServer.ServerCustomDatas1 = ServerCustomDatas1;
@@ -365,11 +396,6 @@ namespace ServerGridEditor
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void editSpawnRegions_Click(object sender, EventArgs e)
         {
             if (mainForm != null)
@@ -393,10 +419,6 @@ namespace ServerGridEditor
             e.DrawFocusRectangle();
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void rulesComboBox_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -405,5 +427,100 @@ namespace ServerGridEditor
             g.DrawString(rulesComboBox.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), new PointF(e.Bounds.X, e.Bounds.Y));
             e.DrawFocusRectangle();
         }
+
+
+        private int EnsureValidCellX(string cellXStr)
+        {
+            return EnsureValidCellDimension(cellXStr, mainForm.currentProject.numOfCellsX - 1);
+        }
+
+        private int EnsureValidCellY(string cellXStr)
+        {
+            return EnsureValidCellDimension(cellXStr, mainForm.currentProject.numOfCellsY - 1);
+        }
+
+        private int EnsureValidCellDimension(string cellStr, int maxDimension)
+        {
+            if (cellStr != null && cellStr.Length > 0 && int.TryParse(cellStr, out int n))
+            {
+                if (n < 0)
+                    n = -n;
+                n = Math.Min(n, maxDimension);
+                return n;
+            }
+            return -1;
+        }
+
+        private string CellIndexToString(int cellIndex)
+        {
+            return cellIndex < 0 ? "" : cellIndex.ToString();
+        }
+
+
+        private void OverrideDestNorthXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestNorthXTextBox.Text = CellIndexToString(EnsureValidCellX(OverrideDestNorthXTextBox.Text));
+        }
+
+        private void OverrideDestNorthYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestNorthYTextBox.Text = CellIndexToString(EnsureValidCellY(OverrideDestNorthYTextBox.Text));
+        }
+
+        private void OverrideDestSouthXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestSouthXTextBox.Text = CellIndexToString(EnsureValidCellX(OverrideDestSouthXTextBox.Text));
+        }
+
+        private void OverrideDestSouthYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestSouthYTextBox.Text = CellIndexToString(EnsureValidCellY(OverrideDestSouthYTextBox.Text));
+        }
+
+        private void OverrideDestEastXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestEastXTextBox.Text = CellIndexToString(EnsureValidCellX(OverrideDestEastXTextBox.Text));
+        }
+
+        private void OverrideDestEastYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestEastYTextBox.Text = CellIndexToString(EnsureValidCellY(OverrideDestEastYTextBox.Text));
+        }
+
+        private void OverrideDestWestXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestWestXTextBox.Text = CellIndexToString(EnsureValidCellX(OverrideDestWestXTextBox.Text));
+        }
+        private void OverrideDestWestYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestWestYTextBox.Text = CellIndexToString(EnsureValidCellY(OverrideDestWestYTextBox.Text));
+        }
+
+        private int EnsureValidPositiveInt(string str)
+        {
+            if (str != null && str.Length > 0 && int.TryParse(str, out int n))
+            {
+                if (n < 0)
+                    n = -n;
+                return n;
+            }
+            return 0;
+        }
+
+        private void MaxPlayingSecondsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsTextBox.Text = EnsureValidPositiveInt(MaxPlayingSecondsTextBox.Text).ToString();
+        }
+
+        private void MaxPlayingSecondsKickToServerXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsKickToServerXTextBox.Text = CellIndexToString(EnsureValidCellY(MaxPlayingSecondsKickToServerXTextBox.Text));
+        }
+
+        private void MaxPlayingSecondsKickToServerYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsKickToServerYTextBox.Text = CellIndexToString(EnsureValidCellY(MaxPlayingSecondsKickToServerYTextBox.Text));
+        }
     }
 }
+

@@ -204,6 +204,8 @@ namespace AtlasGridDataLibrary
         public List<TransientNodeTemplate> transientNodeTemplates = new List<TransientNodeTemplate>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
         public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
+        public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
+        public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
     }
 
     // ==== SERVER INFO ===========================================
@@ -252,6 +254,29 @@ namespace AtlasGridDataLibrary
         public float billboardsOffsetX = 0;
         public float billboardsOffsetY = 0;
         public float billboardsOffsetZ = 0;
+
+        [DefaultValue(-1)]
+        public int OverrideDestNorthX = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestNorthY = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestSouthX = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestSouthY = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestEastX = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestEastY = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestWestX = -1;
+        [DefaultValue(-1)]
+        public int OverrideDestWestY = -1;
+
+        public int MaxPlayingSeconds = 0;
+        [DefaultValue(-1)]
+        public int MaxPlayingSecondsKickToServerX = -1;
+        [DefaultValue(-1)]
+        public int MaxPlayingSecondsKickToServerY = -1;
 
         public int skyStyleIndex = 0;
         [DefaultValue(1.0f)]
@@ -327,6 +352,19 @@ namespace AtlasGridDataLibrary
         public List<string> Regions = new List<string>();
     }
 
+    public class RegionsOverworldLocation
+    {
+        public string RegionName;
+        public float X, Y;
+        public string RegionDescription;
+    }
+
+    public class RegionsTreasureOverride
+    {
+        public string Region;
+        public List<string> RegionOverrides = new List<string>();
+    }
+
     public class ServerConfiguration
     {
         public string ParentName;
@@ -337,7 +375,7 @@ namespace AtlasGridDataLibrary
     public class TransientNodeTemplate
     {
         public string Key;
-        public Dictionary<string, double> NodeKeyWeights;
+        public Dictionary<string, KeyValuePair<int, double>> NodeKeyWeights;
     }
 
     public class FoliageAttachmentOverride

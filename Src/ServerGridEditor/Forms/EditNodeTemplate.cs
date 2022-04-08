@@ -26,13 +26,14 @@ namespace ServerGridEditor
             InitializeComponent();
             ParamsGrid.Rows.Clear();
             if (targetNodeTemplate.NodeKeyWeights == null)
-                targetNodeTemplate.NodeKeyWeights = new Dictionary<string, double>();
+                targetNodeTemplate.NodeKeyWeights = new Dictionary<string, KeyValuePair<int, double>>();
 
-            foreach (KeyValuePair<string, double> NodeKeyWeight in targetNodeTemplate.NodeKeyWeights)
+            foreach (KeyValuePair<string, KeyValuePair<int, double>> NodeKeyWeight in targetNodeTemplate.NodeKeyWeights)
             {
                 int index = ParamsGrid.Rows.Add();
                 ParamsGrid.Rows[index].Cells[0].Value = NodeKeyWeight.Key;
-                ParamsGrid.Rows[index].Cells[1].Value = NodeKeyWeight.Value;
+                ParamsGrid.Rows[index].Cells[1].Value = NodeKeyWeight.Value.Key;
+                ParamsGrid.Rows[index].Cells[2].Value = NodeKeyWeight.Value.Value;
             }
 
         }
@@ -91,15 +92,23 @@ namespace ServerGridEditor
                 if (row.Index == ParamsGrid.Rows.Count - 1) continue; //Last row is the new row
                 try
                 {
-                    float Weight;
 
-                    if (!float.TryParse(row.Cells[1].Value.ToString(), out Weight))
+                    int Group;
+                    if (!int.TryParse(row.Cells[1].Value.ToString(), out Group))
                     {
-                        MessageBox.Show("Invalid number for floor distance from ocean surface", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid Group", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
 
-                    targetNodeTemplate.NodeKeyWeights.Add(row.Cells[0].Value.ToString(), Weight);
+
+                    float Weight;
+                    if (!float.TryParse(row.Cells[2].Value.ToString(), out Weight))
+                    {
+                        MessageBox.Show("Invalid Weight", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+
+                    targetNodeTemplate.NodeKeyWeights.Add(row.Cells[0].Value.ToString(), new KeyValuePair<int, double>(Group, Weight));
                 }
                 catch (Exception)
                 {

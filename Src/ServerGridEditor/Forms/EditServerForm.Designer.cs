@@ -113,6 +113,24 @@
             this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label28 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.OverrideDestNorthXTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestNorthYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestWestYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestWestXTextBox = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.OverrideDestSouthYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestSouthXTextBox = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.OverrideDestEastYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestEastXTextBox = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.MaxPlayingSecondsTextBox = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.MaxPlayingSecondsKickToServerYTextBox = new System.Windows.Forms.TextBox();
+            this.MaxPlayingSecondsKickToServerXTextBox = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).BeginInit();
@@ -140,13 +158,13 @@
             // 
             this.portTxtBox.Location = new System.Drawing.Point(46, 67);
             this.portTxtBox.Name = "portTxtBox";
-            this.portTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.portTxtBox.Size = new System.Drawing.Size(45, 20);
             this.portTxtBox.TabIndex = 2;
             this.portTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.portTxtBox_KeyPress);
             // 
             // gamePortTxtBox
             // 
-            this.gamePortTxtBox.Location = new System.Drawing.Point(189, 70);
+            this.gamePortTxtBox.Location = new System.Drawing.Point(158, 70);
             this.gamePortTxtBox.Name = "gamePortTxtBox";
             this.gamePortTxtBox.Size = new System.Drawing.Size(55, 20);
             this.gamePortTxtBox.TabIndex = 4;
@@ -183,7 +201,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 72);
+            this.label5.Location = new System.Drawing.Point(95, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 12;
@@ -358,7 +376,6 @@
             this.seamlessDataPortTxt.Name = "seamlessDataPortTxt";
             this.seamlessDataPortTxt.Size = new System.Drawing.Size(55, 20);
             this.seamlessDataPortTxt.TabIndex = 36;
-            this.seamlessDataPortTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label13
             // 
@@ -434,7 +451,7 @@
             this.overrideShooterGameModeDefaultGameIniDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.overrideShooterGameModeDefaultGameIniDataGridView.Location = new System.Drawing.Point(18, 270);
             this.overrideShooterGameModeDefaultGameIniDataGridView.Name = "overrideShooterGameModeDefaultGameIniDataGridView";
-            this.overrideShooterGameModeDefaultGameIniDataGridView.Size = new System.Drawing.Size(249, 110);
+            this.overrideShooterGameModeDefaultGameIniDataGridView.Size = new System.Drawing.Size(239, 110);
             this.overrideShooterGameModeDefaultGameIniDataGridView.TabIndex = 67;
             // 
             // label16
@@ -637,7 +654,6 @@
             this.serverIslandPointsMultiplierTxtBox.Name = "serverIslandPointsMultiplierTxtBox";
             this.serverIslandPointsMultiplierTxtBox.Size = new System.Drawing.Size(79, 20);
             this.serverIslandPointsMultiplierTxtBox.TabIndex = 99;
-            this.serverIslandPointsMultiplierTxtBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // rulesComboBox
             // 
@@ -847,6 +863,157 @@
             this.label25.TabIndex = 116;
             this.label25.Text = "ServerCustomDatas:";
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(227, 77);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(137, 13);
+            this.label26.TabIndex = 120;
+            this.label26.Text = "Override Travel Dest (X, Y):";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(288, 92);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(33, 13);
+            this.label27.TabIndex = 121;
+            this.label27.Text = "North";
+            // 
+            // OverrideDestNorthXTextBox
+            // 
+            this.OverrideDestNorthXTextBox.Location = new System.Drawing.Point(282, 108);
+            this.OverrideDestNorthXTextBox.Name = "OverrideDestNorthXTextBox";
+            this.OverrideDestNorthXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestNorthXTextBox.TabIndex = 122;
+            this.OverrideDestNorthXTextBox.TextChanged += new System.EventHandler(this.OverrideDestNorthXTextBox_TextChanged);
+            // 
+            // OverrideDestNorthYTextBox
+            // 
+            this.OverrideDestNorthYTextBox.Location = new System.Drawing.Point(307, 108);
+            this.OverrideDestNorthYTextBox.Name = "OverrideDestNorthYTextBox";
+            this.OverrideDestNorthYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestNorthYTextBox.TabIndex = 125;
+            this.OverrideDestNorthYTextBox.TextChanged += new System.EventHandler(this.OverrideDestNorthYTextBox_TextChanged);
+            // 
+            // OverrideDestWestYTextBox
+            // 
+            this.OverrideDestWestYTextBox.Location = new System.Drawing.Point(278, 142);
+            this.OverrideDestWestYTextBox.Name = "OverrideDestWestYTextBox";
+            this.OverrideDestWestYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestWestYTextBox.TabIndex = 128;
+            this.OverrideDestWestYTextBox.TextChanged += new System.EventHandler(this.OverrideDestWestYTextBox_TextChanged);
+            // 
+            // OverrideDestWestXTextBox
+            // 
+            this.OverrideDestWestXTextBox.Location = new System.Drawing.Point(253, 142);
+            this.OverrideDestWestXTextBox.Name = "OverrideDestWestXTextBox";
+            this.OverrideDestWestXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestWestXTextBox.TabIndex = 127;
+            this.OverrideDestWestXTextBox.TextChanged += new System.EventHandler(this.OverrideDestWestXTextBox_TextChanged);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(262, 128);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(32, 13);
+            this.label43.TabIndex = 126;
+            this.label43.Text = "West";
+            // 
+            // OverrideDestSouthYTextBox
+            // 
+            this.OverrideDestSouthYTextBox.Location = new System.Drawing.Point(307, 170);
+            this.OverrideDestSouthYTextBox.Name = "OverrideDestSouthYTextBox";
+            this.OverrideDestSouthYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestSouthYTextBox.TabIndex = 131;
+            this.OverrideDestSouthYTextBox.TextChanged += new System.EventHandler(this.OverrideDestSouthYTextBox_TextChanged);
+            // 
+            // OverrideDestSouthXTextBox
+            // 
+            this.OverrideDestSouthXTextBox.Location = new System.Drawing.Point(282, 170);
+            this.OverrideDestSouthXTextBox.Name = "OverrideDestSouthXTextBox";
+            this.OverrideDestSouthXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestSouthXTextBox.TabIndex = 130;
+            this.OverrideDestSouthXTextBox.TextChanged += new System.EventHandler(this.OverrideDestSouthXTextBox_TextChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(287, 193);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(35, 13);
+            this.label44.TabIndex = 129;
+            this.label44.Text = "South";
+            // 
+            // OverrideDestEastYTextBox
+            // 
+            this.OverrideDestEastYTextBox.Location = new System.Drawing.Point(338, 143);
+            this.OverrideDestEastYTextBox.Name = "OverrideDestEastYTextBox";
+            this.OverrideDestEastYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestEastYTextBox.TabIndex = 134;
+            this.OverrideDestEastYTextBox.TextChanged += new System.EventHandler(this.OverrideDestEastYTextBox_TextChanged);
+            // 
+            // OverrideDestEastXTextBox
+            // 
+            this.OverrideDestEastXTextBox.Location = new System.Drawing.Point(313, 143);
+            this.OverrideDestEastXTextBox.Name = "OverrideDestEastXTextBox";
+            this.OverrideDestEastXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestEastXTextBox.TabIndex = 133;
+            this.OverrideDestEastXTextBox.TextChanged += new System.EventHandler(this.OverrideDestEastXTextBox_TextChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(324, 129);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(28, 13);
+            this.label45.TabIndex = 132;
+            this.label45.Text = "East";
+            // 
+            // MaxPlayingSecondsTextBox
+            // 
+            this.MaxPlayingSecondsTextBox.Location = new System.Drawing.Point(284, 324);
+            this.MaxPlayingSecondsTextBox.Name = "MaxPlayingSecondsTextBox";
+            this.MaxPlayingSecondsTextBox.Size = new System.Drawing.Size(57, 20);
+            this.MaxPlayingSecondsTextBox.TabIndex = 135;
+            this.MaxPlayingSecondsTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsTextBox_TextChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(257, 308);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(112, 13);
+            this.label41.TabIndex = 136;
+            this.label41.Text = "Max Playing Seconds:";
+            // 
+            // MaxPlayingSecondsKickToServerYTextBox
+            // 
+            this.MaxPlayingSecondsKickToServerYTextBox.Location = new System.Drawing.Point(315, 363);
+            this.MaxPlayingSecondsKickToServerYTextBox.Name = "MaxPlayingSecondsKickToServerYTextBox";
+            this.MaxPlayingSecondsKickToServerYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.MaxPlayingSecondsKickToServerYTextBox.TabIndex = 139;
+            this.MaxPlayingSecondsKickToServerYTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsKickToServerYTextBox_TextChanged);
+            // 
+            // MaxPlayingSecondsKickToServerXTextBox
+            // 
+            this.MaxPlayingSecondsKickToServerXTextBox.Location = new System.Drawing.Point(290, 363);
+            this.MaxPlayingSecondsKickToServerXTextBox.Name = "MaxPlayingSecondsKickToServerXTextBox";
+            this.MaxPlayingSecondsKickToServerXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.MaxPlayingSecondsKickToServerXTextBox.TabIndex = 138;
+            this.MaxPlayingSecondsKickToServerXTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsKickToServerXTextBox_TextChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(274, 347);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(81, 13);
+            this.label42.TabIndex = 137;
+            this.label42.Text = "Kick To Server:";
+            // 
             // EditServerForm
             // 
             this.AcceptButton = this.saveBtn;
@@ -854,6 +1021,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(667, 952);
+            this.Controls.Add(this.MaxPlayingSecondsKickToServerYTextBox);
+            this.Controls.Add(this.MaxPlayingSecondsKickToServerXTextBox);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.MaxPlayingSecondsTextBox);
+            this.Controls.Add(this.OverrideDestEastYTextBox);
+            this.Controls.Add(this.OverrideDestEastXTextBox);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.OverrideDestSouthYTextBox);
+            this.Controls.Add(this.OverrideDestSouthXTextBox);
+            this.Controls.Add(this.label44);
+            this.Controls.Add(this.OverrideDestWestYTextBox);
+            this.Controls.Add(this.OverrideDestWestXTextBox);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.OverrideDestNorthYTextBox);
+            this.Controls.Add(this.OverrideDestNorthXTextBox);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.ClientCustomDataGrid);
             this.Controls.Add(this.ServerCustomDataGrid);
             this.Controls.Add(this.label28);
@@ -935,6 +1119,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.portTxtBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label41);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1037,5 +1222,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Value;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox OverrideDestNorthXTextBox;
+        private System.Windows.Forms.TextBox OverrideDestNorthYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestWestYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestWestXTextBox;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox OverrideDestSouthYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestSouthXTextBox;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox OverrideDestEastYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestEastXTextBox;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsTextBox;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerYTextBox;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerXTextBox;
+        private System.Windows.Forms.Label label42;
     }
 }

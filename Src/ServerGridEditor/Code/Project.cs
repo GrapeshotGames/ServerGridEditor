@@ -25,12 +25,16 @@ namespace ServerGridEditor
 
     public static class ServerSerializationObjectEx
     {
-        public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port, 
+        public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port,
             int gamePort, int seamlessDataPort, List<SublevelSerializationObject> sublevels, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
-            bool isHomeServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
+            bool isHomeServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride,
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string serverConfigurationKeyPVE, string serverConfigurationKeyPVP, string OceanEpicSpawnEntriesOverrideValues, int[] ServerPathingGrid, string BackgroundImgPath)
+            float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
+            int overrideDestNorthX, int overrideDestNorthY, int overrideDestSouthX, int overrideDestSouthY, int overrideDestEastX, int overrideDestEastY, int overrideDestWestX, int overrideDestWestY,
+            int maxPlayingSeconds,
+            int maxPlayingSecondsKickToServerX, int maxPlayingSecondsKickToServerY,
+            int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string serverConfigurationKeyPVE, string serverConfigurationKeyPVP, string OceanEpicSpawnEntriesOverrideValues, int[] ServerPathingGrid, string BackgroundImgPath)
         {
                     
 
@@ -62,6 +66,17 @@ namespace ServerGridEditor
             Data.billboardsOffsetX = billboardsOffsetX;
             Data.billboardsOffsetY = billboardsOffsetY;
             Data.billboardsOffsetZ = billboardsOffsetZ;
+            Data.OverrideDestNorthX = overrideDestNorthX;
+            Data.OverrideDestNorthY = overrideDestNorthY;
+            Data.OverrideDestSouthX = overrideDestSouthX;
+            Data.OverrideDestSouthY = overrideDestSouthY;
+            Data.OverrideDestEastX = overrideDestEastX;
+            Data.OverrideDestEastY = overrideDestEastY;
+            Data.OverrideDestWestX = overrideDestWestX;
+            Data.OverrideDestWestY = overrideDestWestY;
+            Data.MaxPlayingSeconds = maxPlayingSeconds;
+            Data.MaxPlayingSecondsKickToServerX = maxPlayingSecondsKickToServerX;
+            Data.MaxPlayingSecondsKickToServerY = maxPlayingSecondsKickToServerY;
             Data.skyStyleIndex = skyStyleIndex;
             Data.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             Data.ServerCustomDatas1 = ServerCustomDatas1;
@@ -96,7 +111,11 @@ namespace ServerGridEditor
             bool isHomeServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
-            float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ, int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string serverConfigurationKeyPVP, string serverConfigurationKeyPVE, string OceanEpicSpawnEntriesOverrideValues, int[] ServerPathingGrid, string BackgroundImgPath)
+            float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
+            int overrideDestNorthX, int overrideDestNorthY, int overrideDestSouthX, int overrideDestSouthY, int overrideDestEastX, int overrideDestEastY, int overrideDestWestX, int overrideDestWestY,
+            int maxPlayingSeconds,
+            int maxPlayingSecondsKickToServerX, int maxPlayingSecondsKickToServerY,
+            int skyStyleIndex, float serverIslandPointsMultiplier, string ServerCustomDatas1, string ServerCustomDatas2, string ClientCustomDatas1, string ClientCustomDatas2, string serverTemplateName, string serverConfigurationKeyPVP, string serverConfigurationKeyPVE, string OceanEpicSpawnEntriesOverrideValues, int[] ServerPathingGrid, string BackgroundImgPath)
         {
             Data.gridX = gridX;
             Data.gridY = gridY;
@@ -128,6 +147,17 @@ namespace ServerGridEditor
             Data.billboardsOffsetX = billboardsOffsetX;
             Data.billboardsOffsetY = billboardsOffsetY;
             Data.billboardsOffsetZ = billboardsOffsetZ;
+            Data.OverrideDestNorthX = overrideDestNorthX;
+            Data.OverrideDestNorthY = overrideDestNorthY;
+            Data.OverrideDestSouthX = overrideDestSouthX;
+            Data.OverrideDestSouthY = overrideDestSouthY;
+            Data.OverrideDestEastX = overrideDestEastX;
+            Data.OverrideDestEastY = overrideDestEastY;
+            Data.OverrideDestWestX = overrideDestWestX;
+            Data.OverrideDestWestY = overrideDestWestY;
+            Data.MaxPlayingSeconds = maxPlayingSeconds;
+            Data.MaxPlayingSecondsKickToServerX = maxPlayingSecondsKickToServerX;
+            Data.MaxPlayingSecondsKickToServerY = maxPlayingSecondsKickToServerY;
             Data.skyStyleIndex = skyStyleIndex;
             Data.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
             Data.ServerCustomDatas1 = ServerCustomDatas1;
@@ -241,7 +271,7 @@ namespace ServerGridEditor
             Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
             List<PortalPathData> portalPathData, int shipPathsIdGenerator, int tradeWindsIdGenerator, int portalPathsIdGenerator,
             bool showShipPathsInfo, bool showTradeWindsInfo, bool showPortalNodes, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, bool showTradeWindOverlay, string tradeWindOverlayImgPath, Dictionary<string, string> regionsTradeWindOverlayImgPath, string globalGameplaySetup,
-            List<ServerTemplateData> serverTemplates, List<AppliedRegionTemplateData> appliedRegionTemplates, List<RegionTemplateData> regionTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
+            List<ServerTemplateData> serverTemplates, List<AppliedRegionTemplateData> appliedRegionTemplates, List<RegionTemplateData> regionTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<RegionsOverworldLocation> RegionsOverworldLocations, List<RegionsTreasureOverride> regionsTreasureOverrides, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
 			string WorldAtlasPassword, float columnUTCOffset, int numPathingGridRows, int numPathingGridColumns, bool[,] PathingGrid)
         {
             Data.gridSize = gridSize;
@@ -292,7 +322,11 @@ namespace ServerGridEditor
                          server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                          server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                          server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                         server.waterColorR, server.waterColorG, server.waterColorB, server.billboardsOffsetX, server.billboardsOffsetY, server.billboardsOffsetZ, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.serverConfigurationKeyPVP, server.serverConfigurationKeyPVE, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid, server.BackgroundImgPath));
+                         server.waterColorR, server.waterColorG, server.waterColorB, server.billboardsOffsetX, server.billboardsOffsetY, server.billboardsOffsetZ,
+                         server.OverrideDestNorthX, server.OverrideDestNorthY, server.OverrideDestSouthX, server.OverrideDestSouthY, server.OverrideDestEastX, server.OverrideDestEastY, server.OverrideDestWestX, server.OverrideDestWestY,
+                         server.MaxPlayingSeconds,
+                         server.MaxPlayingSecondsKickToServerX, server.MaxPlayingSecondsKickToServerY,
+                    server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.serverConfigurationKeyPVP, server.serverConfigurationKeyPVE, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid, server.BackgroundImgPath));
                 }
                 else
                 {
@@ -311,7 +345,11 @@ namespace ServerGridEditor
                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                         server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, overridenExtraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
-                        server.waterColorR, server.waterColorG, server.waterColorB, server.billboardsOffsetX, server.billboardsOffsetY, server.billboardsOffsetZ, server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.serverConfigurationKeyPVP, server.serverConfigurationKeyPVE, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid, server.BackgroundImgPath);
+                        server.waterColorR, server.waterColorG, server.waterColorB, server.billboardsOffsetX, server.billboardsOffsetY, server.billboardsOffsetZ,
+                        server.OverrideDestNorthX, server.OverrideDestNorthY, server.OverrideDestSouthX, server.OverrideDestSouthY, server.OverrideDestEastX, server.OverrideDestEastY, server.OverrideDestWestX, server.OverrideDestWestY,
+                        server.MaxPlayingSeconds,
+                        server.MaxPlayingSecondsKickToServerX, server.MaxPlayingSecondsKickToServerY,
+                        server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.serverConfigurationKeyPVP, server.serverConfigurationKeyPVE, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid, server.BackgroundImgPath);
 
                     //Apply template
                     if(!string.IsNullOrEmpty(server.serverTemplateName))
@@ -333,6 +371,18 @@ namespace ServerGridEditor
                             exportServerObj.billboardsOffsetX = server.billboardsOffsetX != 0 ? server.billboardsOffsetX : serverTemplate.billboardsOffsetX;
                             exportServerObj.billboardsOffsetY = server.billboardsOffsetY != 0 ? server.billboardsOffsetY : serverTemplate.billboardsOffsetY;
                             exportServerObj.billboardsOffsetZ = server.billboardsOffsetZ != 0 ? server.billboardsOffsetZ : serverTemplate.billboardsOffsetZ;
+
+                            exportServerObj.OverrideDestNorthX = server.OverrideDestNorthX != -1 ? server.OverrideDestNorthX : serverTemplate.OverrideDestNorthX;
+                            exportServerObj.OverrideDestNorthY = server.OverrideDestNorthY != -1 ? server.OverrideDestNorthY : serverTemplate.OverrideDestNorthY;
+                            exportServerObj.OverrideDestSouthX = server.OverrideDestSouthX != -1 ? server.OverrideDestSouthX : serverTemplate.OverrideDestSouthX;
+                            exportServerObj.OverrideDestSouthY = server.OverrideDestSouthY != -1 ? server.OverrideDestSouthY : serverTemplate.OverrideDestSouthY;
+                            exportServerObj.OverrideDestEastX = server.OverrideDestEastX != -1 ? server.OverrideDestEastX : serverTemplate.OverrideDestEastX;
+                            exportServerObj.OverrideDestEastY = server.OverrideDestEastY != -1 ? server.OverrideDestEastY : serverTemplate.OverrideDestEastY;
+                            exportServerObj.OverrideDestWestX = server.OverrideDestWestX != -1 ? server.OverrideDestWestX : serverTemplate.OverrideDestWestX;
+                            exportServerObj.OverrideDestWestY = server.OverrideDestWestY != -1 ? server.OverrideDestWestY : serverTemplate.OverrideDestWestY;
+                            exportServerObj.MaxPlayingSeconds = server.MaxPlayingSeconds > 0 ? server.MaxPlayingSeconds : serverTemplate.MaxPlayingSeconds;
+                            exportServerObj.MaxPlayingSecondsKickToServerX = server.MaxPlayingSecondsKickToServerX != -1 ? server.MaxPlayingSecondsKickToServerX : serverTemplate.MaxPlayingSecondsKickToServerX;
+                            exportServerObj.MaxPlayingSecondsKickToServerY = server.MaxPlayingSecondsKickToServerY != -1 ? server.MaxPlayingSecondsKickToServerY : serverTemplate.MaxPlayingSecondsKickToServerY;
                             exportServerObj.skyStyleIndex = server.skyStyleIndex != 0 ? server.skyStyleIndex : serverTemplate.skyStyleIndex;
                             exportServerObj.serverIslandPointsMultiplier = server.serverIslandPointsMultiplier != 1.0f ? server.serverIslandPointsMultiplier : serverTemplate.serverIslandPointsMultiplier;
                             exportServerObj.GlobalBiomeSeamlessServerGridPreOffsetValues = !string.IsNullOrEmpty(server.GlobalBiomeSeamlessServerGridPreOffsetValues) ? server.GlobalBiomeSeamlessServerGridPreOffsetValues : serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValues;
@@ -455,6 +505,8 @@ namespace ServerGridEditor
                 foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
 
             Data.regionsCategories = regionsCategories.ToList();
+            Data.regionsOverworldLocations = RegionsOverworldLocations.ToList();
+            Data.regionsTreasureOverrides = regionsTreasureOverrides.ToList();
             Data.serverConfigurations = serverConfigurations.ToList();
             Data.transientNodeTemplates = transientNodeTemplates.ToList();
             Data.foliageAttachmentOverrides = foliageAttachmentOverrides.ToList();
@@ -483,6 +535,18 @@ namespace ServerGridEditor
             serverTemplate.billboardsOffsetX = ServerTemplate1.billboardsOffsetX != 0 ? ServerTemplate1.billboardsOffsetX : ServerTemplate2.billboardsOffsetX;
             serverTemplate.billboardsOffsetY = ServerTemplate1.billboardsOffsetY != 0 ? ServerTemplate1.billboardsOffsetY : ServerTemplate2.billboardsOffsetY;
             serverTemplate.billboardsOffsetZ = ServerTemplate1.billboardsOffsetZ != 0 ? ServerTemplate1.billboardsOffsetZ : ServerTemplate2.billboardsOffsetZ;
+
+            serverTemplate.OverrideDestNorthX = ServerTemplate1.OverrideDestNorthX != -1 ? ServerTemplate1.OverrideDestNorthX : ServerTemplate2.OverrideDestNorthX;
+            serverTemplate.OverrideDestNorthY = ServerTemplate1.OverrideDestNorthY != -1 ? ServerTemplate1.OverrideDestNorthY : ServerTemplate2.OverrideDestNorthY;
+            serverTemplate.OverrideDestSouthX = ServerTemplate1.OverrideDestSouthX != -1 ? ServerTemplate1.OverrideDestSouthX : ServerTemplate2.OverrideDestSouthX;
+            serverTemplate.OverrideDestSouthY = ServerTemplate1.OverrideDestSouthY != -1 ? ServerTemplate1.OverrideDestSouthY : ServerTemplate2.OverrideDestSouthY;
+            serverTemplate.OverrideDestEastX = ServerTemplate1.OverrideDestEastX != -1 ? ServerTemplate1.OverrideDestEastX : ServerTemplate2.OverrideDestEastX;
+            serverTemplate.OverrideDestEastY = ServerTemplate1.OverrideDestEastY != -1 ? ServerTemplate1.OverrideDestEastY : ServerTemplate2.OverrideDestEastY;
+            serverTemplate.OverrideDestWestX = ServerTemplate1.OverrideDestWestX != -1 ? ServerTemplate1.OverrideDestWestX : ServerTemplate2.OverrideDestWestX;
+            serverTemplate.OverrideDestWestY = ServerTemplate1.OverrideDestWestY != -1 ? ServerTemplate1.OverrideDestWestY : ServerTemplate2.OverrideDestWestY;
+            serverTemplate.MaxPlayingSeconds = ServerTemplate1.MaxPlayingSeconds > 0 ? ServerTemplate1.MaxPlayingSeconds : ServerTemplate2.MaxPlayingSeconds;
+            serverTemplate.MaxPlayingSecondsKickToServerX = ServerTemplate1.MaxPlayingSecondsKickToServerX != -1 ? ServerTemplate1.MaxPlayingSecondsKickToServerX : ServerTemplate2.MaxPlayingSecondsKickToServerX;
+            serverTemplate.MaxPlayingSecondsKickToServerY = ServerTemplate1.MaxPlayingSecondsKickToServerY != -1 ? ServerTemplate1.MaxPlayingSecondsKickToServerY : ServerTemplate2.MaxPlayingSecondsKickToServerY;
             serverTemplate.skyStyleIndex = ServerTemplate1.skyStyleIndex != 0 ? ServerTemplate1.skyStyleIndex : ServerTemplate2.skyStyleIndex;
             serverTemplate.serverIslandPointsMultiplier = ServerTemplate1.serverIslandPointsMultiplier != 1.0f ? ServerTemplate1.serverIslandPointsMultiplier : ServerTemplate2.serverIslandPointsMultiplier;
             serverTemplate.GlobalBiomeSeamlessServerGridPreOffsetValues = !string.IsNullOrEmpty(ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValues) ? ServerTemplate1.GlobalBiomeSeamlessServerGridPreOffsetValues : ServerTemplate2.GlobalBiomeSeamlessServerGridPreOffsetValues;
@@ -540,6 +604,8 @@ namespace ServerGridEditor
         public List<ServerTemplateData> serverTemplates = new List<ServerTemplateData>();
         public List<ServerConfiguration> serverConfigurations = new List<ServerConfiguration>();
         public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
+        public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
+        public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
 
         
@@ -682,7 +748,7 @@ namespace ServerGridEditor
             AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MainRegionName,MetaWorldURL, MapImagesExtension,
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, regionsBackgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, usePVEServerConfiguration,
                 Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
-                shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, appliedRegionTemplates, regionTemplates, serverConfigurations, regionsCategories, transientNodeTemplates, foliageAttachmentOverrides,
+                shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, appliedRegionTemplates, regionTemplates, serverConfigurations, regionsCategories, regionsOverworldLocations, regionsTreasureOverrides, transientNodeTemplates, foliageAttachmentOverrides,
                 bIsFinalExport, MapImageURL, OverallImageURL, AuthListURL,
 				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid);
             ProjectObj.BaseServerArgs = BaseServerArgs;
@@ -779,6 +845,17 @@ namespace ServerGridEditor
                     s.billboardsOffsetX = deserializedServer.billboardsOffsetX;
                     s.billboardsOffsetY = deserializedServer.billboardsOffsetY;
                     s.billboardsOffsetZ = deserializedServer.billboardsOffsetZ;
+                    s.OverrideDestNorthX = deserializedServer.OverrideDestNorthX;
+                    s.OverrideDestNorthY = deserializedServer.OverrideDestNorthY;
+                    s.OverrideDestSouthX = deserializedServer.OverrideDestSouthX;
+                    s.OverrideDestSouthY = deserializedServer.OverrideDestSouthY;
+                    s.OverrideDestEastX = deserializedServer.OverrideDestEastX;
+                    s.OverrideDestEastY = deserializedServer.OverrideDestEastY;
+                    s.OverrideDestWestX = deserializedServer.OverrideDestWestX;
+                    s.OverrideDestWestY = deserializedServer.OverrideDestWestY;
+                    s.MaxPlayingSeconds = deserializedServer.MaxPlayingSeconds;
+                    s.MaxPlayingSecondsKickToServerX = deserializedServer.MaxPlayingSecondsKickToServerX;
+                    s.MaxPlayingSecondsKickToServerY = deserializedServer.MaxPlayingSecondsKickToServerY;
                     s.skyStyleIndex = deserializedServer.skyStyleIndex;
                     s.serverIslandPointsMultiplier = deserializedServer.serverIslandPointsMultiplier;
                     s.ServerCustomDatas1 = deserializedServer.ServerCustomDatas1;
@@ -889,9 +966,18 @@ namespace ServerGridEditor
                 int TempNumPathingGridColumns = deserializedProject.numPathingGridColumns;
                 int TempNumOfCellsX = maxX + 1;
                 int TempNumOfCellsY = maxY + 1;
+
+                regionsTreasureOverrides = deserializedProject.regionsTreasureOverrides;
+                if (regionsTreasureOverrides == null)
+                    regionsTreasureOverrides = new List<RegionsTreasureOverride>();
+
                 regionsCategories = deserializedProject.regionsCategories;
                 if (regionsCategories == null)
                     regionsCategories = new List<RegionsCategory>();
+
+                regionsOverworldLocations = deserializedProject.regionsOverworldLocations;
+                if (regionsOverworldLocations == null)
+                    regionsOverworldLocations = new List<RegionsOverworldLocation>(); 
 
                 serverConfigurations = deserializedProject.serverConfigurations;
                 if (serverConfigurations == null)
