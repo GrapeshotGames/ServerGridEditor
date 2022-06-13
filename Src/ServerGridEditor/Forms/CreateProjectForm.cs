@@ -74,6 +74,7 @@ namespace ServerGridEditor
                 globalGameplaySetupTxtBox.Text = editedProject.globalGameplaySetup;
 
                 useUTCTimeCheckbox.Checked = editedProject.bUseUTCTime;
+                useAutoRestartCheckBox.Checked = editedProject.bUseAutoServerRestart;
                 usePVEServerConfigurationCheckbox.Checked = editedProject.usePVEServerConfiguration;
                 globalTransitionZTxtBox.Text = editedProject.globalTransitionMinZ.ToString();
                 additionalCmdLineParamsTxtBox.Text = editedProject.AdditionalCmdLineParams;
@@ -94,6 +95,12 @@ namespace ServerGridEditor
                     day0DateTimePicker.Value = Day0;
                 else
                     day0DateTimePicker.Value = DateTime.UtcNow;
+
+                DateTime RestartTime;
+                if (DateTime.TryParse(editedProject.ServerRestartTime, out RestartTime))
+                    autoRestartTimePicker.Value = RestartTime;
+                else
+                    autoRestartTimePicker.Value = DateTime.Parse("21:00");
 
                 if (editedProject.DatabaseConnections != null)
                 {
@@ -240,9 +247,10 @@ namespace ServerGridEditor
                 editedProject.globalGameplaySetup = globalGameplaySetupTxtBox.Text;
 
                 editedProject.bUseUTCTime = useUTCTimeCheckbox.Checked;
+                editedProject.bUseAutoServerRestart = useAutoRestartCheckBox.Checked;
                 editedProject.columnUTCOffset = columnUTCOffset;
                 editedProject.Day0 = day0DateTimePicker.Value.ToString("yyyy-MM-dd HH:mm:ss");
-
+                editedProject.ServerRestartTime = autoRestartTimePicker.Value.ToString("HH:mm");
                 editedProject.ModIDs = modIdTxtBox.Text;
 
                 float transitionMinZ;

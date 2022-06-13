@@ -134,6 +134,9 @@
             this.DBEntry7_URLTxtBx = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.DBEntry7_NameTxtBx = new System.Windows.Forms.TextBox();
+            this.useAutoRestartCheckBox = new System.Windows.Forms.CheckBox();
+            this.autoRestartTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label46 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -191,7 +194,7 @@
             // 
             // createBtn
             // 
-            this.createBtn.Location = new System.Drawing.Point(244, 779);
+            this.createBtn.Location = new System.Drawing.Point(244, 834);
             this.createBtn.Name = "createBtn";
             this.createBtn.Size = new System.Drawing.Size(90, 32);
             this.createBtn.TabIndex = 46;
@@ -210,7 +213,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(340, 779);
+            this.cancelBtn.Location = new System.Drawing.Point(340, 834);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(83, 32);
             this.cancelBtn.TabIndex = 47;
@@ -498,7 +501,7 @@
             // useUTCTimeCheckbox
             // 
             this.useUTCTimeCheckbox.AutoSize = true;
-            this.useUTCTimeCheckbox.Location = new System.Drawing.Point(142, 727);
+            this.useUTCTimeCheckbox.Location = new System.Drawing.Point(22, 738);
             this.useUTCTimeCheckbox.Name = "useUTCTimeCheckbox";
             this.useUTCTimeCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.useUTCTimeCheckbox.Size = new System.Drawing.Size(96, 17);
@@ -509,7 +512,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(142, 758);
+            this.label26.Location = new System.Drawing.Point(22, 769);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(35, 13);
             this.label26.TabIndex = 58;
@@ -519,7 +522,7 @@
             // 
             this.day0DateTimePicker.CustomFormat = "dd-MM-yyyy HH:mm:ss tt";
             this.day0DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.day0DateTimePicker.Location = new System.Drawing.Point(183, 755);
+            this.day0DateTimePicker.Location = new System.Drawing.Point(60, 766);
             this.day0DateTimePicker.Name = "day0DateTimePicker";
             this.day0DateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.day0DateTimePicker.TabIndex = 36;
@@ -940,7 +943,7 @@
             // usePVEServerConfigurationCheckbox
             // 
             this.usePVEServerConfigurationCheckbox.AutoSize = true;
-            this.usePVEServerConfigurationCheckbox.Location = new System.Drawing.Point(142, 704);
+            this.usePVEServerConfigurationCheckbox.Location = new System.Drawing.Point(22, 715);
             this.usePVEServerConfigurationCheckbox.Name = "usePVEServerConfigurationCheckbox";
             this.usePVEServerConfigurationCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.usePVEServerConfigurationCheckbox.Size = new System.Drawing.Size(165, 17);
@@ -1043,13 +1046,46 @@
             this.DBEntry7_NameTxtBx.TabIndex = 117;
             this.DBEntry7_NameTxtBx.Text = "MonumentDB";
             // 
+            // useAutoRestartCheckBox
+            // 
+            this.useAutoRestartCheckBox.AutoSize = true;
+            this.useAutoRestartCheckBox.Location = new System.Drawing.Point(22, 792);
+            this.useAutoRestartCheckBox.Name = "useAutoRestartCheckBox";
+            this.useAutoRestartCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.useAutoRestartCheckBox.Size = new System.Drawing.Size(141, 17);
+            this.useAutoRestartCheckBox.TabIndex = 122;
+            this.useAutoRestartCheckBox.Text = "Use Server Auto Restart";
+            this.useAutoRestartCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // autoRestartTimePicker
+            // 
+            this.autoRestartTimePicker.CustomFormat = "hh:mm tt";
+            this.autoRestartTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.autoRestartTimePicker.Location = new System.Drawing.Point(280, 789);
+            this.autoRestartTimePicker.Name = "autoRestartTimePicker";
+            this.autoRestartTimePicker.ShowUpDown = true;
+            this.autoRestartTimePicker.Size = new System.Drawing.Size(92, 20);
+            this.autoRestartTimePicker.TabIndex = 123;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(177, 792);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(98, 13);
+            this.label46.TabIndex = 124;
+            this.label46.Text = "Restart Time (UTC)";
+            // 
             // CreateProjectForm
             // 
             this.AcceptButton = this.createBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(706, 819);
+            this.ClientSize = new System.Drawing.Size(744, 873);
+            this.Controls.Add(this.autoRestartTimePicker);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.useAutoRestartCheckBox);
             this.Controls.Add(this.DBEntry7_PasswordTxtBx);
             this.Controls.Add(this.DBEntry7_PortTxtBx);
             this.Controls.Add(this.DBEntry7_URLTxtBx);
@@ -1277,5 +1313,8 @@
         private System.Windows.Forms.TextBox DBEntry7_URLTxtBx;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox DBEntry7_NameTxtBx;
+        private System.Windows.Forms.CheckBox useAutoRestartCheckBox;
+        private System.Windows.Forms.DateTimePicker autoRestartTimePicker;
+        private System.Windows.Forms.Label label46;
     }
 }

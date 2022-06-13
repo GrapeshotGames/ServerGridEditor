@@ -34,6 +34,8 @@ namespace ServerGridEditor
             gamePortTxtBox.Text = targetServer.gamePort + "";
             seamlessDataPortTxt.Text = targetServer.seamlessDataPort + "";
             homeServerCheckbox.Checked = targetServer.isHomeServer;
+            mawWatersServerCheckBox.Checked = targetServer.isMawWatersServer;
+            
             additionalCmdLineParamsTxtBox.Text = targetServer.AdditionalCmdLineParams;
             oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text = targetServer.oceanEpicSpawnEntriesOverrideTemplateName;
             NPCShipSpawnEntriesOverrideTemplateNameTxtBox.Text = targetServer.NPCShipSpawnEntriesOverrideTemplateName;
@@ -98,6 +100,11 @@ namespace ServerGridEditor
                     pairs.Add(new ConfigKeyValueEntry(DicPair.Key, DicPair.Value));
 
             overrideShooterGameModeDefaultGameIniDataGridView.DataSource = pairs;
+
+            if (mainForm.currentProject.serverSpoolGroups != null)
+                foreach (SpoolGroup spoolGroup in mainForm.currentProject.serverSpoolGroups)
+                    if (spoolGroup.GroupName.Length > 0)
+                        RegisteredAtSpoolGroupsNamesCheckedListBox.Items.Add(spoolGroup.GroupName, targetServer.RegisteredAtSpoolGroupsNames != null && targetServer.RegisteredAtSpoolGroupsNames.Contains(spoolGroup.GroupName));
 
             hiddenAtlasIDTextBox.Text = targetServer.hiddenAtlasId;
 
@@ -294,7 +301,7 @@ namespace ServerGridEditor
             targetServer.gamePort = gamePort;
             targetServer.seamlessDataPort = seamlessDataPort;
             targetServer.isHomeServer = homeServerCheckbox.Checked;
-
+            targetServer.isMawWatersServer = mawWatersServerCheckBox.Checked;
             if (!hiddenAtlasIDTextBox.Text.Equals(targetServer.hiddenAtlasId != null ? targetServer.hiddenAtlasId : ""))
                 mainForm.PopulateMapRegionsDirty = true;
             targetServer.hiddenAtlasId = hiddenAtlasIDTextBox.Text;
@@ -361,6 +368,13 @@ namespace ServerGridEditor
                 else
                     targetServer.serverTemplateName = templateComboBox.SelectedItem + "";
             }
+
+            targetServer.RegisteredAtSpoolGroupsNames = new List<string>();
+
+            foreach (string RegisteredAtSpoolGroupName in RegisteredAtSpoolGroupsNamesCheckedListBox.CheckedItems)
+                if (RegisteredAtSpoolGroupName != null && RegisteredAtSpoolGroupName.Length > 0)
+                    targetServer.RegisteredAtSpoolGroupsNames.Add(RegisteredAtSpoolGroupName);
+
             return true;
         }
 

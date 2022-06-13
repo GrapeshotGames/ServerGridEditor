@@ -80,9 +80,13 @@ namespace AtlasGridDataLibrary
         public int totalGridsY = 0;
 
         public bool bUseUTCTime = false;
+        public bool bUseAutoServerRestart = false;
+        [DeploymentOverrideAttribute]
+        public bool bEnableWhitelistCheats = false;
         public bool usePVEServerConfiguration = false;
         public float columnUTCOffset = 0.0f;
         public string Day0 = "";
+        public string ServerRestartTime = "";
         public float globalTransitionMinZ = 0.0f;
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
@@ -206,6 +210,7 @@ namespace AtlasGridDataLibrary
         public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
         public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
         public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
+        public List<SpoolGroup> serverSpoolGroups = new List<SpoolGroup>();
     }
 
     // ==== SERVER INFO ===========================================
@@ -229,10 +234,13 @@ namespace AtlasGridDataLibrary
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public int seamlessDataPort = 27000;
         public bool isHomeServer = false;
+        public bool isMawWatersServer = false;
         public string hiddenAtlasId = "";
         public int forceServerRules = 0;
         public string AdditionalCmdLineParams = "";
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
+        public List<string> RegisteredAtSpoolGroupsNames = new List<string>();
+        
         public int floorZDist = 0;
         public int utcOffset = 0;
         public int transitionMinZ = 0;
@@ -344,6 +352,11 @@ namespace AtlasGridDataLibrary
 
     public class AppliedRegionTemplateData : RegionTemplateData
     {
+    }
+    public class SpoolGroup
+    {
+        public string GroupName;
+        public string BuffToApply;
     }
 
     public class RegionsCategory

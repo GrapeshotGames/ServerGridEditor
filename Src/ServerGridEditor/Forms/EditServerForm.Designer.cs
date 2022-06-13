@@ -131,6 +131,9 @@
             this.MaxPlayingSecondsKickToServerYTextBox = new System.Windows.Forms.TextBox();
             this.MaxPlayingSecondsKickToServerXTextBox = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.mawWatersServerCheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).BeginInit();
@@ -1014,6 +1017,34 @@
             this.label42.TabIndex = 137;
             this.label42.Text = "Kick To Server:";
             // 
+            // RegisteredAtSpoolGroupsNamesCheckedListBox
+            // 
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox.FormattingEnabled = true;
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Location = new System.Drawing.Point(374, 825);
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Name = "RegisteredAtSpoolGroupsNamesCheckedListBox";
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Size = new System.Drawing.Size(194, 94);
+            this.RegisteredAtSpoolGroupsNamesCheckedListBox.TabIndex = 140;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(371, 805);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(141, 13);
+            this.label46.TabIndex = 141;
+            this.label46.Text = "Registered At Spool Groups:";
+            // 
+            // mawWatersServerCheckBox
+            // 
+            this.mawWatersServerCheckBox.AutoSize = true;
+            this.mawWatersServerCheckBox.Location = new System.Drawing.Point(111, 610);
+            this.mawWatersServerCheckBox.Name = "mawWatersServerCheckBox";
+            this.mawWatersServerCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mawWatersServerCheckBox.Size = new System.Drawing.Size(120, 17);
+            this.mawWatersServerCheckBox.TabIndex = 142;
+            this.mawWatersServerCheckBox.Text = "Maw Waters Server";
+            this.mawWatersServerCheckBox.UseVisualStyleBackColor = true;
+            // 
             // EditServerForm
             // 
             this.AcceptButton = this.saveBtn;
@@ -1021,6 +1052,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(667, 952);
+            this.Controls.Add(this.mawWatersServerCheckBox);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.RegisteredAtSpoolGroupsNamesCheckedListBox);
             this.Controls.Add(this.MaxPlayingSecondsKickToServerYTextBox);
             this.Controls.Add(this.MaxPlayingSecondsKickToServerXTextBox);
             this.Controls.Add(this.label42);
@@ -1240,5 +1274,8 @@
         private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerYTextBox;
         private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerXTextBox;
         private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.CheckedListBox RegisteredAtSpoolGroupsNamesCheckedListBox;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.CheckBox mawWatersServerCheckBox;
     }
 }
