@@ -725,29 +725,28 @@ namespace ServerGridEditor
                     mainForm.PopulateMapRegions();
 
                 foreach (KeyValuePair<string, Image> regionTradeWindOverlay in mainForm.regionsTradeWindOverlay)
-                {
-                    MapRegion mapRegion = mainForm.MapRegionsList[regionTradeWindOverlay.Key];
-                    Image image = regionTradeWindOverlay.Value;
-                    TextureBrush textureBrush = mainForm.regionsTradeWindOverlayBrush[regionTradeWindOverlay.Key];
+                    if (mainForm.MapRegionsList.ContainsKey(regionTradeWindOverlay.Key))
+                    {
+                        MapRegion mapRegion = mainForm.MapRegionsList[regionTradeWindOverlay.Key];
+                        Image image = regionTradeWindOverlay.Value;
+                        TextureBrush textureBrush = mainForm.regionsTradeWindOverlayBrush[regionTradeWindOverlay.Key];
+                        textureBrush.ResetTransform();
 
+                        float wrminX = (mapRegion.StartX) * cellSize;
+                        float wrminY = (mapRegion.StartY) * cellSize;
 
-                    textureBrush.ResetTransform();
+                        float wrmaxX = (mapRegion.EndX - mapRegion.StartX + 1) * cellSize;
+                        float wrmaxY = (mapRegion.EndY - mapRegion.StartY + 1) * cellSize;
 
-                    float wrminX = (mapRegion.StartX) * cellSize;
-                    float wrminY = (mapRegion.StartY) * cellSize;
+                        float rscaleX = (wrmaxX) / image.Size.Width;
+                        float rscaleY = (wrmaxY) / image.Size.Height;
 
-                    float wrmaxX = (mapRegion.EndX - mapRegion.StartX + 1) * cellSize;
-                    float wrmaxY = (mapRegion.EndY - mapRegion.StartY + 1) * cellSize;
+                        textureBrush.TranslateTransform((mapRegion.StartX) * cellSize, (mapRegion.StartY) * cellSize);
 
-                    float rscaleX = (wrmaxX) / image.Size.Width;
-                    float rscaleY = (wrmaxY) / image.Size.Height;
+                        textureBrush.ScaleTransform(rscaleX, rscaleY);
 
-                    textureBrush.TranslateTransform((mapRegion.StartX) * cellSize, (mapRegion.StartY) * cellSize);
-
-                    textureBrush.ScaleTransform(rscaleX, rscaleY);
-
-                    g.FillRectangle(textureBrush, new Rectangle((int)wrminX, (int)wrminY, (int)wrmaxX, (int)wrmaxY));
-                }
+                        g.FillRectangle(textureBrush, new Rectangle((int)wrminX, (int)wrminY, (int)wrmaxX, (int)wrmaxY));
+                    }
             }
 
             if (currentProject.DiscoveryZoneImage != null && showDiscoZoneInfo)
@@ -928,6 +927,8 @@ namespace ServerGridEditor
                     if (!string.IsNullOrWhiteSpace(s.name))
                     {
                         string nameToDraw = "Name: " + s.name;
+                        if (s.isMawWatersServer)
+                            nameToDraw += " (Maw Water)";
                         g.DrawString(nameToDraw, font, Brushes.Black, new PointF(serverCenter.X + dynamicOutlineShift, serverCenter.Y + dynamicOutlineShift), centeredStringFormat);
                         g.DrawString(nameToDraw, font, (s.isHomeServer) ? Brushes.Lime : Brushes.White, serverCenter, centeredStringFormat);
                         serverCenter.Y += stringSize.Height * 1.1f;
@@ -4345,6 +4346,12 @@ namespace ServerGridEditor
         {
             EditRegionsOverworldLocations editRegionsOverworldLocations = new EditRegionsOverworldLocations(this);
             editRegionsOverworldLocations.ShowDialog();
+        }
+
+        private void editServerSpoolGroupsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditServerSpoolGroups editServerSpoolGroups = new EditServerSpoolGroups(this);
+            editServerSpoolGroups.ShowDialog();
         }
     }
 

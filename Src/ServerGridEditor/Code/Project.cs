@@ -27,7 +27,7 @@ namespace ServerGridEditor
     {
         public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port,
             int gamePort, int seamlessDataPort, List<SublevelSerializationObject> sublevels, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
-            bool isHomeServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride,
+            bool isHomeServer, bool isMawWatersServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<string> RegisteredAtSpoolGroupsNames, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride,
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
             float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
@@ -48,10 +48,12 @@ namespace ServerGridEditor
             Data.sublevels = sublevels;
             Data.islandInstances = islandInstances == null ? new List<IslandInstanceData>() : islandInstances;
             Data.isHomeServer = isHomeServer;
+            Data.isMawWatersServer = isMawWatersServer;
             Data.hiddenAtlasId = hiddenAtlasId;
             Data.forceServerRules = forceServerRules;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
+            Data.RegisteredAtSpoolGroupsNames = RegisteredAtSpoolGroupsNames;
             Data.floorZDist = floorZDist;
             Data.transitionMinZ = transitionMinZ;
             Data.utcOffset = utcOffset;
@@ -108,7 +110,7 @@ namespace ServerGridEditor
 
         public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port, 
             int gamePort, int seamlessDataPort, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions, MainForm mainForm, 
-            bool isHomeServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
+            bool isHomeServer, bool isMawWatersServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<string> RegisteredAtSpoolGroupsNames, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
             float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
@@ -128,10 +130,12 @@ namespace ServerGridEditor
             Data.discoZones = discoZones;
             Data.spawnRegions = spawnRegions;
             Data.isHomeServer = isHomeServer;
+            Data.isMawWatersServer = isMawWatersServer;
             Data.hiddenAtlasId = hiddenAtlasId;
             Data.forceServerRules = forceServerRules;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
+            Data.RegisteredAtSpoolGroupsNames = RegisteredAtSpoolGroupsNames;
             Data.name = name;
             Data.floorZDist = floorZDist;
             Data.transitionMinZ = transitionMinZ;
@@ -268,11 +272,11 @@ namespace ServerGridEditor
         public static AtlasGridData SetFromData(this AtlasGridData Data, float gridSize, List<Server> serverList, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
             string WorldAtlasId, string WorldFriendlyName, string MainRegionName, string MetaWorldURL, string MapImagesExtension, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, Dictionary<string, string> regionsBackgroundImgPath, 
             MainForm mainForm, int idGenerator, int regionsIdGenerator, List<SpawnerInfoData> spawnerOverrideTemplates, bool bUseUTCTime, bool usePVEServerConfiguration, string Day0, float globalTransitionMinZ, string AdditionalCmdLineParams, 
-            Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
+            Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<SpoolGroup> serverSpoolGroups, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
             List<PortalPathData> portalPathData, int shipPathsIdGenerator, int tradeWindsIdGenerator, int portalPathsIdGenerator,
             bool showShipPathsInfo, bool showTradeWindsInfo, bool showPortalNodes, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, bool showTradeWindOverlay, string tradeWindOverlayImgPath, Dictionary<string, string> regionsTradeWindOverlayImgPath, string globalGameplaySetup,
             List<ServerTemplateData> serverTemplates, List<AppliedRegionTemplateData> appliedRegionTemplates, List<RegionTemplateData> regionTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<RegionsOverworldLocation> RegionsOverworldLocations, List<RegionsTreasureOverride> regionsTreasureOverrides, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
-			string WorldAtlasPassword, float columnUTCOffset, int numPathingGridRows, int numPathingGridColumns, bool[,] PathingGrid)
+			string WorldAtlasPassword, float columnUTCOffset, int numPathingGridRows, int numPathingGridColumns, bool[,] PathingGrid,  bool bUseAutoServerRestart, string ServerRestartTime, bool bEnableWhitelistCheats)
         {
             Data.gridSize = gridSize;
 
@@ -318,7 +322,7 @@ namespace ServerGridEditor
                 if (!bIsFinalExport)
                 {
                     Data.servers.Add(new ServerData().SetFrom(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
-                         server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.name, server.floorZDist,
+                         server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroupsNames, server.name, server.floorZDist,
                          server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                          server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                          server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
@@ -341,7 +345,7 @@ namespace ServerGridEditor
 
                     //ServerSerializationObject exportServerObj = new ServerSerializationObject(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
                     ServerData exportServerObj = new ServerData().SetFrom(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
-                        server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.name, server.floorZDist,
+                        server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroupsNames, server.name, server.floorZDist,
                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                         server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, overridenExtraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
@@ -400,6 +404,8 @@ namespace ServerGridEditor
                                 if (!exportServerObj.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
                                     exportServerObj.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
 
+                            exportServerObj.RegisteredAtSpoolGroupsNames = server.RegisteredAtSpoolGroupsNames;
+
                             //Splice these together cleanly:
                             if (!string.IsNullOrWhiteSpace(exportServerObj.ServerCustomDatas1))
                                 exportServerObj.ServerCustomDatas1 = exportServerObj.ServerCustomDatas1.TrimEnd(',');
@@ -456,10 +462,14 @@ namespace ServerGridEditor
             Data.regionsIdGenerator = regionsIdGenerator;
             Data.spawnerOverrideTemplates = spawnerOverrideTemplates;
             Data.bUseUTCTime = bUseUTCTime;
+            Data.bUseAutoServerRestart = bUseAutoServerRestart;
+            Data.bEnableWhitelistCheats = bEnableWhitelistCheats;
+        Data.ServerRestartTime = ServerRestartTime;
             Data.columnUTCOffset = columnUTCOffset;
             Data.globalTransitionMinZ = globalTransitionMinZ;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
+            Data.serverSpoolGroups = serverSpoolGroups;
             Data.Day0 = Day0;
             Data.discoZonesImagePath = discoZonesImagePath;
             Data.lastImageOverride = lastImageOverride;
@@ -507,6 +517,8 @@ namespace ServerGridEditor
             Data.regionsCategories = regionsCategories.ToList();
             Data.regionsOverworldLocations = RegionsOverworldLocations.ToList();
             Data.regionsTreasureOverrides = regionsTreasureOverrides.ToList();
+            if (serverSpoolGroups != null)
+                Data.serverSpoolGroups = serverSpoolGroups.ToList();
             Data.serverConfigurations = serverConfigurations.ToList();
             Data.transientNodeTemplates = transientNodeTemplates.ToList();
             Data.foliageAttachmentOverrides = foliageAttachmentOverrides.ToList();
@@ -568,6 +580,13 @@ namespace ServerGridEditor
                 if (!serverTemplate.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
                     serverTemplate.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
 
+            if (serverTemplate.RegisteredAtSpoolGroupsNames == null)
+                serverTemplate.RegisteredAtSpoolGroupsNames = new List<string>();
+            if (ServerTemplate1.RegisteredAtSpoolGroupsNames != null)
+                serverTemplate.RegisteredAtSpoolGroupsNames.AddRange(ServerTemplate1.RegisteredAtSpoolGroupsNames);
+            if (ServerTemplate2.RegisteredAtSpoolGroupsNames != null)
+                serverTemplate.RegisteredAtSpoolGroupsNames.AddRange(ServerTemplate2.RegisteredAtSpoolGroupsNames);
+
             //Splice these together cleanly:
             if (!string.IsNullOrWhiteSpace(ServerTemplate1.ServerCustomDatas1))
                 serverTemplate.ServerCustomDatas1 = ServerTemplate1.ServerCustomDatas1.TrimEnd(',');
@@ -607,8 +626,9 @@ namespace ServerGridEditor
         public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
         public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
+        public List<SpoolGroup> serverSpoolGroups = new List<SpoolGroup>();
 
-        
+
         public int numOfCellsX = 5;
         public int numOfCellsY = 4;
 
@@ -616,7 +636,10 @@ namespace ServerGridEditor
         public float columnUTCOffset = 0.0f;
 
         public string Day0 = "";
+        public string ServerRestartTime = "";
         public bool bUseUTCTime = false;
+        public bool bUseAutoServerRestart = false;
+        public bool bEnableWhitelistCheats = false;
         public float globalTransitionMinZ = 0.0f;
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
@@ -747,10 +770,10 @@ namespace ServerGridEditor
 
             AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MainRegionName,MetaWorldURL, MapImagesExtension,
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, regionsBackgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, usePVEServerConfiguration,
-                Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
+                Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, serverSpoolGroups, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
                 shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, appliedRegionTemplates, regionTemplates, serverConfigurations, regionsCategories, regionsOverworldLocations, regionsTreasureOverrides, transientNodeTemplates, foliageAttachmentOverrides,
                 bIsFinalExport, MapImageURL, OverallImageURL, AuthListURL,
-				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid);
+				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid, bUseAutoServerRestart, ServerRestartTime, bEnableWhitelistCheats);
             ProjectObj.BaseServerArgs = BaseServerArgs;
             ProjectObj.totalGridsX = numOfCellsX;
             ProjectObj.totalGridsY = numOfCellsY;
@@ -824,10 +847,12 @@ namespace ServerGridEditor
                     s.gamePort = deserializedServer.gamePort;
                     s.seamlessDataPort = deserializedServer.seamlessDataPort;
                     s.isHomeServer = deserializedServer.isHomeServer;
+                    s.isMawWatersServer = deserializedServer.isMawWatersServer;
                     s.hiddenAtlasId = deserializedServer.hiddenAtlasId;
                     s.forceServerRules = deserializedServer.forceServerRules;
                     s.AdditionalCmdLineParams = deserializedServer.AdditionalCmdLineParams;
                     s.OverrideShooterGameModeDefaultGameIni = deserializedServer.OverrideShooterGameModeDefaultGameIni;
+                    s.RegisteredAtSpoolGroupsNames = deserializedServer.RegisteredAtSpoolGroupsNames;
                     s.name = deserializedServer.name;
                     s.floorZDist = deserializedServer.floorZDist;
                     s.transitionMinZ = deserializedServer.transitionMinZ;
@@ -971,6 +996,10 @@ namespace ServerGridEditor
                 if (regionsTreasureOverrides == null)
                     regionsTreasureOverrides = new List<RegionsTreasureOverride>();
 
+                serverSpoolGroups = deserializedProject.serverSpoolGroups;
+                if (serverSpoolGroups == null)
+                    serverSpoolGroups = new List<SpoolGroup>();
+                
                 regionsCategories = deserializedProject.regionsCategories;
                 if (regionsCategories == null)
                     regionsCategories = new List<RegionsCategory>();
@@ -1057,10 +1086,14 @@ namespace ServerGridEditor
                 DatabaseConnections = deserializedProject.DatabaseConnections;
 
                 bUseUTCTime = deserializedProject.bUseUTCTime;
+                bUseAutoServerRestart = deserializedProject.bUseAutoServerRestart;
+                bEnableWhitelistCheats = deserializedProject.bEnableWhitelistCheats;
+                ServerRestartTime = deserializedProject.ServerRestartTime;
                 columnUTCOffset = deserializedProject.columnUTCOffset;
                 globalTransitionMinZ = deserializedProject.globalTransitionMinZ;
                 AdditionalCmdLineParams = deserializedProject.AdditionalCmdLineParams;
                 OverrideShooterGameModeDefaultGameIni = deserializedProject.OverrideShooterGameModeDefaultGameIni;
+                serverSpoolGroups = deserializedProject.serverSpoolGroups;
                 Day0 = deserializedProject.Day0;
                 LastImageOverrideUTC = deserializedProject.lastImageOverride;
                 WorldAtlasPassword = deserializedProject.WorldAtlasPassword;
