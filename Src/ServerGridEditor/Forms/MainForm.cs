@@ -3027,52 +3027,54 @@ namespace ServerGridEditor
                 if (confirmResult != DialogResult.OK)
                     return;
             }
-
-            openFileDialog.Filter = "json files (*.json)|*.json";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string fileName = openFileDialog.FileName;
-                Project loadedProj = new Project(File.ReadAllText(fileName), this);
-
-                if (loadedProj.successfullyLoaded)
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    bIsloadingProject = true;
-                    EnableProjectMenuItems();
-                    actualJsonFile = openFileDialog.SafeFileName;
-                    currentProject = loadedProj;
-                    SetScaleTxt(1 / currentProject.coordsScaling);
-                    SetToolsVisibility(true);
+                    string fileName = openFileDialog.FileName;
+                    Project loadedProj = new Project(File.ReadAllText(fileName), this);
 
-                    showServerInfoCheckbox.Checked = currentProject.showServerInfo;
-                    showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
-                    showIslandNamesChckBox.Checked = currentProject.showIslandNames;
-                    showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
-                    showTradeWindsChckBox.Checked = currentProject.showTradeWindsInfo;
-                    showPortalNodesChckBox.Checked = currentProject.showPortalNodes;
-                    disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
-                    showLinesCheckbox.Checked = currentProject.showLines;
-                    alphaBgCheckbox.Checked = currentProject.alphaBackground;
-                    tiledBackgroundCheckbox.Checked = currentProject.showBackground;
-                    SetTileImages(currentProject.regionsBackgroundImgPath);
-                    showForegroundChckBox.Checked = currentProject.showForeground;
-                    SetForegroundImage(currentProject.foregroundImgPath);
-                    tradeWindOverlayChckBox.Checked = currentProject.showTradeWindOverlay;
-                    SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
-                    SetDiscoverZoneImage(currentProject.discoZonesImagePath);
+                    if (loadedProj.successfullyLoaded)
+                    {
+                        bIsloadingProject = true;
+                        EnableProjectMenuItems();
+                        actualJsonFile = openFileDialog.SafeFileName;
+                        currentProject = loadedProj;
+                        SetScaleTxt(1 / currentProject.coordsScaling);
+                        SetToolsVisibility(true);
 
-                    GridColumnsTxtBox.Text = currentProject.numPathingGridColumns + "";
-                    GridRowsTxtBox.Text = currentProject.numPathingGridRows + "";
-                    gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
-                    gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
-                    GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
-                    GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
-                    mapPanel.Invalidate();
-                    mapPanel.Update();
-                    bIsloadingProject = false;
+                        showServerInfoCheckbox.Checked = currentProject.showServerInfo;
+                        showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
+                        showIslandNamesChckBox.Checked = currentProject.showIslandNames;
+                        showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
+                        showTradeWindsChckBox.Checked = currentProject.showTradeWindsInfo;
+                        showPortalNodesChckBox.Checked = currentProject.showPortalNodes;
+                        disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
+                        showLinesCheckbox.Checked = currentProject.showLines;
+                        alphaBgCheckbox.Checked = currentProject.alphaBackground;
+                        tiledBackgroundCheckbox.Checked = currentProject.showBackground;
+                        SetTileImages(currentProject.regionsBackgroundImgPath);
+                        showForegroundChckBox.Checked = currentProject.showForeground;
+                        SetForegroundImage(currentProject.foregroundImgPath);
+                        tradeWindOverlayChckBox.Checked = currentProject.showTradeWindOverlay;
+                        SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
+                        SetDiscoverZoneImage(currentProject.discoZonesImagePath);
+
+                        GridColumnsTxtBox.Text = currentProject.numPathingGridColumns + "";
+                        GridRowsTxtBox.Text = currentProject.numPathingGridRows + "";
+                        gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
+                        gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
+                        GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
+                        GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
+                        mapPanel.Invalidate();
+                        mapPanel.Update();
+                        bIsloadingProject = false;
+                    }
+                    PopulateMapRegionsDirty = true;
+                    PopulateMapRegions();
                 }
-                PopulateMapRegionsDirty = true;
-                PopulateMapRegions();
             }
         }
 
@@ -3276,26 +3278,28 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
-            openFileDialog.FileName = "";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./","");
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string imgName = waterTilesDir + "/";// + "/" + currentProject.SeamlessWorldId;
-                
-                if (string.IsNullOrEmpty(RegionComboBox.Text))
-                    RegionComboBox.Text = "Main";
+                openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
+                openFileDialog.FileName = "";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./", "");
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imgName = waterTilesDir + "/";// + "/" + currentProject.SeamlessWorldId;
 
-                //File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
-                if (currentProject.regionsBackgroundImgPath == null)
-                    currentProject.regionsBackgroundImgPath = new Dictionary<string, string>();
-                currentProject.regionsBackgroundImgPath[RegionComboBox.Text] = imgName + openFileDialog.SafeFileName;
+                    if (string.IsNullOrEmpty(RegionComboBox.Text))
+                        RegionComboBox.Text = "Main";
 
-                SetTileImage(RegionComboBox.Text, currentProject.regionsBackgroundImgPath[RegionComboBox.Text]);
+                    //File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
+                    if (currentProject.regionsBackgroundImgPath == null)
+                        currentProject.regionsBackgroundImgPath = new Dictionary<string, string>();
+                    currentProject.regionsBackgroundImgPath[RegionComboBox.Text] = imgName + openFileDialog.SafeFileName;
 
-                currentProject.showBackground = true;
-                tiledBackgroundCheckbox.Checked = true;
+                    SetTileImage(RegionComboBox.Text, currentProject.regionsBackgroundImgPath[RegionComboBox.Text]);
+
+                    currentProject.showBackground = true;
+                    tiledBackgroundCheckbox.Checked = true;
+                }
             }
         }
 
@@ -3303,17 +3307,19 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            openFileDialog.Filter = "png files (*.png)|*.png";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + "Resources";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string imgName = "Resources/discoZoneBox.png";
-                if (currentProject.DiscoveryZoneImage != null)
-                    currentProject.DiscoveryZoneImage.Dispose();
-                File.Copy(openFileDialog.FileName, imgName, true);
-                SetDiscoverZoneImage(openFileDialog.FileName);
-                currentProject.discoZonesImagePath = imgName;
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + "Resources";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imgName = "Resources/discoZoneBox.png";
+                    if (currentProject.DiscoveryZoneImage != null)
+                        currentProject.DiscoveryZoneImage.Dispose();
+                    File.Copy(openFileDialog.FileName, imgName, true);
+                    SetDiscoverZoneImage(openFileDialog.FileName);
+                    currentProject.discoZonesImagePath = imgName;
+                }
             }
         }
 
@@ -3793,25 +3799,28 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            openFileDialog.Filter = "png files (*.png)|*.png";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + foregroundTilesDir.Replace("./", "");
-            openFileDialog.FileName = string.IsNullOrEmpty(currentProject.foregroundImgPath) ? "" : Path.GetFileName(currentProject.foregroundImgPath);
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                if (foregroundBrush != null)
-                    foregroundBrush.Dispose();
-                if (foreground != null)
-                    foreground.Dispose();
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + foregroundTilesDir.Replace("./", "");
+                openFileDialog.FileName = string.IsNullOrEmpty(currentProject.foregroundImgPath) ? "" : Path.GetFileName(currentProject.foregroundImgPath);
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (foregroundBrush != null)
+                        foregroundBrush.Dispose();
+                    if (foreground != null)
+                        foreground.Dispose();
 
 
-                string imgPath= Path.Combine(foregroundTilesDir, Path.GetFileName(openFileDialog.FileName));
-                if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(foregroundTilesDir)))
-                    File.Copy(openFileDialog.FileName, imgPath, true);
+                    string imgPath = Path.Combine(foregroundTilesDir, Path.GetFileName(openFileDialog.FileName));
+                    if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(foregroundTilesDir)))
+                        File.Copy(openFileDialog.FileName, imgPath, true);
 
-                SetForegroundImage(imgPath);
-                currentProject.showForeground = true;
-                currentProject.foregroundImgPath = imgPath;
-                showForegroundChckBox.Checked = true;
+                    SetForegroundImage(imgPath);
+                    currentProject.showForeground = true;
+                    currentProject.foregroundImgPath = imgPath;
+                    showForegroundChckBox.Checked = true;
+                }
             }
         }
 
@@ -3821,54 +3830,57 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            openFileDialog.Filter = "png files (*.png)|*.png";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + tradeWindsOverlayDir.Replace("./", "");
-            openFileDialog.FileName = string.IsNullOrEmpty(currentProject.tradeWindOverlayImgPath) ? "" : Path.GetFileName(currentProject.tradeWindOverlayImgPath);
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                if (tradeWindOverlayBrush != null)
-                    tradeWindOverlayBrush.Dispose();
-                if (tradeWindOverlay != null)
-                    tradeWindOverlay.Dispose();
-
-
-                foreach (KeyValuePair<string, Image> entry in regionsTradeWindOverlay)
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + tradeWindsOverlayDir.Replace("./", "");
+                openFileDialog.FileName = string.IsNullOrEmpty(currentProject.tradeWindOverlayImgPath) ? "" : Path.GetFileName(currentProject.tradeWindOverlayImgPath);
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    entry.Value.Dispose();
-                }
-                regionsTradeWindOverlay.Clear();
-
-                foreach (KeyValuePair<string, TextureBrush> entry in regionsTradeWindOverlayBrush)
-                {
-                    entry.Value.Dispose();
-                }
-                regionsTradeWindOverlayBrush.Clear();
+                    if (tradeWindOverlayBrush != null)
+                        tradeWindOverlayBrush.Dispose();
+                    if (tradeWindOverlay != null)
+                        tradeWindOverlay.Dispose();
 
 
+                    foreach (KeyValuePair<string, Image> entry in regionsTradeWindOverlay)
+                    {
+                        entry.Value.Dispose();
+                    }
+                    regionsTradeWindOverlay.Clear();
 
-                string imgPath = Path.Combine(tradeWindsOverlayDir, Path.GetFileName(openFileDialog.FileName));
-                if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(tradeWindsOverlayDir)))
-                    File.Copy(openFileDialog.FileName, imgPath, true);
+                    foreach (KeyValuePair<string, TextureBrush> entry in regionsTradeWindOverlayBrush)
+                    {
+                        entry.Value.Dispose();
+                    }
+                    regionsTradeWindOverlayBrush.Clear();
 
-                if (string.IsNullOrEmpty(RegionComboBox.Text) || RegionComboBox.Text == "Main")
-                {
-                    currentProject.tradeWindOverlayImgPath = imgPath;
-                }
-                else
-                {
-                    if (!currentProject.regionsTradeWindOverlayImgPath.ContainsKey(RegionComboBox.Text))
-                        currentProject.regionsTradeWindOverlayImgPath.Add(RegionComboBox.Text, imgPath);
+
+
+                    string imgPath = Path.Combine(tradeWindsOverlayDir, Path.GetFileName(openFileDialog.FileName));
+                    if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(tradeWindsOverlayDir)))
+                        File.Copy(openFileDialog.FileName, imgPath, true);
+
+                    if (string.IsNullOrEmpty(RegionComboBox.Text) || RegionComboBox.Text == "Main")
+                    {
+                        currentProject.tradeWindOverlayImgPath = imgPath;
+                    }
                     else
                     {
-                        currentProject.regionsTradeWindOverlayImgPath[RegionComboBox.Text] = imgPath;
+                        if (!currentProject.regionsTradeWindOverlayImgPath.ContainsKey(RegionComboBox.Text))
+                            currentProject.regionsTradeWindOverlayImgPath.Add(RegionComboBox.Text, imgPath);
+                        else
+                        {
+                            currentProject.regionsTradeWindOverlayImgPath[RegionComboBox.Text] = imgPath;
+                        }
                     }
+
+                    currentProject.showTradeWindOverlay = true;
+
+                    SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
+
+                    tradeWindOverlayChckBox.Checked = true;
                 }
-
-                currentProject.showTradeWindOverlay = true;
-
-                SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
-
-                tradeWindOverlayChckBox.Checked = true;
             }
         }
 

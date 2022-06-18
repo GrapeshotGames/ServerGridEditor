@@ -73,7 +73,6 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scaleLbl = new System.Windows.Forms.Label();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.showServerInfoCheckbox = new System.Windows.Forms.CheckBox();
             this.showDiscoZoneInfoCheckbox = new System.Windows.Forms.CheckBox();
             this.setRatioBtn = new System.Windows.Forms.Button();
@@ -1151,7 +1150,6 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.Label scaleLbl;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mapImageToolStripMenuItem;
         private System.Windows.Forms.CheckBox showServerInfoCheckbox;
