@@ -173,12 +173,6 @@
     <Compile Include="Forms\EditRegionTemplate.Designer.cs">
       <DependentUpon>EditRegionTemplate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\EditServerSpoolGroups.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\EditServerSpoolGroups.Designer.cs">
-      <DependentUpon>EditServerSpoolGroups.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\RemoveServerConfiguration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +226,12 @@
     </Compile>
     <Compile Include="Forms\SharedLogConfigForm.Designer.cs">
       <DependentUpon>SharedLogConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShipInBottleDataConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShipInBottleDataConfigForm.Designer.cs">
+      <DependentUpon>ShipInBottleDataConfigForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TribeLogConfigForm.cs">
       <SubType>Form</SubType>
@@ -363,9 +363,6 @@
     <EmbeddedResource Include="Forms\EditRegionTemplate.resx">
       <DependentUpon>EditRegionTemplate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditServerSpoolGroups.resx">
-      <DependentUpon>EditServerSpoolGroups.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RemoveServerConfiguration.resx">
       <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SharedLogConfigForm.resx">
       <DependentUpon>SharedLogConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShipInBottleDataConfigForm.resx">
+      <DependentUpon>ShipInBottleDataConfigForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TribeLogConfigForm.resx">
       <DependentUpon>TribeLogConfigForm.cs</DependentUpon>

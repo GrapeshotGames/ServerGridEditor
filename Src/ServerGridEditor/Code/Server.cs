@@ -22,6 +22,7 @@ namespace ServerGridEditor
         public int gridY;
         public bool isHomeServer;
         public bool isMawWatersServer;
+        public string mawWaterDayTime;
         public string hiddenAtlasId = "";
         public int forceServerRules;
         public string AdditionalCmdLineParams;
@@ -78,8 +79,9 @@ namespace ServerGridEditor
         public string serverConfigurationKeyPVE = "";
         public int[] ServerPathingGrid = new int[1];
 
-        public List<string> RegisteredAtSpoolGroupsNames;
-        
+        public string RegisteredAtSpoolGroup = "";
+        public string RegisteredAtClusterSet = "";
+
 
         public string BackgroundImgPath = "";
 

@@ -506,10 +506,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup",
-      "03_Temperate"
+      "03_Temperate",
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -2225,7 +2223,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
+      "03_Temperate",
       "IronGroup"
     ],
     "extraSublevels": [
@@ -4899,7 +4897,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
+      "03_Temperate",
       "CobaltGroup"
     ],
     "extraSublevels": [
@@ -5311,7 +5309,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -5710,8 +5708,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "04_Tropical_Easy",
-      "IronGroup",
-      "TinGroup"
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -5760,7 +5757,7 @@
     "singleSpawnPointY": 6934.0,
     "singleSpawnPointZ": 1400.0,
     "maxIslandClaimFlagZ": 4700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_C_WR_C": {
     "name": "Mnt_C_WR_C",
@@ -6404,7 +6401,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -7146,7 +7143,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CobaltGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -10044,7 +10041,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
+      "03_Temperate",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -10387,7 +10384,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_WesternTundra",
@@ -10665,7 +10662,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "Freeport"
+      "Freeport",
+      "10_Desert_Easy"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -10713,7 +10711,7 @@
     "singleSpawnPointY": 28764.0,
     "singleSpawnPointZ": 1200.0,
     "maxIslandClaimFlagZ": 4400.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_W_WU": {
     "name": "Mnt_W_WU",
@@ -10943,8 +10941,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "03_Temperate",
-      "SilverGroup"
+      "Freeport"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -11478,8 +11475,8 @@
       "-35680.910156 39708.812500 5178.205078",
       "-46534.718750 -23476.373047 8964.223633"
     ],
-    "minTreasureQuality": -1.0,
-    "maxTreasureQuality": -1.0,
+    "minTreasureQuality": -3.0,
+    "maxTreasureQuality": -3.0,
     "useNpcVolumesForTreasures": false,
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
@@ -12174,7 +12171,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -13231,12 +13228,12 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "08_Polar",
       "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
-      "MasterIBL_EasternTundra",
+      "MasterIBL_Polar",
       "MasterIBL_Polar_IceCavern"
     ],
     "treasureMapSpawnPoints": [
@@ -13303,7 +13300,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -14264,7 +14261,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -16624,7 +16621,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "08_Polar",
       "IridiumGroup"
     ],
     "extraSublevels": [
@@ -17057,7 +17054,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "CopperGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Polar",
@@ -17263,7 +17260,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17319,7 +17316,7 @@
     "singleSpawnPointY": -92004.0,
     "singleSpawnPointZ": 1500.0,
     "maxIslandClaimFlagZ": 6700.0,
-    "landNodeKey": ""
+    "landNodeKey": "AotD"
   },
   "Mnt_AQ_EU": {
     "name": "Mnt_AQ_EU",
@@ -17337,7 +17334,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17544,7 +17541,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "IridiumGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17609,7 +17606,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "11_Tundra_Hard",
+      "06_Tundra_Easy",
       "IridiumGroup"
     ],
     "extraSublevels": [
@@ -17677,7 +17674,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -17745,7 +17742,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -18176,7 +18173,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "11_Tundra_Hard",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -18410,7 +18407,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "TinGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -18958,7 +18955,10 @@
       "Mnt_AM_TU"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
       "MasterIBL_CentralTundra_Canopy"
@@ -19006,7 +19006,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 5300.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AG_CU": {
     "name": "Mnt_AG_CU",
@@ -19156,7 +19156,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "11_Tundra_Hard",
       "IridiumGroup"
     ],
     "extraSublevels": [
@@ -19222,8 +19222,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "TinGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -19358,7 +19358,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CentralTundra",
@@ -20033,7 +20033,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20175,8 +20175,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "TinGroup"
+      "11_Tundra_Hard",
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -20226,7 +20226,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 4700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AM_EU": {
     "name": "Mnt_AM_EU",
@@ -20792,7 +20792,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "05_Tundra",
-      "TinGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -21006,8 +21006,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
-      "CopperGroup"
+      "11_Tundra_Hard",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
@@ -21059,7 +21059,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 9800.0,
-    "landNodeKey": ""
+    "landNodeKey": "AotD"
   },
   "Mnt_Y_EU": {
     "name": "Mnt_Y_EU",
@@ -21075,7 +21075,10 @@
       "Mnt_Y_TU"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "11_Tundra_Hard",
+      "IridiumGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_EasternTundra",
       "MasterIBL_EasternTundra_Canopy_JapanesePine",
@@ -21124,7 +21127,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 4800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AA_EE": {
     "name": "Mnt_AA_EE",
@@ -22214,7 +22217,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "SilverGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -22282,7 +22285,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "08_Polar",
-      "SilverGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
@@ -22349,7 +22352,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "05_Tundra",
+      "11_Tundra_Hard",
       "CobaltGroup"
     ],
     "extraSublevels": [
@@ -24102,8 +24105,8 @@
   },
   "Mnt_D_W": {
     "name": "Mnt_D_W",
-    "x": 635000.0,
-    "y": 635000.0,
+    "x": 510000.0,
+    "y": 510000.0,
     "imagePath": "./IslandImages/1Wonder_img.png",
     "landscapeMaterialOverride": 3,
     "sublevelNames": [
@@ -24160,6 +24163,159 @@
     "useLevelBoundsForTreasures": true,
     "prioritizeVolumesForTreasures": false,
     "isControlPoint": false,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Seafort_Large": {
+    "name": "Seafort_Large",
+    "x": 60000.0,
+    "y": 60000.0,
+    "imagePath": ".\\IslandImages/Seafort_Large_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "SeaFort",
+      "SeaFort_Near",
+      "SeaFort_Far",
+      "SeaFort_Farthest"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": false,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": true,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Seafort_A": {
+    "name": "Seafort_A",
+    "x": 60000.0,
+    "y": 60000.0,
+    "imagePath": "./IslandImages/Seafort_A_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "SeaFort_Small",
+      "SeaFort_Small_Far",
+      "SeaFort_Small_Farthest",
+      "SeaFort_Small_Near",
+      "SeaFort_Small_Near_A",
+      "SeaFort_Small_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": false,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": true,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Seafort_B": {
+    "name": "Seafort_B",
+    "x": 60000.0,
+    "y": 60000.0,
+    "imagePath": "./IslandImages/Seafort_B_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "SeaFort_Small",
+      "SeaFort_Small_Far",
+      "SeaFort_Small_Farthest",
+      "SeaFort_Small_Near",
+      "SeaFort_Small_Near_B",
+      "SeaFort_Small_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": false,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": true,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Seafort_C": {
+    "name": "Seafort_C",
+    "x": 60000.0,
+    "y": 60000.0,
+    "imagePath": "./IslandImages/Seafort_C_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "SeaFort_Small",
+      "SeaFort_Small_Far",
+      "SeaFort_Small_Farthest",
+      "SeaFort_Small_Near",
+      "SeaFort_Small_Near_C",
+      "SeaFort_Small_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": false,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": true,
+    "isControlPointAllowCapture": true,
+    "islandTreasureBottleSupplyCrateOverrides": "",
+    "islandPoints": 1,
+    "singleSpawnPointX": 0.0,
+    "singleSpawnPointY": 0.0,
+    "singleSpawnPointZ": 0.0,
+    "landNodeKey": ""
+  },
+  "Seafort_D": {
+    "name": "Seafort_D",
+    "x": 60000.0,
+    "y": 60000.0,
+    "imagePath": "./IslandImages/Seafort_D_img.png",
+    "landscapeMaterialOverride": 3,
+    "sublevelNames": [
+      "SeaFort_Small",
+      "SeaFort_Small_Far",
+      "SeaFort_Small_Farthest",
+      "SeaFort_Small_Near",
+      "SeaFort_Small_Near_D",
+      "SeaFort_Small_Marine_Warm_Near"
+    ],
+    "spawnerOverrides": {},
+    "harvestOverrideKeys": [],
+    "extraSublevels": [],
+    "minTreasureQuality": -1.0,
+    "maxTreasureQuality": -1.0,
+    "useNpcVolumesForTreasures": false,
+    "useLevelBoundsForTreasures": false,
+    "prioritizeVolumesForTreasures": false,
+    "isControlPoint": true,
     "isControlPointAllowCapture": true,
     "islandTreasureBottleSupplyCrateOverrides": "",
     "islandPoints": 1,

@@ -2214,6 +2214,7 @@ namespace ServerGridEditor
             currentProject.TribeLogConfig = new TribeLogConfigInfo();
             currentProject.TravelDataConfig = new BackupConfigInfo();
             currentProject.SharedLogConfig = new SharedLogConfigInfo();
+            currentProject.ShipBottleDataConfig = new ShipBiottleConfigInfo();
             SetScaleTxt(1 / currentProject.coordsScaling);
 
             showServerInfoCheckbox.Checked = currentProject.showServerInfo;
@@ -4302,12 +4303,6 @@ namespace ServerGridEditor
         {
             EditRegionsOverworldLocations editRegionsOverworldLocations = new EditRegionsOverworldLocations(this);
             editRegionsOverworldLocations.ShowDialog();
-        }
-
-        private void editServerSpoolGroupsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            EditServerSpoolGroups editServerSpoolGroups = new EditServerSpoolGroups(this);
-            editServerSpoolGroups.ShowDialog();
         }
     }
 

@@ -27,7 +27,7 @@ namespace ServerGridEditor
     {
         public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port,
             int gamePort, int seamlessDataPort, List<SublevelSerializationObject> sublevels, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
-            bool isHomeServer, bool isMawWatersServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<string> RegisteredAtSpoolGroupsNames, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride,
+            bool isHomeServer, bool isMawWatersServer, string mawWaterDayTime, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string RegisteredAtSpoolGroup, string RegisteredAtClusterSet, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride,
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
             float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
@@ -49,11 +49,13 @@ namespace ServerGridEditor
             Data.islandInstances = islandInstances == null ? new List<IslandInstanceData>() : islandInstances;
             Data.isHomeServer = isHomeServer;
             Data.isMawWatersServer = isMawWatersServer;
+            Data.mawWaterDayTime = mawWaterDayTime;
             Data.hiddenAtlasId = hiddenAtlasId;
             Data.forceServerRules = forceServerRules;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
-            Data.RegisteredAtSpoolGroupsNames = RegisteredAtSpoolGroupsNames;
+            Data.RegisteredAtSpoolGroup = RegisteredAtSpoolGroup;
+            Data.RegisteredAtClusterSet = RegisteredAtClusterSet;
             Data.floorZDist = floorZDist;
             Data.transitionMinZ = transitionMinZ;
             Data.utcOffset = utcOffset;
@@ -110,7 +112,7 @@ namespace ServerGridEditor
 
         public static ServerData SetFrom(this ServerData Data, Server server, float gridSize, int gridX, int gridY, string MachineIdTag, string ip, int port, 
             int gamePort, int seamlessDataPort, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions, MainForm mainForm, 
-            bool isHomeServer, bool isMawWatersServer, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<string> RegisteredAtSpoolGroupsNames, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
+            bool isHomeServer, bool isMawWatersServer, string mawWaterDayTime, string hiddenAtlasId, int forceServerRules, string AdditionalCmdLineParams, Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, string RegisteredAtSpoolGroup, string RegisteredAtClusterSet, string name, int floorZDist, int transitionMinZ, int utcOffset, string OceanDinoDepthEntriesOverride, 
             string OceanFloatsamCratesOverride, string TreasureMapLootTablesOverride, DateTime lastModified, DateTime lastImageOverride, string GlobalBiomeSeamlessServerGridPreOffsetValues, string GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
             bool islandLocked, bool discoLocked, bool pathsLocked, bool windsLocked, List<string> extraSublevels, string oceanEpicSpawnEntriesOverrideTemplateName, string NPCShipSpawnEntriesOverrideTemplateName, string regionOverrides,
             float waterColorR, float waterColorG, float waterColorB, float billboardsOffsetX, float billboardsOffsetY, float billboardsOffsetZ,
@@ -131,11 +133,13 @@ namespace ServerGridEditor
             Data.spawnRegions = spawnRegions;
             Data.isHomeServer = isHomeServer;
             Data.isMawWatersServer = isMawWatersServer;
+            Data.mawWaterDayTime = mawWaterDayTime;
             Data.hiddenAtlasId = hiddenAtlasId;
             Data.forceServerRules = forceServerRules;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
-            Data.RegisteredAtSpoolGroupsNames = RegisteredAtSpoolGroupsNames;
+            Data.RegisteredAtSpoolGroup = RegisteredAtSpoolGroup;
+            Data.RegisteredAtClusterSet = RegisteredAtClusterSet;
             Data.name = name;
             Data.floorZDist = floorZDist;
             Data.transitionMinZ = transitionMinZ;
@@ -252,6 +256,13 @@ namespace ServerGridEditor
     {
         public static ServerGrid_ServerOnlyData SetFromProject(this ServerGrid_ServerOnlyData Data, Project InProject)
         {
+            Data.ServerGroupsAndClusterSetsScheduleBaseURL = InProject.ServerGroupsAndClusterSetsScheduleBaseURL;
+            Data.ServerGroupsAndClusterSetsScheduleFilename = InProject.ServerGroupsAndClusterSetsScheduleFilename;
+            Data.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = InProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId;
+            Data.ServerGroupsAndClusterSetsScheduleS3SecretKey = InProject.ServerGroupsAndClusterSetsScheduleS3SecretKey;
+            Data.ServerGroupsAndClusterSetsScheduleS3BucketName = InProject.ServerGroupsAndClusterSetsScheduleS3BucketName;
+            Data.ServerGroupsAndClusterSetsScheduleS3Region = InProject.ServerGroupsAndClusterSetsScheduleS3Region;
+
             Data.LocalS3URL = InProject.LocalS3URL;
             Data.LocalS3AccessKeyId = InProject.LocalS3AccessKeyId;
             Data.LocalS3SecretKey = InProject.LocalS3SecretKey;
@@ -260,19 +271,19 @@ namespace ServerGridEditor
             Data.TribeLogConfig = InProject.TribeLogConfig;
             Data.SharedLogConfig = InProject.SharedLogConfig;
             Data.TravelDataConfig = InProject.TravelDataConfig;
+            Data.ShipBottleDataConfig = InProject.ShipBottleDataConfig;
             Data.DatabaseConnections = InProject.DatabaseConnections;
 
             return Data;
         }
     }
 
-
     public static class ProjectSerializationObjectEx
     {
         public static AtlasGridData SetFromData(this AtlasGridData Data, float gridSize, List<Server> serverList, List<IslandInstanceData> islandInstances, List<DiscoveryZoneData> discoZones, List<SpawnRegionData> spawnRegions,
-            string WorldAtlasId, string WorldFriendlyName, string MainRegionName, string MetaWorldURL, string MapImagesExtension, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, Dictionary<string, string> regionsBackgroundImgPath, 
+            string WorldAtlasId, string WorldFriendlyName, string MainRegionName, string MetaWorldURL, string ServerGroupsAndClusterSetsScheduleBaseURL, string ServerGroupsAndClusterSetsScheduleFilename, string ServerGroupsAndClusterSetsScheduleS3AccessKeyId, string ServerGroupsAndClusterSetsScheduleS3SecretKey, string ServerGroupsAndClusterSetsScheduleS3BucketName, string ServerGroupsAndClusterSetsScheduleS3Region, string MapImagesExtension, float coordsScaling, bool showServerInfo, bool showLines, bool alphaBackground, bool showBackground, Dictionary<string, string> regionsBackgroundImgPath, 
             MainForm mainForm, int idGenerator, int regionsIdGenerator, List<SpawnerInfoData> spawnerOverrideTemplates, bool bUseUTCTime, bool usePVEServerConfiguration, string Day0, float globalTransitionMinZ, string AdditionalCmdLineParams, 
-            Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, List<SpoolGroup> serverSpoolGroups, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
+            Dictionary<string, string> OverrideShooterGameModeDefaultGameIni, DateTime lastImageOverride, bool showDiscoZoneInfo, string discoZonesImagePath, List<ShipPathData> shipPaths, List<TradeWindData> tradeWinds,
             List<PortalPathData> portalPathData, int shipPathsIdGenerator, int tradeWindsIdGenerator, int portalPathsIdGenerator,
             bool showShipPathsInfo, bool showTradeWindsInfo, bool showPortalNodes, string modIDs, bool showIslandNames, bool showForeground, string foregroundImgPath, bool showTradeWindOverlay, string tradeWindOverlayImgPath, Dictionary<string, string> regionsTradeWindOverlayImgPath, string globalGameplaySetup,
             List<ServerTemplateData> serverTemplates, List<AppliedRegionTemplateData> appliedRegionTemplates, List<RegionTemplateData> regionTemplates, List<ServerConfiguration> serverConfigurations, List<RegionsCategory> regionsCategories, List<RegionsOverworldLocation> RegionsOverworldLocations, List<RegionsTreasureOverride> regionsTreasureOverrides, List<TransientNodeTemplate> transientNodeTemplates,List<FoliageAttachmentOverride> foliageAttachmentOverrides, bool bIsFinalExport, string MapImageURL, string OverallImageURL,string AuthListURL,
@@ -322,7 +333,7 @@ namespace ServerGridEditor
                 if (!bIsFinalExport)
                 {
                     Data.servers.Add(new ServerData().SetFrom(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
-                         server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroupsNames, server.name, server.floorZDist,
+                         server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.mawWaterDayTime, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroup, server.RegisteredAtClusterSet, server.name, server.floorZDist,
                          server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                          server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                          server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
@@ -345,7 +356,7 @@ namespace ServerGridEditor
 
                     //ServerSerializationObject exportServerObj = new ServerSerializationObject(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
                     ServerData exportServerObj = new ServerData().SetFrom(server, gridSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
-                        server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroupsNames, server.name, server.floorZDist,
+                        server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.mawWaterDayTime, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroup, server.RegisteredAtClusterSet, server.name, server.floorZDist,
                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
                         server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, overridenExtraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
@@ -404,7 +415,8 @@ namespace ServerGridEditor
                                 if (!exportServerObj.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
                                     exportServerObj.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
 
-                            exportServerObj.RegisteredAtSpoolGroupsNames = server.RegisteredAtSpoolGroupsNames;
+                            exportServerObj.RegisteredAtSpoolGroup = server.RegisteredAtSpoolGroup;
+                            exportServerObj.RegisteredAtClusterSet = server.RegisteredAtClusterSet;
 
                             //Splice these together cleanly:
                             if (!string.IsNullOrWhiteSpace(exportServerObj.ServerCustomDatas1))
@@ -433,6 +445,13 @@ namespace ServerGridEditor
             }
 
             Data.MetaWorldURL = MetaWorldURL;
+            Data.ServerGroupsAndClusterSetsScheduleBaseURL = ServerGroupsAndClusterSetsScheduleBaseURL;
+            Data.ServerGroupsAndClusterSetsScheduleFilename = ServerGroupsAndClusterSetsScheduleFilename;
+            Data.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = ServerGroupsAndClusterSetsScheduleS3AccessKeyId;
+            Data.ServerGroupsAndClusterSetsScheduleS3SecretKey = ServerGroupsAndClusterSetsScheduleS3SecretKey;
+            Data.ServerGroupsAndClusterSetsScheduleS3BucketName = ServerGroupsAndClusterSetsScheduleS3BucketName;
+            Data.ServerGroupsAndClusterSetsScheduleS3Region = ServerGroupsAndClusterSetsScheduleS3Region;
+
             Data.MapImagesExtension = MapImagesExtension;
             Data.WorldFriendlyName = WorldFriendlyName;
             Data.MainRegionName = MainRegionName;
@@ -469,7 +488,6 @@ namespace ServerGridEditor
             Data.globalTransitionMinZ = globalTransitionMinZ;
             Data.AdditionalCmdLineParams = AdditionalCmdLineParams;
             Data.OverrideShooterGameModeDefaultGameIni = OverrideShooterGameModeDefaultGameIni;
-            Data.serverSpoolGroups = serverSpoolGroups;
             Data.Day0 = Day0;
             Data.discoZonesImagePath = discoZonesImagePath;
             Data.lastImageOverride = lastImageOverride;
@@ -517,8 +535,6 @@ namespace ServerGridEditor
             Data.regionsCategories = regionsCategories.ToList();
             Data.regionsOverworldLocations = RegionsOverworldLocations.ToList();
             Data.regionsTreasureOverrides = regionsTreasureOverrides.ToList();
-            if (serverSpoolGroups != null)
-                Data.serverSpoolGroups = serverSpoolGroups.ToList();
             Data.serverConfigurations = serverConfigurations.ToList();
             Data.transientNodeTemplates = transientNodeTemplates.ToList();
             Data.foliageAttachmentOverrides = foliageAttachmentOverrides.ToList();
@@ -580,13 +596,9 @@ namespace ServerGridEditor
                 if (!serverTemplate.OverrideShooterGameModeDefaultGameIni.ContainsKey(kvp.Key))
                     serverTemplate.OverrideShooterGameModeDefaultGameIni.Add(kvp.Key, kvp.Value);
 
-            if (serverTemplate.RegisteredAtSpoolGroupsNames == null)
-                serverTemplate.RegisteredAtSpoolGroupsNames = new List<string>();
-            if (ServerTemplate1.RegisteredAtSpoolGroupsNames != null)
-                serverTemplate.RegisteredAtSpoolGroupsNames.AddRange(ServerTemplate1.RegisteredAtSpoolGroupsNames);
-            if (ServerTemplate2.RegisteredAtSpoolGroupsNames != null)
-                serverTemplate.RegisteredAtSpoolGroupsNames.AddRange(ServerTemplate2.RegisteredAtSpoolGroupsNames);
-
+            serverTemplate.RegisteredAtSpoolGroup = !string.IsNullOrEmpty(ServerTemplate1.RegisteredAtSpoolGroup) ? ServerTemplate1.RegisteredAtSpoolGroup : ServerTemplate2.RegisteredAtSpoolGroup;
+            serverTemplate.RegisteredAtClusterSet = !string.IsNullOrEmpty(ServerTemplate1.RegisteredAtClusterSet) ? ServerTemplate1.RegisteredAtClusterSet : ServerTemplate2.RegisteredAtClusterSet;
+            
             //Splice these together cleanly:
             if (!string.IsNullOrWhiteSpace(ServerTemplate1.ServerCustomDatas1))
                 serverTemplate.ServerCustomDatas1 = ServerTemplate1.ServerCustomDatas1.TrimEnd(',');
@@ -626,7 +638,6 @@ namespace ServerGridEditor
         public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
         public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
         public List<FoliageAttachmentOverride> foliageAttachmentOverrides = new List<FoliageAttachmentOverride>();
-        public List<SpoolGroup> serverSpoolGroups = new List<SpoolGroup>();
 
 
         public int numOfCellsX = 5;
@@ -655,6 +666,14 @@ namespace ServerGridEditor
         public string OverallImageURL = "";
         public string BaseServerArgs = "";
 
+        
+        public string ServerGroupsAndClusterSetsScheduleBaseURL = "";
+        public string ServerGroupsAndClusterSetsScheduleFilename = "";
+        public string ServerGroupsAndClusterSetsScheduleS3AccessKeyId = "";
+        public string ServerGroupsAndClusterSetsScheduleS3SecretKey = "";
+        public string ServerGroupsAndClusterSetsScheduleS3BucketName = "";
+        public string ServerGroupsAndClusterSetsScheduleS3Region = "";
+
         public string LocalS3URL = "";
         public string LocalS3AccessKeyId = "";
         public string LocalS3SecretKey = "";
@@ -664,6 +683,7 @@ namespace ServerGridEditor
         public TribeLogConfigInfo TribeLogConfig = new TribeLogConfigInfo();
         public SharedLogConfigInfo SharedLogConfig = new SharedLogConfigInfo();
         public BackupConfigInfo TravelDataConfig = new BackupConfigInfo();
+        public ShipBiottleConfigInfo ShipBottleDataConfig = new ShipBiottleConfigInfo();
         public List<DatabaseConnectionInfo> DatabaseConnections = new List<DatabaseConnectionInfo>();
 
         public float coordsScaling = 0.01f;
@@ -768,9 +788,9 @@ namespace ServerGridEditor
                 MessageBox.Show(string.Format("The island \"{0}\" has no defined sublevels and will not appear ingame", islandName), "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
 
-            AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MainRegionName,MetaWorldURL, MapImagesExtension,
+            AtlasGridData ProjectObj = new AtlasGridData().SetFromData(cellSize, servers, islandInstances, discoZones, spawnRegions, WorldAtlasId, WorldFriendlyName, MainRegionName,MetaWorldURL, ServerGroupsAndClusterSetsScheduleBaseURL, ServerGroupsAndClusterSetsScheduleS3AccessKeyId, ServerGroupsAndClusterSetsScheduleS3SecretKey, ServerGroupsAndClusterSetsScheduleS3BucketName, ServerGroupsAndClusterSetsScheduleS3Region, ServerGroupsAndClusterSetsScheduleFilename, MapImagesExtension,
                 coordsScaling, showServerInfo, showLines, alphaBackground, showBackground, regionsBackgroundImgPath, mainForm, idGenerator, regionsIdGenerator, mainForm.spawners.spawnersInfo, bUseUTCTime, usePVEServerConfiguration,
-                Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, serverSpoolGroups, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
+                Day0, globalTransitionMinZ, AdditionalCmdLineParams, OverrideShooterGameModeDefaultGameIni, LastImageOverrideUTC, showDiscoZoneInfo, discoZonesImagePath, shipPaths, tradeWinds, portalPaths,
                 shipPathsIdGenerator, tradeWindsIdGenerator, portalPathsIdGenerator, showShipPathsInfo, showTradeWindsInfo, showPortalNodes, ModIDs, showIslandNames, showForeground, foregroundImgPath, showTradeWindOverlay, tradeWindOverlayImgPath, regionsTradeWindOverlayImgPath, globalGameplaySetup, serverTemplates, appliedRegionTemplates, regionTemplates, serverConfigurations, regionsCategories, regionsOverworldLocations, regionsTreasureOverrides, transientNodeTemplates, foliageAttachmentOverrides,
                 bIsFinalExport, MapImageURL, OverallImageURL, AuthListURL,
 				WorldAtlasPassword, columnUTCOffset, numPathingGridRows, numPathingGridColumns, AtlasPathingGrid, bUseAutoServerRestart, ServerRestartTime, bEnableWhitelistCheats);
@@ -779,6 +799,14 @@ namespace ServerGridEditor
             ProjectObj.totalGridsY = numOfCellsY;
             if (!bIsFinalExport)
             {
+                ProjectObj.ServerGroupsAndClusterSetsScheduleBaseURL = ServerGroupsAndClusterSetsScheduleBaseURL;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleFilename = ServerGroupsAndClusterSetsScheduleFilename;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = ServerGroupsAndClusterSetsScheduleS3AccessKeyId;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3SecretKey = ServerGroupsAndClusterSetsScheduleS3SecretKey;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3BucketName = ServerGroupsAndClusterSetsScheduleS3BucketName;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3Region = ServerGroupsAndClusterSetsScheduleS3Region;
+
+
                 ProjectObj.LocalS3URL = LocalS3URL;
                 ProjectObj.LocalS3AccessKeyId = LocalS3AccessKeyId;
                 ProjectObj.LocalS3SecretKey = LocalS3SecretKey;
@@ -787,10 +815,18 @@ namespace ServerGridEditor
                 ProjectObj.TribeLogConfig = TribeLogConfig;
                 ProjectObj.SharedLogConfig = SharedLogConfig;
                 ProjectObj.TravelDataConfig = TravelDataConfig;
+                ProjectObj.ShipBottleDataConfig = ShipBottleDataConfig;
                 ProjectObj.DatabaseConnections = DatabaseConnections;
             }
             else
             {
+                ProjectObj.ServerGroupsAndClusterSetsScheduleBaseURL = null;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleFilename = null;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = null;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3SecretKey = null;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3BucketName = null;
+                ProjectObj.ServerGroupsAndClusterSetsScheduleS3Region = null;
+
                 ProjectObj.LocalS3URL = null;
                 ProjectObj.LocalS3AccessKeyId = null;
                 ProjectObj.LocalS3SecretKey = null;
@@ -799,6 +835,7 @@ namespace ServerGridEditor
                 ProjectObj.TribeLogConfig = null;
                 ProjectObj.SharedLogConfig = null;
                 ProjectObj.TravelDataConfig = null;
+                ProjectObj.ShipBottleDataConfig = null;
                 ProjectObj.DatabaseConnections = null;
                 ProjectObj.serverTemplates.Clear();
                 ProjectObj.appliedRegionTemplates.Clear();
@@ -825,6 +862,8 @@ namespace ServerGridEditor
                     deserializedProject.SharedLogConfig = new SharedLogConfigInfo();
                 if (deserializedProject.TravelDataConfig == null)
                     deserializedProject.TravelDataConfig = new BackupConfigInfo();
+                if (deserializedProject.ShipBottleDataConfig == null)
+                    deserializedProject.ShipBottleDataConfig = new ShipBiottleConfigInfo();
 
                 this.cellSize = deserializedProject.gridSize;
                 idGenerator = deserializedProject.idGenerator;
@@ -848,11 +887,13 @@ namespace ServerGridEditor
                     s.seamlessDataPort = deserializedServer.seamlessDataPort;
                     s.isHomeServer = deserializedServer.isHomeServer;
                     s.isMawWatersServer = deserializedServer.isMawWatersServer;
+                    s.mawWaterDayTime = deserializedServer.mawWaterDayTime;
                     s.hiddenAtlasId = deserializedServer.hiddenAtlasId;
                     s.forceServerRules = deserializedServer.forceServerRules;
                     s.AdditionalCmdLineParams = deserializedServer.AdditionalCmdLineParams;
                     s.OverrideShooterGameModeDefaultGameIni = deserializedServer.OverrideShooterGameModeDefaultGameIni;
-                    s.RegisteredAtSpoolGroupsNames = deserializedServer.RegisteredAtSpoolGroupsNames;
+                    s.RegisteredAtSpoolGroup = deserializedServer.RegisteredAtSpoolGroup;
+                    s.RegisteredAtClusterSet = deserializedServer.RegisteredAtClusterSet;
                     s.name = deserializedServer.name;
                     s.floorZDist = deserializedServer.floorZDist;
                     s.transitionMinZ = deserializedServer.transitionMinZ;
@@ -996,10 +1037,6 @@ namespace ServerGridEditor
                 if (regionsTreasureOverrides == null)
                     regionsTreasureOverrides = new List<RegionsTreasureOverride>();
 
-                serverSpoolGroups = deserializedProject.serverSpoolGroups;
-                if (serverSpoolGroups == null)
-                    serverSpoolGroups = new List<SpoolGroup>();
-                
                 regionsCategories = deserializedProject.regionsCategories;
                 if (regionsCategories == null)
                     regionsCategories = new List<RegionsCategory>();
@@ -1072,6 +1109,14 @@ namespace ServerGridEditor
                 MapImageURL = deserializedProject.MapImageURL;
                 OverallImageURL = deserializedProject.OverAllMapImageURL;
                 BaseServerArgs = deserializedProject.BaseServerArgs;
+                ServerGroupsAndClusterSetsScheduleBaseURL = deserializedProject.ServerGroupsAndClusterSetsScheduleBaseURL;
+                ServerGroupsAndClusterSetsScheduleFilename = deserializedProject.ServerGroupsAndClusterSetsScheduleFilename;
+                ServerGroupsAndClusterSetsScheduleS3AccessKeyId = deserializedProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId;
+                ServerGroupsAndClusterSetsScheduleS3SecretKey = deserializedProject.ServerGroupsAndClusterSetsScheduleS3SecretKey;
+                ServerGroupsAndClusterSetsScheduleS3BucketName = deserializedProject.ServerGroupsAndClusterSetsScheduleS3BucketName;
+                ServerGroupsAndClusterSetsScheduleS3Region = deserializedProject.ServerGroupsAndClusterSetsScheduleS3Region;
+
+
                 LocalS3URL = deserializedProject.LocalS3URL;
                 LocalS3AccessKeyId = deserializedProject.LocalS3AccessKeyId;
                 LocalS3SecretKey = deserializedProject.LocalS3SecretKey;
@@ -1081,6 +1126,7 @@ namespace ServerGridEditor
                 TribeLogConfig = deserializedProject.TribeLogConfig;
                 TravelDataConfig = deserializedProject.TravelDataConfig;
                 SharedLogConfig = deserializedProject.SharedLogConfig;
+                ShipBottleDataConfig = deserializedProject.ShipBottleDataConfig;
                 DatabaseConnections = deserializedProject.DatabaseConnections;
 
                 bUseUTCTime = deserializedProject.bUseUTCTime;
@@ -1091,7 +1137,6 @@ namespace ServerGridEditor
                 globalTransitionMinZ = deserializedProject.globalTransitionMinZ;
                 AdditionalCmdLineParams = deserializedProject.AdditionalCmdLineParams;
                 OverrideShooterGameModeDefaultGameIni = deserializedProject.OverrideShooterGameModeDefaultGameIni;
-                serverSpoolGroups = deserializedProject.serverSpoolGroups;
                 Day0 = deserializedProject.Day0;
                 LastImageOverrideUTC = deserializedProject.lastImageOverride;
                 WorldAtlasPassword = deserializedProject.WorldAtlasPassword;

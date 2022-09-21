@@ -17,9 +17,18 @@ namespace AtlasGridDataLibrary
         public string LocalS3SecretKey = "";
         public string LocalS3BucketName = "";
         public string LocalS3Region = "";
+
+        public string ServerGroupsAndClusterSetsScheduleBaseURL = "";
+        public string ServerGroupsAndClusterSetsScheduleFilename = "";
+        public string ServerGroupsAndClusterSetsScheduleS3AccessKeyId = "";
+        public string ServerGroupsAndClusterSetsScheduleS3SecretKey = "";
+        public string ServerGroupsAndClusterSetsScheduleS3BucketName = "";
+        public string ServerGroupsAndClusterSetsScheduleS3Region = "";
+
         public TribeLogConfigInfo TribeLogConfig = new TribeLogConfigInfo();
         public SharedLogConfigInfo SharedLogConfig = new SharedLogConfigInfo();
         public BackupConfigInfo TravelDataConfig = new BackupConfigInfo();
+        public ShipBiottleConfigInfo ShipBottleDataConfig = new ShipBiottleConfigInfo();
         public List<DatabaseConnectionInfo> DatabaseConnections = new List<DatabaseConnectionInfo>();
 
         public static AtlasGridData LoadAbsolutePath(string Path)
@@ -94,6 +103,23 @@ namespace AtlasGridDataLibrary
             S3SecretKey = In.S3SecretKey;
             S3BucketName = In.S3BucketName;
             S3KeyPrefix = In.S3KeyPrefix;
+        }
+    }
+
+    public class ShipBiottleConfigInfo : BackupConfigInfo
+    {
+        [DefaultValue("")]
+        public string S3Region = "";
+        public void CopyFrom(ShipBiottleConfigInfo In)
+        {
+            HttpBackupURL = In.HttpBackupURL;
+            HttpAPIKey = In.HttpAPIKey;
+            S3URL = In.S3URL;
+            S3AccessKeyId = In.S3AccessKeyId;
+            S3SecretKey = In.S3SecretKey;
+            S3BucketName = In.S3BucketName;
+            S3KeyPrefix = In.S3KeyPrefix;
+            S3Region = In.S3Region;
         }
     }
 

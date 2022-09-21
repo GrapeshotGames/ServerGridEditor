@@ -115,7 +115,6 @@
             this.RegionComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.RegionTemplateOverridebtn = new System.Windows.Forms.Button();
-            this.editServerSpoolGroupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tileScaleBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foregroundScaleBox)).BeginInit();
@@ -315,8 +314,7 @@
             this.editRegionCategoriesToolStripMenuItem,
             this.editRegionTemplateToolStripMenuItem,
             this.editRegionsTreasureMapOverrideToolStripMenuItem,
-            this.editRegionsOverworldLocationToolStripMenuItem,
-            this.editServerSpoolGroupsToolStripMenuItem});
+            this.editRegionsOverworldLocationToolStripMenuItem});
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem1.Text = "Edit";
@@ -1019,13 +1017,6 @@
             this.RegionTemplateOverridebtn.UseVisualStyleBackColor = true;
             this.RegionTemplateOverridebtn.Click += new System.EventHandler(this.RegionTemplateOverridebtn_Click);
             // 
-            // editServerSpoolGroupsToolStripMenuItem
-            // 
-            this.editServerSpoolGroupsToolStripMenuItem.Name = "editServerSpoolGroupsToolStripMenuItem";
-            this.editServerSpoolGroupsToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
-            this.editServerSpoolGroupsToolStripMenuItem.Text = "Edit Server Spool Groups";
-            this.editServerSpoolGroupsToolStripMenuItem.Click += new System.EventHandler(this.editServerSpoolGroupsToolStripMenuItem_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1191,7 +1182,6 @@
         private System.Windows.Forms.Button RegionTemplateOverridebtn;
         private System.Windows.Forms.ToolStripMenuItem editRegionsTreasureMapOverrideToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editRegionsOverworldLocationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editServerSpoolGroupsToolStripMenuItem;
     }
 }
 

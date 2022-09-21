@@ -18,6 +18,7 @@ namespace ServerGridEditor
 
         private TribeLogConfigInfo TribeLogConfig;
         private BackupConfigInfo TravelDataConfig;
+        private ShipBiottleConfigInfo ShipBottleDataConfig;
         private SharedLogConfigInfo SharedLogConfig;
 
         public CreateProjectForm()
@@ -30,6 +31,7 @@ namespace ServerGridEditor
             TribeLogConfig = new TribeLogConfigInfo();
             TravelDataConfig = new BackupConfigInfo();
             SharedLogConfig = new SharedLogConfigInfo();
+            ShipBottleDataConfig = new ShipBiottleConfigInfo();
 
             //Load edit data
             if (editedProject != null)
@@ -40,6 +42,8 @@ namespace ServerGridEditor
                     TravelDataConfig.CopyFrom(editedProject.TravelDataConfig);
                 if (editedProject.SharedLogConfig != null)
                     SharedLogConfig.CopyFrom(editedProject.SharedLogConfig);
+                if (editedProject.ShipBottleDataConfig != null)
+                    ShipBottleDataConfig.CopyFrom(editedProject.ShipBottleDataConfig);
 
                 worldFriendlyNameTxtBox.Text = editedProject.WorldFriendlyName;
                 MainRegionTxtBx.Text = editedProject.MainRegionName;
@@ -48,6 +52,13 @@ namespace ServerGridEditor
                 mapImageURLTxtBox.Text = editedProject.MapImageURL;
                 OveallImageURLTxtBox.Text = editedProject.OverallImageURL;
                 metaWorldURLTxtBox.Text = editedProject.MetaWorldURL;
+                groupsAndClusterSetsScheduleBaseURLTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleBaseURL;
+                groupsAndClusterSetsScheduleFilenameTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleFilename;
+                groupsAndClusterSetsScheduleS3KeyIdTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId;
+                groupsAndClusterSetsScheduleS3SecretKeyTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleS3SecretKey;
+                groupsAndClusterSetsScheduleS3BucketNameTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleS3BucketName;
+                groupsAndClusterSetsScheduleS3RegionNameTextBox.Text = editedProject.ServerGroupsAndClusterSetsScheduleS3Region;
+
                 ImagesTypeComboBox.SelectedIndex = editedProject.MapImagesExtension == "png" ? 1 : 0;
                 
                 authListURLTxtBox.Text = editedProject.AuthListURL;
@@ -154,6 +165,15 @@ namespace ServerGridEditor
                         DBEntry7_PortTxtBx.Text = editedProject.DatabaseConnections[6].Port.ToString();
                         DBEntry7_PasswordTxtBx.Text = editedProject.DatabaseConnections[6].Password;
                     }
+
+                    if (editedProject.DatabaseConnections.Count > 7)
+                    {
+                        DBEntry8_NameTxtBx.Text = editedProject.DatabaseConnections[7].Name;
+                        DBEntry8_URLTxtBx.Text = editedProject.DatabaseConnections[7].URL;
+                        DBEntry8_PortTxtBx.Text = editedProject.DatabaseConnections[7].Port.ToString();
+                        DBEntry8_PasswordTxtBx.Text = editedProject.DatabaseConnections[7].Password;
+                    }
+
                 }
 
 
@@ -232,6 +252,19 @@ namespace ServerGridEditor
                 editedProject.AuthListURL = authListURLTxtBox.Text;
                 editedProject.MetaWorldURL = metaWorldURLTxtBox.Text;
                 editedProject.MetaWorldURL = editedProject.MetaWorldURL.Trim();
+
+                editedProject.ServerGroupsAndClusterSetsScheduleBaseURL = groupsAndClusterSetsScheduleBaseURLTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleBaseURL = editedProject.ServerGroupsAndClusterSetsScheduleBaseURL.Trim();
+                editedProject.ServerGroupsAndClusterSetsScheduleFilename = groupsAndClusterSetsScheduleFilenameTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleFilename = editedProject.ServerGroupsAndClusterSetsScheduleFilename.Trim();
+                editedProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = groupsAndClusterSetsScheduleS3KeyIdTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId = editedProject.ServerGroupsAndClusterSetsScheduleS3AccessKeyId.Trim();
+                editedProject.ServerGroupsAndClusterSetsScheduleS3SecretKey = groupsAndClusterSetsScheduleS3SecretKeyTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleS3SecretKey = editedProject.ServerGroupsAndClusterSetsScheduleS3SecretKey.Trim();
+                editedProject.ServerGroupsAndClusterSetsScheduleS3BucketName = groupsAndClusterSetsScheduleS3BucketNameTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleS3BucketName = editedProject.ServerGroupsAndClusterSetsScheduleS3BucketName.Trim();
+                editedProject.ServerGroupsAndClusterSetsScheduleS3Region = groupsAndClusterSetsScheduleS3RegionNameTextBox.Text;
+                editedProject.ServerGroupsAndClusterSetsScheduleS3Region = editedProject.ServerGroupsAndClusterSetsScheduleS3Region.Trim();
 
                 editedProject.MapImagesExtension = (string)ImagesTypeComboBox.SelectedValue == "PNG" ? "png" : "jpg";
 
@@ -317,6 +350,13 @@ namespace ServerGridEditor
                     int Port = 0;
                     int.TryParse(DBEntry7_PortTxtBx.Text, out Port);
                     editedProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry7_NameTxtBx.Text, URL = DBEntry7_URLTxtBx.Text, Port = Port, Password = DBEntry7_PasswordTxtBx.Text });
+                }
+
+                if (!string.IsNullOrWhiteSpace(DBEntry8_NameTxtBx.Text) && !string.IsNullOrWhiteSpace(DBEntry8_URLTxtBx.Text))
+                {
+                    int Port = 0;
+                    int.TryParse(DBEntry8_PortTxtBx.Text, out Port);
+                    editedProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry8_NameTxtBx.Text, URL = DBEntry8_URLTxtBx.Text, Port = Port, Password = DBEntry8_PasswordTxtBx.Text });
                 }
 
                 if (size > 0)
@@ -424,6 +464,11 @@ namespace ServerGridEditor
                 if (editedProject.SharedLogConfig == null)
                     editedProject.SharedLogConfig = new SharedLogConfigInfo();
                 editedProject.SharedLogConfig.CopyFrom(SharedLogConfig);
+
+                if (editedProject.ShipBottleDataConfig == null)
+                    editedProject.ShipBottleDataConfig = new ShipBiottleConfigInfo();
+                editedProject.ShipBottleDataConfig.CopyFrom(ShipBottleDataConfig);
+
             }
             else
             {
@@ -477,16 +522,17 @@ namespace ServerGridEditor
                     mainForm.currentProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry6_NameTxtBx.Text, URL = DBEntry6_URLTxtBx.Text, Port = Port, Password = DBEntry6_PasswordTxtBx.Text });
                 }
 
-                if (!string.IsNullOrWhiteSpace(DBEntry7_NameTxtBx.Text) && !string.IsNullOrWhiteSpace(DBEntry7_URLTxtBx.Text))
+                if (!string.IsNullOrWhiteSpace(DBEntry8_NameTxtBx.Text) && !string.IsNullOrWhiteSpace(DBEntry8_URLTxtBx.Text))
                 {
                     int Port = 0;
-                    int.TryParse(DBEntry7_PortTxtBx.Text, out Port);
-                    mainForm.currentProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry7_NameTxtBx.Text, URL = DBEntry7_URLTxtBx.Text, Port = Port, Password = DBEntry7_PasswordTxtBx.Text });
+                    int.TryParse(DBEntry8_PortTxtBx.Text, out Port);
+                    mainForm.currentProject.DatabaseConnections.Add(new DatabaseConnectionInfo() { Name = DBEntry8_NameTxtBx.Text, URL = DBEntry8_URLTxtBx.Text, Port = Port, Password = DBEntry8_PasswordTxtBx.Text });
                 }
 
                 mainForm.currentProject.TribeLogConfig.CopyFrom(TribeLogConfig);
                 mainForm.currentProject.TravelDataConfig.CopyFrom(TravelDataConfig);
                 mainForm.currentProject.SharedLogConfig.CopyFrom(SharedLogConfig);
+                mainForm.currentProject.ShipBottleDataConfig.CopyFrom(ShipBottleDataConfig);
             }
             mainForm.EnableProjectMenuItems();
             Close();
@@ -531,6 +577,18 @@ namespace ServerGridEditor
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void shipBottleConfigBtn_Click(object sender, EventArgs e)
+        {
+            var ConfigForm = new ShipInBottleDataConfigForm();
+            ConfigForm.config = ShipBottleDataConfig;
+            ConfigForm.config.S3AccessKeyId = mainForm.currentProject.LocalS3AccessKeyId;
+            ConfigForm.config.S3BucketName = mainForm.currentProject.LocalS3BucketName;
+            ConfigForm.config.S3SecretKey = mainForm.currentProject.LocalS3SecretKey;
+            ConfigForm.config.S3URL = mainForm.currentProject.LocalS3URL;
+            ConfigForm.config.S3Region = mainForm.currentProject.LocalS3Region;
+            ConfigForm.ShowDialog();
         }
     }
 }
