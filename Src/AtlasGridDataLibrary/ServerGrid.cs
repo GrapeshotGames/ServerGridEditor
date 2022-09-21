@@ -11,7 +11,7 @@ namespace AtlasGridDataLibrary
 {
     public static class AtlasDataGridLoader
     {
-        private static string GetBaseDir()
+        public static string GetBaseDir()
         {
             return Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location) + "//";//GetExecutingAssembly().Location) + "//";
         }
@@ -95,6 +95,12 @@ namespace AtlasGridDataLibrary
         public string LocalS3SecretKey = "";
         public string LocalS3BucketName = "";
         public string LocalS3Region = "";
+        public string ServerGroupsAndClusterSetsScheduleBaseURL = "";
+        public string ServerGroupsAndClusterSetsScheduleFilename = "";
+        public string ServerGroupsAndClusterSetsScheduleS3AccessKeyId = "";
+        public string ServerGroupsAndClusterSetsScheduleS3SecretKey = "";
+        public string ServerGroupsAndClusterSetsScheduleS3BucketName = "";
+        public string ServerGroupsAndClusterSetsScheduleS3Region = "";
 
         public string globalGameplaySetup = "";
         public int numPathingGridRows = 10;
@@ -108,6 +114,9 @@ namespace AtlasGridDataLibrary
 
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public BackupConfigInfo TravelDataConfig = new BackupConfigInfo();
+
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public ShipBiottleConfigInfo ShipBottleDataConfig = new ShipBiottleConfigInfo();
 
         public List<DatabaseConnectionInfo> DatabaseConnections = new List<DatabaseConnectionInfo>();
 
@@ -210,7 +219,6 @@ namespace AtlasGridDataLibrary
         public List<RegionsCategory> regionsCategories = new List<RegionsCategory>();
         public List<RegionsOverworldLocation> regionsOverworldLocations = new List<RegionsOverworldLocation>();
         public List<RegionsTreasureOverride> regionsTreasureOverrides = new List<RegionsTreasureOverride>();
-        public List<SpoolGroup> serverSpoolGroups = new List<SpoolGroup>();
     }
 
     // ==== SERVER INFO ===========================================
@@ -235,12 +243,14 @@ namespace AtlasGridDataLibrary
         public int seamlessDataPort = 27000;
         public bool isHomeServer = false;
         public bool isMawWatersServer = false;
+        public string mawWaterDayTime = "4:00";
         public string hiddenAtlasId = "";
         public int forceServerRules = 0;
         public string AdditionalCmdLineParams = "";
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
-        public List<string> RegisteredAtSpoolGroupsNames = new List<string>();
-        
+        public string RegisteredAtSpoolGroup = "";
+        public string RegisteredAtClusterSet = "";
+
         public int floorZDist = 0;
         public int utcOffset = 0;
         public int transitionMinZ = 0;
@@ -352,11 +362,6 @@ namespace AtlasGridDataLibrary
 
     public class AppliedRegionTemplateData : RegionTemplateData
     {
-    }
-    public class SpoolGroup
-    {
-        public string GroupName;
-        public string BuffToApply;
     }
 
     public class RegionsCategory

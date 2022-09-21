@@ -131,9 +131,13 @@
             this.MaxPlayingSecondsKickToServerYTextBox = new System.Windows.Forms.TextBox();
             this.MaxPlayingSecondsKickToServerXTextBox = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.label46 = new System.Windows.Forms.Label();
             this.mawWatersServerCheckBox = new System.Windows.Forms.CheckBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.mawTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label48 = new System.Windows.Forms.Label();
+            this.RegisteredAtClusterSetTextBox = new System.Windows.Forms.TextBox();
+            this.RegisteredAtSpoolGroupTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).BeginInit();
@@ -1017,22 +1021,14 @@
             this.label42.TabIndex = 137;
             this.label42.Text = "Kick To Server:";
             // 
-            // RegisteredAtSpoolGroupsNamesCheckedListBox
-            // 
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox.FormattingEnabled = true;
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Location = new System.Drawing.Point(374, 825);
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Name = "RegisteredAtSpoolGroupsNamesCheckedListBox";
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox.Size = new System.Drawing.Size(194, 94);
-            this.RegisteredAtSpoolGroupsNamesCheckedListBox.TabIndex = 140;
-            // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(371, 805);
+            this.label46.Location = new System.Drawing.Point(371, 807);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(141, 13);
+            this.label46.Size = new System.Drawing.Size(136, 13);
             this.label46.TabIndex = 141;
-            this.label46.Text = "Registered At Spool Groups:";
+            this.label46.Text = "Registered At Spool Group:";
             // 
             // mawWatersServerCheckBox
             // 
@@ -1045,6 +1041,48 @@
             this.mawWatersServerCheckBox.Text = "Maw Waters Server";
             this.mawWatersServerCheckBox.UseVisualStyleBackColor = true;
             // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(7, 512);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 13);
+            this.label47.TabIndex = 143;
+            this.label47.Text = "Maw Time:";
+            // 
+            // mawTimePicker
+            // 
+            this.mawTimePicker.CustomFormat = "hh:mm";
+            this.mawTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.mawTimePicker.Location = new System.Drawing.Point(67, 510);
+            this.mawTimePicker.Name = "mawTimePicker";
+            this.mawTimePicker.ShowUpDown = true;
+            this.mawTimePicker.Size = new System.Drawing.Size(68, 20);
+            this.mawTimePicker.TabIndex = 144;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(371, 835);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(128, 13);
+            this.label48.TabIndex = 145;
+            this.label48.Text = "Registered At Cluster Set:";
+            // 
+            // RegisteredAtClusterSetTextBox
+            // 
+            this.RegisteredAtClusterSetTextBox.Location = new System.Drawing.Point(513, 833);
+            this.RegisteredAtClusterSetTextBox.Name = "RegisteredAtClusterSetTextBox";
+            this.RegisteredAtClusterSetTextBox.Size = new System.Drawing.Size(142, 20);
+            this.RegisteredAtClusterSetTextBox.TabIndex = 146;
+            // 
+            // RegisteredAtSpoolGroupTextBox
+            // 
+            this.RegisteredAtSpoolGroupTextBox.Location = new System.Drawing.Point(513, 807);
+            this.RegisteredAtSpoolGroupTextBox.Name = "RegisteredAtSpoolGroupTextBox";
+            this.RegisteredAtSpoolGroupTextBox.Size = new System.Drawing.Size(142, 20);
+            this.RegisteredAtSpoolGroupTextBox.TabIndex = 147;
+            // 
             // EditServerForm
             // 
             this.AcceptButton = this.saveBtn;
@@ -1052,9 +1090,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
             this.ClientSize = new System.Drawing.Size(667, 952);
+            this.Controls.Add(this.RegisteredAtSpoolGroupTextBox);
+            this.Controls.Add(this.RegisteredAtClusterSetTextBox);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.mawTimePicker);
+            this.Controls.Add(this.label47);
             this.Controls.Add(this.mawWatersServerCheckBox);
             this.Controls.Add(this.label46);
-            this.Controls.Add(this.RegisteredAtSpoolGroupsNamesCheckedListBox);
             this.Controls.Add(this.MaxPlayingSecondsKickToServerYTextBox);
             this.Controls.Add(this.MaxPlayingSecondsKickToServerXTextBox);
             this.Controls.Add(this.label42);
@@ -1274,8 +1316,12 @@
         private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerYTextBox;
         private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerXTextBox;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.CheckedListBox RegisteredAtSpoolGroupsNamesCheckedListBox;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.CheckBox mawWatersServerCheckBox;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.DateTimePicker mawTimePicker;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox RegisteredAtClusterSetTextBox;
+        private System.Windows.Forms.TextBox RegisteredAtSpoolGroupTextBox;
     }
 }
