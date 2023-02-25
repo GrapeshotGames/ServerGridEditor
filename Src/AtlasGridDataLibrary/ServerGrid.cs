@@ -476,6 +476,15 @@ namespace AtlasGridDataLibrary
         public float singleSpawnPointZ;
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
         public float maxIslandClaimFlagZ;
+        public override bool Equals(object obj)
+        {
+            IslandInstanceData islandInstanceData = obj as IslandInstanceData;
+            if (islandInstanceData != null)
+            {
+                return islandInstanceData.id == id;
+            }
+            return false;
+        }
 
     }
     public class DiscoveryZoneData : MoveableObjectData
@@ -494,6 +503,15 @@ namespace AtlasGridDataLibrary
         public string ManualVolumeName = "";
         public int explorerNoteIndex;
         public bool allowSea;
+        public override bool Equals(object obj)
+        {
+            DiscoveryZoneData discoveryZoneData = obj as DiscoveryZoneData;
+            if (discoveryZoneData != null)
+            {
+                return discoveryZoneData.id == id && discoveryZoneData.name == name;
+            }
+            return false;
+        }
     }
     public class SpawnRegionData
     {
@@ -502,6 +520,16 @@ namespace AtlasGridDataLibrary
         public int X;
         [NonSerialized]
         public int Y;
+
+        public override bool Equals(object obj)
+        {
+            SpawnRegionData spawnRegionData = obj as SpawnRegionData;
+            if(spawnRegionData != null )
+                return spawnRegionData.name == name && spawnRegionData.X == X && spawnRegionData.Y == Y;
+            return false;
+
+
+        }
     }
 
 

@@ -545,7 +545,7 @@ namespace ServerGridEditor
             return Data;
         }
 
-        private static ServerData MergeTemplates(ServerData ServerTemplate1, ServerData ServerTemplate2)
+        public static ServerData MergeTemplates(ServerData ServerTemplate1, ServerData ServerTemplate2)
         {
             if (ServerTemplate1 == null)
                 return ServerTemplate2;
@@ -767,6 +767,81 @@ namespace ServerGridEditor
             Deserialize(json, mainForm);
         }
 
+        public string SerializeServer(MainForm mainForm, int x, int y)
+        {
+            ServerData exportServerObj = null;
+            foreach (Server server in servers)
+            {
+                if (server.gridX == x && server.gridY == y)
+                {
+                    List<IslandInstanceData> serverIslands = new List<IslandInstanceData>();
+
+                    foreach (IslandInstanceData instance in islandInstances)
+                    {
+                        if (server.IsWorldPointInServer(new System.Drawing.PointF(instance.worldX, instance.worldY), cellSize))
+                            serverIslands.Add(instance);
+                    }
+
+                    List<DiscoveryZoneData> serverDiscos = new List<DiscoveryZoneData>();
+                    foreach (DiscoveryZoneData instance in discoZones)
+                    {
+                        if (server.IsWorldPointInServer(new System.Drawing.PointF(instance.worldX, instance.worldY), cellSize))
+                            serverDiscos.Add(instance);
+                    }
+
+                    List<SpawnRegionData> serverSpawnRegions = new List<SpawnRegionData>();
+                    foreach (SpawnRegionData region in spawnRegions)
+                    {
+                        if (server.gridX == region.X && server.gridY == region.Y)
+                            serverSpawnRegions.Add(region);
+                    }
+
+                    List<Tuple<int, int>> ServerPathingGridTuples = new List<Tuple<int, int>>();
+                    int RowOffset = server.gridY * numPathingGridRows;
+                    int ColOffset = server.gridX * numPathingGridColumns;
+                    for (int Col = 0; Col < numPathingGridColumns; Col++)
+                        for (int Row = 0; Row < numPathingGridRows; Row++)
+                            if (!AtlasPathingGrid[Row + RowOffset, Col + ColOffset])
+                                ServerPathingGridTuples.Add(new Tuple<int, int>(Row, Col));
+                    int[] ServerPathingGrid = new int[ServerPathingGridTuples.Count * 2];
+                    int i = 0;
+                    foreach (Tuple<int, int> ServerPathingGridTuple in ServerPathingGridTuples)
+                    {
+                        ServerPathingGrid[i++] = ServerPathingGridTuple.Item1;
+                        ServerPathingGrid[i++] = ServerPathingGridTuple.Item2;
+                    }
+
+                    //Sublevels need to be overridden here to be processed in the constructor
+                    List<string> overridenExtraSublevels = server.extraSublevels;
+                    if (!string.IsNullOrEmpty(server.serverTemplateName))
+                    {
+                        ServerTemplateData serverTemplate = mainForm.currentProject.GetServerTemplateByName(server.serverTemplateName);
+                        if (serverTemplate != null && server.extraSublevels.Count == 0)
+                            overridenExtraSublevels = serverTemplate.extraSublevels;
+                    }
+
+
+                    exportServerObj = new ServerData().SetFrom(server, cellSize, server.gridX, server.gridY, server.MachineIdTag, server.ip, server.port,
+                         server.gamePort, server.seamlessDataPort, serverIslands, serverDiscos, serverSpawnRegions, mainForm, server.isHomeServer, server.isMawWatersServer, server.mawWaterDayTime, server.hiddenAtlasId, server.forceServerRules, server.AdditionalCmdLineParams, server.OverrideShooterGameModeDefaultGameIni, server.RegisteredAtSpoolGroup, server.RegisteredAtClusterSet, server.name, server.floorZDist,
+                         server.transitionMinZ, server.utcOffset, server.OceanDinoDepthEntriesOverride, server.oceanFloatsamCratesOverride,
+                         server.treasureMapLootTablesOverride, server.lastModifiedUTC, server.lastImageOverrideUTC, server.GlobalBiomeSeamlessServerGridPreOffsetValues, server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater,
+                         server.islandLocked, server.discoLocked, server.pathsLocked, server.windsLocked, server.extraSublevels, server.oceanEpicSpawnEntriesOverrideTemplateName, server.NPCShipSpawnEntriesOverrideTemplateName, server.regionOverrides,
+                         server.waterColorR, server.waterColorG, server.waterColorB, server.billboardsOffsetX, server.billboardsOffsetY, server.billboardsOffsetZ,
+                         server.OverrideDestNorthX, server.OverrideDestNorthY, server.OverrideDestSouthX, server.OverrideDestSouthY, server.OverrideDestEastX, server.OverrideDestEastY, server.OverrideDestWestX, server.OverrideDestWestY,
+                         server.MaxPlayingSeconds,
+                         server.MaxPlayingSecondsKickToServerX, server.MaxPlayingSecondsKickToServerY,
+                    server.skyStyleIndex, server.serverIslandPointsMultiplier, server.ServerCustomDatas1, server.ServerCustomDatas2, server.ClientCustomDatas1, server.ClientCustomDatas2, server.serverTemplateName, server.serverConfigurationKeyPVP, server.serverConfigurationKeyPVE, server.OceanEpicSpawnEntriesOverrideValues, ServerPathingGrid, server.BackgroundImgPath);
+                }
+            }
+        
+            if (exportServerObj == null)
+                return "";
+            return JsonConvert.SerializeObject(exportServerObj, Formatting.Indented, new JsonSerializerSettings()
+            {
+                NullValueHandling = NullValueHandling.Ignore
+            });
+        }
+
         public string Serialize(MainForm mainForm, bool bIsFinalExport = false)
         {
             List<string> referencedIslandNames = new List<string>();
@@ -845,6 +920,203 @@ namespace ServerGridEditor
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
+        }
+
+        public void DeserializeServer(string json, int x, int y, MainForm mainForm, float gridSize)
+        {
+            ServerData deserializedServer = JsonConvert.DeserializeObject<ServerData>(json, new JsonSerializerSettings
+            {
+                DefaultValueHandling = DefaultValueHandling.Populate,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+
+            Server OldServer = new Server(deserializedServer.gridX, deserializedServer.gridY);
+            Server server = new Server(x, y);
+
+            List<IslandInstanceData> serverIslands = new List<IslandInstanceData>();
+            foreach (IslandInstanceData instance in islandInstances)
+            {
+                if (server.IsWorldPointInServer(new System.Drawing.PointF(instance.worldX, instance.worldY), cellSize))
+                    serverIslands.Add(instance);
+            }
+            foreach (IslandInstanceData instance in serverIslands)
+            {
+                islandInstances.Remove(instance);
+            }
+
+            List<DiscoveryZoneData> serverDiscos = new List<DiscoveryZoneData>();
+            foreach (DiscoveryZoneData instance in discoZones)
+            {
+                if (server.IsWorldPointInServer(new System.Drawing.PointF(instance.worldX, instance.worldY), cellSize))
+                    serverDiscos.Add(instance);
+            }
+            foreach (DiscoveryZoneData instance in serverDiscos)
+            {
+                discoZones.Remove(instance);
+            }
+
+
+            List<SpawnRegionData> serverSpawnRegions = new List<SpawnRegionData>();
+            foreach (SpawnRegionData region in spawnRegions)
+            {
+                if (server.gridX == region.X && server.gridY == region.Y)
+                    serverSpawnRegions.Add(region);
+            }
+            foreach (SpawnRegionData region in serverSpawnRegions)
+            {
+                spawnRegions.Remove(region);
+            }
+
+            server.MachineIdTag = deserializedServer.MachineIdTag;
+            server.ip = servers[servers.IndexOf(server)].ip;
+            server.port = servers[servers.IndexOf(server)].port;
+            server.gamePort = servers[servers.IndexOf(server)].gamePort;
+            server.seamlessDataPort = servers[servers.IndexOf(server)].seamlessDataPort;
+            server.isHomeServer = deserializedServer.isHomeServer;
+            server.isMawWatersServer = deserializedServer.isMawWatersServer;
+            server.mawWaterDayTime = deserializedServer.mawWaterDayTime;
+            server.hiddenAtlasId = servers[servers.IndexOf(server)].hiddenAtlasId;
+            server.forceServerRules = deserializedServer.forceServerRules;
+            server.AdditionalCmdLineParams = deserializedServer.AdditionalCmdLineParams;
+            server.OverrideShooterGameModeDefaultGameIni = deserializedServer.OverrideShooterGameModeDefaultGameIni;
+            server.RegisteredAtSpoolGroup = deserializedServer.RegisteredAtSpoolGroup;
+            server.RegisteredAtClusterSet = deserializedServer.RegisteredAtClusterSet;
+            server.name = deserializedServer.name;
+            server.floorZDist = deserializedServer.floorZDist;
+            server.transitionMinZ = deserializedServer.transitionMinZ;
+            server.utcOffset = deserializedServer.utcOffset;
+            server.GlobalBiomeSeamlessServerGridPreOffsetValues = deserializedServer.GlobalBiomeSeamlessServerGridPreOffsetValues;
+            server.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater = deserializedServer.GlobalBiomeSeamlessServerGridPreOffsetValuesOceanWater;
+            server.OceanDinoDepthEntriesOverride = deserializedServer.OceanDinoDepthEntriesOverride;
+            server.OceanEpicSpawnEntriesOverrideValues = deserializedServer.OceanEpicSpawnEntriesOverrideValues;
+            server.oceanEpicSpawnEntriesOverrideTemplateName = deserializedServer.oceanEpicSpawnEntriesOverrideTemplateName;
+            server.NPCShipSpawnEntriesOverrideTemplateName = deserializedServer.NPCShipSpawnEntriesOverrideTemplateName;
+            server.regionOverrides = deserializedServer.regionOverrides;
+            server.waterColorR = deserializedServer.waterColorR;
+            server.waterColorG = deserializedServer.waterColorG;
+            server.waterColorB = deserializedServer.waterColorB;
+            server.billboardsOffsetX = deserializedServer.billboardsOffsetX;
+            server.billboardsOffsetY = deserializedServer.billboardsOffsetY;
+            server.billboardsOffsetZ = deserializedServer.billboardsOffsetZ;
+            server.OverrideDestNorthX = deserializedServer.OverrideDestNorthX;
+            server.OverrideDestNorthY = deserializedServer.OverrideDestNorthY;
+            server.OverrideDestSouthX = deserializedServer.OverrideDestSouthX;
+            server.OverrideDestSouthY = deserializedServer.OverrideDestSouthY;
+            server.OverrideDestEastX = deserializedServer.OverrideDestEastX;
+            server.OverrideDestEastY = deserializedServer.OverrideDestEastY;
+            server.OverrideDestWestX = deserializedServer.OverrideDestWestX;
+            server.OverrideDestWestY = deserializedServer.OverrideDestWestY;
+            server.MaxPlayingSeconds = deserializedServer.MaxPlayingSeconds;
+            server.MaxPlayingSecondsKickToServerX = deserializedServer.MaxPlayingSecondsKickToServerX;
+            server.MaxPlayingSecondsKickToServerY = deserializedServer.MaxPlayingSecondsKickToServerY;
+            server.skyStyleIndex = deserializedServer.skyStyleIndex;
+            server.serverIslandPointsMultiplier = deserializedServer.serverIslandPointsMultiplier;
+            server.ServerCustomDatas1 = deserializedServer.ServerCustomDatas1;
+            server.ServerCustomDatas2 = deserializedServer.ServerCustomDatas2;
+            server.ClientCustomDatas1 = deserializedServer.ClientCustomDatas1;
+            server.ClientCustomDatas2 = deserializedServer.ClientCustomDatas2;
+            server.oceanFloatsamCratesOverride = deserializedServer.oceanFloatsamCratesOverride;
+            server.treasureMapLootTablesOverride = deserializedServer.treasureMapLootTablesOverride;
+            server.lastModifiedUTC = deserializedServer.lastModified;
+            server.lastImageOverrideUTC = deserializedServer.lastImageOverride;
+            server.serverTemplateName = deserializedServer.serverTemplateName;
+            server.serverConfigurationKeyPVE = deserializedServer.serverConfigurationKeyPVE;
+            server.serverConfigurationKeyPVP = deserializedServer.serverConfigurationKeyPVP;
+            server.BackgroundImgPath = deserializedServer.BackgroundImgPath;
+            if (server.serverTemplateName == null)
+                server.serverTemplateName = "";
+            if (server.floorZDist <= 0)
+                server.floorZDist = 0;
+            server.islandLocked = deserializedServer.islandLocked;
+            server.discoLocked = deserializedServer.discoLocked;
+            server.pathsLocked = deserializedServer.pathsLocked;
+            server.windsLocked = deserializedServer.windsLocked;
+            server.extraSublevels = deserializedServer.extraSublevels;
+
+            List<string> newExtraSublevels = new List<string>();
+            if (server.extraSublevels != null)
+                foreach (string extraSublevel in server.extraSublevels)
+                    if (extraSublevel != null)
+                    {
+                        string newExtraSublevel = extraSublevel.Trim();
+                        if (newExtraSublevel.Length > 0 && !string.IsNullOrWhiteSpace(newExtraSublevel))
+                        {
+                            string[] names = newExtraSublevel.Split(',');
+                            foreach (string extraSublevelName in names)
+                                if (extraSublevelName != null)
+                                {
+                                    string newName = extraSublevelName.Trim();
+                                    if (newName.Length > 0)
+                                        newExtraSublevels.Add(newName);
+                                }
+                        }
+                    }
+            server.extraSublevels = newExtraSublevels;
+            servers[servers.IndexOf(server)] = server;
+
+
+            foreach (IslandInstanceData deserializedIslandInstance in deserializedServer.islandInstances)
+            {
+                PointF point = OldServer.GetLocalLocation(new PointF(deserializedIslandInstance.worldX, deserializedIslandInstance.worldY), gridSize);
+                point = server.TranslateLocalToGlobal(point, gridSize);
+                deserializedIslandInstance.worldX = point.X;
+                deserializedIslandInstance.worldY = point.Y;
+                if (!mainForm.islands.ContainsKey(deserializedIslandInstance.name))
+                    continue;
+
+                //PointF worldPoint = s.RelativeToWorldPoint(cellSize, new PointF(deserializedIsland.additionalTranslationX, deserializedIsland.additionalTranslationY));
+                //islandInstances.Add(new IslandInstance(deserializedIsland.name, worldPoint.X, worldPoint.Y, deserializedIsland.additionalRotationYaw));
+                bool bRepeatedId = false;
+                foreach (IslandInstanceData prevIslands in islandInstances)
+                    if (prevIslands.id == deserializedIslandInstance.id)
+                    {
+                        bRepeatedId = true;
+                        break;
+                    }
+                if (deserializedIslandInstance.id == 0 || bRepeatedId)
+                    deserializedIslandInstance.id = GenerateNewId();
+
+                deserializedIslandInstance.SyncOverridesWithTemplates(mainForm);
+
+                deserializedIslandInstance.maxTreasureQuality = deserializedIslandInstance.minTreasureQuality = -1;
+                deserializedIslandInstance.useNpcVolumesForTreasures = false;
+                deserializedIslandInstance.islandTreasureBottleSupplyCrateOverrides = "";
+                deserializedIslandInstance.islandPoints = 1;
+                deserializedIslandInstance.singleSpawnPointX = 0;
+                deserializedIslandInstance.singleSpawnPointY = 0;
+                deserializedIslandInstance.singleSpawnPointZ = 0;
+                //deserializedIslandInstance.spawnPointRegionOverride = -1;
+
+                islandInstances.Add(deserializedIslandInstance);
+            }
+
+            foreach (DiscoveryZoneData deserializedDiscoZone in deserializedServer.discoZones)
+            {
+                PointF point = OldServer.GetLocalLocation(new PointF(deserializedDiscoZone.worldX, deserializedDiscoZone.worldY), gridSize);
+                point = server.TranslateLocalToGlobal(point, gridSize);
+                deserializedDiscoZone.worldX = point.X;
+                deserializedDiscoZone.worldY = point.Y;
+                deserializedDiscoZone.startWorldX = deserializedDiscoZone.worldX - deserializedDiscoZone.sizeX / 2;
+                deserializedDiscoZone.startWorldY = deserializedDiscoZone.worldY - deserializedDiscoZone.sizeX / 2;
+
+                bool bRepeatedId = false;
+                foreach (DiscoveryZoneData prevDiscoZones in discoZones)
+                    if (prevDiscoZones.id == deserializedDiscoZone.id)
+                    {
+                        bRepeatedId = true;
+                        break;
+                    }
+                if (deserializedDiscoZone.id == 0 || bRepeatedId)
+                    deserializedDiscoZone.id = GenerateUniqueDiscoZoneId();
+
+                discoZones.Add(deserializedDiscoZone);
+            }
+            foreach (SpawnRegionData spawnRegion in deserializedServer.spawnRegions)
+            {
+                spawnRegion.X = server.gridX; spawnRegion.Y = server.gridY;
+                spawnRegions.Add(spawnRegion);
+            }
+
         }
 
         public void Deserialize(string json, MainForm mainForm)

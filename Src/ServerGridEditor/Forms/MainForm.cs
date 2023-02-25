@@ -2991,6 +2991,17 @@ namespace ServerGridEditor
 
         }
 
+        void LoadServer(int x, int y)
+        {
+            openFileDialog.Filter = "json files (*.json)|*.json";
+            openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog.FileName;
+                currentProject.DeserializeServer(File.ReadAllText(fileName), x, y, this, currentProject.cellSize);
+            }
+        }
+
         void LoadProject()
         {
             if (currentProject != null)
@@ -4303,6 +4314,52 @@ namespace ServerGridEditor
         {
             EditRegionsOverworldLocations editRegionsOverworldLocations = new EditRegionsOverworldLocations(this);
             editRegionsOverworldLocations.ShowDialog();
+        }
+
+        private void exportServerJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+
+            int x = 0;
+            int y = 0;
+            if (ExportServerTxt.Text.Length == 2 || ExportServerTxt.Text.Length == 3)
+            {
+                if (Char.IsLetter(ExportServerTxt.Text, 0) && int.TryParse(ExportServerTxt.Text.Substring(1), out y))
+                {
+                    x = (int)char.ToLower((ExportServerTxt.Text[0])) - (int)'a';
+                    y--;
+                }
+                else
+                    return;
+            }
+
+            saveFileDialog.Filter = "json files (*.json)|*.json";
+            saveFileDialog.FileName =  "ServerGrid_" + ExportServerTxt.Text + ".json";
+            saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllText(saveFileDialog.FileName, currentProject.SerializeServer(this, x, y));
+            }
+        }
+
+        private void importServerJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int x = 0;
+            int y = 0;
+            if (ImportServerTxt.Text.Length == 2 || ImportServerTxt.Text.Length == 3)
+            {
+                if (Char.IsLetter(ImportServerTxt.Text, 0) && int.TryParse(ImportServerTxt.Text.Substring(1), out y))
+                {
+                    x = (int)char.ToLower((ImportServerTxt.Text[0])) - (int)'a';
+                    y--;
+                }
+                else
+                    return;
+            }
+
+            LoadServer(x, y);
+            mapPanel.Refresh();
         }
     }
 

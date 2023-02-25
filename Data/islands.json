@@ -154,9 +154,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -294,7 +293,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -342,7 +341,7 @@
     "singleSpawnPointY": 8791.0,
     "singleSpawnPointZ": 900.0,
     "maxIslandClaimFlagZ": 4700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_F_TR": {
     "name": "Cay_F_TR",
@@ -507,7 +506,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -856,7 +855,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -929,9 +928,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1000,9 +998,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1051,7 +1048,7 @@
     "singleSpawnPointY": -60466.0,
     "singleSpawnPointZ": 1000.0,
     "maxIslandClaimFlagZ": 5200.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_J_TR": {
     "name": "Cay_J_TR",
@@ -1202,7 +1199,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1266,7 +1263,7 @@
     "singleSpawnPointY": -45406.0,
     "singleSpawnPointZ": 700.0,
     "maxIslandClaimFlagZ": 4900.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_L_TR": {
     "name": "Mnt_L_TR",
@@ -1431,9 +1428,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1502,9 +1498,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1650,9 +1645,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1731,9 +1725,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1801,7 +1794,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -1849,7 +1842,7 @@
     "singleSpawnPointY": 18802.0,
     "singleSpawnPointZ": 1200.0,
     "maxIslandClaimFlagZ": 4400.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_LB_WF": {
     "name": "Mnt_LB_WF",
@@ -1867,7 +1860,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -2505,9 +2498,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -2911,9 +2903,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -2973,7 +2964,7 @@
     "singleSpawnPointY": -38236.0,
     "singleSpawnPointZ": 1700.0,
     "maxIslandClaimFlagZ": 3700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Cay_H_WR": {
     "name": "Cay_H_WR",
@@ -3058,7 +3049,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "09_Desert",
-      "TinGroup"
+      "SilverGroup"
     ],
     "extraSublevels": [
       "MasterIBL_LowDesert",
@@ -4347,7 +4338,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
+      "07_Equator",
       "IronGroup"
     ],
     "extraSublevels": [
@@ -4416,8 +4407,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
+      "03_Temperate",
       "CopperGroup"
     ],
     "extraSublevels": [
@@ -5164,9 +5154,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "IridiumGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -5373,9 +5362,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Temperate",
@@ -5439,7 +5427,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -5573,9 +5561,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -6922,7 +6909,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -7919,9 +7906,8 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
-      "CopperGroup"
+      "03_Temperate",
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -8562,7 +8548,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "TinGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -8637,7 +8623,7 @@
     "singleSpawnPointY": -44620.0,
     "singleSpawnPointZ": 700.0,
     "maxIslandClaimFlagZ": 4900.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_J_ET_B": {
     "name": "Mnt_J_ET_B",
@@ -9017,8 +9003,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "02_Temperate_Easy",
-      "IronGroup",
+      "03_Temperate",
       "TinGroup"
     ],
     "extraSublevels": [
@@ -9071,7 +9056,7 @@
     "singleSpawnPointY": -40109.0,
     "singleSpawnPointZ": 800.0,
     "maxIslandClaimFlagZ": 4400.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_K_WR": {
     "name": "Mnt_K_WR",
@@ -9089,8 +9074,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9148,7 +9132,7 @@
     "singleSpawnPointY": -39844.0,
     "singleSpawnPointZ": 800.0,
     "maxIslandClaimFlagZ": 4400.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_K_CL": {
     "name": "Mnt_K_CL",
@@ -9434,7 +9418,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "03_Temperate",
-      "CopperGroup"
+      "RookieGroup"
     ],
     "extraSublevels": [
       "MasterIBL_EasternTemperate",
@@ -9632,8 +9616,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "01_Tropical",
-      "CopperGroup",
-      "TinGroup"
+      "CopperGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -9683,7 +9666,7 @@
     "singleSpawnPointY": -22411.0,
     "singleSpawnPointZ": 1650.0,
     "maxIslandClaimFlagZ": 4600.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_N_ER_B": {
     "name": "Mnt_N_ER_B",
@@ -14980,7 +14963,10 @@
       "Mnt_T_PO"
     ],
     "spawnerOverrides": {},
-    "harvestOverrideKeys": null,
+    "harvestOverrideKeys": [
+      "08_Polar",
+      "CobaltGroup"
+    ],
     "extraSublevels": [
       "MasterIBL_CaveEntrance_Polar",
       "MasterIBL_Polar",
@@ -15037,7 +15023,7 @@
     "singleSpawnPointY": -81047.0,
     "singleSpawnPointZ": 1650.0,
     "maxIslandClaimFlagZ": 5800.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_T_CP_C": {
     "name": "Mnt_T_CP_C",
@@ -22629,7 +22615,7 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "CopperGroup"
+      "CobaltGroup"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -22902,8 +22888,9 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "01_Tropical",
-      "SilverGroup"
+      "07_Equator",
+      "IronGroup",
+      "IronwoodOakOverride"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
@@ -23301,7 +23288,7 @@
     "x": 306000.0,
     "y": 306000.0,
     "imagePath": "./IslandImages/Mnt_AN_EE_img.jpg",
-    "landscapeMaterialOverride": 10,
+    "landscapeMaterialOverride": 6,
     "sublevelNames": [
       "Mnt_AN_EQ",
       "Mnt_AN_Far_07",
@@ -23311,7 +23298,7 @@
     ],
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
-      "04_Tropical_Easy",
+      "07_Equator",
       "IronGroup",
       "TinGroup"
     ],
@@ -23364,7 +23351,7 @@
     "singleSpawnPointY": 0.0,
     "singleSpawnPointZ": 0.0,
     "maxIslandClaimFlagZ": 8700.0,
-    "landNodeKey": null
+    "landNodeKey": ""
   },
   "Mnt_AC_EE_B": {
     "name": "Mnt_AC_EE_B",
@@ -23883,7 +23870,8 @@
     "spawnerOverrides": {},
     "harvestOverrideKeys": [
       "07_Equator",
-      "IronGroup"
+      "IronGroup",
+      "IronwoodOakOverride"
     ],
     "extraSublevels": [
       "MasterIBL_Tropical",
