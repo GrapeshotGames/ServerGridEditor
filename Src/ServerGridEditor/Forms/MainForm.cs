@@ -3020,12 +3020,15 @@ namespace ServerGridEditor
 
         void LoadServer(int x, int y)
         {
-            openFileDialog.Filter = "json files (*.json)|*.json";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string fileName = openFileDialog.FileName;
-                currentProject.DeserializeServer(File.ReadAllText(fileName), x, y, this, currentProject.cellSize);
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string fileName = openFileDialog.FileName;
+                    currentProject.DeserializeServer(File.ReadAllText(fileName), x, y, this, currentProject.cellSize);
+                }
             }
         }
 
@@ -4390,12 +4393,15 @@ namespace ServerGridEditor
                     return;
             }
 
-            saveFileDialog.Filter = "json files (*.json)|*.json";
-            saveFileDialog.FileName =  "ServerGrid_" + ExportServerTxt.Text + ".json";
-            saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                File.WriteAllText(saveFileDialog.FileName, currentProject.SerializeServer(this, x, y));
+                saveFileDialog.Filter = "json files (*.json)|*.json";
+                saveFileDialog.FileName = "ServerGrid_" + ExportServerTxt.Text + ".json";
+                saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, currentProject.SerializeServer(this, x, y));
+                }
             }
         }
 
