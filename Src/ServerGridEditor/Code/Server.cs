@@ -98,6 +98,16 @@ namespace ServerGridEditor
             return GetWorldRect(gridSize).Contains(point);
         }
 
+        public PointF GetLocalLocation(PointF point, float gridSize)
+        {
+            return new PointF(point.X - gridX * gridSize, point.Y - gridY * gridSize);
+        }
+
+        public PointF TranslateLocalToGlobal(PointF point, float gridSize)
+        {
+            return new PointF(point.X + gridX * gridSize, point.Y + gridY * gridSize);
+        }
+
         public RectangleF GetWorldRect(float gridSize)
         {
             return new RectangleF(new PointF(gridX * gridSize, gridY * gridSize), new SizeF(gridSize, gridSize));
@@ -172,8 +182,15 @@ namespace ServerGridEditor
         {
             lastModifiedUTC = DateTime.UtcNow;
         }
-    }
 
+        public override bool Equals(object obj)
+        {
+            Server server = obj as Server;
+            if(server != null)
+                return gridX == server.gridX && gridY == server.gridY;
+            return false;
+        }
+    }
 
     public static class ServerTemplateDataEx
     {

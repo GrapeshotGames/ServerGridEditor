@@ -72,7 +72,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
@@ -172,6 +174,9 @@
     </Compile>
     <Compile Include="Forms\EditRegionTemplate.Designer.cs">
       <DependentUpon>EditRegionTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HintTextBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\RemoveServerConfiguration.cs">
       <SubType>Form</SubType>
