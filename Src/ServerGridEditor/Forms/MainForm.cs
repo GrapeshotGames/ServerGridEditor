@@ -71,6 +71,7 @@ namespace ServerGridEditor
 
         public Cursor editCursor;
         public Project currentProject = null;
+        public Dictionary<string, Image> imageCache = null;
         public bool bIsloadingProject = false;
         public Dictionary<string, Island> islands = new Dictionary<string, Island>();
 
@@ -542,7 +543,7 @@ namespace ServerGridEditor
                 {
                     if (s.BackgroundImgPath != null && s.BackgroundImgPath.Length > 0)
                     {
-                        Image image = Image.FromFile(s.BackgroundImgPath);
+                        Image image = mainForm.GetImage(s.BackgroundImgPath);
                         TextureBrush textureBrush = new TextureBrush(image);
                         if (image != null && textureBrush != null)
                         {
@@ -2227,6 +2228,7 @@ namespace ServerGridEditor
         public void CreateProject(float CellSize, int xCells, int yCells, string worldFriendlyName, string MainRegionName, string worldAtlasId, string worldAtlasPassword)
         {
             currentProject = new Project(CellSize, xCells, yCells);
+            this.imageCache = new Dictionary<string, Image>();
             currentProject.WorldFriendlyName = worldFriendlyName;
             currentProject.MainRegionName = MainRegionName;
             currentProject.WorldAtlasPassword = worldAtlasPassword;
@@ -3057,6 +3059,7 @@ namespace ServerGridEditor
                         EnableProjectMenuItems();
                         actualJsonFile = openFileDialog.SafeFileName;
                         currentProject = loadedProj;
+                        this.imageCache = new Dictionary<string, Image>();
                         SetScaleTxt(1 / currentProject.coordsScaling);
                         SetToolsVisibility(true);
 
@@ -3357,7 +3360,7 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                regionsTile[regionName] = Image.FromFile(fileName);
+                regionsTile[regionName] = this.GetImage(fileName);
                 regionsTileBrush[regionName] = new TextureBrush(regionsTile[regionName]);
             }
 
@@ -3394,7 +3397,7 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                foreground = Image.FromFile(fileName);
+                foreground = this.GetImage(fileName);
                 foregroundBrush = new TextureBrush(foreground);
             }
 
@@ -3425,7 +3428,7 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                tradeWindOverlay = Image.FromFile(fileName);
+                tradeWindOverlay = this.GetImage(fileName);
                 tradeWindOverlayBrush = new TextureBrush(tradeWindOverlay);
             }
 
@@ -3433,7 +3436,7 @@ namespace ServerGridEditor
             {
                 if (File.Exists(entry.Value))
                 {
-                    Image regionTradeWindOverlay = Image.FromFile(entry.Value);
+                    Image regionTradeWindOverlay = this.GetImage(entry.Value);
                     regionsTradeWindOverlay.Add(entry.Key, regionTradeWindOverlay);
                     regionsTradeWindOverlayBrush.Add(entry.Key, new TextureBrush(regionTradeWindOverlay));
                 }
@@ -3452,7 +3455,7 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                currentProject.DiscoveryZoneImage = Image.FromFile(fileName);
+                currentProject.DiscoveryZoneImage = this.GetImage(fileName);
             }
 
             mapPanel.Invalidate();
@@ -4337,7 +4340,26 @@ namespace ServerGridEditor
             editRegionsTemplates.ShowDialog();
         }
 
-        public List<string> GetRegionNames()
+        public Image GetImage(string path)
+        {
+            if (this.imageCache.TryGetValue(path, out Image image))
+            {
+                return image;
+            }
+
+            lock (this.imageCache)
+            {
+                if (this.imageCache.TryGetValue(path, out Image img))
+                {
+                    return img;
+                }
+
+                return imageCache[path] = Image.FromFile(path);
+            }
+            
+        }
+
+            public List<string> GetRegionNames()
         {
             List<string> RegionsNames = new List<string>();
             foreach(string RegionName in RegionComboBox.Items)
