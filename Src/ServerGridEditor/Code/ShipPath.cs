@@ -42,28 +42,65 @@ namespace ServerGridEditor
 
         public static BezierNodeData GetNextNode(this BezierNodeData Data)
         {
-            int idx = Data.shipPath.Nodes.IndexOf(Data) + 1;
+            if (Data is ShipPathNode)
+            {
+                ShipPathNode shipPathNode = (ShipPathNode)Data;
+                int idx = shipPathNode.shipPath.Nodes.IndexOf(shipPathNode) + 1;
 
-            if (idx == Data.shipPath.Nodes.Count)
-                return Data.shipPath.Nodes[0];
+                if (idx == shipPathNode.shipPath.Nodes.Count)
+                    return shipPathNode.shipPath.Nodes[0];
 
-            if (idx < 0 || idx > Data.shipPath.Nodes.Count)
-                return null;
+                if (idx < 0 || idx > shipPathNode.shipPath.Nodes.Count)
+                    return null;
 
-            return Data.shipPath.Nodes[idx];
+                return shipPathNode.shipPath.Nodes[idx];
+            }
+            else if (Data is TradeWindNode)
+            {
+                TradeWindNode tradeWindNode = (TradeWindNode)Data;
+                int idx = tradeWindNode.tradeWind.Nodes.IndexOf(tradeWindNode) + 1;
+
+                if (idx == tradeWindNode.tradeWind.Nodes.Count)
+                    return tradeWindNode.tradeWind.Nodes[0];
+
+                if (idx < 0 || idx > tradeWindNode.tradeWind.Nodes.Count)
+                    return null;
+
+                return tradeWindNode.tradeWind.Nodes[idx];
+            }
+
+            return null;
         }
 
         public static BezierNodeData GetPrevNode(this BezierNodeData Data)
         {
-            int idx = Data.shipPath.Nodes.IndexOf(Data) - 1;
+            if (Data is ShipPathNode)
+            {
+                ShipPathNode shipPathNode = (ShipPathNode)Data;
+                int idx = shipPathNode.shipPath.Nodes.IndexOf(shipPathNode) - 1;
 
-            if (idx == -1)
-                return Data.shipPath.Nodes[Data.shipPath.Nodes.Count - 1];
+                if (idx == -1)
+                    return shipPathNode.shipPath.Nodes[shipPathNode.shipPath.Nodes.Count - 1];
 
-            if (idx < 0 || idx >= Data.shipPath.Nodes.Count)
-                return null;
+                if (idx < 0 || idx >= shipPathNode.shipPath.Nodes.Count)
+                    return null;
 
-            return Data.shipPath.Nodes[idx];
+                return shipPathNode.shipPath.Nodes[idx];
+            }
+            else if (Data is TradeWindNode)
+            {
+                TradeWindNode tradeWindNode = (TradeWindNode)Data;
+                int idx = tradeWindNode.tradeWind.Nodes.IndexOf(tradeWindNode) - 1;
+
+                if (idx == -1)
+                    return tradeWindNode.tradeWind.Nodes[tradeWindNode.tradeWind.Nodes.Count - 1];
+
+                if (idx < 0 || idx >= tradeWindNode.tradeWind.Nodes.Count)
+                    return null;
+
+                return tradeWindNode.tradeWind.Nodes[idx];
+            }
+            return null;
         }
 
         public static PointF GetNextControlPoint(this BezierNodeData Data)
@@ -79,42 +116,164 @@ namespace ServerGridEditor
         }
     }
 
+
+    public static class SplinePathDataEx
+    {
+        public static bool DeleteNode(this SplinePathData Data, MoveableObjectData nodeToDelete)
+        {
+            if (Data is ShipPathData)
+            {
+                ShipPathData shipPath = (ShipPathData)Data;
+                if (shipPath.Nodes.Count <= 2)
+                    return false;
+
+                int idx = shipPath.Nodes.IndexOf((ShipPathNode)nodeToDelete);
+                if (idx >= 0)
+                    shipPath.Nodes.RemoveAt(idx);
+
+                return true;
+            }
+            else if (Data is TradeWindData)
+            {
+                TradeWindData tradeWind = (TradeWindData)Data;
+                if (tradeWind.Nodes.Count <= 2)
+                    return false;
+
+                int idx = tradeWind.Nodes.IndexOf((TradeWindNode)nodeToDelete);
+                if (idx >= 0)
+                    tradeWind.Nodes.RemoveAt(idx);
+
+                return true;
+            }
+            else if (Data is PortalPathData)
+            {
+                PortalPathData portalPath = (PortalPathData)Data;
+                if (portalPath.Nodes.Count <= 2 || portalPath.Nodes[0] == nodeToDelete)
+                    return false;
+
+                int idx = portalPath.Nodes.IndexOf((PortalPathNode)nodeToDelete);
+                if (idx >= 0)
+                    portalPath.Nodes.RemoveAt(idx);
+
+                return true;
+            }
+            return false;
+        }
+    }
+
     public static class ShipPathEx
     {
         public static ShipPathData SetFrom(this ShipPathData Data, MainForm mainForm, float worldX, float worldY)
         {
             float nodeSize = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject);
 
-            Data.Nodes.Add(new BezierNodeData() { worldX = worldX - nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
-            Data.Nodes.Add(new BezierNodeData() { worldX = worldX, worldY = worldY, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
-            Data.Nodes.Add(new BezierNodeData() { worldX = worldX + nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.Nodes.Add(new ShipPathNode() { worldX = worldX - nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.Nodes.Add(new ShipPathNode() { worldX = worldX, worldY = worldY, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.Nodes.Add(new ShipPathNode() { worldX = worldX + nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, shipPath = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
             Data.PathId = mainForm.currentProject.GenerateNewShipPathId();
 
             return Data;
         }
 
-        public static bool DeleteNode(this ShipPathData Data, BezierNodeData nodeToDelete)
-        {
-            if (Data.Nodes.Count <= 2)
-                return false;
-
-            int idx = Data.Nodes.IndexOf(nodeToDelete);
-            if(idx >= 0)
-                Data.Nodes.RemoveAt(idx);
-
-            return true;
-        }
-
         public static BezierNodeData AddNode(this ShipPathData Data, BezierNodeData afterNode)
         {
-            int idx = Data.Nodes.IndexOf(afterNode);
+            int idx = Data.Nodes.IndexOf((ShipPathNode)afterNode);
             if (idx >= 0)
             {
                 BezierNodeData nextNode = afterNode.GetNextNode();
                 float midX = (afterNode.worldX + nextNode.worldX) / 2;
                 float midY = (afterNode.worldY + nextNode.worldY) / 2;
-                BezierNodeData newNode = new BezierNodeData() { worldX = midX, worldY = midY, rotation = 0, shipPath = Data/*, mainForm.currentProject*/ };
-                Data.Nodes.Insert(idx + 1, newNode);
+                BezierNodeData newNode = new ShipPathNode() { worldX = midX, worldY = midY, rotation = 0, shipPath = Data/*, mainForm.currentProject*/ };
+                Data.Nodes.Insert(idx + 1, (ShipPathNode)newNode);
+            }
+
+            return null;
+        }
+    }
+
+    public static class TradeWindEx
+    {
+        public static TradeWindData SetFrom(this TradeWindData Data, MainForm mainForm, float worldX, float worldY)
+        {
+            float nodeSize = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject);
+
+            Data.Nodes.Add(new TradeWindNode() { worldX = worldX - nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, tradeWind = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.Nodes.Add(new TradeWindNode() { worldX = worldX, worldY = worldY, rotation = 0, tradeWind = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.Nodes.Add(new TradeWindNode() { worldX = worldX + nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, tradeWind = Data, controlPointsDistance = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject) });
+            Data.PathId = mainForm.currentProject.GenerateNewTradeWindId();
+
+            return Data;
+        }
+
+        public static BezierNodeData AddNode(this TradeWindData Data, BezierNodeData afterNode)
+        {
+            int idx = Data.Nodes.IndexOf((TradeWindNode)afterNode);
+            if (idx >= 0)
+            {
+                BezierNodeData nextNode = afterNode.GetNextNode();
+                float midX = (afterNode.worldX + nextNode.worldX) / 2;
+                float midY = (afterNode.worldY + nextNode.worldY) / 2;
+                BezierNodeData newNode = new TradeWindNode() { worldX = midX, worldY = midY, rotation = 0, tradeWind = Data/*, mainForm.currentProject*/ };
+                Data.Nodes.Insert(idx + 1, (TradeWindNode)newNode);
+            }
+
+            return null;
+        }
+    }
+
+    public static class PortalPathNodeEx
+    {
+        public static PortalPathData SetFrom(this PortalPathData Data, MainForm mainForm, float worldX, float worldY)
+        {
+            float nodeSize = BezierNodeEx.GetBezierNodeSize(mainForm.currentProject);
+
+            Data.PathId = mainForm.currentProject.GenetateNewPortalPathId();
+            string NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + "0";
+            Data.Nodes.Add(new PortalPathNode() { worldX = worldX - nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, portalPathData = Data, PortalName = NodeName });
+            NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + "1";
+            Data.Nodes.Add(new PortalPathNode() { worldX = worldX + nodeSize * 2, worldY = worldY + nodeSize, rotation = 0, portalPathData = Data, PortalName = NodeName });
+            
+            return Data;
+        }
+        public static Rectangle GetRect(this PortalPathNode Data, Project currentProject)
+        {
+            if (currentProject == null)
+                return new Rectangle();
+
+            float relativeX = GetNodeSize(currentProject) * currentProject.coordsScaling;
+            float relativeY = relativeX;
+
+            return new Rectangle((int)Math.Round(Data.worldX * currentProject.coordsScaling - relativeX / 2f), (int)Math.Round(Data.worldY * currentProject.coordsScaling - relativeY / 2f), (int)Math.Round(relativeX), (int)Math.Round(relativeY));
+        }
+
+        public static bool ContainsPoint(this PortalPathNode Data, Point p, MainForm mainForm)
+        {
+            Rectangle Rect = Data.GetRect(mainForm.currentProject);
+
+            PointF rotatedP = StaticHelpers.RotatePointAround(p, new PointF(Rect.Left + Rect.Width / 2.0f, Rect.Top + Rect.Height / 2.0f), -Data.rotation);
+            p.X = (int)rotatedP.X;
+            p.Y = (int)rotatedP.Y;
+
+            return Rect.Contains(p);
+        }
+
+        public static float GetNodeSize(Project currentProject)
+        {
+            return currentProject.cellSize * MainForm.bezierNodeRatio;
+        }
+        public static BezierNodeData AddNode(this PortalPathData Data, MoveableObjectData afterNode)
+        {
+            int idx = Data.Nodes.IndexOf((PortalPathNode)afterNode);
+            if (idx >= 0)
+            {
+                MoveableObjectData RootNode = Data.Nodes[0];
+                MoveableObjectData Node = Data.Nodes[1];
+
+                float midX = (RootNode.worldX) / 2;
+                float midY = (RootNode.worldY + Node.worldY) / 2;
+               string NodeName = "PortalNode_" + Data.PathId.ToString() + "_" + Data.Nodes.Count.ToString();
+                MoveableObjectData newNode = new PortalPathNode() { worldX = midX, worldY = midY, rotation = 0, portalPathData = Data/*, mainForm.currentProject*/ , PortalName = NodeName };
+                Data.Nodes.Add((PortalPathNode)newNode);
             }
 
             return null;

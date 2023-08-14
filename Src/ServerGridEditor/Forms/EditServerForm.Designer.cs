@@ -83,21 +83,64 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.ServerCustomDatas1TxtBox = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.ServerCustomDatas2TxtBox = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.ClientCustomDatas2TxtBox = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.ClientCustomDatas1TxtBox = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.templateComboBox = new System.Windows.Forms.ComboBox();
             this.OceanEpicSpawnEntriesOverrideValuesTxtBox = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.serverIslandPointsMultiplierTxtBox = new System.Windows.Forms.TextBox();
+            this.rulesComboBox = new System.Windows.Forms.ComboBox();
+            this.PVPServerConfigurationComboBox = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.PVEServerConfigurationComboBox = new System.Windows.Forms.ComboBox();
+            this.hiddenAtlasIDTextBox = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.BackgroundImgPathTextBox = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.BillboardsOffsetZTextBox = new System.Windows.Forms.TextBox();
+            this.BillboardsOffsetYTextBox = new System.Windows.Forms.TextBox();
+            this.BillboardsOffsetXTextBox = new System.Windows.Forms.TextBox();
+            this.ClientCustomDataGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServerCustomDataGrid = new System.Windows.Forms.DataGridView();
+            this.regionName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.OverrideDestNorthXTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestNorthYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestWestYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestWestXTextBox = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.OverrideDestSouthYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestSouthXTextBox = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.OverrideDestEastYTextBox = new System.Windows.Forms.TextBox();
+            this.OverrideDestEastXTextBox = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.MaxPlayingSecondsTextBox = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.MaxPlayingSecondsKickToServerYTextBox = new System.Windows.Forms.TextBox();
+            this.MaxPlayingSecondsKickToServerXTextBox = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.mawWatersServerCheckBox = new System.Windows.Forms.CheckBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.mawTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label48 = new System.Windows.Forms.Label();
+            this.RegisteredAtClusterSetTextBox = new System.Windows.Forms.TextBox();
+            this.RegisteredAtSpoolGroupTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -122,13 +165,13 @@
             // 
             this.portTxtBox.Location = new System.Drawing.Point(46, 67);
             this.portTxtBox.Name = "portTxtBox";
-            this.portTxtBox.Size = new System.Drawing.Size(55, 20);
+            this.portTxtBox.Size = new System.Drawing.Size(45, 20);
             this.portTxtBox.TabIndex = 2;
             this.portTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.portTxtBox_KeyPress);
             // 
             // gamePortTxtBox
             // 
-            this.gamePortTxtBox.Location = new System.Drawing.Point(189, 70);
+            this.gamePortTxtBox.Location = new System.Drawing.Point(158, 70);
             this.gamePortTxtBox.Name = "gamePortTxtBox";
             this.gamePortTxtBox.Size = new System.Drawing.Size(55, 20);
             this.gamePortTxtBox.TabIndex = 4;
@@ -136,7 +179,7 @@
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(7, 712);
+            this.saveBtn.Location = new System.Drawing.Point(9, 916);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(94, 32);
             this.saveBtn.TabIndex = 9;
@@ -154,7 +197,7 @@
             // cancelBtn
             // 
             this.cancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelBtn.Location = new System.Drawing.Point(107, 712);
+            this.cancelBtn.Location = new System.Drawing.Point(109, 916);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(96, 32);
             this.cancelBtn.TabIndex = 10;
@@ -165,7 +208,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(119, 72);
+            this.label5.Location = new System.Drawing.Point(95, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 12;
@@ -174,7 +217,7 @@
             // homeServerCheckbox
             // 
             this.homeServerCheckbox.AutoSize = true;
-            this.homeServerCheckbox.Location = new System.Drawing.Point(19, 683);
+            this.homeServerCheckbox.Location = new System.Drawing.Point(15, 610);
             this.homeServerCheckbox.Name = "homeServerCheckbox";
             this.homeServerCheckbox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.homeServerCheckbox.Size = new System.Drawing.Size(88, 17);
@@ -184,7 +227,7 @@
             // 
             // runTestsBtn
             // 
-            this.runTestsBtn.Location = new System.Drawing.Point(243, 712);
+            this.runTestsBtn.Location = new System.Drawing.Point(256, 916);
             this.runTestsBtn.Name = "runTestsBtn";
             this.runTestsBtn.Size = new System.Drawing.Size(96, 32);
             this.runTestsBtn.TabIndex = 15;
@@ -340,7 +383,6 @@
             this.seamlessDataPortTxt.Name = "seamlessDataPortTxt";
             this.seamlessDataPortTxt.Size = new System.Drawing.Size(55, 20);
             this.seamlessDataPortTxt.TabIndex = 36;
-            this.seamlessDataPortTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label13
             // 
@@ -378,7 +420,7 @@
             // 
             // editSpawnRegions
             // 
-            this.editSpawnRegions.Location = new System.Drawing.Point(225, 674);
+            this.editSpawnRegions.Location = new System.Drawing.Point(238, 606);
             this.editSpawnRegions.Name = "editSpawnRegions";
             this.editSpawnRegions.Size = new System.Drawing.Size(114, 32);
             this.editSpawnRegions.TabIndex = 42;
@@ -416,7 +458,7 @@
             this.overrideShooterGameModeDefaultGameIniDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.overrideShooterGameModeDefaultGameIniDataGridView.Location = new System.Drawing.Point(18, 270);
             this.overrideShooterGameModeDefaultGameIniDataGridView.Name = "overrideShooterGameModeDefaultGameIniDataGridView";
-            this.overrideShooterGameModeDefaultGameIniDataGridView.Size = new System.Drawing.Size(249, 110);
+            this.overrideShooterGameModeDefaultGameIniDataGridView.Size = new System.Drawing.Size(239, 110);
             this.overrideShooterGameModeDefaultGameIniDataGridView.TabIndex = 67;
             // 
             // label16
@@ -497,7 +539,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(221, 486);
+            this.label20.Location = new System.Drawing.Point(221, 481);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(75, 13);
             this.label20.TabIndex = 79;
@@ -505,7 +547,7 @@
             // 
             // skyStyleIndexTxtBox
             // 
-            this.skyStyleIndexTxtBox.Location = new System.Drawing.Point(299, 483);
+            this.skyStyleIndexTxtBox.Location = new System.Drawing.Point(299, 478);
             this.skyStyleIndexTxtBox.Name = "skyStyleIndexTxtBox";
             this.skyStyleIndexTxtBox.Size = new System.Drawing.Size(55, 20);
             this.skyStyleIndexTxtBox.TabIndex = 78;
@@ -513,7 +555,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 486);
+            this.label21.Location = new System.Drawing.Point(7, 481);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(60, 13);
             this.label21.TabIndex = 80;
@@ -521,21 +563,21 @@
             // 
             // waterColorRTxtBox
             // 
-            this.waterColorRTxtBox.Location = new System.Drawing.Point(71, 480);
+            this.waterColorRTxtBox.Location = new System.Drawing.Point(71, 475);
             this.waterColorRTxtBox.Name = "waterColorRTxtBox";
             this.waterColorRTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorRTxtBox.TabIndex = 81;
             // 
             // waterColorGTxtBox
             // 
-            this.waterColorGTxtBox.Location = new System.Drawing.Point(119, 480);
+            this.waterColorGTxtBox.Location = new System.Drawing.Point(119, 475);
             this.waterColorGTxtBox.Name = "waterColorGTxtBox";
             this.waterColorGTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorGTxtBox.TabIndex = 82;
             // 
             // waterColorBTxtBox
             // 
-            this.waterColorBTxtBox.Location = new System.Drawing.Point(167, 480);
+            this.waterColorBTxtBox.Location = new System.Drawing.Point(167, 475);
             this.waterColorBTxtBox.Name = "waterColorBTxtBox";
             this.waterColorBTxtBox.Size = new System.Drawing.Size(42, 20);
             this.waterColorBTxtBox.TabIndex = 83;
@@ -543,7 +585,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(83, 502);
+            this.label22.Location = new System.Drawing.Point(83, 499);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(15, 13);
             this.label22.TabIndex = 84;
@@ -552,7 +594,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(132, 502);
+            this.label23.Location = new System.Drawing.Point(132, 499);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(15, 13);
             this.label23.TabIndex = 85;
@@ -561,75 +603,11 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(180, 501);
+            this.label24.Location = new System.Drawing.Point(180, 498);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(14, 13);
             this.label24.TabIndex = 86;
             this.label24.Text = "B";
-            // 
-            // ServerCustomDatas1TxtBox
-            // 
-            this.ServerCustomDatas1TxtBox.Location = new System.Drawing.Point(122, 564);
-            this.ServerCustomDatas1TxtBox.Name = "ServerCustomDatas1TxtBox";
-            this.ServerCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ServerCustomDatas1TxtBox.TabIndex = 88;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(13, 567);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(110, 13);
-            this.label25.TabIndex = 87;
-            this.label25.Text = "ServerCustomDatas1:";
-            // 
-            // ServerCustomDatas2TxtBox
-            // 
-            this.ServerCustomDatas2TxtBox.Location = new System.Drawing.Point(122, 587);
-            this.ServerCustomDatas2TxtBox.Name = "ServerCustomDatas2TxtBox";
-            this.ServerCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ServerCustomDatas2TxtBox.TabIndex = 90;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(13, 590);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(110, 13);
-            this.label26.TabIndex = 89;
-            this.label26.Text = "ServerCustomDatas2:";
-            // 
-            // ClientCustomDatas2TxtBox
-            // 
-            this.ClientCustomDatas2TxtBox.Location = new System.Drawing.Point(122, 636);
-            this.ClientCustomDatas2TxtBox.Name = "ClientCustomDatas2TxtBox";
-            this.ClientCustomDatas2TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ClientCustomDatas2TxtBox.TabIndex = 94;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(13, 639);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(105, 13);
-            this.label27.TabIndex = 93;
-            this.label27.Text = "ClientCustomDatas2:";
-            // 
-            // ClientCustomDatas1TxtBox
-            // 
-            this.ClientCustomDatas1TxtBox.Location = new System.Drawing.Point(122, 613);
-            this.ClientCustomDatas1TxtBox.Name = "ClientCustomDatas1TxtBox";
-            this.ClientCustomDatas1TxtBox.Size = new System.Drawing.Size(230, 20);
-            this.ClientCustomDatas1TxtBox.TabIndex = 92;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(13, 616);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(105, 13);
-            this.label28.TabIndex = 91;
-            this.label28.Text = "ClientCustomDatas1:";
             // 
             // label30
             // 
@@ -671,7 +649,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(132, 525);
+            this.label32.Location = new System.Drawing.Point(137, 510);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(137, 13);
             this.label32.TabIndex = 100;
@@ -679,11 +657,431 @@
             // 
             // serverIslandPointsMultiplierTxtBox
             // 
-            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(275, 522);
+            this.serverIslandPointsMultiplierTxtBox.Location = new System.Drawing.Point(275, 505);
             this.serverIslandPointsMultiplierTxtBox.Name = "serverIslandPointsMultiplierTxtBox";
             this.serverIslandPointsMultiplierTxtBox.Size = new System.Drawing.Size(79, 20);
             this.serverIslandPointsMultiplierTxtBox.TabIndex = 99;
-            this.serverIslandPointsMultiplierTxtBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // rulesComboBox
+            // 
+            this.rulesComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.rulesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rulesComboBox.FormattingEnabled = true;
+            this.rulesComboBox.Location = new System.Drawing.Point(275, 272);
+            this.rulesComboBox.Name = "rulesComboBox";
+            this.rulesComboBox.Size = new System.Drawing.Size(81, 21);
+            this.rulesComboBox.TabIndex = 101;
+            this.rulesComboBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.rulesComboBox_DrawItem);
+            // 
+            // PVPServerConfigurationComboBox
+            // 
+            this.PVPServerConfigurationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PVPServerConfigurationComboBox.FormattingEnabled = true;
+            this.PVPServerConfigurationComboBox.Location = new System.Drawing.Point(164, 555);
+            this.PVPServerConfigurationComboBox.Name = "PVPServerConfigurationComboBox";
+            this.PVPServerConfigurationComboBox.Size = new System.Drawing.Size(188, 21);
+            this.PVPServerConfigurationComboBox.TabIndex = 102;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(13, 558);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(106, 13);
+            this.label33.TabIndex = 103;
+            this.label33.Text = "Server Congifuration:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 583);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(130, 13);
+            this.label34.TabIndex = 105;
+            this.label34.Text = "Server Congifuration PVE:";
+            // 
+            // PVEServerConfigurationComboBox
+            // 
+            this.PVEServerConfigurationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PVEServerConfigurationComboBox.FormattingEnabled = true;
+            this.PVEServerConfigurationComboBox.Location = new System.Drawing.Point(164, 580);
+            this.PVEServerConfigurationComboBox.Name = "PVEServerConfigurationComboBox";
+            this.PVEServerConfigurationComboBox.Size = new System.Drawing.Size(188, 21);
+            this.PVEServerConfigurationComboBox.TabIndex = 104;
+            // 
+            // hiddenAtlasIDTextBox
+            // 
+            this.hiddenAtlasIDTextBox.Location = new System.Drawing.Point(275, 526);
+            this.hiddenAtlasIDTextBox.Name = "hiddenAtlasIDTextBox";
+            this.hiddenAtlasIDTextBox.Size = new System.Drawing.Size(78, 20);
+            this.hiddenAtlasIDTextBox.TabIndex = 104;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(137, 529);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(95, 13);
+            this.label35.TabIndex = 106;
+            this.label35.Text = "Hidden ATLAS ID:";
+            // 
+            // BackgroundImgPathTextBox
+            // 
+            this.BackgroundImgPathTextBox.Location = new System.Drawing.Point(374, 782);
+            this.BackgroundImgPathTextBox.Name = "BackgroundImgPathTextBox";
+            this.BackgroundImgPathTextBox.Size = new System.Drawing.Size(281, 20);
+            this.BackgroundImgPathTextBox.TabIndex = 107;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(371, 766);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(122, 13);
+            this.label36.TabIndex = 108;
+            this.label36.Text = "Background Image Path";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(16, 648);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(86, 13);
+            this.label37.TabIndex = 109;
+            this.label37.Text = "Billboards Offset:";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(218, 668);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(14, 13);
+            this.label38.TabIndex = 115;
+            this.label38.Text = "Z";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(170, 669);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(14, 13);
+            this.label39.TabIndex = 114;
+            this.label39.Text = "Y";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(121, 669);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(14, 13);
+            this.label40.TabIndex = 113;
+            this.label40.Text = "X";
+            // 
+            // BillboardsOffsetZTextBox
+            // 
+            this.BillboardsOffsetZTextBox.Location = new System.Drawing.Point(205, 645);
+            this.BillboardsOffsetZTextBox.Name = "BillboardsOffsetZTextBox";
+            this.BillboardsOffsetZTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetZTextBox.TabIndex = 112;
+            // 
+            // BillboardsOffsetYTextBox
+            // 
+            this.BillboardsOffsetYTextBox.Location = new System.Drawing.Point(157, 645);
+            this.BillboardsOffsetYTextBox.Name = "BillboardsOffsetYTextBox";
+            this.BillboardsOffsetYTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetYTextBox.TabIndex = 111;
+            // 
+            // BillboardsOffsetXTextBox
+            // 
+            this.BillboardsOffsetXTextBox.Location = new System.Drawing.Point(109, 645);
+            this.BillboardsOffsetXTextBox.Name = "BillboardsOffsetXTextBox";
+            this.BillboardsOffsetXTextBox.Size = new System.Drawing.Size(42, 20);
+            this.BillboardsOffsetXTextBox.TabIndex = 110;
+            // 
+            // ClientCustomDataGrid
+            // 
+            this.ClientCustomDataGrid.AllowUserToOrderColumns = true;
+            this.ClientCustomDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ClientCustomDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientCustomDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.ClientCustomDataGrid.Location = new System.Drawing.Point(135, 803);
+            this.ClientCustomDataGrid.Name = "ClientCustomDataGrid";
+            this.ClientCustomDataGrid.Size = new System.Drawing.Size(210, 103);
+            this.ClientCustomDataGrid.TabIndex = 119;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // ServerCustomDataGrid
+            // 
+            this.ServerCustomDataGrid.AllowUserToOrderColumns = true;
+            this.ServerCustomDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ServerCustomDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ServerCustomDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.regionName,
+            this.Value});
+            this.ServerCustomDataGrid.Location = new System.Drawing.Point(135, 685);
+            this.ServerCustomDataGrid.Name = "ServerCustomDataGrid";
+            this.ServerCustomDataGrid.Size = new System.Drawing.Size(210, 103);
+            this.ServerCustomDataGrid.TabIndex = 118;
+            // 
+            // regionName
+            // 
+            this.regionName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.regionName.HeaderText = "Name";
+            this.regionName.Name = "regionName";
+            // 
+            // Value
+            // 
+            this.Value.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Value.HeaderText = "Value";
+            this.Value.Name = "Value";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(16, 803);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(105, 13);
+            this.label28.TabIndex = 117;
+            this.label28.Text = "ClientCustomDatas1:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(15, 685);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(104, 13);
+            this.label25.TabIndex = 116;
+            this.label25.Text = "ServerCustomDatas:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(227, 77);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(137, 13);
+            this.label26.TabIndex = 120;
+            this.label26.Text = "Override Travel Dest (X, Y):";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(288, 92);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(33, 13);
+            this.label27.TabIndex = 121;
+            this.label27.Text = "North";
+            // 
+            // OverrideDestNorthXTextBox
+            // 
+            this.OverrideDestNorthXTextBox.Location = new System.Drawing.Point(282, 108);
+            this.OverrideDestNorthXTextBox.Name = "OverrideDestNorthXTextBox";
+            this.OverrideDestNorthXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestNorthXTextBox.TabIndex = 122;
+            this.OverrideDestNorthXTextBox.TextChanged += new System.EventHandler(this.OverrideDestNorthXTextBox_TextChanged);
+            // 
+            // OverrideDestNorthYTextBox
+            // 
+            this.OverrideDestNorthYTextBox.Location = new System.Drawing.Point(307, 108);
+            this.OverrideDestNorthYTextBox.Name = "OverrideDestNorthYTextBox";
+            this.OverrideDestNorthYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestNorthYTextBox.TabIndex = 125;
+            this.OverrideDestNorthYTextBox.TextChanged += new System.EventHandler(this.OverrideDestNorthYTextBox_TextChanged);
+            // 
+            // OverrideDestWestYTextBox
+            // 
+            this.OverrideDestWestYTextBox.Location = new System.Drawing.Point(278, 142);
+            this.OverrideDestWestYTextBox.Name = "OverrideDestWestYTextBox";
+            this.OverrideDestWestYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestWestYTextBox.TabIndex = 128;
+            this.OverrideDestWestYTextBox.TextChanged += new System.EventHandler(this.OverrideDestWestYTextBox_TextChanged);
+            // 
+            // OverrideDestWestXTextBox
+            // 
+            this.OverrideDestWestXTextBox.Location = new System.Drawing.Point(253, 142);
+            this.OverrideDestWestXTextBox.Name = "OverrideDestWestXTextBox";
+            this.OverrideDestWestXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestWestXTextBox.TabIndex = 127;
+            this.OverrideDestWestXTextBox.TextChanged += new System.EventHandler(this.OverrideDestWestXTextBox_TextChanged);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(262, 128);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(32, 13);
+            this.label43.TabIndex = 126;
+            this.label43.Text = "West";
+            // 
+            // OverrideDestSouthYTextBox
+            // 
+            this.OverrideDestSouthYTextBox.Location = new System.Drawing.Point(307, 170);
+            this.OverrideDestSouthYTextBox.Name = "OverrideDestSouthYTextBox";
+            this.OverrideDestSouthYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestSouthYTextBox.TabIndex = 131;
+            this.OverrideDestSouthYTextBox.TextChanged += new System.EventHandler(this.OverrideDestSouthYTextBox_TextChanged);
+            // 
+            // OverrideDestSouthXTextBox
+            // 
+            this.OverrideDestSouthXTextBox.Location = new System.Drawing.Point(282, 170);
+            this.OverrideDestSouthXTextBox.Name = "OverrideDestSouthXTextBox";
+            this.OverrideDestSouthXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestSouthXTextBox.TabIndex = 130;
+            this.OverrideDestSouthXTextBox.TextChanged += new System.EventHandler(this.OverrideDestSouthXTextBox_TextChanged);
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(287, 193);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(35, 13);
+            this.label44.TabIndex = 129;
+            this.label44.Text = "South";
+            // 
+            // OverrideDestEastYTextBox
+            // 
+            this.OverrideDestEastYTextBox.Location = new System.Drawing.Point(338, 143);
+            this.OverrideDestEastYTextBox.Name = "OverrideDestEastYTextBox";
+            this.OverrideDestEastYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestEastYTextBox.TabIndex = 134;
+            this.OverrideDestEastYTextBox.TextChanged += new System.EventHandler(this.OverrideDestEastYTextBox_TextChanged);
+            // 
+            // OverrideDestEastXTextBox
+            // 
+            this.OverrideDestEastXTextBox.Location = new System.Drawing.Point(313, 143);
+            this.OverrideDestEastXTextBox.Name = "OverrideDestEastXTextBox";
+            this.OverrideDestEastXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.OverrideDestEastXTextBox.TabIndex = 133;
+            this.OverrideDestEastXTextBox.TextChanged += new System.EventHandler(this.OverrideDestEastXTextBox_TextChanged);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(324, 129);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(28, 13);
+            this.label45.TabIndex = 132;
+            this.label45.Text = "East";
+            // 
+            // MaxPlayingSecondsTextBox
+            // 
+            this.MaxPlayingSecondsTextBox.Location = new System.Drawing.Point(284, 324);
+            this.MaxPlayingSecondsTextBox.Name = "MaxPlayingSecondsTextBox";
+            this.MaxPlayingSecondsTextBox.Size = new System.Drawing.Size(57, 20);
+            this.MaxPlayingSecondsTextBox.TabIndex = 135;
+            this.MaxPlayingSecondsTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsTextBox_TextChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(257, 308);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(112, 13);
+            this.label41.TabIndex = 136;
+            this.label41.Text = "Max Playing Seconds:";
+            // 
+            // MaxPlayingSecondsKickToServerYTextBox
+            // 
+            this.MaxPlayingSecondsKickToServerYTextBox.Location = new System.Drawing.Point(315, 363);
+            this.MaxPlayingSecondsKickToServerYTextBox.Name = "MaxPlayingSecondsKickToServerYTextBox";
+            this.MaxPlayingSecondsKickToServerYTextBox.Size = new System.Drawing.Size(23, 20);
+            this.MaxPlayingSecondsKickToServerYTextBox.TabIndex = 139;
+            this.MaxPlayingSecondsKickToServerYTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsKickToServerYTextBox_TextChanged);
+            // 
+            // MaxPlayingSecondsKickToServerXTextBox
+            // 
+            this.MaxPlayingSecondsKickToServerXTextBox.Location = new System.Drawing.Point(290, 363);
+            this.MaxPlayingSecondsKickToServerXTextBox.Name = "MaxPlayingSecondsKickToServerXTextBox";
+            this.MaxPlayingSecondsKickToServerXTextBox.Size = new System.Drawing.Size(23, 20);
+            this.MaxPlayingSecondsKickToServerXTextBox.TabIndex = 138;
+            this.MaxPlayingSecondsKickToServerXTextBox.TextChanged += new System.EventHandler(this.MaxPlayingSecondsKickToServerXTextBox_TextChanged);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(274, 347);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(81, 13);
+            this.label42.TabIndex = 137;
+            this.label42.Text = "Kick To Server:";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(371, 807);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(136, 13);
+            this.label46.TabIndex = 141;
+            this.label46.Text = "Registered At Spool Group:";
+            // 
+            // mawWatersServerCheckBox
+            // 
+            this.mawWatersServerCheckBox.AutoSize = true;
+            this.mawWatersServerCheckBox.Location = new System.Drawing.Point(111, 610);
+            this.mawWatersServerCheckBox.Name = "mawWatersServerCheckBox";
+            this.mawWatersServerCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.mawWatersServerCheckBox.Size = new System.Drawing.Size(120, 17);
+            this.mawWatersServerCheckBox.TabIndex = 142;
+            this.mawWatersServerCheckBox.Text = "Maw Waters Server";
+            this.mawWatersServerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(7, 512);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(59, 13);
+            this.label47.TabIndex = 143;
+            this.label47.Text = "Maw Time:";
+            // 
+            // mawTimePicker
+            // 
+            this.mawTimePicker.CustomFormat = "hh:mm";
+            this.mawTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.mawTimePicker.Location = new System.Drawing.Point(67, 510);
+            this.mawTimePicker.Name = "mawTimePicker";
+            this.mawTimePicker.ShowUpDown = true;
+            this.mawTimePicker.Size = new System.Drawing.Size(68, 20);
+            this.mawTimePicker.TabIndex = 144;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(371, 835);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(128, 13);
+            this.label48.TabIndex = 145;
+            this.label48.Text = "Registered At Cluster Set:";
+            // 
+            // RegisteredAtClusterSetTextBox
+            // 
+            this.RegisteredAtClusterSetTextBox.Location = new System.Drawing.Point(513, 833);
+            this.RegisteredAtClusterSetTextBox.Name = "RegisteredAtClusterSetTextBox";
+            this.RegisteredAtClusterSetTextBox.Size = new System.Drawing.Size(142, 20);
+            this.RegisteredAtClusterSetTextBox.TabIndex = 146;
+            // 
+            // RegisteredAtSpoolGroupTextBox
+            // 
+            this.RegisteredAtSpoolGroupTextBox.Location = new System.Drawing.Point(513, 807);
+            this.RegisteredAtSpoolGroupTextBox.Name = "RegisteredAtSpoolGroupTextBox";
+            this.RegisteredAtSpoolGroupTextBox.Size = new System.Drawing.Size(142, 20);
+            this.RegisteredAtSpoolGroupTextBox.TabIndex = 147;
             // 
             // EditServerForm
             // 
@@ -691,21 +1089,57 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelBtn;
-            this.ClientSize = new System.Drawing.Size(667, 762);
+            this.ClientSize = new System.Drawing.Size(667, 952);
+            this.Controls.Add(this.RegisteredAtSpoolGroupTextBox);
+            this.Controls.Add(this.RegisteredAtClusterSetTextBox);
+            this.Controls.Add(this.label48);
+            this.Controls.Add(this.mawTimePicker);
+            this.Controls.Add(this.label47);
+            this.Controls.Add(this.mawWatersServerCheckBox);
+            this.Controls.Add(this.label46);
+            this.Controls.Add(this.MaxPlayingSecondsKickToServerYTextBox);
+            this.Controls.Add(this.MaxPlayingSecondsKickToServerXTextBox);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.MaxPlayingSecondsTextBox);
+            this.Controls.Add(this.OverrideDestEastYTextBox);
+            this.Controls.Add(this.OverrideDestEastXTextBox);
+            this.Controls.Add(this.label45);
+            this.Controls.Add(this.OverrideDestSouthYTextBox);
+            this.Controls.Add(this.OverrideDestSouthXTextBox);
+            this.Controls.Add(this.label44);
+            this.Controls.Add(this.OverrideDestWestYTextBox);
+            this.Controls.Add(this.OverrideDestWestXTextBox);
+            this.Controls.Add(this.label43);
+            this.Controls.Add(this.OverrideDestNorthYTextBox);
+            this.Controls.Add(this.OverrideDestNorthXTextBox);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.ClientCustomDataGrid);
+            this.Controls.Add(this.ServerCustomDataGrid);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.BillboardsOffsetZTextBox);
+            this.Controls.Add(this.BillboardsOffsetYTextBox);
+            this.Controls.Add(this.BillboardsOffsetXTextBox);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.BackgroundImgPathTextBox);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.PVEServerConfigurationComboBox);
+            this.Controls.Add(this.PVPServerConfigurationComboBox);
+            this.Controls.Add(this.hiddenAtlasIDTextBox);
+            this.Controls.Add(this.label33);
+            this.Controls.Add(this.rulesComboBox);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.serverIslandPointsMultiplierTxtBox);
             this.Controls.Add(this.OceanEpicSpawnEntriesOverrideValuesTxtBox);
             this.Controls.Add(this.label31);
             this.Controls.Add(this.templateComboBox);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.ClientCustomDatas2TxtBox);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.ClientCustomDatas1TxtBox);
-            this.Controls.Add(this.label28);
-            this.Controls.Add(this.ServerCustomDatas2TxtBox);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.ServerCustomDatas1TxtBox);
-            this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -761,6 +1195,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.portTxtBox);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label41);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -770,6 +1205,8 @@
             this.Text = "Edit Server";
             this.Load += new System.EventHandler(this.EditServerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.overrideShooterGameModeDefaultGameIniDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientCustomDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ServerCustomDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,19 +1268,60 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox ServerCustomDatas1TxtBox;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox ServerCustomDatas2TxtBox;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox ClientCustomDatas2TxtBox;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox ClientCustomDatas1TxtBox;
-        private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox templateComboBox;
         private System.Windows.Forms.TextBox OceanEpicSpawnEntriesOverrideValuesTxtBox;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox serverIslandPointsMultiplierTxtBox;
+        private System.Windows.Forms.ComboBox rulesComboBox;
+        private System.Windows.Forms.ComboBox PVPServerConfigurationComboBox;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.ComboBox PVEServerConfigurationComboBox;
+        private System.Windows.Forms.TextBox hiddenAtlasIDTextBox;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox BackgroundImgPathTextBox;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox BillboardsOffsetZTextBox;
+        private System.Windows.Forms.TextBox BillboardsOffsetYTextBox;
+        private System.Windows.Forms.TextBox BillboardsOffsetXTextBox;
+        private System.Windows.Forms.DataGridView ClientCustomDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridView ServerCustomDataGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn regionName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Value;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox OverrideDestNorthXTextBox;
+        private System.Windows.Forms.TextBox OverrideDestNorthYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestWestYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestWestXTextBox;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox OverrideDestSouthYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestSouthXTextBox;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox OverrideDestEastYTextBox;
+        private System.Windows.Forms.TextBox OverrideDestEastXTextBox;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsTextBox;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerYTextBox;
+        private System.Windows.Forms.TextBox MaxPlayingSecondsKickToServerXTextBox;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.CheckBox mawWatersServerCheckBox;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.DateTimePicker mawTimePicker;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox RegisteredAtClusterSetTextBox;
+        private System.Windows.Forms.TextBox RegisteredAtSpoolGroupTextBox;
     }
 }

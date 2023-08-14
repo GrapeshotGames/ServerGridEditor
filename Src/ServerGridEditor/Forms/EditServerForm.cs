@@ -28,26 +28,74 @@ namespace ServerGridEditor
 
         private void EditServerForm_Load(object sender, EventArgs e)
         {
+            additionalCmdLineParamsTxtBox.Text = targetServer.AdditionalCmdLineParams;
             nameTxtBox.Text = targetServer.name;
             ipTxtBox.Text = targetServer.ip;
             portTxtBox.Text = targetServer.port + "";
             gamePortTxtBox.Text = targetServer.gamePort + "";
             seamlessDataPortTxt.Text = targetServer.seamlessDataPort + "";
             homeServerCheckbox.Checked = targetServer.isHomeServer;
-            additionalCmdLineParamsTxtBox.Text = targetServer.AdditionalCmdLineParams;
+            mawWatersServerCheckBox.Checked = targetServer.isMawWatersServer;
+
+            DateTime RestartTime;
+            if (DateTime.TryParse(targetServer.mawWaterDayTime, out RestartTime))
+                mawTimePicker.Value = RestartTime;
+            else
+                mawTimePicker.Value = DateTime.Parse("4:00");
+
             oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text = targetServer.oceanEpicSpawnEntriesOverrideTemplateName;
             NPCShipSpawnEntriesOverrideTemplateNameTxtBox.Text = targetServer.NPCShipSpawnEntriesOverrideTemplateName;
 
             waterColorRTxtBox.Text = targetServer.waterColorR.ToString();
             waterColorGTxtBox.Text = targetServer.waterColorG.ToString();
             waterColorBTxtBox.Text = targetServer.waterColorB.ToString();
+
+            BillboardsOffsetXTextBox.Text = targetServer.billboardsOffsetX.ToString();
+            BillboardsOffsetYTextBox.Text = targetServer.billboardsOffsetY.ToString();
+            BillboardsOffsetZTextBox.Text = targetServer.billboardsOffsetZ.ToString();
+
+            OverrideDestNorthXTextBox.Text = targetServer.OverrideDestNorthX >= 0 ? targetServer.OverrideDestNorthX.ToString() : "";
+            OverrideDestNorthYTextBox.Text = targetServer.OverrideDestNorthY >= 0 ? targetServer.OverrideDestNorthY.ToString() : "";
+            OverrideDestSouthXTextBox.Text = targetServer.OverrideDestSouthX >= 0 ? targetServer.OverrideDestSouthX.ToString() : "";
+            OverrideDestSouthYTextBox.Text = targetServer.OverrideDestSouthY >= 0 ? targetServer.OverrideDestSouthY.ToString() : "";
+            OverrideDestEastXTextBox.Text = targetServer.OverrideDestEastX >= 0 ? targetServer.OverrideDestEastX.ToString() : "";
+            OverrideDestEastYTextBox.Text = targetServer.OverrideDestEastY >= 0 ? targetServer.OverrideDestEastY.ToString() : "";
+            OverrideDestWestXTextBox.Text = targetServer.OverrideDestWestX >= 0 ? targetServer.OverrideDestWestX.ToString() : "";
+            OverrideDestWestYTextBox.Text = targetServer.OverrideDestWestY >= 0 ? targetServer.OverrideDestWestY.ToString() : "";
+
+            MaxPlayingSecondsTextBox.Text = targetServer.MaxPlayingSeconds >= 0 ? targetServer.MaxPlayingSeconds.ToString() : "0";
+            MaxPlayingSecondsTextBox.Text = targetServer.MaxPlayingSeconds >= 0 ? targetServer.MaxPlayingSeconds.ToString() : "0";
+
+            MaxPlayingSecondsKickToServerXTextBox.Text = targetServer.MaxPlayingSecondsKickToServerX >= 0 && (targetServer.MaxPlayingSecondsKickToServerX < mainForm.currentProject.numOfCellsX) ? targetServer.MaxPlayingSecondsKickToServerX.ToString() : "";
+            MaxPlayingSecondsKickToServerYTextBox.Text = targetServer.MaxPlayingSecondsKickToServerY >= 0 && (targetServer.MaxPlayingSecondsKickToServerY < mainForm.currentProject.numOfCellsY) ? targetServer.MaxPlayingSecondsKickToServerY.ToString() : "";
+
+
+            char[] charSeparators = new char[] { ',' };
             skyStyleIndexTxtBox.Text = targetServer.skyStyleIndex.ToString();
             serverIslandPointsMultiplierTxtBox.Text = targetServer.serverIslandPointsMultiplier.ToString();
-            ServerCustomDatas1TxtBox.Text = targetServer.ServerCustomDatas1;
-            ServerCustomDatas2TxtBox.Text = targetServer.ServerCustomDatas2;
-            ClientCustomDatas1TxtBox.Text = targetServer.ClientCustomDatas1;
-            ClientCustomDatas2TxtBox.Text = targetServer.ClientCustomDatas2;
+            String[] ServerCustomDataNames = targetServer.ServerCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ServerCustomDataValues = targetServer.ServerCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
 
+            for (int i = 0; i < ServerCustomDataNames.Length && i < ServerCustomDataValues.Length; i++)
+            {
+                if (ServerCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ServerCustomDataGrid.Rows.Add();
+                ServerCustomDataGrid.Rows[index].Cells[0].Value = ServerCustomDataNames[i];
+                ServerCustomDataGrid.Rows[index].Cells[1].Value = ServerCustomDataValues[i];
+            }
+
+            String[] ClientCustomDataNames = targetServer.ClientCustomDatas1.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+            String[] ClientCustomDataValues = targetServer.ClientCustomDatas2.Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+
+            for (int i = 0; i < ClientCustomDataNames.Length && i < ClientCustomDataValues.Length; i++)
+            {
+                if (ClientCustomDataNames[i].Length == 0)
+                    continue;
+                int index = ClientCustomDataGrid.Rows.Add();
+                ClientCustomDataGrid.Rows[index].Cells[0].Value = ClientCustomDataNames[i];
+                ClientCustomDataGrid.Rows[index].Cells[1].Value = ClientCustomDataValues[i];
+            }
             BindingList<ConfigKeyValueEntry> pairs = new BindingList<ConfigKeyValueEntry>();
             pairs.AddingNew += (s, a) =>
             {
@@ -59,7 +107,10 @@ namespace ServerGridEditor
 
             overrideShooterGameModeDefaultGameIniDataGridView.DataSource = pairs;
 
+            RegisteredAtSpoolGroupTextBox.Text = targetServer.RegisteredAtSpoolGroup;
+            RegisteredAtClusterSetTextBox.Text = targetServer.RegisteredAtClusterSet;
 
+            hiddenAtlasIDTextBox.Text = targetServer.hiddenAtlasId;
 
             FloorZDist.Text = targetServer.floorZDist + "";
             transitionMinZTxtBox.Text = targetServer.transitionMinZ + "";
@@ -83,10 +134,33 @@ namespace ServerGridEditor
             if (string.IsNullOrEmpty(targetServer.serverTemplateName))
                 templateComboBox.SelectedItem = "None";
 
-            if(templateComboBox.Items.Contains(targetServer.serverTemplateName))
+            if (templateComboBox.Items.Contains(targetServer.serverTemplateName))
                 templateComboBox.SelectedItem = targetServer.serverTemplateName;
             else
                 templateComboBox.SelectedItem = "None";
+
+            rulesComboBox.Items.Add("Unset");
+            rulesComboBox.Items.Add("Lawless");
+            rulesComboBox.Items.Add("Lawless Claim");
+            rulesComboBox.Items.Add("Island Claim");
+            rulesComboBox.Items.Add("FreePort");
+            rulesComboBox.Items.Add("Golden Age");
+            rulesComboBox.SelectedIndex = targetServer.forceServerRules;
+            if (mainForm.currentProject.serverConfigurations != null)
+            {
+                foreach (ServerConfiguration serverConfiguration in mainForm.currentProject.serverConfigurations)
+                {
+                    PVPServerConfigurationComboBox.Items.Add(serverConfiguration.Key);
+                    PVEServerConfigurationComboBox.Items.Add(serverConfiguration.Key);
+                }
+                PVPServerConfigurationComboBox.Text = targetServer.serverConfigurationKeyPVP;
+                PVPServerConfigurationComboBox.SelectedItem = targetServer.serverConfigurationKeyPVP;
+
+                PVEServerConfigurationComboBox.Text = targetServer.serverConfigurationKeyPVE;
+                PVEServerConfigurationComboBox.SelectedItem = targetServer.serverConfigurationKeyPVE;
+
+                BackgroundImgPathTextBox.Text = targetServer.BackgroundImgPath;
+            }
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -133,6 +207,7 @@ namespace ServerGridEditor
             }
 
             float waterColorR, waterColorG, waterColorB;
+            float billboardsOffsetX, billboardsOffsetY, billboardsOffsetZ;
             int skyStyleIndex;
             float serverIslandPointsMultiplier;
 
@@ -151,6 +226,22 @@ namespace ServerGridEditor
                 MessageBox.Show("Invalid number for waterColorB", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            if (!float.TryParse(BillboardsOffsetXTextBox.Text, out billboardsOffsetX))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!float.TryParse(BillboardsOffsetYTextBox.Text, out billboardsOffsetY))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (!float.TryParse(BillboardsOffsetZTextBox.Text, out billboardsOffsetZ))
+            {
+                MessageBox.Show("Invalid number for billboardsOffsetX", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (!int.TryParse(skyStyleIndexTxtBox.Text, out skyStyleIndex))
             {
                 MessageBox.Show("Invalid number for skyStyleIndex", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -162,6 +253,51 @@ namespace ServerGridEditor
                 return false;
             }
 
+            string ServerCustomDatas1 = "";
+            string ServerCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ServerCustomDataGrid.Rows)
+            {
+                if (row.Index == ServerCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ServerCustomDatas1 += "," + row.Cells[0].Value.ToString();
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ServerCustomDatas2 += "," + row.Cells[1].Value.ToString();
+            }
+
+            string ClientCustomDatas1 = "";
+            string ClientCustomDatas2 = "";
+
+            foreach (DataGridViewRow row in ClientCustomDataGrid.Rows)
+            {
+                if (row.Index == ClientCustomDataGrid.Rows.Count - 1) continue; //Last row is the new row
+
+                if (row.Cells[0].Value == null || row.Cells[0].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a name to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+
+                ClientCustomDatas1 += row.Cells[0].Value.ToString() + ",";
+
+                if (row.Cells[1].Value == null || row.Cells[1].Value.ToString().Length == 0)
+                {
+                    MessageBox.Show("You must assign a value to each row", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                ClientCustomDatas2 += row.Cells[1].Value.ToString() + ",";
+            }
 
             targetServer.name = nameTxtBox.Text;
             targetServer.ip = ipTxtBox.Text;
@@ -169,20 +305,46 @@ namespace ServerGridEditor
             targetServer.gamePort = gamePort;
             targetServer.seamlessDataPort = seamlessDataPort;
             targetServer.isHomeServer = homeServerCheckbox.Checked;
+            targetServer.isMawWatersServer = mawWatersServerCheckBox.Checked;
+            targetServer.mawWaterDayTime = mawTimePicker.Value.ToString("HH:mm");
+            if (!hiddenAtlasIDTextBox.Text.Equals(targetServer.hiddenAtlasId != null ? targetServer.hiddenAtlasId : ""))
+                mainForm.PopulateMapRegionsDirty = true;
+            targetServer.hiddenAtlasId = hiddenAtlasIDTextBox.Text;
+
+            targetServer.forceServerRules = rulesComboBox.SelectedIndex;
             targetServer.AdditionalCmdLineParams = additionalCmdLineParamsTxtBox.Text;
             targetServer.oceanEpicSpawnEntriesOverrideTemplateName = oceanEpicSpawnEntriesOverrideTemplateNameTxtBox.Text;
             targetServer.NPCShipSpawnEntriesOverrideTemplateName = NPCShipSpawnEntriesOverrideTemplateNameTxtBox.Text;
 
-
+            targetServer.serverConfigurationKeyPVP = PVPServerConfigurationComboBox.Text;
+            targetServer.serverConfigurationKeyPVE = PVEServerConfigurationComboBox.Text;
+            targetServer.BackgroundImgPath = BackgroundImgPathTextBox.Text;
             targetServer.waterColorR = waterColorR;
             targetServer.waterColorG = waterColorG;
             targetServer.waterColorB = waterColorB;
+            targetServer.billboardsOffsetX = billboardsOffsetX;
+            targetServer.billboardsOffsetY = billboardsOffsetY;
+            targetServer.billboardsOffsetZ = billboardsOffsetZ;
+
+            targetServer.OverrideDestNorthX = EnsureValidCellDimension(OverrideDestNorthXTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestNorthY = EnsureValidCellDimension(OverrideDestNorthYTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestSouthX = EnsureValidCellDimension(OverrideDestSouthXTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestSouthY = EnsureValidCellDimension(OverrideDestSouthYTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestEastX = EnsureValidCellDimension(OverrideDestEastXTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestEastY = EnsureValidCellDimension(OverrideDestEastYTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestWestX = EnsureValidCellDimension(OverrideDestWestXTextBox.Text, Int32.MaxValue);
+            targetServer.OverrideDestWestY = EnsureValidCellDimension(OverrideDestWestYTextBox.Text, Int32.MaxValue);
+
+            targetServer.MaxPlayingSeconds = EnsureValidPositiveInt(MaxPlayingSecondsTextBox.Text);
+            targetServer.MaxPlayingSecondsKickToServerX = EnsureValidCellX(MaxPlayingSecondsKickToServerXTextBox.Text);
+            targetServer.MaxPlayingSecondsKickToServerY = EnsureValidCellY(MaxPlayingSecondsKickToServerYTextBox.Text);
+
             targetServer.skyStyleIndex = skyStyleIndex;
             targetServer.serverIslandPointsMultiplier = serverIslandPointsMultiplier;
-            targetServer.ServerCustomDatas1 = ServerCustomDatas1TxtBox.Text;
-            targetServer.ServerCustomDatas2 = ServerCustomDatas2TxtBox.Text;
-            targetServer.ClientCustomDatas1 = ClientCustomDatas1TxtBox.Text;
-            targetServer.ClientCustomDatas2 = ClientCustomDatas2TxtBox.Text;
+            targetServer.ServerCustomDatas1 = ServerCustomDatas1;
+            targetServer.ServerCustomDatas2 = ServerCustomDatas2;
+            targetServer.ClientCustomDatas1 = ClientCustomDatas1;
+            targetServer.ClientCustomDatas2 = ClientCustomDatas2;
 
             if (targetServer.OverrideShooterGameModeDefaultGameIni != null)
                 targetServer.OverrideShooterGameModeDefaultGameIni.Clear();
@@ -211,6 +373,10 @@ namespace ServerGridEditor
                 else
                     targetServer.serverTemplateName = templateComboBox.SelectedItem + "";
             }
+
+            targetServer.RegisteredAtSpoolGroup = RegisteredAtSpoolGroupTextBox.Text; 
+            targetServer.RegisteredAtClusterSet = RegisteredAtClusterSetTextBox.Text;
+
             return true;
         }
 
@@ -246,11 +412,6 @@ namespace ServerGridEditor
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void editSpawnRegions_Click(object sender, EventArgs e)
         {
             if (mainForm != null)
@@ -274,9 +435,108 @@ namespace ServerGridEditor
             e.DrawFocusRectangle();
         }
 
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
 
+        private void rulesComboBox_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.DrawBackground();
+            Graphics g = e.Graphics;
+            g.DrawString(rulesComboBox.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), new PointF(e.Bounds.X, e.Bounds.Y));
+            e.DrawFocusRectangle();
+        }
+
+
+        private int EnsureValidCellX(string cellXStr)
+        {
+            return EnsureValidCellDimension(cellXStr, mainForm.currentProject.numOfCellsX - 1);
+        }
+
+        private int EnsureValidCellY(string cellXStr)
+        {
+            return EnsureValidCellDimension(cellXStr, mainForm.currentProject.numOfCellsY - 1);
+        }
+
+        private int EnsureValidCellDimension(string cellStr, int maxDimension)
+        {
+            if (cellStr != null && cellStr.Length > 0 && int.TryParse(cellStr, out int n))
+            {
+                if (n < 0)
+                    n = -n;
+                n = Math.Min(n, maxDimension);
+                return n;
+            }
+            return -1;
+        }
+
+        private string CellIndexToString(int cellIndex)
+        {
+            return cellIndex < 0 ? "" : cellIndex.ToString();
+        }
+
+
+        private void OverrideDestNorthXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestNorthXTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestNorthXTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestNorthYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestNorthYTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestNorthYTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestSouthXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestSouthXTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestSouthXTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestSouthYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestSouthYTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestSouthYTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestEastXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestEastXTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestEastXTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestEastYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestEastYTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestEastYTextBox.Text, Int32.MaxValue));
+        }
+
+        private void OverrideDestWestXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestWestXTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestWestXTextBox.Text, Int32.MaxValue));
+        }
+        private void OverrideDestWestYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            OverrideDestWestYTextBox.Text = CellIndexToString(EnsureValidCellDimension(OverrideDestWestYTextBox.Text, Int32.MaxValue));
+        }
+
+        private int EnsureValidPositiveInt(string str)
+        {
+            if (str != null && str.Length > 0 && int.TryParse(str, out int n))
+            {
+                if (n < 0)
+                    n = -n;
+                return n;
+            }
+            return 0;
+        }
+
+        private void MaxPlayingSecondsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsTextBox.Text = EnsureValidPositiveInt(MaxPlayingSecondsTextBox.Text).ToString();
+        }
+
+        private void MaxPlayingSecondsKickToServerXTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsKickToServerXTextBox.Text = CellIndexToString(EnsureValidCellY(MaxPlayingSecondsKickToServerXTextBox.Text));
+        }
+
+        private void MaxPlayingSecondsKickToServerYTextBox_TextChanged(object sender, EventArgs e)
+        {
+            MaxPlayingSecondsKickToServerYTextBox.Text = CellIndexToString(EnsureValidCellY(MaxPlayingSecondsKickToServerYTextBox.Text));
         }
     }
 }
+

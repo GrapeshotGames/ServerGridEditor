@@ -68,12 +68,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5.1\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
@@ -96,6 +97,99 @@
     <Compile Include="Code\SlippyMap.cs" />
     <Compile Include="Code\Spawners.cs" />
     <Compile Include="Code\SpawnRegion.cs" />
+    <Compile Include="Forms\AddFoliageAttachmentOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFoliageAttachmentOverride.Designer.cs">
+      <DependentUpon>AddFoliageAttachmentOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverrides.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverrides.Designer.cs">
+      <DependentUpon>EditFoliageAttachmentOverrides.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditFoliageAttachmentOverride.Designer.cs">
+      <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionsOverworldLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsOverworldLocations.Designer.cs">
+      <DependentUpon>EditRegionsOverworldLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTreasureMapOverride.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTreasureMapOverride.Designer.cs">
+      <DependentUpon>EditRegionsTreasureMapOverride.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsTemplates.Designer.cs">
+      <DependentUpon>EditRegionsTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionsCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionsCategories.Designer.cs">
+      <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditAppliedRegionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditAppliedRegionTemplate.Designer.cs">
+      <DependentUpon>EditAppliedRegionTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditServerConfigurations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditServerConfigurations.Designer.cs">
+      <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplates.Designer.cs">
+      <DependentUpon>EditNodeTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditNodeTemplate.Designer.cs">
+      <DependentUpon>EditNodeTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditPortalNode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPortalNode.Designer.cs">
+      <DependentUpon>EditPortalNode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditRegionTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditRegionTemplate.Designer.cs">
+      <DependentUpon>EditRegionTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HintTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoveServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RemoveServerConfiguration.Designer.cs">
+      <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditServerConfiguration.Designer.cs">
+      <DependentUpon>EditServerConfiguration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditServerTemplate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +208,18 @@
     <Compile Include="Forms\EditAllLocksForm.Designer.cs">
       <DependentUpon>EditAllLocksForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddServerConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddServerConfiguration.Designer.cs">
+      <DependentUpon>AddServerConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditTradeWind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditTradeWind.Designer.cs">
+      <DependentUpon>EditTradeWind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExportSlippyMap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +231,12 @@
     </Compile>
     <Compile Include="Forms\SharedLogConfigForm.Designer.cs">
       <DependentUpon>SharedLogConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShipInBottleDataConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShipInBottleDataConfigForm.Designer.cs">
+      <DependentUpon>ShipInBottleDataConfigForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TribeLogConfigForm.cs">
       <SubType>Form</SubType>
@@ -217,6 +329,51 @@
     </Compile>
     <Compile Include="Code\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AddFoliageAttachmentOverride.resx">
+      <DependentUpon>AddFoliageAttachmentOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFoliageAttachmentOverrides.resx">
+      <DependentUpon>EditFoliageAttachmentOverrides.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditFoliageAttachmentOverride.resx">
+      <DependentUpon>EditFoliageAttachmentOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsOverworldLocations.resx">
+      <DependentUpon>EditRegionsOverworldLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsTreasureMapOverride.resx">
+      <DependentUpon>EditRegionsTreasureMapOverride.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsTemplates.resx">
+      <DependentUpon>EditRegionsTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionsCategories.resx">
+      <DependentUpon>EditRegionsCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditAppliedRegionTemplate.resx">
+      <DependentUpon>EditAppliedRegionTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditServerConfigurations.resx">
+      <DependentUpon>EditServerConfigurations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditNodeTemplates.resx">
+      <DependentUpon>EditNodeTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditNodeTemplate.resx">
+      <DependentUpon>EditNodeTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPortalNode.resx">
+      <DependentUpon>EditPortalNode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditRegionTemplate.resx">
+      <DependentUpon>EditRegionTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RemoveServerConfiguration.resx">
+      <DependentUpon>RemoveServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditServerConfiguration.resx">
+      <DependentUpon>EditServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditServerTemplate.resx">
       <DependentUpon>EditServerTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,11 +383,20 @@
     <EmbeddedResource Include="Forms\EditAllLocksForm.resx">
       <DependentUpon>EditAllLocksForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddServerConfiguration.resx">
+      <DependentUpon>AddServerConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditTradeWind.resx">
+      <DependentUpon>EditTradeWind.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExportSlippyMap.resx">
       <DependentUpon>ExportSlippyMap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SharedLogConfigForm.resx">
       <DependentUpon>SharedLogConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShipInBottleDataConfigForm.resx">
+      <DependentUpon>ShipInBottleDataConfigForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TribeLogConfigForm.resx">
       <DependentUpon>TribeLogConfigForm.cs</DependentUpon>
@@ -270,9 +436,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateIslandForm.resx">
       <DependentUpon>CreateIslandForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

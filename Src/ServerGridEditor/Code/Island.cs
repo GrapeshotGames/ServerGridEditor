@@ -22,6 +22,7 @@ namespace ServerGridEditor
         public int landscapeMaterialOverride;
         public List<string> sublevelNames;
         public Dictionary<string, string> spawnerOverrides = new Dictionary<string, string>();
+        public List<string> harvestOverrideKeys = new List<string>(); //Dictionary<string, string> harvestOverrides = new Dictionary<string, string>();
         public List<string> extraSublevels;
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
         public List<string> treasureMapSpawnPoints;
@@ -42,7 +43,13 @@ namespace ServerGridEditor
         [DefaultValue(false)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public bool prioritizeVolumesForTreasures = false;
-        [DefaultValue("")]
+        [DefaultValue(false)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public bool isControlPoint = false;
+        [DefaultValue(false)]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public bool isControlPointAllowCapture = true;
+        [DefaultValue(true)]
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
         public string islandTreasureBottleSupplyCrateOverrides = "";
         [DefaultValue(1)]
@@ -59,6 +66,8 @@ namespace ServerGridEditor
         public float singleSpawnPointZ;
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)] 
         public float maxIslandClaimFlagZ = 0.0f;
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Populate)]
+        public string landNodeKey = "";
         [JsonIgnore]
         public string modDir = null;
 
@@ -109,8 +118,8 @@ namespace ServerGridEditor
         }
 
         public Island(string name, float x, float y, string imagePath, int landscapeMaterialOverride
-            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
-            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, string IslandTreasureBottleSupplyCrateOverrides, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
+            , List<string> sublevelNames, Dictionary<string, string> spawnerOverrides, List<string> harvestOverrideKeys, List<string> treasureMapSpawnPoints, List<string> wildPirateCampSpawnPoints, float minTreasureQuality, float maxTreasureQuality, bool useNpcVolumesForTreasures,
+            bool useLevelBoundsForTreasures, bool prioritizeVolumesForTreasures, bool isControlPoint, bool isControlPointAllowCapture, string IslandTreasureBottleSupplyCrateOverrides, string LandNodeKey, List<string> extraSublevels, int islandPoints, float sPlayerSpawnPointX, float sPlayerSpawnPointY, float sPlayerSpawnPointZ, float theMaxIslandClaimFlagZ)
         {
             this.name = name;
             this.x = x;
@@ -119,6 +128,7 @@ namespace ServerGridEditor
             this.landscapeMaterialOverride = landscapeMaterialOverride;
             this.sublevelNames = sublevelNames;
             this.spawnerOverrides = spawnerOverrides;
+            this.harvestOverrideKeys = harvestOverrideKeys;
             this.treasureMapSpawnPoints = treasureMapSpawnPoints;
             this.wildPirateCampSpawnPoints = wildPirateCampSpawnPoints;
             this.minTreasureQuality = minTreasureQuality;
@@ -133,6 +143,9 @@ namespace ServerGridEditor
             this.singleSpawnPointY = sPlayerSpawnPointY;
             this.singleSpawnPointZ = sPlayerSpawnPointZ;
             this.maxIslandClaimFlagZ = theMaxIslandClaimFlagZ;
+            this.isControlPoint = isControlPoint;
+            this.isControlPointAllowCapture = isControlPointAllowCapture;
+            this.landNodeKey = LandNodeKey;
         }
     }
 
@@ -147,6 +160,9 @@ namespace ServerGridEditor
             Data.rotation = rotation;
             Data.id = id;
             Data.spawnerOverrides = new Dictionary<string, string>();
+            //Data.harvestOverrides = new Dictionary<string, string>();
+            Data.harvestOverrideKeys = new List<string>();
+            Data.harvestOverrideKeysTemplateInherited = new List<string>();
 
             Data.minTreasureQuality = Data.maxTreasureQuality = -1;
             Data.spawnPointRegionOverride = -1;
@@ -206,22 +222,28 @@ namespace ServerGridEditor
         {
             Island referencedIsland = Data.GetReferencedIsland(mainForm.islands);
 
-            if (referencedIsland.spawnerOverrides == null)
-                return;
-
-            List<string> keysToRemove = new List<string>();
-            foreach (KeyValuePair<string, string> templateSpawnerOverride in referencedIsland.spawnerOverrides)
+            if (referencedIsland.spawnerOverrides != null)
             {
-                if (Data.spawnerOverrides.ContainsKey(templateSpawnerOverride.Key) && Data.spawnerOverrides[templateSpawnerOverride.Key] == templateSpawnerOverride.Value)
+                List<string> keysToRemove = new List<string>();
+                foreach (KeyValuePair<string, string> templateSpawnerOverride in referencedIsland.spawnerOverrides)
                 {
-                    keysToRemove.Add(templateSpawnerOverride.Key);
+                    if (Data.spawnerOverrides.ContainsKey(templateSpawnerOverride.Key) && Data.spawnerOverrides[templateSpawnerOverride.Key] == templateSpawnerOverride.Value)
+                    {
+                        keysToRemove.Add(templateSpawnerOverride.Key);
+                    }
+                }
+
+                foreach (string keyToRemove in keysToRemove)
+                {
+                    Data.spawnerOverrides.Remove(keyToRemove);
                 }
             }
 
-            foreach (string keyToRemove in keysToRemove)
-            {
-                Data.spawnerOverrides.Remove(keyToRemove);
-            }
+            if(Data.landNodeKey == null || Data.landNodeKey == "")
+                Data.landNodeKey = referencedIsland.landNodeKey;
+
+            Data.harvestOverrideKeysTemplateInherited = referencedIsland.harvestOverrideKeys;
         }
+
     }
 }

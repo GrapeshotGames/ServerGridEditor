@@ -67,5 +67,21 @@ namespace ServerGridEditor.Forms
 
             mainForm.InvalidateMapPanel();
         }
+
+        private void lockWinds_Click(object sender, EventArgs e)
+        {
+            foreach (Server server in mainForm.currentProject.servers)
+                server.windsLocked = true;
+
+            mainForm.InvalidateMapPanel();
+        }
+
+        private void unlockWinds_Click(object sender, EventArgs e)
+        {
+            foreach (Server server in mainForm.currentProject.servers)
+                server.windsLocked = false;
+
+            mainForm.InvalidateMapPanel();
+        }
     }
 }

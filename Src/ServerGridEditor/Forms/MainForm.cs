@@ -20,6 +20,7 @@ using ServerGridEditor.Code;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
 using AtlasGridDataLibrary;
+using System.Text.RegularExpressions;
 
 namespace ServerGridEditor
 {
@@ -29,6 +30,7 @@ namespace ServerGridEditor
         public static string modImgsDir = "/Images/";
         public static string waterTilesDir = "./WaterTiles";
         public static string foregroundTilesDir = "./Foregrounds";
+        public static string tradeWindsOverlayDir = "./TradeWinds";
         public static string dataDir = "./Data";
         public static string exportDir = "./Export";
         public static string islandModsDir = "./IslandExtensions";
@@ -62,20 +64,28 @@ namespace ServerGridEditor
         public static string defaultDiscoImagePath = "Resources/discoZoneBox.png";
         public static float lockImgRatio = 0.05f;
         public static float bezierNodeRatio = 0.05f;
+        public static float bezierNodeArrowRatio = 0.08f;
         public static float islandNameScale = 0.01f;
         public static float useFullIslandRes = 5000;
         public static float islandsNamesMaxRes = 10000;
 
         public Cursor editCursor;
         public Project currentProject = null;
-
+        public Dictionary<string, Image> imageCache = null;
+        public bool bIsloadingProject = false;
         public Dictionary<string, Island> islands = new Dictionary<string, Island>();
 
-        Image tile = null;
-        TextureBrush tileBrush = null;
+        public Dictionary<string, Image> regionsTile = new Dictionary<string, Image>();
+        public Dictionary<string, TextureBrush> regionsTileBrush = new Dictionary<string, TextureBrush>();
+
         static Image lockImg = null;
         public Image foreground = null;
         public TextureBrush foregroundBrush = null;
+        public Image tradeWindOverlay = null;
+        public TextureBrush tradeWindOverlayBrush = null;
+
+        public Dictionary<string, Image> regionsTradeWindOverlay = new Dictionary<string, Image>();
+        public Dictionary<string, TextureBrush> regionsTradeWindOverlayBrush = new Dictionary<string, TextureBrush>();
 
         MoveableObjectData CurrentHeldMoveableObject = null;
         MoveableObjectData CurrentRotatedMoveableObject = null;
@@ -86,9 +96,21 @@ namespace ServerGridEditor
 
         public Spawners spawners;
 
+        public struct MapRegion
+        {
+            public string AtlasID;
+            public string RegionName;
+            public int StartX;
+            public int StartY;
+            public int EndX;
+            public int EndY;
+        }
+
+        public bool PopulateMapRegionsDirty = true;
+        Dictionary<string, MapRegion> MapRegionsList = new Dictionary<string, MapRegion>();
+
         public MainForm()
         {
-
             //DoubleBuffered = true;
             InitializeComponent();
 
@@ -136,6 +158,8 @@ namespace ServerGridEditor
                 Directory.CreateDirectory(waterTilesDir);
             if (!Directory.Exists(foregroundTilesDir))
                 Directory.CreateDirectory(foregroundTilesDir);
+            if (!Directory.Exists(tradeWindsOverlayDir))
+                Directory.CreateDirectory(tradeWindsOverlayDir);
             if (!Directory.Exists(islandModsDir))
                 Directory.CreateDirectory(islandModsDir);
             //if (!Directory.Exists(exportDir))
@@ -218,9 +242,18 @@ namespace ServerGridEditor
             List<string> SortedIslands = islands.Keys.ToList();
             SortedIslands.Sort();
 
+            Regex rx = new Regex(this.txtSearch.Text, RegexOptions.Compiled | RegexOptions.IgnoreCase);
             foreach (string islandKey in SortedIslands)
             {
                 Island island = islands[islandKey];
+                if (!String.IsNullOrEmpty(this.txtSearch.Text))
+                {
+                    if (!rx.IsMatch(island.name))
+                    {
+                        continue;
+                    }
+                }
+
                 imgList.Images.Add(island.GetImage());
                 ListViewItem listItem = new ListViewItem();
                 listItem.ImageIndex = i;
@@ -278,37 +311,53 @@ namespace ServerGridEditor
             if (mapVScrollBar.Enabled)
                 mapVScrollBar.Maximum = (int)Math.Ceiling(maxY - mapPanel.Height);
         }
-
-        public void DrawMapToGraphics(ref Graphics g, bool cull = false, bool ignoreTranslation = false, bool forExport = false)
+        
+        public Dictionary<long, int> DrawMapToGraphics(ref Graphics g, bool cull = false, bool isSingleCell = false, bool forExport = false, int startX = 0, int startY = 0, int cellX = -1, int cellY = -1, int OverrideNumCellsX = -1, int OverrideNumCellsY = -1)
         {
+            bool bHasOverrideNumCells = OverrideNumCellsX > -1 || OverrideNumCellsY > -1;
+            bool ignoreTranslation = isSingleCell;
             if (currentProject == null)
-                return;
-
-            UpdateScrollBars();
-
+                return null;
+            if (!forExport)
+                UpdateScrollBars();
+            
             RectangleF? culling = null;
             if (cull)
             {
                 float cullMargin = 10;
                 culling = new RectangleF(mapHScrollBar.Value - cullMargin, mapVScrollBar.Value - cullMargin, mapPanel.Size.Width + 2 * cullMargin, mapPanel.Size.Height + 2 * cullMargin);
             }
-
+            
             Color? alphaBackground = null;
             if (!alphaBgCheckbox.Checked)
             {
                 alphaBackground = mapPanel.BackColor;
             }
 
-            DrawMap(
+            int mapHScrollBarValue = 0;
+            int mapVScrollBarValue = 0;
+            if (!ignoreTranslation)
+            {
+                lock(mapVScrollBar)
+                {
+                    mapHScrollBarValue = mapHScrollBar.Value;
+                    mapVScrollBarValue = mapVScrollBar.Value;
+
+                }
+            }
+
+            if(!forExport)
+                PopulateMapRegions();
+            return DrawMap(
                 this, islands, g,
                 showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
                 culling, alphaBackground,
-                tiledBackgroundCheckbox.Checked ? tile : null,
-                tiledBackgroundCheckbox.Checked ? tileBrush: null,
+                tiledBackgroundCheckbox.Checked ? regionsTile : null,
+                tiledBackgroundCheckbox.Checked ? regionsTileBrush : null,
                 tileScaleBox.Value,
-                !ignoreTranslation ? mapHScrollBar.Value : 0,
-                !ignoreTranslation ? mapVScrollBar.Value : 0,
-                forExport);
+                mapHScrollBarValue,
+                mapVScrollBarValue,
+                forExport, showPathingGridCheckbox.Checked, startX, startY, isSingleCell, cellX, cellY, OverrideNumCellsX, OverrideNumCellsY);
         }
 
         static StringFormat centeredStringFormat = new StringFormat
@@ -317,21 +366,82 @@ namespace ServerGridEditor
             Alignment = StringAlignment.Center
         };
 
-        public static void DrawMap(
+
+        private static Point CubicBezier(float t, PointF Point0, PointF Point1, PointF Point2, PointF Point3)
+        {
+            return new Point(
+                (int)(Point0.X * Math.Pow((1 - t), 3) + Point1.X * 3 * t * Math.Pow((1 - t), 2) + Point2.X * 3 * Math.Pow(t, 2) * (1 - t) + Point3.X * Math.Pow(t, 3)),
+                (int)(Point0.Y * Math.Pow((1 - t), 3) + Point1.Y * 3 * t * Math.Pow((1 - t), 2) + Point2.Y * 3 * Math.Pow(t, 2) * (1 - t) + Point3.Y * Math.Pow(t, 3))
+            );
+        }
+
+        public static float MapValueFromTo(float Value, float FromMin, float ToMin, float FromMax, float ToMax)
+        {
+            if (FromMin == ToMin)
+                return FromMax;
+            return (Value - FromMin) / (ToMin - FromMin) * (ToMax - FromMax) + FromMax;
+        }
+
+        static long PackTwoInts(int FirstInt, int SecondInt)
+        {
+            return (long)FirstInt | ((long)SecondInt << (sizeof(int) * 8));
+        }
+        
+        static void UnpackIntoToTwoInts(long Packed, out int FirstInt, out int SecondInt)
+        {
+            FirstInt = (int)Packed &  0xFFFF;
+            SecondInt = (int)(Packed >> (sizeof(int) * 8));
+        }
+
+        static void DrawCircle(int CenterX, int CenterY, int r, List<Point> circlePoints)
+        {
+            for (int y = -r; y <= r; y++)
+                for (int x = -r; x <= r; x++)
+                    if (x * x + y * y <= r * r)
+                    {
+                        Point p = new Point(CenterX + x, CenterY + y);
+                        circlePoints.Add(p);
+                    }
+        }
+
+        public static void GetHiddenGridsStart(Project forProject , out int hiddenGridsStartX, out int hiddenGridsStartY)
+        {
+            hiddenGridsStartX = forProject.numOfCellsX;
+            hiddenGridsStartY = forProject.numOfCellsY;
+            foreach (Server server in forProject.servers)
+                if (server.hiddenAtlasId != null && server.hiddenAtlasId.Length > 0)
+                {
+                    if (server.gridX == 0 && server.gridY == 0)
+                        continue;
+                    int maxDimension = Math.Max(server.gridX, server.gridY);
+                    if (maxDimension < hiddenGridsStartX)
+                        hiddenGridsStartX = maxDimension;
+                    if (maxDimension < hiddenGridsStartY)
+                        hiddenGridsStartY = maxDimension;
+                }
+        }
+
+        public static int GetMaxMainRegionDimension(Project forProject)
+        {
+            GetHiddenGridsStart(forProject, out int hiddenGridsStartX, out int hiddenGridsStartY);
+            return Math.Max(hiddenGridsStartX, hiddenGridsStartY);
+        }
+
+        public static Dictionary<long, int> DrawMap(
             MainForm mainForm, IDictionary<string, Island> islands,
             Graphics g, bool showLines, bool showServerInfo, bool showDiscoZoneInfo,
             RectangleF? culling, Color? alphaBackground,
-            Image tile, TextureBrush tileBrush, decimal tileScale,
-            int translateH, int translateV, bool forExport)
+           Dictionary<string, Image> regionsTile, Dictionary<string, TextureBrush> regionsTileBrush, decimal tileScale,
+            int translateH, int translateV, bool forExport, bool bShowPathingGrid, int startX, int startY, bool isSingleCell, int cellX = -1, int cellY = -1, int OverrideNumCellsX = -1, int OverrideNumCellsY = -1)
         {
-
+            Dictionary<long, int> AlphaBuf = null;
             g.InterpolationMode = InterpolationMode.High;
-
+            bool bHasOverrideNumCells = OverrideNumCellsX > -1 || OverrideNumCellsY > -1;
 
             Project currentProject = mainForm.currentProject;
 
             bool getOptimizedImage = !forExport && (1 / currentProject.coordsScaling > useFullIslandRes);
-            if(getOptimizedImage)
+            if (getOptimizedImage)
             {
                 g.InterpolationMode = InterpolationMode.Low;
                 g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
@@ -343,8 +453,24 @@ namespace ServerGridEditor
 
             float cellSize = Math.Max(currentProject.cellSize * currentProject.coordsScaling, 0.00001f);
 
-            float maxX = currentProject.numOfCellsX * cellSize;
-            float maxY = currentProject.numOfCellsY * cellSize;
+            int numOfCellsX = currentProject.numOfCellsX;
+            int numOfCellsY = currentProject.numOfCellsY;
+
+            if (forExport && !isSingleCell)
+            {
+                int maxDimension = GetMaxMainRegionDimension(currentProject);
+
+                numOfCellsX = maxDimension;
+                numOfCellsY = maxDimension;
+
+                if (OverrideNumCellsX > 0)
+                    numOfCellsX = OverrideNumCellsX;
+                if (OverrideNumCellsY > 0)
+                    numOfCellsY = OverrideNumCellsY;
+            }
+
+            float maxX = numOfCellsX * cellSize;
+            float maxY = numOfCellsY * cellSize;
 
             bool cull = culling.HasValue;
             RectangleF canvasRect = culling.GetValueOrDefault();
@@ -361,37 +487,167 @@ namespace ServerGridEditor
                 g.TranslateTransform(-translateH, -translateV);
             }
 
+
             //Draw background
-            if (tile != null && tileBrush != null)
+            if (mainForm.regionsTile != null && mainForm.regionsTileBrush != null)
             {
-                tileBrush.ResetTransform();
-                tileBrush.ScaleTransform((float)tileScale * currentProject.coordsScaling * 1000, (float)tileScale * currentProject.coordsScaling * 1000);
-                g.FillRectangle(tileBrush, new Rectangle(0, 0, (int)maxX, (int)maxY));
+
+                if (!forExport)
+                    mainForm.PopulateMapRegions();
+
+                lock (mainForm.MapRegionsList)
+                    lock (mainForm.regionsTileBrush)
+                    {
+                        foreach (KeyValuePair<string, Image> regionTile in mainForm.regionsTile)
+                        {
+                            MapRegion mapRegion = mainForm.MapRegionsList[regionTile.Key];
+                            if (cellX >= 0 && cellY >= 0)
+                            {
+                                if (cellX < mapRegion.StartX || cellX > mapRegion.EndX || cellY < mapRegion.StartY || cellY > mapRegion.EndY)
+                                    continue;
+                                if (OverrideNumCellsX >= 0 && (cellX + OverrideNumCellsX - 1) < mapRegion.EndX)
+                                    continue;
+                                if (OverrideNumCellsY >= 0 && (cellY + OverrideNumCellsY - 1) < mapRegion.EndY)
+                                    continue;
+                            }
+
+                            Image image = regionTile.Value;
+                            TextureBrush textureBrush = mainForm.regionsTileBrush[regionTile.Key];
+
+                            if (image != null && textureBrush != null)
+                            {
+                                textureBrush.ResetTransform();
+
+                                float wrminX = (mapRegion.StartX) * cellSize;
+                                float wrminY = (mapRegion.StartY) * cellSize;
+
+                                float wrmaxX = (mapRegion.EndX - mapRegion.StartX + 1) * cellSize;
+                                float wrmaxY = (mapRegion.EndY - mapRegion.StartY + 1) * cellSize;
+
+                                float rscaleX = wrmaxX / image.Size.Width;
+                                float rscaleY = wrmaxY / image.Size.Height;
+
+                                textureBrush.ScaleTransform(rscaleX, rscaleY);
+                                if (bHasOverrideNumCells)
+                                    g.FillRectangle(textureBrush, new Rectangle(startX, startY, (int)maxX, (int)maxY));
+                                else
+                                    g.FillRectangle(textureBrush, new Rectangle(Math.Max(startX, (int)wrminX), Math.Max(startY, (int)wrminY), (int)wrmaxX, (int)wrmaxY));
+
+                            }
+                        }
+                    }
+
+
+
+                foreach (Server s in currentProject.servers)
+                {
+                    if (s.BackgroundImgPath != null && s.BackgroundImgPath.Length > 0)
+                    {
+                        Image image = mainForm.GetImage(s.BackgroundImgPath);
+                        TextureBrush textureBrush = new TextureBrush(image);
+                        if (image != null && textureBrush != null)
+                        {
+                            PointF serverCenter = new PointF(s.gridX * cellSize + cellSize / 2f, s.gridY * cellSize + cellSize / 2f);
+                            serverCenter.Y += cellSize * 0.02f;
+
+                            textureBrush.ResetTransform();
+
+                            float wrminX = s.gridX * cellSize;
+                            float wrminY = s.gridY * cellSize;
+
+                            float wrmaxX =  cellSize;
+                            float wrmaxY = cellSize;
+
+                            float rscaleX = wrmaxX / image.Size.Width;
+                            float rscaleY = wrmaxY / image.Size.Height;
+
+
+                            textureBrush.ScaleTransform(rscaleX, rscaleY);
+                            g.FillRectangle(textureBrush, new Rectangle((int)wrminX, (int)wrminY, (int)wrmaxX, (int)wrmaxY));
+
+
+
+                        }
+                    }
+                }
             }
+
+
+            //Draw  pathing grid
+            if (bShowPathingGrid)
+            {
+                //horizontal lines
+                p.Color = Color.Blue;
+                for (int y = 0; y < (currentProject.numPathingGridRows * numOfCellsX) + 1; ++y)
+                {
+                    float drawY = y * (cellSize / currentProject.numPathingGridRows);
+                    if (!cull || (drawY >= canvasRect.Top && drawY <= canvasRect.Bottom))
+                    {
+                        g.DrawLine(p, 0, drawY, numOfCellsX * cellSize, drawY);
+                    }
+                }
+
+                //vertical lines
+                for (int x = 0; x < (currentProject.numPathingGridColumns * numOfCellsY) + 1; ++x)
+                {
+                    float drawX = x * (cellSize / currentProject.numPathingGridColumns);
+                    if (!cull || (drawX >= canvasRect.Left && drawX <= canvasRect.Right))
+                    {
+                        g.DrawLine(p, drawX, 0, drawX, numOfCellsY * cellSize);
+                    }
+                }
+            }
+
+            if (currentProject.AtlasPathingGridDirty || (currentProject.AtlasPathingGrid.GetLength(0) != (currentProject.numPathingGridRows * numOfCellsX)) || (currentProject.AtlasPathingGrid.GetLength(0) != (currentProject.numPathingGridColumns * numOfCellsY)))
+                RecalcPathingGrid(currentProject, islands);
+
+            //Draw invalid pathing cells
+            if (bShowPathingGrid)
+            {
+                p.Color = Color.Red;
+                float CellWidth = cellSize / (currentProject.numPathingGridColumns);
+                float CellHeight = cellSize / (currentProject.numPathingGridRows);
+                for (int Row = 0; Row < currentProject.AtlasPathingGrid.GetLength(0); Row++)
+                {
+                    for (int Col = 0; Col < currentProject.AtlasPathingGrid.GetLength(1); Col++)
+                    {
+                        if (!currentProject.AtlasPathingGrid[Row, Col])
+                        {
+                            float StartX = Col * CellWidth;
+                            float StartY = Row * CellHeight;
+                            RectangleF CellRect = new RectangleF(StartX, StartY, CellWidth, CellHeight);
+                            g.DrawRectangle(p, StartX, StartY, CellRect.Width, CellRect.Height);
+                            //Console.WriteLine(Row + ", " + Col);
+                        }
+                    }
+                }
+                p.Color = Color.Black;
+            }
+
 
             //Draw  grid
             if (showLines)
             {
                 //horizontal lines
-                for (int y = 0; y < currentProject.numOfCellsY + 1; ++y)
+                for (int y = 0; y < numOfCellsY + 1; ++y)
                 {
                     float drawY = y * cellSize;
                     if (!cull || (drawY >= canvasRect.Top && drawY <= canvasRect.Bottom))
-                        g.DrawLine(p, 0, drawY, currentProject.numOfCellsX * cellSize, drawY);
+                        g.DrawLine(p, 0, drawY, numOfCellsX * cellSize, drawY);
                 }
 
                 //vertical lines
-                for (int x = 0; x < currentProject.numOfCellsX + 1; ++x)
+                for (int x = 0; x < numOfCellsX + 1; ++x)
                 {
                     float drawX = x * cellSize;
                     if (!cull || (drawX >= canvasRect.Left && drawX <= canvasRect.Right))
-                        g.DrawLine(p, drawX, 0, drawX, currentProject.numOfCellsY * cellSize);
+                        g.DrawLine(p, drawX, 0, drawX, numOfCellsY * cellSize);
                 }
             }
 
             //Draw islands
-            float maxWorldX = currentProject.numOfCellsX * currentProject.cellSize;
-            float maxWorldY = currentProject.numOfCellsY * currentProject.cellSize;
+            float maxWorldX = numOfCellsX * currentProject.cellSize;
+            float maxWorldY = numOfCellsY * currentProject.cellSize;
 
             bool optimizeOutIslandNames = !forExport && (1 / currentProject.coordsScaling > islandsNamesMaxRes);
 
@@ -400,7 +656,7 @@ namespace ServerGridEditor
                 Island referencedIsland = instance.GetReferencedIsland(islands);
 
                 //Clamp to map
-                instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
+                //instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
 
                 //Reverse translation to rotate around self
                 g.TranslateTransform(instance.worldX * currentProject.coordsScaling, instance.worldY * currentProject.coordsScaling);
@@ -413,7 +669,11 @@ namespace ServerGridEditor
                     drawRect.X = -drawRect.Width / 2;
                     drawRect.Y = -drawRect.Height / 2;
 
-                    g.DrawImage(referencedIsland.GetImage(getOptimizedImage), drawRect);
+                    var ReferencedIslandImage = referencedIsland.GetImage(getOptimizedImage);
+                    lock (ReferencedIslandImage)
+                    {
+                        g.DrawImage(referencedIsland.GetImage(getOptimizedImage), drawRect);
+                    }
 
                     if (currentProject.showIslandNames)
                     {
@@ -431,6 +691,7 @@ namespace ServerGridEditor
                         }
                         g.RotateTransform(instance.rotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
                     }
+
                 }
 
                 g.RotateTransform(-instance.rotation);
@@ -438,13 +699,56 @@ namespace ServerGridEditor
             }
 
             //Draw foreground
-            if(currentProject.showForeground && mainForm.foregroundBrush != null)
+            if (currentProject.showForeground && mainForm.foregroundBrush != null)
             {
                 mainForm.foregroundBrush.ResetTransform();
                 mainForm.foregroundBrush.ScaleTransform((float)mainForm.foregroundScaleBox.Value * currentProject.coordsScaling * 1000, (float)mainForm.foregroundScaleBox.Value * currentProject.coordsScaling * 1000);
                 g.FillRectangle(mainForm.foregroundBrush, new Rectangle(0, 0, (int)maxX, (int)maxY));
             }
 
+            //Draw trade wind overlay
+            if (currentProject.showTradeWindOverlay && ( mainForm.tradeWindOverlayBrush != null || mainForm.regionsTradeWindOverlayBrush.Count > 0))
+            {
+                int maxDimension = GetMaxMainRegionDimension(currentProject);
+                
+
+                float wmaxX = maxDimension * cellSize;
+                float wmaxY = maxDimension * cellSize;
+                if (mainForm.tradeWindOverlayBrush != null)
+                {
+                    mainForm.tradeWindOverlayBrush.ResetTransform();
+                    float scaleX = wmaxX / mainForm.tradeWindOverlay.Size.Width;
+                    float scaleY = wmaxY / mainForm.tradeWindOverlay.Size.Height;
+                    mainForm.tradeWindOverlayBrush.ScaleTransform(scaleX, scaleY);
+                    g.FillRectangle(mainForm.tradeWindOverlayBrush, new Rectangle(0, 0, (int)wmaxX, (int)wmaxY));
+                }
+                if (!forExport)
+                    mainForm.PopulateMapRegions();
+
+                foreach (KeyValuePair<string, Image> regionTradeWindOverlay in mainForm.regionsTradeWindOverlay)
+                    if (mainForm.MapRegionsList.ContainsKey(regionTradeWindOverlay.Key))
+                    {
+                        MapRegion mapRegion = mainForm.MapRegionsList[regionTradeWindOverlay.Key];
+                        Image image = regionTradeWindOverlay.Value;
+                        TextureBrush textureBrush = mainForm.regionsTradeWindOverlayBrush[regionTradeWindOverlay.Key];
+                        textureBrush.ResetTransform();
+
+                        float wrminX = (mapRegion.StartX) * cellSize;
+                        float wrminY = (mapRegion.StartY) * cellSize;
+
+                        float wrmaxX = (mapRegion.EndX - mapRegion.StartX + 1) * cellSize;
+                        float wrmaxY = (mapRegion.EndY - mapRegion.StartY + 1) * cellSize;
+
+                        float rscaleX = (wrmaxX) / image.Size.Width;
+                        float rscaleY = (wrmaxY) / image.Size.Height;
+
+                        textureBrush.TranslateTransform((mapRegion.StartX) * cellSize, (mapRegion.StartY) * cellSize);
+
+                        textureBrush.ScaleTransform(rscaleX, rscaleY);
+
+                        g.FillRectangle(textureBrush, new Rectangle((int)wrminX, (int)wrminY, (int)wrmaxX, (int)wrmaxY));
+                    }
+            }
 
             if (currentProject.DiscoveryZoneImage != null && showDiscoZoneInfo)
             {
@@ -454,7 +758,7 @@ namespace ServerGridEditor
                     if (discoInst.bIsManuallyPlaced)
                         continue;
                     //Clamp to map
-                    discoInst.SetWorldLocation(mainForm, new PointF(discoInst.worldX, discoInst.worldY));
+                    //discoInst.SetWorldLocation(mainForm, new PointF(discoInst.worldX, discoInst.worldY));
 
                     //Reverse translation to rotate around self
                     g.TranslateTransform(discoInst.worldX * currentProject.coordsScaling, discoInst.worldY * currentProject.coordsScaling);
@@ -473,7 +777,10 @@ namespace ServerGridEditor
                     {
                         drawRect.X = -drawRect.Width / 2;
                         drawRect.Y = -drawRect.Height / 2;
-                        g.DrawImage(currentProject.DiscoveryZoneImage, drawRect);
+                        lock (currentProject.DiscoveryZoneImage)
+                        {
+                            g.DrawImage(currentProject.DiscoveryZoneImage, drawRect);
+                        }
 
                         culled = false;
                     }
@@ -481,10 +788,13 @@ namespace ServerGridEditor
                     g.RotateTransform(-discoInst.rotation);
                     g.TranslateTransform(-discoInst.worldX * currentProject.coordsScaling, -discoInst.worldY * currentProject.coordsScaling);
 
-                    if(!culled)
+                    if (!culled)
                     {
                         float zoneSize = Math.Max(discoInst.sizeX * currentProject.coordsScaling, 0.00001f);
-                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * zoneSize / 200, FontStyle.Regular);
+
+                        float fontSize = Math.Max(1.0f, DefaultFont.SizeInPoints * zoneSize / 200);
+                        Font font = new Font(SystemFonts.DefaultFont.FontFamily, fontSize, FontStyle.Regular);
+
                         SizeF stringSize = g.MeasureString("T", font);
                         float dynamicOutlineShift = stringSize.Height * outlineShift;
 
@@ -501,6 +811,7 @@ namespace ServerGridEditor
                         zoneCenter.Y += stringSize.Height * 1.1f;
                         g.DrawString("xp: " + discoInst.xp, font, Brushes.White, zoneCenter, centeredStringFormat);
                     }
+
                 }
             }
 
@@ -516,7 +827,7 @@ namespace ServerGridEditor
                 foreach (Server s in currentProject.servers)
                 {
                     PointF serverCenter = new PointF(s.gridX * cellSize + cellSize / 2f, s.gridY * cellSize + cellSize / 2f);
-                    serverCenter.Y -= cellSize * 0.17f;
+                    serverCenter.Y += cellSize * 0.02f;
                     //Draw locks
                     if (!forExport)
                     {
@@ -575,6 +886,24 @@ namespace ServerGridEditor
                                         0, 0, lockImg.Width, lockImg.Height, GraphicsUnit.Pixel, ia);
                             locksShift += lockImgSize;
                         }
+                        if (s.windsLocked)
+                        {
+                            var cm = new ColorMatrix(new float[][]
+                            {
+                              new float[] {1, 0, 0, 0, 0},
+                              new float[] {0, 1, 0, 0, 0},
+                              new float[] {0, 0, 1, 0, 0},
+                              new float[] {0, 0, 0, 1, 0},
+                              new float[] {0.25f, 0.87f, 0.815f, 0, 1}
+                             });
+
+                            var ia = new ImageAttributes();
+                            ia.SetColorMatrix(cm);
+
+                            g.DrawImage(lockImg, new Rectangle((int)(serverCenter.X + cellSize / 2 - lockImgSize), (int)(serverCenter.Y - cellSize / 2 + locksShift), (int)lockImgSize, (int)lockImgSize),
+                                        0, 0, lockImg.Width, lockImg.Height, GraphicsUnit.Pixel, ia);
+                            locksShift += lockImgSize;
+                        }
                     }
 
                     if (cull)
@@ -599,6 +928,8 @@ namespace ServerGridEditor
                     if (!string.IsNullOrWhiteSpace(s.name))
                     {
                         string nameToDraw = "Name: " + s.name;
+                        if (s.isMawWatersServer)
+                            nameToDraw += " (Maw Water)";
                         g.DrawString(nameToDraw, font, Brushes.Black, new PointF(serverCenter.X + dynamicOutlineShift, serverCenter.Y + dynamicOutlineShift), centeredStringFormat);
                         g.DrawString(nameToDraw, font, (s.isHomeServer) ? Brushes.Lime : Brushes.White, serverCenter, centeredStringFormat);
                         serverCenter.Y += stringSize.Height * 1.1f;
@@ -647,11 +978,11 @@ namespace ServerGridEditor
                     if (shipPath.isLooping)
                     {
                         BezierNodeData lastNode = shipPath.Nodes[shipPath.Nodes.Count - 1];
-                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(lastNode.worldX - mainForm.currentProject.cellSize * mainForm.currentProject.numOfCellsX, lastNode.worldY));
+                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(lastNode.worldX - mainForm.currentProject.cellSize * numOfCellsX, lastNode.worldY));
                         bezierPoints.Add(NodeCenter);
 
                         PointF NextControlCenter = lastNode.GetNextControlPoint();
-                        NextControlCenter.X -= mainForm.currentProject.cellSize * mainForm.currentProject.numOfCellsX;
+                        NextControlCenter.X -= mainForm.currentProject.cellSize * numOfCellsX;
                         NextControlCenter = mainForm.UnrealToMapPoint(NextControlCenter);
 
                         if (lastNode.GetNextNode() != null)
@@ -691,10 +1022,10 @@ namespace ServerGridEditor
                         if (node.GetNextNode() != null)
                         {
                             bezierPoints.Add(NextControlCenter);
-                            if(i == shipPath.Nodes.Count - 1 && shipPath.isLooping)
+                            if (i == shipPath.Nodes.Count - 1 && shipPath.isLooping)
                             {
                                 PointF PrevControl = node.GetNextNode().GetPrevControlPoint();
-                                PrevControl.X += mainForm.currentProject.cellSize * mainForm.currentProject.numOfCellsX;
+                                PrevControl.X += mainForm.currentProject.cellSize * numOfCellsX;
                                 bezierPoints.Add(mainForm.UnrealToMapPoint(PrevControl));
                             }
                             else
@@ -705,7 +1036,7 @@ namespace ServerGridEditor
                     if (shipPath.isLooping)
                     {
                         BezierNodeData firstNode = shipPath.Nodes[0];
-                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(firstNode.worldX + mainForm.currentProject.cellSize * mainForm.currentProject.numOfCellsX, firstNode.worldY));
+                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(firstNode.worldX + mainForm.currentProject.cellSize * numOfCellsX, firstNode.worldY));
                         bezierPoints.Add(NodeCenter);
                     }
                     else
@@ -719,7 +1050,340 @@ namespace ServerGridEditor
                 }
             }
 
-            if(mainForm.makingSelectionBox || mainForm.selectedMovableObjects.Count > 0)
+            if (mainForm.showPortalNodesChckBox.Checked)
+            {
+
+                List<PortalPathData> portalPaths = new List<PortalPathData>();
+
+                portalPaths.AddRange(currentProject.portalPaths);
+
+                foreach (PortalPathData portalPerpetualPath in portalPaths)
+                {
+                    for (int i = 0; i < portalPerpetualPath.Nodes.Count; i++)
+                    {
+                        PortalPathNode node = portalPerpetualPath.Nodes[i];
+                        //Draw control nodes
+                        Rectangle nodeRect = node.GetRect(currentProject);
+                        Pen pen = new Pen(i == 0 ? Color.Green : Color.Red, 5f);
+                        if (i == 0)
+                        {
+                            switch (portalPerpetualPath.PathPortalType)
+                            {
+                                case PortalType.Perpetual:
+                                    pen.Color = Color.Green;
+                                    break;
+
+                                case PortalType.PlayerActivated:
+                                    pen.Color = Color.Yellow;
+                                    break;
+
+                                case PortalType.CentralBarmuda:
+                                    pen.Color = Color.Violet;
+                                    break;
+
+                                case PortalType.NPC:
+                                    pen.Color = Color.Gray;
+                                    break;
+                            }
+                        }
+                        else
+                            pen.Color = Color.Red;
+                        g.DrawEllipse(pen, nodeRect);
+
+                        //Draw the control points as half the size
+                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(node.worldX, node.worldY));
+
+                        nodeRect.Width /= 2;
+                        nodeRect.Height /= 2;
+                        nodeRect.Offset(nodeRect.Width / 2, nodeRect.Height / 2);
+                        pen.Width = 2.5f;
+
+                        //horizontal lines
+
+                        if (i != 0)
+                        {
+                            MoveableObjectData originNode = portalPerpetualPath.Nodes[0];
+                            PointF OriginNodeCenter = mainForm.UnrealToMapPoint(new PointF(originNode.worldX, originNode.worldY));
+                            switch (portalPerpetualPath.PathPortalType)
+                            {
+                                case PortalType.Perpetual:
+                                    pen.Color = Color.Green;
+                                    break;
+
+                                case PortalType.PlayerActivated:
+                                    pen.Color = Color.Yellow;
+                                    break;
+
+                                case PortalType.CentralBarmuda:
+                                    pen.Color = Color.Violet;
+                                    break;
+                                case PortalType.NPC:
+                                    pen.Color = Color.Gray;
+                                    break;
+
+                            }
+                            g.DrawLine(pen, NodeCenter.X, NodeCenter.Y, OriginNodeCenter.X, OriginNodeCenter.Y);
+                        }
+
+                        //Draw direction arrow
+                        /*AdjustableArrowCap arrowCap = new AdjustableArrowCap(0.25f * bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling,
+                                                                             0.25f * bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling, true);
+
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.Custom;
+                        pen.CustomEndCap = arrowCap;
+                        //pen.CustomEndCap.BaseCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                        pen.CustomEndCap.WidthScale = 2;
+
+                        float arrowLength = bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling;
+                        PointF arrowStart = new PointF(NodeCenter.X - arrowLength / 2, NodeCenter.Y);
+                        arrowStart = StaticHelpers.RotatePointAround(arrowStart, new PointF(NodeCenter.X, NodeCenter.Y), node.rotation);
+                        PointF arrowEnd = new PointF(NodeCenter.X + arrowLength / 2, NodeCenter.Y);
+                        arrowEnd = StaticHelpers.RotatePointAround(arrowEnd, new PointF(NodeCenter.X, NodeCenter.Y), node.rotation);
+                        pen.Color = Color.WhiteSmoke;
+                        g.DrawLine(pen, arrowStart, arrowEnd);
+
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;*/
+
+                    }
+                }
+            }
+            //Draw Trade Winds
+            bool bDisableTradewindsExporting = false;
+            if ((!bDisableTradewindsExporting && forExport && !bHasOverrideNumCells) || mainForm.showTradeWindsChckBox.Checked)
+            {
+                AlphaBuf = new Dictionary<long, int>();
+                foreach (TradeWindData tradeWind in currentProject.tradeWinds)
+                {
+                    List<PointF> bezierPoints = new List<PointF>();
+
+                    if (tradeWind.isLooping && tradeWind.isLoopingAroundWorld)
+                    {
+                        BezierNodeData lastNode = tradeWind.Nodes[tradeWind.Nodes.Count - 1];
+                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(lastNode.worldX - mainForm.currentProject.cellSize * numOfCellsX, lastNode.worldY));
+                        bezierPoints.Add(NodeCenter);
+
+                        PointF NextControlCenter = lastNode.GetNextControlPoint();
+                        NextControlCenter.X -= mainForm.currentProject.cellSize * numOfCellsX;
+                        NextControlCenter = mainForm.UnrealToMapPoint(NextControlCenter);
+
+                        if (lastNode.GetNextNode() != null)
+                        {
+                            bezierPoints.Add(NextControlCenter);
+                            bezierPoints.Add(mainForm.UnrealToMapPoint(lastNode.GetNextNode().GetPrevControlPoint()));
+                        }
+                    }
+
+                    for (int i = 0; i < tradeWind.Nodes.Count; i++)
+                    {
+                        BezierNodeData node = tradeWind.Nodes[i];
+
+                        PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(node.worldX, node.worldY));
+                        PointF NextControlCenter = mainForm.UnrealToMapPoint(node.GetNextControlPoint());
+                        PointF PrevControlCenter = mainForm.UnrealToMapPoint(node.GetPrevControlPoint());
+
+                        bezierPoints.Add(NodeCenter);
+                        if (node.GetNextNode() != null)
+                        {
+                            if (i == tradeWind.Nodes.Count - 1)
+                            {
+                                if (tradeWind.isLooping)
+                                {
+                                    bezierPoints.Add(NextControlCenter);
+                                    if (tradeWind.isLoopingAroundWorld)
+                                    {
+                                        PointF PrevControl = node.GetNextNode().GetPrevControlPoint();
+                                        PrevControl.X += mainForm.currentProject.cellSize * numOfCellsX;
+                                        bezierPoints.Add(mainForm.UnrealToMapPoint(PrevControl));
+                                    }
+                                    else
+                                        bezierPoints.Add(mainForm.UnrealToMapPoint(node.GetNextNode().GetPrevControlPoint()));
+                                }
+                            }
+                            else
+                            {
+                                bezierPoints.Add(NextControlCenter);
+                                bezierPoints.Add(mainForm.UnrealToMapPoint(node.GetNextNode().GetPrevControlPoint()));
+                            }
+                        }
+                    }
+
+                    if (tradeWind.isLooping)
+                    {
+                        if (tradeWind.isLoopingAroundWorld)
+                        {
+                            BezierNodeData firstNode = tradeWind.Nodes[0];
+                            PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(firstNode.worldX + mainForm.currentProject.cellSize * numOfCellsX, firstNode.worldY));
+                            bezierPoints.Add(NodeCenter);
+                        }
+                        else
+                        {
+                            //Re add the starting point to close loop
+                            if (tradeWind.Nodes.Count > 0)
+                                bezierPoints.Add(tradeWind.Nodes[0].GetMapLocation(mainForm));
+                        }
+                    }
+
+                    for (int bi = 0; bi < bezierPoints.Count; bi++)
+                        bezierPoints[bi] = new PointF(bezierPoints[bi].X - startX, bezierPoints[bi].Y - startY);
+
+                    for (int bi = 0; bi + 3 < bezierPoints.Count; bi += 3)
+                    {
+                        List<Tuple<float, Point>> points = new List<Tuple<float, Point>>();
+                        float dt = 1.0f / cellSize;
+                        for (float t = 0.0f; t < 1.0; t += dt)
+                        {
+                            Point PointTOnCurve = CubicBezier(t, bezierPoints[bi], bezierPoints[bi + 1], bezierPoints[bi + 2], bezierPoints[bi + 3]);
+                            if (points.Count > 0)
+                            {
+                                Point PrevPoint = points[points.Count - 1].Item2;
+                                if (PointTOnCurve.X == PrevPoint.X && PointTOnCurve.Y == PrevPoint.Y)
+                                    continue;
+                            }
+                            if (forExport ||
+                                (PointTOnCurve.X >= canvasRect.Left && PointTOnCurve.X <= canvasRect.Right &&
+                                PointTOnCurve.Y >= canvasRect.Top && PointTOnCurve.Y <= canvasRect.Bottom))
+                                points.Add(new Tuple<float, Point>(t, PointTOnCurve));
+                        }
+
+                        Point LastPointOnCurve = CubicBezier(1.0f, bezierPoints[0], bezierPoints[1], bezierPoints[2], bezierPoints[3]);
+                        points.Add(new Tuple<float, Point>(1.0f, LastPointOnCurve));
+                        int CurrentNodeIndex = bi / 3;
+                        int NextNodeIndex = CurrentNodeIndex + 1;
+                        if (tradeWind.isLooping && NextNodeIndex >= tradeWind.Nodes.Count)
+                            NextNodeIndex = 0;
+
+
+                            List<Point> CirclePoints = new List<Point>();
+                        for (int i = 0; i < points.Count - 1; i++)
+                        {
+                            int widthAtPoint = (int)((tradeWind.Nodes[CurrentNodeIndex].width * (1.0f - points[i].Item1) + tradeWind.Nodes[NextNodeIndex].width * points[i].Item1) * currentProject.coordsScaling);
+                            if (widthAtPoint < 1)
+                                widthAtPoint = 1;
+                            CirclePoints.Clear();
+                            if (!mainForm.visualizeTradewindsWidthCheckBox.Checked && widthAtPoint > 10 && !forExport)
+                                widthAtPoint = 10;
+                            DrawCircle(points[i].Item2.X, points[i].Item2.Y, widthAtPoint, CirclePoints);
+                            for (int k = 0; k < CirclePoints.Count; k++)
+                            {
+                                int circlePointX = CirclePoints[k].X;
+                                int circlePointY = CirclePoints[k].Y;
+                                int DistToCenter = (int)Math.Sqrt((circlePointX - points[i].Item2.X) * (circlePointX - points[i].Item2.X) + ((circlePointY - points[i].Item2.Y) * (circlePointY - points[i].Item2.Y)));
+                                int a = (int)MapValueFromTo(DistToCenter, tradeWind.StartInterpolatingOceanColorAtPercentage * widthAtPoint, widthAtPoint, 255, 0);
+                                if (a < 0)
+                                    a = 0;
+                                else if (a > 255)
+                                    a = 255;
+                                long AlphaBuffIndex = PackTwoInts(circlePointX, circlePointY);
+                                if (a > 0 && AlphaBuffIndex > 0 && circlePointX >= 0 && circlePointY >= 0)
+                                {
+                                    lock (AlphaBuf)
+                                    {
+                                        int currentA = -1;
+                                        if (AlphaBuf.TryGetValue(AlphaBuffIndex, out currentA))
+                                        {
+                                            if (a > currentA)
+                                                AlphaBuf[AlphaBuffIndex] = a;
+                                        }
+                                        else
+                                            AlphaBuf.Add(AlphaBuffIndex, a);
+                                    }
+                                }
+                            }
+
+
+                        }
+
+
+                        if (!forExport)
+                        {
+                            lock (g)
+                            {
+                                lock (AlphaBuf)
+                                {
+                                    foreach (KeyValuePair<long, int> PixelAlpha in AlphaBuf)
+                                    {
+                                        int ax = -1;
+                                        int ay = -1;
+                                        UnpackIntoToTwoInts(PixelAlpha.Key, out ax, out ay);
+                                        if (PixelAlpha.Value > 0)
+                                        {
+                                            p.Color = Color.Turquoise;
+                                            SolidBrush aBrush = new SolidBrush(Color.FromArgb(PixelAlpha.Value, 64, 224, 208));
+                                            g.FillRectangle(aBrush, ax, ay, 1, 1);
+                                        }
+                                    }
+                                    /*
+                                    for (int i = 1; i < points.Count; i++)
+                                    {
+                                        Point p1 = points[i - 1];
+                                        Point p2 = points[i];
+                                        Brush aBrush = (Brush)Brushes.Green;
+                                        g.FillRectangle(aBrush, points[i].X, points[i].Y, 1, 1);
+                                    }
+                                    */
+
+                                    g.DrawLine(Pens.Blue, bezierPoints[bi], bezierPoints[bi + 1]);
+                                    g.DrawLine(Pens.Blue, bezierPoints[bi + 1], bezierPoints[bi + 2]);
+                                    g.DrawLine(Pens.Blue, bezierPoints[bi + 2], bezierPoints[bi + 3]);
+                                }
+                            }
+                        }
+                        p.Color = Color.Black;
+                    }
+                }
+                if (!forExport)
+                {
+                    foreach (TradeWindData tradeWind in currentProject.tradeWinds)
+                    {
+                        for (int i = 0; i < tradeWind.Nodes.Count; i++)
+                        {
+                            BezierNodeData node = tradeWind.Nodes[i];
+                            //Draw control nodes
+                            Rectangle nodeRect = node.GetRect(currentProject);
+                            Pen pen = new Pen(i == 0 ? Color.Turquoise : Color.Black, 5f);
+                            g.DrawEllipse(pen, nodeRect);
+
+                            //Draw the control points as half the size
+                            PointF NodeCenter = mainForm.UnrealToMapPoint(new PointF(node.worldX, node.worldY));
+                            PointF NextControlCenter = mainForm.UnrealToMapPoint(node.GetNextControlPoint());
+                            PointF PrevControlCenter = mainForm.UnrealToMapPoint(node.GetPrevControlPoint());
+
+                            nodeRect.Width /= 2;
+                            nodeRect.Height /= 2;
+                            nodeRect.Offset(nodeRect.Width / 2, nodeRect.Height / 2);
+                            pen.Width = 2.5f;
+                            pen.Color = Color.Red;
+                            nodeRect.Offset((int)(NextControlCenter.X - NodeCenter.X), (int)(NextControlCenter.Y - NodeCenter.Y));
+                            g.DrawEllipse(pen, nodeRect);
+                            nodeRect.Offset((int)(PrevControlCenter.X - NextControlCenter.X), (int)(PrevControlCenter.Y - NextControlCenter.Y));
+                            g.DrawEllipse(pen, nodeRect);
+
+                            //Draw direction arrow
+                            AdjustableArrowCap arrowCap = new AdjustableArrowCap(0.25f * bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling,
+                                                                                 0.25f * bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling, true);
+
+                            pen.EndCap = System.Drawing.Drawing2D.LineCap.Custom;
+                            pen.CustomEndCap = arrowCap;
+                            //pen.CustomEndCap.BaseCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor;
+                            pen.CustomEndCap.WidthScale = 2;
+
+                            float arrowLength = bezierNodeArrowRatio * currentProject.cellSize * currentProject.coordsScaling;
+                            PointF arrowStart = new PointF(NodeCenter.X - arrowLength / 2, NodeCenter.Y);
+                            arrowStart = StaticHelpers.RotatePointAround(arrowStart, new PointF(NodeCenter.X, NodeCenter.Y), node.rotation);
+                            PointF arrowEnd = new PointF(NodeCenter.X + arrowLength / 2, NodeCenter.Y);
+                            arrowEnd = StaticHelpers.RotatePointAround(arrowEnd, new PointF(NodeCenter.X, NodeCenter.Y), node.rotation);
+                            if (tradeWind.reverseDir)
+                                g.DrawLine(pen, arrowEnd, arrowStart);
+                            else
+                                g.DrawLine(pen, arrowStart, arrowEnd);
+
+                            pen.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
+                        }
+                    }
+                }
+            } 
+            
+            if (mainForm.makingSelectionBox || mainForm.selectedMovableObjects.Count > 0)
             {
                 Pen pen = new Pen(Color.Black, 2.5f);
                 pen.DashStyle = DashStyle.Dash;
@@ -737,6 +1401,25 @@ namespace ServerGridEditor
                 //g.RotateTransform(-mainForm.selectionBoxRotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
                 //g.TranslateTransform(-selBox.Y - selBox.Width / 2, -selBox.Y - selBox.Height / 2);
             }
+
+            if (!forExport)
+            {
+                GetHiddenGridsStart(currentProject, out int hiddenGridsStartX, out int hiddenGridsStartY);
+
+                if (hiddenGridsStartX > 0 || hiddenGridsStartY > 0)
+                {
+                    SolidBrush overlayBrush = new SolidBrush(Color.FromArgb(50, 0, 0, 0));
+                    Font font = new Font(SystemFonts.DefaultFont.FontFamily, DefaultFont.SizeInPoints * cellSize / 200, FontStyle.Regular);
+                    foreach (Server server in currentProject.servers)
+                        if (server.gridX >= hiddenGridsStartX || server.gridY >= hiddenGridsStartY)
+                        {
+                            g.FillRectangle(overlayBrush, server.gridX * cellSize, server.gridY * cellSize, (int)cellSize, (int)cellSize);
+                            string subAtlasID = server.hiddenAtlasId != null && server.hiddenAtlasId.Length > 0 ? server.hiddenAtlasId : "";
+                            g.DrawString("SubATLAS: " + subAtlasID, font, Brushes.White, new PointF(server.gridX * cellSize, server.gridY * cellSize));
+                        }
+                }
+            }
+            return forExport ? AlphaBuf : null;
         }
 
         private void mapPanel_DragDrop(object sender, DragEventArgs e)
@@ -982,23 +1665,44 @@ namespace ServerGridEditor
                     }
                     else
                     {
-                        BezierNodeData node = GetFirstBezierNodeAtLocation(GetTarnsformedMapPoint(e.Location));
-                        if (node != null)
+                        ShipPathNode shipPathNode = GetFirstShipPathNodeAtLocation(GetTarnsformedMapPoint(e.Location));
+                        if (shipPathNode != null)
                         {
-                            var editForm = new EditShipPath(node.shipPath);
+                            var editForm = new EditShipPath(shipPathNode.shipPath);
                             editForm.ShowDialog();
                             mapPanel.Invalidate();
                         }
                         else
                         {
-                            Server s = GetServerAtPoint(GetTarnsformedMapPoint(e.Location));
-                            if (s != null)
+                            TradeWindNode tradeWindNode = GetFirstTradeWindNodeAtLocation(GetTarnsformedMapPoint(e.Location));
+                            if (tradeWindNode != null)
                             {
-                                var editForm = new EditServerForm(this);
-                                editForm.targetServer = s;
-                                if (editForm.ShowDialog() == DialogResult.OK)
+                                var editForm = new EditTradeWind(tradeWindNode);
+                                editForm.ShowDialog();
+                                mapPanel.Invalidate();
+                            }
+                            else
+                            {
+
+                                PortalPathNode portalPathNode = GetFirstPortalPathNodeAtLocation(GetTarnsformedMapPoint(e.Location));
+                                if (portalPathNode != null)
                                 {
+                                    var editForm = new EditPortalNode(portalPathNode, this);
+                                    editForm.ShowDialog();
                                     mapPanel.Invalidate();
+                                }
+                                else
+                                {
+                                    Server s = GetServerAtPoint(GetTarnsformedMapPoint(e.Location));
+                                    if (s != null)
+                                    {
+                                        var editForm = new EditServerForm(this);
+                                        editForm.targetServer = s;
+                                        if (editForm.ShowDialog() == DialogResult.OK)
+                                        {
+                                            mapPanel.Invalidate();
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1089,12 +1793,20 @@ namespace ServerGridEditor
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            if (this.txtSearch.Focused)
+            {
+                // there's got to be a better way to prevent events from triggering here when typing in the search box.
+                // I don't really do WinForms though, so, meh?
+                return;
+            }
+
             if (e.KeyCode == Keys.Delete)
             {
                 Point cursorMapPoint = GetTarnsformedMapPoint(mapPanel.PointToClient(Cursor.Position));
                 IslandInstanceData islandInst = GetFirstInstanceAtLocation(cursorMapPoint);
                 DiscoveryZoneData discoInst;
                 BezierNodeData bezierNode;
+                PortalPathNode PortalNode;
 
                 if (islandInst != null)
                 {
@@ -1112,13 +1824,32 @@ namespace ServerGridEditor
                 {
                     if (ModifierKeys == Keys.Shift)
                     {
-                        currentProject.shipPaths.Remove(bezierNode.shipPath);
+                        if (bezierNode is ShipPathNode)
+                            currentProject.shipPaths.Remove(((ShipPathNode)bezierNode).shipPath);
+                        else if (bezierNode is TradeWindNode)
+                            currentProject.tradeWinds.Remove(((TradeWindNode)bezierNode).tradeWind);
+                      
                         mapPanel.Invalidate();
                     }
                     else
                     {
-                        if (!bezierNode.shipPath.DeleteNode(bezierNode))
+                        if (!bezierNode.GetSplinePath().DeleteNode(bezierNode))
                             MessageBox.Show("A bezier path can't have less than 2 points\nTo delete the whole path use Shift + Delete");
+                        else
+                            mapPanel.Invalidate();
+                    }
+                }
+                else if ((PortalNode = GetFirsPortalPathNodeAtLocation(cursorMapPoint)) != null)
+                {
+                    if (ModifierKeys == Keys.Shift)
+                    {
+                        currentProject.portalPaths.Remove(PortalNode.portalPathData);
+                        mapPanel.Invalidate();
+                    }
+                    else
+                    {
+                        if (!PortalNode.portalPathData.DeleteNode(PortalNode))
+                            MessageBox.Show("A Portal path can't have less than 2 points\nTo delete the whole path use Shift + Delete");
                         else
                             mapPanel.Invalidate();
                     }
@@ -1154,14 +1885,108 @@ namespace ServerGridEditor
                     }
                 }
             }
+            else if (e.KeyCode == Keys.Q)
+            {
+                //Create new Perpetual path
+                if (currentProject != null)
+                {
+                    Server server = GetServerAtPoint(GetTarnsformedMapPoint(previousMousePos));
+                    if (server != null) //To ensure being in-grid
+                    {
+                        PointF unrealPoint = MapToUnrealPoint(GetTarnsformedMapPoint(previousMousePos));
+                        currentProject.portalPaths.Add(new PortalPathData(PortalType.Perpetual).SetFrom(this, unrealPoint.X, unrealPoint.Y));
+                        mapPanel.Invalidate();
+                    }
+                }
+            }
+            else if (e.KeyCode == Keys.W)
+            {
+                //Create new Perpetual path
+                if (currentProject != null)
+                {
+                    Server server = GetServerAtPoint(GetTarnsformedMapPoint(previousMousePos));
+                    if (server != null) //To ensure being in-grid
+                    {
+                        PointF unrealPoint = MapToUnrealPoint(GetTarnsformedMapPoint(previousMousePos));
+                        currentProject.portalPaths.Add(new PortalPathData(PortalType.PlayerActivated).SetFrom(this, unrealPoint.X, unrealPoint.Y));
+                        mapPanel.Invalidate();
+                    }
+                }
+            }
+            else if (e.KeyCode == Keys.E)
+            {
+                //Create new Perpetual path
+                if (currentProject != null)
+                {
+                    Server server = GetServerAtPoint(GetTarnsformedMapPoint(previousMousePos));
+                    if (server != null) //To ensure being in-grid
+                    {
+                        PointF unrealPoint = MapToUnrealPoint(GetTarnsformedMapPoint(previousMousePos));
+                        currentProject.portalPaths.Add(new PortalPathData(PortalType.CentralBarmuda).SetFrom(this, unrealPoint.X, unrealPoint.Y));
+                        mapPanel.Invalidate();
+                    }
+                }
+            }
+            else if (e.KeyCode == Keys.R)
+            {
+                if (currentProject != null)
+                {
+                    Server server = GetServerAtPoint(GetTarnsformedMapPoint(previousMousePos));
+                    if (server != null) //To ensure being in-grid
+                    {
+                        PointF unrealPoint = MapToUnrealPoint(GetTarnsformedMapPoint(previousMousePos));
+                        currentProject.portalPaths.Add(new PortalPathData(PortalType.NPC).SetFrom(this, unrealPoint.X, unrealPoint.Y));
+                        mapPanel.Invalidate();
+                    }
+                }
+            }
+            else if (e.KeyCode == Keys.T)
+            {
+                //Create new trade wind
+                if (currentProject != null)
+                {
+                    Server server = GetServerAtPoint(GetTarnsformedMapPoint(previousMousePos));
+                    if (server != null) //To ensure being in-grid
+                    {
+                        PointF unrealPoint = MapToUnrealPoint(GetTarnsformedMapPoint(previousMousePos));
+                        currentProject.tradeWinds.Add(new TradeWindData().SetFrom(this, unrealPoint.X, unrealPoint.Y));
+                        mapPanel.Invalidate();
+                    }
+                }
+            }
             else if (e.KeyCode == Keys.Add || e.KeyCode == Keys.Oemplus)
             {
                 //Create new ship path
                 BezierNodeData selectedBezierNode = GetFirstBezierNodeAtLocation(GetTarnsformedMapPoint(previousMousePos));
                 if (selectedBezierNode != null) //To ensure being in-grid
                 {
-                    selectedBezierNode.shipPath.AddNode(selectedBezierNode);
+                    if (selectedBezierNode is ShipPathNode)
+                        ((ShipPathNode)selectedBezierNode).shipPath.AddNode(selectedBezierNode);
+                    else if (selectedBezierNode is TradeWindNode)
+                        ((TradeWindNode)selectedBezierNode).tradeWind.AddNode(selectedBezierNode);
+                   
                     mapPanel.Invalidate();
+                }
+                else
+                {
+                    PortalPathNode portalPathNode = GetFirsPortalPathNodeAtLocation(GetTarnsformedMapPoint(previousMousePos));
+                    if (portalPathNode != null)
+                    {
+                        switch (portalPathNode.portalPathData.PathPortalType)
+                        {
+                            case PortalType.Perpetual:
+                                break;
+                            case PortalType.PlayerActivated:
+                                portalPathNode.portalPathData.AddNode(portalPathNode);
+
+                                mapPanel.Invalidate();
+                                break;
+                            case PortalType.CentralBarmuda:
+                                break;
+                            case PortalType.NPC:
+                                break;
+                        }
+                    }
                 }
             }
         }
@@ -1400,28 +2225,36 @@ namespace ServerGridEditor
         /// <summary>
         /// Creats a completely new project replacing the current one if already there
         /// </summary>
-        public void CreateProject(float CellSize, int xCells, int yCells, string worldFriendlyName, string worldAtlasId, string worldAtlasPassword)
+        public void CreateProject(float CellSize, int xCells, int yCells, string worldFriendlyName, string MainRegionName, string worldAtlasId, string worldAtlasPassword)
         {
             currentProject = new Project(CellSize, xCells, yCells);
+            this.imageCache = new Dictionary<string, Image>();
             currentProject.WorldFriendlyName = worldFriendlyName;
+            currentProject.MainRegionName = MainRegionName;
             currentProject.WorldAtlasPassword = worldAtlasPassword;
             currentProject.WorldAtlasId = worldAtlasId;
             currentProject.TribeLogConfig = new TribeLogConfigInfo();
             currentProject.TravelDataConfig = new BackupConfigInfo();
             currentProject.SharedLogConfig = new SharedLogConfigInfo();
+            currentProject.ShipBottleDataConfig = new ShipBiottleConfigInfo();
             SetScaleTxt(1 / currentProject.coordsScaling);
 
             showServerInfoCheckbox.Checked = currentProject.showServerInfo;
             showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
             showIslandNamesChckBox.Checked = currentProject.showIslandNames;
             showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
+            showTradeWindsChckBox.Checked = currentProject.showTradeWindsInfo;
+            showPortalNodesChckBox.Checked = currentProject.showPortalNodes;
             disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
             showLinesCheckbox.Checked = currentProject.showLines;
             alphaBgCheckbox.Checked = currentProject.alphaBackground;
             tiledBackgroundCheckbox.Checked = currentProject.showBackground;
-            SetTileImage(currentProject.backgroundImgPath);
+            SetTileImages(null);
             showForegroundChckBox.Checked = currentProject.showForeground;
             SetForegroundImage(currentProject.foregroundImgPath);
+            tradeWindOverlayChckBox.Checked = currentProject.showTradeWindOverlay;
+            SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
+
             SetDiscoverZoneImage(currentProject.discoZonesImagePath);
 
             mapPanel.Invalidate();
@@ -1518,10 +2351,75 @@ namespace ServerGridEditor
             return null;
         }
 
+        public PortalPathNode GetFirsPortalPathNodeAtLocation(Point p)
+        {
+
+            if (currentProject == null)
+                return null;
+
+            Server s = GetServerAtPoint(p);
+
+            if (s != null && !s.windsLocked)
+            {
+                foreach (PortalPathData portalPathData in currentProject.portalPaths)
+                {
+                    foreach (PortalPathNode node in portalPathData.Nodes)
+                    {
+                        if (node.ContainsPoint(p, this))
+                        {
+                            return node;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
         /// <summary>
-        /// Gets the first discovery zone instance at a map location
+        /// Gets the first spline bezier node at a map location
         /// </summary>
         public BezierNodeData GetFirstBezierNodeAtLocation(Point p)
+        {
+            if (currentProject == null)
+                return null;
+
+            Server s = GetServerAtPoint(p);
+            if (s != null && !s.pathsLocked)
+            {
+                foreach (ShipPathData shipPath in currentProject.shipPaths)
+                {
+                    foreach (BezierNodeData node in shipPath.Nodes)
+                    {
+                        if (node.ContainsPoint(p, this))
+                        {
+                            return node;
+                        }
+                    }
+                }
+            }
+
+
+            if (s != null && !s.windsLocked)
+            {
+                foreach (TradeWindData tradeWind in currentProject.tradeWinds)
+                {
+                    foreach (BezierNodeData node in tradeWind.Nodes)
+                    {
+                        if (node.ContainsPoint(p, this))
+                        {
+                            return node;
+                        }
+                    }
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the first ship path node at a map location
+        /// </summary>
+        public ShipPathNode GetFirstShipPathNodeAtLocation(Point p)
         {
             if (currentProject == null)
                 return null;
@@ -1534,13 +2432,64 @@ namespace ServerGridEditor
             {
                 foreach (BezierNodeData node in shipPath.Nodes)
                 {
-                    if(node.ContainsPoint(p, this))
+                    if (node.ContainsPoint(p, this))
                     {
-                        return node;
+                        return (ShipPathNode)node;
                     }
                 }
             }
 
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the first ship path node at a map location
+        /// </summary>
+        public TradeWindNode GetFirstTradeWindNodeAtLocation(Point p)
+        {
+            if (currentProject == null)
+                return null;
+
+            Server s = GetServerAtPoint(p);
+            if (s != null && s.windsLocked)
+                return null;
+
+            foreach (TradeWindData tradeWind in currentProject.tradeWinds)
+            {
+                foreach (BezierNodeData node in tradeWind.Nodes)
+                {
+                    if (node.ContainsPoint(p, this))
+                    {
+                        return (TradeWindNode)node;
+                    }
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Gets the first portal path node at a map location
+        /// </summary>
+        public PortalPathNode GetFirstPortalPathNodeAtLocation(Point p)
+        {
+            if (currentProject == null)
+                return null;
+
+            Server s = GetServerAtPoint(p);
+            if (s != null && s.windsLocked)
+                return null;
+
+            foreach (PortalPathData portalPathData in currentProject.portalPaths)
+            {
+                foreach (PortalPathNode node in portalPathData.Nodes)
+                {
+                    if (node.ContainsPoint(p, this))
+                    {
+                        return (PortalPathNode)node;
+                    }
+                }
+            }
+            
             return null;
         }
 
@@ -1556,6 +2505,9 @@ namespace ServerGridEditor
 
             if (foundObj == null)
                 foundObj = GetFirstBezierNodeAtLocation(p);
+
+            if (foundObj == null)
+                foundObj = GetFirstPortalPathNodeAtLocation(p);
 
             return foundObj;
         }
@@ -1613,12 +2565,23 @@ namespace ServerGridEditor
         }
 
 
-        public Bitmap DrawMapToImage(int cellX = -1, int cellY = -1, float resOverride = -1, bool forceResForSingleCell = false)
+        public Bitmap DrawMapToImage(out Dictionary<long, int> tradewindsBuffer, int cellX = -1, int cellY = -1, float resOverride = -1, bool forceResForSingleCell = false, bool tradewindsWorldMap = false, int OverrideNumCellsX = -1, int OverrideNumCellsY = -1)
         {
+            tradewindsBuffer = null;
             if (currentProject == null || ((cellX == -1 || cellY == -1) && cellX != cellY))
                 return null;
+            bool bHasOverrideNumCells = OverrideNumCellsX > -1 || OverrideNumCellsY > -1;
+            bool isSingleCell = cellX > -1 && !bHasOverrideNumCells;
 
-            bool isSingleCell = cellX > -1;
+           
+            int numOfCellsX = OverrideNumCellsX > 0 ? OverrideNumCellsX : currentProject.numOfCellsX;
+            int numOfCellsY = OverrideNumCellsY> 0 ? OverrideNumCellsY : currentProject.numOfCellsY;
+            if (!isSingleCell && !bHasOverrideNumCells)
+            {
+                int maxDimension = GetMaxMainRegionDimension(currentProject);
+                numOfCellsX = maxDimension;
+                numOfCellsY = maxDimension;
+            }
 
             float originalCoordScale = currentProject.coordsScaling;
             if (resOverride > -1)
@@ -1627,7 +2590,7 @@ namespace ServerGridEditor
                 if (!isSingleCell)
                 {
                     resOverride -= 2; //these pixels are added below in calculations
-                    totalUnrealSize *= Math.Max(currentProject.numOfCellsX, currentProject.numOfCellsY);
+                    totalUnrealSize *= Math.Max(numOfCellsX, numOfCellsY);
                 }
 
                 currentProject.coordsScaling = resOverride / totalUnrealSize;
@@ -1648,10 +2611,30 @@ namespace ServerGridEditor
             }
             else
             {
-                sizeX = (int)(currentProject.numOfCellsX * currentProject.cellSize * currentProject.coordsScaling);
-                sizeY = (int)(currentProject.numOfCellsY * currentProject.cellSize * currentProject.coordsScaling);
+                sizeX = (int)(numOfCellsX * currentProject.cellSize * currentProject.coordsScaling);
+                sizeY = (int)(numOfCellsY * currentProject.cellSize * currentProject.coordsScaling);
             }
 
+            if(bHasOverrideNumCells)
+            {
+                startX = (int)(cellX * currentProject.cellSize * currentProject.coordsScaling);
+                startY = (int)(cellY * currentProject.cellSize * currentProject.coordsScaling);
+                sizeX = OverrideNumCellsX > 0 ? (int)(OverrideNumCellsX * currentProject.cellSize * currentProject.coordsScaling) : forceResForSingleCell && resOverride > -1 ? Math.Min(maxImageSize, (int)resOverride) - 2 : Math.Min(maxImageSize, editorConfig.CellImagesRes) - 2;
+
+                if (OverrideNumCellsY > 0)
+                {
+                    sizeY = (int)(OverrideNumCellsY * currentProject.cellSize * currentProject.coordsScaling);
+                }
+                else
+                {
+                    if (forceResForSingleCell && resOverride > -1)
+                        sizeY  = Math.Min(maxImageSize, (int)resOverride) - 2;
+                    else
+                        sizeY  = Math.Min(maxImageSize, editorConfig.CellImagesRes) - 2;
+
+                }
+
+            }
             Rectangle imgSize = new Rectangle(startX, startY, sizeX, sizeY);
 
             float largerDimension = Math.Max(imgSize.Width, imgSize.Height);
@@ -1674,10 +2657,11 @@ namespace ServerGridEditor
                 imgSize.Height += 2;
             }
 
-            Bitmap image = new Bitmap(imgSize.Width, imgSize.Height, PixelFormat.Format16bppRgb555);
+            Bitmap image = new Bitmap(imgSize.Width, imgSize.Height, PixelFormat.Format32bppArgb);
 
+            
             Graphics g = Graphics.FromImage(image);
-
+            
             if (isSingleCell)
             {
                 float scaleToFixRes;
@@ -1688,26 +2672,109 @@ namespace ServerGridEditor
                 g.ScaleTransform(scaleToFixRes, scaleToFixRes);
                 g.TranslateTransform(-startX, -startY);
             }
+            if(bHasOverrideNumCells)
+            {
+                g.TranslateTransform(-startX, -startY);
+            }
 
             if (largerDimension > maxImageSize)
             {
                 g.ScaleTransform(scale, scale);
             }
 
+            
+
             int previousH = mapHScrollBar.Value;
             int previousV = mapVScrollBar.Value;
             mapVScrollBar.Value = mapHScrollBar.Value = 0;
-            DrawMapToGraphics(ref g, false, isSingleCell, true);
+
+            tradewindsBuffer = DrawMapToGraphics(ref g, false, isSingleCell, true, startX, startY, cellX, cellY, OverrideNumCellsX, OverrideNumCellsY);
             mapHScrollBar.Value = previousH;
             mapVScrollBar.Value = previousV;
             currentProject.coordsScaling = originalCoordScale;
 
-            //g.DrawImage(image, imgSize);
+            if (tradewindsBuffer != null)
+                if (tradewindsWorldMap)
+                {
+                    foreach (KeyValuePair<long, int> PixelAlpha in tradewindsBuffer)
+                    {
+                        int x = -1;
+                        int y = -1;
+                        UnpackIntoToTwoInts(PixelAlpha.Key, out x, out y);
+                        if (PixelAlpha.Value > 0 && x < image.Size.Width && y < image.Size.Height)
+                            image.SetPixel(x, y, Color.FromArgb(255 - PixelAlpha.Value, image.GetPixel(x, y)));
+                    }
+                }
+                else if (cellX < 0 || cellY < 0)
+                    tradewindsBuffer = null;
 
             return image;
         }
+        public void ExportRegionImages(string filePath,float resOverride = -1)
+        {
+            foreach (KeyValuePair<string, MapRegion> entry in MapRegionsList)
+            {
+                if (entry.Key == "Main")
+                    continue;
 
-        public void ExportImage(string filePath, int cellX = -1, int cellY = -1, bool exportOverrides = true, float resOverride = -1)
+                Bitmap image = null;
+                Dictionary<long, int> tradewindsBuffer = null;
+                image = DrawMapToImage(out tradewindsBuffer, entry.Value.StartX, entry.Value.StartY, resOverride, false, false, entry.Value.EndX - entry.Value.StartX + 1 , entry.Value.EndY - entry.Value.StartY + 1);
+                MagickImage tgaImg = null;
+
+                int TrimStartIndex = filePath.LastIndexOf("\\");
+
+                if (filePath.LastIndexOf('/') > filePath.LastIndexOf("\\"))
+                    TrimStartIndex = filePath.LastIndexOf('/');
+
+                int charactersToTrim = filePath.Length - TrimStartIndex;
+                //filePath.TrimEnd(charactersToTrim);
+                string modifiedFilePath = filePath.Remove(TrimStartIndex + 1, charactersToTrim -  1);
+
+                modifiedFilePath = modifiedFilePath + "Region" + entry.Key + "." + GetImagesExtension();
+                tgaImg = new MagickImage(image);
+                tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
+                tgaImg.Quality = editorConfig.ImageQuality;
+                tgaImg.Write(modifiedFilePath);
+                tgaImg.Dispose();
+                tgaImg = null;
+
+            }
+        }
+
+        public void ExportRegionTradewindOverlays(string filePath, float resOverride = -1)
+        {
+            foreach (KeyValuePair<string, MapRegion> entry in MapRegionsList)
+            {
+                if (entry.Key == "Main")
+                    continue;
+
+                Bitmap image = null;
+                Dictionary<long, int> tradewindsBuffer = null;
+                image = DrawMapToImage(out tradewindsBuffer, entry.Value.StartX, entry.Value.StartY, resOverride, false, true, entry.Value.EndX - entry.Value.StartX + 1, entry.Value.EndY - entry.Value.StartY + 1);
+                MagickImage tgaImg = null;
+
+                int TrimStartIndex = filePath.LastIndexOf("\\");
+
+                if (filePath.LastIndexOf('/') > filePath.LastIndexOf("\\"))
+                    TrimStartIndex = filePath.LastIndexOf('/');
+
+                int charactersToTrim = filePath.Length - TrimStartIndex;
+                //filePath.TrimEnd(charactersToTrim);
+                string modifiedFilePath = filePath.Remove(TrimStartIndex + 1, charactersToTrim - 1);
+
+                modifiedFilePath = modifiedFilePath + "MapImg_TradeWinds_Region" + entry.Key + "." + GetImagesExtension();
+                tgaImg = new MagickImage(image);
+                tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
+                tgaImg.Quality = editorConfig.ImageQuality;
+                tgaImg.Write(modifiedFilePath);
+                tgaImg.Dispose();
+                tgaImg = null;
+
+            }
+        }
+
+        public void ExportImage(string filePath, int cellX = -1, int cellY = -1, bool exportOverrides = true, float resOverride = -1, bool tradeWindsWorldMap = false)
         {
             Bitmap image = null;
             //if (exportOverrides)
@@ -1723,9 +2790,10 @@ namespace ServerGridEditor
             //    }
             //}
 
+            Dictionary<long, int> tradewindsBuffer = null;
             if (image == null)
             {
-                if(cellX == -1 && cellY == -1 && resOverride > maxImageSize)
+                if (cellX == -1 && cellY == -1 && resOverride > maxImageSize)
                 {
                     //Using a large resolution, combine cell images instead of exporting a huge one at once
                     int maxCells = Math.Max(currentProject.numOfCellsX, currentProject.numOfCellsY);
@@ -1736,7 +2804,7 @@ namespace ServerGridEditor
                     MagickAnyCPU.CacheDirectory = dir;
                     if (!Directory.Exists(dir + "/magicktemp"))
                         Directory.CreateDirectory(dir + "/magicktemp");
-                    MagickNET.SetTempDirectory(dir+"/magicktemp");
+                    MagickNET.SetTempDirectory(dir + "/magicktemp");
                     ImageMagick.ResourceLimits.Memory = 8388608;
 
                     for (int i = 0; i < currentProject.numOfCellsX; i++)
@@ -1747,7 +2815,7 @@ namespace ServerGridEditor
                             //mgickCell.Format = MagickFormat.Bmp;
                             //mgickCell.Write(dir + "/tmpimgCompImg" + i + "-" + j + ".bmp");
                             //drawnCell.Dispose();
-                            cellImages[i, j] = DrawMapToImage(i, j, resPerCell, true);
+                            cellImages[i, j] = DrawMapToImage(out tradewindsBuffer, i, j, resPerCell, true);
                         }
 
                     using (MagickImageCollection images = new MagickImageCollection())
@@ -1771,11 +2839,11 @@ namespace ServerGridEditor
                         };
                         IMagickImage atlasMontage = images.Montage(montageSettings);
 
-                        atlasMontage.Format = MagickFormat.Png;
+                        atlasMontage.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
                         atlasMontage.Depth = 16;
                         atlasMontage.Quality = editorConfig.ImageQuality;
                         //filePath = filePath.Replace(".png", ".tiff").Replace(".jpg", ".tiff");
-                        filePath = filePath.Replace(".jpg", ".png");
+                        //filePath = filePath.Replace(".jpg", ".png");
                         atlasMontage.Write(filePath);
                     }
 
@@ -1790,17 +2858,73 @@ namespace ServerGridEditor
                     return;
                 }
                 else
-                    image = DrawMapToImage(cellX, cellY, resOverride);
+                {
+                    image = DrawMapToImage(out tradewindsBuffer, cellX, cellY, resOverride, false, tradeWindsWorldMap);
+                   
+                }
+                    
             }
 
             if (image == null)
                 return;
-            
-            MagickImage tgaImg = new MagickImage(image);
-            tgaImg.Format = MagickFormat.Jpeg;
+
+            MagickImage tgaImg = null;
+            if (!tradeWindsWorldMap && cellX >= 0 && cellY >= 0)
+            {
+
+                Bitmap cellTradewindsImage = new Bitmap(image.Size.Width, image.Size.Height, PixelFormat.Format8bppIndexed);
+
+                ColorPalette grayscalePalette = cellTradewindsImage.Palette;
+                Color[] grayscalePalletteEntries = grayscalePalette.Entries;
+                byte grayscaleIndex = 0;
+                do
+                {
+                    grayscalePalletteEntries[grayscaleIndex] = Color.FromArgb(grayscaleIndex, grayscaleIndex, grayscaleIndex);
+                    grayscaleIndex++;
+                } while (grayscaleIndex < 255);
+
+                cellTradewindsImage.Palette = grayscalePalette;
+
+                System.Drawing.Imaging.BitmapData bitmapData = cellTradewindsImage.LockBits(new Rectangle(0, 0, cellTradewindsImage.Width, cellTradewindsImage.Height), System.Drawing.Imaging.ImageLockMode.ReadWrite, cellTradewindsImage.PixelFormat);
+                int bytes = Math.Abs(bitmapData.Stride) * cellTradewindsImage.Height;
+                byte[] rgbValues = new byte[bytes];
+                System.Runtime.InteropServices.Marshal.Copy(bitmapData.Scan0, rgbValues, 0, bytes);
+
+                if (tradewindsBuffer != null)
+                {
+                    foreach (KeyValuePair<long, int> PixelAlpha in tradewindsBuffer)
+                    {
+                        int x = -1;
+                        int y = -1;
+                        UnpackIntoToTwoInts(PixelAlpha.Key, out x, out y);
+                        if (PixelAlpha.Value > 0 && x < image.Size.Width && y < image.Size.Height)
+                            rgbValues[x + y * image.Size.Width] = (byte)PixelAlpha.Value;
+                    }
+                }
+
+                System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, bitmapData.Scan0, bytes);
+                cellTradewindsImage.UnlockBits(bitmapData);
+
+                tgaImg = new MagickImage(cellTradewindsImage);
+                tgaImg.Format = MagickFormat.Jpeg;
+                tgaImg.Quality = editorConfig.ImageQuality;
+                tgaImg.Write(filePath.Replace("CellImg_", "CellTradewindImg_"));
+                tgaImg.Dispose();
+                tgaImg = null;
+                cellTradewindsImage.Dispose();
+                cellTradewindsImage = null;
+            }
+
+            tgaImg = new MagickImage(image);
+            tgaImg.Format = filePath.EndsWith("png", StringComparison.OrdinalIgnoreCase) ? MagickFormat.Png : MagickFormat.Jpeg;
             tgaImg.Quality = editorConfig.ImageQuality;
-            tgaImg.Write(filePath);
+            //using(var fi = new FileInfo)
+            using (var fs = File.Open(filePath, FileMode.OpenOrCreate, FileAccess.Write))
+            {
+                tgaImg.Write(fs);
+            }
             tgaImg.Dispose();
+            tgaImg = null;
 
         }
 
@@ -1812,14 +2936,25 @@ namespace ServerGridEditor
             string FullPath = Path.GetDirectoryName(path);
             string Extension = Path.GetExtension(path);
             string FilenameWithoutExtension = Path.GetFileNameWithoutExtension(path);
+
+#warning shitty parallelism doesn't work if underlying stuff needs to access UI objects that, by definition, have thread affinity!
+            //List<Task> DrawTasks = new List<Task>();
             for (int i = 0; i < currentProject.numOfCellsX; i++)
             {
                 for (int j = 0; j < currentProject.numOfCellsY; j++)
                 {
+                    int icopy = i;
+                    int jcopy = j;
                     string CellFile = FullPath + string.Format(cellImageNameTemplate, FilenameWithoutExtension , i, j, Extension);
-                    ExportImage(CellFile, i, j, true, editorConfig.CellImagesRes);
+                    //var DrawTask = Task.Run(async () =>
+                    //{
+                        ExportImage(CellFile, icopy, jcopy, true, editorConfig.CellImagesRes);
+                    //});
+                    //DrawTasks.Add(DrawTask);
                 }
             }
+            //for (int i = 0; i < DrawTasks.Count; i++)
+            //    DrawTasks[i].Wait();
         }
 
         ///////////////////////////Action Handlers///////////////////////////////////
@@ -1872,15 +3007,31 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            saveFileDialog.Filter = "json files (*.json)|*.json";
-            saveFileDialog.FileName = actualJsonFile;
-            saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                File.WriteAllText(saveFileDialog.FileName, currentProject.Serialize(this));
+                saveFileDialog.Filter = "json files (*.json)|*.json";
+                saveFileDialog.FileName = actualJsonFile;
+                saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, currentProject.Serialize(this));
+                }
             }
 
+        }
+
+        void LoadServer(int x, int y)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string fileName = openFileDialog.FileName;
+                    currentProject.DeserializeServer(File.ReadAllText(fileName), x, y, this, currentProject.cellSize);
+                }
+            }
         }
 
         void LoadProject()
@@ -1893,37 +3044,54 @@ namespace ServerGridEditor
                 if (confirmResult != DialogResult.OK)
                     return;
             }
-
-            openFileDialog.Filter = "json files (*.json)|*.json";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string fileName = openFileDialog.FileName;
-                Project loadedProj = new Project(File.ReadAllText(fileName), this);
-
-                if (loadedProj.successfullyLoaded)
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    EnableProjectMenuItems();
-                    actualJsonFile = openFileDialog.SafeFileName;
-                    currentProject = loadedProj;
-                    SetScaleTxt(1 / currentProject.coordsScaling);
-                    SetToolsVisibility(true);
+                    string fileName = openFileDialog.FileName;
+                    Project loadedProj = new Project(File.ReadAllText(fileName), this);
 
-                    showServerInfoCheckbox.Checked = currentProject.showServerInfo;
-                    showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
-                    showIslandNamesChckBox.Checked = currentProject.showIslandNames;
-                    showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
-                    disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
-                    showLinesCheckbox.Checked = currentProject.showLines;
-                    alphaBgCheckbox.Checked = currentProject.alphaBackground;
-                    tiledBackgroundCheckbox.Checked = currentProject.showBackground;
-                    SetTileImage(currentProject.backgroundImgPath);
-                    showForegroundChckBox.Checked = currentProject.showForeground;
-                    SetForegroundImage(currentProject.foregroundImgPath);
-                    SetDiscoverZoneImage(currentProject.discoZonesImagePath);
+                    if (loadedProj.successfullyLoaded)
+                    {
+                        bIsloadingProject = true;
+                        EnableProjectMenuItems();
+                        actualJsonFile = openFileDialog.SafeFileName;
+                        currentProject = loadedProj;
+                        this.imageCache = new Dictionary<string, Image>();
+                        SetScaleTxt(1 / currentProject.coordsScaling);
+                        SetToolsVisibility(true);
 
-                    mapPanel.Invalidate();
-                    mapPanel.Update();
+                        showServerInfoCheckbox.Checked = currentProject.showServerInfo;
+                        showDiscoZoneInfoCheckbox.Checked = currentProject.showDiscoZoneInfo;
+                        showIslandNamesChckBox.Checked = currentProject.showIslandNames;
+                        showShipPathsInfoChckBox.Checked = currentProject.showShipPathsInfo;
+                        showTradeWindsChckBox.Checked = currentProject.showTradeWindsInfo;
+                        showPortalNodesChckBox.Checked = currentProject.showPortalNodes;
+                        disableImageExportingCheckBox.Checked = currentProject.disableImageExporting;
+                        showLinesCheckbox.Checked = currentProject.showLines;
+                        alphaBgCheckbox.Checked = currentProject.alphaBackground;
+                        tiledBackgroundCheckbox.Checked = currentProject.showBackground;
+                        SetTileImages(currentProject.regionsBackgroundImgPath);
+                        showForegroundChckBox.Checked = currentProject.showForeground;
+                        SetForegroundImage(currentProject.foregroundImgPath);
+                        tradeWindOverlayChckBox.Checked = currentProject.showTradeWindOverlay;
+                        SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
+                        SetDiscoverZoneImage(currentProject.discoZonesImagePath);
+
+                        GridColumnsTxtBox.Text = currentProject.numPathingGridColumns + "";
+                        GridRowsTxtBox.Text = currentProject.numPathingGridRows + "";
+                        gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
+                        gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
+                        GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
+                        GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
+                        mapPanel.Invalidate();
+                        mapPanel.Update();
+                        bIsloadingProject = false;
+                    }
+                    PopulateMapRegionsDirty = true;
+                    PopulateMapRegions();
                 }
             }
         }
@@ -1932,16 +3100,24 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
-            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
-            if (!Directory.Exists(ExportPath))
-                Directory.CreateDirectory(ExportPath);
-            saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "MapImg.jpg";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            string imageExtension = GetImagesExtension();
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes);
+                saveFileDialog.Filter = String.Equals(imageExtension, "png", StringComparison.OrdinalIgnoreCase) ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "MapImg." + imageExtension;
+                string fileName;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    fileName = saveFileDialog.FileName;
+                    saveFileDialog.FileName = null;
+                    PopulateMapRegions();
+                    ExportImage(fileName, -1, -1, true, editorConfig.AtlasImagesRes);
+                    ExportRegionImages(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                }
             }
         }
 
@@ -1956,8 +3132,14 @@ namespace ServerGridEditor
                 "Hold middle mouse + drag (Scroll map)\n" + 
                 "Shift + drag (Create discovery zone)\n" +
                 "Shift + click on discovery zone (Edit discovery zone)\n" +
-                "L while hovered on cell (Open locks form)\n"+
+                "L while hovered on cell (Open locks form)\n" +
                 "P while on map (Spawn ship path)\n" +
+                "T while on map (Spawn trade wind)\n" +
+                "Q while on map (Spawn perpetual portal)\n" +
+                "W while on map (Spawn player activated portal)\n" +
+                "E while on map (Spawn Central Bermuda portal)\n" +
+                "R while on map (Spawn NPC portal)\n" +
+                "Shift + Delete on portal nodes (Delete portal)\n" +
                 "Delete on path nodes (Delete node)\n" +
                 "Ctrl + click on path node (Edit path)\n" +
                 "Shift + Delete on path nodes (Delete whole path)\n", "Controls");
@@ -2029,13 +3211,13 @@ namespace ServerGridEditor
 
             if (currentProject != null)
             {
-                for (int i = 0; i < currentProject.islandInstances.Count; i++)
-                    foreach (string islandToRemove in islandsToRemove)
+                foreach (string islandToRemove in islandsToRemove)
+                    for (int i = 0; i < currentProject.islandInstances.Count; i++)
                         if (currentProject.islandInstances[i].name == islandToRemove)
                         {
                             currentProject.islandInstances[i].SetDirty(this);
                             currentProject.islandInstances.RemoveAt(i);
-                            i--;
+                            break;
                         }
             }
 
@@ -2114,24 +3296,28 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
-            openFileDialog.FileName = "";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./","");
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string imgName = waterTilesDir + "/";// + "/" + currentProject.SeamlessWorldId;
+                openFileDialog.Filter = "png files (*.png)|*.png|All files (*.*)|*.*";
+                openFileDialog.FileName = "";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + waterTilesDir.Replace("./", "");
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imgName = waterTilesDir + "/";// + "/" + currentProject.SeamlessWorldId;
 
-                if (tileBrush != null)
-                    tileBrush.Dispose();
-                if (tile != null)
-                    tile.Dispose();
+                    if (string.IsNullOrEmpty(RegionComboBox.Text))
+                        RegionComboBox.Text = "Main";
 
-                //File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
-                currentProject.showBackground = true;
-                currentProject.backgroundImgPath = imgName + openFileDialog.SafeFileName;
-                SetTileImage(currentProject.backgroundImgPath);
-                tiledBackgroundCheckbox.Checked = true;
+                    //File.Copy(openFileDialog.FileName, imgName + openFileDialog.SafeFileName, true);
+                    if (currentProject.regionsBackgroundImgPath == null)
+                        currentProject.regionsBackgroundImgPath = new Dictionary<string, string>();
+                    currentProject.regionsBackgroundImgPath[RegionComboBox.Text] = imgName + openFileDialog.SafeFileName;
+
+                    SetTileImage(RegionComboBox.Text, currentProject.regionsBackgroundImgPath[RegionComboBox.Text]);
+
+                    currentProject.showBackground = true;
+                    tiledBackgroundCheckbox.Checked = true;
+                }
             }
         }
 
@@ -2139,41 +3325,66 @@ namespace ServerGridEditor
         {
             if (currentProject == null)
                 return;
-
-            openFileDialog.Filter = "png files (*.png)|*.png";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + "Resources";
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                string imgName = "Resources/discoZoneBox.png";
-                if (currentProject.DiscoveryZoneImage != null)
-                    currentProject.DiscoveryZoneImage.Dispose();
-                File.Copy(openFileDialog.FileName, imgName, true);
-                SetDiscoverZoneImage(openFileDialog.FileName);
-                currentProject.discoZonesImagePath = imgName;
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + "Resources";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string imgName = "Resources/discoZoneBox.png";
+                    if (currentProject.DiscoveryZoneImage != null)
+                        currentProject.DiscoveryZoneImage.Dispose();
+                    File.Copy(openFileDialog.FileName, imgName, true);
+                    SetDiscoverZoneImage(openFileDialog.FileName);
+                    currentProject.discoZonesImagePath = imgName;
+                }
             }
         }
 
-
-        void SetTileImage(string fileName)
+        void SetTileImage(string regionName, string fileName, bool ShouldInvalidateMap = true)
         {
-            if (tileBrush != null)
-                tileBrush.Dispose();
-            tileBrush = null;
 
-            if (tile != null)
-                tile.Dispose();
-            tile = null;
+            //public Dictionary<string, Image> regionsTile = new Dictionary<string, Image>();
+            //public Dictionary<string, TextureBrush> regionsTileBrush = new Dictionary<string, TextureBrush>();
+            if (regionsTileBrush.ContainsKey(regionName) && regionsTileBrush[regionName] != null)
+            {
+                regionsTileBrush[regionName].Dispose();
+                regionsTileBrush[regionName] = null;
+            }
+
+            if (regionsTile.ContainsKey(regionName) && regionsTile[regionName] != null)
+            {
+                regionsTile[regionName].Dispose();
+                regionsTile[regionName] = null;
+            }
 
             if (File.Exists(fileName))
             {
-                tile = Image.FromFile(fileName);
-                tileBrush = new TextureBrush(tile);
+                regionsTile[regionName] = this.GetImage(fileName);
+                regionsTileBrush[regionName] = new TextureBrush(regionsTile[regionName]);
             }
 
+            if (ShouldInvalidateMap)
+                mapPanel.Invalidate();
+        }
+
+        void SetTileImages(Dictionary<string, string> regionsBackgroundImgPath)
+        {
+            foreach (KeyValuePair<string, Image> regionTile in regionsTile)
+                regionTile.Value.Dispose();
+            regionsTile.Clear();
+
+            foreach (KeyValuePair<string, TextureBrush> regionTileBrush in regionsTileBrush)
+                regionTileBrush.Value.Dispose();
+            regionsTileBrush.Clear();
+            
+            if (regionsBackgroundImgPath != null)
+                foreach (KeyValuePair<string, string> regionBackgroundImgPath in regionsBackgroundImgPath)
+                    SetTileImage(regionBackgroundImgPath.Key, regionBackgroundImgPath.Value, false);
             mapPanel.Invalidate();
         }
 
-
+        
         void SetForegroundImage(string fileName)
         {
             if (foregroundBrush != null)
@@ -2186,10 +3397,50 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                foreground = Image.FromFile(fileName);
+                foreground = this.GetImage(fileName);
                 foregroundBrush = new TextureBrush(foreground);
             }
 
+            mapPanel.Invalidate();
+        }
+
+        void SetTradeWindOverlayImage(string fileName, Dictionary<string, string> RegionsFileName)
+        {
+            if (tradeWindOverlayBrush != null)
+                tradeWindOverlayBrush.Dispose();
+            tradeWindOverlayBrush = null;
+
+            if (tradeWindOverlay != null)
+                tradeWindOverlay.Dispose();
+            tradeWindOverlay = null;
+
+            foreach (KeyValuePair<string, Image> entry in regionsTradeWindOverlay)
+            {
+                entry.Value.Dispose();
+            }
+            regionsTradeWindOverlay.Clear();
+
+            foreach (KeyValuePair<string, TextureBrush> entry in regionsTradeWindOverlayBrush)
+            {
+                entry.Value.Dispose();
+            }
+            regionsTradeWindOverlayBrush.Clear();
+
+            if (File.Exists(fileName))
+            {
+                tradeWindOverlay = this.GetImage(fileName);
+                tradeWindOverlayBrush = new TextureBrush(tradeWindOverlay);
+            }
+
+            foreach (KeyValuePair<string, string> entry in RegionsFileName)
+            {
+                if (File.Exists(entry.Value))
+                {
+                    Image regionTradeWindOverlay = this.GetImage(entry.Value);
+                    regionsTradeWindOverlay.Add(entry.Key, regionTradeWindOverlay);
+                    regionsTradeWindOverlayBrush.Add(entry.Key, new TextureBrush(regionTradeWindOverlay));
+                }
+            }
             mapPanel.Invalidate();
         }
 
@@ -2204,7 +3455,7 @@ namespace ServerGridEditor
 
             if (File.Exists(fileName))
             {
-                currentProject.DiscoveryZoneImage = Image.FromFile(fileName);
+                currentProject.DiscoveryZoneImage = this.GetImage(fileName);
             }
 
             mapPanel.Invalidate();
@@ -2309,15 +3560,19 @@ namespace ServerGridEditor
             if (currentProject == null)
                 return;
 
-            saveFileDialog.Filter = "jpg files (*.jpg)|*.jpg";
-            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
-            if (!Directory.Exists(ExportPath))
-                Directory.CreateDirectory(ExportPath);
-            saveFileDialog.InitialDirectory = ExportPath;
-            saveFileDialog.FileName = "CellImg";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            string imageExtension = GetImagesExtension();
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
             {
-                ExportCellImages(saveFileDialog.FileName);
+                saveFileDialog.Filter = String.Equals(imageExtension, "png", StringComparison.OrdinalIgnoreCase) ? "PNG files (*.png)|*.png" : "JPEG files (*.jpg)|*.jpg";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "CellImg";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    ExportCellImages(saveFileDialog.FileName);
+                }
             }
         }
 
@@ -2367,7 +3622,7 @@ namespace ServerGridEditor
 
                         this.ExportSlippyMap(
                             islands, showLinesCheckbox.Checked, showServerInfoCheckbox.Checked, showDiscoZoneInfoCheckbox.Checked,
-                            tile, tileBrush, mapPanel.BackColor, exportMapForm.ExportDirectory,
+                            regionsTile, regionsTileBrush, mapPanel.BackColor, exportMapForm.ExportDirectory,
                             (string text) =>
                             {
                                 Console.WriteLine(text);
@@ -2385,6 +3640,11 @@ namespace ServerGridEditor
                 MessageBox.Show("Slippy Map exported.", "Slippy Map Exported",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private string GetImagesExtension()
+        {
+            return currentProject.MapImagesExtension;
         }
 
         private void localExportToolStripMenuItem_Click(object sender, EventArgs e)
@@ -2421,8 +3681,8 @@ namespace ServerGridEditor
                 string mapExportDir = exportDir + JsonNameNoExtension;
                 if (!Directory.Exists(mapExportDir))
                     Directory.CreateDirectory(mapExportDir);
-
-                string imgPath = mapExportDir + "/MapImg.jpg";
+                string extension = GetImagesExtension();
+                string imgPath = mapExportDir + "/MapImg." + extension;
                 string cellImgName = "CellImg";
 
                 string serverConfigPath = exportDir + "/" + actualJsonFile;
@@ -2457,8 +3717,18 @@ namespace ServerGridEditor
                     if (!Directory.Exists(gameMapExportDir))
                         Directory.CreateDirectory(gameMapExportDir);
 
-                    ExportImage(gameMapExportDir + "/MapImg.jpg", -1, -1, true, editorConfig.AtlasImagesRes);
-                    ExportCellImages(gameMapExportDir + string.Format("/{0}.jpg", cellImgName));
+                    PopulateMapRegions();
+                    ExportImage(gameMapExportDir + "/MapImg." + extension, -1, -1, true, editorConfig.AtlasImagesRes);
+                    ExportCellImages(gameMapExportDir + string.Format("/{0}." + extension, cellImgName));
+                    ExportRegionImages(gameMapExportDir + "/MapImg." + extension, editorConfig.AtlasImagesRes);
+                    if (!string.IsNullOrEmpty(currentProject.tradeWindOverlayImgPath) && File.Exists(currentProject.tradeWindOverlayImgPath))
+                        File.Copy(currentProject.tradeWindOverlayImgPath, gameMapExportDir + "/TradeWindMapImg.png", true);
+
+                    foreach (KeyValuePair<string, string> entry in currentProject.regionsTradeWindOverlayImgPath)
+                    {
+                        if (!string.IsNullOrEmpty(entry.Value) && File.Exists(entry.Value))
+                            File.Copy(entry.Value, gameMapExportDir + "/TradeWindMapImg" + entry.Key + ".png", true);
+                    }
                 }
                 MessageBox.Show("Export successful!\nFiles in " + exportDir, "Success");
             }
@@ -2486,6 +3756,15 @@ namespace ServerGridEditor
         {
             if (currentProject != null)
                 currentProject.showShipPathsInfo = showShipPathsInfoChckBox.Checked;
+            mapPanel.Invalidate();
+        }
+
+        private void showTradeWindsChckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (currentProject != null)
+            {
+                currentProject.showTradeWindsInfo = showTradeWindsChckBox.Checked;
+            }
             mapPanel.Invalidate();
         }
 
@@ -2527,30 +3806,99 @@ namespace ServerGridEditor
             mapPanel.Invalidate();
         }
 
+        private void tradeWindOverlayChckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            currentProject.showTradeWindOverlay = tradeWindOverlayChckBox.Checked;
+            mapPanel.Invalidate();
+        }
+
         private void chooseForegroundBtn_Click(object sender, EventArgs e)
         {
             if (currentProject == null)
                 return;
 
-            openFileDialog.Filter = "png files (*.png)|*.png";
-            openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + foregroundTilesDir.Replace("./", "");
-            openFileDialog.FileName = string.IsNullOrEmpty(currentProject.foregroundImgPath) ? "" : Path.GetFileName(currentProject.foregroundImgPath);
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                if (foregroundBrush != null)
-                    foregroundBrush.Dispose();
-                if (foreground != null)
-                    foreground.Dispose();
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + foregroundTilesDir.Replace("./", "");
+                openFileDialog.FileName = string.IsNullOrEmpty(currentProject.foregroundImgPath) ? "" : Path.GetFileName(currentProject.foregroundImgPath);
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (foregroundBrush != null)
+                        foregroundBrush.Dispose();
+                    if (foreground != null)
+                        foreground.Dispose();
 
 
-                string imgPath= Path.Combine(foregroundTilesDir, Path.GetFileName(openFileDialog.FileName));
-                if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(foregroundTilesDir)))
-                    File.Copy(openFileDialog.FileName, imgPath, true);
+                    string imgPath = Path.Combine(foregroundTilesDir, Path.GetFileName(openFileDialog.FileName));
+                    if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(foregroundTilesDir)))
+                        File.Copy(openFileDialog.FileName, imgPath, true);
 
-                SetForegroundImage(imgPath);
-                currentProject.showForeground = true;
-                currentProject.foregroundImgPath = imgPath;
-                showForegroundChckBox.Checked = true;
+                    SetForegroundImage(imgPath);
+                    currentProject.showForeground = true;
+                    currentProject.foregroundImgPath = imgPath;
+                    showForegroundChckBox.Checked = true;
+                }
+            }
+        }
+
+
+        private void chooseTradeWindOverlayBtn_Click(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "png files (*.png)|*.png";
+                openFileDialog.InitialDirectory = GlobalSettings.Instance.BaseDir + tradeWindsOverlayDir.Replace("./", "");
+                openFileDialog.FileName = string.IsNullOrEmpty(currentProject.tradeWindOverlayImgPath) ? "" : Path.GetFileName(currentProject.tradeWindOverlayImgPath);
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    if (tradeWindOverlayBrush != null)
+                        tradeWindOverlayBrush.Dispose();
+                    if (tradeWindOverlay != null)
+                        tradeWindOverlay.Dispose();
+
+
+                    foreach (KeyValuePair<string, Image> entry in regionsTradeWindOverlay)
+                    {
+                        entry.Value.Dispose();
+                    }
+                    regionsTradeWindOverlay.Clear();
+
+                    foreach (KeyValuePair<string, TextureBrush> entry in regionsTradeWindOverlayBrush)
+                    {
+                        entry.Value.Dispose();
+                    }
+                    regionsTradeWindOverlayBrush.Clear();
+
+
+
+                    string imgPath = Path.Combine(tradeWindsOverlayDir, Path.GetFileName(openFileDialog.FileName));
+                    if (!openFileDialog.FileName.StartsWith(Path.GetFullPath(tradeWindsOverlayDir)))
+                        File.Copy(openFileDialog.FileName, imgPath, true);
+
+                    if (string.IsNullOrEmpty(RegionComboBox.Text) || RegionComboBox.Text == "Main")
+                    {
+                        currentProject.tradeWindOverlayImgPath = imgPath;
+                    }
+                    else
+                    {
+                        if (!currentProject.regionsTradeWindOverlayImgPath.ContainsKey(RegionComboBox.Text))
+                            currentProject.regionsTradeWindOverlayImgPath.Add(RegionComboBox.Text, imgPath);
+                        else
+                        {
+                            currentProject.regionsTradeWindOverlayImgPath[RegionComboBox.Text] = imgPath;
+                        }
+                    }
+
+                    currentProject.showTradeWindOverlay = true;
+
+                    SetTradeWindOverlayImage(currentProject.tradeWindOverlayImgPath, currentProject.regionsTradeWindOverlayImgPath);
+
+                    tradeWindOverlayChckBox.Checked = true;
+                }
             }
         }
 
@@ -2647,6 +3995,37 @@ namespace ServerGridEditor
                 return false;
             });
 
+            // remove any trade wind with any node with a coordinate below origin or above the calculated maximum
+            currentProject.tradeWinds.RemoveAll((path) =>
+            {
+                foreach (var node in path.Nodes)
+                {
+                    if (node.worldX < 0 || node.worldX > maxDimensions.X || node.worldY < 0 ||
+                        node.worldY > maxDimensions.Y)
+                    {
+                        invalidCount++;
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+
+            currentProject.portalPaths.RemoveAll((path) =>
+            {
+                foreach (var node in path.Nodes)
+                {
+                    if (node.worldX < 0 || node.worldX > maxDimensions.X || node.worldY < 0 ||
+                        node.worldY > maxDimensions.Y)
+                    {
+                        invalidCount++;
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+            
             if (invalidCount > 0)
             {
                 MessageBox.Show($"Found and removed {invalidCount} invalid paths!", "Invalid Paths Culled", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2655,6 +4034,416 @@ namespace ServerGridEditor
             {
                 MessageBox.Show("Did not find any invalid paths to cull!", "No Invalid Paths", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshIslandList();
+        }
+
+        private void GridColumnsTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+            int parsed = 0;
+            if (int.TryParse(GridColumnsTxtBox.Text, out parsed))
+                currentProject.numPathingGridColumns = parsed;
+            if(!bIsloadingProject)
+            currentProject.AtlasPathingGridDirty = true;
+            mapPanel.Invalidate();
+        }
+
+        private void GridRowsTxtBox_TextChanged(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+            int parsed = 0;
+            if (int.TryParse(GridRowsTxtBox.Text, out parsed))
+                currentProject.numPathingGridRows = parsed;
+            if(!bIsloadingProject)
+            currentProject.AtlasPathingGridDirty = true;
+            mapPanel.Invalidate();
+        }
+
+        private void showPathingGridCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            gridRowsLabel.Visible = showPathingGridCheckbox.Checked;
+            gridColumnsLabel.Visible = showPathingGridCheckbox.Checked;
+            GridRowsTxtBox.Visible = showPathingGridCheckbox.Checked;
+            GridColumnsTxtBox.Visible = showPathingGridCheckbox.Checked;
+            mapPanel.Invalidate();
+        }
+
+        private void RecalcPathingGridButton_Click(object sender, EventArgs e)
+        {
+            RecalcPathingGrid(currentProject, islands);
+        }
+
+        private static void RecalcPathingGrid(Project currentProject, IDictionary<string, Island> islands)
+        {
+            bool[,] Validity = new bool[(currentProject.numPathingGridRows * currentProject.numOfCellsY), (currentProject.numPathingGridColumns * currentProject.numOfCellsX)];
+            for (int Row = 0; Row < Validity.GetLength(0); Row++)
+                for (int Col = 0; Col < Validity.GetLength(1); Col++)
+                    Validity[Row, Col] = true;
+            float PrevScaling = currentProject.coordsScaling;
+            currentProject.coordsScaling = 0.001f;
+            float MyCellSize = Math.Max(currentProject.cellSize * currentProject.coordsScaling, 0.00001f);
+            float CellWidth = MyCellSize / (currentProject.numPathingGridColumns);
+            float CellHeight = MyCellSize / (currentProject.numPathingGridRows);
+
+
+            for (int Row = 0; Row < Validity.GetLength(0); Row++)
+            {
+                for (int Col = 0; Col < Validity.GetLength(1); Col++)
+                {
+                    float StartX = Col * CellWidth;
+                    float StartY = Row * CellHeight;
+                    RectangleF CellRect = new RectangleF(StartX, StartY, CellWidth, CellHeight);
+                    foreach (IslandInstanceData instance in currentProject.islandInstances)
+                    {
+                        Island referencedIsland = instance.GetReferencedIsland(islands);
+
+                        //Clamp to map
+                        //instance.SetWorldLocation(mainForm, new PointF(instance.worldX, instance.worldY));
+
+                        //Reverse translation to rotate around self
+                        //g.TranslateTransform(instance.worldX * currentProject.coordsScaling, instance.worldY * currentProject.coordsScaling);
+                        //g.RotateTransform(instance.rotation, System.Drawing.Drawing2D.MatrixOrder.Prepend);
+
+                        Rectangle drawRect = instance.GetRect(currentProject, islands);
+                        if (CellRect.IntersectsWith(drawRect))
+                        {
+                            Validity[Row, Col] = false;
+                        }
+
+                        //g.RotateTransform(-instance.rotation);
+                        //g.TranslateTransform(-instance.worldX * currentProject.coordsScaling, -instance.worldY * currentProject.coordsScaling);
+
+                        if (!Validity[Row, Col])
+                            break;
+                    }
+
+                }
+            }
+
+            currentProject.coordsScaling = PrevScaling;
+            currentProject.AtlasPathingGrid = Validity;
+            currentProject.AtlasPathingGridDirty = false;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tradewindsWorldMapToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "PNG files (*.png)|*.png";
+                string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir + actualJsonFile.Replace(".json", ""));
+                if (!Directory.Exists(ExportPath))
+                    Directory.CreateDirectory(ExportPath);
+                saveFileDialog.InitialDirectory = ExportPath;
+                saveFileDialog.FileName = "MapImg_TradeWinds.png";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    PopulateMapRegions();
+                    ExportImage(saveFileDialog.FileName, -1, -1, true, editorConfig.AtlasImagesRes, true);
+                    ExportRegionTradewindOverlays(saveFileDialog.FileName, editorConfig.AtlasImagesRes);
+                }
+            }
+        }
+
+        private void editServerConfigurationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var editServerConfiguration = new EditServerConfigurations(this);
+            editServerConfiguration.ShowDialog();
+        }
+
+        private void visualizeTradewindsWidthCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            mapPanel.Invalidate();
+        }
+
+        private void editFoliageAttachmentOverrideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var editFoliageAttachmentOverrides = new EditFoliageAttachmentOverrides(this);
+            editFoliageAttachmentOverrides.ShowDialog();
+        }
+
+        private void editNodeTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditNodeTemplates editNodeTemplates = new EditNodeTemplates(this);
+            editNodeTemplates.ShowDialog();
+        }
+
+
+
+        public Server GetServerAt(int x, int y)
+        {
+            foreach (Server server in currentProject.servers)
+                if (server.gridX == x && server.gridY == y)
+                    return server;
+            return null;
+        }
+
+
+        public int GetSmallestServerXWithSameHiddenAtlasId(Server server)
+        {
+            int minX = 0;
+            int PrevServerX = server.gridX;
+            while (PrevServerX > minX)
+            {
+                int CandidateServerX = PrevServerX - 1;
+                Server CandidateServer = GetServerAt(CandidateServerX, server.gridY);
+                if (CandidateServer != null && CandidateServer.hiddenAtlasId == server.hiddenAtlasId)
+                    PrevServerX = CandidateServerX;
+                else
+                    break;
+            }
+            return PrevServerX;
+        }
+
+
+        public int GetLargestServerXWithSameHiddenAtlasId(Server server)
+        {
+            int maxX = currentProject.numOfCellsX - 1;
+            int NextServerX = server.gridX;
+            while (NextServerX + 1 <= maxX)
+            {
+                int CandidateServerX = NextServerX + 1;
+                Server CandidateServer = GetServerAt(CandidateServerX, server.gridY);
+                if (CandidateServer != null && CandidateServer.hiddenAtlasId == server.hiddenAtlasId)
+                    NextServerX = CandidateServerX;
+                else
+                    break;
+            }
+            return NextServerX;
+        }
+
+
+        public int GetSmallestServerYWithSameHiddenAtlasId(Server server)
+        {
+            int minY = 0;
+            int PrevServerY = server.gridY;
+            while (PrevServerY > minY)
+            {
+                int CandidateServerY = PrevServerY - 1;
+                Server CandidateServer = GetServerAt(server.gridX, CandidateServerY);
+                if (CandidateServer != null && CandidateServer.hiddenAtlasId == server.hiddenAtlasId)
+                    PrevServerY = CandidateServerY;
+                else
+                    break;
+            }
+            return PrevServerY;
+        }
+
+        public int GetLargestServerYWithSameHiddenAtlasId(Server server)
+        {
+            int maxY = currentProject.numOfCellsY - 1;
+            int NextServerY = server.gridY;
+            while (NextServerY + 1 <= maxY)
+            {
+                int CandidateServerY = NextServerY + 1;
+                Server CandidateServer = GetServerAt(server.gridX, CandidateServerY);
+                if (CandidateServer != null && CandidateServer.hiddenAtlasId == server.hiddenAtlasId)
+                    NextServerY = CandidateServerY;
+                else
+                    break;
+            }
+            return NextServerY;
+        }
+
+
+        public void PopulateMapRegions(bool bIsExporting = false)
+        {
+            if (MapRegionsList.Count > 0 && MapRegionsList.Count == regionsTile.Count && !PopulateMapRegionsDirty)
+                return;
+            PopulateMapRegionsDirty = false;
+            //Project currentProject = mainForm.currentProject;
+            MapRegionsList.Clear();
+            if(!bIsExporting)
+                RegionComboBox.Items.Clear();
+
+            int maxDimension = GetMaxMainRegionDimension(currentProject);
+            MapRegion MainRegion = new MapRegion();
+            MainRegion.AtlasID = "Main";
+            MainRegion.StartX = 0;
+            MainRegion.StartY = 0;
+            MainRegion.EndX = maxDimension - 1;
+            MainRegion.EndY = maxDimension - 1;
+            MapRegionsList.Add(MainRegion.AtlasID, MainRegion);
+            if(!bIsExporting)
+                RegionComboBox.Items.Add(MainRegion.AtlasID);
+            foreach (Server myServer in currentProject.servers)
+                if (myServer.hiddenAtlasId != null && myServer.hiddenAtlasId.Length > 0)
+                    if (!MapRegionsList.ContainsKey(myServer.hiddenAtlasId))
+                    {
+                        MapRegion myRegion = new MapRegion();
+                        myRegion.AtlasID = myServer.hiddenAtlasId;
+                        myRegion.StartX = GetSmallestServerXWithSameHiddenAtlasId(myServer);
+                        myRegion.StartY = GetSmallestServerYWithSameHiddenAtlasId(myServer);
+                        myRegion.EndX = GetLargestServerXWithSameHiddenAtlasId(myServer);
+                        myRegion.EndY = GetLargestServerYWithSameHiddenAtlasId(myServer);
+                        MapRegionsList.Add(myServer.hiddenAtlasId, myRegion);
+                        if (!bIsExporting)
+                            RegionComboBox.Items.Add(myRegion.AtlasID);
+                    }
+            if (!bIsExporting)
+            {
+                RegionComboBox.Text = MainRegion.AtlasID;
+                RegionComboBox.SelectedItem = MainRegion.AtlasID;
+                RegionComboBox.Update();
+            }
+
+            List<string> RegionTileKeysToRemove = new List<string>();
+            foreach (KeyValuePair<string, Image> regionTile in regionsTile)
+                if (!MapRegionsList.ContainsKey(regionTile.Key))
+                    RegionTileKeysToRemove.Add(regionTile.Key);
+
+            foreach (string regionTileKey in RegionTileKeysToRemove)
+            {
+                regionsTile.Remove(regionTileKey);
+                regionsTileBrush.Remove(regionTileKey);
+            }
+            if(!bIsExporting)
+                this.Update();
+        }
+
+        private void showPortalNodesChckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (currentProject != null)
+            {
+                currentProject.showPortalNodes = showPortalNodesChckBox.Checked;
+            }
+            mapPanel.Invalidate();
+        }
+
+        private void editRegionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editRegionCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsCategories editRegionsCategories = new EditRegionsCategories(this);
+            editRegionsCategories.ShowDialog();
+        }
+
+        private void editRegionTemplateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsTemplates editRegionsTemplates = new EditRegionsTemplates(this);
+            editRegionsTemplates.ShowDialog();
+        }
+
+        public Image GetImage(string path)
+        {
+            if (this.imageCache.TryGetValue(path, out Image image))
+            {
+                return image;
+            }
+
+            lock (this.imageCache)
+            {
+                if (this.imageCache.TryGetValue(path, out Image img))
+                {
+                    return img;
+                }
+
+                return imageCache[path] = Image.FromFile(path);
+            }
+            
+        }
+
+            public List<string> GetRegionNames()
+        {
+            List<string> RegionsNames = new List<string>();
+            foreach(string RegionName in RegionComboBox.Items)
+            {
+                RegionsNames.Add(RegionName);
+            }
+            return RegionsNames;
+        }
+
+        private void RegionTemplateOverridebtn_Click(object sender, EventArgs e)
+        {
+            AppliedRegionTemplateData serverTemplate = currentProject.GetAppliedRegionTemplateByName(RegionComboBox.Text);
+            if (serverTemplate != null)
+            {
+                string originalName = serverTemplate.name;
+                var editForm = new EditAppliedRegionTemplate(this, serverTemplate);
+                if (editForm.ShowDialog() == DialogResult.OK)
+                {
+                    if (serverTemplate.name != originalName)
+                    {
+                    }
+                }
+            }
+        }
+
+        private void editRegionsTreasureMapOverrideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsTreasureMapOverride editRegionsTreasureMapOverride = new EditRegionsTreasureMapOverride(this);
+            editRegionsTreasureMapOverride.ShowDialog();
+        }
+
+        private void editRegionsOverworldLocationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditRegionsOverworldLocations editRegionsOverworldLocations = new EditRegionsOverworldLocations(this);
+            editRegionsOverworldLocations.ShowDialog();
+        }
+
+        private void exportServerJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (currentProject == null)
+                return;
+
+            int x = 0;
+            int y = 0;
+            if (ExportServerTxt.Text.Length == 2 || ExportServerTxt.Text.Length == 3)
+            {
+                if (Char.IsLetter(ExportServerTxt.Text, 0) && int.TryParse(ExportServerTxt.Text.Substring(1), out y))
+                {
+                    x = (int)char.ToLower((ExportServerTxt.Text[0])) - (int)'a';
+                    y--;
+                }
+                else
+                    return;
+            }
+
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "json files (*.json)|*.json";
+                saveFileDialog.FileName = "ServerGrid_" + ExportServerTxt.Text + ".json";
+                saveFileDialog.InitialDirectory = GlobalSettings.Instance.ProjectsDir;
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(saveFileDialog.FileName, currentProject.SerializeServer(this, x, y));
+                }
+            }
+        }
+
+        private void importServerJsonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int x = 0;
+            int y = 0;
+            if (ImportServerTxt.Text.Length == 2 || ImportServerTxt.Text.Length == 3)
+            {
+                if (Char.IsLetter(ImportServerTxt.Text, 0) && int.TryParse(ImportServerTxt.Text.Substring(1), out y))
+                {
+                    x = (int)char.ToLower((ImportServerTxt.Text[0])) - (int)'a';
+                    y--;
+                }
+                else
+                    return;
+            }
+
+            LoadServer(x, y);
+            mapPanel.Refresh();
         }
     }
 
@@ -2666,4 +4455,6 @@ namespace ServerGridEditor
         public int AtlasImagesRes = 2048;
         public int ImageQuality = 75;
     }
+
+
 }

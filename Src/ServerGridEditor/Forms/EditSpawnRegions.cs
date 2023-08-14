@@ -52,11 +52,11 @@ namespace ServerGridEditor.Forms
                     return;
                 }
                 string name = row.Cells[regionName.Name].Value.ToString();
-                if (names.Contains(name))
-                {
-                    MessageBox.Show("Duplicate names " + name + " found\nRegion names must be unique across the atlas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //if (names.Contains(name))
+                //{
+                //    MessageBox.Show("Duplicate names " + name + " found\nRegion names must be unique across the atlas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
 
                 names.Add(name);
             }
@@ -103,6 +103,16 @@ namespace ServerGridEditor.Forms
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void messageLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spawnRegionsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

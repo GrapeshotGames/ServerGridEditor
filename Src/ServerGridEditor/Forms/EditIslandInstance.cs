@@ -1,5 +1,6 @@
 ﻿using AtlasGridDataLibrary;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,9 @@ namespace ServerGridEditor.Forms
             foreach (SpawnerInfoData spawnerInfo in mainForm.spawners.spawnersInfo)
                 SpawnerTemplate.Items.Add((string)spawnerInfo.Name);
 
+            foreach (FoliageAttachmentOverride foliageAttachmentOverride in mainForm.currentProject.foliageAttachmentOverrides)
+                FoliageOverrideKey.Items.Add(foliageAttachmentOverride.Key);
+
             spawnPointRegionOverrideTxtBox.Text = targetInstance.spawnPointRegionOverride.ToString();
             finalNPCLevelMultiplierTxtBox.Text = (targetInstance.finalNPCLevelMultiplier == 1.0f) ? "1.0" :targetInstance.finalNPCLevelMultiplier.ToString();
             finalNPCLevelOffsetTxtBox.Text = targetInstance.finalNPCLevelOffset.ToString();
@@ -36,6 +40,22 @@ namespace ServerGridEditor.Forms
             IslandInstanceCustomDatas2TxtBox.Text = targetInstance.IslandInstanceCustomDatas2;
             IslandInstanceClientCustomDatas1TxtBox.Text = targetInstance.IslandInstanceClientCustomDatas1;
             IslandInstanceClientCustomDatas2TxtBox.Text = targetInstance.IslandInstanceClientCustomDatas2;
+
+            if (targetInstance != null)
+            {
+                foreach (TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+                {
+                    LandNodeTemplateComboBox.Items.Add(transientNodeTemplate.Key);
+                }
+
+                foreach (TransientNodeTemplate transientNodeTemplate in mainForm.currentProject.transientNodeTemplates)
+                {
+                    if (targetInstance.landNodeKey != null && transientNodeTemplate.Key == targetInstance.landNodeKey)
+                    {
+                        LandNodeTemplateComboBox.SelectedItem = transientNodeTemplate.Key;
+                    }
+                }
+            }
 
             if (targetInstance.spawnerOverrides != null)
             {
@@ -47,6 +67,28 @@ namespace ServerGridEditor.Forms
                         spawnerOverridesGrid.Rows[index].Cells[SpawnerTemplate.Name].Value = overrides.Value;
                 }
             }
+
+            if (targetInstance.harvestOverrideKeys != null)
+            {
+                foreach (string harvestOverrideKey in targetInstance.harvestOverrideKeys)
+                {
+                    int index = harvestOverridesGrid.Rows.Add();
+                    harvestOverridesGrid.Rows[index].Cells[FoliageOverrideKey.Name].Value = harvestOverrideKey;
+                }
+            }
+
+
+            if (targetInstance.harvestOverrideKeysTemplateInherited != null)
+            {
+                foreach (string harvestOverrideKey in targetInstance.harvestOverrideKeysTemplateInherited)
+                {
+                    harvestOverrideKeysTemplateInheritedTextBox.AppendText(harvestOverrideKey);
+                    harvestOverrideKeysTemplateInheritedTextBox.AppendText("\r\n");
+                }
+            }
+
+            
+
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -120,6 +162,11 @@ namespace ServerGridEditor.Forms
                 }
             }
 
+           if (LandNodeTemplateComboBox.SelectedItem != null)
+               targetInstance.landNodeKey = LandNodeTemplateComboBox.SelectedItem.ToString();
+           else
+               targetInstance.landNodeKey = "";
+
             targetInstance.spawnPointRegionOverride = NewspawnPointRegionOverride;
             targetInstance.finalNPCLevelMultiplier = NewfinalNPCLevelMultiplier;
             targetInstance.finalNPCLevelOffset = NewfinalNPCLevelOffset;
@@ -140,12 +187,85 @@ namespace ServerGridEditor.Forms
                 targetInstance.spawnerOverrides.Add(name, template);
             }
 
+            targetInstance.harvestOverrideKeys = new List<string>();
+            foreach (DataGridViewRow row in harvestOverridesGrid.Rows)
+            {
+                if (row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+                string foliageOverrideKey = (string)row.Cells[FoliageOverrideKey.Name].Value;
+                if (!targetInstance.harvestOverrideKeys.Contains(foliageOverrideKey))
+                    targetInstance.harvestOverrideKeys.Add(foliageOverrideKey);
+            }
             Close();
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ImportHarvestOverridesButton_Click(object sender, EventArgs e)
+        {
+            /*openFileDialog.Filter = "csv files (*.csv)|*.csv";
+            openFileDialog.Multiselect = false;
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog.FileName;
+                StreamReader CSVReader = new StreamReader(openFileDialog.FileName);
+                if (CSVReader != null && !CSVReader.EndOfStream)
+                {
+                    harvestOverridesGrid.Rows.Clear();
+                    do
+                    {
+                        String Line = CSVReader.ReadLine();
+                        if (Line != null && Line.Length > 0)
+                        {
+                            String[] Values = Line.Split(',');
+                            if (Values.Length >= 2)
+                            {
+                                int index = harvestOverridesGrid.Rows.Add();
+                                harvestOverridesGrid.Rows[index].Cells[FoliageTypeName.Name].Value = Values[0];
+                                harvestOverridesGrid.Rows[index].Cells[OverrideActorComponentName.Name].Value = Values[1];
+                            }
+                        }
+                    }
+                    while (!CSVReader.EndOfStream);
+                }
+
+            }*/
+        }
+
+        private void ExportHarvestOverridesButton_Click(object sender, EventArgs e)
+        {
+            /*saveFileDialog.Filter = "csv files (*.csv)|*.csv";
+            string ExportPath = Path.GetFullPath(GlobalSettings.Instance.ExportDir);
+            if (!Directory.Exists(ExportPath))
+                Directory.CreateDirectory(ExportPath);
+            saveFileDialog.InitialDirectory = ExportPath;
+            saveFileDialog.FileName = "harvestoverrrides.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = saveFileDialog.FileName;
+                StreamWriter CSVWriter = new StreamWriter(saveFileDialog.FileName);
+                if (CSVWriter != null)
+                {
+                    foreach (DataGridViewRow Row in harvestOverridesGrid.Rows)
+                    {
+                        if (Row.Index == harvestOverridesGrid.Rows.Count - 1) continue; //Last row is the new row
+                        CSVWriter.WriteLine(Row.Cells[FoliageTypeName.Name].Value + "," + Row.Cells[OverrideActorComponentName.Name].Value);
+                    }
+                    CSVWriter.Close();
+                }
+            }*/
+        }
+
+        private void harvestOverridesGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void EditIslandInstance_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,6 +21,10 @@ namespace ServerGridEditor
         public int gridX;
         public int gridY;
         public bool isHomeServer;
+        public bool isMawWatersServer;
+        public string mawWaterDayTime;
+        public string hiddenAtlasId = "";
+        public int forceServerRules;
         public string AdditionalCmdLineParams;
         public Dictionary<string, string> OverrideShooterGameModeDefaultGameIni = new Dictionary<string, string>();
         public int floorZDist;
@@ -38,6 +42,23 @@ namespace ServerGridEditor
         public float waterColorR;
         public float waterColorG;
         public float waterColorB;
+        public float billboardsOffsetX = 0;
+        public float billboardsOffsetY = 0;
+        public float billboardsOffsetZ = 0;
+
+        public int OverrideDestNorthX = -1;
+        public int OverrideDestNorthY = -1;
+        public int OverrideDestSouthX = -1;
+        public int OverrideDestSouthY = -1;
+        public int OverrideDestEastX = -1;
+        public int OverrideDestEastY = -1;
+        public int OverrideDestWestX = -1;
+        public int OverrideDestWestY = -1;
+
+        public int MaxPlayingSeconds = 0;
+        public int MaxPlayingSecondsKickToServerX = -1;
+        public int MaxPlayingSecondsKickToServerY = -1;
+        
         public int skyStyleIndex;
         public float serverIslandPointsMultiplier = 1.0f;
         public string ServerCustomDatas1 = "";
@@ -50,9 +71,19 @@ namespace ServerGridEditor
         public bool islandLocked = false;
         public bool discoLocked = false;
         public bool pathsLocked = false;
+        public bool windsLocked = false;
         public List<string> extraSublevels;
 
         public string serverTemplateName = "";
+        public string serverConfigurationKeyPVP = "";
+        public string serverConfigurationKeyPVE = "";
+        public int[] ServerPathingGrid = new int[1];
+
+        public string RegisteredAtSpoolGroup = "";
+        public string RegisteredAtClusterSet = "";
+
+
+        public string BackgroundImgPath = "";
 
         public Server() { }
 
@@ -65,6 +96,16 @@ namespace ServerGridEditor
         public bool IsWorldPointInServer(PointF point, float gridSize)
         {
             return GetWorldRect(gridSize).Contains(point);
+        }
+
+        public PointF GetLocalLocation(PointF point, float gridSize)
+        {
+            return new PointF(point.X - gridX * gridSize, point.Y - gridY * gridSize);
+        }
+
+        public PointF TranslateLocalToGlobal(PointF point, float gridSize)
+        {
+            return new PointF(point.X + gridX * gridSize, point.Y + gridY * gridSize);
         }
 
         public RectangleF GetWorldRect(float gridSize)
@@ -141,8 +182,15 @@ namespace ServerGridEditor
         {
             lastModifiedUTC = DateTime.UtcNow;
         }
-    }
 
+        public override bool Equals(object obj)
+        {
+            Server server = obj as Server;
+            if(server != null)
+                return gridX == server.gridX && gridY == server.gridY;
+            return false;
+        }
+    }
 
     public static class ServerTemplateDataEx
     {
